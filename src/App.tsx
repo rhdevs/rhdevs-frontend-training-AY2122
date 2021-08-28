@@ -1,19 +1,15 @@
-import React, { Suspense } from "react";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import React, { Suspense } from 'react'
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 
-import LoadingSpinner from "./components/LoadingSpinner";
-import MainNavigation from "./shared/Navigation/MainNavigation";
-import Footer from "./shared/Navigation/Footer";
+import LoadingSpinner from './components/LoadingSpinner'
+import MainNavigation from './shared/Navigation/MainNavigation'
+import Footer from './shared/Navigation/Footer'
 
-import "./App.css";
-import "antd/dist/antd.css";
+import './App.css'
+import 'antd/dist/antd.css'
 
-const LandingPage = React.lazy(
-  () => import(/* webpackChunckName: "LandingPage" */ "./pages/LandingPage")
-);
-const NotFound = React.lazy(
-  () => import(/* webpackChunckName: "NotFound" */ "./pages/ErrorPage/NotFound")
-);
+const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
+const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './pages/ErrorPage/NotFound'))
 function App() {
   const routes = (
     <Switch>
@@ -21,7 +17,7 @@ function App() {
       <Route component={NotFound} />
       <Redirect to="/" />
     </Switch>
-  );
+  )
 
   return (
     <BrowserRouter>
@@ -33,7 +29,7 @@ function App() {
         <Footer />
       </Suspense>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

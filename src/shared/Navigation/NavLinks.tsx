@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const UnorderedList = styled.ul`
   margin: auto;
@@ -14,29 +14,23 @@ const UnorderedList = styled.ul`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-`;
+`
 
 const StyledNavLink = styled(NavLink)`
   color: white;
-`;
+`
 
 const NavLinks = () => {
   return (
     <UnorderedList>
-      <StyledNavLink
-        to={{ pathname: "https://bit.ly/3kyO87g" }}
-        target="_blank"
-      >
+      <StyledNavLink to={{ pathname: 'https://bit.ly/3kyO87g' }} target="_blank">
         Schedule
       </StyledNavLink>
-      <StyledNavLink
-        to={{ pathname: "https://tinyurl.com/frontend-learning" }}
-        target="_blank"
-      >
+      <StyledNavLink to={{ pathname: 'https://tinyurl.com/frontend-learning' }} target="_blank">
         Resources
       </StyledNavLink>
     </UnorderedList>
-  );
-};
+  )
+}
 
-export default NavLinks;
+export default NavLinks

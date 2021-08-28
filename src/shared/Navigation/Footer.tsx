@@ -1,8 +1,8 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import styled from "styled-components";
-import FEWebTitle from "../../components/FEWebTitle";
+import styled from 'styled-components'
+import FEWebTitle from '../../components/FEWebTitle'
 
 const MainFooter = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ const MainFooter = styled.div`
     padding: 1rem 0;
     height: fit-content;
   }
-`;
+`
 
 const LinksContainer = styled.div`
   display: flex;
@@ -31,13 +31,13 @@ const LinksContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`;
+`
 
 const LogoContainer = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-`;
+`
 
 const StyledNavLink = styled(NavLink)`
   color: white;
@@ -45,7 +45,7 @@ const StyledNavLink = styled(NavLink)`
   @media (max-width: 768px) {
     margin: 5px 0;
   }
-`;
+`
 
 const Styledhr = styled.hr`
   border: 0;
@@ -58,22 +58,18 @@ const Styledhr = styled.hr`
   @media (max-width: 768px) {
     display: none;
   }
-`;
+`
 
 const Footer = () => {
   return (
     <MainFooter>
       <LinksContainer>
-        <StyledNavLink
-          to={{ pathname: "https://www.rhapp.lol" }}
-          target="_blank"
-        >
+        <StyledNavLink to={{ pathname: 'https://www.rhapp.lol' }} target="_blank">
           RHapp
         </StyledNavLink>
         <StyledNavLink
           to={{
-            pathname:
-              "https://github.com/rhdevs/rhdevs-frontend-training-AY2122",
+            pathname: 'https://github.com/rhdevs/rhdevs-frontend-training-AY2122',
           }}
           target="_blank"
         >
@@ -82,22 +78,16 @@ const Footer = () => {
         <LogoContainer>
           <FEWebTitle imgSize="1.5rem" fontSize="17px" />
         </LogoContainer>
-        <StyledNavLink
-          to={{ pathname: "https://t.me/fanghuihui" }}
-          target="_blank"
-        >
+        <StyledNavLink to={{ pathname: 'https://t.me/fanghuihui' }} target="_blank">
           Help desk
         </StyledNavLink>
-        <StyledNavLink
-          to={{ pathname: "https://rhdevs.github.io/landing-page/" }}
-          target="_blank"
-        >
+        <StyledNavLink to={{ pathname: 'https://rhdevs.github.io/landing-page/' }} target="_blank">
           Blog
         </StyledNavLink>
       </LinksContainer>
       <Styledhr />
     </MainFooter>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
