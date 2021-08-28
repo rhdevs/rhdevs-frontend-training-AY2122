@@ -1,10 +1,11 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-import "./App.css";
+
 import LoadingSpinner from "./components/LoadingSpinner";
 import MainNavigation from "./shared/Navigation/MainNavigation";
 import Footer from "./shared/Navigation/Footer";
-// import LandingPage from "./pages/LandingPage";
+
+import "./App.css";
 import "antd/dist/antd.css";
 
 const LandingPage = React.lazy(
