@@ -41,7 +41,7 @@ const MainNavigation = () => {
 
   const menu = (
     <StyledMenu>
-      <Menu.Item key={1}>
+      <Menu.Item key={1} onClick={() => setOpen(false)}>
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const MainNavigation = () => {
           Schedule
         </a>
       </Menu.Item>
-      <Menu.Item key={2}>
+      <Menu.Item key={2} onClick={() => setOpen(false)}>
         <a
           target="_blank"
           rel="noopener noreferrer"
