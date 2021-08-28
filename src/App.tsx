@@ -5,6 +5,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import MainNavigation from "./shared/Navigation/MainNavigation";
 import Footer from "./shared/Navigation/Footer";
 // import LandingPage from "./pages/LandingPage";
+import "antd/dist/antd.css";
 
 const LandingPage = React.lazy(
   () => import(/* webpackChunckName: "LandingPage" */ "./pages/LandingPage")
@@ -23,13 +24,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <main>
-        <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<LoadingSpinner />}>
+        <main>
           <MainNavigation />
           {routes}
-          <Footer />
-        </Suspense>
-      </main>
+        </main>
+        <Footer />
+      </Suspense>
     </BrowserRouter>
   );
 }

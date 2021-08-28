@@ -1,12 +1,14 @@
 import React from "react";
+
+import styled from "styled-components";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import styled from "styled-components";
 
 const Spinner = styled.div`
   text-align: center;
   background-color: rgba(225, 225, 225, 0.4);
   z-index: 500;
+  position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
