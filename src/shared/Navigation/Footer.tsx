@@ -14,6 +14,11 @@ const MainFooter = styled.div`
   background: #475056;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   padding: 3rem 1rem 4rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0;
+    height: fit-content;
+  }
 `;
 
 const LinksContainer = styled.div`
@@ -22,10 +27,24 @@ const LinksContainer = styled.div`
   justify-content: space-evenly;
   width: 100%;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const LogoContainer = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
   color: white;
+
+  @media (max-width: 768px) {
+    margin: 5px 0;
+  }
 `;
 
 const Styledhr = styled.hr`
@@ -35,6 +54,10 @@ const Styledhr = styled.hr`
   width: 96%;
   background-color: rgba(0, 0, 0, 0.5);
   height: 1px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Footer = () => {
@@ -56,13 +79,9 @@ const Footer = () => {
         >
           Github
         </StyledNavLink>
-        <StyledNavLink
-          to={{ pathname: "https://www.instagram.com/rhdevs/" }}
-          target="_blank"
-        >
-          Instagram
-        </StyledNavLink>
-        <FEWebTitle imgSize="1.5rem" fontSize="17px" />
+        <LogoContainer>
+          <FEWebTitle imgSize="1.5rem" fontSize="17px" />
+        </LogoContainer>
         <StyledNavLink
           to={{ pathname: "https://t.me/fanghuihui" }}
           target="_blank"
@@ -74,14 +93,6 @@ const Footer = () => {
           target="_blank"
         >
           Blog
-        </StyledNavLink>
-        <StyledNavLink
-          to={{
-            pathname: "https://tinyurl.com/frontend-learning",
-          }}
-          target="_blank"
-        >
-          Resources
         </StyledNavLink>
       </LinksContainer>
       <Styledhr />

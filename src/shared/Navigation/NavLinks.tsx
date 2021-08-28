@@ -29,6 +29,12 @@ const NavLinks = () => {
       >
         Schedule
       </StyledNavLink>
+      <StyledNavLink
+        to={{ pathname: "https://tinyurl.com/frontend-learning" }}
+        target="_blank"
+      >
+        Resources
+      </StyledNavLink>
     </UnorderedList>
   );
 };

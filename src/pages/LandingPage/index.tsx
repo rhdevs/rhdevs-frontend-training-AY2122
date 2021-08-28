@@ -19,9 +19,14 @@ const MembersSectionHeader = styled.h1`
 
 const InformationCardSection = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: (auto-fill, 1fr);
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-auto-rows: 200px;
   grid-gap: 1rem;
+  justify-content: space-evenly;
+`;
+
+const IndivMemberContainer = styled.div`
+  border: 1px dashed grey;
 `;
 
 const LandingPage = () => {
@@ -35,26 +40,36 @@ const LandingPage = () => {
       <MembersSection>
         <MembersSectionHeader>You're in good company</MembersSectionHeader>
         <InformationCardSection>
-          <img
-            style={{ width: "100%" }}
-            src={frontend_webdev}
-            alt="frontend web development"
-          />
-          <img
-            style={{ width: "100%" }}
-            src={frontend_webdev}
-            alt="frontend web development"
-          />
-          <img
-            style={{ width: "100%" }}
-            src={frontend_webdev}
-            alt="frontend web development"
-          />
-          <img
-            style={{ width: "100%" }}
-            src={frontend_webdev}
-            alt="frontend web development"
-          />
+          <IndivMemberContainer>
+            <img
+              style={{ width: "50%" }}
+              src={frontend_webdev}
+              alt="frontend web development"
+            />
+            hello this is me!
+          </IndivMemberContainer>
+          <IndivMemberContainer>
+            <img
+              style={{ width: "100%" }}
+              src={frontend_webdev}
+              alt="frontend web development"
+            />{" "}
+          </IndivMemberContainer>
+          <IndivMemberContainer>
+            <img
+              style={{ width: "100%" }}
+              src={frontend_webdev}
+              alt="frontend web development"
+            />{" "}
+          </IndivMemberContainer>
+          <IndivMemberContainer>
+            <img
+              style={{ width: "100%" }}
+              src={frontend_webdev}
+              alt="frontend web development"
+            />
+          </IndivMemberContainer>
+          <IndivMemberContainer></IndivMemberContainer>
         </InformationCardSection>
       </MembersSection>
     </>

@@ -15,6 +15,7 @@ const FEContainer = styled.div`
 const TitleText = styled.h2<{ fontSize?: string }>`
   margin: 0;
   color: white;
+  white-space: nowrap;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `;
 

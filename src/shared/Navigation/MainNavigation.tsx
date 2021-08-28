@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
+import { Turn as Hamburger } from "hamburger-react";
 import NavLinks from "./NavLinks";
 import FEWebTitle from "../../components/FEWebTitle";
+import Dropdown from "antd/lib/dropdown/dropdown";
+import Menu from "antd/lib/menu";
 
 const MainHeader = styled.header`
   width: 100%;
@@ -18,14 +21,70 @@ const MainHeader = styled.header`
   z-index: 5;
 `;
 
+const NavLinksContainer = styled.nav`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const HamburgerContainer = styled.div`
+  position: absolute;
+  right: 0;
+`;
+
+const StyledMenu = styled(Menu)`
+  margin-right: 0.5rem;
+`;
+
 const MainNavigation = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  const menu = (
+    <StyledMenu>
+      <Menu.Item key={1}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://bit.ly/3kyO87g"
+        >
+          Schedule
+        </a>
+      </Menu.Item>
+      <Menu.Item key={2}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://tinyurl.com/frontend-learning"
+        >
+          Resources
+        </a>
+      </Menu.Item>
+    </StyledMenu>
+  );
   return (
     <>
       <MainHeader>
         <FEWebTitle />
-        <nav>
+        <NavLinksContainer>
           <NavLinks />
-        </nav>
+        </NavLinksContainer>
+        <HamburgerContainer>
+          <Dropdown
+            {...(!isOpen && { visible: isOpen })}
+            onVisibleChange={(visible) => setOpen(visible)}
+            overlay={menu}
+            placement="bottomRight"
+          >
+            <div onClick={(e) => e.preventDefault()}>
+              <Hamburger
+                color="white"
+                size={21}
+                toggled={isOpen}
+                toggle={setOpen}
+              />
+            </div>
+          </Dropdown>
+        </HamburgerContainer>
       </MainHeader>
     </>
   );
