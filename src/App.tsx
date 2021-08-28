@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react'
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 
+import LoadingSpinner from './components/LoadingSpinner'
+import MainNavigation from './shared/Navigation/MainNavigation'
+import Footer from './shared/Navigation/Footer'
+
+import './App.css'
+import 'antd/dist/antd.css'
+
+const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
+const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './pages/ErrorPage/NotFound'))
 function App() {
+  const routes = (
+    <Switch>
+      <Route path="/" exact component={LandingPage} />
+      <Route component={NotFound} />
+      <Redirect to="/" />
+    </Switch>
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Suspense fallback={<LoadingSpinner />}>
+        <main>
+          <MainNavigation />
+          {routes}
+        </main>
+        <Footer />
+      </Suspense>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
