@@ -26,7 +26,7 @@ const NavLinks = () => {
       <StyledNavLink to={{ pathname: 'https://bit.ly/3kyO87g' }} target="_blank">
         Schedule
       </StyledNavLink>
-      <StyledNavLink to={{ pathname: 'https://tinyurl.com/frontend-learning' }} target="_blank">
+      <StyledNavLink to={{ pathname: 'https://tinyurl.com/frontend-training-resources' }} target="_blank">
         Resources
       </StyledNavLink>
     </UnorderedList>
