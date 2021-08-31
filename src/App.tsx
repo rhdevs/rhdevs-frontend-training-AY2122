@@ -10,6 +10,7 @@ import 'antd/dist/antd.css'
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
 const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './pages/ErrorPage/NotFound'))
+
 function App() {
   const routes = (
     <Switch>
