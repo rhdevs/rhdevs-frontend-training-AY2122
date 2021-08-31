@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import frontend_webdev from '../../assets/frontend_webdev.svg'
 
+// Do not edit the other parts of the code!
 const FEImg = styled.img`
   width: 100%;
   height: auto;
@@ -29,8 +30,11 @@ const IndivMemberContainer = styled.div`
   border: 1px dashed grey;
 `
 
+// Create a styled div for your card here
+
 const LandingPage = () => {
   useEffect(() => {
+    // To bring user to the op of the page on first render
     window.scrollTo(0, 0)
   }, [])
 
@@ -40,20 +44,7 @@ const LandingPage = () => {
       <MembersSection>
         <MembersSectionHeader>You&#39;re in good company</MembersSectionHeader>
         <InformationCardSection>
-          <IndivMemberContainer>
-            <img style={{ width: '50%' }} src={frontend_webdev} alt="frontend web development" />
-            hello this is me!
-          </IndivMemberContainer>
-          <IndivMemberContainer>
-            <img style={{ width: '100%' }} src={frontend_webdev} alt="frontend web development" />{' '}
-          </IndivMemberContainer>
-          <IndivMemberContainer>
-            <img style={{ width: '100%' }} src={frontend_webdev} alt="frontend web development" />{' '}
-          </IndivMemberContainer>
-          <IndivMemberContainer>
-            <img style={{ width: '100%' }} src={frontend_webdev} alt="frontend web development" />
-          </IndivMemberContainer>
-          <IndivMemberContainer></IndivMemberContainer>
+          <IndivMemberContainer>{/* Insert code here */}</IndivMemberContainer>
         </InformationCardSection>
       </MembersSection>
     </>
