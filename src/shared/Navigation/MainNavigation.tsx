@@ -73,7 +73,7 @@ const MainNavigation = () => {
             trigger={['click']}
           >
             <div onClick={(e) => e.preventDefault()}>
-              <Hamburger color="white" size={21} toggled={isOpen} toggle={setOpen} hideOutline={false} />
+              <Hamburger color="white" size={21} toggled={isOpen} toggle={setOpen} />
             </div>
           </Dropdown>
         </HamburgerContainer>
