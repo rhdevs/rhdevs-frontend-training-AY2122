@@ -17,14 +17,14 @@ const PlaceholderBox = styled.div`
 
 const ComponentsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50vh;
-  grid-column-gap: 3vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 3vw;
+  height: 50vh;
 `
 
 const StyledText = styled.p`
   font-size: 18px;
-  margin-bottom: 1.5rem;
 `
 
 const GroupX = () => {
@@ -33,8 +33,8 @@ const GroupX = () => {
       <h1>Group X</h1>
       <StyledText>your names, another name</StyledText>
       <ComponentsContainer>
-        <PlaceholderBox>old component</PlaceholderBox>
         <PlaceholderBox>new component</PlaceholderBox>
+        <PlaceholderBox>old component</PlaceholderBox>
       </ComponentsContainer>
     </MainContainer>
   )
