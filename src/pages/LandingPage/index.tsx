@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import styled from 'styled-components'
 import frontend_webdev from '../../assets/frontend_webdev.svg'
+import GroupCard from '../../components/GroupCard'
 
 // Do not edit the other parts of the code!
 const FEImg = styled.img`
@@ -26,25 +27,20 @@ const InformationCardSection = styled.div`
   justify-content: space-evenly;
 `
 
-const IndivMemberContainer = styled.div`
-  border: 1px dashed grey;
-`
-
-// Create a styled div for your card here
-
 const LandingPage = () => {
-  useEffect(() => {
-    // To bring user to the op of the page on first render
-    window.scrollTo(0, 0)
-  }, [])
-
   return (
     <>
       <FEImg src={frontend_webdev} alt="frontend web development" />
       <MembersSection>
-        <MembersSectionHeader>You&#39;re in good company</MembersSectionHeader>
+        <MembersSectionHeader>Groups!</MembersSectionHeader>
         <InformationCardSection>
-          <IndivMemberContainer>{/* Insert code here */}</IndivMemberContainer>
+          <GroupCard
+            groupNumber={1}
+            componentName="component name"
+            devs="name1, name2, name4"
+            designers="name1, name2, name4"
+          />
+          {/* Create your group's card here! */}
         </InformationCardSection>
       </MembersSection>
     </>

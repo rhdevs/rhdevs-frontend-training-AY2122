@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-import { Result, Button } from 'antd'
+import Button from 'antd/lib/button/button'
+import Result from 'antd/lib/result'
 
 const NotFound = () => {
   const history = useHistory()
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
   return (
     <Result
       status="404"
