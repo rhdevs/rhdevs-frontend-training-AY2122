@@ -27,6 +27,7 @@ const StyledText = styled.p`
   font-size: 18px;
 `
 
+// Create something similiar for your group's page
 const GroupX = () => {
   return (
     <MainContainer>

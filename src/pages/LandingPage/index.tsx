@@ -40,6 +40,7 @@ const LandingPage = () => {
             devs="name1, name2, name4"
             designers="name1, name2, name4"
           />
+          {/* Create your group's card here! */}
         </InformationCardSection>
       </MembersSection>
     </>
