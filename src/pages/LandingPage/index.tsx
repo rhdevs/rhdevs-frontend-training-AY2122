@@ -25,6 +25,7 @@ const InformationCardSection = styled.div`
   grid-auto-rows: 200px;
   grid-gap: 1rem;
   justify-content: space-evenly;
+  padding: 10px 0;
 `
 
 const LandingPage = () => {
@@ -34,6 +35,18 @@ const LandingPage = () => {
       <MembersSection>
         <MembersSectionHeader>Groups!</MembersSectionHeader>
         <InformationCardSection>
+          <GroupCard
+            groupNumber={1}
+            componentName="component name"
+            devs="name1, name2, name4"
+            designers="name1, name2, name4"
+          />
+          <GroupCard
+            groupNumber={1}
+            componentName="component name"
+            devs="name1, name2, name4"
+            designers="name1, name2, name4"
+          />
           <GroupCard
             groupNumber={1}
             componentName="component name"

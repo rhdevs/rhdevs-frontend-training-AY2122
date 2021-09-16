@@ -3,10 +3,11 @@ main {
   height: 100%;
   min-height: 100vh;
   margin-bottom: -10rem; /*footer*/
+  background-color: #fdfdfd;
 }
 
 main:after {
-  content: "";
+  content: '';
   display: block;
   height: 10rem;
 }

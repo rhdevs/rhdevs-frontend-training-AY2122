@@ -32,7 +32,7 @@ const GroupX = () => {
   return (
     <MainContainer>
       <h1>Group X</h1>
-      <StyledText>your names, another name</StyledText>
+      <StyledText>your name, another name</StyledText>
       <ComponentsContainer>
         <PlaceholderBox>new component</PlaceholderBox>
         <PlaceholderBox>old component</PlaceholderBox>
