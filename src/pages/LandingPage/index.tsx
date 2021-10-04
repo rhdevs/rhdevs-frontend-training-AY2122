@@ -35,10 +35,10 @@ const LandingPage = () => {
         <MembersSectionHeader>Groups!</MembersSectionHeader>
         <InformationCardSection>
           <GroupCard
-            groupNumber={1}
-            componentName="component name"
-            devs="name1, name2, name4"
-            designers="name1, name2, name4"
+            groupNumber={4}
+            componentName="Login Screen"
+            devs="Elva, Zhikai, Marcus"
+            designers="Gregory, Shannon"
           />
           {/* Create your group's card here! */}
         </InformationCardSection>

@@ -28,11 +28,11 @@ const StyledText = styled.p`
 `
 
 // Create something similiar for your group's page
-const GroupX = () => {
+const Group4 = () => {
   return (
     <MainContainer>
-      <h1>Group X</h1>
-      <StyledText>your names, another name</StyledText>
+      <h1>Group 4</h1>
+      <StyledText>Elva, Zhikai, Marcus, Gregory, Shannon</StyledText>
       <ComponentsContainer>
         <PlaceholderBox>new component</PlaceholderBox>
         <PlaceholderBox>old component</PlaceholderBox>
@@ -41,4 +41,4 @@ const GroupX = () => {
   )
 }
 
-export default GroupX
+export default Group4
