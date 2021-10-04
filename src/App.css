@@ -5,9 +5,3 @@ main {
   margin-bottom: -10rem; /*footer*/
   background-color: #fdfdfd;
 }
-
-main:after {
-  content: '';
-  display: block;
-  height: 10rem;
-}

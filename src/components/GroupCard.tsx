@@ -23,11 +23,7 @@ const StyledCard = styled.div`
 `
 
 const StyledGroupNumber = styled.text`
-  font-size: calc(18px + 1.2vw);
-`
-
-const StyledComponentName = styled.text`
-  font-size: calc(16px + 0.5vw);
+  font-size: calc(18px + 1.5vw);
 `
 
 const StyledMemberNameGroup = styled.div`
@@ -45,7 +41,6 @@ const StyledNamesText = styled.text`
 
 type Props = {
   groupNumber: number
-  componentName: string
   devs: string
   designers: string
 }
@@ -56,7 +51,6 @@ const GroupCard = (props: Props) => {
   return (
     <StyledCard onClick={() => history.push(`${PATHS.GROUP_ROUTE}/${props.groupNumber}`)}>
       <StyledGroupNumber>Group {props.groupNumber}</StyledGroupNumber>
-      <StyledComponentName>{props.componentName}</StyledComponentName>
       <StyledMemberNameGroup>
         <BoldText>Devs:</BoldText>
         <StyledNamesText>{props.devs}</StyledNamesText>
