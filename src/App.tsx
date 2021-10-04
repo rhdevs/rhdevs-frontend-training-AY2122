@@ -18,7 +18,7 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 
 function App() {
   useEffect(() => {
-    // To bring user to the op of the page on first render
+    // To bring user to the top of the page on first render
     window.scrollTo(0, 0)
   }, [])
 
