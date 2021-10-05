@@ -14,7 +14,7 @@ const GroupContent = (props: Props) => {
   return (
     <MainContainer>
       <h1>Group 1</h1>
-      <StyledText>Devs: Chun Yu, En Hao, Prince. Designers: Shermaine, Nguyen</StyledText>
+      <StyledText>Devs: Chun Yu, En Hao, Prince, Maxim. Designers: Shermaine, Nguyen</StyledText>
       <ComponentsContainer>
         <StyledDiv>
           <StyledImg
