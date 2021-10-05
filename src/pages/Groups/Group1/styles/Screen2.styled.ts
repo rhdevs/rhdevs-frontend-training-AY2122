@@ -19,7 +19,7 @@ export const TopNav = styled.div`
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background: #cecece;
+  background: #ffffff;
 `
 export const BotNav = styled.div`
   width: 100%;
@@ -30,7 +30,7 @@ export const BotNav = styled.div`
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  background: #cecece;
+  background: #ffffff;
   z-index: 800;
   overflow: hidden;
   bottom: 0;
