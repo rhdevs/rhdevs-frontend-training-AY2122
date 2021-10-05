@@ -1,8 +1,8 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import ForgotPasswordPage from '../../../components/forgotPassword'
-import LoginPage from '../../../components/login'
+import ForgotPasswordPage from './Screen2'
+import LoginPage from './Screen1'
 
 import Image from 'antd/lib/image'
 import OldLoginPage from '../../../assets/group4/Login.svg'
@@ -55,7 +55,10 @@ const Group4 = () => {
   return (
     <MainContainer>
       <h1>Group 4</h1>
-      <StyledText>Devs: Elva, Zhikai, Marcus Designers: Gregory, Shannon</StyledText>
+      <StyledText>
+        Devs: Elva, Zhikai, Weipin, Marcus <br />
+        Designers: Gregory, Shannon, Brendan
+      </StyledText>
       <ComponentsContainer>
         <PlaceholderBox>
           <h2>Old Images Preview</h2>
