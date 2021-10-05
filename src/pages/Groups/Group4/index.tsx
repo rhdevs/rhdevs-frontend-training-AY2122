@@ -5,8 +5,8 @@ import ForgotPasswordPage from '../../../components/forgotPassword'
 import LoginPage from '../../../components/login'
 
 import Image from 'antd/lib/image'
-import OldLoginPage from '../../../assets/group4/login_page.svg'
-import OldPasswordPage from '../../../assets/group4/forgot_pwd_page.svg'
+import OldLoginPage from '../../../assets/group4/Login.svg'
+import OldPasswordPage from '../../../assets/group4/Forget Password.svg'
 
 const MainContainer = styled.div`
   margin: 1rem 2rem;
