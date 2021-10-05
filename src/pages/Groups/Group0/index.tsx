@@ -6,7 +6,12 @@ import supperHomePage from '../../../assets/Group0/supperHomePage.svg'
 // Create something similiar for your group's page
 const Group0 = () => {
   return (
-    <GroupContent groupNumber={0} oldScreen1ImgSrc={supperHomePage} oldScreen2ImgSrc="https://picsum.photos/300/600" />
+    <GroupContent
+      groupNumber={0}
+      names="name 1, name 2, ..."
+      oldScreen1ImgSrc={supperHomePage}
+      oldScreen2ImgSrc="https://picsum.photos/300/600"
+    />
   )
 }
 

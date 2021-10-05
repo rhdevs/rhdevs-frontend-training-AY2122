@@ -5,6 +5,7 @@ import { ComponentsContainer, MainContainer, StyledDiv, StyledImg, StyledText } 
 
 type Props = {
   groupNumber: number
+  names: string
   oldScreen1ImgSrc: string
   oldScreen2ImgSrc: string
 }
@@ -13,8 +14,13 @@ const GroupContent = (props: Props) => {
   const history = useHistory()
   return (
     <MainContainer>
+<<<<<<< HEAD
       <h1>Group 1</h1>
       <StyledText>Devs: Chun Yu, En Hao, Prince, Maxim. Designers: Shermaine, Nguyen</StyledText>
+=======
+      <h1>Group {props.groupNumber}</h1>
+      <StyledText>{props.names}</StyledText>
+>>>>>>> 153414ee6aeaeb8d2cbdb416c749c098aa35d12f
       <ComponentsContainer>
         <StyledDiv>
           <StyledImg
