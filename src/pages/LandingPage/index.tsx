@@ -35,8 +35,7 @@ const LandingPage = () => {
       <MembersSection>
         <MembersSectionHeader>Groups!</MembersSectionHeader>
         <InformationCardSection>
-          <GroupCard groupNumber={0} devs="name1, name2, name4" designers="name1, name2, name4" />
-          {/* Create your group's card here! */}
+          <GroupCard groupNumber={4} devs="Elva, Zhikai, Marcus" designers="Gregory, Shannon" />
         </InformationCardSection>
       </MembersSection>
     </>
