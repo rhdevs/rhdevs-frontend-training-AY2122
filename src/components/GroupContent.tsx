@@ -13,8 +13,8 @@ const GroupContent = (props: Props) => {
   const history = useHistory()
   return (
     <MainContainer>
-      <h1>Group 0</h1>
-      <StyledText>your name, another name</StyledText>
+      <h1>Group 1</h1>
+      <StyledText>Devs: Chun Yu, En Hao, Prince. Designers: Shermaine, Nguyen</StyledText>
       <ComponentsContainer>
         <StyledDiv>
           <StyledImg
