@@ -3,10 +3,5 @@ main {
   height: 100%;
   min-height: 100vh;
   margin-bottom: -10rem; /*footer*/
-}
-
-main:after {
-  content: "";
-  display: block;
-  height: 10rem;
+  background-color: #fdfdfd;
 }
