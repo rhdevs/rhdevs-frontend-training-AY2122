@@ -1,8 +1,12 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import ForgotPasswordPage from './forgotPassword'
-import LoginPage from './login'
+import ForgotPasswordPage from '../../../components/forgotPassword'
+import LoginPage from '../../../components/login'
+
+import Image from 'antd/lib/image'
+import OldLoginPage from '../../../assets/group4/login_page.svg'
+import OldPasswordPage from '../../../assets/group4/forgot_pwd_page.svg'
 
 const MainContainer = styled.div`
   margin: 1rem 2rem;
@@ -13,14 +17,15 @@ const PlaceholderBox = styled.div`
   height: 100%;
   border: dashed 1px #888;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 
 const ComponentsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-row-gap: 3vw;
   height: 50vh;
 `
@@ -34,12 +39,22 @@ const Group4 = () => {
   return (
     <MainContainer>
       <h1>Group 4</h1>
-      <StyledText>Elva, Zhikai, Marcus, Gregory, Shannon</StyledText>
+      <StyledText>Devs: Elva, Zhikai, Marcus Designers: Gregory, Shannon</StyledText>
       <ComponentsContainer>
-        {/* <PlaceholderBox>new component</PlaceholderBox>
-        <PlaceholderBox>old component</PlaceholderBox> */}
-        <LoginPage />
-        <ForgotPasswordPage />
+        <PlaceholderBox>
+          <h2>Old Images Preview</h2>
+          <div id="old-images">
+            <Image src={OldLoginPage} alt={'Old Login Page'} width="340px" height="406px" />
+            <Image src={OldPasswordPage} alt={'Old Password Page'} width="340px" height="406px" />
+          </div>
+        </PlaceholderBox>
+        <PlaceholderBox>
+          <h2>New Pages</h2>
+          <div id="new pages">
+            <LoginPage />
+            <ForgotPasswordPage />
+          </div>
+        </PlaceholderBox>
       </ComponentsContainer>
     </MainContainer>
   )
