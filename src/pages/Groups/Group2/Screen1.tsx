@@ -1,10 +1,15 @@
 import React from 'react'
-import './styles/Screen1.css'
+import { MainContainer, Screen, BottomNavBar } from './styles/Screen1.styled'
 
 const Screen1 = () => {
   return (
     <>
-      this is screen 1<h1>test</h1>
+      <MainContainer>
+        <Screen>
+          Build new screen here.
+          <BottomNavBar>Navigation Bar</BottomNavBar>
+        </Screen>
+      </MainContainer>
     </>
   )
 }
