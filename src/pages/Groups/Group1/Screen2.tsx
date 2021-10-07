@@ -13,6 +13,9 @@ import {
   StyledButton,
   ButtonContainer,
   ToggleButton,
+  Calendar_container,
+  Day_container,
+  Days,
 } from './styles/Screen2.styled'
 import homeIconUnselected from '../../../assets/Group1/homeIconUnselected.svg'
 import facilitiesIconUnselected from '../../../assets/Group1/facilitiesIconUnselected.svg'
@@ -69,7 +72,19 @@ const renderDailySchedule = () =>
   ))
 
 // TODO: Finish this part
-const renderWeeklySchedule = () => days.map((d) => <div key={d.id}>{d.day}</div>)
+const renderWeeklySchedule = () =>
+  days.map((d) => (
+    <>
+      <Days>{d.day}</Days>
+      <Calendar_container key={d.id}>
+        <Day_container>test</Day_container>
+        <Day_container></Day_container>
+        <Day_container></Day_container>
+        <Day_container></Day_container>
+        <Day_container></Day_container>
+      </Calendar_container>
+    </>
+  ))
 
 const mockValues = [
   { id: 1, event: 'CS1101S Tutorial', location: 'COM1', type: 'academic', time: '8:00am - 10:00am' },

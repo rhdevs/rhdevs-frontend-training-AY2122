@@ -10,6 +10,34 @@ export const Bookings_container = styled.div<{ fontSize?: string }>`
   white-space: nowrap;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
+
+export const Calendar_container = styled.div<{ fontSize?: string }>`
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  margin-left: 10%;
+  color: black;
+  display: flex;
+  ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
+`
+
+export const Day_container = styled.div<{ fontSize?: string }>`
+  margin: 0;
+  height: 10em;
+  width: 15%;
+  color: black;
+  display: flex;
+  border: solid 1px;
+  ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
+`
+export const Days = styled.div<{ fontSize?: string }>`
+  margin: 0;
+  height: 2em;
+  width: 10%;
+  color: black;
+  ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
+`
+
 export const TopNav = styled.div`
   width: 100%;
   height: 7vh;
