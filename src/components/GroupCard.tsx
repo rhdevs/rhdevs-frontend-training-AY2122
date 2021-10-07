@@ -29,6 +29,8 @@ const StyledGroupNumber = styled.text`
 const StyledMemberNameGroup = styled.div`
   display: flex;
   flex-direction: row;
+  padding-left: 10%;
+  padding-right: 10%;
 `
 
 const BoldText = styled.text`

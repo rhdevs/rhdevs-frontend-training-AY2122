@@ -1,5 +1,5 @@
 import React from 'react'
-import './Screen1.css'
+import './styles/Screen1.css'
 
 const Screen1 = () => {
   return (
