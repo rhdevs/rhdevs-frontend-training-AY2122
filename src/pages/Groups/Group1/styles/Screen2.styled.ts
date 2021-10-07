@@ -66,6 +66,11 @@ export const EventText = styled.h3<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
   font-weight: 200;
 `
+export const TimeText = styled.h3<{ fontSize?: string }>`
+  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+  font-weight: 500;
+`
+
 export const ButtonContainer = styled.div`
   height: 100%;
   margin: 15px 2%;

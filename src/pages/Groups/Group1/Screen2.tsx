@@ -7,6 +7,7 @@ import {
   TopNav,
   Header,
   EventText,
+  TimeText,
   LocationText,
   BotNav,
   StyledButton,
@@ -62,6 +63,7 @@ const renderDailySchedule = () =>
   mockValues.map((e) => (
     <IndividualBookings background={e.type} key={e.id}>
       <EventText>{e.event}</EventText>
+      <TimeText>{e.time}</TimeText>
       <LocationText>{e.location}</LocationText>
     </IndividualBookings>
   ))
@@ -70,11 +72,11 @@ const renderDailySchedule = () =>
 const renderWeeklySchedule = () => days.map((d) => <div key={d.id}>{d.day}</div>)
 
 const mockValues = [
-  { id: 1, event: 'CS1101S Tutorial', location: 'COM1', type: 'academic' },
-  { id: 2, event: 'RHMP Recording', location: 'Raffles Hall', type: 'hall' },
-  { id: 3, event: 'Meetup with friends', location: 'UTown', type: 'others' },
-  { id: 4, event: 'Hall event', location: 'Raffles Hall', type: 'hall' },
-  { id: 5, event: 'GET1020 Lecture', location: 'Online', type: 'academic' },
+  { id: 1, event: 'CS1101S Tutorial', location: 'COM1', type: 'academic', time: '8:00am - 10:00am' },
+  { id: 2, event: 'RHMP Recording', location: 'Raffles Hall', type: 'hall', time: '10:00am - 12:00pm' },
+  { id: 3, event: 'Meetup with friends', location: 'UTown', type: 'others', time: '12:00pm - 2:00pm' },
+  { id: 4, event: 'Hall event', location: 'Raffles Hall', type: 'hall', time: '2:00pm - 5:00pm' },
+  { id: 5, event: 'GET1020 Lecture', location: 'Online', type: 'academic', time: '5:00pm - 8:00pm' },
 ]
 
 const days = [
