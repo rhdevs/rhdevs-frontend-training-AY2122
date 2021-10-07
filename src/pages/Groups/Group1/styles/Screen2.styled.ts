@@ -5,8 +5,8 @@ export const Bookings_container = styled.div<{ fontSize?: string }>`
   height: 100%;
   width: 100%;
   color: black;
-  padding: 7vh 0px;
-  //border-style: solid;
+  padding: 7vh 0;
+  border-radius: 5px;
   white-space: nowrap;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
@@ -14,6 +14,7 @@ export const TopNav = styled.div`
   width: 100%;
   height: 7vh;
   padding: 1em;
+  z-index: 800;
   font-size: 28px;
   display: flex;
   justify-content: space-between;
@@ -40,6 +41,10 @@ export const BotNav = styled.div`
 export const Header = styled.h1`
   font-size: 23px;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 10px;
+  text-overflow: ellipsis;
 `
 
 export const IndividualBookings = styled.div<{ background?: string }>`
@@ -48,13 +53,33 @@ export const IndividualBookings = styled.div<{ background?: string }>`
   border: solid 1px;
   padding: 30px;
   color: black;
-  ${(props) => (props.background && props.background === 'green' ? `background: #468751;` : `background: white`)}
+  ${(props) =>
+    props.background && props.background === 'academic'
+      ? `background: #468751;`
+      : props.background === 'hall'
+      ? `background: #72ba75;`
+      : `background: white;`}
   white-space: nowrap;
   min-height: 100px;
 `
 export const EventText = styled.h3<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
   font-weight: 200;
+`
+export const ButtonContainer = styled.div`
+  height: 100%;
+  margin: 15px 2%;
+  display: flex;
+  justify-content: flex-end;
+`
+
+export const ToggleButton = styled.button`
+  border-radius: 5px;
+  cursor: pointer;
+  background: #72ba75;
+  border-color: #72ba75;
+  min-height: 3em;
+  min-width: 10em;
 `
 
 export const LocationText = styled.p<{ fontSize?: string }>`
