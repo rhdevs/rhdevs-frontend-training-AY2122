@@ -1,13 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-<<<<<<< HEAD
-=======
 import GroupX from './Group0'
 import Group1 from './Group1'
 import Group2 from './Group2'
 import Group3 from './Group3'
->>>>>>> e679b7aa2e10242386f378a8e4572da7ecf64eca
 import Group4 from './Group4'
 import NotFound from '../ErrorPage/NotFound'
 import Group0Screen1 from './Group0/Screen1'
@@ -26,11 +23,6 @@ const Groups = () => {
 
   const screenNumber = Number(params.screenNumber)
   switch (Number(params.groupNumber)) {
-<<<<<<< HEAD
-    case 4:
-      return <Group4 />
-    //   Insert case statement to return your group's page
-=======
     case 0:
       if (screenNumber === 1) {
         return <Group0Screen1 />
@@ -71,7 +63,6 @@ const Groups = () => {
       } else {
         return <Group4 />
       }
->>>>>>> e679b7aa2e10242386f378a8e4572da7ecf64eca
     default:
       return <NotFound />
   }

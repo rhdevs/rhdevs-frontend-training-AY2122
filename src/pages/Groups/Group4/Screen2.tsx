@@ -78,7 +78,7 @@ const ForgotPasswordPage = () => {
   // }
 
   return (
-    <div style={{ backgroundColor: '#fafaf4', borderStyle: 'solid', marginTop: '100px' }}>
+    <div style={{ backgroundColor: '#fafaf4', borderStyle: 'solid' }}>
       {/* <TopNavBar title={'Forget Password'} /> */}
       <ForgetPasswordContainer>
         <InputTextLabel>Email: </InputTextLabel>

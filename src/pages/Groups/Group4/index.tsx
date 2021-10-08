@@ -7,6 +7,7 @@ import LoginPage from './Screen1'
 import Image from 'antd/lib/image'
 import OldLoginPage from '../../../assets/group4/Login.svg'
 import OldPasswordPage from '../../../assets/group4/Forget Password.svg'
+import GroupContent from '../../../components/GroupContent'
 
 const MainContainer = styled.div`
   margin: 1rem 2rem;
@@ -54,7 +55,13 @@ const NewPages = styled.p`
 const Group4 = () => {
   return (
     <MainContainer>
-      <h1>Group 4</h1>
+      <GroupContent
+        groupNumber={4}
+        names="Devs: Elva, Zhikai, Weipin, Marcus | Designers: Gregory, Shannon, Brendan"
+        oldScreen1ImgSrc={OldLoginPage}
+        oldScreen2ImgSrc={OldPasswordPage}
+      />
+      {/* <h1>Group 4</h1>
       <StyledText>
         Devs: Elva, Zhikai, Weipin, Marcus <br />
         Designers: Gregory, Shannon, Brendan
@@ -86,7 +93,7 @@ const Group4 = () => {
             <ForgotPasswordPage />
           </NewPages>
         </PlaceholderBox>
-      </ComponentsContainer>
+      </ComponentsContainer> */}
     </MainContainer>
   )
 }
