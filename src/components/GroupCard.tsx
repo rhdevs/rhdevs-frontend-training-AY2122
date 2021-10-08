@@ -7,14 +7,14 @@ import { PATHS } from '../App'
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  background: #f6f6f6;
+  background: #fff;
   border-radius: 10px;
-  overflow: hidden;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
   justify-content: center;
   align-items: center;
+  margin: 2.5px;
 
   :hover,
   :focus {
@@ -23,11 +23,7 @@ const StyledCard = styled.div`
 `
 
 const StyledGroupNumber = styled.text`
-  font-size: calc(18px + 2vw);
-`
-
-const StyledComponentName = styled.text`
-  font-size: calc(16px + 0.5vw);
+  font-size: calc(18px + 1.5vw);
 `
 
 const StyledMemberNameGroup = styled.div`
@@ -45,7 +41,6 @@ const StyledNamesText = styled.text`
 
 type Props = {
   groupNumber: number
-  componentName: string
   devs: string
   designers: string
 }
@@ -56,7 +51,6 @@ const GroupCard = (props: Props) => {
   return (
     <StyledCard onClick={() => history.push(`${PATHS.GROUP_ROUTE}/${props.groupNumber}`)}>
       <StyledGroupNumber>Group {props.groupNumber}</StyledGroupNumber>
-      <StyledComponentName>{props.componentName}</StyledComponentName>
       <StyledMemberNameGroup>
         <BoldText>Devs:</BoldText>
         <StyledNamesText>{props.devs}</StyledNamesText>

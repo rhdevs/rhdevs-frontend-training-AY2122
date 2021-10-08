@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 
 import LoadingSpinner from './components/LoadingSpinner'
 import MainNavigation from './shared/Navigation/MainNavigation'
+import Lesson1Example from './pages/Lesson1Example'
 import Footer from './shared/Navigation/Footer'
 
 import './App.css'
@@ -17,27 +18,43 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 
 function App() {
   useEffect(() => {
-    // To bring user to the op of the page on first render
+    // To bring user to the top of the page on first render
     window.scrollTo(0, 0)
   }, [])
+
   const routes = (
     <Switch>
-      <Route path="/" exact component={LandingPage} />
-      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact component={Groups} />
-      <Route component={NotFound} />
+      <Route path="/" exact>
+        <main>
+          <MainNavigation />
+          <LandingPage />
+          <Footer />
+        </main>
+      </Route>
+      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
+        <main>
+          <MainNavigation />
+          <Groups />
+          <Footer />
+        </main>
+      </Route>
+      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
+      {/* example from lesson 1 (4oct) */}
+      <Route path="/example" exact component={Lesson1Example} />
+      <Route>
+        <main>
+          <MainNavigation />
+          <NotFound />
+          <Footer />
+        </main>
+      </Route>
       <Redirect to="/" />
     </Switch>
   )
 
   return (
     <BrowserRouter>
-      <Suspense fallback={<LoadingSpinner />}>
-        <main>
-          <MainNavigation />
-          {routes}
-        </main>
-        <Footer />
-      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>{routes}</Suspense>
     </BrowserRouter>
   )
 }
