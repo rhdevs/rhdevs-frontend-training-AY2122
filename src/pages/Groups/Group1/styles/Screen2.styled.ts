@@ -100,8 +100,9 @@ export const Header = styled.h1`
 
 export const EventCard = styled.div<{ length?: number; type?: string }>`
   position: absolute;
+  min-width: 8em;
   left: -1px;
-  width: 8em;
+  width: 100%;
   border-radius: 5px;
   border: solid 3px;
   overflow: hidden;
