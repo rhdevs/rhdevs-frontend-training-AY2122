@@ -9,7 +9,7 @@ const Group1 = () => {
     <>
       <GroupContent
         groupNumber={1}
-        names="Chun Yu, En Hao, Prince, Maxim, Shermaine, Nguyen"
+        names="Chun Yu, En Hao, Prince, Maxim, Richard, Shermaine, Nguyen, Felicia"
         oldScreen1ImgSrc={BookingOld}
         oldScreen2ImgSrc={ScheduleOld}
       />
