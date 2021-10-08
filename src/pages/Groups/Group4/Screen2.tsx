@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 
 import styled from 'styled-components'
 // import TopNavBar from '../../../components/Mobile/TopNavBar'
-import { Alert, Button, Input } from 'antd'
+// import { Alert, Button, Input } from 'antd'
 import 'antd/dist/antd.css'
+
+import logo from '../../../assets/group4/devsLogo.svg'
 
 const ContainerDiv = styled.div`
   background-color: #fafaf4;
@@ -15,46 +17,42 @@ const ForgetPasswordContainer = styled.div`
   width: 414px;
   margin: 0px 23px;
   padding-top: 50px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-style: solid;
 `
-const InputTextLabel = styled.text`
-  float: left;
-  font-size: 17px;
-  padding: 0px 0px 4px 0px;
-  font-family: Inter;
+
+const Logo = styled.img`
+  width: 212px;
+  height: 153px;
+  margin-top: 273px;
+`
+
+const Link = styled.a`
+  width: 370px;
+  height: 19px;
+  left: 22px;
+  top: 467px;
+
+  font-family: Lato;
   font-style: normal;
-  font-weight: 200;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.015em;
+
+  color: #59ba95;
 `
-const StyledEmailInput = styled.div`
-  .ant-input {
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: 200;
-  }
-`
-const AlertGroup = styled.div`
-  margin: 23px;
-`
-const ButtonDiv = styled.div`
-  display: flex
-  justify-content: 'center';
-  align-items: 'center';
-`
-const LongButton = {
-  size: 'small',
-  backgroundColor: '#DE5F4C',
-  borderColor: '#DE5F4C',
-  boxShadow: '0px 2px 0px rgba(0, 0, 0, 0.043)',
-  borderRadius: '8px',
-  margin: 'auto',
-  marginTop: '2vh',
-  display: 'block',
-}
 
 const ForgotPasswordPage = () => {
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState({ message: '' })
-  const [success, setSuccess] = useState(false)
+  // const [email, setEmail] = useState('')
+  // const [error, setError] = useState({ message: '' })
+  // const [success, setSuccess] = useState(false)
 
   // const changePasswordHandler = async () => {
   //   if (email === '') {
@@ -78,10 +76,11 @@ const ForgotPasswordPage = () => {
   // }
 
   return (
-    <div style={{ backgroundColor: '#fafaf4', borderStyle: 'solid' }}>
-      {/* <TopNavBar title={'Forget Password'} /> */}
+    <div style={{ backgroundColor: '#fafaf4' }}>
       <ForgetPasswordContainer>
-        <InputTextLabel>Email: </InputTextLabel>
+        <Logo src={logo} />
+        <Link>Check your email</Link>
+        {/* <InputTextLabel>Email: </InputTextLabel>
         <StyledEmailInput>
           <Input
             type="text"
@@ -112,7 +111,7 @@ const ForgotPasswordPage = () => {
           <Button type="primary" style={LongButton}>
             Send Reset Link
           </Button>
-        </ButtonDiv>
+        </ButtonDiv> */}
       </ForgetPasswordContainer>
     </div>
   )
