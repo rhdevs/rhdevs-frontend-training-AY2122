@@ -11,20 +11,42 @@ export const Bookings_container = styled.div<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 
+export const WeekContainer = styled.div`
+  display: flex;
+  margin: 2%;
+  overflow: auto;
+`
+
 export const Calendar_container = styled.div<{ fontSize?: string }>`
-  margin: 0;
   height: 100%;
   width: 100%;
-  margin-left: 10%;
+  //margin: 0 0 0 10%;
   color: black;
   display: flex;
+  flex-direction: column;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
+`
+
+export const Timing_container = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  flex-basis: min-content;
+`
+
+export const Time_container = styled.div`
+  height: 10em;
 `
 
 export const Day_container = styled.div<{ fontSize?: string }>`
   margin: 0;
+  position: relative;
   height: 10em;
-  width: 15%;
+  width: 100%;
+  min-width: 8em;
   color: black;
   display: flex;
   border: solid 1px;
@@ -33,8 +55,9 @@ export const Day_container = styled.div<{ fontSize?: string }>`
 export const Days = styled.div<{ fontSize?: string }>`
   margin: 0;
   height: 2em;
-  width: 10%;
+  width: 100%;
   color: black;
+  text-align: center;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 
@@ -73,6 +96,25 @@ export const Header = styled.h1`
   white-space: nowrap;
   padding: 0 10px;
   text-overflow: ellipsis;
+`
+
+export const EventCard = styled.div<{ length?: number; type?: string }>`
+  position: absolute;
+  left: -1px;
+  width: 8em;
+  border-radius: 5px;
+  border: solid 3px;
+  overflow: hidden;
+  white-space: initial;
+  text-overflow: ellipsis;
+  z-index: 100;
+  ${(props) => (props.length && props.length > 1 ? `height: calc(2 * 10em);` : `height: 10em;`)}
+  ${(props) =>
+    props.type && props.type === 'academic'
+      ? `background: #468751;`
+      : props.type === 'hall'
+      ? `background: #72ba75;`
+      : `background: white;`}
 `
 
 export const IndividualBookings = styled.div<{ background?: string }>`
