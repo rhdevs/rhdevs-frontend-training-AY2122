@@ -108,6 +108,7 @@ export const Author = styled.div`
 `
 
 export const PostMessage = styled.div`
+  background-color: rgba(0, 255, 0, 0.1);
   font-size: 13px;
   border: 2px solid green;
   border-radius: 10px;
