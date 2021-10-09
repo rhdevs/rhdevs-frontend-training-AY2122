@@ -33,6 +33,8 @@ export const Picture = styled.img`
 export const BookingTitle = styled.div`
   border: 1px solid red;
   background: #d9e6df;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
