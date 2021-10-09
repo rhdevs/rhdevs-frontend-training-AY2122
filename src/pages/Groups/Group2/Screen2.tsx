@@ -16,6 +16,8 @@ import {
   PeopleLogo,
   Figure,
   Figcaption,
+  AdditionalNotes,
+  Description,
 } from './styles/Screen2.styled'
 import lowerlounge from '../../../assets/Group2/LowerLounge.svg'
 import clock from '../../../assets/Group2/Clock.svg'
@@ -50,7 +52,14 @@ const Screen2 = () => {
             <br />
             Thu, 17/12/21 3:00 PM
           </Timing>
-          <Notes>Additional notes of bookings</Notes>
+          <Notes>
+            <AdditionalNotes>Additional notes:</AdditionalNotes>
+            <Description>
+              Will be using this place for RHMP bonding.
+              <br />
+              Contact me if you have any question.
+            </Description>
+          </Notes>
           <ConfirmButton>Confirm button.</ConfirmButton>
           <BottomNavBar>Bottom nav bar.</BottomNavBar>
         </Screen>

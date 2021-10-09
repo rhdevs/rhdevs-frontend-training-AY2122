@@ -117,7 +117,20 @@ export const Notes = styled.div`
   min-width: 300px;
   width: 50vw;
   height: 15vh;
-  text-align: center;
+  padding: 3vh;
+  font-family: Lato;
+  font-size: 14px;
+  text-align: left;
+`
+
+export const AdditionalNotes = styled.div`
+  font-weight: bold;
+  height: 30%;
+`
+
+export const Description = styled.div`
+  font-weight: normal;
+  height: 70%;
 `
 
 export const ConfirmButton = styled.div`
