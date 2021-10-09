@@ -70,7 +70,7 @@ export const FilterBar = styled.div`
   text-align: center;
   background-color: lightgreen;
   border: 1px solid green;
-  border-radius: 0 0 15px 15px;
+  border-radius: 15px 15px 15px 15px;
 `
 // would it be better to abstract this Post into another component?
 export const Post = styled.div`
