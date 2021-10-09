@@ -9,6 +9,8 @@ export const MainContainer = styled.div`
 `
 
 export const Screen = styled.div`
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
@@ -17,7 +19,6 @@ export const Screen = styled.div`
 `
 
 export const SearchBar = styled.div`
-  position: flex;
   top: 0;
   max-width: 400px;
   min-width: 300px;
@@ -35,7 +36,6 @@ export const SearchButton = styled.div`
 `
 
 export const TextSection = styled.div`
-  position: flex;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -50,7 +50,6 @@ export const Title = styled.div`
 `
 
 export const ButtonsSection = styled.div`
-  position: flex;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -59,7 +58,6 @@ export const ButtonsSection = styled.div`
 `
 
 export const PostsSection = styled.div`
-  position: flex;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -68,13 +66,11 @@ export const PostsSection = styled.div`
 `
 
 export const FilterBar = styled.div`
-  position: flex;
   text-align: center;
   background-color: lightgreen;
 `
 // would it be better to abstract this Post into another component?
 export const Post = styled.div`
-  position: flex;
   max-width: 350px;
   min-width: 250px;
   width: 40vw;
@@ -85,7 +81,7 @@ export const Post = styled.div`
 `
 
 export const BottomNavBar = styled.div`
-  position: flex;
+  position: fixed;
   bottom: 0;
   max-width: 400px;
   min-width: 300px;
