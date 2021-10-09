@@ -23,8 +23,6 @@ export const Screen = styled.div`
 `
 
 export const Picture = styled.div`
-  position: fixed;
-  top: 0;
   border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
@@ -33,8 +31,6 @@ export const Picture = styled.div`
   text-align: center;
 `
 export const BookingTitle = styled.div`
-  position: fixed;
-  top: ${bookingTitleTop + 'vh'};
   border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
@@ -43,8 +39,6 @@ export const BookingTitle = styled.div`
   text-align: center;
 `
 export const DurationAndAuthor = styled.div`
-  position: fixed;
-  top: ${durationAndAuthorTop + 'vh'};
   border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
@@ -53,8 +47,6 @@ export const DurationAndAuthor = styled.div`
   text-align: center;
 `
 export const Timing = styled.div`
-  position: fixed;
-  top: ${timingTop + 'vh'};
   border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
@@ -64,8 +56,6 @@ export const Timing = styled.div`
 `
 
 export const Notes = styled.div`
-  position: fixed;
-  top: ${notesTop + 'vh'};
   border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
@@ -75,8 +65,6 @@ export const Notes = styled.div`
 `
 
 export const ConfirmButton = styled.div`
-  position: fixed;
-  top: ${confirmButtonTop + 'vh'};
   border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
