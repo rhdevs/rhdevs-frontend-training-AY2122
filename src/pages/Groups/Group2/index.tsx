@@ -1,6 +1,6 @@
 import React from 'react'
 import GroupContent from '../../../components/GroupContent'
-import OldScreen1 from '../../../assets/Group1/OldScreen1.png'
+import OldScreen1 from '../../../assets/Group2/OldScreen1.png'
 import OldScreen2 from '../../../assets/Group2/OldScreen2.png'
 
 const Group2 = () => {
