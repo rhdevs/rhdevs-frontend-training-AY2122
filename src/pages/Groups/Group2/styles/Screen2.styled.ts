@@ -12,6 +12,7 @@ export const Screen = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
+  border: 1px solid black;
 `
 
 export const PictureAndTitle = styled.div`
