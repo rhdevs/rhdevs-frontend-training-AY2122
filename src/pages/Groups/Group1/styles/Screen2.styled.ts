@@ -24,6 +24,7 @@ export const Calendar_container = styled.div<{ fontSize?: string }>`
   color: black;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 
@@ -41,7 +42,7 @@ export const Time_container = styled.div`
   height: 10em;
 `
 
-export const Day_container = styled.div<{ fontSize?: string }>`
+export const Day_container = styled.div<{ fontSize?: string; key?: string; day?: string }>`
   margin: 0;
   position: relative;
   height: 10em;
@@ -50,7 +51,14 @@ export const Day_container = styled.div<{ fontSize?: string }>`
   color: black;
   display: flex;
   border: solid 1px;
+  border-color: #ede0e0;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
+  ${(props) =>
+    props.day === 'Tue'
+      ? 'background-color: #f9f9f9'
+      : props.day === 'Thu'
+      ? 'background-color: #f9f9f9'
+      : 'background-color: white'}
 `
 export const Days = styled.div<{ fontSize?: string }>`
   margin: 0;
@@ -103,12 +111,12 @@ export const EventCard = styled.div<{ length?: number; type?: string }>`
   min-width: 8em;
   left: -1px;
   width: 100%;
-  border-radius: 5px;
-  border: solid 3px;
   overflow: hidden;
   white-space: initial;
   text-overflow: ellipsis;
   z-index: 100;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
   ${(props) => (props.length && props.length > 1 ? `height: calc(2 * 10em);` : `height: 10em;`)}
   ${(props) =>
     props.type && props.type === 'academic'
@@ -133,13 +141,31 @@ export const IndividualBookings = styled.div<{ background?: string }>`
   white-space: nowrap;
   min-height: 100px;
 `
-export const EventText = styled.h3<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
-  font-weight: 200;
-`
-export const TimeText = styled.h3<{ fontSize?: string }>`
+
+export const EventTextWeekly = styled.h3<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
   font-weight: 500;
+  margin-left: 0.8em;
+  margin-top: 1em;
+`
+export const LocationTextWeekly = styled.p<{ fontSize?: string }>`
+  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+  font-weight: 300;
+  margin-left: 1em;
+  margin-top -0.5em;
+`
+export const EventText = styled.h3<{ fontSize?: string }>`
+  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+  font-weight: 500;
+`
+
+export const TimeText = styled.h3<{ fontSize?: string }>`
+  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+  font-weight: 350;
+`
+export const LocationText = styled.p<{ fontSize?: string }>`
+  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+  font-weight: 350;
 `
 
 export const ButtonContainer = styled.div`
@@ -156,11 +182,6 @@ export const ToggleButton = styled.button`
   border-color: #72ba75;
   min-height: 3em;
   min-width: 10em;
-`
-
-export const LocationText = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
-  font-weight: 500;
 `
 
 export const StyledButton = styled.img`

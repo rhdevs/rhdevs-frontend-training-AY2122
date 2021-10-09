@@ -10,8 +10,10 @@ import {
   TopNav,
   Header,
   EventText,
+  EventTextWeekly,
   TimeText,
   LocationText,
+  LocationTextWeekly,
   BotNav,
   StyledButton,
   ButtonContainer,
@@ -90,7 +92,9 @@ const renderWeeklySchedule = () => (
         <Calendar_container key={d.id}>
           <Days>{d.day}</Days>
           {timings.map((t) => (
-            <Day_container key={t.toString() + d.day}>{d.day === 'Fri' ? mapEvents(t) : null}</Day_container>
+            <Day_container key={t.toString() + d.day} day={d.day}>
+              {d.day === 'Fri' ? mapEvents(t) : null}
+            </Day_container>
           ))}
         </Calendar_container>
       </>
@@ -104,8 +108,8 @@ const renderEventCard = (e: any) => {
   console.log(e)
   return (
     <EventCard key={e.id} length={getLength(e)} type={e.type}>
-      <EventText>{e.event}</EventText>
-      <LocationText>{e.location}</LocationText>
+      <EventTextWeekly>{e.event}</EventTextWeekly>
+      <LocationTextWeekly>{e.location}</LocationTextWeekly>
     </EventCard>
   )
 }
