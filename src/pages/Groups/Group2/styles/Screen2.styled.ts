@@ -75,12 +75,14 @@ export const Pen = styled.img`
 
 export const DurationAndAuthor = styled.div`
   border: 1px solid red;
+  position: relative;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
   height: 15vh;
   padding: 8%;
 `
+
 export const Figure = styled.figure`
   left: 0;
   width: 50%;
