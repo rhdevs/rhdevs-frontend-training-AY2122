@@ -8,7 +8,7 @@ export const TopNav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   background: #ffffff;
 `
 export const SucessfullyDeletedEvent = styled.div`
