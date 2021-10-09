@@ -122,7 +122,7 @@ export const CenterNav = styled.div`
   height: 7vh;
   padding: 0em;
   width: 595px;
-  left: 40px;
+  left: 62px;
   top: 260px;
   font-size: 28px;
   display: flex;
