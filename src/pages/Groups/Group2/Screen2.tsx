@@ -11,6 +11,7 @@ import {
   Timing,
   Notes,
   ConfirmButton,
+  Confirm,
   BottomNavBar,
   PictureAndTitle,
   ClockLogo,
@@ -63,7 +64,9 @@ const Screen2 = () => {
               Contact me if you have any question.
             </Description>
           </Notes>
-          <ConfirmButton>Confirm button.</ConfirmButton>
+          <ConfirmButton>
+            <Confirm>Confirm</Confirm>
+          </ConfirmButton>
           <BottomNavBar>Bottom nav bar.</BottomNavBar>
         </Screen>
       </MainContainer>

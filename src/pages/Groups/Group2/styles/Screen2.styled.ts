@@ -148,7 +148,18 @@ export const ConfirmButton = styled.div`
   min-width: 300px;
   width: 50vw;
   height: 15vh;
+  padding: 5%;
+  font-family: Lato;
   text-align: center;
+`
+
+export const Confirm = styled.button`
+  width: 10vw;
+  height: 2vw;
+  color: white;
+  font-size: 22px;
+  background: linear-gradient(272.25deg, #72ba75 20.66%, #58b994 86.45%);
+  border-radius: 20px;
 `
 
 export const BottomNavBar = styled.div`
