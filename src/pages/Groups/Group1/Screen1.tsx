@@ -42,7 +42,7 @@ const Screen1 = () => {
       <div>
         <TopNav>
           <LeftOutlined />
-          <Header> My Bookings </Header>
+          My Bookings
         </TopNav>
       </div>
       <div>
@@ -54,16 +54,16 @@ const Screen1 = () => {
           <UndoIcon>undo</UndoIcon>
         </SucessfullyDeletedEvent>
 
-        <CenterNav></CenterNav>
-
-        <GreyBoxDelete>
-          <GreyBoxText>Recently Deleted</GreyBoxText>
-          <StyledGreybox src={dustbinIconBlack} />
-        </GreyBoxDelete>
-        <GreyBoxSort>
-          <GreyBoxText>Sort By</GreyBoxText>
-          <StyledGreybox src={Schedule} />
-        </GreyBoxSort>
+        <CenterNav>
+          <GreyBoxDelete>
+            <GreyBoxText>Recently Deleted</GreyBoxText>
+            <StyledGreybox src={dustbinIconBlack} />
+          </GreyBoxDelete>
+          <GreyBoxSort>
+            <GreyBoxText>Sort By</GreyBoxText>
+            <StyledGreybox src={Schedule} />
+          </GreyBoxSort>
+        </CenterNav>
 
         <Booking>
           <StyledCCAIcon src={bandroom} />
