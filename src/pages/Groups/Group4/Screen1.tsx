@@ -7,7 +7,7 @@ import 'antd/dist/antd.css'
 import logo from '../../../assets/group4/devsLogo.svg'
 
 const ContainerDiv = styled.div`
-  background-color: #fafaf4;
+  background-color: '#ffffff';
   border-style: solid;
 `
 
@@ -43,22 +43,22 @@ const PostButton = styled.div`
     font-weight: 200;
   }
   .ant-btn-primary {
-    background-color: #de5f4c;
-    border-color: #de5f4c;
+    background-color: #72ba75;
+    border-color: #72ba75;
     width: 100%;
     margin-top: 10px;
   }
   .ant-btn-primary:focus {
-    background-color: #de5f4c;
-    border-color: #de5f4c;
-    background: #de5f4c;
-    border-color: #de5f4c;
+    background-color: #72ba75;
+    border-color: #72ba75;
+    background: #72ba75;
+    border-color: #72ba75;
   }
   .ant-btn-primary:hover {
-    background-color: #de5f4c;
-    border-color: #de5f4c;
-    background: #de5f4c;
-    border-color: #de5f4c;
+    background-color: #72ba75;
+    border-color: #72ba75;
+    background: #72ba75;
+    border-color: #72ba75;
   }
   .ant-btn-default: {
     height: min-content;
