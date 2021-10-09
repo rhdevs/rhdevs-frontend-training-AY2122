@@ -167,7 +167,6 @@ export const BottomNavBar = styled.div`
   width: 50vw;
   height: 50px;
   text-align: center;
-  border: 1px solid black;
 `
 
 export const LowerLoungePhoto = styled.div`
