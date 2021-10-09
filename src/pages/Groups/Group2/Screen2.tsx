@@ -9,15 +9,19 @@ import {
   Notes,
   ConfirmButton,
   BottomNavBar,
+  PictureAndTitle,
 } from './styles/Screen2.styled'
+import lowerlounge from '../../../assets/Group2/LowerLounge.svg'
 
 const Screen2 = () => {
   return (
     <>
       <MainContainer>
         <Screen>
-          <Picture>Venue picture.</Picture>
-          <BookingTitle>Booking title.</BookingTitle>
+          <PictureAndTitle>
+            <Picture src={lowerlounge} alt="Lower Lounge photo" />
+            <BookingTitle>Booking title.</BookingTitle>
+          </PictureAndTitle>
           <DurationAndAuthor>Booking duration and author.</DurationAndAuthor>
           <Timing>Timing of booking.</Timing>
           <Notes>Additional notes of bookings</Notes>

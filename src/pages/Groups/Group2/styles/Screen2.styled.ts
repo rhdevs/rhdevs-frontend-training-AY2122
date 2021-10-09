@@ -16,21 +16,30 @@ export const Screen = styled.div`
   height: 100vh;
 `
 
-export const Picture = styled.div`
-  border: 1px solid red;
+export const PictureAndTitle = styled.div`
+  max-width: 400px;
+  min-width: 300px;
+  width: 50vw;
+  height: 45vh;
+`
+
+export const Picture = styled.img`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
   height: 35vh;
-  text-align: center;
 `
 export const BookingTitle = styled.div`
   border: 1px solid red;
+  background: white;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
   height: 10vh;
+  bottom: 10vh;
+  position: relative;
   text-align: center;
+  z-index: 0;
 `
 export const DurationAndAuthor = styled.div`
   border: 1px solid red;
@@ -76,4 +85,9 @@ export const BottomNavBar = styled.div`
   height: 50px;
   text-align: center;
   border: 1px solid red;
+`
+
+export const LowerLoungePhoto = styled.div`
+  width: 100%;
+  height: auto;
 `
