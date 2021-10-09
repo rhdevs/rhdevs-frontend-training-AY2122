@@ -13,7 +13,6 @@ export const Screen = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
-  height: 100vh;
 `
 
 export const PictureAndTitle = styled.div`
@@ -28,6 +27,7 @@ export const Picture = styled.img`
   min-width: 300px;
   width: 50vw;
   height: 35vh;
+  object-fit: cover;
 `
 
 export const BookingTitle = styled.div`
