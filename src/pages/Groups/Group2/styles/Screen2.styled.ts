@@ -1,11 +1,5 @@
 import styled from 'styled-components'
 
-const bookingTitleTop = 25
-const durationAndAuthorTop = 35
-const timingTop = durationAndAuthorTop + 15
-const notesTop = timingTop + 15
-const confirmButtonTop = notesTop + 15
-
 export const MainContainer = styled.div`
   font-size: 2rem;
   border: 1px black;
