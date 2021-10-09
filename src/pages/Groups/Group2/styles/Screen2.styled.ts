@@ -80,7 +80,7 @@ export const DurationAndAuthor = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
-  height: 15vh;
+  height: 20vh;
   padding: 8%;
 `
 export const Figure = styled.figure`
@@ -114,7 +114,7 @@ export const PeopleLogo = styled.img`
 export const Timing = styled.div`
   border: 1px solid red;
   height: auto;
-  padding: 10%;
+  padding: 5%;
   text-align: center;
   font-family: Lato;
   font-weight: normal;
@@ -126,7 +126,7 @@ export const Notes = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
-  height: 15vh;
+  height: auto;
   padding: 3vh;
   font-family: Lato;
   font-size: 14px;
@@ -150,8 +150,7 @@ export const ConfirmButton = styled.div`
   min-width: 300px;
   width: 50vw;
   height: 25vh;
-  padding: 5%;
-  padding-bottom: 50px;
+  padding: 10px 0px 0px 0px;
   font-family: Lato;
   text-align: center;
 `
