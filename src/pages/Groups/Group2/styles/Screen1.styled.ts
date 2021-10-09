@@ -26,6 +26,7 @@ export const SearchBar = styled.div`
   height: 70px;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
+  background-color: green;
 `
 
 export const SearchButton = styled.div`
