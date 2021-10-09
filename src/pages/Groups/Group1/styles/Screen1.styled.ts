@@ -20,12 +20,10 @@ export const SucessfullyDeletedEvent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 16px 26px;
-  position: absolute;
+  position: relative;
   width: 600px;
   margin: 15px 2%;
   height: 160px;
-  left: 22px;
-  top: 70px;
   background: #f6ffed;
   /* Polar Green/3 */
   border: 1px solid #b7eb8f;
@@ -42,6 +40,7 @@ export const Header = styled.h1`
 `
 export const BotNav = styled.div`
   width: 100%;
+  z-index: 5;
   height: 7vh;
   padding: 1em;
   font-size: 28px;
@@ -56,8 +55,8 @@ export const BotNav = styled.div`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `
 export const StyledButton = styled.img`
-  width: 28px;
-  max-height: 28px;
+  width: 35px;
+  height: auto;
 `
 export const StyledTick = styled.img`
   width: 28px;
@@ -117,22 +116,37 @@ export const UndoIcon = styled.div<{ fontSize?: string }>`
   box-sizing: border-box;
   border-radius: 5px;
 `
-export const CenterNav = styled.div`
-  width: 100%;
-  height: 7vh;
-  padding: 0em;
-  width: 595px;
-  left: 62px;
-  top: 260px;
-  font-size: 28px;
+export const CentreNav = styled.div`
+  display: inline-block;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 84%;
+  width: 100%;
+  top: 84px;
+  display: flex;
+  justify-content: safe-start;
+  gap: 0px;
   align-items: center;
   position: absolute;
   background: white;
 `
+export const OptionsBoxes = styled.div`
+  display: inline-block;
+  height: 70px;
+  padding: 0;
+  margin: 5px;
+  width: 595px;
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: white;
+`
 export const GreyBoxDelete = styled.div`
-  width: 100%;
   height: 6vh;
   width: 200px;
   font-size: 10px;
@@ -142,7 +156,7 @@ export const GreyBoxDelete = styled.div`
   align-items: center;
   position: relative;
   background: #cecece;
-  border-radius: 5px;
+  border-radius: 10px;
 `
 export const GreyBoxSort = styled.div`
   width: 100%;
@@ -155,7 +169,7 @@ export const GreyBoxSort = styled.div`
   align-items: center;
   position: relative;
   background: #cecece;
-  border-radius: 5px;
+  border-radius: 10px;
 `
 export const GreyBoxText = styled.p<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
@@ -180,12 +194,10 @@ export const Booking = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 16px 26px;
-  position: fixed;
+  position: relative;
   width: 600px;
   margin: 15px 2%;
   height: 160px;
-  left: 22px;
-  top: 350px;
   background: #ffffff;
   border: 1px solid #b7eb8f;
   box-sizing: border-box;

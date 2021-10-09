@@ -12,7 +12,7 @@ import {
   EventName,
   EventTime,
   UndoIcon,
-  CenterNav,
+  OptionsBoxes,
   GreyBoxDelete,
   GreyBoxSort,
   GreyBoxText,
@@ -24,6 +24,7 @@ import {
   StyledEdit,
   StyledDustbin,
   StyledCCAIcon,
+  CentreNav,
 } from './styles/Screen1.styled'
 import homeIconUnselected from '../../../assets/Group1/homeIconUnselected.svg'
 import facilitiesIconSelected from '../../../assets/Group1/facilitiesIconSelected.svg'
@@ -44,35 +45,36 @@ const Screen1 = () => {
           <LeftOutlined />
           My Bookings
         </TopNav>
-      </div>
-      <div>
-        <SucessfullyDeletedEvent>
-          <StyledTick src={tickIconRH} />
-          <DeletedEventText>Successfully Deleted Event!</DeletedEventText>
-          <EventName>Voices Bonding Camp</EventName>
-          <EventTime>16/12/21 1:00 PM to 3:00PM</EventTime>
-          <UndoIcon>undo</UndoIcon>
-        </SucessfullyDeletedEvent>
 
-        <CenterNav>
-          <GreyBoxDelete>
-            <GreyBoxText>Recently Deleted</GreyBoxText>
-            <StyledGreybox src={dustbinIconBlack} />
-          </GreyBoxDelete>
-          <GreyBoxSort>
-            <GreyBoxText>Sort By</GreyBoxText>
-            <StyledGreybox src={Schedule} />
-          </GreyBoxSort>
-        </CenterNav>
+        <CentreNav>
+          <SucessfullyDeletedEvent>
+            <StyledTick src={tickIconRH} />
+            <DeletedEventText>Successfully Deleted Event!</DeletedEventText>
+            <EventName>Voices Bonding Camp</EventName>
+            <EventTime>16/12/21 1:00 PM to 3:00PM</EventTime>
+            <UndoIcon>undo</UndoIcon>
+          </SucessfullyDeletedEvent>
 
-        <Booking>
-          <StyledCCAIcon src={bandroom} />
-          <BookingLocation>Bandroom</BookingLocation>
-          <BookingCCA> Rhebels Practice</BookingCCA>
-          <BookingTiming> 16/01/20 12:00 PM - 1:00 PM </BookingTiming>
-          <StyledEdit src={greenedit} />
-          <StyledDustbin src={greendustbin} />
-        </Booking>
+          <OptionsBoxes>
+            <GreyBoxDelete>
+              <GreyBoxText>Recently Deleted</GreyBoxText>
+              <StyledGreybox src={dustbinIconBlack} />
+            </GreyBoxDelete>
+            <GreyBoxSort>
+              <GreyBoxText>Sort By</GreyBoxText>
+              <StyledGreybox src={Schedule} />
+            </GreyBoxSort>
+          </OptionsBoxes>
+
+          <Booking>
+            <StyledCCAIcon src={bandroom} />
+            <BookingLocation>Bandroom</BookingLocation>
+            <BookingCCA> Rhebels Practice</BookingCCA>
+            <BookingTiming> 16/01/20 12:00 PM - 1:00 PM </BookingTiming>
+            <StyledEdit src={greenedit} />
+            <StyledDustbin src={greendustbin} />
+          </Booking>
+        </CentreNav>
 
         <BotNav>
           <StyledButton src={homeIconUnselected} />
