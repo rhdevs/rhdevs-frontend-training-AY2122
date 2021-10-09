@@ -50,9 +50,9 @@ export const BookingTitle = styled.div`
 
 export const Title = styled.div`
   float: left;
-  width: 65%;
+  width: max-content;
   line-height: 10vh;
-  padding-left: 3vh;
+  padding-left: 1.5vw;
   font-weight: bold;
   font-size: 24px;
 `
@@ -61,16 +61,18 @@ export const CCA = styled.div`
   float: left;
   width: 25%;
   height: 10vh;
-  line-height: 11vh;
+  padding-left: 0.25vw;
+  line-height: 10vh;
   font-weight: light;
   font-size: 16px;
   border: 1px solid red;
 `
 
 export const Pen = styled.img`
-  float: left;
+  float: right;
   width: 5%;
   height: 10vh;
+  margin-right: 2vw;
   line-height: 10vh;
   border: 1px solid red;
 `
@@ -81,7 +83,7 @@ export const DurationAndAuthor = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
-  height: 20vh;
+  height: 15vh;
   padding: 8%;
   display: flex;
   flex-direction: row;
@@ -89,7 +91,7 @@ export const DurationAndAuthor = styled.div`
 
 export const Figure = styled.figure`
   width: 50%;
-  height: 15vh;
+  height: 8vh;
   display: flex;
   flex-direction: column;
   border: 1px solid red;
