@@ -31,16 +31,37 @@ export const Picture = styled.img`
 `
 export const BookingTitle = styled.div`
   border: 1px solid red;
-  background: white;
+  background: #d9e6df;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
   height: 10vh;
   bottom: 10vh;
   position: relative;
-  text-align: center;
+  text-align: left;
+  font-family: Lato;
+  display: inline-block;
   z-index: 0;
 `
+export const Title = styled.div`
+  float: left;
+  width: 65%;
+  height: 10vh;
+  line-height: 10vh;
+  padding-left: 3vh;
+  font-weight: bold;
+  font-size: 32px;
+`
+
+export const CCA = styled.div`
+  float: left;
+  width: 30%;
+  height: 11vh;
+  line-height: 11vh;
+  font-weight: light;
+  font-size: 16px;
+`
+
 export const DurationAndAuthor = styled.div`
   border: 1px solid red;
   max-width: 400px;
@@ -57,7 +78,8 @@ export const Figure = styled.figure`
 `
 
 export const Figcaption = styled.figcaption`
-  font-family: Lato-regular;
+  font-family: Lato;
+  font-weight: light;
   font-size: 16px;
   display: inline-block;
 `
@@ -82,7 +104,11 @@ export const Timing = styled.div`
   min-width: 300px;
   width: 50vw;
   height: 15vh;
+  padding: 10%;
   text-align: center;
+  font-family: Lato;
+  font-weight: normal;
+  font-size: 14px;
 `
 
 export const Notes = styled.div`

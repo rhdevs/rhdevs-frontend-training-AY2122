@@ -4,6 +4,8 @@ import {
   Screen,
   Picture,
   BookingTitle,
+  Title,
+  CCA,
   DurationAndAuthor,
   Timing,
   Notes,
@@ -26,7 +28,10 @@ const Screen2 = () => {
         <Screen>
           <PictureAndTitle>
             <Picture src={lowerlounge} alt="Lower Lounge photo" />
-            <BookingTitle>Booking title.</BookingTitle>
+            <BookingTitle>
+              <Title>Bonding Camp</Title>
+              <CCA>RHMP</CCA>
+            </BookingTitle>
           </PictureAndTitle>
           <DurationAndAuthor>
             <Figure>
@@ -38,7 +43,13 @@ const Screen2 = () => {
               <Figcaption>Alyssa</Figcaption>
             </Figure>
           </DurationAndAuthor>
-          <Timing>Timing of booking.</Timing>
+          <Timing>
+            Thu, 17/12/21 3:00 PM
+            <br />
+            To
+            <br />
+            Thu, 17/12/21 3:00 PM
+          </Timing>
           <Notes>Additional notes of bookings</Notes>
           <ConfirmButton>Confirm button.</ConfirmButton>
           <BottomNavBar>Bottom nav bar.</BottomNavBar>
