@@ -158,6 +158,7 @@ export const Confirm = styled.button`
 `
 
 export const BottomNavBar = styled.div`
+  box-shadow: 0px -1px 10px -3px;
   position: fixed;
   bottom: 0;
   max-width: 400px;
