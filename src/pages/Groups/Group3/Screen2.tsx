@@ -13,7 +13,6 @@ import {
 import BottomNavBar from '../../../components/BottomNavBar'
 import backButton from '../../../assets/Group3/back.svg'
 import search from '../../../assets/Group3/loupe.svg'
-import FriendCard from '../../../components/FriendCard'
 import ReserveButton from '../../../components/ReserveButton'
 import WashingMachineCard from '../../../components/WashingMachineCard'
 
@@ -27,13 +26,19 @@ const Screen2 = () => {
         </HeaderInformation>
         <HeaderSearchButton src={search}></HeaderSearchButton>
       </HeaderRow>
+
       <StyledSegment>
         <SubHeader>Washing Machine Settings</SubHeader>
         <WashingMachineCard filledButton={false} buttonText="None" name="Model"></WashingMachineCard>
+        <WashingMachineCard filledButton={false} buttonText="None" name="Water Level"></WashingMachineCard>
+        <WashingMachineCard filledButton={false} buttonText="None" name="Program"></WashingMachineCard>
+        <WashingMachineCard filledButton={false} buttonText="None" name="Model"></WashingMachineCard>
       </StyledSegment>
+
       <StyledSegment>
-        <ReserveButton filled={false} buttonText="Reserve"></ReserveButton>
+        <ReserveButton filled={false} buttonText="Reserve!"></ReserveButton>
       </StyledSegment>
+
       <BottomNavBar></BottomNavBar>
     </MainContainer>
   )

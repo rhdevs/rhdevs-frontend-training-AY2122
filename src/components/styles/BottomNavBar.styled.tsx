@@ -21,12 +21,12 @@ export const NavBarIcon = styled.div`
 `
 
 export const Icon = styled.img`
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
 `
 
 export const Avatar = styled.img`
-  height: 40px;
-  width: 40px;
+  height: 35%;
+  width: 35%;
   border-radius: 50%;
 `

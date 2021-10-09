@@ -37,9 +37,10 @@ export const Header = styled.h1`
   margin: 0;
 `
 
-export const StyledSegment = styled.div``
+export const StyledSegment = styled.div`
+  margin: 20px;
+`
 
 export const SubHeader = styled.h2`
   font-size: 20px;
-  margin: 20px;
 `

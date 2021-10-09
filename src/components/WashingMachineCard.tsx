@@ -1,9 +1,17 @@
 import React from 'react'
-
 import styled from 'styled-components'
-import { StyledCard, Properties, Avatar, PropName } from './styles/WashingMachineCard.styled'
-import Button from './Button'
-import next from '../assets/Group3/next.png'
+
+import {
+  StyledCard,
+  Properties,
+  NextButton,
+  PropName,
+  DivisionLine,
+  RowCard,
+  StatusName,
+} from './styles/WashingMachineCard.styled'
+
+import next from '../assets/Group3/next.svg'
 
 type Props = {
   filledButton: boolean
@@ -14,13 +22,16 @@ type Props = {
 const WashingMachineCard = (props: Props) => {
   return (
     <StyledCard>
-      <Properties>
-        <PropName>{props.name}</PropName>
-      </Properties>
-      <div>
-        <Button filled={props.filledButton} buttonText={props.buttonText}></Button>
-        <Avatar src={next}></Avatar>
-      </div>
+      <RowCard>
+        <Properties>
+          <PropName>{props.name}</PropName>
+        </Properties>
+        <div>
+          <StatusName>None</StatusName>
+          <NextButton src={next}></NextButton>
+        </div>
+      </RowCard>
+      <DivisionLine></DivisionLine>
     </StyledCard>
   )
 }
