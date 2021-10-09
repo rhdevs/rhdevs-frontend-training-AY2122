@@ -29,6 +29,7 @@ export const Picture = styled.img`
   width: 50vw;
   height: 35vh;
 `
+
 export const BookingTitle = styled.div`
   border: 1px solid red;
   background: #d9e6df;
@@ -43,6 +44,7 @@ export const BookingTitle = styled.div`
   display: inline-block;
   z-index: 0;
 `
+
 export const Title = styled.div`
   float: left;
   width: 65%;
@@ -55,11 +57,18 @@ export const Title = styled.div`
 
 export const CCA = styled.div`
   float: left;
-  width: 30%;
+  width: 25%;
   height: 11vh;
   line-height: 11vh;
   font-weight: light;
   font-size: 16px;
+`
+
+export const Pen = styled.img`
+  float: left;
+  width: 5%;
+  height: 10vh;
+  line-height: 10vh;
 `
 
 export const DurationAndAuthor = styled.div`

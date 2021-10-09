@@ -6,6 +6,7 @@ import {
   BookingTitle,
   Title,
   CCA,
+  Pen,
   DurationAndAuthor,
   Timing,
   Notes,
@@ -20,6 +21,7 @@ import {
   Description,
 } from './styles/Screen2.styled'
 import lowerlounge from '../../../assets/Group2/LowerLounge.svg'
+import pen from '../../../assets/Group2/Pen.svg'
 import clock from '../../../assets/Group2/Clock.svg'
 import people from '../../../assets/Group2/People.svg'
 
@@ -33,6 +35,7 @@ const Screen2 = () => {
             <BookingTitle>
               <Title>Bonding Camp</Title>
               <CCA>RHMP</CCA>
+              <Pen src={pen} alt="Pen" />
             </BookingTitle>
           </PictureAndTitle>
           <DurationAndAuthor>
