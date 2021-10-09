@@ -1,6 +1,7 @@
 import React from 'react'
 import GroupContent from '../../../components/GroupContent'
-import OldScreen1 from '../../../assets/Group1/OldScreen1.png'
+import OldScreen1 from '../../../assets/Group2/OldScreen1.png'
+import OldScreen2 from '../../../assets/Group2/OldScreen2.png'
 
 const Group2 = () => {
   return (
@@ -8,7 +9,7 @@ const Group2 = () => {
       groupNumber={2}
       names="wenfeng, jason, yu an, drey, amos, yong bin, yong zhang"
       oldScreen1ImgSrc={OldScreen1}
-      oldScreen2ImgSrc="https://picsum.photos/300/600"
+      oldScreen2ImgSrc={OldScreen2}
     />
   )
 }
