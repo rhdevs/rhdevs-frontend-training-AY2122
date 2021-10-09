@@ -20,7 +20,7 @@ export const PictureAndTitle = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
-  height: 45vh;
+  height: 35vh;
 `
 
 export const Picture = styled.img`
@@ -45,12 +45,12 @@ export const BookingTitle = styled.div`
   font-family: Lato;
   display: inline-block;
   z-index: 0;
+  overflow: hidden;
 `
 
 export const Title = styled.div`
   float: left;
   width: 65%;
-  height: 10vh;
   line-height: 10vh;
   padding-left: 3vh;
   font-weight: bold;
@@ -60,10 +60,11 @@ export const Title = styled.div`
 export const CCA = styled.div`
   float: left;
   width: 25%;
-  height: 11vh;
+  height: 10vh;
   line-height: 11vh;
   font-weight: light;
   font-size: 16px;
+  border: 1px solid red;
 `
 
 export const Pen = styled.img`
@@ -71,6 +72,7 @@ export const Pen = styled.img`
   width: 5%;
   height: 10vh;
   line-height: 10vh;
+  border: 1px solid red;
 `
 
 export const DurationAndAuthor = styled.div`
@@ -111,10 +113,7 @@ export const PeopleLogo = styled.img`
 
 export const Timing = styled.div`
   border: 1px solid red;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
-  height: 15vh;
+  height: auto;
   padding: 10%;
   text-align: center;
   font-family: Lato;
@@ -140,6 +139,7 @@ export const AdditionalNotes = styled.div`
 `
 
 export const Description = styled.div`
+  border: 1px solid red;
   font-weight: normal;
   height: 70%;
 `
@@ -149,15 +149,16 @@ export const ConfirmButton = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
-  height: 15vh;
+  height: 25vh;
   padding: 5%;
+  padding-bottom: 50px;
   font-family: Lato;
   text-align: center;
 `
 
 export const Confirm = styled.button`
-  width: 10vw;
-  height: 2vw;
+  width: 40%;
+  height: max-content;
   color: white;
   font-size: 22px;
   background: linear-gradient(272.25deg, #72ba75 20.66%, #58b994 86.45%);
