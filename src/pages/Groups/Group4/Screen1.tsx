@@ -144,22 +144,23 @@ const LoginPage = () => {
           </Button>
         </PostButton>
         <br />
-        <StyledButtonContainer>
-          <PostButton>
-            <Button
-              type="default"
-              shape="round"
-              size="large"
-              block
-              style={{ height: '100%', borderRadius: '20px' }}
-              onClick={() => {
-                // history.push(PATHS.SIGNUP_PAGE)
-              }}
-            >
-              <ButtonLabel>Register</ButtonLabel>
-            </Button>
-          </PostButton>
-          <PostButton>
+        {/*<StyledButtonContainer>*/}
+        <PostButton>
+          <Button
+            type="default"
+            shape="round"
+            size="large"
+            block
+            style={{ height: '100%', borderRadius: '20px' }}
+            onClick={() => {
+              // history.push(PATHS.SIGNUP_PAGE)
+            }}
+          >
+            <ButtonLabel>Register</ButtonLabel>
+          </Button>
+        </PostButton>
+        <PostButton>
+          {/*
             <Button
               type="default"
               shape="round"
@@ -172,8 +173,9 @@ const LoginPage = () => {
             >
               <ButtonLabel>Forget Password</ButtonLabel>
             </Button>
-          </PostButton>
-        </StyledButtonContainer>
+            */}
+        </PostButton>
+        {/*</StyledButtonContainer>*/}
       </LoginContainer>
     </ContainerDiv>
   )
