@@ -9,7 +9,6 @@ export const MainContainer = styled.div`
 `
 
 export const Screen = styled.div`
-  border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -31,7 +30,6 @@ export const Picture = styled.img`
 `
 
 export const BookingTitle = styled.div`
-  border: 1px solid red;
   background: #d9e6df;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -65,7 +63,6 @@ export const CCA = styled.div`
   line-height: 10vh;
   font-weight: light;
   font-size: 16px;
-  border: 1px solid red;
 `
 
 export const Pen = styled.img`
@@ -74,11 +71,9 @@ export const Pen = styled.img`
   height: 10vh;
   margin-right: 2vw;
   line-height: 10vh;
-  border: 1px solid red;
 `
 
 export const DurationAndAuthor = styled.div`
-  border: 1px solid red;
   position: relative;
   max-width: 400px;
   min-width: 300px;
@@ -94,7 +89,6 @@ export const Figure = styled.figure`
   height: 8vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   horizontal-align: center;
   padding: auto;
 `
@@ -115,7 +109,6 @@ export const PeopleLogo = styled.img`
 `
 
 export const Timing = styled.div`
-  border: 1px solid red;
   height: auto;
   padding: 5%;
   text-align: center;
@@ -125,7 +118,6 @@ export const Timing = styled.div`
 `
 
 export const Notes = styled.div`
-  border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -142,13 +134,11 @@ export const AdditionalNotes = styled.div`
 `
 
 export const Description = styled.div`
-  border: 1px solid red;
   font-weight: normal;
   height: 70%;
 `
 
 export const ConfirmButton = styled.div`
-  border: 1px solid red;
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -175,7 +165,7 @@ export const BottomNavBar = styled.div`
   width: 50vw;
   height: 50px;
   text-align: center;
-  border: 1px solid red;
+  border: 1px solid black;
 `
 
 export const LowerLoungePhoto = styled.div`
