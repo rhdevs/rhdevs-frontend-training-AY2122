@@ -54,7 +54,7 @@ export const Title = styled.div`
   line-height: 10vh;
   padding-left: 3vh;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
 `
 
 export const CCA = styled.div`
@@ -82,33 +82,32 @@ export const DurationAndAuthor = styled.div`
   width: 50vw;
   height: 20vh;
   padding: 8%;
+  display: flex;
+  flex-direction: row;
 `
 export const Figure = styled.figure`
-  left: 0;
   width: 50%;
-  vertical-align: centre;
-  display: inline-block;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  horizontal-align: center;
+  padding: auto;
 `
 
 export const Figcaption = styled.figcaption`
   font-family: Lato;
   font-weight: light;
   font-size: 16px;
-  display: inline-block;
+  text-align: center;
 `
 
 export const ClockLogo = styled.img`
   width: auto;
-  left: 0;
-  float: left;
-  margin-left: 20%;
 `
 
 export const PeopleLogo = styled.img`
   width: auto;
-  right: 0;
-  float: right;
-  margin-right: 20%;
 `
 
 export const Timing = styled.div`
