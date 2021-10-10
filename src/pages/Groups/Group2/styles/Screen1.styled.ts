@@ -80,7 +80,7 @@ export const Post = styled.div`
   border-radius: 30px;
   margin: auto;
   margin-bottom: 10px;
-  box-shadow: 5px 5px 4px #888888;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
 
 export const ProfilePicture = styled.img`
@@ -108,12 +108,12 @@ export const Author = styled.div`
 `
 
 export const PostMessage = styled.div`
-  background-color: rgba(0, 255, 0, 0.1);
+  background-color: rgba(0, 255, 0, 0.05);
   font-size: 13px;
   border: 2px solid green;
   border-radius: 10px;
   color: black;
-  box-shadow: 5px 5px 4px #888888;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding-left: 5px;
 `
 

@@ -17,7 +17,7 @@ import {
   PostMessage,
 } from './styles/Screen1.styled'
 
-import profilePic from '../../../assets/frontend_webdev.svg'
+import profilePic from '../../../assets/Group2/cats.jpg'
 
 const Screen1 = () => {
   return (
