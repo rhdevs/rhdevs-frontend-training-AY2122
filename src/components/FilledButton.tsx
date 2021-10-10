@@ -6,8 +6,8 @@ type Props = {
   buttonText: string
 }
 
-const Button = (props: Props) => {
+const FilledButton = (props: Props) => {
   return <StyledButton filled={props.filled}>{props.buttonText}</StyledButton>
 }
 
-export default Button
+export default FilledButton

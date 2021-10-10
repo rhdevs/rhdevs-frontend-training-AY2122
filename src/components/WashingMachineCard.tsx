@@ -31,7 +31,7 @@ const WashingMachineCard = (props: Props) => {
           <NextButton src={next}></NextButton>
         </div>
       </RowCard>
-      <DivisionLine></DivisionLine>
+      <DivisionLine />
     </StyledCard>
   )
 }

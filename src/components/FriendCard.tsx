@@ -1,8 +1,7 @@
 import React from 'react'
 
-import styled from 'styled-components'
 import { StyledCard, Person, Avatar, PersonName } from './styles/FriendCard.styled'
-import Button from './Button'
+import FilledButton from './FilledButton'
 import avatar from '../assets/Group3/avatar.jpg'
 
 type Props = {
@@ -18,7 +17,7 @@ const FriendCard = (props: Props) => {
         <Avatar src={avatar}></Avatar>
         <PersonName>{props.name}</PersonName>
       </Person>
-      <Button filled={props.filledButton} buttonText={props.buttonText}></Button>
+      <FilledButton filled={props.filledButton} buttonText={props.buttonText}></FilledButton>
     </StyledCard>
   )
 }

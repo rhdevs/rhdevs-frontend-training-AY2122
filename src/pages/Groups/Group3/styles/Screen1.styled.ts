@@ -11,7 +11,7 @@ export const HeaderRow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 10px 0;
 `
 
 export const HeaderInformation = styled.div`
@@ -23,13 +23,13 @@ export const HeaderInformation = styled.div`
 export const HeaderBackButton = styled.img`
   height: 20px;
   width: 20px;
-  margin: 0px 10px 0px 0px;
+  margin: 0 10px 0 0;
 `
 
 export const HeaderSearchButton = styled.img`
   height: 20px;
   width: 20px;
-  margin: 0px 10px;
+  margin: 0 10px;
 `
 
 export const Header = styled.h1`

@@ -39,7 +39,7 @@ const Screen2 = () => {
         <ReserveButton filled={false} buttonText="Reserve!"></ReserveButton>
       </StyledSegment>
 
-      <BottomNavBar></BottomNavBar>
+      <BottomNavBar />
     </MainContainer>
   )
 }

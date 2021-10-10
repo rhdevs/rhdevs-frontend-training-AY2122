@@ -32,10 +32,10 @@ const Screen1 = () => {
       </StyledSegment>
       <StyledSegment>
         <SubHeader>My Friends</SubHeader>
-        <FriendCard filledButton={true} buttonText="Remove" name="Womama"></FriendCard>
-        <FriendCard filledButton={true} buttonText="Remove" name="Dina"></FriendCard>
-        <FriendCard filledButton={true} buttonText="Remove" name="MaoMao"></FriendCard>
-        <FriendCard filledButton={true} buttonText="Remove" name="Hui Hui"></FriendCard>
+        <FriendCard filledButton buttonText="Remove" name="Womama"></FriendCard>
+        <FriendCard filledButton buttonText="Remove" name="Dina"></FriendCard>
+        <FriendCard filledButton buttonText="Remove" name="MaoMao"></FriendCard>
+        <FriendCard filledButton buttonText="Remove" name="Hui Hui"></FriendCard>
       </StyledSegment>
       <BottomNavBar></BottomNavBar>
     </MainContainer>
