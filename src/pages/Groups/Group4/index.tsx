@@ -61,39 +61,6 @@ const Group4 = () => {
         oldScreen1ImgSrc={OldLoginPage}
         oldScreen2ImgSrc={OldPasswordPage}
       />
-      {/* <h1>Group 4</h1>
-      <StyledText>
-        Devs: Elva, Zhikai, Weipin, Marcus <br />
-        Designers: Gregory, Shannon, Brendan
-      </StyledText>
-      <ComponentsContainer>
-        <PlaceholderBox>
-          <h2>Old Images Preview</h2>
-          <OldImages>
-            <Image
-              src={OldLoginPage}
-              alt={'Old Login Page'}
-              style={{ alignItems: 'center' }}
-              width="414px"
-              height="896px"
-            />
-            <Image
-              src={OldPasswordPage}
-              alt={'Old Password Page'}
-              style={{ alignItems: 'center' }}
-              width="414px"
-              height="896px"
-            />
-          </OldImages>
-        </PlaceholderBox>
-        <PlaceholderBox>
-          <h2>New Pages</h2>
-          <NewPages>
-            <LoginPage />
-            <ForgotPasswordPage />
-          </NewPages>
-        </PlaceholderBox>
-      </ComponentsContainer> */}
     </MainContainer>
   )
 }
