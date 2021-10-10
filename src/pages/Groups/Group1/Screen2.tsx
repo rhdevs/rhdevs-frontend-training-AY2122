@@ -37,8 +37,6 @@ const Screen2 = () => {
       {renderTopNav(isDailyMode)}
 
       <Bookings_container>
-        {/*TODO: Create new component*/}
-        {/*{console.log(mockValues)}*/}
         <ButtonContainer>
           <ToggleButton onClick={() => setDailyMode(!isDailyMode)}>
             {isDailyMode ? 'Show Weekly' : 'Show Daily'}
@@ -62,7 +60,6 @@ const renderBotNav = () => (
   <BotNav>
     <StyledButton src={homeIconUnselected} />
     <StyledButton src={facilitiesIconUnselected} />
-    {/*TODO: Get designers to get a green selected svg for this icon*/}
     <StyledButton src={calenderIconSelected} />
     <StyledButton src={profileIconUnselected} />
   </BotNav>
@@ -79,7 +76,6 @@ const renderDailySchedule = () =>
     </IndividualBookings>
   ))
 
-// TODO: Finish this part
 const renderWeeklySchedule = () => (
   <WeekContainer>
     <Timing_container>
@@ -105,7 +101,6 @@ const renderWeeklySchedule = () => (
 const mapEvents = (t: string) => mockValues.map((e) => (e.time.start === t ? renderEventCard(e) : null))
 
 const renderEventCard = (e: any) => {
-  console.log(e)
   return (
     <EventCard key={e.id} length={getLength(e)} type={e.type}>
       <EventTextWeekly>{e.event}</EventTextWeekly>
@@ -115,7 +110,6 @@ const renderEventCard = (e: any) => {
 }
 
 const getLength = (e: any) => {
-  console.log(e, 'getting length', parseInt(e.time.end) - parseInt(e.time.start))
   return parseInt(e.time.end) - parseInt(e.time.start) / 100
 }
 

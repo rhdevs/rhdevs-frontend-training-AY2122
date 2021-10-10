@@ -14,7 +14,7 @@ export const Bookings_container = styled.div<{ fontSize?: string }>`
 export const WeekContainer = styled.div`
   display: flex;
   margin: 2%;
-  overflow: auto;
+  overflow-y: auto;
 `
 
 export const Calendar_container = styled.div<{ fontSize?: string }>`
@@ -24,7 +24,7 @@ export const Calendar_container = styled.div<{ fontSize?: string }>`
   color: black;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  //overflow: hidden;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 
