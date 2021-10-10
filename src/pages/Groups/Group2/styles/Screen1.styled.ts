@@ -26,6 +26,7 @@ export const SearchBar = styled.div`
   height: 70px;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
+  background-color: lightgreen;
 `
 
 export const SearchButton = styled.div`
@@ -68,6 +69,8 @@ export const PostsSection = styled.div`
 export const FilterBar = styled.div`
   text-align: center;
   background-color: lightgreen;
+  border: 1px solid green;
+  border-radius: 15px 15px 15px 15px;
 `
 // would it be better to abstract this Post into another component?
 export const Post = styled.div`
