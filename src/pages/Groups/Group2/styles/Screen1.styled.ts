@@ -62,7 +62,7 @@ export const PostsSection = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
-  height: 20vw;
+  // height: 20vw;
   border: 1px solid green;
 `
 
@@ -74,13 +74,50 @@ export const FilterBar = styled.div`
 `
 // would it be better to abstract this Post into another component?
 export const Post = styled.div`
+  display: flex;
   max-width: 350px;
   min-width: 250px;
   width: 40vw;
-  height: 5vw;
+  height: 8vw;
   border: 1px solid green;
+  border-radius: 30px;
   margin: auto;
   margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`
+
+export const ProfilePicture = styled.img`
+  max-width: 400px;
+  width: 15%;
+  height: 50%;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid green;
+`
+export const PostTitle = styled.div`
+  width: 60%;
+  font-size: 1.5rem;
+  color: green;
+  margin-left: 30px;
+  // border: 1px solid green;
+`
+
+export const Author = styled.div`
+  font-size: 1rem;
+  color: grey;
+  // border: 1px solid green;
+  margin-top: -10px;
+`
+
+export const PostMessage = styled.div`
+  background-color: rgba(0, 255, 0, 0.05);
+  font-size: 13px;
+  border: 2px solid green;
+  border-radius: 10px;
+  color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-left: 5px;
 `
 
 export const BottomNavBar = styled.div`

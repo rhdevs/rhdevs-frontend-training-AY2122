@@ -11,7 +11,13 @@ import {
   PostsSection,
   FilterBar,
   Post,
+  ProfilePicture,
+  PostTitle,
+  Author,
+  PostMessage,
 } from './styles/Screen1.styled'
+
+import profilePic from '../../../assets/Group2/cats.jpg'
 
 const Screen1 = () => {
   return (
@@ -30,8 +36,24 @@ const Screen1 = () => {
           <PostsSection>
             {"What's Happening..."}
             <FilterBar>FilterBar</FilterBar>
-            <Post>Post1</Post>
-            <Post>Post2</Post>
+            <Post>
+              <ProfilePicture src={profilePic} alt="Profile Picture" />
+              <PostTitle>
+                Title 1<Author>Zhou Zhu Zhu, 8h ago</Author>
+                <PostMessage>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                </PostMessage>
+              </PostTitle>
+            </Post>
+            <Post>
+              <ProfilePicture src={profilePic} alt="Profile Picture" />
+              <PostTitle>
+                Title 2<Author>Zhou Zhu Zhu, 8h ago</Author>
+                <PostMessage>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                </PostMessage>
+              </PostTitle>
+            </Post>
           </PostsSection>
 
           <BottomNavBar>Navigation Bar</BottomNavBar>
