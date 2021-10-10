@@ -32,25 +32,6 @@ const ComponentsContainer = styled.div`
   height: 100%;
 `
 
-const StyledText = styled.p`
-  font-size: 18px;
-`
-const OldImages = styled.p`
-  display: flex;
-  flex-direction: row;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`
-
-const NewPages = styled.p`
-  display: flex;
-  flex-direction: row;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`
-
 // Create something similiar for your group's page
 const Group4 = () => {
   return (
