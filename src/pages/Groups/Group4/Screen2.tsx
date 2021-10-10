@@ -76,7 +76,7 @@ const ForgotPasswordPage = () => {
   // }
 
   return (
-    <div style={{ backgroundColor: '#fafaf4' }}>
+    <div style={{ backgroundColor: '#ffffff' }}>
       <ForgetPasswordContainer>
         <Logo src={logo} />
         <Link>Check your email</Link>
