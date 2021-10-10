@@ -7,7 +7,7 @@ import 'antd/dist/antd.css'
 import logo from '../../../assets/group4/devsLogo.svg'
 
 const ContainerDiv = styled.div`
-  background-color: #fafaf4;
+  background-color: '#ffffff';
   border-style: solid;
 `
 
@@ -27,13 +27,57 @@ const InputTextLabel = styled.text`
   font-style: normal;
   font-weight: 200;
 `
-
+const ForgetPasswordLabel = styled.text`
+  float: left;
+  font-size: 10px;
+  padding: 0px 0px 4px 0px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 200;
+`
 const Logo = styled.img`
   width: 70%;
   max-width: 255px;
   max-height: 255px;
 `
-
+const ForgetPwButton = styled.div`
+  text-align: left;
+  text-decoration: underline;
+  color: #72ba75;
+  font-size: 13px;
+  .ant-btn {
+    letter-spacing: 0em;
+    text-align: center;
+    font-weight: 200;
+    color: #72ba75;
+  }
+  .ant-btn-primary {
+    background-color: #72ba75;
+    border-color: #72ba75;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .ant-btn-primary:focus {
+    background-color: #72ba75;
+    border-color: #72ba75;
+    background: #72ba75;
+    border-color: #72ba75;
+    font-weight: bold;
+  }
+  .ant-btn-primary:hover {
+    background-color: #72ba75;
+    border-color: #72ba75;
+    background: #72ba75;
+    border-color: #72ba75;
+    font-weight: bold;
+  }
+  .ant-btn-default: {
+    height: min-content;
+    margin: 10px;
+    float: left;
+    border-radius: 20px;
+  }
+`
 const PostButton = styled.div`
   text-align: center;
   .ant-btn {
@@ -43,22 +87,22 @@ const PostButton = styled.div`
     font-weight: 200;
   }
   .ant-btn-primary {
-    background-color: #de5f4c;
-    border-color: #de5f4c;
+    background-color: #72ba75;
+    border-color: #72ba75;
     width: 100%;
     margin-top: 10px;
   }
   .ant-btn-primary:focus {
-    background-color: #de5f4c;
-    border-color: #de5f4c;
-    background: #de5f4c;
-    border-color: #de5f4c;
+    background-color: #72ba75;
+    border-color: #72ba75;
+    background: #72ba75;
+    border-color: #72ba75;
   }
   .ant-btn-primary:hover {
-    background-color: #de5f4c;
-    border-color: #de5f4c;
-    background: #de5f4c;
-    border-color: #de5f4c;
+    background-color: #72ba75;
+    border-color: #72ba75;
+    background: #72ba75;
+    border-color: #72ba75;
   }
   .ant-btn-default: {
     height: min-content;
@@ -123,6 +167,7 @@ const LoginPage = () => {
         </StyledUsernameInput>
         <br />
         <InputTextLabel>Password: </InputTextLabel>
+
         <StyledPasswordInput>
           <Input.Password
             type="password"
@@ -132,6 +177,7 @@ const LoginPage = () => {
             }}
           />
         </StyledPasswordInput>
+        <ForgetPwButton>Forget password</ForgetPwButton>
         <br />
         {/* {error.message !== '' && (
             <AlertGroup>
@@ -144,22 +190,23 @@ const LoginPage = () => {
           </Button>
         </PostButton>
         <br />
-        <StyledButtonContainer>
-          <PostButton>
-            <Button
-              type="default"
-              shape="round"
-              size="large"
-              block
-              style={{ height: '100%', borderRadius: '20px' }}
-              onClick={() => {
-                // history.push(PATHS.SIGNUP_PAGE)
-              }}
-            >
-              <ButtonLabel>Register</ButtonLabel>
-            </Button>
-          </PostButton>
-          <PostButton>
+        {/*<StyledButtonContainer>*/}
+        <PostButton>
+          <Button
+            type="default"
+            shape="round"
+            size="large"
+            block
+            style={{ height: '100%', borderRadius: '20px' }}
+            onClick={() => {
+              // history.push(PATHS.SIGNUP_PAGE)
+            }}
+          >
+            <ButtonLabel>Register</ButtonLabel>
+          </Button>
+        </PostButton>
+        <PostButton>
+          {/*
             <Button
               type="default"
               shape="round"
@@ -172,8 +219,9 @@ const LoginPage = () => {
             >
               <ButtonLabel>Forget Password</ButtonLabel>
             </Button>
-          </PostButton>
-        </StyledButtonContainer>
+            */}
+        </PostButton>
+        {/*</StyledButtonContainer>*/}
       </LoginContainer>
     </ContainerDiv>
   )
