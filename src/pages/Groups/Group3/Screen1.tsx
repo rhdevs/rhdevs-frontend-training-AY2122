@@ -7,7 +7,6 @@ import {
   HeaderBackButton,
   HeaderSearchButton,
   Header,
-  StyledSegment,
   SubHeader,
 } from './styles/Screen1.styled'
 import BottomNavBar from '../../../components/BottomNavBar'
@@ -25,18 +24,18 @@ const Screen1 = () => {
         </HeaderInformation>
         <HeaderSearchButton src={search}></HeaderSearchButton>
       </HeaderRow>
-      <StyledSegment>
+      <div>
         <SubHeader>Pending Friend Request(s)</SubHeader>
         <FriendCard filledButton={false} buttonText="Accept" name="Richard Nick Young"></FriendCard>
         <FriendCard filledButton={false} buttonText="Accept" name="Nimama"></FriendCard>
-      </StyledSegment>
-      <StyledSegment>
+      </div>
+      <div>
         <SubHeader>My Friends</SubHeader>
         <FriendCard filledButton buttonText="Remove" name="Womama"></FriendCard>
         <FriendCard filledButton buttonText="Remove" name="Dina"></FriendCard>
         <FriendCard filledButton buttonText="Remove" name="MaoMao"></FriendCard>
         <FriendCard filledButton buttonText="Remove" name="Hui Hui"></FriendCard>
-      </StyledSegment>
+      </div>
       <BottomNavBar></BottomNavBar>
     </MainContainer>
   )

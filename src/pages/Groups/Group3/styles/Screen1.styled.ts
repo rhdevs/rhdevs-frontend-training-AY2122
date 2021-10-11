@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5%;
+  margin: 10px;
 `
 
 export const HeaderRow = styled.div`
@@ -36,8 +36,6 @@ export const Header = styled.h1`
   font-size: 32px;
   margin: 0;
 `
-
-export const StyledSegment = styled.div``
 
 export const SubHeader = styled.h2`
   font-size: 20px;
