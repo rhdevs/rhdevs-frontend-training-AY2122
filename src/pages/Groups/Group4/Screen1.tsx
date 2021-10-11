@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 import { Alert, Button, Input } from 'antd'
-import 'antd/dist/antd.css'
+// import 'antd/dist/antd.css'
 
 import logo from '../../../assets/group4/devsLogo.svg'
 
