@@ -4,27 +4,25 @@ import {
   MainContainer,
   HeaderRow,
   HeaderInformation,
-  HeaderBackButton,
-  HeaderSearchButton,
+  IconStyling,
   Header,
   StyledSegment,
   SubHeader,
 } from './styles/Screen2.styled'
 import BottomNavBar from '../../../components/BottomNavBar'
-import backButton from '../../../assets/Group3/back.svg'
-import search from '../../../assets/Group3/loupe.svg'
-import ReserveButton from '../../../components/ReserveButton'
+import FilledButton from '../../../components/FilledButton'
 import WashingMachineCard from '../../../components/WashingMachineCard'
+import { LeftOutlined, SearchOutlined } from '@ant-design/icons'
 
 const Screen2 = () => {
   return (
     <MainContainer>
       <HeaderRow>
         <HeaderInformation>
-          <HeaderBackButton src={backButton}></HeaderBackButton>
+          <LeftOutlined style={IconStyling} />
           <Header>Reservation</Header>
         </HeaderInformation>
-        <HeaderSearchButton src={search}></HeaderSearchButton>
+        <SearchOutlined style={IconStyling} />
       </HeaderRow>
 
       <StyledSegment>
@@ -36,7 +34,7 @@ const Screen2 = () => {
       </StyledSegment>
 
       <StyledSegment>
-        <ReserveButton filled={false} buttonText="Reserve!"></ReserveButton>
+        <FilledButton filled={false} buttonText="Reserve!" type="RESERVE"></FilledButton>
       </StyledSegment>
 
       <BottomNavBar />

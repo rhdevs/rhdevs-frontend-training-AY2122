@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { StyledBottomNavBar, NavBarIcon, Icon, Avatar } from './styles/BottomNavBar.styled'
+import { StyledBottomNavBar, NavBarIcon, Icon, Avatar, IconStyling } from './styles/BottomNavBar.styled'
 import food from '../assets/Group3/food-tray.svg'
-import calendar from '../assets/Group3/calendar.svg'
-import home from '../assets/Group3/home.svg'
 import avatar from '../assets/Group3/avatar.jpg'
+import { HomeOutlined, CalendarOutlined } from '@ant-design/icons'
 
 const BottomNavBar = () => {
   return (
@@ -14,10 +13,10 @@ const BottomNavBar = () => {
         <Icon src={food}></Icon>
       </NavBarIcon>
       <NavBarIcon>
-        <Icon src={calendar}></Icon>
+        <CalendarOutlined style={IconStyling} />
       </NavBarIcon>
       <NavBarIcon>
-        <Icon src={home}></Icon>
+        <HomeOutlined style={IconStyling} />
       </NavBarIcon>
       <NavBarIcon>
         <Avatar src={avatar}></Avatar>

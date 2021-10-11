@@ -26,11 +26,10 @@ export const Properties = styled.div`
   align-items: center;
 `
 
-export const NextButton = styled.img`
-  height: 25px;
-  width: 25px;
-  margin: 0px 10px;
-`
+export const IconStyling = {
+  fontSize: '24px',
+  margin: '0 10px',
+}
 
 export const PropName = styled.h4`
   margin: 0;

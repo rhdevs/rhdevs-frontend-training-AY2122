@@ -20,17 +20,10 @@ export const HeaderInformation = styled.div`
   align-items: center;
 `
 
-export const HeaderBackButton = styled.img`
-  height: 20px;
-  width: 20px;
-  margin: 0px 10px 0px 0px;
-`
-
-export const HeaderSearchButton = styled.img`
-  height: 20px;
-  width: 20px;
-  margin: 0px 10px;
-`
+export const IconStyling = {
+  fontSize: '24px',
+  margin: '0 10px 0 0',
+}
 
 export const Header = styled.h1`
   font-size: 32px;

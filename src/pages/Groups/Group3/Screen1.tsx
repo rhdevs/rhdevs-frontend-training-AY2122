@@ -1,28 +1,19 @@
 import React from 'react'
 
-import {
-  MainContainer,
-  HeaderRow,
-  HeaderInformation,
-  HeaderBackButton,
-  HeaderSearchButton,
-  Header,
-  SubHeader,
-} from './styles/Screen1.styled'
+import { MainContainer, HeaderRow, HeaderInformation, IconStyling, Header, SubHeader } from './styles/Screen1.styled'
 import BottomNavBar from '../../../components/BottomNavBar'
-import backButton from '../../../assets/Group3/back.svg'
-import search from '../../../assets/Group3/loupe.svg'
 import FriendCard from '../../../components/FriendCard'
+import { LeftOutlined, SearchOutlined } from '@ant-design/icons'
 
 const Screen1 = () => {
   return (
     <MainContainer>
       <HeaderRow>
         <HeaderInformation>
-          <HeaderBackButton src={backButton}></HeaderBackButton>
+          <LeftOutlined style={IconStyling} />
           <Header>Friends</Header>
         </HeaderInformation>
-        <HeaderSearchButton src={search}></HeaderSearchButton>
+        <SearchOutlined style={IconStyling} />
       </HeaderRow>
       <div>
         <SubHeader>Pending Friend Request(s)</SubHeader>

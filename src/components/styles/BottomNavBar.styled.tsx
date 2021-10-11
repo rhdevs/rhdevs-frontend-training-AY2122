@@ -25,6 +25,10 @@ export const Icon = styled.img`
   height: 25px;
 `
 
+export const IconStyling = {
+  fontSize: '24px',
+}
+
 export const Avatar = styled.img`
   height: 25px;
   width: 25px;

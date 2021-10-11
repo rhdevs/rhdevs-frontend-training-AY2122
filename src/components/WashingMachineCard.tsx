@@ -4,14 +4,13 @@ import styled from 'styled-components'
 import {
   StyledCard,
   Properties,
-  NextButton,
+  IconStyling,
   PropName,
   DivisionLine,
   RowCard,
   StatusName,
 } from './styles/WashingMachineCard.styled'
-
-import next from '../assets/Group3/next.svg'
+import { RightOutlined } from '@ant-design/icons'
 
 type Props = {
   filledButton: boolean
@@ -28,7 +27,7 @@ const WashingMachineCard = (props: Props) => {
         </Properties>
         <div>
           <StatusName>None</StatusName>
-          <NextButton src={next}></NextButton>
+          <RightOutlined style={IconStyling} />
         </div>
       </RowCard>
       <DivisionLine />
