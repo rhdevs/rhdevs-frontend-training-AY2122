@@ -7,14 +7,14 @@ import {
   Timing_container,
   Bookings_container,
   IndividualBookings,
-  TopNav,
+  Screen2TopNav,
   Header,
   EventText,
   EventTextWeekly,
   TimeText,
   LocationText,
   LocationTextWeekly,
-  BotNav,
+  Screen2BotNav,
   StyledButton,
   ButtonContainer,
   ToggleButton,
@@ -34,7 +34,7 @@ const Screen2 = () => {
 
   return (
     <>
-      {renderTopNav(isDailyMode)}
+      {TopNav(isDailyMode)}
 
       <Bookings_container>
         <ButtonContainer>
@@ -44,25 +44,25 @@ const Screen2 = () => {
         </ButtonContainer>
         {isDailyMode ? renderDailySchedule() : renderWeeklySchedule()}
       </Bookings_container>
-      {renderBotNav()}
+      {BotNav()}
     </>
   )
 }
 
-const renderTopNav = (isDailyMode: boolean) => (
-  <TopNav>
+const TopNav = (isDailyMode: boolean) => (
+  <Screen2TopNav>
     <LeftOutlined />
     <Header>{isDailyMode ? 'Oct 8, Friday (Semester 1, Week 7)' : 'Semester 1, Week 7'}</Header>
     <UnorderedListOutlined />
-  </TopNav>
+  </Screen2TopNav>
 )
-const renderBotNav = () => (
-  <BotNav>
+const BotNav = () => (
+  <Screen2BotNav>
     <StyledButton src={homeIconUnselected} />
     <StyledButton src={facilitiesIconUnselected} />
     <StyledButton src={calenderIconSelected} />
     <StyledButton src={profileIconUnselected} />
-  </BotNav>
+  </Screen2BotNav>
 )
 
 const renderDailySchedule = () =>
@@ -70,7 +70,7 @@ const renderDailySchedule = () =>
     <IndividualBookings background={e.type} key={e.id}>
       <EventText>{e.event}</EventText>
       <TimeText>
-        {e.time.start} - {e.time.end}
+        `${e.time.start} - ${e.time.end}`
       </TimeText>
       <LocationText>{e.location}</LocationText>
     </IndividualBookings>

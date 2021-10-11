@@ -69,7 +69,7 @@ export const Days = styled.div<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 
-export const TopNav = styled.div`
+export const Screen2TopNav = styled.div`
   width: 100%;
   height: 7vh;
   padding: 1em;
@@ -81,7 +81,7 @@ export const TopNav = styled.div`
   position: fixed;
   background: #ffffff;
 `
-export const BotNav = styled.div`
+export const Screen2BotNav = styled.div`
   width: 100%;
   height: 7vh;
   padding: 1em;
