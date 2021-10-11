@@ -17,7 +17,7 @@ const FriendCard = (props: Props) => {
         <Avatar src={avatar}></Avatar>
         <PersonName>{props.name}</PersonName>
       </Person>
-      <FilledButton filled={props.filledButton} buttonText={props.buttonText} type='PRIMARY'></FilledButton>
+      <FilledButton filled={props.filledButton} buttonText={props.buttonText} type="PRIMARY"></FilledButton>
     </StyledCard>
   )
 }

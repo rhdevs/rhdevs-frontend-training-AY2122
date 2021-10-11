@@ -27,7 +27,7 @@ const Screen1 = () => {
         <FriendCard filledButton buttonText="Remove" name="MaoMao"></FriendCard>
         <FriendCard filledButton buttonText="Remove" name="Hui Hui"></FriendCard>
       </div>
-      <BottomNavBar></BottomNavBar>
+      <BottomNavBar />
     </MainContainer>
   )
 }
