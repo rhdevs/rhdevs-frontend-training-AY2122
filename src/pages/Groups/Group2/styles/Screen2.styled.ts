@@ -168,8 +168,3 @@ export const BottomNavBar = styled.div`
   height: 50px;
   text-align: center;
 `
-
-export const LowerLoungePhoto = styled.div`
-  width: 100%;
-  height: auto;
-`
