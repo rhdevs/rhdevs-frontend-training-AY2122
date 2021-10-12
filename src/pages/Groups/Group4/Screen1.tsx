@@ -1,22 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { useHistory } from 'react-router-dom'
-import { Alert, Button, Input } from 'antd'
+import { Button, Input } from 'antd'
 // import 'antd/dist/antd.css'
 
 import logo from '../../../assets/group4/devsLogo.svg'
 
 const ContainerDiv = styled.div`
   background-color: '#ffffff';
-  border-style: solid;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const LoginContainer = styled.div`
-  height: 896px;
-  width: 414px;
+  height: 100vh;
+  width: 90vw;
   margin: 0px 23px;
   padding-top: 50px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const InputTextLabel = styled.text`
@@ -26,15 +32,9 @@ const InputTextLabel = styled.text`
   font-family: Inter;
   font-style: normal;
   font-weight: 200;
+  margin-right: auto;
 `
-const ForgetPasswordLabel = styled.text`
-  float: left;
-  font-size: 10px;
-  padding: 0px 0px 4px 0px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 200;
-`
+
 const Logo = styled.img`
   width: 70%;
   max-width: 255px;
@@ -45,8 +45,9 @@ const ForgetPwButton = styled.div`
   text-decoration: underline;
   color: #72ba75;
   font-size: 13px;
+  margin-right: auto;
   .ant-btn {
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     font-weight: 200;
     color: #72ba75;
@@ -111,10 +112,9 @@ const PostButton = styled.div`
     border-radius: 20px;
   }
 `
-const AlertGroup = styled.div`
-  margin: 0px;
-`
+
 const StyledUsernameInput = styled.div`
+  width: 90vw;
   .ant-input {
     border-radius: 20px;
     font-size: 20px;
@@ -122,6 +122,7 @@ const StyledUsernameInput = styled.div`
   }
 `
 const StyledPasswordInput = styled.div`
+  width: 90vw;
   .ant-input-password {
     border-radius: 20px;
     font-size: 20px;
@@ -139,17 +140,9 @@ const ButtonLabel = styled.div`
   overflow: hidden;
 `
 
-const StyledButtonContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 70px;
-  column-gap: 6%;
-`
-
 const LoginPage = () => {
   return (
     <ContainerDiv>
-      {/* {isLoading && <LoadingSpin />} */}
       <LoginContainer>
         <Logo src={logo} />
         <br />
@@ -158,10 +151,8 @@ const LoginPage = () => {
           <Input
             type="text"
             placeholder="Matric Number"
-            // value={username}
-            onChange={(e) => {
-              const newUsername = e.target.value
-              // setUsername(newUsername.toUpperCase())
+            onChange={() => {
+              // const newUsername = e.target.value
             }}
           />
         </StyledUsernameInput>
@@ -172,7 +163,7 @@ const LoginPage = () => {
           <Input.Password
             type="password"
             placeholder="Enter Password"
-            onChange={(e) => {
+            onChange={() => {
               // setPassword(e.target.value)
             }}
           />
@@ -185,7 +176,7 @@ const LoginPage = () => {
             </AlertGroup>
           )} */}
         <PostButton>
-          <Button type="primary" shape="round" size="large" block>
+          <Button type="primary" shape="round" size="large" style={{ width: '90vw', borderRadius: '20px' }} block>
             Login
           </Button>
         </PostButton>
@@ -197,7 +188,7 @@ const LoginPage = () => {
             shape="round"
             size="large"
             block
-            style={{ height: '100%', borderRadius: '20px' }}
+            style={{ width: '90vw', borderRadius: '20px' }}
             onClick={() => {
               // history.push(PATHS.SIGNUP_PAGE)
             }}
