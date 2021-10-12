@@ -38,7 +38,7 @@ export const PropName = styled.h4`
   font-size: 16px;
 `
 
-export const StatusName = styled.h5`
+export const StatusName = styled.h3`
   float: left;
   margin: 3px auto;
 `
