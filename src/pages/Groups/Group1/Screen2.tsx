@@ -22,6 +22,9 @@ import {
   Day_container,
   Days,
   EventCard,
+  DailyContainer,
+  Subheader,
+  SubNav,
 } from './styles/Screen2.styled'
 import homeIconUnselected from '../../../assets/Group1/homeIconUnselected.svg'
 import facilitiesIconUnselected from '../../../assets/Group1/facilitiesIconUnselected.svg'
@@ -34,10 +37,11 @@ const Screen2 = () => {
 
   return (
     <>
-      {TopNav(isDailyMode)}
+      {TopNav()}
 
       <Bookings_container>
         <ButtonContainer>
+          {isDailyMode ? renderSubheader() : <div />}
           <ToggleButton onClick={() => setDailyMode(!isDailyMode)}>
             {isDailyMode ? 'Show Weekly' : 'Show Daily'}
           </ToggleButton>
@@ -49,10 +53,19 @@ const Screen2 = () => {
   )
 }
 
-const TopNav = (isDailyMode: boolean) => (
+const renderSubheader = () => {
+  return (
+    <SubNav>
+      <LeftOutlined />
+      <Subheader>Oct 8, Friday</Subheader>
+    </SubNav>
+  )
+}
+
+const TopNav = () => (
   <Screen2TopNav>
     <LeftOutlined />
-    <Header>{isDailyMode ? 'Oct 8, Friday (Semester 1, Week 7)' : 'Semester 1, Week 7'}</Header>
+    <Header>Semester 1, Week 7</Header>
     <UnorderedListOutlined />
   </Screen2TopNav>
 )
@@ -65,16 +78,17 @@ const BotNav = () => (
   </Screen2BotNav>
 )
 
-const renderDailySchedule = () =>
-  mockValues.map((e) => (
-    <IndividualBookings background={e.type} key={e.id}>
-      <EventText>{e.event}</EventText>
-      <TimeText>
-        `${e.time.start} - ${e.time.end}`
-      </TimeText>
-      <LocationText>{e.location}</LocationText>
-    </IndividualBookings>
-  ))
+const renderDailySchedule = () => (
+  <DailyContainer>
+    {mockValues.map((e) => (
+      <IndividualBookings background={e.type} key={e.id}>
+        <EventText>{e.event}</EventText>
+        <LocationText>{e.location}</LocationText>
+        <TimeText>{`${e.time.start} - ${e.time.end}`}</TimeText>
+      </IndividualBookings>
+    ))}
+  </DailyContainer>
+)
 
 const renderWeeklySchedule = () => (
   <WeekContainer>
@@ -98,9 +112,10 @@ const renderWeeklySchedule = () => (
   </WeekContainer>
 )
 
+// Checks if there is an event at said time, and renders event card for particular event if there is.
 const mapEvents = (t: string) => mockValues.map((e) => (e.time.start === t ? renderEventCard(e) : null))
 
-const renderEventCard = (e: any) => {
+const renderEventCard = (e: Event) => {
   return (
     <EventCard key={e.id} length={getLength(e)} type={e.type}>
       <EventTextWeekly>{e.event}</EventTextWeekly>
@@ -109,7 +124,7 @@ const renderEventCard = (e: any) => {
   )
 }
 
-const getLength = (e: any) => {
+const getLength = (e: Event) => {
   return parseInt(e.time.end) - parseInt(e.time.start) / 100
 }
 
@@ -130,5 +145,7 @@ const days = [
   { id: 4, day: 'Thu' },
   { id: 5, day: 'Fri' },
 ]
+
+type Event = { id: number; event: string; location: string; type: string; time: { start: string; end: string } }
 
 export default Screen2
