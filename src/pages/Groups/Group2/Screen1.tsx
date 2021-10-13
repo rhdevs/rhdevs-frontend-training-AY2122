@@ -59,6 +59,24 @@ const Screen1 = () => {
               </PostMessage>
             </PostTitle>
           </Post>
+          <Post>
+            <ProfilePicture src={profilePic} alt="Profile Picture" />
+            <PostTitle>
+              Title 2<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
+              <PostMessage>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              </PostMessage>
+            </PostTitle>
+          </Post>
+          <Post>
+            <ProfilePicture src={profilePic} alt="Profile Picture" />
+            <PostTitle>
+              Title 2<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
+              <PostMessage>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              </PostMessage>
+            </PostTitle>
+          </Post>
         </PostsSection>
 
         <BottomNavBar>Navigation Bar</BottomNavBar>

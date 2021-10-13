@@ -12,17 +12,12 @@ export const Screen = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid red;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
 `
 
 export const SearchBar = styled.div`
   top: 0;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
   height: 10vh;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
@@ -37,9 +32,6 @@ export const SearchButton = styled.div`
 `
 
 export const TextSection = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
   height: 10vh;
   background-color: lightblue;
   border: 1px solid green;
@@ -51,9 +43,6 @@ export const Title = styled.div`
 `
 
 export const ButtonsSection = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
   height: 10vh;
   border: 1px solid green;
   display: flex;
@@ -61,9 +50,6 @@ export const ButtonsSection = styled.div`
 `
 
 export const PostsSection = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
   border: 1px solid green;
 `
 
@@ -75,9 +61,7 @@ export const FilterBar = styled.div`
 `
 export const Post = styled.div`
   display: flex;
-  max-width: 350px;
-  min-width: 250px;
-  width: 40vw;
+  width: 90%;
   height: 20vh;
   border: 1px solid green;
   border-radius: 30px;
@@ -97,7 +81,7 @@ export const ProfilePicture = styled.img`
   border: 2px solid green;
 `
 export const PostTitle = styled.div`
-  width: 60%;
+  width: 80%;
   font-size: 3vh;
   color: green;
   margin-left: 2vw;
