@@ -22,20 +22,18 @@ export const TopNav = styled.div`
   position: fixed;
   background: #ffffff;
 `
-export const SucessfullyDeletedEvent = styled.div`
+export const SucessfullyDeletedEventContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   align-items: flex-start;
-  padding: 16px 26px;
   position: relative;
   width: 96%;
-  margin: 15px 2%;
-  height: 160px;
+  height: 150px;
   background: #f6ffed;
   border: 1px solid #b7eb8f;
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 `
 export const Header = styled.h1`
@@ -57,7 +55,6 @@ export const BotNav = styled.div`
   position: fixed;
   background: #ffffff;
   z-index: 800;
-  overflow: hidden;
   bottom: 0;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `
@@ -68,25 +65,25 @@ export const StyledButton = styled.img`
 `
 export const StyledTick = styled.img`
   width: 28px;
+  top: 4px;
   position: relative;
-  left: 0px;
-  top: 25px;
 `
 export const DeletedEventTextContainer = styled.p`
   width: 70%;
-  height: 70%;
+  height: 90%;
   position: relative;
   display: flex;
-  justify-content: space-apart;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  left: 2vw;
   color: rgba(0, 0, 0, 0.85);
 `
 export const DeletedEventText = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: calc(16px + 0.3vw);
   position: relative;
   color: rgba(0, 0, 0, 0.85);
 `
@@ -94,7 +91,7 @@ export const DeletedEventName = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: calc(13px + 0.3vw);
   position: relative;
   color: rgba(0, 0, 0, 0.65);
 `
@@ -102,8 +99,7 @@ export const DeletedEventTime = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  position: relative;
+  font-size: calc(13px + 0.3vw);
   color: rgba(0, 0, 0, 0.65);
 `
 export const UndoIcon = styled.div`
@@ -113,14 +109,14 @@ export const UndoIcon = styled.div`
   align-items: flex-start;
   position: relative;
   align-items: center;
-  width: 50px;
-  height: 25px;
-  top: 100px;
+  width: 45px;
+  height: 28px;
+  top: 95px;
   background: #468751;
   /* Polar Green/3 */
   border: 1px solid #b7eb8f;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 15px;
 `
 export const CenterContentContainer = styled.div`
   display: flex;
@@ -135,7 +131,7 @@ export const CenterContentContainer = styled.div`
   background: white;
 `
 export const OptionsBoxesContainer = styled.div`
-  height: 70px;
+  height: 40px;
   margin: 5px;
   width: 96%;
   font-size: 28px;
@@ -146,8 +142,8 @@ export const OptionsBoxesContainer = styled.div`
   background: white;
 `
 export const GreyBoxDelete = styled.div`
-  height: 6vh;
-  width: 48%;
+  height: 35px;
+  width: 55%;
   font-size: 10px;
   display: flex;
   flex-direction: row;
@@ -158,9 +154,8 @@ export const GreyBoxDelete = styled.div`
   border-radius: 10px;
 `
 export const GreyBoxSort = styled.div`
-  height: 6vh;
-  width: 48%;
-  font-size: 10px;
+  height: 35px;
+  width: 30%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -173,36 +168,46 @@ export const GreyBoxText = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  top: 1vh;
+  font-size: calc(15px + 0.4vw);
   color: rgba(25, 25, 25, 1);
   position: relative;
 `
 export const StyledGreybox = styled.img`
-  width: 28px;
+  width: 15px;
+  height: auto;
   position: relative;
 `
 export const BookingCardContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 16px 26px;
   position: relative;
   width: 96%;
-  margin: 15px 2%;
   height: 160px;
+  gap: 14px;
   background: #ffffff;
   border: 1px solid #b7eb8f;
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+`
+export const BookingCardTextContainer = styled.p`
+  width: 70%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  left: 2vw;
+  color: rgba(0, 0, 0, 0.85);
 `
 export const BookingLocation = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
+  font-size: calc(18px + 0.4vw);
   position: relative;
   color: rgba(0, 0, 0, 0.85);
 `
@@ -210,7 +215,7 @@ export const BookingCCA = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: calc(15px + 0.4vw);
   position: relative;
   color: rgba(0, 0, 0, 0.65);
 `
@@ -218,34 +223,22 @@ export const BookingTiming = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: calc(15px + 0.4vw);
   position: relative;
   color: rgba(88, 185, 148, 1);
 `
 export const StyledCCAIcon = styled.img`
-  position: absolute;
-  left: 5.86%;
-  right: 80.56%;
-  top: 17.65%;
-  bottom: 17.65%;
+  position: relative;
   width: 80px;
   height: auto;
 `
 export const StyledEdit = styled.img`
-  position: absolute;
-  left: 75%;
-  right: 19.14%;
-  top: 35.29%;
-  bottom: 36.76%;
+  position: relative;
   width: 30px;
   height: auto;
 `
 export const StyledDustbin = styled.img`
-  position: absolute;
-  left: 87.96%;
-  right: 7.48%;
-  top: 33.29%;
-  bottom: 36.76%;
+  position: relative;
   width: 28px;
   height: auto;
 `

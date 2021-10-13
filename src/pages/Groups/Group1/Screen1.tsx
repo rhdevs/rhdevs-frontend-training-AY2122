@@ -2,7 +2,7 @@ import React from 'react'
 import LeftOutlined from '@ant-design/icons/lib/icons/LeftOutlined'
 import UnorderedListOutlined from '@ant-design/icons/lib/icons/UnorderedListOutlined'
 import {
-  SucessfullyDeletedEvent,
+  SucessfullyDeletedEventContainer,
   TopNav,
   BotNav,
   Header,
@@ -27,6 +27,7 @@ import {
   CenterContentContainer,
   FullScreenContainer,
   DeletedEventTextContainer,
+  BookingCardTextContainer,
 } from './styles/Screen1.styled'
 import homeIconUnselected from '../../../assets/Group1/homeIconUnselected.svg'
 import facilitiesIconSelected from '../../../assets/Group1/facilitiesIconSelected.svg'
@@ -49,7 +50,7 @@ const Screen1 = () => {
         </TopNav>
 
         <CenterContentContainer>
-          <SucessfullyDeletedEvent>
+          <SucessfullyDeletedEventContainer>
             <StyledTick src={tickIconRH} />
             <DeletedEventTextContainer>
               <DeletedEventText>Successfully Deleted Event!</DeletedEventText>
@@ -57,7 +58,7 @@ const Screen1 = () => {
               <DeletedEventTime>16/12/21 1:00 PM to 3:00PM</DeletedEventTime>
             </DeletedEventTextContainer>
             <UndoIcon>undo</UndoIcon>
-          </SucessfullyDeletedEvent>
+          </SucessfullyDeletedEventContainer>
 
           <OptionsBoxesContainer>
             <GreyBoxDelete>
@@ -72,9 +73,11 @@ const Screen1 = () => {
 
           <BookingCardContainer>
             <StyledCCAIcon src={bandroom} />
-            <BookingLocation>Bandroom</BookingLocation>
-            <BookingCCA> Rhebels Practice</BookingCCA>
-            <BookingTiming> 16/01/20 12:00 PM - 1:00 PM </BookingTiming>
+            <BookingCardTextContainer>
+              <BookingLocation>Bandroom</BookingLocation>
+              <BookingCCA> Rhebels Practice</BookingCCA>
+              <BookingTiming> 16/01/20 12:00 PM - 1:00 PM </BookingTiming>
+            </BookingCardTextContainer>
             <StyledEdit src={greenedit} />
             <StyledDustbin src={greendustbin} />
           </BookingCardContainer>
