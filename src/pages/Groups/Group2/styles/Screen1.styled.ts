@@ -26,12 +26,12 @@ export const SearchBar = styled.div`
   height: 10vh;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
-  background-color: lightgreen;
+  background-color: #7fff00;
 `
 
 export const SearchButton = styled.div`
   float: right;
-  background-color: blue;
+  background-color: #0000ff;
 `
 
 export const TextSection = styled.div`
@@ -65,7 +65,7 @@ export const PostsSection = styled.div`
 
 export const FilterBar = styled.div`
   text-align: center;
-  background-color: lightgreen;
+  background-color: #7fff00;
   border: 1px solid green;
   border-radius: 15px 15px 15px 15px;
 `
