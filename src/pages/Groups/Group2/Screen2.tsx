@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  MainContainer,
   Screen,
   PageHeader,
   BookingTitle,
