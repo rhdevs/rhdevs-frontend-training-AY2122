@@ -42,6 +42,7 @@ const LandingPage = () => {
             designers="Shermaine, Nguyen, Felicia"
           />
           <GroupCard groupNumber={3} devs="Yixuan, Tai, Venus, Kiyong" designers="Dennis, Austin" />
+          <GroupCard groupNumber={4} devs="Elva, Zhikai, Weipin, Marcus" designers="Gregory, Shannon, Brendan" />
           {/* Create your group's card here! */}
         </InformationCardSection>
       </MembersSection>
