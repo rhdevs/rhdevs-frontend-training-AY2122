@@ -27,7 +27,8 @@ import {
   SubNav,
   TextContainer,
 } from './styles/Screen2.styled'
-import { CodeFilled, CoffeeOutlined } from '@ant-design/icons'
+import CodeFilled from '@ant-design/icons/lib/icons/CodeFilled'
+import CoffeeOutlined from '@ant-design/icons/lib/icons/CoffeeOutlined'
 import friendsIcon from '../../../assets/Group1/Friends.svg'
 import homeIconUnselected from '../../../assets/Group1/homeIconUnselected.svg'
 import facilitiesIconUnselected from '../../../assets/Group1/facilitiesIconUnselected.svg'
