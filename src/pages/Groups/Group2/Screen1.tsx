@@ -15,9 +15,12 @@ import {
   PostTitle,
   PostMessage,
   AuthorNameText,
+  SearchIconContainer,
+  MenuButton,
 } from './styles/Screen1.styled'
 
 import profilePic from '../../../assets/Group2/cats.jpg'
+import SearchIcon from '../../../assets/Group2/SearchIcon.svg'
 
 const Screen1 = () => {
   return (
@@ -25,13 +28,16 @@ const Screen1 = () => {
       <Screen>
         <SearchBar>
           Good Afternoon Mao Mao,
-          <SearchButton>Icon</SearchButton>
+          <SearchIconContainer src={SearchIcon} alt="Clock logo" />
         </SearchBar>
         <TextSection>
           <Title>Meow Meow Porridge</Title>
           <div style={{ textAlign: 'center' }}>Text text text...</div>
         </TextSection>
-        <ButtonsSection>Buttons</ButtonsSection>
+        <ButtonsSection>
+          <MenuButton>Facilities</MenuButton>
+          <MenuButton>Calander</MenuButton>
+        </ButtonsSection>
         <PostsSection>
           {"What's Happening..."}
           <FilterBar>FilterBar</FilterBar>

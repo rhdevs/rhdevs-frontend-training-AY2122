@@ -27,6 +27,8 @@ export const SearchBar = styled.div`
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
   background-color: #7fff00;
+  display: flex;
+  flex-direction: row;
 `
 
 export const SearchButton = styled.div`
@@ -54,6 +56,8 @@ export const ButtonsSection = styled.div`
   width: 50vw;
   height: 10vh;
   border: 1px solid green;
+  display: flex;
+  flex-direction: row;
 `
 
 export const PostsSection = styled.div`
@@ -124,5 +128,13 @@ export const BottomNavBar = styled.div`
   width: 50vw;
   height: 10vh;
   text-align: center;
+  border: 1px solid red;
+`
+export const SearchIconContainer = styled.img`
+  width: auto;
+`
+export const MenuButton = styled.div`
+  height: 60px;
+  width: 120px;
   border: 1px solid red;
 `
