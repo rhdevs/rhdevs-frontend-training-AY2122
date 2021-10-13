@@ -19,6 +19,7 @@ import {
   AdditionalNotes,
   BookingDescription,
   HeaderPhoto,
+  BookingDurationAndAuthorOuterContainer,
 } from './styles/Screen2.styled'
 import lowerlounge from '../../../assets/Group2/LowerLounge.svg'
 import pen from '../../../assets/Group2/Pen.svg'
@@ -37,16 +38,18 @@ const Screen2 = () => {
             <PenLogo src={pen} alt="Pen" />
           </PageHeader>
         </HeaderAndBookingTitleContainer>
-        <BookingDurationAndAuthorContainer>
-          <Figure>
-            <ClockLogo src={clock} alt="Clock logo" />
-            <Figcaption>3 hours</Figcaption>
-          </Figure>
-          <Figure>
-            <PeopleLogo src={people} alt="People logo" />
-            <Figcaption>Alyssa</Figcaption>
-          </Figure>
-        </BookingDurationAndAuthorContainer>
+        <BookingDurationAndAuthorOuterContainer>
+          <BookingDurationAndAuthorContainer>
+            <Figure>
+              <ClockLogo src={clock} alt="Clock logo" />
+              <Figcaption>3 hours</Figcaption>
+            </Figure>
+            <Figure>
+              <PeopleLogo src={people} alt="People logo" />
+              <Figcaption>Alyssa</Figcaption>
+            </Figure>
+          </BookingDurationAndAuthorContainer>
+        </BookingDurationAndAuthorOuterContainer>
         <BookingTimingContainer>
           Thu, 17/12/21 3:00 PM
           <br />
