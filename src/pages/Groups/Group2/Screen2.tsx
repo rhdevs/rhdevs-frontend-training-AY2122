@@ -29,47 +29,45 @@ import people from '../../../assets/Group2/People.svg'
 const Screen2 = () => {
   return (
     <>
-      <MainContainer>
-        <Screen>
-          <HeaderAndBookingTitleContainer>
-            <HeaderPhoto src={lowerlounge} alt="Lower Lounge photo" />
-            <PageHeader>
-              <BookingTitle>Bonding Camp</BookingTitle>
-              <BookingCCA>RHMP</BookingCCA>
-              <PenLogo src={pen} alt="Pen" />
-            </PageHeader>
-          </HeaderAndBookingTitleContainer>
-          <BookingDurationAndAuthorContainer>
-            <Figure>
-              <ClockLogo src={clock} alt="Clock logo" />
-              <Figcaption>3 hours</Figcaption>
-            </Figure>
-            <Figure>
-              <PeopleLogo src={people} alt="People logo" />
-              <Figcaption>Alyssa</Figcaption>
-            </Figure>
-          </BookingDurationAndAuthorContainer>
-          <BookingTimingContainer>
-            Thu, 17/12/21 3:00 PM
+      <Screen>
+        <HeaderAndBookingTitleContainer>
+          <HeaderPhoto src={lowerlounge} alt="Lower Lounge photo" />
+          <PageHeader>
+            <BookingTitle>Bonding Camp</BookingTitle>
+            <BookingCCA>RHMP</BookingCCA>
+            <PenLogo src={pen} alt="Pen" />
+          </PageHeader>
+        </HeaderAndBookingTitleContainer>
+        <BookingDurationAndAuthorContainer>
+          <Figure>
+            <ClockLogo src={clock} alt="Clock logo" />
+            <Figcaption>3 hours</Figcaption>
+          </Figure>
+          <Figure>
+            <PeopleLogo src={people} alt="People logo" />
+            <Figcaption>Alyssa</Figcaption>
+          </Figure>
+        </BookingDurationAndAuthorContainer>
+        <BookingTimingContainer>
+          Thu, 17/12/21 3:00 PM
+          <br />
+          To
+          <br />
+          Thu, 17/12/21 3:00 PM
+        </BookingTimingContainer>
+        <AdditionalNotesContainer>
+          <AdditionalNotes>Additional notes:</AdditionalNotes>
+          <BookingDescription>
+            Will be using this place for RHMP bonding.
             <br />
-            To
-            <br />
-            Thu, 17/12/21 3:00 PM
-          </BookingTimingContainer>
-          <AdditionalNotesContainer>
-            <AdditionalNotes>Additional notes:</AdditionalNotes>
-            <BookingDescription>
-              Will be using this place for RHMP bonding.
-              <br />
-              Contact me if you have any question.
-            </BookingDescription>
-          </AdditionalNotesContainer>
-          <ConfirmButtonContainer>
-            <ConfirmButton>Confirm</ConfirmButton>
-          </ConfirmButtonContainer>
-          <BottomNavBar>Bottom nav bar.</BottomNavBar>
-        </Screen>
-      </MainContainer>
+            Contact me if you have any question.
+          </BookingDescription>
+        </AdditionalNotesContainer>
+        <ConfirmButtonContainer>
+          <ConfirmButton>Confirm</ConfirmButton>
+        </ConfirmButtonContainer>
+        <BottomNavBar>Bottom nav bar.</BottomNavBar>
+      </Screen>
     </>
   )
 }

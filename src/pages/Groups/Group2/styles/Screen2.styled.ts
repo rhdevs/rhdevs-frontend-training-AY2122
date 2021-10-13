@@ -9,23 +9,19 @@ export const MainContainer = styled.div`
 `
 
 export const Screen = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
 `
 
 export const HeaderAndBookingTitleContainer = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: 35vh;
 `
 
 export const HeaderPhoto = styled.img`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: 35vh;
   object-fit: cover;
 `
@@ -34,9 +30,7 @@ export const PageHeader = styled.div`
   background: #d9e6df;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: 10vh;
   bottom: 10vh;
   position: relative;
@@ -69,8 +63,9 @@ export const BookingCCA = styled.div`
 export const PenLogo = styled.img`
   float: right;
   width: 5%;
-  height: 10vh;
+  height: 5vh;
   margin-right: 2vw;
+  margin-top: 1vw;
   line-height: 10vh;
 `
 
@@ -86,7 +81,7 @@ export const BookingDurationAndAuthorContainer = styled.div`
 `
 
 export const Figure = styled.figure`
-  width: 50%;
+  width: 100%;
   height: 8vh;
   display: flex;
   flex-direction: column;
@@ -119,14 +114,12 @@ export const BookingTimingContainer = styled.div`
 `
 
 export const AdditionalNotesContainer = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: auto;
   padding: 3vh;
   font-family: Lato;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
 `
 
 export const AdditionalNotes = styled.div`
@@ -140,9 +133,7 @@ export const BookingDescription = styled.div`
 `
 
 export const ConfirmButtonContainer = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: 25vh;
   padding: 10px 0px 0px 0px;
   font-family: Lato;
@@ -150,7 +141,7 @@ export const ConfirmButtonContainer = styled.div`
 `
 
 export const ConfirmButton = styled.button`
-  width: 40%;
+  width: 100%;
   height: max-content;
   color: white;
   font-size: 22px;
@@ -162,9 +153,7 @@ export const BottomNavBar = styled.div`
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   position: fixed;
   bottom: 0;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: 50px;
   text-align: center;
 `
