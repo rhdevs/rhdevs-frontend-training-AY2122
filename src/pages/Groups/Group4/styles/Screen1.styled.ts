@@ -72,7 +72,8 @@ export const ForgetPwButton = styled.div`
     border-radius: 20px;
   }
 `
-export const PostButton = styled.div`
+
+export const LoginButton = styled.div`
   text-align: center;
   .ant-btn {
     font-size: 17px;
@@ -98,11 +99,28 @@ export const PostButton = styled.div`
     background: #72ba75;
     border-color: #72ba75;
   }
+`
+export const RegisterButton = styled.div`
+  text-align: center;
+  .ant-btn {
+    font-size: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    font-weight: 200;
+  }
   .ant-btn-default: {
     height: min-content;
     margin: 10px;
     float: left;
     border-radius: 20px;
+  }
+  .ant-btn-default:hover {
+    border-color: #72ba75;
+    color: #000000;
+  }
+  .ant-btn-default:focus {
+    border-color: #72ba75;
+    color: #72ba75;
   }
 `
 

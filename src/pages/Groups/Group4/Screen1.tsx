@@ -6,10 +6,11 @@ import {
   InputTextLabel,
   Logo,
   ForgetPwButton,
-  PostButton,
+  RegisterButton,
   StyledUsernameInput,
   StyledPasswordInput,
   ButtonLabel,
+  LoginButton,
 } from './styles/Screen1.styled'
 import logo from '../../../assets/group4/devsLogo.svg'
 
@@ -21,71 +22,27 @@ const LoginPage = () => {
         <br />
         <InputTextLabel>Username: </InputTextLabel>
         <StyledUsernameInput>
-          <Input
-            type="text"
-            placeholder="Matric Number"
-            onChange={() => {
-              // const newUsername = e.target.value
-            }}
-          />
+          <Input type="text" placeholder="Matric Number" />
         </StyledUsernameInput>
         <br />
         <InputTextLabel>Password: </InputTextLabel>
 
         <StyledPasswordInput>
-          <Input.Password
-            type="password"
-            placeholder="Enter Password"
-            onChange={() => {
-              // setPassword(e.target.value)
-            }}
-          />
+          <Input.Password type="password" placeholder="Enter Password" />
         </StyledPasswordInput>
         <ForgetPwButton>Forget password</ForgetPwButton>
         <br />
-        {/* {error.message !== '' && (
-            <AlertGroup>
-              <Alert message={error.message} type="error" closable showIcon />
-            </AlertGroup>
-          )} */}
-        <PostButton>
+        <LoginButton>
           <Button type="primary" shape="round" size="large" style={{ width: '90vw', borderRadius: '20px' }} block>
             Login
           </Button>
-        </PostButton>
+        </LoginButton>
         <br />
-        {/*<StyledButtonContainer>*/}
-        <PostButton>
-          <Button
-            type="default"
-            shape="round"
-            size="large"
-            block
-            style={{ width: '90vw', borderRadius: '20px' }}
-            onClick={() => {
-              // history.push(PATHS.SIGNUP_PAGE)
-            }}
-          >
+        <RegisterButton>
+          <Button type="default" shape="round" size="large" block style={{ width: '90vw', borderRadius: '20px' }}>
             <ButtonLabel>Register</ButtonLabel>
           </Button>
-        </PostButton>
-        <PostButton>
-          {/*
-            <Button
-              type="default"
-              shape="round"
-              size="large"
-              block
-              style={{ height: '100%', borderRadius: '20px' }}
-              onClick={() => {
-                // history.push(PATHS.FORGET_PASSWORD_PAGE)
-              }}
-            >
-              <ButtonLabel>Forget Password</ButtonLabel>
-            </Button>
-            */}
-        </PostButton>
-        {/*</StyledButtonContainer>*/}
+        </RegisterButton>
       </LoginContainer>
     </ContainerDiv>
   )
