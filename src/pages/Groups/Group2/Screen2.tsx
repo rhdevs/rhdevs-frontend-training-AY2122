@@ -2,24 +2,24 @@ import React from 'react'
 import {
   MainContainer,
   Screen,
-  Picture,
+  PageHeader,
   BookingTitle,
-  Title,
-  CCA,
-  Pen,
-  DurationAndAuthor,
-  Timing,
-  Notes,
+  BookingCCA,
+  PenLogo,
+  BookingDurationAndAuthorContainer,
+  BookingTimingContainer,
+  AdditionalNotesContainer,
+  ConfirmButtonContainer,
   ConfirmButton,
-  Confirm,
   BottomNavBar,
-  PictureAndTitle,
+  HeaderAndBookingTitleContainer,
   ClockLogo,
   PeopleLogo,
   Figure,
   Figcaption,
   AdditionalNotes,
-  Description,
+  BookingDescription,
+  HeaderPhoto,
 } from './styles/Screen2.styled'
 import lowerlounge from '../../../assets/Group2/LowerLounge.svg'
 import pen from '../../../assets/Group2/Pen.svg'
@@ -31,15 +31,15 @@ const Screen2 = () => {
     <>
       <MainContainer>
         <Screen>
-          <PictureAndTitle>
-            <Picture src={lowerlounge} alt="Lower Lounge photo" />
-            <BookingTitle>
-              <Title>Bonding Camp</Title>
-              <CCA>RHMP</CCA>
-              <Pen src={pen} alt="Pen" />
-            </BookingTitle>
-          </PictureAndTitle>
-          <DurationAndAuthor>
+          <HeaderAndBookingTitleContainer>
+            <HeaderPhoto src={lowerlounge} alt="Lower Lounge photo" />
+            <PageHeader>
+              <BookingTitle>Bonding Camp</BookingTitle>
+              <BookingCCA>RHMP</BookingCCA>
+              <PenLogo src={pen} alt="Pen" />
+            </PageHeader>
+          </HeaderAndBookingTitleContainer>
+          <BookingDurationAndAuthorContainer>
             <Figure>
               <ClockLogo src={clock} alt="Clock logo" />
               <Figcaption>3 hours</Figcaption>
@@ -48,25 +48,25 @@ const Screen2 = () => {
               <PeopleLogo src={people} alt="People logo" />
               <Figcaption>Alyssa</Figcaption>
             </Figure>
-          </DurationAndAuthor>
-          <Timing>
+          </BookingDurationAndAuthorContainer>
+          <BookingTimingContainer>
             Thu, 17/12/21 3:00 PM
             <br />
             To
             <br />
             Thu, 17/12/21 3:00 PM
-          </Timing>
-          <Notes>
+          </BookingTimingContainer>
+          <AdditionalNotesContainer>
             <AdditionalNotes>Additional notes:</AdditionalNotes>
-            <Description>
+            <BookingDescription>
               Will be using this place for RHMP bonding.
               <br />
               Contact me if you have any question.
-            </Description>
-          </Notes>
-          <ConfirmButton>
-            <Confirm>Confirm</Confirm>
-          </ConfirmButton>
+            </BookingDescription>
+          </AdditionalNotesContainer>
+          <ConfirmButtonContainer>
+            <ConfirmButton>Confirm</ConfirmButton>
+          </ConfirmButtonContainer>
           <BottomNavBar>Bottom nav bar.</BottomNavBar>
         </Screen>
       </MainContainer>

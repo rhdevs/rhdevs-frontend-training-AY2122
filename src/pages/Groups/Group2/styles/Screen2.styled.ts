@@ -15,14 +15,14 @@ export const Screen = styled.div`
   border: 1px solid black;
 `
 
-export const PictureAndTitle = styled.div`
+export const HeaderAndBookingTitleContainer = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
   height: 35vh;
 `
 
-export const Picture = styled.img`
+export const HeaderPhoto = styled.img`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -30,7 +30,7 @@ export const Picture = styled.img`
   object-fit: cover;
 `
 
-export const BookingTitle = styled.div`
+export const PageHeader = styled.div`
   background: #d9e6df;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -47,7 +47,7 @@ export const BookingTitle = styled.div`
   overflow: hidden;
 `
 
-export const Title = styled.div`
+export const BookingTitle = styled.div`
   float: left;
   width: max-content;
   line-height: 10vh;
@@ -56,7 +56,7 @@ export const Title = styled.div`
   font-size: 24px;
 `
 
-export const CCA = styled.div`
+export const BookingCCA = styled.div`
   float: left;
   width: 25%;
   height: 10vh;
@@ -66,7 +66,7 @@ export const CCA = styled.div`
   font-size: 16px;
 `
 
-export const Pen = styled.img`
+export const PenLogo = styled.img`
   float: right;
   width: 5%;
   height: 10vh;
@@ -74,7 +74,7 @@ export const Pen = styled.img`
   line-height: 10vh;
 `
 
-export const DurationAndAuthor = styled.div`
+export const BookingDurationAndAuthorContainer = styled.div`
   position: relative;
   max-width: 400px;
   min-width: 300px;
@@ -109,7 +109,7 @@ export const PeopleLogo = styled.img`
   width: auto;
 `
 
-export const Timing = styled.div`
+export const BookingTimingContainer = styled.div`
   height: auto;
   padding: 5%;
   text-align: center;
@@ -118,7 +118,7 @@ export const Timing = styled.div`
   font-size: 14px;
 `
 
-export const Notes = styled.div`
+export const AdditionalNotesContainer = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -134,12 +134,12 @@ export const AdditionalNotes = styled.div`
   height: 30%;
 `
 
-export const Description = styled.div`
+export const BookingDescription = styled.div`
   font-weight: normal;
   height: 70%;
 `
 
-export const ConfirmButton = styled.div`
+export const ConfirmButtonContainer = styled.div`
   max-width: 400px;
   min-width: 300px;
   width: 50vw;
@@ -149,7 +149,7 @@ export const ConfirmButton = styled.div`
   text-align: center;
 `
 
-export const Confirm = styled.button`
+export const ConfirmButton = styled.button`
   width: 40%;
   height: max-content;
   color: white;
