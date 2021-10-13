@@ -133,11 +133,7 @@ export const EventCard = styled.div<{ length?: number; type?: string }>`
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
   ${(props) => (props.length && props.length > 1 ? `height: calc(2 * 10em);` : `height: 10em;`)}
   ${(props) =>
-    props.type && props.type === 'academic'
-      ? `background: #468751;`
-      : props.type === 'hall'
-      ? `background: #72ba75;`
-      : `background: #ffffff;`}
+    props.type && props.type === 'academic' ? colours.academic : props.type === 'hall' ? colours.hall : colours.others}
 `
 
 export const DailyContainer = styled.div`
@@ -150,16 +146,22 @@ export const DailyContainer = styled.div`
 export const IndividualBookings = styled.div<{ background?: string }>`
   margin: 15px 2%;
   border-radius: 5px;
-  padding: 15px 30px;
+  padding: 15px 15px;
   color: #ffffff;
+  display: flex;
+  align-items: center;
   ${(props) =>
     props.background && props.background === 'academic'
-      ? `background: #468751;`
+      ? colours.academic
       : props.background === 'hall'
-      ? `background: #72ba75;`
-      : `background: #ffffff; border: solid 1px; color: black;`}
+      ? colours.hall
+      : colours.others}
   white-space: nowrap;
   min-height: 100px;
+`
+
+export const TextContainer = styled.div`
+  margin-left: 15px;
 `
 
 export const EventTextWeekly = styled.h3<{ fontSize?: string }>`
@@ -202,8 +204,9 @@ export const ToggleButton = styled.button`
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   border-style: none;
-  background: #72ba75;
-  border-color: #72ba75;
+  background: #457373;
+  border-color: #457373;
+  color: #ffffff;
   min-height: 3em;
   min-width: 8em;
 `
@@ -212,3 +215,9 @@ export const StyledButton = styled.img`
   width: 28px;
   max-height: 28px;
 `
+
+const colours = {
+  academic: `background: #457373;`,
+  hall: `background: #DDB247;`,
+  others: `background: #CE5C08;`,
+}

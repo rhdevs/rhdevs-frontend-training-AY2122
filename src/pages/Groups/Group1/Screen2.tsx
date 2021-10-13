@@ -25,7 +25,10 @@ import {
   DailyContainer,
   Subheader,
   SubNav,
+  TextContainer,
 } from './styles/Screen2.styled'
+import { CodeFilled, CoffeeOutlined } from '@ant-design/icons'
+import friendsIcon from '../../../assets/Group1/Friends.svg'
 import homeIconUnselected from '../../../assets/Group1/homeIconUnselected.svg'
 import facilitiesIconUnselected from '../../../assets/Group1/facilitiesIconUnselected.svg'
 import calenderIconSelected from '../../../assets/Group1/calenderIconSelected.svg'
@@ -82,9 +85,14 @@ const renderDailySchedule = () => (
   <DailyContainer>
     {mockValues.map((e) => (
       <IndividualBookings background={e.type} key={e.id}>
-        <EventText>{e.event}</EventText>
-        <LocationText>{e.location}</LocationText>
-        <TimeText>{`${e.time.start} - ${e.time.end}`}</TimeText>
+        {e.type === 'academic' ? <CodeFilled style={{ fontSize: '28px' }} /> : null}
+        {e.type === 'others' ? <CoffeeOutlined style={{ fontSize: '28px' }} /> : null}
+        {e.type === 'hall' ? <StyledButton src={friendsIcon} /> : null}
+        <TextContainer>
+          <EventText>{e.event}</EventText>
+          <LocationText>{e.location}</LocationText>
+          <TimeText>{`${e.time.start} - ${e.time.end}`}</TimeText>
+        </TextContainer>
       </IndividualBookings>
     ))}
   </DailyContainer>
@@ -136,7 +144,7 @@ const mockValues = [
   { id: 5, event: 'GET1020 Lecture', location: 'Online', type: 'academic', time: { start: '1700', end: '1800' } },
 ]
 
-const timings = ['0600', '0700', '0900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800']
+const timings = ['0600', '0700', '0800', '0900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800']
 
 const days = [
   { id: 1, day: 'Mon' },
