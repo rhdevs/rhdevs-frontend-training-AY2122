@@ -1,28 +1,8 @@
 import React from 'react'
-import { useHistory } from 'react-router'
+import { useHistory } from 'react-router-dom'
 
-import styled from 'styled-components'
 import frontendIcon from '../assets/frontend-logo.jpeg'
-
-const FEContainer = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: min-content 1fr;
-  grid-column-gap: 10px;
-  cursor: pointer;
-`
-
-const TitleText = styled.h2<{ fontSize?: string }>`
-  margin: 0;
-  color: white;
-  white-space: nowrap;
-  ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
-`
-
-const StyledIcon = styled.img<{ imgSize?: string }>`
-  height: ${(props) => props.imgSize ?? '2rem'};
-  width: ${(props) => props.imgSize ?? '2rem'};
-`
+import { FEContainer, StyledIcon, TitleText } from './styles/FEWebTitle.styled'
 
 type Props = {
   fontSize?: string

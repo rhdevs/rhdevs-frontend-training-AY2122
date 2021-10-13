@@ -11,10 +11,16 @@ import 'antd/dist/antd.css'
 
 export enum PATHS {
   GROUP_ROUTE = '/group',
+  SHOPPING_LISTS = '/shopping-lists',
+  EXAMPLE_SHOPPING_PAGE = '/shopping/example',
 }
+
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
 const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './pages/ErrorPage/NotFound'))
 const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './pages/Groups'))
+const ShoppingListsMainPage = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
+)
 
 function App() {
   useEffect(() => {
@@ -25,17 +31,22 @@ function App() {
   const routes = (
     <Switch>
       <Route path="/" exact>
-        <main>
+        <main className="main-with-footer">
           <MainNavigation />
           <LandingPage />
           <Footer />
+        </main>
+      </Route>
+      <Route path={PATHS.SHOPPING_LISTS} exact>
+        <main>
+          <MainNavigation />
+          <ShoppingListsMainPage />
         </main>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
         <main>
           <MainNavigation />
           <Groups />
-          <Footer />
         </main>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />

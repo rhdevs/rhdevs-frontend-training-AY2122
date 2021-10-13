@@ -2,6 +2,13 @@ main {
   padding-top: 3rem; /*top nav bar*/
   height: 100%;
   min-height: 100vh;
+  background-color: #fdfdfd;
+}
+
+.main-with-footer {
+  padding-top: 3rem; /*top nav bar*/
+  height: 100%;
+  min-height: 100vh;
   margin-bottom: -10rem; /*footer*/
   background-color: #fdfdfd;
 }
