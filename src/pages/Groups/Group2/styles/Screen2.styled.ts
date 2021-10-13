@@ -69,14 +69,12 @@ export const BookingDurationAndAuthorContainer = styled.div`
   padding-top: 1vh;
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
 `
 export const BookingDurationAndAuthorOuterContainer = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 1px solid black;
 `
 
 export const Figure = styled.figure`
