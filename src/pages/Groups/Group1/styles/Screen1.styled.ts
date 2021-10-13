@@ -28,6 +28,7 @@ export const SucessfullyDeletedEventContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   position: relative;
+  padding: 5px;
   width: 96%;
   height: 150px;
   background: #f6ffed;
@@ -57,8 +58,10 @@ export const StyledButton = styled.img`
   position: relative;
 `
 export const StyledTick = styled.img`
-  width: 28px;
+  width: 40px;
+  height: auto;
   top: 10px;
+  padding: 5px;
   position: relative;
 `
 export const DeletedEventTextContainer = styled.p`
@@ -66,6 +69,7 @@ export const DeletedEventTextContainer = styled.p`
   height: 90%;
   position: relative;
   display: flex;
+  padding: 10px;
   justify-content: space-apart;
   flex-direction: column;
   align-items: left;
@@ -73,7 +77,7 @@ export const DeletedEventTextContainer = styled.p`
   color: rgba(0, 0, 0, 0.85);
 `
 export const DeletedEventText = styled.p`
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: calc(16px + 0.3vw);
@@ -81,7 +85,7 @@ export const DeletedEventText = styled.p`
   color: rgba(0, 0, 0, 0.85);
 `
 export const DeletedEventName = styled.p`
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: calc(13px + 0.3vw);
@@ -89,7 +93,7 @@ export const DeletedEventName = styled.p`
   color: rgba(0, 0, 0, 0.65);
 `
 export const DeletedEventTime = styled.p`
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: calc(13px + 0.3vw);
@@ -127,7 +131,6 @@ export const OptionsBoxesContainer = styled.div`
   height: 40px;
   margin: 5px;
   width: 96%;
-  font-size: 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,10 +163,11 @@ export const GreyBoxSort = styled.div`
   border-radius: 10px;
 `
 export const GreyBoxText = styled.p`
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: calc(15px + 0.3vw);
+  padding: 1px;
   color: rgba(25, 25, 25, 1);
   position: relative;
 `
@@ -174,10 +178,11 @@ export const StyledGreybox = styled.img`
 `
 export const BookingCardContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   position: relative;
+  padding: 5px;
   width: 96%;
   height: 160px;
   gap: 14px;
@@ -192,48 +197,51 @@ export const BookingCardTextContainer = styled.p`
   height: 80%;
   position: relative;
   display: flex;
+  padding: 3px;
   justify-content: space-apart;
   flex-direction: column;
   align-items: left;
-  left: 2vw;
   color: rgba(0, 0, 0, 0.85);
 `
 export const BookingLocation = styled.p`
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: calc(18px + 0.3vw);
+  font-size: calc(17px + 0.3vw);
   position: relative;
   color: rgba(0, 0, 0, 0.85);
 `
 export const BookingCCA = styled.p`
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: calc(15px + 0.3vw);
+  font-size: calc(13px + 0.3vw);
   position: relative;
   color: rgba(0, 0, 0, 0.65);
 `
 export const BookingTiming = styled.p`
-  font-family: Lato;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: calc(15px + 0.3vw);
+  font-size: calc(13px + 0.3vw);
   position: relative;
   color: rgba(88, 185, 148, 1);
 `
 export const StyledCCAIcon = styled.img`
   position: relative;
-  width: 80px;
+  padding: 10px;
+  width: 130px;
   height: auto;
 `
 export const StyledEdit = styled.img`
   position: relative;
-  width: 30px;
+  padding: 5px;
+  width: 60px;
   height: auto;
 `
 export const StyledDustbin = styled.img`
   position: relative;
-  width: 28px;
+  padding: 5px;
+  width: 55px;
   height: auto;
 `
