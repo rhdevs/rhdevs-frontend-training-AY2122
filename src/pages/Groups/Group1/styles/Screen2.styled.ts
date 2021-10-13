@@ -150,7 +150,7 @@ export const DailyContainer = styled.div`
 export const IndividualBookings = styled.div<{ background?: string }>`
   margin: 15px 2%;
   border-radius: 5px;
-  padding: 30px;
+  padding: 15px 30px;
   color: #ffffff;
   ${(props) =>
     props.background && props.background === 'academic'
