@@ -142,7 +142,7 @@ export const OptionsBoxesContainer = styled.div`
   background: white;
 `
 export const GreyBoxDelete = styled.div`
-  height: 35px;
+  height: 25px;
   width: 55%;
   font-size: 10px;
   display: flex;
@@ -154,7 +154,7 @@ export const GreyBoxDelete = styled.div`
   border-radius: 10px;
 `
 export const GreyBoxSort = styled.div`
-  height: 35px;
+  height: 25px;
   width: 30%;
   display: flex;
   flex-direction: row;
