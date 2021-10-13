@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10px;
 `
 
 export const HeaderRow = styled.div`
@@ -11,13 +10,17 @@ export const HeaderRow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 10px;
 `
 
 export const HeaderInformation = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+`
+
+export const StyledSegment = styled.div`
+  margin: 10px;
 `
 
 export const IconStyling = {
