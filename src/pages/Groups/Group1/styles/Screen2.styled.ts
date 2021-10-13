@@ -58,7 +58,7 @@ export const Day_container = styled.div<{ fontSize?: string; key?: string; day?:
       ? 'background-color: #f9f9f9'
       : props.day === 'Thu'
       ? 'background-color: #f9f9f9'
-      : 'background-color: white'}
+      : 'background-color: #ffffff'}
 `
 export const Days = styled.div<{ fontSize?: string }>`
   margin: 0;
@@ -106,6 +106,20 @@ export const Header = styled.h1`
   text-overflow: ellipsis;
 `
 
+export const Subheader = styled.h2`
+  font-size: 18px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+`
+
+export const SubNav = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const EventCard = styled.div<{ length?: number; type?: string }>`
   position: absolute;
   min-width: 8em;
@@ -123,21 +137,27 @@ export const EventCard = styled.div<{ length?: number; type?: string }>`
       ? `background: #468751;`
       : props.type === 'hall'
       ? `background: #72ba75;`
-      : `background: white;`}
+      : `background: #ffffff;`}
+`
+
+export const DailyContainer = styled.div`
+  margin: 15px 2%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 2px;
 `
 
 export const IndividualBookings = styled.div<{ background?: string }>`
   margin: 15px 2%;
   border-radius: 5px;
-  border: solid 1px;
   padding: 30px;
-  color: black;
+  color: #ffffff;
   ${(props) =>
     props.background && props.background === 'academic'
       ? `background: #468751;`
       : props.background === 'hall'
       ? `background: #72ba75;`
-      : `background: white;`}
+      : `background: #ffffff; border: solid 1px; color: black;`}
   white-space: nowrap;
   min-height: 100px;
 `
@@ -152,36 +172,40 @@ export const LocationTextWeekly = styled.p<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
   font-weight: 300;
   margin-left: 1em;
-  margin-top -0.5em;
+  margin-top: -0.5em;
 `
 export const EventText = styled.h3<{ fontSize?: string }>`
+  color: inherit;
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
-  font-weight: 500;
+  font-weight: 350;
 `
 
 export const TimeText = styled.h3<{ fontSize?: string }>`
+  color: inherit;
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
   font-weight: 350;
 `
 export const LocationText = styled.p<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
-  font-weight: 350;
+  font-weight: 500;
 `
 
 export const ButtonContainer = styled.div`
   height: 100%;
   margin: 15px 2%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 `
 
 export const ToggleButton = styled.button`
   border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  border-style: none;
   background: #72ba75;
   border-color: #72ba75;
   min-height: 3em;
-  min-width: 10em;
+  min-width: 8em;
 `
 
 export const StyledButton = styled.img`
