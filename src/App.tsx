@@ -6,8 +6,8 @@ import MainNavigation from './shared/Navigation/MainNavigation'
 import Lesson1Example from './pages/Lesson1Example'
 import Footer from './shared/Navigation/Footer'
 
-import './App.css'
 import 'antd/dist/antd.css'
+import { StyledMain } from './App.styled'
 
 export enum PATHS {
   GROUP_ROUTE = '/group',
@@ -31,33 +31,33 @@ function App() {
   const routes = (
     <Switch>
       <Route path="/" exact>
-        <main className="main-with-footer">
+        <StyledMain hasFooter>
           <MainNavigation />
           <LandingPage />
           <Footer />
-        </main>
+        </StyledMain>
       </Route>
       <Route path={PATHS.SHOPPING_LISTS} exact>
-        <main>
+        <StyledMain>
           <MainNavigation />
           <ShoppingListsMainPage />
-        </main>
+        </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
-        <main>
+        <StyledMain>
           <MainNavigation />
           <Groups />
-        </main>
+        </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
       {/* example from lesson 1 (4oct) */}
       <Route path="/example" exact component={Lesson1Example} />
       <Route>
-        <main>
+        <StyledMain>
           <MainNavigation />
           <NotFound />
           <Footer />
-        </main>
+        </StyledMain>
       </Route>
       <Redirect to="/" />
     </Switch>
