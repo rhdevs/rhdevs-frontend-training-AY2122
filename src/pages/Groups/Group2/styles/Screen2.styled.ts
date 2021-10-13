@@ -1,42 +1,28 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
-  font-size: 2rem;
-  border: 1px black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`
-
 export const Screen = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
 `
 
-export const PictureAndTitle = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+export const HeaderAndBookingTitleContainer = styled.div`
+  width: 100%;
   height: 35vh;
 `
 
-export const Picture = styled.img`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+export const HeaderPhoto = styled.img`
+  width: 100%;
   height: 35vh;
   object-fit: cover;
 `
 
-export const BookingTitle = styled.div`
+export const PageHeader = styled.div`
   background: #d9e6df;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: 10vh;
   bottom: 10vh;
   position: relative;
@@ -47,7 +33,7 @@ export const BookingTitle = styled.div`
   overflow: hidden;
 `
 
-export const Title = styled.div`
+export const BookingTitle = styled.div`
   float: left;
   width: max-content;
   line-height: 10vh;
@@ -56,7 +42,7 @@ export const Title = styled.div`
   font-size: 24px;
 `
 
-export const CCA = styled.div`
+export const BookingCCA = styled.div`
   float: left;
   width: 25%;
   height: 10vh;
@@ -66,27 +52,33 @@ export const CCA = styled.div`
   font-size: 16px;
 `
 
-export const Pen = styled.img`
+export const PenLogo = styled.img`
   float: right;
   width: 5%;
-  height: 10vh;
+  height: 5vh;
   margin-right: 2vw;
+  margin-top: 1vw;
   line-height: 10vh;
 `
 
-export const DurationAndAuthor = styled.div`
-  position: relative;
+export const BookingDurationAndAuthorContainer = styled.div`
   max-width: 400px;
   min-width: 300px;
-  width: 50vw;
+  width: 50%;
   height: 15vh;
-  padding: 8%;
+  padding-top: 1vh;
   display: flex;
   flex-direction: row;
 `
+export const BookingDurationAndAuthorOuterContainer = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
 
 export const Figure = styled.figure`
-  width: 50%;
+  width: 100%;
   height: 8vh;
   display: flex;
   flex-direction: column;
@@ -109,7 +101,7 @@ export const PeopleLogo = styled.img`
   width: auto;
 `
 
-export const Timing = styled.div`
+export const BookingTimingContainer = styled.div`
   height: auto;
   padding: 5%;
   text-align: center;
@@ -118,15 +110,13 @@ export const Timing = styled.div`
   font-size: 14px;
 `
 
-export const Notes = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+export const AdditionalNotesContainer = styled.div`
+  width: 100%;
   height: auto;
   padding: 3vh;
   font-family: Lato;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
 `
 
 export const AdditionalNotes = styled.div`
@@ -134,23 +124,21 @@ export const AdditionalNotes = styled.div`
   height: 30%;
 `
 
-export const Description = styled.div`
+export const BookingDescription = styled.div`
   font-weight: normal;
   height: 70%;
 `
 
-export const ConfirmButton = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+export const ConfirmButtonContainer = styled.div`
+  width: 100%;
   height: 25vh;
   padding: 10px 0px 0px 0px;
   font-family: Lato;
   text-align: center;
 `
 
-export const Confirm = styled.button`
-  width: 40%;
+export const ConfirmButton = styled.button`
+  width: 100%;
   height: max-content;
   color: white;
   font-size: 22px;
@@ -162,14 +150,7 @@ export const BottomNavBar = styled.div`
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   position: fixed;
   bottom: 0;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100%;
   height: 50px;
   text-align: center;
-`
-
-export const LowerLoungePhoto = styled.div`
-  width: 100%;
-  height: auto;
 `
