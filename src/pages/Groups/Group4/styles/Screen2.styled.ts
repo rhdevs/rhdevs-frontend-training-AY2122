@@ -25,10 +25,6 @@ export const Logo = styled.img`
 `
 
 export const Link = styled.a`
-  width: 370px;
-  height: 19px;
-  left: 22px;
-  top: 467px;
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
