@@ -33,13 +33,13 @@ const LoginPage = () => {
         <ForgetPwButton>Forget password</ForgetPwButton>
         <br />
         <LoginButton>
-          <Button type="primary" shape="round" size="large" style={{ width: '90vw', borderRadius: '20px' }} block>
+          <Button type="primary" shape="round" size="large" block>
             Login
           </Button>
         </LoginButton>
         <br />
         <RegisterButton>
-          <Button type="default" shape="round" size="large" block style={{ width: '90vw', borderRadius: '20px' }}>
+          <Button type="default" shape="round" size="large" block>
             <ButtonLabel>Register</ButtonLabel>
           </Button>
         </RegisterButton>
