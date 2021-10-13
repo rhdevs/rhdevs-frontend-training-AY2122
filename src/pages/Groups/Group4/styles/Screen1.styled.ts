@@ -35,6 +35,7 @@ export const Logo = styled.img`
 `
 export const ForgetPwButton = styled.div`
   text-align: left;
+  cursor: pointer;
   text-decoration: underline;
   color: #72ba75;
   font-size: 13px;
