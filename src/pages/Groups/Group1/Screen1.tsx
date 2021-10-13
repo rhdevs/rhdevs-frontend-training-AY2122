@@ -9,22 +9,24 @@ import {
   StyledButton,
   StyledTick,
   DeletedEventText,
-  EventName,
-  EventTime,
+  DeletedEventName,
+  DeletedEventTime,
   UndoIcon,
-  OptionsBoxes,
+  OptionsBoxesContainer,
   GreyBoxDelete,
   GreyBoxSort,
   GreyBoxText,
   StyledGreybox,
-  Booking,
+  BookingCardContainer,
   BookingLocation,
   BookingCCA,
   BookingTiming,
   StyledEdit,
   StyledDustbin,
   StyledCCAIcon,
-  CentreNav,
+  CenterContentContainer,
+  FullScreenContainer,
+  DeletedEventTextContainer,
 } from './styles/Screen1.styled'
 import homeIconUnselected from '../../../assets/Group1/homeIconUnselected.svg'
 import facilitiesIconSelected from '../../../assets/Group1/facilitiesIconSelected.svg'
@@ -40,22 +42,24 @@ import bandroom from '../../../assets/Group1/bandroomIcon.svg'
 const Screen1 = () => {
   return (
     <>
-      <div>
+      <FullScreenContainer>
         <TopNav>
           <LeftOutlined />
           My Bookings
         </TopNav>
 
-        <CentreNav>
+        <CenterContentContainer>
           <SucessfullyDeletedEvent>
             <StyledTick src={tickIconRH} />
-            <DeletedEventText>Successfully Deleted Event!</DeletedEventText>
-            <EventName>Voices Bonding Camp</EventName>
-            <EventTime>16/12/21 1:00 PM to 3:00PM</EventTime>
+            <DeletedEventTextContainer>
+              <DeletedEventText>Successfully Deleted Event!</DeletedEventText>
+              <DeletedEventName>Voices Bonding Camp</DeletedEventName>
+              <DeletedEventTime>16/12/21 1:00 PM to 3:00PM</DeletedEventTime>
+            </DeletedEventTextContainer>
             <UndoIcon>undo</UndoIcon>
           </SucessfullyDeletedEvent>
 
-          <OptionsBoxes>
+          <OptionsBoxesContainer>
             <GreyBoxDelete>
               <GreyBoxText>Recently Deleted</GreyBoxText>
               <StyledGreybox src={dustbinIconBlack} />
@@ -64,17 +68,17 @@ const Screen1 = () => {
               <GreyBoxText>Sort By</GreyBoxText>
               <StyledGreybox src={Schedule} />
             </GreyBoxSort>
-          </OptionsBoxes>
+          </OptionsBoxesContainer>
 
-          <Booking>
+          <BookingCardContainer>
             <StyledCCAIcon src={bandroom} />
             <BookingLocation>Bandroom</BookingLocation>
             <BookingCCA> Rhebels Practice</BookingCCA>
             <BookingTiming> 16/01/20 12:00 PM - 1:00 PM </BookingTiming>
             <StyledEdit src={greenedit} />
             <StyledDustbin src={greendustbin} />
-          </Booking>
-        </CentreNav>
+          </BookingCardContainer>
+        </CenterContentContainer>
 
         <BotNav>
           <StyledButton src={homeIconUnselected} />
@@ -82,7 +86,7 @@ const Screen1 = () => {
           <StyledButton src={calenderIconUnselected} />
           <StyledButton src={profileIconUnselected} />
         </BotNav>
-      </div>
+      </FullScreenContainer>
     </>
   )
 }

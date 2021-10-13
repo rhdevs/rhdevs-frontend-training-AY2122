@@ -1,5 +1,14 @@
 import styled from 'styled-components'
-
+export const FullScreenContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+`
 export const TopNav = styled.div`
   width: 100%;
   z-index: 5;
@@ -9,23 +18,21 @@ export const TopNav = styled.div`
   flex-direction: row;
   row-gap: 50px;
   font-size: 28px;
-  display: flex;
-  justify-content: safe-start;
   align-items: center;
   position: fixed;
   background: #ffffff;
 `
 export const SucessfullyDeletedEvent = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: flex-start;
   padding: 16px 26px;
   position: relative;
-  width: 600px;
+  width: 96%;
   margin: 15px 2%;
   height: 160px;
   background: #f6ffed;
-  /* Polar Green/3 */
   border: 1px solid #b7eb8f;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -57,88 +64,80 @@ export const BotNav = styled.div`
 export const StyledButton = styled.img`
   width: 35px;
   height: auto;
+  position: relative;
 `
 export const StyledTick = styled.img`
   width: 28px;
-  position: absolute;
-  left: 30px;
+  position: relative;
+  left: 0px;
   top: 25px;
 `
-export const DeletedEventText = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 25px;
-  line-height: 22px;
-  position: absolute;
-  left: 150px;
+export const DeletedEventTextContainer = styled.p`
+  width: 70%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  justify-content: space-apart;
+  flex-direction: column;
+  align-items: center;
   color: rgba(0, 0, 0, 0.85);
 `
-export const EventName = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+export const DeletedEventText = styled.p`
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  position: relative;
+  color: rgba(0, 0, 0, 0.85);
+`
+export const DeletedEventName = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 110px;
-  position: absolute;
-  left: 150px;
+  position: relative;
   color: rgba(0, 0, 0, 0.65);
 `
-export const EventTime = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+export const DeletedEventTime = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 200px;
-  position: absolute;
-  left: 150px;
+  position: relative;
   color: rgba(0, 0, 0, 0.65);
 `
-export const UndoIcon = styled.div<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+export const UndoIcon = styled.div`
   color: rgba(256, 256, 256, 0.9);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
+  position: relative;
   align-items: center;
-  margin: 15px 10%;
   width: 50px;
   height: 25px;
-  right: 22px;
-  bottom: 10px;
+  top: 100px;
   background: #468751;
   /* Polar Green/3 */
   border: 1px solid #b7eb8f;
   box-sizing: border-box;
   border-radius: 5px;
 `
-export const CentreNav = styled.div`
-  display: inline-block;
+export const CenterContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 84%;
+  height: 100%;
   width: 100%;
   top: 84px;
   display: flex;
   justify-content: safe-start;
-  gap: 0px;
   align-items: center;
-  position: absolute;
+  position: relative;
   background: white;
 `
-export const OptionsBoxes = styled.div`
-  display: inline-block;
+export const OptionsBoxesContainer = styled.div`
   height: 70px;
-  padding: 0;
   margin: 5px;
-  width: 595px;
+  width: 96%;
   font-size: 28px;
   display: flex;
   justify-content: space-between;
@@ -148,54 +147,49 @@ export const OptionsBoxes = styled.div`
 `
 export const GreyBoxDelete = styled.div`
   height: 6vh;
-  width: 200px;
+  width: 48%;
   font-size: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: top;
   position: relative;
   background: #cecece;
   border-radius: 10px;
 `
 export const GreyBoxSort = styled.div`
-  width: 100%;
   height: 6vh;
-  width: 200px;
+  width: 48%;
   font-size: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: top;
   position: relative;
   background: #cecece;
   border-radius: 10px;
 `
-export const GreyBoxText = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+export const GreyBoxText = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  height: 0vh;
-  top: 10px;
-  line-height: 0px;
+  top: 1vh;
   color: rgba(25, 25, 25, 1);
-  justify-content: space-between;
   position: relative;
-  align-items: stretch;
 `
 export const StyledGreybox = styled.img`
   width: 28px;
   position: relative;
 `
-export const Booking = styled.div`
+export const BookingCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: center;
   padding: 16px 26px;
   position: relative;
-  width: 600px;
+  width: 96%;
   margin: 15px 2%;
   height: 160px;
   background: #ffffff;
@@ -204,37 +198,28 @@ export const Booking = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 `
-export const BookingLocation = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+export const BookingLocation = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
-  line-height: 22px;
-  position: absolute;
-  left: 150px;
+  position: relative;
   color: rgba(0, 0, 0, 0.85);
 `
-export const BookingCCA = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+export const BookingCCA = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 110px;
-  position: absolute;
-  left: 150px;
+  position: relative;
   color: rgba(0, 0, 0, 0.65);
 `
-export const BookingTiming = styled.p<{ fontSize?: string }>`
-  ${(props) => props.fontSize && `font-size: ${props.fontSize}`}
+export const BookingTiming = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 200px;
-  position: absolute;
-  left: 150px;
+  position: relative;
   color: rgba(88, 185, 148, 1);
 `
 export const StyledCCAIcon = styled.img`
@@ -243,7 +228,7 @@ export const StyledCCAIcon = styled.img`
   right: 80.56%;
   top: 17.65%;
   bottom: 17.65%;
-  width: 100px;
+  width: 80px;
   height: auto;
 `
 export const StyledEdit = styled.img`
@@ -252,7 +237,7 @@ export const StyledEdit = styled.img`
   right: 19.14%;
   top: 35.29%;
   bottom: 36.76%;
-  width: 40px;
+  width: 30px;
   height: auto;
 `
 export const StyledDustbin = styled.img`
@@ -261,6 +246,6 @@ export const StyledDustbin = styled.img`
   right: 7.48%;
   top: 33.29%;
   bottom: 36.76%;
-  width: 38px;
+  width: 28px;
   height: auto;
 `
