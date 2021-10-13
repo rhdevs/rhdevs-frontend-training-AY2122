@@ -69,7 +69,6 @@ export const FilterBar = styled.div`
   border: 1px solid green;
   border-radius: 15px 15px 15px 15px;
 `
-// would it be better to abstract this Post into another component?
 export const Post = styled.div`
   display: flex;
   max-width: 350px;
@@ -100,7 +99,7 @@ export const PostTitle = styled.div`
   margin-left: 2vw;
 `
 
-export const Author = styled.div`
+export const AuthorNameText = styled.div`
   font-size: 1.5vh;
   color: grey;
   margin-top: -10px;
