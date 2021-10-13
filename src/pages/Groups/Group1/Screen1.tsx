@@ -5,7 +5,6 @@ import {
   SucessfullyDeletedEventContainer,
   TopNav,
   BotNav,
-  Header,
   StyledButton,
   StyledTick,
   DeletedEventText,

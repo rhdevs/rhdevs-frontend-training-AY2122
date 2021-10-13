@@ -36,13 +36,6 @@ export const SucessfullyDeletedEventContainer = styled.div`
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 `
-export const Header = styled.h1`
-  left: 20vh;
-  position: absolute;
-  font-size: 50px;
-  font-weight: bold;
-  margin: 0;
-`
 export const BotNav = styled.div`
   width: 100%;
   z-index: 5;
@@ -65,7 +58,7 @@ export const StyledButton = styled.img`
 `
 export const StyledTick = styled.img`
   width: 28px;
-  top: 4px;
+  top: 10px;
   position: relative;
 `
 export const DeletedEventTextContainer = styled.p`
@@ -73,7 +66,7 @@ export const DeletedEventTextContainer = styled.p`
   height: 90%;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-apart;
   flex-direction: column;
   align-items: left;
   left: 2vw;
@@ -142,23 +135,25 @@ export const OptionsBoxesContainer = styled.div`
   background: white;
 `
 export const GreyBoxDelete = styled.div`
-  height: 25px;
+  height: 30px;
   width: 55%;
   font-size: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5px;
   align-items: top;
   position: relative;
   background: #cecece;
   border-radius: 10px;
 `
 export const GreyBoxSort = styled.div`
-  height: 25px;
+  height: 30px;
   width: 30%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5px;
   align-items: top;
   position: relative;
   background: #cecece;
@@ -168,7 +163,7 @@ export const GreyBoxText = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: calc(15px + 0.4vw);
+  font-size: calc(15px + 0.3vw);
   color: rgba(25, 25, 25, 1);
   position: relative;
 `
@@ -179,8 +174,8 @@ export const StyledGreybox = styled.img`
 `
 export const BookingCardContainer = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   position: relative;
   width: 96%;
@@ -194,10 +189,10 @@ export const BookingCardContainer = styled.div`
 `
 export const BookingCardTextContainer = styled.p`
   width: 70%;
-  height: 100%;
+  height: 80%;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-apart;
   flex-direction: column;
   align-items: left;
   left: 2vw;
@@ -207,7 +202,7 @@ export const BookingLocation = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: calc(18px + 0.4vw);
+  font-size: calc(18px + 0.3vw);
   position: relative;
   color: rgba(0, 0, 0, 0.85);
 `
@@ -215,7 +210,7 @@ export const BookingCCA = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: calc(15px + 0.4vw);
+  font-size: calc(15px + 0.3vw);
   position: relative;
   color: rgba(0, 0, 0, 0.65);
 `
@@ -223,7 +218,7 @@ export const BookingTiming = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: calc(15px + 0.4vw);
+  font-size: calc(15px + 0.3vw);
   position: relative;
   color: rgba(88, 185, 148, 1);
 `
