@@ -1,7 +1,17 @@
 import React from 'react'
 
-const Screen2 = () => {
-  return <>this is screen 2</>
+import { ContainerDiv, ForgetPasswordContainer, Logo, Link } from './styles/Screen2.styled'
+import logo from '../../../assets/group4/devsLogo.svg'
+
+const ForgotPasswordPage = () => {
+  return (
+    <ContainerDiv>
+      <ForgetPasswordContainer>
+        <Logo src={logo} />
+        <Link>Check your email</Link>
+      </ForgetPasswordContainer>
+    </ContainerDiv>
+  )
 }
 
-export default Screen2
+export default ForgotPasswordPage
