@@ -107,16 +107,14 @@ const renderWeeklySchedule = () => (
       ))}
     </Timing_container>
     {days.map((d) => (
-      <>
-        <Calendar_container key={d.id}>
-          <Days>{d.day}</Days>
-          {timings.map((t) => (
-            <Day_container key={t.toString() + d.day} day={d.day}>
-              {d.day === 'Fri' ? mapEvents(t) : null}
-            </Day_container>
-          ))}
-        </Calendar_container>
-      </>
+      <Calendar_container key={d.id}>
+        <Days>{d.day}</Days>
+        {timings.map((t) => (
+          <Day_container key={t.toString() + d.day} day={d.day}>
+            {d.day === 'Fri' ? mapEvents(t) : null}
+          </Day_container>
+        ))}
+      </Calendar_container>
     ))}
   </WeekContainer>
 )
