@@ -1,24 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-import styled from 'styled-components'
-
-const UnorderedList = styled.ul`
-  margin: auto;
-  list-style: none;
-  margin: 0 1.5rem;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-`
-
-const StyledNavLink = styled(NavLink)`
-  color: white;
-`
+import { PATHS } from '../../App'
+import { StyledNavLink, UnorderedList } from './styles/NavLinks.styled'
 
 const NavLinks = () => {
   return (
@@ -29,6 +12,7 @@ const NavLinks = () => {
       <StyledNavLink to={{ pathname: 'https://tinyurl.com/frontend-training-resources' }} target="_blank">
         Resources
       </StyledNavLink>
+      <StyledNavLink to={PATHS.SHOPPING_LISTS}>Shopping Lists</StyledNavLink>
     </UnorderedList>
   )
 }
