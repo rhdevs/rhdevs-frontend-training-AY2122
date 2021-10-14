@@ -17,6 +17,7 @@ import {
   SearchIconContainer,
   MenuButton,
   FilterBarComponent,
+  FilterBarComponentMostRight,
 } from './styles/Screen1.styled'
 
 import profilePic from '../../../assets/Group2/cats.jpg'
@@ -45,7 +46,7 @@ const Screen1 = () => {
           <FilterBar>
             <FilterBarComponent>All</FilterBarComponent>
             <FilterBarComponent>Official</FilterBarComponent>
-            <FilterBarComponent>Friends</FilterBarComponent>
+            <FilterBarComponentMostRight>Friends</FilterBarComponentMostRight>
           </FilterBar>
           <Post>
             <ProfilePicture src={profilePic} alt="Profile Picture" />

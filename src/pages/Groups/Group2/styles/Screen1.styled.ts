@@ -71,16 +71,24 @@ export const FilterBarComponent = styled.div`
   }
 `
 
+export const FilterBarComponentMostRight = styled.div`
+  flex: auto;
+  width: 30vw;
+  text-align: center;
+  &:hover {
+    background-color: #468751;
+  }
+`
+
 export const Post = styled.div`
   display: flex;
   width: 90%;
   height: 20vh;
-  border: 1px solid green;
   border-radius: 30px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 10px;
 `
 
 export const ProfilePicture = styled.img`
