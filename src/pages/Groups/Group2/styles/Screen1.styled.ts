@@ -143,4 +143,8 @@ export const MenuButton = styled.div`
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
 `
