@@ -11,6 +11,7 @@ export const StyledCard = styled.div`
   justify-content: center;
   align-items: center;
   margin: 2.5px;
+  padding 10px 20px;
 
   :hover,
   :focus {
