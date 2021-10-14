@@ -10,8 +10,6 @@ export const MainContainer = styled.div`
 `
 
 export const Screen = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-color: rbga(224, 101, 83, 0.86);
