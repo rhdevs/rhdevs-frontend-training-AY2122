@@ -5,7 +5,7 @@ import {
   BottomNavBar,
   SearchBar,
   TextSection,
-  Title,
+  HomeTitle,
   ButtonsSection,
   PostsSection,
   FilterBar,
@@ -16,6 +16,7 @@ import {
   AuthorNameText,
   SearchIconContainer,
   MenuButton,
+  FilterBarComponent,
 } from './styles/Screen1.styled'
 
 import profilePic from '../../../assets/Group2/cats.jpg'
@@ -30,7 +31,7 @@ const Screen1 = () => {
           <SearchIconContainer src={SearchIcon} alt="Search icon" />
         </SearchBar>
         <TextSection>
-          <Title>Meow Meow Porridge</Title>
+          <HomeTitle>Meow Meow Porridge</HomeTitle>
           <div style={{ textAlign: 'center' }}>Text text text...</div>
         </TextSection>
         <ButtonsSection>
@@ -41,7 +42,11 @@ const Screen1 = () => {
         </ButtonsSection>
         <PostsSection>
           {"What's Happening..."}
-          <FilterBar>FilterBar</FilterBar>
+          <FilterBar>
+            <FilterBarComponent>All</FilterBarComponent>
+            <FilterBarComponent>Official</FilterBarComponent>
+            <FilterBarComponent>Friends</FilterBarComponent>
+          </FilterBar>
           <Post>
             <ProfilePicture src={profilePic} alt="Profile Picture" />
             <PostTitle>

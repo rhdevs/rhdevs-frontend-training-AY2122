@@ -6,12 +6,15 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: rbga(224, 101, 83, 0.86);
 `
 
 export const Screen = styled.div`
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
+  background-color: rbga(224, 101, 83, 0.86);
 `
 
 export const SearchBar = styled.div`
@@ -27,18 +30,13 @@ export const SearchBar = styled.div`
   line-height: 10vh;
 `
 
-export const SearchButton = styled.div`
-  float: right;
-  background-color: #0000ff;
-`
-
 export const TextSection = styled.div`
   height: 10vh;
-  background-color: lightblue;
+  background-color: rbga(224, 101, 83, 0.86);
   border: 1px solid green;
 `
 
-export const Title = styled.div`
+export const HomeTitle = styled.div`
   font-size: 3vh;
   text-align: center;
 `
@@ -46,7 +44,7 @@ export const Title = styled.div`
 export const ButtonsSection = styled.div`
   height: 10vh;
   width: 100%;
-  border: 1px solid green;
+  border: 1px solid #468751;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,15 +52,23 @@ export const ButtonsSection = styled.div`
 `
 
 export const PostsSection = styled.div`
-  border: 1px solid green;
+  border: 1px solid #468751;
 `
 
 export const FilterBar = styled.div`
-  text-align: center;
-  background-color: #7fff00;
-  border: 1px solid green;
+  border: 1px solid #468751;
   border-radius: 15px 15px 15px 15px;
+  display: flex;
+  justify-contents: center;
 `
+
+export const FilterBarComponent = styled.div`
+  flex: auto;
+  width: 30vw;
+  text-align: center;
+  border-right: 1px solid #468751;
+`
+
 export const Post = styled.div`
   display: flex;
   width: 90%;
@@ -70,6 +76,7 @@ export const Post = styled.div`
   border: 1px solid green;
   border-radius: 30px;
   margin: auto;
+  margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
@@ -94,7 +101,7 @@ export const PostTitle = styled.div`
 export const AuthorNameText = styled.div`
   font-size: 1.5vh;
   color: grey;
-  margin-top: -10px;
+  margin-top: -0.8vh;
 `
 
 export const PostMessage = styled.div`
@@ -111,10 +118,8 @@ export const PostMessage = styled.div`
 export const BottomNavBar = styled.div`
   position: fixed;
   bottom: 0;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
-  height: 10vh;
+  width: 100vw;
+  height: 8vh;
   text-align: center;
   border: 1px solid red;
 `
@@ -124,6 +129,7 @@ export const SearchIconContainer = styled.img`
   vertical-align: middle;
   float: right;
 `
+
 export const MenuButton = styled.div`
   height: 60px;
   line-height: 60px;
