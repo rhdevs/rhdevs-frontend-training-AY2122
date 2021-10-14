@@ -22,7 +22,7 @@ export const SearchBar = styled.div`
   width: 100%;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
-  background-color: #7fff00;
+  background-color: #468751;
   display: inline-block;
   padding-left: 5%;
   padding-right: 5%;
