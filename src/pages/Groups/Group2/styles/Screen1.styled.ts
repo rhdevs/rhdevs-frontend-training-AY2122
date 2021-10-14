@@ -121,7 +121,7 @@ export const SearchIconContainer = styled.img`
 export const MenuButton = styled.div`
   height: 60px;
   width: 120px;
-  border: 1px solid red;
+  border: 1px solid #468751;
   margin-left: 30px;
   margin-right: 30px;
 `
