@@ -6,14 +6,15 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: rbga(224, 101, 83, 0.86);
 `
 
 export const Screen = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   width: 100vw;
   height: 100vh;
+  background-color: rbga(224, 101, 83, 0.86);
 `
 
 export const SearchBar = styled.div`
@@ -21,44 +22,50 @@ export const SearchBar = styled.div`
   height: 10vh;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
-  background-color: #7fff00;
-  display: flex;
-  flex-direction: row;
+  background-color: #468751;
 `
 
-export const SearchButton = styled.div`
+export const SearchIconContainer = styled.img`
   float: right;
-  background-color: #0000ff;
+  margin: 1vw;
 `
 
 export const TextSection = styled.div`
   height: 10vh;
-  background-color: lightblue;
+  background-color: rbga(224, 101, 83, 0.86);
   border: 1px solid green;
 `
 
-export const Title = styled.div`
+export const HomeTitle = styled.div`
   font-size: 3vh;
   text-align: center;
 `
 
 export const ButtonsSection = styled.div`
   height: 10vh;
-  border: 1px solid green;
+  border: 1px solid #468751;
   display: flex;
   flex-direction: row;
 `
 
 export const PostsSection = styled.div`
-  border: 1px solid green;
+  border: 1px solid #468751;
 `
 
 export const FilterBar = styled.div`
-  text-align: center;
-  background-color: #7fff00;
-  border: 1px solid green;
+  border: 1px solid #468751;
   border-radius: 15px 15px 15px 15px;
+  display: flex;
+  justify-contents: center;
 `
+
+export const FilterBarComponent = styled.div`
+  flex: auto;
+  width: 30vw;
+  text-align: center;
+  border-right: 1px solid #468751;
+`
+
 export const Post = styled.div`
   display: flex;
   width: 90%;
@@ -66,6 +73,7 @@ export const Post = styled.div`
   border: 1px solid green;
   border-radius: 30px;
   margin: auto;
+  margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
@@ -90,7 +98,7 @@ export const PostTitle = styled.div`
 export const AuthorNameText = styled.div`
   font-size: 1.5vh;
   color: grey;
-  margin-top: -10px;
+  margin-top: -0.8vh;
 `
 
 export const PostMessage = styled.div`
@@ -107,16 +115,13 @@ export const PostMessage = styled.div`
 export const BottomNavBar = styled.div`
   position: fixed;
   bottom: 0;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
-  height: 10vh;
+  width: 100vw;
+  height: 8vh;
   text-align: center;
-  border: 1px solid red;
+  background-color: #468751;
+  border-radius: 15px 15px 0 0;
 `
-export const SearchIconContainer = styled.img`
-  width: auto;
-`
+
 export const MenuButton = styled.div`
   height: 60px;
   width: 120px;
