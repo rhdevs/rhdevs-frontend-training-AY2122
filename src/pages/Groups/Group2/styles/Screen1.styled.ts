@@ -9,8 +9,6 @@ export const MainContainer = styled.div`
 `
 
 export const Screen = styled.div`
-  display: flex;
-  flex-direction: column;
   border: 1px solid red;
   width: 100vw;
   height: 100vh;
@@ -51,8 +49,8 @@ export const ButtonsSection = styled.div`
   border: 1px solid green;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: space-between;
+  overflow: scroll;
 `
 
 export const PostsSection = styled.div`
