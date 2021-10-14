@@ -122,4 +122,6 @@ export const MenuButton = styled.div`
   height: 60px;
   width: 120px;
   border: 1px solid red;
+  margin-left: 30px;
+  margin-right: 30px;
 `
