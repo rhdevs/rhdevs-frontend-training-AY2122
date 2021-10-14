@@ -44,10 +44,12 @@ export const Title = styled.div`
 
 export const ButtonsSection = styled.div`
   height: 10vh;
+  width: 100%;
   border: 1px solid green;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  overflow: hidden;
 `
 
 export const PostsSection = styled.div`
