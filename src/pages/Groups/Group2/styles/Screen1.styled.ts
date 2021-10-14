@@ -19,11 +19,14 @@ export const Screen = styled.div`
 export const SearchBar = styled.div`
   top: 0;
   height: 10vh;
+  width: 100%;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
   background-color: #7fff00;
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 10vh;
 `
 
 export const SearchButton = styled.div`
@@ -118,7 +121,10 @@ export const BottomNavBar = styled.div`
   border: 1px solid red;
 `
 export const SearchIconContainer = styled.img`
-  width: auto;
+  width: 3%;
+  height: 100%;
+  vertical-align: middle;
+  float: right;
 `
 export const MenuButton = styled.div`
   height: 60px;
