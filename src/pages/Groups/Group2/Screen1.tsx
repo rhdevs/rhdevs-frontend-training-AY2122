@@ -36,6 +36,8 @@ const Screen1 = () => {
         <ButtonsSection>
           <MenuButton>Facilities</MenuButton>
           <MenuButton>Calander</MenuButton>
+          <MenuButton>Laundry</MenuButton>
+          <MenuButton>Supper</MenuButton>
         </ButtonsSection>
         <PostsSection>
           {"What's Happening..."}
