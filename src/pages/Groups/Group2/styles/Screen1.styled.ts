@@ -65,6 +65,9 @@ export const FilterBarComponent = styled.div`
   width: 30vw;
   text-align: center;
   border-right: 1px solid #468751;
+  &:hover {
+    background-color: #468751;
+  }
 `
 
 export const Post = styled.div`
