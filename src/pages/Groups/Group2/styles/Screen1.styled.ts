@@ -10,8 +10,6 @@ export const MainContainer = styled.div`
 `
 
 export const Screen = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-color: rbga(224, 101, 83, 0.86);
@@ -20,14 +18,14 @@ export const Screen = styled.div`
 export const SearchBar = styled.div`
   top: 0;
   height: 10vh;
+  width: 100%;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
   background-color: #468751;
-`
-
-export const SearchIconContainer = styled.img`
-  float: right;
-  margin: 1vw;
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 10vh;
 `
 
 export const TextSection = styled.div`
@@ -43,9 +41,12 @@ export const HomeTitle = styled.div`
 
 export const ButtonsSection = styled.div`
   height: 10vh;
+  width: 100%;
   border: 1px solid #468751;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
 `
 
 export const PostsSection = styled.div`
@@ -121,9 +122,17 @@ export const BottomNavBar = styled.div`
   background-color: #468751;
   border-radius: 15px 15px 0 0;
 `
+export const SearchIconContainer = styled.img`
+  width: 3%;
+  height: 100%;
+  vertical-align: middle;
+  float: right;
+`
 
 export const MenuButton = styled.div`
   height: 60px;
+  line-height: 60px;
   width: 120px;
-  border: 1px solid red;
+  border: 1px solid #468751;
+  margin: 3px 30px 0px 30px;
 `

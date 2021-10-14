@@ -28,7 +28,7 @@ const Screen1 = () => {
       <Screen>
         <SearchBar>
           Good Afternoon Mao Mao,
-          <SearchIconContainer src={SearchIcon} alt="Search Icon" />
+          <SearchIconContainer src={SearchIcon} alt="Search icon" />
         </SearchBar>
         <TextSection>
           <HomeTitle>Meow Meow Porridge</HomeTitle>
@@ -37,6 +37,8 @@ const Screen1 = () => {
         <ButtonsSection>
           <MenuButton>Facilities</MenuButton>
           <MenuButton>Calander</MenuButton>
+          <MenuButton>Laundry</MenuButton>
+          <MenuButton>Supper</MenuButton>
         </ButtonsSection>
         <PostsSection>
           {"What's Happening..."}
