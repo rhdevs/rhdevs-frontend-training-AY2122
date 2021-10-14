@@ -1,47 +1,17 @@
 import React, { useState } from 'react'
 
-import styled from 'styled-components'
 import { Turn as Hamburger } from 'hamburger-react'
 import NavLinks from './NavLinks'
 import FEWebTitle from '../../components/FEWebTitle'
 import Dropdown from 'antd/lib/dropdown/dropdown'
 import Menu from 'antd/lib/menu'
-
-const MainHeader = styled.header`
-  width: 100%;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #475056;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
-  padding: 0 1rem;
-  z-index: 5;
-`
-
-const NavLinksContainer = styled.nav`
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
-
-const HamburgerContainer = styled.div`
-  position: absolute;
-  right: 0;
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-  }
-`
-
-const StyledMenu = styled(Menu)`
-  margin-right: 0.5rem;
-`
+import { useHistory } from 'react-router'
+import { PATHS } from '../../App'
+import { HamburgerContainer, MainHeader, NavLinksContainer, StyledMenu } from './styles/MainNavigation.styled'
 
 const MainNavigation = () => {
   const [isOpen, setOpen] = useState(false)
+  const history = useHistory()
 
   const menu = (
     <StyledMenu>
@@ -54,6 +24,15 @@ const MainNavigation = () => {
         <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/frontend-learning">
           Resources
         </a>
+      </Menu.Item>
+      <Menu.Item
+        key={3}
+        onClick={() => {
+          setOpen(false)
+          history.push(PATHS.SHOPPING_LISTS)
+        }}
+      >
+        Shopping Lists
       </Menu.Item>
     </StyledMenu>
   )

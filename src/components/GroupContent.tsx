@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+
 import { PATHS } from '../App'
 import { ComponentsContainer, MainContainer, StyledDiv, StyledImg, StyledText } from './styles/GroupContent.styled'
 
