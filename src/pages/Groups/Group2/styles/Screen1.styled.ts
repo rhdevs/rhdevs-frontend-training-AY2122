@@ -155,4 +155,25 @@ export const MenuButton = styled.div`
   text-align: center;
   padding-left: 3px;
   padding-right: 3px;
+
+
+  export const BotNav = styled.div`
+width: 100 %;
+z - index: 5;
+height: 7vh;
+padding: 1em;
+font - size: 28px;
+display: flex;
+justify - content: space - around;
+align - items: center;
+position: fixed;
+background: #ffffff;
+z - index: 800;
+bottom: 0;
+filter: drop - shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `
+
+export const StyledButton = styled.img`
+width: 35px;
+height: auto;
+position: relative;

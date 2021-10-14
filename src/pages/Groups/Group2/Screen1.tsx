@@ -18,10 +18,16 @@ import {
   MenuButton,
   FilterBarComponent,
   FilterBarComponentMostRight,
+  BotNav,
+  StyledButton,
 } from './styles/Screen1.styled'
 
 import profilePic from '../../../assets/Group2/cats.jpg'
 import SearchIcon from '../../../assets/Group2/SearchIcon.svg'
+import BotCalendarIcon from '../../../assets/Group2/BottomNavCalendarIcon.svg'
+import BotFacilitiesIcon from '../../../assets/Group2/BottomNavFacilitiesIcon.svg'
+import BotHomeIcon from '../../../assets/Group2/BottomNavHomeIcon.svg'
+import BotProfileIcon from '../../../assets/Group2/BottomNavProfileIcon.svg'
 
 const Screen1 = () => {
   return (
@@ -86,7 +92,12 @@ const Screen1 = () => {
           </Post>
         </PostsSection>
 
-        <BottomNavBar>Navigation Bar</BottomNavBar>
+        <BottomNavBar>
+          <StyledButton src={BotHomeIcon} />
+          <StyledButton src={BotFacilitiesIcon} />
+          <StyledButton src={BotCalendarIcon} />
+          <StyledButton src={BotProfileIcon} />
+        </BottomNavBar>
       </Screen>
     </MainContainer>
   )
