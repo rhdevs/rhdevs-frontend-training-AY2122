@@ -36,7 +36,7 @@ const Screen1 = () => {
         </TextSection>
         <ButtonsSection>
           <MenuButton>Facilities</MenuButton>
-          <MenuButton>Calander</MenuButton>
+          <MenuButton>Calendar</MenuButton>
           <MenuButton>Laundry</MenuButton>
           <MenuButton>Supper</MenuButton>
         </ButtonsSection>
