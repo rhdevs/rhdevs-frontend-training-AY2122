@@ -119,7 +119,8 @@ export const BottomNavBar = styled.div`
   width: 100vw;
   height: 8vh;
   text-align: center;
-  border: 1px solid red;
+  background-color: #468751;
+  border-radius: 15px 15px 0 0;
 `
 export const SearchIconContainer = styled.img`
   width: 3%;
