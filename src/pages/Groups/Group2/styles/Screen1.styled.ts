@@ -39,13 +39,15 @@ export const HomeTitle = styled.div`
 `
 
 export const ButtonsSection = styled.div`
-  height: 10vh;
+  height: auto;
   width: 100%;
   border: 1px solid #468751;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow: scroll;
+  padding-top: 10px;
+  padding-bottom: 10px;
 `
 
 export const PostsSection = styled.div`
@@ -143,8 +145,6 @@ export const MenuButton = styled.div`
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
 `
