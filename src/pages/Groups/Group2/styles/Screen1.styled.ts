@@ -31,7 +31,6 @@ export const SearchBar = styled.div`
 export const TextSection = styled.div`
   height: 10vh;
   background-color: rbga(224, 101, 83, 0.86);
-  border: 1px solid green;
 `
 
 export const HomeTitle = styled.div`
@@ -138,4 +137,7 @@ export const MenuButton = styled.div`
   width: 120px;
   border: 1px solid #468751;
   margin: 3px 30px 0px 30px;
+  &:hover {
+    background-color: #468751;
+  }
 `
