@@ -4,7 +4,6 @@ import {
   Screen,
   BottomNavBar,
   SearchBar,
-  SearchButton,
   TextSection,
   Title,
   ButtonsSection,

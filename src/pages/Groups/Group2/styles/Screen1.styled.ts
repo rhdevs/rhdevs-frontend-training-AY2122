@@ -47,6 +47,7 @@ export const ButtonsSection = styled.div`
   border: 1px solid green;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `
 
 export const PostsSection = styled.div`
