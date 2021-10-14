@@ -6,80 +6,89 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: rbga(224, 101, 83, 0.86);
 `
 
 export const Screen = styled.div`
-  display: flex;
-  flex-direction: column;
-  border: 1px solid red;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
+  background-color: rbga(224, 101, 83, 0.86);
 `
 
 export const SearchBar = styled.div`
   top: 0;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
   height: 10vh;
+  width: 100%;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
-  background-color: #7fff00;
-`
-
-export const SearchButton = styled.div`
-  float: right;
-  background-color: #0000ff;
+  background-color: #468751;
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 10vh;
 `
 
 export const TextSection = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
   height: 10vh;
-  background-color: lightblue;
-  border: 1px solid green;
+  background-color: rbga(224, 101, 83, 0.86);
 `
 
-export const Title = styled.div`
+export const HomeTitle = styled.div`
   font-size: 3vh;
   text-align: center;
 `
 
 export const ButtonsSection = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
-  height: 10vh;
-  border: 1px solid green;
+  height: auto;
+  width: 100%;
+  border: 1px solid #468751;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
+  padding-top: 10px;
+  padding-bottom: 10px;
 `
 
 export const PostsSection = styled.div`
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
-  border: 1px solid green;
+  border: 1px solid #468751;
 `
 
 export const FilterBar = styled.div`
-  text-align: center;
-  background-color: #7fff00;
-  border: 1px solid green;
+  border: 1px solid #468751;
   border-radius: 15px 15px 15px 15px;
+  display: flex;
+  justify-contents: center;
 `
+
+export const FilterBarComponent = styled.div`
+  flex: auto;
+  width: 30vw;
+  text-align: center;
+  border-right: 1px solid #468751;
+  &:hover {
+    background-color: #468751;
+  }
+`
+
+export const FilterBarComponentMostRight = styled.div`
+  flex: auto;
+  width: 30vw;
+  text-align: center;
+  &:hover {
+    background-color: #468751;
+  }
+`
+
 export const Post = styled.div`
   display: flex;
-  max-width: 350px;
-  min-width: 250px;
-  width: 40vw;
+  width: 90%;
   height: 20vh;
-  border: 1px solid green;
   border-radius: 30px;
   margin: auto;
+  margin-top: 10px;
   margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 10px;
 `
 
 export const ProfilePicture = styled.img`
@@ -93,7 +102,7 @@ export const ProfilePicture = styled.img`
   border: 2px solid green;
 `
 export const PostTitle = styled.div`
-  width: 60%;
+  width: 80%;
   font-size: 3vh;
   color: green;
   margin-left: 2vw;
@@ -102,7 +111,7 @@ export const PostTitle = styled.div`
 export const AuthorNameText = styled.div`
   font-size: 1.5vh;
   color: grey;
-  margin-top: -10px;
+  margin-top: -0.8vh;
 `
 
 export const PostMessage = styled.div`
@@ -119,10 +128,31 @@ export const PostMessage = styled.div`
 export const BottomNavBar = styled.div`
   position: fixed;
   bottom: 0;
-  max-width: 400px;
-  min-width: 300px;
-  width: 50vw;
-  height: 10vh;
+  width: 100vw;
+  height: 8vh;
   text-align: center;
-  border: 1px solid red;
+  background-color: #468751;
+  border-radius: 15px 15px 0 0;
+`
+export const SearchIconContainer = styled.img`
+  width: 3%;
+  height: 100%;
+  vertical-align: middle;
+  float: right;
+`
+
+export const MenuButton = styled.div`
+  height: 60px;
+  line-height: 60px;
+  width: 120px;
+  border: 1px solid #468751;
+  margin: 3px 30px 0px 30px;
+  &:hover {
+    background-color: #468751;
+  }
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
 `
