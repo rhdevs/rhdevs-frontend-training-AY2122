@@ -75,7 +75,7 @@ const Screen1 = () => {
           <Post>
             <ProfilePicture src={profilePic} alt="Profile Picture" />
             <PostTitle>
-              Title 2<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
+              Title 3<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
               <PostMessage>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
               </PostMessage>
@@ -84,7 +84,7 @@ const Screen1 = () => {
           <Post>
             <ProfilePicture src={profilePic} alt="Profile Picture" />
             <PostTitle>
-              Title 2<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
+              Title 4<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
               <PostMessage>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
               </PostMessage>
