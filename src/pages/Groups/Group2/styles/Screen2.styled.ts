@@ -23,7 +23,6 @@ export const PageHeader = styled.div`
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   width: 100%;
-  height: 10vh;
   bottom: 10vh;
   position: relative;
   text-align: left;
@@ -31,6 +30,7 @@ export const PageHeader = styled.div`
   display: inline-block;
   z-index: 0;
   overflow: hidden;
+  padding: 10px;
 `
 
 export const BookingTitle = styled.div`
@@ -54,11 +54,12 @@ export const BookingCCA = styled.div`
 
 export const PenLogo = styled.img`
   float: right;
-  width: 5%;
+  width: 5vh;
   height: 5vh;
   margin-right: 2vw;
-  margin-top: 1vw;
+  margin-top: 2vh;
   line-height: 10vh;
+  object-fit: cover;
 `
 
 export const BookingDurationAndAuthorContainer = styled.div`
@@ -66,7 +67,7 @@ export const BookingDurationAndAuthorContainer = styled.div`
   min-width: 300px;
   width: 50%;
   height: 15vh;
-  padding-top: 1vh;
+  padding-top: 5vh;
   display: flex;
   flex-direction: row;
 `
@@ -111,12 +112,13 @@ export const BookingTimingContainer = styled.div`
 `
 
 export const AdditionalNotesContainer = styled.div`
-  width: 100%;
+  width: 80%;
   height: auto;
   padding: 3vh;
   font-family: Lato;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
+  align-self: center;
 `
 
 export const AdditionalNotes = styled.div`
@@ -130,11 +132,13 @@ export const BookingDescription = styled.div`
 `
 
 export const ConfirmButtonContainer = styled.div`
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 40%;
   height: 25vh;
   padding: 10px 0px 0px 0px;
   font-family: Lato;
-  text-align: center;
+  align-self: center;
 `
 
 export const ConfirmButton = styled.button`
@@ -147,10 +151,16 @@ export const ConfirmButton = styled.button`
 `
 
 export const BottomNavBar = styled.div`
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  display: flex;
+  justify-content: space-around;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 50px;
-  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  background-color: #ffffff;
+`
+export const StyledButton = styled.img`
+  width: 35px;
+  position: relative;
 `
