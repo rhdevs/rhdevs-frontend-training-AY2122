@@ -92,12 +92,12 @@ const Screen1 = () => {
           </Post>
         </PostsSection>
 
-        <BottomNavBar>
+        <BotNav>
           <StyledButton src={BotHomeIcon} />
           <StyledButton src={BotFacilitiesIcon} />
           <StyledButton src={BotCalendarIcon} />
           <StyledButton src={BotProfileIcon} />
-        </BottomNavBar>
+        </BotNav>
       </Screen>
     </MainContainer>
   )

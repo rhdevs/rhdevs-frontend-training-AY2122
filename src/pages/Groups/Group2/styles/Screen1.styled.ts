@@ -158,19 +158,14 @@ export const MenuButton = styled.div`
 `
 
 export const BotNav = styled.div`
-width: 100%;
-z-index: 5;
-height: 7vh;
-padding: 1em;
-font - size: 28px;
-display: flex;
-justify - content: space - around;
-align - items: center;
-position: fixed;
-background: #ffffff;
-z - index: 800;
-bottom: 0;
-filter: drop - shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  background-color: #468751;
 `
 
 export const StyledButton = styled.img`

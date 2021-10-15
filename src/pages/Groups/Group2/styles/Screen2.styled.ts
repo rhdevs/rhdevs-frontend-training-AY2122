@@ -4,7 +4,6 @@ export const Screen = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 `
 
 export const HeaderAndBookingTitleContainer = styled.div`
