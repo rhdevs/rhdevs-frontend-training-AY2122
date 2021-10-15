@@ -1,6 +1,5 @@
 import React from 'react'
 import LeftOutlined from '@ant-design/icons/lib/icons/LeftOutlined'
-import UnorderedListOutlined from '@ant-design/icons/lib/icons/UnorderedListOutlined'
 import {
   SucessfullyDeletedEventContainer,
   TopNav,
