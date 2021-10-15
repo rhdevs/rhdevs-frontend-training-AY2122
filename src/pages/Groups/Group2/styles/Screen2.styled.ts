@@ -116,7 +116,7 @@ export const AdditionalNotesContainer = styled.div`
   padding: 3vh;
   font-family: Lato;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
 `
 
 export const AdditionalNotes = styled.div`
@@ -130,11 +130,12 @@ export const BookingDescription = styled.div`
 `
 
 export const ConfirmButtonContainer = styled.div`
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 30%;
   height: 25vh;
   padding: 10px 0px 0px 0px;
   font-family: Lato;
-  text-align: center;
 `
 
 export const ConfirmButton = styled.button`
