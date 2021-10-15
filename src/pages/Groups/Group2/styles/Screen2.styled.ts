@@ -147,10 +147,16 @@ export const ConfirmButton = styled.button`
 `
 
 export const BottomNavBar = styled.div`
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  display: flex;
+  justify-content: space-around;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 50px;
-  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  background-color: #ffffff;
+`
+export const StyledButton = styled.img`
+  width: 35px;
+  position: relative;
 `

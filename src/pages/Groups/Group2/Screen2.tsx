@@ -20,11 +20,16 @@ import {
   BookingDescription,
   HeaderPhoto,
   BookingDurationAndAuthorOuterContainer,
+  StyledButton,
 } from './styles/Screen2.styled'
 import lowerlounge from '../../../assets/Group2/LowerLounge.svg'
 import pen from '../../../assets/Group2/Pen.svg'
 import clock from '../../../assets/Group2/Clock.svg'
 import people from '../../../assets/Group2/People.svg'
+import BotCalendarIcon from '../../../assets/Group2/BottomNavCalendarIcon.svg'
+import BotFacilitiesIcon from '../../../assets/Group2/BottomNavFacilitiesIcon.svg'
+import BotHomeIcon from '../../../assets/Group2/BottomNavHomeIcon.svg'
+import BotProfileIcon from '../../../assets/Group2/BottomNavProfileIcon.svg'
 
 const Screen2 = () => {
   return (
@@ -68,7 +73,12 @@ const Screen2 = () => {
         <ConfirmButtonContainer>
           <ConfirmButton>Confirm</ConfirmButton>
         </ConfirmButtonContainer>
-        <BottomNavBar>Bottom nav bar.</BottomNavBar>
+        <BottomNavBar>
+          <StyledButton src={BotHomeIcon} />
+          <StyledButton src={BotFacilitiesIcon} />
+          <StyledButton src={BotCalendarIcon} />
+          <StyledButton src={BotProfileIcon} />
+        </BottomNavBar>
       </Screen>
     </>
   )
