@@ -57,7 +57,7 @@ export const PenLogo = styled.img`
   width: 5vh;
   height: 5vh;
   margin-right: 2vw;
-  margin-top: 1vw;
+  margin-top: 2vh;
   line-height: 10vh;
   object-fit: cover;
 `
