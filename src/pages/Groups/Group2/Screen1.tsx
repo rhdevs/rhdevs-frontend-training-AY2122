@@ -2,7 +2,6 @@ import React from 'react'
 import {
   MainContainer,
   Screen,
-  BottomNavBar,
   SearchBar,
   TextSection,
   HomeTitle,
@@ -39,7 +38,7 @@ const Screen1 = () => {
         </SearchBar>
         <TextSection>
           <HomeTitle>Meow Meow Porridge</HomeTitle>
-          <div style={{ textAlign: 'center' }}>Text text text...</div>
+          <div>Text text text...</div>
         </TextSection>
         <ButtonsSection>
           <MenuButton>Facilities</MenuButton>
