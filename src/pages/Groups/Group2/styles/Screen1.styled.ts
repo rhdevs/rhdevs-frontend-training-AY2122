@@ -136,9 +136,8 @@ export const SearchIconContainer = styled.img`
 export const MenuButton = styled.div`
   height: 60px;
   line-height: 60px;
-  width: 120px;
   border: 1px solid #468751;
-  margin: 3px 30px 0px 30px;
+  margin: 3px 10px 0px 10px;
   &:hover {
     background-color: #468751;
   }
