@@ -97,7 +97,7 @@ export const ProfilePicture = styled.img`
   width: 8vh;
   height: 8vh;
   object-fit: fit;
-  margin-top: 2vw;
+  margin-top: 1vw;
   margin-left: 1vw;
   border-radius: 50%;
   border: 2px solid green;
