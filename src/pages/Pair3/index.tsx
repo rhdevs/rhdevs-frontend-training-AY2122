@@ -1,13 +1,22 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import ShoppingList from './ShoppingList'
+import { PlusOutlined } from '@ant-design/icons'
+import { Button } from 'antd'
+import { ShoppingListHeader } from '../ShoppingListsMain/styles/ShoppingListMain.styled'
 
-import { PATHS } from '../../App'
+import { ButtonDiv } from './styles/main.styled'
 
 const Pair3 = () => {
   return (
     <>
-      example shopping list
-      <div>test</div>
+      <ShoppingListHeader>Shopping List</ShoppingListHeader>
+      <ButtonDiv>
+        <Button type="primary" icon={<PlusOutlined />} size="large">
+          Add Item
+        </Button>
+      </ButtonDiv>
+      {/* ShoppingList refers to the entire shopping cart table */}
+      <ShoppingList />;
     </>
   )
 }

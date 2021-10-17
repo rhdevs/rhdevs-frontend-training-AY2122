@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
-export const test = styled.h1`
-  text-align: center;
-  font-weight: 400;
-  margin: 20px auto;
+export const ButtonDiv = styled.div`
+  float: right;
+  margin: 20px;
+`
+
+export const QuantityElementsDiv = styled.div`
+  float: left;
+  margin: 0 20px;
 `
