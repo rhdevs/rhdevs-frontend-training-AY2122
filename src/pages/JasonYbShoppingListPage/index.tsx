@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
   AddItemButtonContainer,
@@ -9,6 +9,26 @@ import {
 import { Button, Table } from 'antd'
 
 const JasonYbShoppingListPage = () => {
+  interface ItemProps {
+    quantity: number
+    itemName: string
+  }
+  const [quantity, setQuantity] = useState<number>(1)
+  const [itemName] = useState<string>('')
+  const [items, setItems] = useState<ItemProps[]>([])
+
+  const onClickAddQuantity = () => {
+    setQuantity(quantity + 1)
+  }
+
+  const onClickReduceQuantity = () => {
+    setQuantity(quantity - 1)
+  }
+
+  const onClickAddItem = (newArr: ItemProps) => {
+    setItems((prevArr) => [...prevArr, newArr])
+  }
+
   const dataSource = [
     {
       key: '1',
