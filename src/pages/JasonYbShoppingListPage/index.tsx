@@ -52,8 +52,6 @@ const JasonYbShoppingListPage = () => {
     setItems((itemList: ItemProps[]) => [...itemList, newItem])
   }
 
-  const dataSource = items
-
   return (
     <>
       <HeaderContainer>
@@ -63,7 +61,7 @@ const JasonYbShoppingListPage = () => {
         </AddItemButtonContainer>
       </HeaderContainer>
       <ShoppingListContainer>
-        <Table dataSource={dataSource}>
+        <Table dataSource={items}>
           <Column title="Quantity" dataIndex="quantity" key="quantity" />
           <Column title="Item Name" dataIndex="itemName" key="itemName" />
           <Column
