@@ -13,8 +13,8 @@ const JasonYbShoppingListPage = () => {
     quantity: number
     itemName: string
   }
-  const [quantity, setQuantity] = useState<number>(1)
-  const [itemName] = useState<string>('')
+  const [quantity, setQuantity] = useState(1)
+  const [itemName] = useState('')
   const [items, setItems] = useState<ItemProps[]>([
     {
       quantity: 365,
@@ -22,16 +22,19 @@ const JasonYbShoppingListPage = () => {
     },
   ])
 
-  const onClickAddQuantity = () => {
-    setQuantity(quantity + 1)
+  const onClickAddQuantity = (index: number) => {
+    setItems((itemList: ItemProps[]) => {
+      itemList[index].quantity = itemList[index].quantity + 1
+      return itemList
+    })
   }
 
   const onClickReduceQuantity = () => {
     setQuantity(quantity - 1)
   }
 
-  const onClickAddItem = (newArr: ItemProps) => {
-    setItems((prevArr) => [...prevArr, newArr])
+  const onClickAddItem = (newItem: ItemProps) => {
+    setItems((itemList) => [...itemList, newItem])
   }
 
   const dataSource = items
