@@ -7,15 +7,19 @@ export const HeaderContainer = styled.div`
 
 export const ShoppingListHeader = styled.div`
   text-align: center;
+  align-self: center;
   font-weight: 400;
   margin: 20px auto;
   font-size: 48px;
 `
 
 export const AddItemButtonContainer = styled.div`
-  display: flex;
   float: right;
-  width: auto;
   align-self: center;
   margin-right: 3vw;
+`
+export const ShoppingListContainer = styled.div`
+  display: flex;
+  width: auto;
+  justify-content: center;
 `
