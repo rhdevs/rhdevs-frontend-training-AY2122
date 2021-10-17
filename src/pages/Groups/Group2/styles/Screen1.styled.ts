@@ -32,7 +32,7 @@ export const TextSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 20vh;
+  height: 40vh;
   background-color: rbga(224, 101, 83, 0.86);
   text-align: center;
 `
