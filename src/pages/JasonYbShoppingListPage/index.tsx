@@ -22,6 +22,16 @@ const JasonYbShoppingListPage = () => {
       quantity: 365,
       itemName: 'potato',
     },
+    {
+      index: 2,
+      quantity: 20,
+      itemName: 'tomato',
+    },
+    {
+      index: 3,
+      quantity: 60,
+      itemName: 'oregano',
+    },
   ])
 
   const onClickAddQuantity = (index: number) => {
