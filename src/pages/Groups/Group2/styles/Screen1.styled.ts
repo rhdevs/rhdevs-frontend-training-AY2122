@@ -110,6 +110,7 @@ export const PostTitle = styled.div`
   color: green;
   margin-left: 4vw;
   margin-bottom: 3vh;
+  margin-right: 4vw;
 `
 
 export const AuthorNameText = styled.div`
