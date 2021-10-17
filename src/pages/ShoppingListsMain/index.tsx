@@ -9,9 +9,10 @@ const ShoppingListMain = () => {
   const history = useHistory()
   return (
     <>
-      <ShoppingListHeader>Our Shopping Lists!</ShoppingListHeader>
+      <ShoppingListHeader>Our Shopping Lists! BROOOOOO </ShoppingListHeader>
       <GroupCardsContainer>
         <ShoppingCard names="name1, name2, name4" onClick={() => history.push(PATHS.EXAMPLE_SHOPPING_PAGE)} />
+        <ShoppingCard names="zhikai, shaokiat" onClick={() => history.push(PATHS.SHOPPING_PAGE)} />
         {/* Create group cards here */}
       </GroupCardsContainer>
     </>

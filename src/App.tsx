@@ -13,6 +13,7 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
+  SHOPPING_PAGE = '/shopping/page',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -21,7 +22,7 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-
+const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/ShoppingPage'))
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render
@@ -41,6 +42,12 @@ function App() {
         <StyledMain>
           <MainNavigation />
           <ShoppingListsMainPage />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.SHOPPING_PAGE} exact>
+        <StyledMain>
+          <MainNavigation />
+          <ShoppingPage />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
