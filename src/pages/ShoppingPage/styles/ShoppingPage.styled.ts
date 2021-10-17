@@ -6,6 +6,10 @@ export const ShoppingListHeader = styled.h1`
   margin: 20px auto;
 `
 
+export const AddItemContainer = styled.h1`
+  // float: right;
+`
+
 export const GroupCardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);

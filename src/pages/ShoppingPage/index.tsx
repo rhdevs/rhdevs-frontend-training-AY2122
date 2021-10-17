@@ -5,8 +5,14 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { PATHS } from '../../App'
 import ShoppingCard from '../../components/ShoppingCard'
-import { ShoppingListHeader, GroupCardsContainer, ItemRowContainer, CellContainer } from './styles/ShoppingPage.styled'
-import { PlusCircleOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons'
+import {
+  ShoppingListHeader,
+  GroupCardsContainer,
+  ItemRowContainer,
+  CellContainer,
+  AddItemContainer,
+} from './styles/ShoppingPage.styled'
+import { PlusOutlined, MinusOutlined, PlusSquareOutlined } from '@ant-design/icons'
 
 const shoppingCart = [
   {
@@ -49,10 +55,18 @@ const columns = [
 const ShoppingPage = () => {
   const history = useHistory()
   const [quantity, setQuantity] = useState(0)
+  // const
 
   return (
     <>
-      <ShoppingListHeader>Our Shopping Page!</ShoppingListHeader>
+      <ShoppingListHeader>
+        Our Shopping Page!
+        <AddItemContainer>
+          <Button type="primary" onClick={() => setQuantity(quantity)} icon={<PlusSquareOutlined />}>
+            Add Item
+          </Button>
+        </AddItemContainer>
+      </ShoppingListHeader>
       <Table dataSource={shoppingCart} columns={columns} />
       <ItemRowContainer>
         <CellContainer>Item</CellContainer>
