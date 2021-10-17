@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from 'antd'
+import { Button, Input } from 'antd'
 import {
   ShoppingListHeader,
   GroupCardsContainer,
@@ -9,6 +9,7 @@ import {
   QuantityContainer,
   ItemNameContainer,
   ActionContainer,
+  ItemAdderContainer,
 } from './styles/Pair2.styled'
 
 type Props = {
@@ -20,6 +21,11 @@ type Props = {
 type listEntry = {
   quantity: number
   itemName: string
+}
+
+type itemAdder = {
+  list: listEntry[]
+  setList: React.Dispatch<React.SetStateAction<listEntry[]>>
 }
 
 const ListItem = (props: Props) => {
@@ -39,6 +45,12 @@ const ListItem = (props: Props) => {
     setList(newList)
   }
 
+  const deleteItem = () => {
+    const newList = [...list]
+    newList.splice(index, 1)
+    setList(newList)
+  }
+
   return (
     <GroupCardsContainer>
       <QuantityContainer>
@@ -50,13 +62,50 @@ const ListItem = (props: Props) => {
       <ActionContainer>
         <Button onClick={incQuantity}>Increase</Button>
         <Button onClick={decQuantity}>Decrease</Button>
+        <Button onClick={deleteItem}>Delete</Button>
       </ActionContainer>
     </GroupCardsContainer>
   )
 }
 
+const ItemAdder = (props: itemAdder) => {
+  const list = props.list
+  const setList = props.setList
+
+  const [entry, setEntry] = useState<listEntry>({ quantity: 0, itemName: '' })
+
+  const addItem = () => {
+    const newList = entry.itemName ? [...list, entry] : [...list]
+    setList(newList)
+  }
+
+  const updateName = (value: string) => {
+    const newEntry = { ...entry }
+    newEntry.itemName = value
+    setEntry(newEntry)
+  }
+
+  const updateQuantity = (value: number) => {
+    const newEntry = { ...entry }
+    newEntry.quantity = value
+    setEntry(newEntry)
+  }
+
+  return (
+    <ItemAdderContainer>
+      <Button onClick={addItem}>Add</Button>
+      <Input addonBefore={'Item Name'} onChange={(e) => updateName(e.currentTarget.value)} />
+      <Input
+        type={'number'}
+        addonBefore={'Quantity'}
+        onChange={(e) => updateQuantity(parseInt(e.currentTarget.value))}
+      />
+    </ItemAdderContainer>
+  )
+}
+
 const Pair2 = () => {
-  const itemsList: listEntry[] = [
+  const defaultItems: listEntry[] = [
     {
       quantity: 2,
       itemName: 'broccoli',
@@ -74,12 +123,14 @@ const Pair2 = () => {
       itemName: 'oranges',
     },
   ]
-  const [items, setItems] = useState(itemsList)
+  const [items, setItems] = useState(defaultItems)
+
   return (
     <>
       <ShoppingListHeader> Shopping List</ShoppingListHeader>
+      <ItemAdder list={items} setList={setItems} />
       <FullScreenContainer>
-        {itemsList.map((value, index) => (
+        {items.map((value, index) => (
           <ListItem key={`list-item-${index}`} list={items} setList={setItems} index={index} />
         ))}
       </FullScreenContainer>
