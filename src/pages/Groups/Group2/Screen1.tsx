@@ -2,7 +2,6 @@ import React from 'react'
 import {
   MainContainer,
   Screen,
-  BottomNavBar,
   SearchBar,
   TextSection,
   HomeTitle,
@@ -39,7 +38,7 @@ const Screen1 = () => {
         </SearchBar>
         <TextSection>
           <HomeTitle>Meow Meow Porridge</HomeTitle>
-          <div style={{ textAlign: 'center' }}>Text text text...</div>
+          <div>Text text text...</div>
         </TextSection>
         <ButtonsSection>
           <MenuButton>Facilities</MenuButton>
@@ -75,7 +74,7 @@ const Screen1 = () => {
           <Post>
             <ProfilePicture src={profilePic} alt="Profile Picture" />
             <PostTitle>
-              Title 2<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
+              Title 3<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
               <PostMessage>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
               </PostMessage>
@@ -84,7 +83,7 @@ const Screen1 = () => {
           <Post>
             <ProfilePicture src={profilePic} alt="Profile Picture" />
             <PostTitle>
-              Title 2<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
+              Title 4<AuthorNameText>Zhou Zhu Zhu, 8h ago</AuthorNameText>
               <PostMessage>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
               </PostMessage>
@@ -92,12 +91,12 @@ const Screen1 = () => {
           </Post>
         </PostsSection>
 
-        <BottomNavBar>
+        <BotNav>
           <StyledButton src={BotHomeIcon} />
           <StyledButton src={BotFacilitiesIcon} />
           <StyledButton src={BotCalendarIcon} />
           <StyledButton src={BotProfileIcon} />
-        </BottomNavBar>
+        </BotNav>
       </Screen>
     </MainContainer>
   )

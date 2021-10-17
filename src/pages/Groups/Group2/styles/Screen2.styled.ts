@@ -4,7 +4,6 @@ export const Screen = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 `
 
 export const HeaderAndBookingTitleContainer = styled.div`
@@ -37,7 +36,7 @@ export const BookingTitle = styled.div`
   float: left;
   width: max-content;
   line-height: 10vh;
-  padding-left: 1.5vw;
+  padding-left: 5vw;
   font-weight: bold;
   font-size: 24px;
 `
@@ -54,11 +53,10 @@ export const BookingCCA = styled.div`
 
 export const PenLogo = styled.img`
   float: right;
-  width: 5vh;
-  height: 5vh;
-  margin-right: 2vw;
+  width: 4vh;
+  height: 4vh;
+  margin-right: 5vw;
   margin-top: 2vh;
-  line-height: 10vh;
   object-fit: cover;
 `
 
@@ -67,7 +65,7 @@ export const BookingDurationAndAuthorContainer = styled.div`
   min-width: 300px;
   width: 50%;
   height: 15vh;
-  padding-top: 5vh;
+  padding-top: 7vh;
   display: flex;
   flex-direction: row;
 `
@@ -112,7 +110,7 @@ export const BookingTimingContainer = styled.div`
 `
 
 export const AdditionalNotesContainer = styled.div`
-  width: 80%;
+  width: auto;
   height: auto;
   padding: 3vh;
   font-family: Lato;

@@ -17,7 +17,7 @@ export const Screen = styled.div`
 
 export const SearchBar = styled.div`
   top: 0;
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   border: 1px solid green;
   border-radius: 0 0 15px 15px;
@@ -25,17 +25,20 @@ export const SearchBar = styled.div`
   display: inline-block;
   padding-left: 5%;
   padding-right: 5%;
-  line-height: 10vh;
+  line-height: 8vh;
 `
 
 export const TextSection = styled.div`
-  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
   background-color: rbga(224, 101, 83, 0.86);
+  text-align: center;
 `
 
 export const HomeTitle = styled.div`
   font-size: 3vh;
-  text-align: center;
 `
 
 export const ButtonsSection = styled.div`
@@ -55,6 +58,7 @@ export const PostsSection = styled.div`
 `
 
 export const FilterBar = styled.div`
+  font-size: 2.7vh;
   border: 1px solid #468751;
   border-radius: 15px 15px 15px 15px;
   display: flex;
@@ -83,7 +87,6 @@ export const FilterBarComponentMostRight = styled.div`
 export const Post = styled.div`
   display: flex;
   width: 90%;
-  height: 20vh;
   border-radius: 30px;
   margin: auto;
   margin-top: 10px;
@@ -96,7 +99,7 @@ export const ProfilePicture = styled.img`
   width: 8vh;
   height: 8vh;
   object-fit: fit;
-  margin-top: 2vw;
+  margin-top: 1vw;
   margin-left: 1vw;
   border-radius: 50%;
   border: 2px solid green;
@@ -105,7 +108,9 @@ export const PostTitle = styled.div`
   width: 80%;
   font-size: 3vh;
   color: green;
-  margin-left: 2vw;
+  margin-left: 4vw;
+  margin-bottom: 3vh;
+  margin-right: 4vw;
 `
 
 export const AuthorNameText = styled.div`
@@ -125,28 +130,17 @@ export const PostMessage = styled.div`
   padding-left: 5px;
 `
 
-export const BottomNavBar = styled.div`
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  height: 8vh;
-  text-align: center;
-  background-color: #468751;
-  border-radius: 15px 15px 0 0;
-`
 export const SearchIconContainer = styled.img`
-  width: 3%;
-  height: 100%;
-  vertical-align: middle;
+  margin-top: 2vh;
+  height: 50%;
   float: right;
 `
 
 export const MenuButton = styled.div`
   height: 60px;
   line-height: 60px;
-  width: 120px;
   border: 1px solid #468751;
-  margin: 3px 30px 0px 30px;
+  margin: 3px 10px 0px 10px;
   &:hover {
     background-color: #468751;
   }
@@ -158,19 +152,14 @@ export const MenuButton = styled.div`
 `
 
 export const BotNav = styled.div`
-width: 100%;
-z-index: 5;
-height: 7vh;
-padding: 1em;
-font - size: 28px;
-display: flex;
-justify - content: space - around;
-align - items: center;
-position: fixed;
-background: #ffffff;
-z - index: 800;
-bottom: 0;
-filter: drop - shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  background-color: #ffffff;
 `
 
 export const StyledButton = styled.img`
