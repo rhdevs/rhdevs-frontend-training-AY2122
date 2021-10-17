@@ -11,7 +11,7 @@ const ShoppingListMain = () => {
     <>
       <ShoppingListHeader>Our Shopping Lists!</ShoppingListHeader>
       <GroupCardsContainer>
-        <ShoppingCard names="Jason, Yong Bin" onClick={() => history.push(PATHS.EXAMPLE_SHOPPING_PAGE)} />
+        <ShoppingCard names="Jason, Yong Bin" onClick={() => history.push(PATHS.JASON_YB_SHOPPING_LIST_PAGE)} />
         {/* Create group cards here */}
       </GroupCardsContainer>
     </>
