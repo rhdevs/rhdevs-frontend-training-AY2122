@@ -84,7 +84,7 @@ const ShoppingPage = () => {
         Our Shopping Page!
         <AddItemContainer>
           <form>
-            <input type="text" placeholder="New Item" onChange={(e) => handleChange(e)} />
+            <input value={userInput} type="text" placeholder="New Item" onChange={(e) => handleChange(e)} />
             <Button onClick={() => handleSubmit()} type="primary" icon={<PlusSquareOutlined />}>
               Add Item
             </Button>
