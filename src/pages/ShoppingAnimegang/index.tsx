@@ -1,52 +1,58 @@
 import React from 'react'
-import { ShoppingListHeader } from './styles/ShoppingAnimegang.styled'
-import { Table } from 'antd'
+import { ShoppingListHeader, TablePart, TopRow } from './styles/ShoppingAnimegang.styled'
+import { Table, Button, Space } from 'antd'
+import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
 const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
+    title: 'Quantity',
+    dataIndex: 'quantity',
+    key: 'quantity',
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'Item Name',
+    dataIndex: 'item_name',
+    key: 'item_name',
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
+    title: 'Action',
+    dataIndex: 'action',
+    key: 'action',
+    render: () => (
+      <Space size="middle">
+        <Button shape="circle" icon={<PlusOutlined />}></Button>
+        <Button shape="circle" icon={<MinusOutlined />}></Button>
+        <a>Delete</a>
+      </Space>
+    ),
   },
 ]
 
 const data = [
   {
     key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
+    quantity: '3',
+    item_name: 'Eggs',
   },
   {
     key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
+    quantity: '5',
+    item_name: 'Eggs',
   },
 ]
 
 const ShoppingAnimegang = () => {
   return (
-    <>
-      <ShoppingListHeader>Shopping list</ShoppingListHeader>
-      <Table columns={columns} dataSource={data} />
-    </>
+    <FullScreenContainer>
+      <TopRow>
+        <ShoppingListHeader> Shopping list</ShoppingListHeader>
+        <Button type="primary">+ Add item</Button>
+      </TopRow>
+      <TablePart>
+        <Table columns={columns} dataSource={data} />
+      </TablePart>
+    </FullScreenContainer>
   )
 }
 
