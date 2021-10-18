@@ -7,7 +7,7 @@ export const ShoppingListHeader = styled.h1`
 `
 
 export const AddItemContainer = styled.h1`
-  // float: right;
+  // height: 30vh;
 `
 
 export const GroupCardsContainer = styled.div`
