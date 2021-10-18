@@ -11,6 +11,9 @@ import {
   ItemRowContainer,
   CellContainer,
   AddItemContainer,
+  AddTextInput,
+  ButtonRow,
+  CartTable,
 } from './styles/ShoppingPage.styled'
 import { PlusOutlined, MinusOutlined, PlusSquareOutlined } from '@ant-design/icons'
 
@@ -46,10 +49,12 @@ const ShoppingPage = () => {
       key: 'quantity',
     },
     {
+      /*
       title: 'Action',
       dataIndex: '',
       key: 'x',
       render: () => <a>Delete</a>,
+    */
     },
     {
       title: 'Action',
@@ -62,6 +67,7 @@ const ShoppingPage = () => {
   const history = useHistory()
   const [quantity, setQuantity] = useState(0)
   const [userInput, setUserInput] = useState('')
+  const [userInputQuantity, setUserInputQuantity] = useState('')
 
   const handleSubmit = () => {
     addCart(userInput)
@@ -70,28 +76,59 @@ const ShoppingPage = () => {
 
   const addCart = (userInput: string) => {
     let copy = [...shoppingCart]
-    copy = [...copy, { index: shoppingCart.length + 1, name: userInput, quantity: 1 }]
+    copy = [...copy, { index: shoppingCart.length + 1, name: userInput, quantity: parseInt(userInputQuantity) }]
     setShoppingCart(copy)
+    setUserInputQuantity('')
+    setUserInput('')
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUserInput(e.target.value)
   }
 
+  const removeFromCart = () => {
+    let copy = [...shoppingCart]
+    copy = copy.filter((cartItem) => cartItem.name !== userInput)
+    setShoppingCart(copy)
+    setUserInputQuantity('')
+    setUserInput('')
+  }
+
+  const handleQuantityChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserInputQuantity(e.target.value)
+  }
   return (
     <>
       <ShoppingListHeader>
         Our Shopping Page!
         <AddItemContainer>
-          <form>
-            <input value={userInput} type="text" placeholder="New Item" onChange={(e) => handleChange(e)} />
-            <Button onClick={() => handleSubmit()} type="primary" icon={<PlusSquareOutlined />}>
-              Add Item
-            </Button>
-          </form>
+          <ItemRowContainer>
+            <form>
+              <AddTextInput value={userInput} type="text" placeholder="Item" onChange={(e) => handleChange(e)} />
+              <AddTextInput
+                value={userInputQuantity}
+                type="text"
+                placeholder="Quantity"
+                onChange={(e) => handleQuantityChange(e)}
+              />
+              <Button
+                style={{ marginRight: '10px' }}
+                onClick={() => handleSubmit()}
+                type="primary"
+                icon={<PlusOutlined />}
+              >
+                Add Item
+              </Button>
+              <Button onClick={() => removeFromCart()} type="primary" icon={<MinusOutlined />}>
+                Remove Item
+              </Button>
+            </form>
+          </ItemRowContainer>
         </AddItemContainer>
       </ShoppingListHeader>
-      <Table dataSource={shoppingCart} columns={columns} />
+      <CartTable>
+        <Table dataSource={shoppingCart} columns={columns} />
+      </CartTable>
       <ItemRowContainer>
         <CellContainer>Item</CellContainer>
         <CellContainer>{quantity}</CellContainer>
