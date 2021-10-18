@@ -1,12 +1,24 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 
-import { PATHS } from '../../App'
-import ShoppingCard from '../../components/ShoppingCard'
-// import { ShoppingListHeader, GroupCardsContainer } from './styles/ShoppingListMain.styled'
+import {
+  MainPage,
+  HeaderShoppingCart,
+  Title,
+  AddItemButton,
+  AddItemButtonContainer,
+} from './styles/ShoppingCart4.styled'
 
-const ShoppingListMain = () => {
-  return <div></div>
+const ShoppingCart4 = () => {
+  return (
+    <MainPage>
+      <HeaderShoppingCart>
+        <Title>Shopping List</Title>
+        <AddItemButtonContainer>
+          <AddItemButton>+ Add Item</AddItemButton>
+        </AddItemButtonContainer>
+      </HeaderShoppingCart>
+    </MainPage>
+  )
 }
 
-export default ShoppingListMain
+export default ShoppingCart4
