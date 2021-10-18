@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
   width: 100%;
+  position: relative;
 `
 
 export const ShoppingListHeader = styled.div`
@@ -15,8 +16,11 @@ export const ShoppingListHeader = styled.div`
 
 export const AddItemButtonContainer = styled.div`
   float: right;
-  margin-right: 3vw;
+  margin-left: 10vw;
   z-index: 100;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
 `
 export const ShoppingListContainer = styled.div`
   display: flex;
