@@ -7,22 +7,20 @@ export const MainPage = styled.div`
 `
 
 export const HeaderShoppingCart = styled.div`
-  width: 100%;
-`
-
-export const Title = styled.h1`
   text-align: center;
   font-weight: bold;
   font-size: 50px;
 `
 
-export const AddItemButtonContainer = styled.div`
-  text-align: right;
+export const AddItemButton = styled.div`
+  position: relative;
+  left: 400px;
+  bottom: 5px;
 `
-export const AddItemButton = styled.button`
-  padding: 10px 20px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  color: blue;
-`
+// padding: 10px 20px;
+// text-align: center;
+// display: inline-block;
+// font-size: 16px;
+// color: #4579f4;
+// border: 2px solid #e7e7e7;
+export const ShoppingListForm = styled.div``

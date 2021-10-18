@@ -1,21 +1,17 @@
 import React from 'react'
-
-import {
-  MainPage,
-  HeaderShoppingCart,
-  Title,
-  AddItemButton,
-  AddItemButtonContainer,
-} from './styles/ShoppingCart4.styled'
+import { Button } from 'antd'
+import { ReactDOM } from 'react'
+import { render } from 'react-dom'
+import { MainPage, HeaderShoppingCart, AddItemButton } from './styles/ShoppingCart4.styled'
 
 const ShoppingCart4 = () => {
   return (
     <MainPage>
       <HeaderShoppingCart>
-        <Title>Shopping List</Title>
-        <AddItemButtonContainer>
-          <AddItemButton>+ Add Item</AddItemButton>
-        </AddItemButtonContainer>
+        Shopping List
+        <AddItemButton>
+          <Button>+ Add Item</Button>
+        </AddItemButton>
       </HeaderShoppingCart>
     </MainPage>
   )
