@@ -23,4 +23,8 @@ export const AddItemButton = styled.div`
 // font-size: 16px;
 // color: #4579f4;
 // border: 2px solid #e7e7e7;
-export const ShoppingListForm = styled.div``
+export const ShoppingListForm = styled.div`
+  top: 20px;
+  left: 50px;
+  right: 50px;
+`
