@@ -34,21 +34,21 @@ const JasonYbShoppingListPage = () => {
     },
   ])
 
-  const onClickAddQuantity = (index: number) => {
+  const handleAddQuantity = (index: number) => {
     setItems((itemList: ItemProps[]) => {
       itemList[index].quantity = itemList[index].quantity + 1
       return itemList
     })
   }
 
-  const onClickReduceQuantity = (index: number) => {
+  const handleReduceQuantity = (index: number) => {
     setItems((itemList: ItemProps[]) => {
       itemList[index].quantity = itemList[index].quantity - 1
       return itemList
     })
   }
 
-  const onClickAddItem = (newItem: ItemProps) => {
+  const handleAddItem = (newItem: ItemProps) => {
     setItems((itemList: ItemProps[]) => [...itemList, newItem])
   }
 
@@ -69,10 +69,10 @@ const JasonYbShoppingListPage = () => {
             key="action"
             render={(text, row) => (
               <Space size="middle">
-                <Button type="primary" shape="circle" onClick={() => onClickAddQuantity(text.index - 1)}>
+                <Button type="primary" shape="circle" onClick={() => handleAddQuantity(text.index - 1)}>
                   +
                 </Button>
-                <Button type="primary" shape="circle" onClick={() => onClickReduceQuantity(text.index - 1)}>
+                <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(text.index - 1)}>
                   -
                 </Button>
               </Space>
