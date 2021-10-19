@@ -1,6 +1,8 @@
 import React, { Suspense, useEffect } from 'react'
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
+import store from './store/store'
 import LoadingSpinner from './components/LoadingSpinner'
 import MainNavigation from './shared/Navigation/MainNavigation'
 import Lesson1Example from './pages/Lesson1Example'
@@ -64,9 +66,11 @@ function App() {
   )
 
   return (
-    <BrowserRouter>
-      <Suspense fallback={<LoadingSpinner />}>{routes}</Suspense>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Suspense fallback={<LoadingSpinner />}>{routes}</Suspense>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
