@@ -51,13 +51,16 @@ const JasonYbShoppingListPage = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (item: ItemProps) => (
+      render: (itemAffected: ItemProps) => (
         <Space size="middle">
-          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
+          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(itemAffected)}>
             +
           </Button>
-          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
+          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(itemAffected)}>
             -
+          </Button>
+          <Button danger onClick={() => handleDeleteItem(itemAffected)}>
+            Delete
           </Button>
         </Space>
       ),
@@ -75,6 +78,11 @@ const JasonYbShoppingListPage = () => {
     const updatedList = items.map((item) =>
       item.index === itemToChange.index ? { ...item, quantity: item.quantity - 1 } : item,
     )
+    setItems(updatedList)
+  }
+
+  const handleDeleteItem = (itemToDelete: ItemProps) => {
+    const updatedList = items.filter((item) => item.index !== itemToDelete.index)
     setItems(updatedList)
   }
 
