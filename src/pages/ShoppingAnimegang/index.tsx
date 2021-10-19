@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ShoppingListHeader, TablePart, TopRow } from './styles/ShoppingAnimegang.styled'
-import { Table, Button, Space } from 'antd'
+import { Table, Button, Space, Input } from 'antd'
 import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
@@ -77,6 +77,7 @@ const ShoppingAnimegang = () => {
       ),
     },
   ]
+  const [showInput, setShowInput] = useState<boolean>(false)
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
   return (
     <FullScreenContainer>
@@ -85,6 +86,7 @@ const ShoppingAnimegang = () => {
         <Button onClick={() => handleOnAddItemClick()} type="primary">
           + Add item
         </Button>
+        {showInput && <Input placeholder="Basic usage" />}
       </TopRow>
       <TablePart>
         <Table columns={columns} dataSource={shoppingList} />
