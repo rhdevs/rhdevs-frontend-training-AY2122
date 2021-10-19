@@ -7,7 +7,6 @@ import {
   ShoppingListHeader,
 } from './styles/JasonYbShoppingListPage.styled'
 import { Button, Table, Space } from 'antd'
-const { Column } = Table
 
 const JasonYbShoppingListPage = () => {
   interface ItemProps {
@@ -38,6 +37,33 @@ const JasonYbShoppingListPage = () => {
     },
   ])
 
+  const columns = [
+    {
+      title: 'Item',
+      dataIndex: 'name',
+      key: 'item',
+    },
+    {
+      title: 'Quantity',
+      dataIndex: 'quantity',
+      key: 'quantity',
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (item: ItemProps) => (
+        <Space size="middle">
+          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
+            +
+          </Button>
+          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
+            -
+          </Button>
+        </Space>
+      ),
+    },
+  ]
+
   const handleAddQuantity = (itemToChange: ItemProps) => {
     const updatedList = items.map((item) =>
       item.index === itemToChange.index ? { ...item, quantity: item.quantity + 1 } : item,
@@ -65,24 +91,7 @@ const JasonYbShoppingListPage = () => {
         </AddItemButtonContainer>
       </HeaderContainer>
       <ShoppingListContainer>
-        <Table dataSource={items}>
-          <Column title="Quantity" dataIndex="quantity" key="quantity" />
-          <Column title="Item Name" dataIndex="itemName" key="itemName" />
-          <Column
-            title="Action"
-            key="action"
-            render={(item: ItemProps) => (
-              <Space size="middle">
-                <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
-                  +
-                </Button>
-                <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
-                  -
-                </Button>
-              </Space>
-            )}
-          />
-        </Table>
+        <Table columns={columns} dataSource={items} />
       </ShoppingListContainer>
     </>
   )
