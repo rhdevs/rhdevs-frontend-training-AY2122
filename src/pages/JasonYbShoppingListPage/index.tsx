@@ -38,18 +38,18 @@ const JasonYbShoppingListPage = () => {
     },
   ])
 
-  const handleAddQuantity = (index: number) => {
-    setItems((itemList: ItemProps[]) => {
-      itemList[index].quantity = itemList[index].quantity + 1
-      return itemList
-    })
+  const handleAddQuantity = (itemToChange: ItemProps) => {
+    const updatedList = items.map((item) =>
+      item.index === itemToChange.index ? { ...item, quantity: item.quantity + 1 } : item,
+    )
+    setItems(updatedList)
   }
 
-  const handleReduceQuantity = (index: number) => {
-    setItems((itemList: ItemProps[]) => {
-      itemList[index].quantity = itemList[index].quantity - 1
-      return itemList
-    })
+  const handleReduceQuantity = (itemToChange: ItemProps) => {
+    const updatedList = items.map((item) =>
+      item.index === itemToChange.index ? { ...item, quantity: item.quantity - 1 } : item,
+    )
+    setItems(updatedList)
   }
 
   const handleAddItem = (newItem: ItemProps) => {
@@ -71,12 +71,12 @@ const JasonYbShoppingListPage = () => {
           <Column
             title="Action"
             key="action"
-            render={(text, row) => (
+            render={(item: ItemProps) => (
               <Space size="middle">
-                <Button type="primary" shape="circle" onClick={() => handleAddQuantity(text.index - 1)}>
+                <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
                   +
                 </Button>
-                <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(text.index - 1)}>
+                <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
                   -
                 </Button>
               </Space>
