@@ -8,31 +8,6 @@ import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 // }
 // onClick={() => handleIncreaseItemCount()}
 
-const columns = [
-  {
-    title: 'Quantity',
-    dataIndex: 'quantity',
-    key: 'quantity',
-  },
-  {
-    title: 'Item Name',
-    dataIndex: 'item_name',
-    key: 'item_name',
-  },
-  {
-    title: 'Action',
-    dataIndex: 'action',
-    key: 'action',
-    render: () => (
-      <Space size="middle">
-        <Button onClick={() => console.log("clicked on plus!")} shape="circle" icon={<PlusOutlined />}></Button>
-        <Button shape="circle" icon={<MinusOutlined />}></Button>
-        <a>Delete</a>
-      </Space>
-    ),
-  },
-]
-
 const initialList: Item[] = [
   {
     key: '1',
@@ -47,12 +22,54 @@ const initialList: Item[] = [
 ]
 
 type Item = {
-  key: string,
-  quantity: number,
-  item_name: string,
+  key: string
+  quantity: number
+  item_name: string
 }
 
 const ShoppingAnimegang = () => {
+  const handleOnPlusClick = (record: Item) => {
+    const newList: Item[] = shoppingList.filter((item) => {
+      if (item.key === record.key) {
+        item.quantity += 1
+      }
+      return item
+    })
+    setShoppingList(newList)
+  }
+  const handleOnMinusClick = (record: Item) => {
+    const newList: Item[] = shoppingList.filter((item) => {
+      if (item.key === record.key) {
+        item.quantity = item.quantity == 0 ? 0 : item.quantity - 1
+      }
+      return item
+    })
+    setShoppingList(newList)
+  }
+  const columns = [
+    {
+      title: 'Quantity',
+      dataIndex: 'quantity',
+      key: 'quantity',
+    },
+    {
+      title: 'Item Name',
+      dataIndex: 'item_name',
+      key: 'item_name',
+    },
+    {
+      title: 'Action',
+      dataIndex: 'action',
+      key: 'action',
+      render: (text: any, record: Item) => (
+        <Space size="middle">
+          <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
+          <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
+          <a>Delete</a>
+        </Space>
+      ),
+    },
+  ]
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
   return (
     <FullScreenContainer>
