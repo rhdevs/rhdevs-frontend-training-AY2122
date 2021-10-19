@@ -1,17 +1,13 @@
 import { TableOutlined } from '@ant-design/icons'
-import { Button, Input, Table } from 'antd'
+import { Button, Input, Space, Table } from 'antd'
 import Item from 'antd/lib/list/Item'
 import React, { ChangeEvent, useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import { PATHS } from '../../App'
 import ShoppingCard from '../../components/ShoppingCard'
 import {
   ShoppingListHeader,
-  GroupCardsContainer,
   ItemRowContainer,
   CellContainer,
   AddTextInput,
-  ButtonRow,
   CartTable,
 } from './styles/ShoppingPage.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
@@ -49,22 +45,21 @@ const ShoppingPage = () => {
     },
     {
       title: 'Action',
-      dataIndex: '',
-      key: 'x',
-      render: (text: CartItem) => (
-        <>
-          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(text.index - 1)}>
+      key: 'action',
+      render: (item: CartItem) => (
+        <Space size="middle">
+          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
             +
           </Button>
-          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(text.index - 1)}>
+          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
             -
           </Button>
-        </>
+          <a onClick={() => removeItem(item)}>Delete</a>
+        </Space>
       ),
     },
   ]
 
-  const history = useHistory()
   const [quantity, setQuantity] = useState(0)
   const [userInput, setUserInput] = useState('')
   const [userInputQuantity, setUserInputQuantity] = useState('')
@@ -98,18 +93,23 @@ const ShoppingPage = () => {
     setUserInputQuantity(e.target.value)
   }
 
-  const handleAddQuantity = (index: number) => {
-    setShoppingCart((cartList: CartItem[]) => {
-      cartList[index].quantity = cartList[index].quantity + 1
-      return cartList
-    })
+  const handleAddQuantity = (item: CartItem) => {
+    const updatedShoppingCart = shoppingCart.map((x) =>
+      x.index === item.index ? { ...x, quantity: x.quantity + 1 } : x,
+    )
+    setShoppingCart(updatedShoppingCart)
   }
 
-  const handleReduceQuantity = (index: number) => {
-    setShoppingCart((cartList: CartItem[]) => {
-      cartList[index].quantity = cartList[index].quantity - 1
-      return cartList
-    })
+  const handleReduceQuantity = (item: CartItem) => {
+    const updatedShoppingCart = shoppingCart.map((x) =>
+      x.index === item.index ? { ...x, quantity: x.quantity - 1 } : x,
+    )
+    setShoppingCart(updatedShoppingCart)
+  }
+
+  const removeItem = (item: CartItem) => {
+    const updatedShoppingCart = shoppingCart.filter((x) => x.index != item.index)
+    setShoppingCart(updatedShoppingCart)
   }
 
   return (
