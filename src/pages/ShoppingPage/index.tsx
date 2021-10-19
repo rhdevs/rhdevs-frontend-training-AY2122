@@ -10,12 +10,11 @@ import {
   GroupCardsContainer,
   ItemRowContainer,
   CellContainer,
-  AddItemContainer,
   AddTextInput,
   ButtonRow,
   CartTable,
 } from './styles/ShoppingPage.styled'
-import { PlusOutlined, MinusOutlined, PlusSquareOutlined } from '@ant-design/icons'
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
 const ShoppingPage = () => {
   interface CartItem {
@@ -49,18 +48,19 @@ const ShoppingPage = () => {
       key: 'quantity',
     },
     {
-      /*
       title: 'Action',
       dataIndex: '',
       key: 'x',
-      render: () => <a>Delete</a>,
-    */
-    },
-    {
-      title: 'Action',
-      dataIndex: '',
-      key: 'x',
-      render: () => <a>+</a>,
+      render: (text: CartItem) => (
+        <>
+          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(text.index - 1)}>
+            +
+          </Button>
+          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(text.index - 1)}>
+            -
+          </Button>
+        </>
+      ),
     },
   ]
 
@@ -97,34 +97,47 @@ const ShoppingPage = () => {
   const handleQuantityChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUserInputQuantity(e.target.value)
   }
+
+  const handleAddQuantity = (index: number) => {
+    setShoppingCart((cartList: CartItem[]) => {
+      cartList[index].quantity = cartList[index].quantity + 1
+      return cartList
+    })
+  }
+
+  const handleReduceQuantity = (index: number) => {
+    setShoppingCart((cartList: CartItem[]) => {
+      cartList[index].quantity = cartList[index].quantity - 1
+      return cartList
+    })
+  }
+
   return (
     <>
       <ShoppingListHeader>
         Our Shopping Page!
-        <AddItemContainer>
-          <ItemRowContainer>
-            <form>
-              <AddTextInput value={userInput} type="text" placeholder="Item" onChange={(e) => handleChange(e)} />
-              <AddTextInput
-                value={userInputQuantity}
-                type="text"
-                placeholder="Quantity"
-                onChange={(e) => handleQuantityChange(e)}
-              />
-              <Button
-                style={{ marginRight: '10px' }}
-                onClick={() => handleSubmit()}
-                type="primary"
-                icon={<PlusOutlined />}
-              >
-                Add Item
-              </Button>
-              <Button onClick={() => removeFromCart()} type="primary" icon={<MinusOutlined />}>
-                Remove Item
-              </Button>
-            </form>
-          </ItemRowContainer>
-        </AddItemContainer>
+        <ItemRowContainer>
+          <form>
+            <AddTextInput value={userInput} type="text" placeholder="Item" onChange={(e) => handleChange(e)} />
+            <AddTextInput
+              value={userInputQuantity}
+              type="text"
+              placeholder="Quantity"
+              onChange={(e) => handleQuantityChange(e)}
+            />
+            <Button
+              style={{ marginRight: '10px' }}
+              onClick={() => handleSubmit()}
+              type="primary"
+              icon={<PlusOutlined />}
+            >
+              Add Item
+            </Button>
+            <Button onClick={() => removeFromCart()} type="primary" icon={<MinusOutlined />}>
+              Remove Item
+            </Button>
+          </form>
+        </ItemRowContainer>
       </ShoppingListHeader>
       <CartTable>
         <Table dataSource={shoppingCart} columns={columns} />
