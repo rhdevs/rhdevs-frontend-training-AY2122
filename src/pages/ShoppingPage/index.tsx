@@ -133,9 +133,6 @@ const ShoppingPage = () => {
             >
               Add Item
             </Button>
-            <Button onClick={() => removeFromCart()} type="primary" icon={<MinusOutlined />}>
-              Remove Item
-            </Button>
           </form>
         </ItemRowContainer>
       </ShoppingListHeader>
