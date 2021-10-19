@@ -11,6 +11,7 @@ const { Column } = Table
 
 const JasonYbShoppingListPage = () => {
   interface ItemProps {
+    key: string
     index: number
     quantity: number
     itemName: string
@@ -18,16 +19,19 @@ const JasonYbShoppingListPage = () => {
 
   const [items, setItems] = useState<ItemProps[]>([
     {
+      key: '1',
       index: 1,
       quantity: 365,
       itemName: 'potato',
     },
     {
+      key: '2',
       index: 2,
       quantity: 20,
       itemName: 'tomato',
     },
     {
+      key: '3',
       index: 3,
       quantity: 60,
       itemName: 'oregano',
@@ -49,7 +53,7 @@ const JasonYbShoppingListPage = () => {
   }
 
   const handleAddItem = (newItem: ItemProps) => {
-    setItems((itemList: ItemProps[]) => [...itemList, newItem])
+    setItems([...items, newItem])
   }
 
   return (
