@@ -1,5 +1,5 @@
 import { Dispatch, GetState } from '../types'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType } from './types'
+import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, CartItem } from './types'
 
 //set my 'exampleList' state with my argument 'newList'
 //to call this in your component or page, wrap with dispatch
@@ -13,3 +13,20 @@ export const mockActionSetMyExampleList =
       exampleList: newList ?? exampleList, // if newList is undefined, use exampleList
     })
   }
+
+export const addCartItem = (newItem: CartItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { shoppingCart } = getState().shoppingLists
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_CART,
+    shoppingCart: [...shoppingCart, newItem],
+  })
+}
+
+// export const IncreaseQuantity =
+//   (newList: CartItem[]) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+//     const { shoppingCart } = getState().shoppingCart
+//     dispatch({
+//       type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_CART,
+//       shoppingCart: newList ?? shoppingCart,
+//     })
+//   }
