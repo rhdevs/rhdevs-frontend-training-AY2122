@@ -51,7 +51,21 @@ const ShoppingAnimegang = () => {
     setShoppingList(newList)
   }
   const handleOnAddItemClick = () => {
-    const newlist: Item[] = shoppingList
+    setShowInput(true)
+    setAddItemName('Enter your value')
+  }
+  const handleOnType = (e: string) => {
+    setAddItemName(e)
+    console.log(addItemName)
+    //setShowInput(false)
+  }
+  const handleOnEnter = () => {
+    const newList: Item[] = shoppingList.filter((item) => item)
+    const newKey: string = (shoppingList.length + 1).toString()
+    const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName }
+    newList.push(newItem)
+    setShoppingList(newList)
+    setShowInput(false)
   }
   const columns = [
     {
@@ -77,16 +91,25 @@ const ShoppingAnimegang = () => {
       ),
     },
   ]
+  const [addItemName, setAddItemName] = useState<string>('Enter your item')
   const [showInput, setShowInput] = useState<boolean>(false)
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
   return (
     <FullScreenContainer>
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
-        <Button onClick={() => handleOnAddItemClick()} type="primary">
-          + Add item
-        </Button>
-        {showInput && <Input placeholder="Basic usage" />}
+        {!showInput && (
+          <Button onClick={() => handleOnAddItemClick()} type="primary">
+            + Add item
+          </Button>
+        )}
+        {showInput && (
+          <Input
+            placeholder={addItemName}
+            onChange={(e) => handleOnType(e.target.value)}
+            onPressEnter={() => handleOnEnter()}
+          />
+        )}
       </TopRow>
       <TablePart>
         <Table columns={columns} dataSource={shoppingList} />
