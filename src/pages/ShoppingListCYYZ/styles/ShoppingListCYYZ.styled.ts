@@ -41,6 +41,12 @@ export const ItemAction = styled.div`
   align-items: center;
 `
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+`
+
 export const ListItem = styled.div`
   width: 100%;
   height: 8vh;
