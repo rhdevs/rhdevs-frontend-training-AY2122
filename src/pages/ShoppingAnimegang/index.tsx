@@ -4,6 +4,10 @@ import { Table, Button, Space } from 'antd'
 import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
+// const handleIncreaseItemCount = () => {
+// }
+// onClick={() => handleIncreaseItemCount()}
+
 const columns = [
   {
     title: 'Quantity',
@@ -29,15 +33,15 @@ const columns = [
   },
 ]
 
-const data = [
+let data = [
   {
     key: '1',
-    quantity: '3',
+    quantity: 3,
     item_name: 'Eggs',
   },
   {
     key: '2',
-    quantity: '5',
+    quantity: 5,
     item_name: 'Eggs',
   },
 ]
