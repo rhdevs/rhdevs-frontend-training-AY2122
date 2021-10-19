@@ -18,6 +18,16 @@ export const AddItemButtonContainer = styled.div`
   margin-right: 3vw;
   z-index: 100;
 `
+
+export const AddItemInput = styled.input`
+  border-color: #000000;
+  width: 10vw;
+  margin: 10px;
+  padding: 10px;
+  font-size: 10px;
+  align-items: center;
+`
+
 export const ShoppingListContainer = styled.div`
   display: flex;
   width: auto;

@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 
 import {
   AddItemButtonContainer,
+  AddItemInput,
   HeaderContainer,
   ShoppingListContainer,
   ShoppingListHeader,
@@ -10,27 +11,31 @@ import { Button, Table, Space } from 'antd'
 
 const JasonYbShoppingListPage = () => {
   interface ItemProps {
-    key: string
+    key: number
     index: number
     quantity: number
     itemName: string
   }
 
+  let keyCount = 3
+  let indexCount = 3
+
+  const [userAddItemInput, setUserAddItemInput] = useState('')
   const [items, setItems] = useState<ItemProps[]>([
     {
-      key: '1',
+      key: 1,
       index: 1,
       quantity: 365,
       itemName: 'potato',
     },
     {
-      key: '2',
+      key: 2,
       index: 2,
       quantity: 20,
       itemName: 'tomato',
     },
     {
-      key: '3',
+      key: 3,
       index: 3,
       quantity: 60,
       itemName: 'oregano',
@@ -67,6 +72,28 @@ const JasonYbShoppingListPage = () => {
     },
   ]
 
+  const handleItemChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserAddItemInput(e.target.value)
+  }
+
+  const handleSubmit = () => {
+    addItem(userAddItemInput)
+    setUserAddItemInput('')
+  }
+
+  const addItem = (newItemName: string) => {
+    keyCount++
+    indexCount++
+    const newItem: ItemProps = {
+      key: keyCount,
+      index: indexCount,
+      quantity: 1,
+      itemName: newItemName,
+    }
+    const updatedList = [...items, newItem]
+    setItems(updatedList)
+  }
+
   const handleAddQuantity = (itemToChange: ItemProps) => {
     const updatedList = items.map((item) =>
       item.index === itemToChange.index ? { ...item, quantity: item.quantity + 1 } : item,
@@ -86,16 +113,22 @@ const JasonYbShoppingListPage = () => {
     setItems(updatedList)
   }
 
-  const handleAddItem = (newItem: ItemProps) => {
-    setItems([...items, newItem])
-  }
-
   return (
     <>
       <HeaderContainer>
         <ShoppingListHeader>Shopping List</ShoppingListHeader>
         <AddItemButtonContainer>
-          <Button type="dashed">+ Add item</Button>
+          <form>
+            <AddItemInput
+              value={userAddItemInput}
+              type="text"
+              placeholder="Item"
+              onChange={(e) => handleItemChange(e)}
+            />
+            <Button type="dashed" onClick={() => handleSubmit()}>
+              + Add item
+            </Button>
+          </form>
         </AddItemButtonContainer>
       </HeaderContainer>
       <ShoppingListContainer>
