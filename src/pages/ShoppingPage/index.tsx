@@ -142,12 +142,6 @@ const ShoppingPage = () => {
       <CartTable>
         <Table dataSource={shoppingCart} columns={columns} />
       </CartTable>
-      <ItemRowContainer>
-        <CellContainer>Item</CellContainer>
-        <CellContainer>{quantity}</CellContainer>
-        <Button type="primary" onClick={() => setQuantity(quantity + 1)} shape="circle" icon={<PlusOutlined />} />
-        <Button type="primary" onClick={() => setQuantity(quantity - 1)} shape="circle" icon={<MinusOutlined />} />
-      </ItemRowContainer>
     </>
   )
 }
