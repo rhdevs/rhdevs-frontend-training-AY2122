@@ -33,7 +33,7 @@ const columns = [
   },
 ]
 
-let data = [
+const data = [
   {
     key: '1',
     quantity: 3,
