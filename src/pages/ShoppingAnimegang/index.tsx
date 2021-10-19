@@ -46,6 +46,13 @@ const ShoppingAnimegang = () => {
     })
     setShoppingList(newList)
   }
+  const handleOnDeleteClick = (record: Item) => {
+    const newList: Item[] = shoppingList.filter((item) => item.key != record.key)
+    setShoppingList(newList)
+  }
+  const handleOnAddItemClick = () => {
+    const newlist: Item[] = shoppingList
+  }
   const columns = [
     {
       title: 'Quantity',
@@ -65,7 +72,7 @@ const ShoppingAnimegang = () => {
         <Space size="middle">
           <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
           <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
-          <a>Delete</a>
+          <a onClick={() => handleOnDeleteClick(record)}>Delete</a>
         </Space>
       ),
     },
@@ -75,7 +82,9 @@ const ShoppingAnimegang = () => {
     <FullScreenContainer>
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
-        <Button type="primary">+ Add item</Button>
+        <Button onClick={() => handleOnAddItemClick()} type="primary">
+          + Add item
+        </Button>
       </TopRow>
       <TablePart>
         <Table columns={columns} dataSource={shoppingList} />
