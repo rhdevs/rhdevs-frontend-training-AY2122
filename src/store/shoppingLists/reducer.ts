@@ -1,16 +1,10 @@
 import { PropertySafetyTwoTone } from '@ant-design/icons'
 import { Reducer } from 'redux'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType } from './types'
-
-interface ItemProps {
-  key: number
-  index: number
-  quantity: number
-  itemName: string
-}
+import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, ShoppingItem } from './types'
 
 //set an initial state for your variable
-const initialState: State = {
+// check whether export is allowed here
+export const initialState: State = {
   itemList: [
     {
       key: 1,
@@ -35,7 +29,7 @@ const initialState: State = {
 
 //declare your variable type
 type State = {
-  itemList: ItemProps[],
+  itemList: ShoppingItem[],
 }
 
 export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState, action) => {
@@ -44,6 +38,9 @@ export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState,
     case SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST: {
       //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
       return { ...state, exampleList: action.exampleList }
+    }
+    case SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY: {
+      return { ...state, newList: action.newList }
     }
     default:
       return state

@@ -1,4 +1,7 @@
 import React, { ChangeEvent, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { initialState } from '../../store/shoppingLists/reducer'
+import { AddItemQuantity } from '../../store/shoppingLists/actions'
 
 import {
   AddItemButtonContainer,
@@ -8,6 +11,12 @@ import {
   ShoppingListHeader,
 } from './styles/JasonYbShoppingListPage.styled'
 import { Button, Table, Space } from 'antd'
+
+export default function shoppingLists() {
+  const dispatch = useDispatch()
+  const { AddItemQuantity } = useSelector((state: typeof initialState) => state)
+
+}
 
 const JasonYbShoppingListPage = () => {
   interface ItemProps {
@@ -138,4 +147,3 @@ const JasonYbShoppingListPage = () => {
   )
 }
 
-export default JasonYbShoppingListPage

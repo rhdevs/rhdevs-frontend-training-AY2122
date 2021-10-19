@@ -17,6 +17,7 @@ export type ExampleType = {
 export enum SHOPPING_LIST_ACTIONS {
   //follow naming convention <enum name>.<enum item name>
   SET_EXAMPLE_LIST = 'SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST',
+  ADD_ITEM_QUANTITY = 'SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY',
 }
 
 /** Actions */
@@ -25,4 +26,9 @@ type SetExampleList = {
   exampleList: ExampleType[] //state name : state type
 }
 
-export type ActionTypes = SetExampleList
+type AddItemQuantity = {
+  type: typeof SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY
+  newList: ShoppingItem[]
+}
+
+export type ActionTypes = SetExampleList | AddItemQuantity
