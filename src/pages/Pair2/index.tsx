@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Input } from 'antd'
+import { Button, Form, Input } from 'antd'
 import {
   ShoppingListHeader,
   GroupCardsContainer,
@@ -75,9 +75,16 @@ const ItemAdder = (props: itemAdder) => {
   const [entry, setEntry] = useState<listEntry>({ quantity: 0, itemName: '' })
 
   const addItem = () => {
-    const newList = entry.itemName ? [...list, entry] : [...list]
+    const newList = entry.itemName ? [entry, ...list] : [...list]
     setList(newList)
+    setEntry({ quantity: 0, itemName: '' })
   }
+
+  // const addItem = () => {
+  //   const newList = entry.itemName ? [entry, ...list] : [...list]
+  //   setList(newList)
+  //   setEntry({ quantity: 0, itemName: '' })
+  // }
 
   const updateName = (value: string) => {
     const newEntry = { ...entry }
@@ -91,6 +98,8 @@ const ItemAdder = (props: itemAdder) => {
     setEntry(newEntry)
   }
 
+  const [form] = Form.useForm()
+
   return (
     <ItemAdderContainer>
       <Button onClick={addItem}>Add</Button>
@@ -102,6 +111,21 @@ const ItemAdder = (props: itemAdder) => {
       />
     </ItemAdderContainer>
   )
+  // return (
+  //   <Form form={form}>
+  //     <Form.Item>
+  //       <Button type="primary" htmlType="submit" onClick={addItem(getFieldValue('itemName'))}>
+  //         Add
+  //       </Button>
+  //     </Form.Item>
+  //     <Form.Item name="itemName" label="Item Name" rules={[{ required: true }]}>
+  //       <Input/>
+  //     </Form.Item>
+  //     <Form.Item name="quantity" label="Quantity" rules={[{ required: true }]}>
+  //       <Input type={'number'}/>
+  //     </Form.Item>
+  //   </Form>
+  // )
 }
 
 const Pair2 = () => {
