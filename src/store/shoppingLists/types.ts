@@ -1,5 +1,13 @@
 /** Types */
 //create your own type!
+export type ShoppingItem = {
+  key: number,
+  index: number,
+  itemName: string,
+  quantity: number
+}
+
+
 export type ExampleType = {
   varName: string //(variable name) : (its type)
   numName: number
