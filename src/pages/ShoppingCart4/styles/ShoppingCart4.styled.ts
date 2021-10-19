@@ -12,19 +12,17 @@ export const HeaderShoppingCart = styled.div`
   font-size: 50px;
 `
 
-export const AddItemButton = styled.div`
+export const AddItemButton = styled.button`
+  background-color: Transparent;
+  border: none;
   position: relative;
   left: 400px;
   bottom: 5px;
 `
-// padding: 10px 20px;
-// text-align: center;
-// display: inline-block;
-// font-size: 16px;
-// color: #4579f4;
-// border: 2px solid #e7e7e7;
+
 export const ShoppingListForm = styled.div`
-  top: 20px;
-  left: 50px;
-  right: 50px;
+  position: relative;
+  top: 50px;
+  left: 20px;
+  right: 20px;
 `
