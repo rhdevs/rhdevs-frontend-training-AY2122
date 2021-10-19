@@ -1,49 +1,138 @@
-import React, { useState } from 'react'
-import ShoppingList from './ShoppingList'
-import { PlusOutlined } from '@ant-design/icons'
-import { Button } from 'antd'
+import React, { useState, ChangeEvent } from 'react'
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
+import { Button, Tooltip, Table } from 'antd'
 import { ShoppingListHeader } from '../ShoppingListsMain/styles/ShoppingListMain.styled'
-import { ButtonDiv } from './styles/main.styled'
+import { QuantityElementsDiv, AddTextInput, ButtonDiv, DeleteText, Space } from './styles/main.styled'
 
 const Pair3 = () => {
-  const TestComponent = () => {
-    return <h1>component created</h1>
+  interface Data_entry {
+    key: number
+    name: string
+    quantity: number
   }
 
-  const appendtestcomponent = () => {
-    setTestList(testList.concat(<TestComponent />))
+  const [shoppingCart, setShoppingCart] = useState<Data_entry[]>([
+    {
+      key: 1,
+      name: 'test',
+      quantity: 1,
+    },
+  ])
+
+  const [quantity, setQuantity] = useState(0)
+  const [userInput, setUserInput] = useState('')
+  const [userInputQuantity, setUserInputQuantity] = useState('')
+
+  const handleSubmit = () => {
+    addCart(userInput)
+    setUserInput('')
   }
 
-  const [testList, setTestList] = useState<JSX.Element[]>([])
-
-  const [number, setNumber] = useState<number>(1)
-
-  const handleIncreaseNumber = () => {
-    setNumber(number + 1)
+  const addCart = (userInput: string) => {
+    let copy = [...shoppingCart]
+    copy = [...copy, { key: shoppingCart.length + 1, name: userInput, quantity: parseInt(userInputQuantity) }]
+    setShoppingCart(copy)
+    setUserInputQuantity('')
+    setUserInput('')
   }
 
-  const handleDecreaseNumber = () => {
-    setNumber(number - 1)
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserInput(e.target.value)
   }
+
+  const handleQuantityChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserInputQuantity(e.target.value)
+  }
+
+  const handleIncreaseQuantity = (entry: Data_entry) => {
+    const updatedShoppingCart = shoppingCart.map((x) => (x.key === entry.key ? { ...x, quantity: x.quantity + 1 } : x))
+    setShoppingCart(updatedShoppingCart)
+  }
+
+  const handleDecreaseQuantity = (entry: Data_entry) => {
+    const updatedShoppingCart = shoppingCart.map((x) =>
+      x.key === entry.key ? { ...x, quantity: x.quantity === 0 ? x.quantity : x.quantity - 1 } : x,
+    )
+    setShoppingCart(updatedShoppingCart)
+  }
+
+  const removeItem = (item: Data_entry) => {
+    const updatedShoppingCart = shoppingCart.filter((x) => x.key != item.key)
+    setShoppingCart(updatedShoppingCart)
+  }
+
+  const removeFromCart = () => {
+    let copy = [...shoppingCart]
+    copy = copy.filter((cartItem) => cartItem.name !== userInput)
+    setShoppingCart(copy)
+    setUserInputQuantity('')
+    setUserInput('')
+  }
+
+  const columns = [
+    {
+      title: 'Item Name',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: 'Quantity',
+      dataIndex: 'quantity',
+      key: 'quantity',
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (entry: Data_entry) => (
+        <div>
+          {/* Wrapped them in each divs so I can give them margin, not sure if this is okay */}
+          <QuantityElementsDiv>
+            <Tooltip title="Add">
+              <ButtonDiv>
+                <Button
+                  type="primary"
+                  shape="circle"
+                  icon={<MinusOutlined />}
+                  onClick={() => handleDecreaseQuantity(entry)}
+                />{' '}
+              </ButtonDiv>
+            </Tooltip>
+            <Tooltip title="Minus">
+              <ButtonDiv>
+                <Button
+                  type="primary"
+                  shape="circle"
+                  icon={<PlusOutlined />}
+                  onClick={() => handleIncreaseQuantity(entry)}
+                />
+              </ButtonDiv>
+            </Tooltip>
+          </QuantityElementsDiv>
+          <Space></Space>
+          <DeleteText onClick={() => removeItem(entry)}>Delete</DeleteText>
+        </div>
+      ),
+    },
+  ]
 
   return (
     <>
-      {/* <button onClick={handleIncreaseNumber}> press me to increase</button>
-      <button onClick={handleDecreaseNumber}> press me to decrease</button>
-      <div> {number} </div>
-      <div>
-        <button onClick={appendtestcomponent}>Add</button>
-        <TestComponent />
-        {testList}
-      </div> */}
       <ShoppingListHeader>Shopping List</ShoppingListHeader>
       <ButtonDiv>
-        <Button type="primary" icon={<PlusOutlined />} size="large">
-          Add Item
-        </Button>
+        <form>
+          <AddTextInput value={userInput} type="text" placeholder="Item" onChange={(e) => handleChange(e)} />
+          <AddTextInput
+            value={userInputQuantity}
+            type="text"
+            placeholder="Quantity"
+            onChange={(e) => handleQuantityChange(e)}
+          />
+          <Button style={{ marginRight: '10px' }} onClick={() => handleSubmit()} type="primary" icon={<PlusOutlined />}>
+            Add Item
+          </Button>
+        </form>
       </ButtonDiv>
-      {/* ShoppingList refers to the entire shopping cart table */}
-      <ShoppingList />;
+      <Table dataSource={shoppingCart} columns={columns} />;
     </>
   )
 }
