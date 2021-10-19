@@ -1,50 +1,92 @@
-import React from 'react'
-import 'antd/dist/antd.css'
-import { ReactDOM } from 'react'
-import { render } from 'react-dom'
+import React, { useState } from 'react'
 import { Button } from 'antd'
-import { Table, Tag, Space } from 'antd'
-import { MinusCircleOutlined, PlusCircleOutlined } from '@ant-design/icons'
+import { Table, Space } from 'antd'
+import { MinusCircleOutlined, PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 import { MainPage, HeaderShoppingCart, AddItemButton, ShoppingListForm } from './styles/ShoppingCart4.styled'
+import AddItemModal from '../../components/AddItemModal'
 
-const columns = [
-  {
-    title: 'Quantity',
-    dataIndex: 'quantity',
-    key: 'quantity',
-  },
-  {
-    title: 'Item Name',
-    dataIndex: 'item',
-    key: 'item',
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    render: () => (
-      <Space size="middle">
-        <MinusCircleOutlined></MinusCircleOutlined>
-        <PlusCircleOutlined></PlusCircleOutlined>
-        <a>Delete</a>
-      </Space>
-    ),
-  },
-]
-
-// ReactDom.render(<Table columns={columns} dataSource={data} />, document.getElementById('container'));
+export interface ShoppingListItem {
+  key: number
+  shoppingListItemName: string
+  itemCount: number
+}
 
 const ShoppingCart4 = () => {
+  const [shoppingList, setShoppingList] = useState([] as ShoppingListItem[])
+  const [showModal, setShowModal] = useState(false)
+
+  const columns = [
+    {
+      title: 'Quantity',
+      dataIndex: 'itemCount',
+      key: 'itemCount',
+    },
+    {
+      title: 'Item Name',
+      dataIndex: 'shoppingListItemName',
+      key: 'shoppingListItemName',
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (record: ShoppingListItem) => (
+        <Space size="middle">
+          <MinusCircleOutlined onClick={() => minusQuantity(record)}></MinusCircleOutlined>
+          <PlusCircleOutlined onClick={() => addQuantity(record)}></PlusCircleOutlined>
+          <a onClick={() => removeItem(record)}>Delete</a>
+        </Space>
+      ),
+    },
+  ]
+
+  const addData = (newShoppingListItem: ShoppingListItem) => {
+    shoppingList.push(newShoppingListItem)
+    setShoppingList(shoppingList)
+    setShowModal(false)
+  }
+
+  const addQuantity = (item: ShoppingListItem) => {
+    const updatedShoppingList = shoppingList.map((x) =>
+      x.key === item.key ? { ...x, itemCount: item.itemCount + 1 } : x,
+    )
+    setShoppingList(updatedShoppingList)
+  }
+
+  const minusQuantity = (item: ShoppingListItem) => {
+    const updatedShoppingList = shoppingList.map((x) =>
+      x.key === item.key && x.itemCount > 1 ? { ...x, itemCount: item.itemCount - 1 } : x,
+    )
+    setShoppingList(updatedShoppingList)
+  }
+
+  const removeItem = (item: ShoppingListItem) => {
+    const updatedShoppingList = shoppingList.filter((x) => x.key !== item.key)
+    setShoppingList(updatedShoppingList)
+  }
+
+  const hideModal = () => {
+    setShowModal(false)
+  }
+
   return (
     <MainPage>
       <HeaderShoppingCart>
         Shopping List
         <AddItemButton>
-          <Button>+ Add Item</Button>
+          <Button onClick={() => setShowModal(true)}>
+            <PlusOutlined /> Add Item
+          </Button>
         </AddItemButton>
       </HeaderShoppingCart>
       <ShoppingListForm>
-        <Table columns={columns}></Table>
+        <Table columns={columns} dataSource={[...shoppingList]} pagination={false}></Table>
       </ShoppingListForm>
+      <AddItemModal
+        itemKey={shoppingList.length}
+        showModal={showModal}
+        addData={addData}
+        hideModal={hideModal}
+      ></AddItemModal>
     </MainPage>
   )
 }
