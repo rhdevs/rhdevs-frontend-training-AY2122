@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Button, Card, Input, InputNumber, Table } from 'antd'
+import { Button, Card, Input, InputNumber, Table, Space } from 'antd'
+import { PlusCircleOutlined, MinusCircleOutlined } from '@ant-design/icons'
 import { valueType } from 'antd/lib/statistic/utils'
 
 const { Column } = Table
@@ -31,20 +32,47 @@ const Shopping_YXWP = () => {
     setIndex(index + 1)
   }
 
+  const handleIncreaseQuantity = (item: Props) => {
+    console.log('Increased')
+  }
+
+  const handleDecreaseQuantity = (item: Props) => {
+    console.log('Decreased')
+  }
+
+  const handleDeleteItem = (item: Props) => {
+    console.log('This needs to be fixed! Item is returning undefined.')
+  }
+
   return (
     <>
       <Card>
-        <h1>Shopping time! whee! To be updated!</h1>
-        <Input placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
-        <InputNumber placeholder="Quantity" onChange={(e) => setQuantity(e)} />
-        <Button type="primary" onClick={handleAddItem}>
-          Add item
-        </Button>
+        <h1>Shopping time! whee! WIP!</h1>
+        <Space>
+          <Input placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
+          <InputNumber placeholder="Quantity" onChange={(e) => setQuantity(e)} />
+          <Button type="primary" onClick={handleAddItem}>
+            Add item
+          </Button>
+        </Space>
         <Table dataSource={data}>
           <Column title="Index" dataIndex="key" key="key" />
-          <Column title="Quantity" dataIndex="itemQuantity" key="itemQuantity" />
           <Column title="Item Name" dataIndex="itemName" key="itemName" />
-          <Column title="Action" dataIndex="action" key="action" render={() => <Button> To be updated </Button>} />
+          <Column title="Quantity" dataIndex="itemQuantity" key="itemQuantity" />
+          <Column
+            title="Action"
+            dataIndex="action"
+            key="action"
+            render={(currItem: Props) => (
+              <Space>
+                <Button type="link" icon={<PlusCircleOutlined />} onClick={() => handleIncreaseQuantity(item)} />
+                <Button type="link" icon={<MinusCircleOutlined />} onClick={() => handleDecreaseQuantity(item)} />
+                <Button type="link" onClick={() => handleDeleteItem(currItem)}>
+                  Delete
+                </Button>
+              </Space>
+            )}
+          />
         </Table>
       </Card>
     </>
