@@ -1,16 +1,7 @@
-import { TableOutlined } from '@ant-design/icons'
-import { Button, Input, Space, Table } from 'antd'
-import Item from 'antd/lib/list/Item'
+import { Button, Space, Table } from 'antd'
 import React, { ChangeEvent, useState } from 'react'
-import ShoppingCard from '../../components/ShoppingCard'
-import {
-  ShoppingListHeader,
-  ItemRowContainer,
-  CellContainer,
-  AddTextInput,
-  CartTable,
-} from './styles/ShoppingPage.styled'
-import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
+import { ShoppingListHeader, ItemRowContainer, AddTextInput, CartTable } from './styles/ShoppingPage.styled'
+import { PlusOutlined } from '@ant-design/icons'
 
 const ShoppingPage = () => {
   interface CartItem {
@@ -60,7 +51,6 @@ const ShoppingPage = () => {
     },
   ]
 
-  const [quantity, setQuantity] = useState(0)
   const [userInput, setUserInput] = useState('')
   const [userInputQuantity, setUserInputQuantity] = useState('')
 
@@ -71,7 +61,14 @@ const ShoppingPage = () => {
 
   const addCart = (userInput: string) => {
     let copy = [...shoppingCart]
-    copy = [...copy, { index: shoppingCart.length + 1, name: userInput, quantity: parseInt(userInputQuantity) }]
+    copy = [
+      ...copy,
+      {
+        index: shoppingCart.length + 1,
+        name: userInput,
+        quantity: userInputQuantity === '' ? 1 : parseInt(userInputQuantity),
+      },
+    ]
     setShoppingCart(copy)
     setUserInputQuantity('')
     setUserInput('')
@@ -79,14 +76,6 @@ const ShoppingPage = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUserInput(e.target.value)
-  }
-
-  const removeFromCart = () => {
-    let copy = [...shoppingCart]
-    copy = copy.filter((cartItem) => cartItem.name !== userInput)
-    setShoppingCart(copy)
-    setUserInputQuantity('')
-    setUserInput('')
   }
 
   const handleQuantityChange = (e: ChangeEvent<HTMLInputElement>) => {
