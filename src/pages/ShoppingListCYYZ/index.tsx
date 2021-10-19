@@ -17,14 +17,32 @@ import {
 const { Option } = Select
 
 const ShoppingListMain = () => {
+  const [foodList, setFoodList] = useState(FoodItems)
+  const [othersList, setOthersList] = useState(Others)
   const [isMenuVisible, setMenuVisible] = useState(false)
+
+  const addFoodAmount = (item: Item) => {
+    const update = foodList.map((e) => (e.name === item.name ? { ...e, amount: item.amount + 1 } : e))
+    setFoodList(update)
+  }
+
+  const minusFoodAmount = (item: Item) => {
+    const update = foodList.map((e) => (e.name === item.name ? { ...e, amount: item.amount - 1 } : e))
+    setFoodList(update)
+  }
+  //
+  // const deleteFoodAmount = (item: Item) => {
+  //   const update = foodList.map((e) => (e.name === item.name ? null : e))
+  //   setFoodList(update)
+  // }
+
   return (
     <MainContainer>
       <BigHeader>
         <PageHeader onBack={() => null} title="Shopping List" />
         <AddContainer>
           <Popover
-            content={() => renderAddMenu(setMenuVisible)}
+            content={() => renderAddMenu(setMenuVisible, setFoodList, setOthersList, foodList, othersList)}
             title="Add new item"
             visible={isMenuVisible}
             trigger={'click'}
@@ -36,20 +54,20 @@ const ShoppingListMain = () => {
 
       <TableBody>
         <Card title="Food Items" style={style.card}>
-          {FoodItems.map((e) => (
+          {foodList.map((e) => (
             <ListItem key={e.name}>
               <ItemName>{e.name}</ItemName>
               <ItemAction>
-                <Button shape="circle" icon={<MinusOutlined />} />
+                <Button shape="circle" icon={<MinusOutlined />} onClick={() => minusFoodAmount(e)} />
                 {e.amount}
-                <Button shape="circle" icon={<PlusOutlined />} />
+                <Button shape="circle" icon={<PlusOutlined />} onClick={() => addFoodAmount(e)} />
                 <Button shape="circle" icon={<DeleteOutlined />} />
               </ItemAction>
             </ListItem>
           ))}
         </Card>
         <Card title="Others" style={style.card}>
-          {Others.map((e) => (
+          {othersList.map((e) => (
             <ListItem key={e.name}>
               <ItemName>{e.name}</ItemName>
               <ItemAction>
@@ -66,17 +84,23 @@ const ShoppingListMain = () => {
   )
 }
 
-const renderAddMenu = (setMenuVisible: (state: boolean) => void) => {
+const renderAddMenu = (
+  setMenuVisible: (state: boolean) => void,
+  setFoodList: (state: any) => void,
+  setOthersList: (state: any) => void,
+  foodList: any,
+  othersList: any,
+) => {
   const [category, setCategory] = useState('food')
   const [name, setName] = useState('')
 
   const addItem = () => {
     if (category === 'food') {
-      FoodItems.push({ name: name, amount: 1 })
+      setFoodList([...foodList, { name: name, amount: 1 }])
       setMenuVisible(false)
     }
     if (category === 'others') {
-      Others.push({ name: name, amount: 1 })
+      setOthersList([...othersList, { name: name, amount: 1 }])
       setMenuVisible(false)
     }
   }
