@@ -30,11 +30,12 @@ const ShoppingListMain = () => {
     const update = foodList.map((e) => (e.name === item.name ? { ...e, amount: item.amount - 1 } : e))
     setFoodList(update)
   }
-  //
-  // const deleteFoodAmount = (item: Item) => {
-  //   const update = foodList.map((e) => (e.name === item.name ? null : e))
-  //   setFoodList(update)
-  // }
+
+  const deleteFoodAmount = (item: Item) => {
+    const update = foodList.filter((e) => e.name !== item.name)
+    //console.log(update)
+    setFoodList(update)
+  }
 
   return (
     <MainContainer>
@@ -61,7 +62,7 @@ const ShoppingListMain = () => {
                 <Button shape="circle" icon={<MinusOutlined />} onClick={() => minusFoodAmount(e)} />
                 {e.amount}
                 <Button shape="circle" icon={<PlusOutlined />} onClick={() => addFoodAmount(e)} />
-                <Button shape="circle" icon={<DeleteOutlined />} />
+                <Button shape="circle" icon={<DeleteOutlined />} onClick={() => deleteFoodAmount(e)} />
               </ItemAction>
             </ListItem>
           ))}
