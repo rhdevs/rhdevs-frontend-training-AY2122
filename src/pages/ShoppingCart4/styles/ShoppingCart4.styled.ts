@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const MainPage = styled.div`
-  margin: 10px 20px;
   height: 100%;
   width: 100%;
 `
@@ -21,8 +20,5 @@ export const AddItemButton = styled.button`
 `
 
 export const ShoppingListForm = styled.div`
-  position: relative;
-  top: 50px;
-  left: 20px;
-  right: 20px;
+  margin: 50px 100px;
 `
