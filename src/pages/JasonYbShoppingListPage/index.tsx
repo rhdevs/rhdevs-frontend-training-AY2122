@@ -39,9 +39,9 @@ const JasonYbShoppingListPage = () => {
 
   const columns = [
     {
-      title: 'Item',
-      dataIndex: 'name',
-      key: 'item',
+      title: 'Item Name',
+      dataIndex: 'itemName',
+      key: 'itemName',
     },
     {
       title: 'Quantity',
