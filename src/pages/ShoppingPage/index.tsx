@@ -10,9 +10,11 @@ import {
   GroupCardsContainer,
   ItemRowContainer,
   CellContainer,
-  AddItemContainer,
+  AddTextInput,
+  ButtonRow,
+  CartTable,
 } from './styles/ShoppingPage.styled'
-import { PlusOutlined, MinusOutlined, PlusSquareOutlined } from '@ant-design/icons'
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
 const ShoppingPage = () => {
   interface CartItem {
@@ -49,19 +51,23 @@ const ShoppingPage = () => {
       title: 'Action',
       dataIndex: '',
       key: 'x',
-      render: () => <a>Delete</a>,
-    },
-    {
-      title: 'Action',
-      dataIndex: '',
-      key: 'x',
-      render: () => <a>+</a>,
+      render: (text: CartItem) => (
+        <>
+          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(text.index - 1)}>
+            +
+          </Button>
+          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(text.index - 1)}>
+            -
+          </Button>
+        </>
+      ),
     },
   ]
 
   const history = useHistory()
   const [quantity, setQuantity] = useState(0)
   const [userInput, setUserInput] = useState('')
+  const [userInputQuantity, setUserInputQuantity] = useState('')
 
   const handleSubmit = () => {
     addCart(userInput)
@@ -70,28 +76,72 @@ const ShoppingPage = () => {
 
   const addCart = (userInput: string) => {
     let copy = [...shoppingCart]
-    copy = [...copy, { index: shoppingCart.length + 1, name: userInput, quantity: 1 }]
+    copy = [...copy, { index: shoppingCart.length + 1, name: userInput, quantity: parseInt(userInputQuantity) }]
     setShoppingCart(copy)
+    setUserInputQuantity('')
+    setUserInput('')
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUserInput(e.target.value)
   }
 
+  const removeFromCart = () => {
+    let copy = [...shoppingCart]
+    copy = copy.filter((cartItem) => cartItem.name !== userInput)
+    setShoppingCart(copy)
+    setUserInputQuantity('')
+    setUserInput('')
+  }
+
+  const handleQuantityChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserInputQuantity(e.target.value)
+  }
+
+  const handleAddQuantity = (index: number) => {
+    setShoppingCart((cartList: CartItem[]) => {
+      cartList[index].quantity = cartList[index].quantity + 1
+      return cartList
+    })
+  }
+
+  const handleReduceQuantity = (index: number) => {
+    setShoppingCart((cartList: CartItem[]) => {
+      cartList[index].quantity = cartList[index].quantity - 1
+      return cartList
+    })
+  }
+
   return (
     <>
       <ShoppingListHeader>
         Our Shopping Page!
-        <AddItemContainer>
+        <ItemRowContainer>
           <form>
-            <input value={userInput} type="text" placeholder="New Item" onChange={(e) => handleChange(e)} />
-            <Button onClick={() => handleSubmit()} type="primary" icon={<PlusSquareOutlined />}>
+            <AddTextInput value={userInput} type="text" placeholder="Item" onChange={(e) => handleChange(e)} />
+            <AddTextInput
+              value={userInputQuantity}
+              type="text"
+              placeholder="Quantity"
+              onChange={(e) => handleQuantityChange(e)}
+            />
+            <Button
+              style={{ marginRight: '10px' }}
+              onClick={() => handleSubmit()}
+              type="primary"
+              icon={<PlusOutlined />}
+            >
               Add Item
             </Button>
+            <Button onClick={() => removeFromCart()} type="primary" icon={<MinusOutlined />}>
+              Remove Item
+            </Button>
           </form>
-        </AddItemContainer>
+        </ItemRowContainer>
       </ShoppingListHeader>
-      <Table dataSource={shoppingCart} columns={columns} />
+      <CartTable>
+        <Table dataSource={shoppingCart} columns={columns} />
+      </CartTable>
       <ItemRowContainer>
         <CellContainer>Item</CellContainer>
         <CellContainer>{quantity}</CellContainer>
