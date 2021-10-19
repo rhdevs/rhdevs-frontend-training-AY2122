@@ -17,6 +17,11 @@ const LandingPage = () => {
             devs="Chun Yu, En Hao, Prince, Maxim, Richard"
             designers="Shermaine, Nguyen, Felicia"
           />
+          <GroupCard
+            groupNumber={2}
+            devs="wenfeng, jason, shao kiat, yong zhang, yongbin"
+            designers="amos, yu an, audery"
+          />
           <GroupCard groupNumber={3} devs="Yixuan, Tai, Venus, Kiyong" designers="Dennis, Austin" />
           <GroupCard groupNumber={4} devs="Elva, Zhikai, Weipin, Marcus" designers="Gregory, Shannon, Brendan" />
         </InformationCardSection>
