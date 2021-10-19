@@ -1,101 +1,166 @@
 import React, { useState } from 'react'
+import { Button, Input } from 'antd'
 import {
   ShoppingListHeader,
   GroupCardsContainer,
   FullScreenContainer,
   Quantity,
   ItemName,
-  Action,
   QuantityContainer,
   ItemNameContainer,
   ActionContainer,
+  ItemAdderContainer,
 } from './styles/Pair2.styled'
-import { Button } from 'antd'
+import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 
-export default function Pair2() {
-  const [Pair2a, setPair2number] = useState(3)
-  const handleIncrease = () => {
-    setPair2number(Pair2a + 1)
+type Props = {
+  list: listEntry[]
+  setList: React.Dispatch<React.SetStateAction<listEntry[]>>
+  index: number
+}
+
+type listEntry = {
+  quantity: number
+  itemName: string
+}
+
+type itemAdder = {
+  list: listEntry[]
+  setList: React.Dispatch<React.SetStateAction<listEntry[]>>
+}
+
+const ListHeader = () => {
+  return (
+    <GroupCardsContainer>
+      <QuantityContainer>
+        <h2>Quantity</h2>
+      </QuantityContainer>
+      <ItemNameContainer>
+        <h2>Item</h2>
+      </ItemNameContainer>
+      <ActionContainer>
+        <h2>Actions</h2>
+      </ActionContainer>
+    </GroupCardsContainer>
+  )
+}
+
+const ListItem = (props: Props) => {
+  const list = props.list
+  const setList = props.setList
+  const index = props.index
+
+  const incQuantity = () => {
+    const newList = [...list]
+    newList[index].quantity = newList[index].quantity + 1
+    setList(newList)
   }
-  const handleDecrease = () => {
-    setPair2number(Pair2a - 1)
+
+  const decQuantity = () => {
+    const newList = [...list]
+    newList[index].quantity = newList[index].quantity - 1
+    setList(newList)
   }
-  const [Pair2b, setPair2numberb] = useState(3)
-  const handleIncreaseb = () => {
-    setPair2numberb(Pair2b + 1)
+
+  const deleteItem = () => {
+    const newList = [...list]
+    newList.splice(index, 1)
+    setList(newList)
   }
-  const handleDecreaseb = () => {
-    setPair2numberb(Pair2b - 1)
+
+  return (
+    <GroupCardsContainer>
+      <QuantityContainer>
+        <Quantity>{list[index].quantity}</Quantity>
+      </QuantityContainer>
+      <ItemNameContainer>
+        <ItemName>{list[index].itemName}</ItemName>
+      </ItemNameContainer>
+      <ActionContainer>
+        <Button icon={<PlusOutlined />} onClick={incQuantity} />
+        <span> Quantity </span>
+        <Button icon={<MinusOutlined />} onClick={decQuantity} />
+        <Button danger onClick={deleteItem} style={{ margin: '20px' }}>
+          Delete
+        </Button>
+      </ActionContainer>
+    </GroupCardsContainer>
+  )
+}
+
+const ItemAdder = (props: itemAdder) => {
+  const list = props.list
+  const setList = props.setList
+
+  const [entry, setEntry] = useState<listEntry>({ quantity: 0, itemName: '' })
+
+  const addItem = () => {
+    const newList = entry.itemName ? [entry, ...list] : [...list]
+    setList(newList)
+    setEntry({ quantity: 0, itemName: '' })
   }
-  const [Pair2c, setPair2numberc] = useState(3)
-  const handleIncreasec = () => {
-    setPair2numberc(Pair2c + 1)
+
+  const updateName = (value: string) => {
+    const newEntry = { ...entry }
+    newEntry.itemName = value
+    setEntry(newEntry)
   }
-  const handleDecreasec = () => {
-    setPair2numberc(Pair2c - 1)
+
+  const updateQuantity = (value: number) => {
+    const newEntry = { ...entry }
+    newEntry.quantity = value
+    setEntry(newEntry)
   }
+
+  return (
+    <ItemAdderContainer>
+      <Button type={'primary'} onClick={addItem} style={{ width: '140px' }}>
+        Add
+      </Button>
+      <Input addonBefore={'Item Name'} onChange={(e) => updateName(e.currentTarget.value)} />
+      <Input
+        type={'number'}
+        addonBefore={'Quantity'}
+        onChange={(e) => updateQuantity(parseInt(e.currentTarget.value))}
+        style={{ width: '240px' }}
+      />
+    </ItemAdderContainer>
+  )
+}
+
+const Pair2 = () => {
+  const defaultItems: listEntry[] = [
+    {
+      quantity: 2,
+      itemName: 'broccoli',
+    },
+    {
+      quantity: 6,
+      itemName: 'nutella',
+    },
+    {
+      quantity: 4,
+      itemName: 'grapes',
+    },
+    {
+      quantity: 6,
+      itemName: 'oranges',
+    },
+  ]
+  const [items, setItems] = useState(defaultItems)
 
   return (
     <>
       <ShoppingListHeader> Shopping List</ShoppingListHeader>
+      <ItemAdder list={items} setList={setItems} />
+      <ListHeader />
       <FullScreenContainer>
-        <GroupCardsContainer>
-          <QuantityContainer>
-            <Quantity>Quantity</Quantity>
-          </QuantityContainer>
-          <ItemNameContainer>
-            <ItemName>Item Name</ItemName>
-          </ItemNameContainer>
-          <ActionContainer>
-            <Action>Action</Action>
-          </ActionContainer>
-        </GroupCardsContainer>
-        <GroupCardsContainer>
-          <QuantityContainer>
-            <Quantity>{`${Pair2a}`}</Quantity>
-          </QuantityContainer>
-          <ItemNameContainer>
-            <ItemName>Eggs</ItemName>
-          </ItemNameContainer>
-          <ActionContainer>
-            <Action>
-              Delete
-              <Button onClick={handleIncrease}>+</Button>
-              <Button onClick={handleDecrease}>-</Button>
-            </Action>
-          </ActionContainer>
-        </GroupCardsContainer>
-        <GroupCardsContainer>
-          <QuantityContainer>
-            <Quantity>{`${Pair2b}`}</Quantity>
-          </QuantityContainer>
-          <ItemNameContainer>
-            <ItemName>Eggs</ItemName>
-          </ItemNameContainer>
-          <ActionContainer>
-            <Action>
-              Delete
-              <Button onClick={handleIncreaseb}>+</Button>
-              <Button onClick={handleDecreaseb}>-</Button>
-            </Action>
-          </ActionContainer>
-        </GroupCardsContainer>
-        <GroupCardsContainer>
-          <QuantityContainer>
-            <Quantity>{`${Pair2c}`}</Quantity>
-          </QuantityContainer>
-          <ItemNameContainer>
-            <ItemName>Eggs</ItemName>
-          </ItemNameContainer>
-          <ActionContainer>
-            <Action>
-              Delete
-              <Button onClick={handleIncreasec}>+</Button>
-              <Button onClick={handleDecreasec}>-</Button>
-            </Action>
-          </ActionContainer>
-        </GroupCardsContainer>
+        {items.map((value, index) => (
+          <ListItem key={`list-item-${index}`} list={items} setList={setItems} index={index} />
+        ))}
       </FullScreenContainer>
     </>
   )
 }
+
+export default Pair2

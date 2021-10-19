@@ -48,6 +48,9 @@ export const ItemName = styled.p`
 export const ActionContainer = styled.div`
   position: static;
   padding: 1px;
+  @media (max-width: 600px) {
+    width: 30vw;
+  }
 `
 export const Action = styled.p`
   font-style: normal;
@@ -55,3 +58,12 @@ export const Action = styled.p`
   font-size: calc(11px + 1vw);
   position: relative;
 `
+
+export const ItemAdderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+export const ItemNameInput = styled.input``
+
+export const QuantityInput = styled.input``
