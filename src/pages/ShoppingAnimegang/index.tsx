@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ShoppingListHeader, TablePart, TopRow } from './styles/ShoppingAnimegang.styled'
 import { Table, Button, Space } from 'antd'
 import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
@@ -25,7 +25,7 @@ const columns = [
     key: 'action',
     render: () => (
       <Space size="middle">
-        <Button shape="circle" icon={<PlusOutlined />}></Button>
+        <Button onClick={() => console.log("clicked on plus!")} shape="circle" icon={<PlusOutlined />}></Button>
         <Button shape="circle" icon={<MinusOutlined />}></Button>
         <a>Delete</a>
       </Space>
@@ -33,7 +33,7 @@ const columns = [
   },
 ]
 
-const data = [
+const initialList: Item[] = [
   {
     key: '1',
     quantity: 3,
@@ -46,7 +46,14 @@ const data = [
   },
 ]
 
+type Item = {
+  key: string,
+  quantity: number,
+  item_name: string,
+}
+
 const ShoppingAnimegang = () => {
+  const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
   return (
     <FullScreenContainer>
       <TopRow>
@@ -54,7 +61,7 @@ const ShoppingAnimegang = () => {
         <Button type="primary">+ Add item</Button>
       </TopRow>
       <TablePart>
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={shoppingList} />
       </TablePart>
     </FullScreenContainer>
   )
