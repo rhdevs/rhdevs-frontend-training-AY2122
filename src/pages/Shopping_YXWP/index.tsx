@@ -65,8 +65,8 @@ const Shopping_YXWP = () => {
             key="action"
             render={(currItem: Props) => (
               <Space>
-                <Button type="link" icon={<PlusCircleOutlined />} onClick={() => handleIncreaseQuantity(item)} />
-                <Button type="link" icon={<MinusCircleOutlined />} onClick={() => handleDecreaseQuantity(item)} />
+                <Button type="link" icon={<PlusCircleOutlined />} onClick={() => handleIncreaseQuantity(currItem)} />
+                <Button type="link" icon={<MinusCircleOutlined />} onClick={() => handleDecreaseQuantity(currItem)} />
                 <Button type="link" onClick={() => handleDeleteItem(currItem)}>
                   Delete
                 </Button>
