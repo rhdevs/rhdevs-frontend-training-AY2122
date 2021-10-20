@@ -25,12 +25,8 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-<<<<<<< HEAD
-    "redux": "^4.1.1",
-=======
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
->>>>>>> 8386ac903cb651209806a66525ddaea17d646335
     "styled-components": "^5.3.1",
     "typescript": "^4.3.5",
     "web-vitals": "^2.1.0"
