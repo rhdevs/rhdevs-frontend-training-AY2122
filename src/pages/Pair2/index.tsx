@@ -16,10 +16,11 @@ import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 type Props = {
   list: listEntry[]
   setList: React.Dispatch<React.SetStateAction<listEntry[]>>
-  index: number
+  id: number
 }
 
 type listEntry = {
+  id: number
   quantity: number
   itemName: string
 }
@@ -48,33 +49,32 @@ const ListHeader = () => {
 const ListItem = (props: Props) => {
   const list = props.list
   const setList = props.setList
-  const index = props.index
+  const id = props.id
 
   const incQuantity = () => {
     const newList = [...list]
-    newList[index].quantity = newList[index].quantity + 1
+    newList.forEach((item) => item.id == id && ++item.quantity)
     setList(newList)
   }
 
   const decQuantity = () => {
     const newList = [...list]
-    newList[index].quantity = newList[index].quantity - 1
+    newList.forEach((item) => item.id == id && --item.quantity)
     setList(newList)
   }
 
   const deleteItem = () => {
     const newList = [...list]
-    newList.splice(index, 1)
-    setList(newList)
+    setList(newList.filter((item) => item.id !== id))
   }
 
   return (
     <GroupCardsContainer>
       <QuantityContainer>
-        <Quantity>{list[index].quantity}</Quantity>
+        <Quantity>{list.find((item) => item.id == id)?.quantity}</Quantity>
       </QuantityContainer>
       <ItemNameContainer>
-        <ItemName>{list[index].itemName}</ItemName>
+        <ItemName>{list.find((item) => item.id == id)?.itemName}</ItemName>
       </ItemNameContainer>
       <ActionContainer>
         <Button icon={<PlusOutlined />} onClick={incQuantity} />
@@ -92,12 +92,19 @@ const ItemAdder = (props: itemAdder) => {
   const list = props.list
   const setList = props.setList
 
-  const [entry, setEntry] = useState<listEntry>({ quantity: 0, itemName: '' })
+  const [id, setId] = useState(list.length)
+  const [entry, setEntry] = useState<listEntry>({ id: id, quantity: 0, itemName: '' })
 
   const addItem = () => {
-    const newList = entry.itemName ? [entry, ...list] : [...list]
-    setList(newList)
-    setEntry({ quantity: 0, itemName: '' })
+    console.log(id)
+    setEntry({ ...entry, id: id })
+
+    if (entry.itemName) {
+      setId(id + 1)
+      const newList = [entry, ...list]
+      setList(newList)
+    }
+    // setEntry({ quantity: 0, itemName: '' })
   }
 
   const updateName = (value: string) => {
@@ -129,20 +136,24 @@ const ItemAdder = (props: itemAdder) => {
 }
 
 const Pair2 = () => {
-  const defaultItems: listEntry[] = [
+  const defaultItems = [
     {
+      id: 0,
       quantity: 2,
       itemName: 'broccoli',
     },
     {
+      id: 1,
       quantity: 6,
       itemName: 'nutella',
     },
     {
+      id: 2,
       quantity: 4,
       itemName: 'grapes',
     },
     {
+      id: 3,
       quantity: 6,
       itemName: 'oranges',
     },
@@ -151,12 +162,12 @@ const Pair2 = () => {
 
   return (
     <>
-      <ShoppingListHeader> Shopping List</ShoppingListHeader>
+      <ShoppingListHeader>Shopping List</ShoppingListHeader>
       <ItemAdder list={items} setList={setItems} />
       <ListHeader />
       <FullScreenContainer>
-        {items.map((value, index) => (
-          <ListItem key={`list-item-${index}`} list={items} setList={setItems} index={index} />
+        {items.map((value) => (
+          <ListItem key={`list-item-${value.id}`} list={items} setList={setItems} id={value.id} />
         ))}
       </FullScreenContainer>
     </>
