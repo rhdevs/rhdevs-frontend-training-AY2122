@@ -104,7 +104,7 @@ const ItemAdder = (props: itemAdder) => {
       const newList = [entry, ...list]
       setList(newList)
     }
-    // setEntry({ quantity: 0, itemName: '' })
+    setEntry({ id: id + 1, quantity: 0, itemName: entry.itemName }) // prevents unexpected behaviour when adding items of same name simultaneously
   }
 
   const updateName = (value: string) => {
