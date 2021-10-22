@@ -81,7 +81,7 @@ const ShoppingAnimegang = () => {
       title: 'Action',
       dataIndex: 'action',
       key: 'action',
-      render: (record: Item) => (
+      render: (item: Item, record: Item) => (
         <Space size="middle">
           <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
           <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
