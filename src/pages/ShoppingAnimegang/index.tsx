@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ShoppingListHeader, TablePart, TopRow } from './styles/ShoppingAnimegang.styled'
+import { AddItemsContainer, ShoppingListHeader, TablePart, TopRow } from './styles/ShoppingAnimegang.styled'
 import { Table, Button, Space, Input } from 'antd'
 import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
@@ -52,7 +52,6 @@ const ShoppingAnimegang = () => {
   }
   const handleOnAddItemClick = () => {
     setShowInput(true)
-    setAddItemName('Enter your value')
   }
   const handleOnType = (e: string) => {
     setAddItemName(e)
@@ -64,7 +63,7 @@ const ShoppingAnimegang = () => {
     const newKey: string = (shoppingList.length + 1).toString()
     const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName }
     newList.push(newItem)
-    setShoppingList(newList)
+    addItemName === '' ? console.log('no item') : setShoppingList(newList)
     setShowInput(false)
   }
   const columns = [
@@ -82,7 +81,7 @@ const ShoppingAnimegang = () => {
       title: 'Action',
       dataIndex: 'action',
       key: 'action',
-      render: (text: any, record: Item) => (
+      render: (record: Item) => (
         <Space size="middle">
           <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
           <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
@@ -91,25 +90,30 @@ const ShoppingAnimegang = () => {
       ),
     },
   ]
-  const [addItemName, setAddItemName] = useState<string>('Enter your item')
+  const [addItemName, setAddItemName] = useState<string>('')
   const [showInput, setShowInput] = useState<boolean>(false)
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
   return (
     <FullScreenContainer>
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
-        {!showInput && (
-          <Button onClick={() => handleOnAddItemClick()} type="primary">
-            + Add item
-          </Button>
-        )}
-        {showInput && (
-          <Input
-            placeholder={addItemName}
-            onChange={(e) => handleOnType(e.target.value)}
-            onPressEnter={() => handleOnEnter()}
-          />
-        )}
+        <AddItemsContainer>
+          {!showInput && (
+            <Button onClick={() => handleOnAddItemClick()} type="primary">
+              + Add item
+            </Button>
+          )}
+          {showInput && (
+            <Input
+              addonBefore="Enter your item"
+              defaultValue=""
+              size="small"
+              placeholder={addItemName}
+              onChange={(e) => handleOnType(e.target.value)}
+              onPressEnter={() => handleOnEnter()}
+            />
+          )}
+        </AddItemsContainer>
       </TopRow>
       <TablePart>
         <Table columns={columns} dataSource={shoppingList} />

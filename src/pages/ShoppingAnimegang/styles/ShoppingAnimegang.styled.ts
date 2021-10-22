@@ -24,9 +24,18 @@ export const TopRow = styled.div`
   flex-direction: row;
   flex: 1 1 10px;
   align-items: center;
+  justify-items: space-between;
   position: relative;
   width: 100%;
   height: 20%;
+`
+export const AddItemsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 20%%;
+  height: 100%;
 `
 export const TablePart = styled.div`
   display: flex;
