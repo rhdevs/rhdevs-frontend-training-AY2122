@@ -24,7 +24,7 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/Pair2'))
+const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
 
 function App() {
   useEffect(() => {

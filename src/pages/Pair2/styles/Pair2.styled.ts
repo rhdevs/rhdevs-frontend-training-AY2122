@@ -63,7 +63,3 @@ export const ItemAdderContainer = styled.div`
   display: flex;
   flex-direction: row;
 `
-
-export const ItemNameInput = styled.input``
-
-export const QuantityInput = styled.input``
