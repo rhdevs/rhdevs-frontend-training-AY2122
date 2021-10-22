@@ -93,7 +93,7 @@ const ShoppingAnimegang = () => {
       ),
     },
   ]
-  const [newKeyName, setNewKeyName] = useState<number>(initialList.length)
+  const [newKeyName, setNewKeyName] = useState<number>(initialList.length + 1)
   const [addItemName, setAddItemName] = useState<string>('')
   const [showInput, setShowInput] = useState<boolean>(false)
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
