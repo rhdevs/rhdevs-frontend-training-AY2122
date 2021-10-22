@@ -59,11 +59,14 @@ const ShoppingAnimegang = () => {
     //setShowInput(false)
   }
   const handleOnEnter = () => {
-    const newList: Item[] = shoppingList.filter((item) => item)
-    const newKey: string = (shoppingList.length + 1).toString()
-    const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName }
-    newList.push(newItem)
-    addItemName === '' ? console.log('no item') : setShoppingList(newList)
+    if (addItemName != '') {
+      const newList: Item[] = shoppingList.filter((item) => item)
+      setNewKeyName(newKeyName + 1)
+      const newKey: string = newKeyName.toString()
+      const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName }
+      newList.push(newItem)
+      setShoppingList(newList)
+    }
     setShowInput(false)
   }
   const columns = [
@@ -90,6 +93,7 @@ const ShoppingAnimegang = () => {
       ),
     },
   ]
+  const [newKeyName, setNewKeyName] = useState<number>(initialList.length)
   const [addItemName, setAddItemName] = useState<string>('')
   const [showInput, setShowInput] = useState<boolean>(false)
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
