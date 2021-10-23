@@ -11,11 +11,15 @@ type Props = {
 }
 
 const AddItemModal = (props: Props) => {
-  const [shoppingListItemName, setshoppingListItemName] = useState('')
-  const [itemCount, setItemCount] = useState(1)
+  const [shoppingListItemName, setShoppingListItemName] = useState('')
+  const [itemCount, setItemCount] = useState(0)
 
   const validateData = () => {
-    props.addData({ key: props.itemKey, shoppingListItemName, itemCount })
+    if (shoppingListItemName && shoppingListItemName.length > 0 && itemCount > 0) {
+      props.addData({ key: props.itemKey, shoppingListItemName, itemCount })
+      setShoppingListItemName('')
+      setItemCount(0)
+    }
   }
 
   return (
@@ -31,7 +35,7 @@ const AddItemModal = (props: Props) => {
         <ModalTitle>Add Item</ModalTitle>
       </ModalHeader>
       <InputContainer>
-        <Input addonBefore="Item Name" onChange={(e) => setshoppingListItemName(e.target.value)}></Input>
+        <Input addonBefore="Item Name" onChange={(e) => setShoppingListItemName(e.target.value)}></Input>
       </InputContainer>
       <InputContainer>
         <Input type="number" addonBefore="Quantity" onChange={(e) => setItemCount(parseInt(e.target.value))}></Input>

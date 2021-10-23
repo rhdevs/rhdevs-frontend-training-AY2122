@@ -82,7 +82,7 @@ const ShoppingCart4 = () => {
         <Table columns={columns} dataSource={[...shoppingList]} pagination={false}></Table>
       </ShoppingListForm>
       <AddItemModal
-        itemKey={shoppingList.length}
+        itemKey={shoppingList.length === 0 ? 0 : shoppingList[shoppingList.length - 1].key + 1}
         showModal={showModal}
         addData={addData}
         hideModal={hideModal}
