@@ -33,8 +33,22 @@ const ShoppingListMain = () => {
 
   const deleteFoodAmount = (item: Item) => {
     const update = foodList.filter((e) => e.name !== item.name)
-    //console.log(update)
     setFoodList(update)
+  }
+
+  const addOthersAmount = (item: Item) => {
+    const update = othersList.map((e) => (e.name === item.name ? { ...e, amount: item.amount + 1 } : e))
+    setOthersList(update)
+  }
+
+  const minusOthersAmount = (item: Item) => {
+    const update = othersList.map((e) => (e.name === item.name ? { ...e, amount: item.amount - 1 } : e))
+    setOthersList(update)
+  }
+
+  const deleteOthersAmount = (item: Item) => {
+    const update = othersList.filter((e) => e.name !== item.name)
+    setOthersList(update)
   }
 
   return (
@@ -72,10 +86,10 @@ const ShoppingListMain = () => {
             <ListItem key={e.name}>
               <ItemName>{e.name}</ItemName>
               <ItemAction>
-                <Button shape="circle" icon={<MinusOutlined />} />
+                <Button shape="circle" icon={<MinusOutlined />} onClick={() => minusOthersAmount(e)} />
                 {e.amount}
-                <Button shape="circle" icon={<PlusOutlined />} />
-                <Button shape="circle" icon={<DeleteOutlined />} />
+                <Button shape="circle" icon={<PlusOutlined />} onClick={() => addOthersAmount(e)} />
+                <Button shape="circle" icon={<DeleteOutlined />} onClick={() => deleteOthersAmount(e)} />
               </ItemAction>
             </ListItem>
           ))}
