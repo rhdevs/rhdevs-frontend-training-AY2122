@@ -25,19 +25,46 @@ export const GroupCardsContainer = styled.div`
   flex-direction: row;
   padding: 1em;
 `
+export const QuantityHeaderContainer = styled.div`
+  position: static;
+  padding: 1px;
+  background-color: #e0e0e0;
+  text-align: center;
+  vertical-align: middle;
+`
+export const ItemNameHeaderContainer = styled.div`
+  position: static;
+  padding: 1px;
+  background-color: #e0e0e0;
+  text-align: center;
+  vertical-align: middle;
+`
+export const ActionHeaderContainer = styled.div`
+  position: static;
+  padding: 1px;
+  @media (max-width: 600px) {
+    width: 30vw;
+  }
+  background-color: #e0e0e0;
+  text-align: center;
+  vertical-align: middle;
+`
 export const QuantityContainer = styled.div`
   position: static;
   padding: 1px;
+  text-align: center;
 `
 export const Quantity = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: calc(11px + 1vw);
   position: relative;
+  color: #1890ff;
 `
 export const ItemNameContainer = styled.div`
   position: static;
   padding: 1px;
+  text-align: center;
 `
 export const ItemName = styled.p`
   font-style: normal;
@@ -51,6 +78,7 @@ export const ActionContainer = styled.div`
   @media (max-width: 600px) {
     width: 30vw;
   }
+  text-align: center;
 `
 export const Action = styled.p`
   font-style: normal;

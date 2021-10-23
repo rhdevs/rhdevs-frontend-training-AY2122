@@ -21,7 +21,7 @@ export const AddButton = (props: Props) => {
 
 export const DeleteButton = (props: Props) => {
   return (
-    <Button danger onClick={props.onClick} style={{ margin: '20px' }}>
+    <Button danger onClick={props.onClick} style={{ margin: '5px' }}>
       Delete
     </Button>
   )

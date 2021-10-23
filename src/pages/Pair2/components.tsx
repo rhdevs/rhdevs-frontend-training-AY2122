@@ -8,6 +8,9 @@ import {
   ItemNameContainer,
   ActionContainer,
   ItemAdderContainer,
+  ActionHeaderContainer,
+  ItemNameHeaderContainer,
+  QuantityHeaderContainer,
 } from './styles/Pair2.styled'
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 import { AddButton, DeleteButton, QuantityInput } from './styles/components'
@@ -32,15 +35,15 @@ type ItemAdderType = {
 export const ListHeader = () => {
   return (
     <GroupCardsContainer>
-      <QuantityContainer>
+      <QuantityHeaderContainer>
         <h2>Quantity</h2>
-      </QuantityContainer>
-      <ItemNameContainer>
+      </QuantityHeaderContainer>
+      <ItemNameHeaderContainer>
         <h2>Item</h2>
-      </ItemNameContainer>
-      <ActionContainer>
+      </ItemNameHeaderContainer>
+      <ActionHeaderContainer>
         <h2>Actions</h2>
-      </ActionContainer>
+      </ActionHeaderContainer>
     </GroupCardsContainer>
   )
 }
