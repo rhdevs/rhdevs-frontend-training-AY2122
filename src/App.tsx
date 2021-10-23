@@ -13,7 +13,7 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
-  SHOPPING_PAGE_PAIR_FOUR = './shopping-lists/4',
+  SHOPPING_PAGE_PAIR_FOUR = '/shopping-lists-pair-4',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -47,10 +47,15 @@ function App() {
           <ShoppingListsMainPage />
         </StyledMain>
       </Route>
-      <Route path={`${PATHS.SHOPPING_LISTS}/:groupnumber`} exact>
+      <Route path={`${PATHS.SHOPPING_PAGE_PAIR_FOUR}`} exact>
         <StyledMain>
           <MainNavigation />
           <ShoppingListPair4 />
+        </StyledMain>
+      </Route>
+      <Route path={`${PATHS.SHOPPING_LISTS}/:groupnumber`} exact>
+        <StyledMain>
+          <MainNavigation />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
