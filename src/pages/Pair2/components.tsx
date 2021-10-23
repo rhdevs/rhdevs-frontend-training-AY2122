@@ -70,10 +70,10 @@ export const ListItem = (props: Props) => {
   return (
     <GroupCardsContainer>
       <QuantityContainer>
-        <Quantity>{list.find((item) => item.id == id)?.quantity}</Quantity>
+        <Quantity>{list.find((item) => item.id === id)?.quantity}</Quantity>
       </QuantityContainer>
       <ItemNameContainer>
-        <ItemName>{list.find((item) => item.id == id)?.itemName}</ItemName>
+        <ItemName>{list.find((item) => item.id === id)?.itemName}</ItemName>
       </ItemNameContainer>
       <ActionContainer>
         <Button icon={<PlusOutlined />} onClick={incQuantity} />

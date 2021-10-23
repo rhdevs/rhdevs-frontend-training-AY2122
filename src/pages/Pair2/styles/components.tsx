@@ -3,10 +3,12 @@ import { Button, Input } from 'antd'
 
 type Props = {
   onChange?: any
-  onClick?: any
+  onClick?: () => void
 }
+export const InputStyles = { width: '240px' }
+
 export const QuantityInput = (props: Props) => {
-  return <Input type="number" min={1} addonBefore="Quantity" style={{ width: '240px' }} onChange={props.onChange} />
+  return <Input type="number" min={1} addonBefore="Quantity" style={InputStyles} onChange={props.onChange} />
 }
 
 export const AddButton = (props: Props) => {
