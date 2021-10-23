@@ -64,7 +64,7 @@ export const StyledTick = styled.img`
   padding: 5px;
   position: relative;
 `
-export const DeletedEventTextContainer = styled.p`
+export const DeletedEventTextContainer = styled.div`
   width: 70%;
   height: 90%;
   position: relative;
@@ -192,7 +192,7 @@ export const BookingCardContainer = styled.div`
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
 `
-export const BookingCardTextContainer = styled.p`
+export const BookingCardTextContainer = styled.div`
   width: 70%;
   height: 80%;
   position: relative;

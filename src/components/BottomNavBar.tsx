@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { StyledBottomNavBar, NavBarIcon, Icon, Avatar, IconStyling } from './styles/BottomNavBar.styled'
 import food from '../assets/Group3/food-tray.svg'
