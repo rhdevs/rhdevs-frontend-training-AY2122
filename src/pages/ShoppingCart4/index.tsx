@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button } from 'antd'
 import { Table, Space } from 'antd'
 import { MinusCircleOutlined, PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
-import { MainPage, HeaderShoppingCart, AddItemButton, ShoppingListForm } from './styles/ShoppingCart4.styled'
+import { MainPage, HeaderShoppingCart, Header, AddItemButton, ShoppingListForm } from './styles/ShoppingCart4.styled'
 import AddItemModal from '../../components/AddItemModal'
 
 export interface ShoppingListItem {
@@ -71,12 +71,12 @@ const ShoppingCart4 = () => {
   return (
     <MainPage>
       <HeaderShoppingCart>
-        Shopping List
         <AddItemButton>
           <Button onClick={() => setShowModal(true)}>
             <PlusOutlined /> Add Item
           </Button>
         </AddItemButton>
+        <Header>Shopping List</Header>
       </HeaderShoppingCart>
       <ShoppingListForm>
         <Table columns={columns} dataSource={[...shoppingList]} pagination={false}></Table>
