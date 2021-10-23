@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { PageHeader, Button, Card, Popover, Select, Input } from 'antd'
 import PlusOutlined from '@ant-design/icons/lib/icons/PlusOutlined'
 import MinusOutlined from '@ant-design/icons/lib/icons/MinusOutlined'
@@ -13,51 +14,60 @@ import {
   AddContainer,
   ButtonContainer,
 } from './styles/ShoppingListCYYZ.styled'
+import { RootState } from '../../store/types'
+import {
+  setFoodList,
+  setOthersList,
+  addFoodAmount,
+  minusFoodAmount,
+  deleteFoodItem,
+  addOthersAmount,
+  deleteOthersItem,
+  minusOthersAmount,
+} from '../../store/shoppingListsCYYZ/actions'
 
 const { Option } = Select
 
 const ShoppingListMain = () => {
-  const [foodList, setFoodList] = useState(FoodItems)
-  const [othersList, setOthersList] = useState(Others)
+  const dispatch = useDispatch()
+  const { foodList, othersList } = useSelector((state: RootState) => state.shoppingListsCYYZ)
   const [isMenuVisible, setMenuVisible] = useState(false)
+  const [category, setCategory] = useState('food')
+  const [name, setName] = useState('')
 
-  const addFoodAmount = (item: Item) => {
-    const update = foodList.map((e) => (e.name === item.name ? { ...e, amount: item.amount + 1 } : e))
-    setFoodList(update)
+  const renderAddMenu = () => {
+    const addItem = () => {
+      if (category === 'food') {
+        dispatch(setFoodList([...foodList, { name: name, amount: 1 }]))
+        setMenuVisible(false)
+      }
+      if (category === 'others') {
+        dispatch(setOthersList([...othersList, { name: name, amount: 1 }]))
+        setMenuVisible(false)
+      }
+    }
+
+    return (
+      <>
+        <Input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+        <ButtonContainer>
+          <Select defaultValue="food" value={category} onChange={(val) => setCategory(val)}>
+            <Option value="food">Food Items</Option>
+            <Option value="others">Others</Option>
+          </Select>
+          <Button onClick={addItem}>Add Item</Button>
+        </ButtonContainer>
+      </>
+    )
   }
 
-  const minusFoodAmount = (item: Item) => {
-    const update = foodList.map((e) => (e.name === item.name ? { ...e, amount: item.amount - 1 } : e))
-    setFoodList(update)
-  }
-
-  const deleteFoodAmount = (item: Item) => {
-    const update = foodList.filter((e) => e.name !== item.name)
-    setFoodList(update)
-  }
-
-  const addOthersAmount = (item: Item) => {
-    const update = othersList.map((e) => (e.name === item.name ? { ...e, amount: item.amount + 1 } : e))
-    setOthersList(update)
-  }
-
-  const minusOthersAmount = (item: Item) => {
-    const update = othersList.map((e) => (e.name === item.name ? { ...e, amount: item.amount - 1 } : e))
-    setOthersList(update)
-  }
-
-  const deleteOthersAmount = (item: Item) => {
-    const update = othersList.filter((e) => e.name !== item.name)
-    setOthersList(update)
-  }
-
-  return (
-    <MainContainer>
+  const renderTableHeader = () => {
+    return (
       <BigHeader>
         <PageHeader onBack={() => null} title="Shopping List" />
         <AddContainer>
           <Popover
-            content={() => renderAddMenu(setMenuVisible, setFoodList, setOthersList, foodList, othersList)}
+            content={() => renderAddMenu()}
             title="Add new item"
             visible={isMenuVisible}
             trigger={'click'}
@@ -66,80 +76,56 @@ const ShoppingListMain = () => {
           <Button onClick={() => setMenuVisible(!isMenuVisible)}>Add Item</Button>
         </AddContainer>
       </BigHeader>
+    )
+  }
+
+  const renderFoodCard = () => {
+    return (
+      <Card title="Food Items" style={style.card}>
+        {foodList.map((e) => (
+          <ListItem key={e.name}>
+            <ItemName>{e.name}</ItemName>
+            <ItemAction>
+              <Button shape="circle" icon={<MinusOutlined />} onClick={() => dispatch(minusFoodAmount(e))} />
+              {e.amount}
+              <Button shape="circle" icon={<PlusOutlined />} onClick={() => dispatch(addFoodAmount(e))} />
+              <Button shape="circle" icon={<DeleteOutlined />} onClick={() => dispatch(deleteFoodItem(e))} />
+            </ItemAction>
+          </ListItem>
+        ))}
+      </Card>
+    )
+  }
+
+  const renderOthersCard = () => {
+    return (
+      <Card title="Others" style={style.card}>
+        {othersList.map((e) => (
+          <ListItem key={e.name}>
+            <ItemName>{e.name}</ItemName>
+            <ItemAction>
+              <Button shape="circle" icon={<MinusOutlined />} onClick={() => dispatch(minusOthersAmount(e))} />
+              {e.amount}
+              <Button shape="circle" icon={<PlusOutlined />} onClick={() => dispatch(addOthersAmount(e))} />
+              <Button shape="circle" icon={<DeleteOutlined />} onClick={() => dispatch(deleteOthersItem(e))} />
+            </ItemAction>
+          </ListItem>
+        ))}
+      </Card>
+    )
+  }
+
+  return (
+    <MainContainer>
+      {renderTableHeader()}
 
       <TableBody>
-        <Card title="Food Items" style={style.card}>
-          {foodList.map((e) => (
-            <ListItem key={e.name}>
-              <ItemName>{e.name}</ItemName>
-              <ItemAction>
-                <Button shape="circle" icon={<MinusOutlined />} onClick={() => minusFoodAmount(e)} />
-                {e.amount}
-                <Button shape="circle" icon={<PlusOutlined />} onClick={() => addFoodAmount(e)} />
-                <Button shape="circle" icon={<DeleteOutlined />} onClick={() => deleteFoodAmount(e)} />
-              </ItemAction>
-            </ListItem>
-          ))}
-        </Card>
-        <Card title="Others" style={style.card}>
-          {othersList.map((e) => (
-            <ListItem key={e.name}>
-              <ItemName>{e.name}</ItemName>
-              <ItemAction>
-                <Button shape="circle" icon={<MinusOutlined />} onClick={() => minusOthersAmount(e)} />
-                {e.amount}
-                <Button shape="circle" icon={<PlusOutlined />} onClick={() => addOthersAmount(e)} />
-                <Button shape="circle" icon={<DeleteOutlined />} onClick={() => deleteOthersAmount(e)} />
-              </ItemAction>
-            </ListItem>
-          ))}
-        </Card>
+        {renderFoodCard()}
+        {renderOthersCard()}
       </TableBody>
     </MainContainer>
   )
 }
-
-const renderAddMenu = (
-  setMenuVisible: (state: boolean) => void,
-  setFoodList: (state: any) => void,
-  setOthersList: (state: any) => void,
-  foodList: any,
-  othersList: any,
-) => {
-  const [category, setCategory] = useState('food')
-  const [name, setName] = useState('')
-
-  const addItem = () => {
-    if (category === 'food') {
-      setFoodList([...foodList, { name: name, amount: 1 }])
-      setMenuVisible(false)
-    }
-    if (category === 'others') {
-      setOthersList([...othersList, { name: name, amount: 1 }])
-      setMenuVisible(false)
-    }
-  }
-
-  return (
-    <>
-      <Input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-      <ButtonContainer>
-        <Select defaultValue="food" value={category} onChange={(val) => setCategory(val)}>
-          <Option value="food">Food Items</Option>
-          <Option value="others">Others</Option>
-        </Select>
-        <Button onClick={addItem}>Add Item</Button>
-      </ButtonContainer>
-    </>
-  )
-}
-
-const Others = [{ name: 'Pencil', amount: 1 }]
-
-const FoodItems = [
-  { name: 'Egg', amount: 1 },
-  { name: 'Milk', amount: 2 },
-]
 
 const style = {
   card: {
@@ -147,7 +133,5 @@ const style = {
     marginBottom: '30px',
   },
 }
-
-type Item = { name: string; amount: number }
 
 export default ShoppingListMain
