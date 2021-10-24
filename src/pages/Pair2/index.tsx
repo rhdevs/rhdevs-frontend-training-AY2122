@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { ItemAdder, ListEntry, ListHeader, ListItem } from './components'
+import ItemAdder from '../../components/Pair2/ItemAdder'
+import ListHeader from '../../components/Pair2/ListHeader'
+import ListItem, { ListEntry } from '../../components/Pair2/ListItem'
+// import { ItemAdder, ListEntry, ListHeader, ListItem } from './components'
 import { ShoppingListHeader, FullScreenContainer } from './styles/Pair2.styled'
 
 const Pair2 = () => {
