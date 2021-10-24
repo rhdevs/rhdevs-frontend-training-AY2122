@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Modal, Input } from 'antd'
-import { ModalHeader, ModalTitle, InputContainer } from './styles/AddItemModal.styled'
+import { ModalHeader, ModalTitle, InputContainer, ErrorMessage } from './styles/AddItemModal.styled'
 import { ShoppingListItem } from '../pages/ShoppingCart4/index'
 
 type Props = {
@@ -12,10 +12,32 @@ type Props = {
 
 const AddItemModal = (props: Props) => {
   const [shoppingListItemName, setshoppingListItemName] = useState('')
-  const [itemCount, setItemCount] = useState(1)
+  const [itemCount, setItemCount] = useState(0)
+  const [itemNameError, setItemNameError] = useState('')
+  const [itemCountError, setItemCountError] = useState('')
 
-  const validateData = () => {
-    props.addData({ key: props.itemKey, shoppingListItemName, itemCount })
+  const validateDataError = () => {
+    if (shoppingListItemName.length === 0) {
+      setItemNameError('Please input an item name'!)
+      return true
+    } else {
+      setItemNameError('')
+    }
+    if (itemCount <= 0) {
+      setItemCountError('Please input a valid quantity!')
+      return true
+    } else {
+      setItemCountError('')
+    }
+    return false
+  }
+
+  const onSubmit = () => {
+    if (!validateDataError()) {
+      props.addData({ key: props.itemKey, shoppingListItemName, itemCount })
+      setshoppingListItemName('')
+      setItemCount(0)
+    }
   }
 
   return (
@@ -23,7 +45,7 @@ const AddItemModal = (props: Props) => {
       closable={false}
       maskClosable={false}
       visible={props.showModal}
-      onOk={validateData}
+      onOk={onSubmit}
       onCancel={props.hideModal}
       destroyOnClose={true}
     >
@@ -33,9 +55,11 @@ const AddItemModal = (props: Props) => {
       <InputContainer>
         <Input addonBefore="Item Name" onChange={(e) => setshoppingListItemName(e.target.value)}></Input>
       </InputContainer>
+      {itemNameError && <ErrorMessage>{itemNameError}</ErrorMessage>}
       <InputContainer>
         <Input type="number" addonBefore="Quantity" onChange={(e) => setItemCount(parseInt(e.target.value))}></Input>
       </InputContainer>
+      {itemCountError && <ErrorMessage>{itemCountError}</ErrorMessage>}
     </Modal>
   )
 }

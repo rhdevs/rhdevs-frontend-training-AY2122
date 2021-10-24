@@ -16,3 +16,8 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
+
+export const ErrorMessage = styled.h5`
+  color: red;
+  padding-left: 20px;
+`
