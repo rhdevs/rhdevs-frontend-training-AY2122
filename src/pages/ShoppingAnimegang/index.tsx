@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
-import { AddItemsContainer, ShoppingListHeader, TablePart, TopRow } from './styles/ShoppingAnimegang.styled'
+import {
+  AddItemsContainer,
+  ShoppingListHeader,
+  TablePart,
+  TopRow,
+  TotalPricePart,
+} from './styles/ShoppingAnimegang.styled'
 import { Table, Button, Space, Input } from 'antd'
 import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
@@ -62,7 +68,6 @@ const ShoppingAnimegang = () => {
   const handleOnType = (e: string) => {
     setAddItemName(e)
     console.log(addItemName)
-    //setShowInput(false)
   }
   const handleOnEnter = () => {
     if (addItemName != '') {
@@ -75,7 +80,6 @@ const ShoppingAnimegang = () => {
     }
     setShowInput(false)
   }
-
   const columns = [
     {
       title: 'Quantity',
@@ -115,6 +119,17 @@ const ShoppingAnimegang = () => {
   const [addItemName, setAddItemName] = useState<string>('')
   const [showInput, setShowInput] = useState<boolean>(false)
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
+  const [totalShoppingListPrice, setTotalShoppingListPrice] = useState<number>(
+    initialList[0].total + initialList[1].total,
+  )
+  const getTotalPrice = (mylist: Item[]) => {
+    let number = 0
+    for (let i = 0; i < mylist.length; i += 1) {
+      number += mylist[i].total
+    }
+    setTotalShoppingListPrice(number)
+    return number
+  }
   const onInputChange = (record: Item) => (e: React.ChangeEvent<HTMLInputElement>) => {
     const newList: Item[] = shoppingList.filter((item) => {
       if (item.key == record.key) {
@@ -123,6 +138,7 @@ const ShoppingAnimegang = () => {
       }
       return item
     })
+    getTotalPrice(shoppingList)
     setShoppingList(newList)
   }
 
@@ -149,8 +165,9 @@ const ShoppingAnimegang = () => {
         </AddItemsContainer>
       </TopRow>
       <TablePart>
-        <Table columns={columns} dataSource={shoppingList} />
+        <Table columns={columns} dataSource={shoppingList}></Table>
       </TablePart>
+      <TotalPricePart>Total Price: {totalShoppingListPrice}</TotalPricePart>
     </FullScreenContainer>
   )
 }

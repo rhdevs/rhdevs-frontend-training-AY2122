@@ -40,10 +40,17 @@ export const AddItemsContainer = styled.div`
 export const TablePart = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   position: relative;
   width: 100%;
-  height: 80%;
-  left: 0;
-  top: 0;
+  height: 90%;
+  overflow: scroll;
+`
+export const TotalPricePart = styled.div`
+  display: flex;
+  font-size: 40px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 10%%;
 `
