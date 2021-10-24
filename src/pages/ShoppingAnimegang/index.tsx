@@ -13,11 +13,15 @@ const initialList: Item[] = [
     key: '1',
     quantity: 3,
     item_name: 'Eggs',
+    price: 5,
+    total: 5,
   },
   {
     key: '2',
     quantity: 5,
     item_name: 'Eggs',
+    price: 5,
+    total: 5,
   },
 ]
 
@@ -25,6 +29,8 @@ type Item = {
   key: string
   quantity: number
   item_name: string
+  price: number
+  total: number
 }
 
 const ShoppingAnimegang = () => {
@@ -63,12 +69,13 @@ const ShoppingAnimegang = () => {
       const newList: Item[] = shoppingList.filter((item) => item)
       setNewKeyName(newKeyName + 1)
       const newKey: string = newKeyName.toString()
-      const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName }
+      const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName, price: 2, total: 2 }
       newList.push(newItem)
       setShoppingList(newList)
     }
     setShowInput(false)
   }
+
   const columns = [
     {
       title: 'Quantity',
@@ -92,11 +99,33 @@ const ShoppingAnimegang = () => {
         </Space>
       ),
     },
+    {
+      title: 'Price',
+      dataIndex: 'price',
+      key: 'price',
+      render: (text: string, record: Item) => <Input value={text} onChange={onInputChange(record)} />,
+    },
+    {
+      title: 'Total',
+      dataIndex: 'total',
+      key: 'total',
+    },
   ]
   const [newKeyName, setNewKeyName] = useState<number>(initialList.length + 1)
   const [addItemName, setAddItemName] = useState<string>('')
   const [showInput, setShowInput] = useState<boolean>(false)
   const [shoppingList, setShoppingList] = useState<Item[]>(initialList)
+  const onInputChange = (record: Item) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newList: Item[] = shoppingList.filter((item) => {
+      if (item.key == record.key) {
+        item.price = Number(e.target.value)
+        item.total = item.quantity * item.price
+      }
+      return item
+    })
+    setShoppingList(newList)
+  }
+
   return (
     <FullScreenContainer>
       <TopRow>
