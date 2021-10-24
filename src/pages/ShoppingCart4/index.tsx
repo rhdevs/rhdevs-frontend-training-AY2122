@@ -12,7 +12,7 @@ export interface ShoppingListItem {
 }
 
 const ShoppingCart4 = () => {
-  const [shoppingList, setShoppingList] = useState([] as ShoppingListItem[])
+  const [shoppingList, setShoppingList] = useState<ShoppingListItem[]>([])
   const [showModal, setShowModal] = useState(false)
 
   const columns = [

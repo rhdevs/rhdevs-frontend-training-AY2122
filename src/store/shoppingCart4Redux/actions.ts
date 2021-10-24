@@ -1,10 +1,6 @@
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListItem } from './types'
 
-//set my 'exampleList' state with my argument 'newList'
-//to call this in your component or page, wrap with dispatch
-//eg dispatch(mockActionSetMyExampleList(theNewList))
-
 export const AddItemToList = (newItem: ShoppingListItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingList } = getState().shoppingCart4Redux
   shoppingList.push(newItem)
