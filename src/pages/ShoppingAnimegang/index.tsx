@@ -69,7 +69,7 @@ const ShoppingAnimegang = () => {
       const newList: Item[] = shoppingList.filter((item) => item)
       setNewKeyName(newKeyName + 1)
       const newKey: string = newKeyName.toString()
-      const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName, price: 2, total: 2 }
+      const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName, price: 0, total: 0 }
       newList.push(newItem)
       setShoppingList(newList)
     }
