@@ -24,6 +24,12 @@ export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState,
     case SHOPPING_LIST_ACTIONS.SET_SHOPPING_CART: {
       return { ...state, shoppingCart: action.shoppingCart }
     }
+    case SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY: {
+      const update = state.shoppingCart.map((e) =>
+        e.index === action.update.index ? { ...e, quantity: action.update.quantity + 1 } : e,
+      )
+      return { ...state, shoppingCart: update }
+    }
     default:
       return state
   }

@@ -14,19 +14,17 @@ export const mockActionSetMyExampleList =
     })
   }
 
-export const addCartItem = (newItem: CartItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const SetShoppingCart = (newCart: CartItem[]) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingCart } = getState().shoppingLists
   dispatch({
     type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_CART,
-    shoppingCart: [...shoppingCart, newItem],
+    shoppingCart: newCart ?? shoppingCart,
   })
 }
 
-// export const IncreaseQuantity =
-//   (newList: CartItem[]) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-//     const { shoppingCart } = getState().shoppingCart
-//     dispatch({
-//       type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_CART,
-//       shoppingCart: newList ?? shoppingCart,
-//     })
-//   }
+export const AddItemQuantity = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>) => {
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY,
+    update: item,
+  })
+}
