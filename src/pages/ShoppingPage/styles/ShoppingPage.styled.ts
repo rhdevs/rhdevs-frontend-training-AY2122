@@ -1,30 +1,26 @@
 import styled from 'styled-components'
 
+export const ShoppingPageDiv = styled.div``
+
 export const ShoppingListHeader = styled.h1`
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 3rem;
   margin: 20px auto;
 `
 
 export const ItemRowContainer = styled.div`
   width: 80vw;
-  padding: 10px;
   margin: auto;
   justify-content: center;
   display: flex;
   flex-direction: row;
   align-items: center;
 `
-export const CellContainer = styled.div`
-  padding: 10px;
-  margin: 10px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-`
+
 export const AddTextInput = styled.input`
   border-color: #000000;
   width: 10vw;
@@ -35,10 +31,6 @@ export const AddTextInput = styled.input`
 `
 
 export const CartTable = styled.table`
-  padding: 10px;
   margin: auto;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  width: 60vw;
 `

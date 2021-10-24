@@ -1,6 +1,12 @@
 import { Button, Space, Table } from 'antd'
 import React, { ChangeEvent, useState } from 'react'
-import { ShoppingListHeader, ItemRowContainer, AddTextInput, CartTable } from './styles/ShoppingPage.styled'
+import {
+  ShoppingPageDiv,
+  ShoppingListHeader,
+  ItemRowContainer,
+  AddTextInput,
+  CartTable,
+} from './styles/ShoppingPage.styled'
 import { CartItem } from '../../store/shoppingLists/types'
 import { AddItemQuantity, MinusItemQuantity, SetShoppingCart } from '../../store/shoppingLists/actions'
 import { RootState } from '../../store/types'
@@ -21,6 +27,7 @@ const ShoppingPage = () => {
       title: 'Item',
       dataIndex: 'itemName',
       key: 'itemName',
+      width: '40%',
     },
     {
       title: 'Quantity',
@@ -54,7 +61,7 @@ const ShoppingPage = () => {
   }
 
   return (
-    <>
+    <ShoppingPageDiv>
       <ShoppingListHeader>
         Our Shopping Page!
         <ItemRowContainer>
@@ -74,7 +81,7 @@ const ShoppingPage = () => {
       <CartTable>
         <Table dataSource={shoppingCart} columns={columns} size="large" />
       </CartTable>
-    </>
+    </ShoppingPageDiv>
   )
 }
 
