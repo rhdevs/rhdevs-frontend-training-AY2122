@@ -18,7 +18,9 @@ export const IncreaseItemQuantity = (index: number) => async (dispatch: Dispatch
 export const DecreaseItemQuantity = (index: number) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   //you can also get the 'exampleList' state here
   const { itemList } = getState().pair3Redux
-  itemList[index].quantity = itemList[index].quantity - 1
+  itemList[index].quantity === 0
+    ? (itemList[index].quantity = 0)
+    : (itemList[index].quantity = itemList[index].quantity - 1)
   dispatch({
     type: ITEM_ACTIONS.DECREASE_ITEM_QUANTITY,
     itemList: itemList,
@@ -28,8 +30,6 @@ export const DecreaseItemQuantity = (index: number) => async (dispatch: Dispatch
 export const AddItemToList = (newItem: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { itemList } = getState().pair3Redux
   itemList.push(newItem)
-  console.log(newItem.key + newItem.name + newItem.quantity)
-  console.log(itemList.length)
   dispatch({
     type: ITEM_ACTIONS.ADD_ITEM_TO_LIST,
     itemList: itemList,
