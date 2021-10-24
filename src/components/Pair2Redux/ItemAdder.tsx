@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Input } from 'antd'
-import { ItemAdderContainer } from '../../pages/Pair2Redux/styles/Pair2.styled'
 
+import { ItemAdderContainer } from '../../pages/Pair2Redux/styles/Pair2.styled'
 import { ListEntry } from '../../store/pair2/types'
 import { addItemToList } from '../../store/pair2/actions'
-import { useDispatch } from 'react-redux'
 import QuantityInput from './QuantityInput'
 import AddButton from './AddButton'
 
@@ -13,7 +13,7 @@ const ItemAdder = () => {
   const [entry, setEntry] = useState<ListEntry>({ id: -1, quantity: 1, itemName: '' })
 
   const addItem = () => {
-    setEntry({ ...entry })
+    setEntry({ ...entry }) // necessary to prevent weird behaviours when simultaneously adding items without changing its name
     dispatch(addItemToList(entry))
   }
 

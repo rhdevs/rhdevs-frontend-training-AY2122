@@ -15,7 +15,7 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
-  PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
+  PAIR_2_SHOPPING_PAGE = '/shopping/pair2-redux',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))

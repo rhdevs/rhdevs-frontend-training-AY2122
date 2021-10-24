@@ -36,9 +36,7 @@ type State = {
 
 export const pair2: Reducer<State, ActionTypes> = (state = initialState, action) => {
   switch (action.type) {
-    //this is to update the state if the action type is called
     case SHOPPING_LIST_ACTIONS.SET_ENTRY_LIST: {
-      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
       return { ...state, entryList: action.entryList }
     }
     case SHOPPING_LIST_ACTIONS.ADD_ITEM: {

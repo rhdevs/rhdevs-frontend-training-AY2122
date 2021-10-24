@@ -16,13 +16,13 @@ export enum SHOPPING_LIST_ACTIONS {
 /** Actions */
 export type SetEntryList = {
   type: typeof SHOPPING_LIST_ACTIONS.SET_ENTRY_LIST
-  entryList: ListEntry[] //state name : state type
+  entryList: ListEntry[]
 }
 
 export type AddItem = {
   type: typeof SHOPPING_LIST_ACTIONS.ADD_ITEM
   nextid: number
-  entryList: ListEntry[] //state name : state type
+  entryList: ListEntry[]
 }
 
 export type ActionTypes = SetEntryList | AddItem

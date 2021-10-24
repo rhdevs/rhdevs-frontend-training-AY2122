@@ -1,4 +1,10 @@
 import React from 'react'
+import { ListEntry } from '../../store/pair2/types'
+import { decListItemQuantity, deleteListItem, incListItemQuantity } from '../../store/pair2/actions'
+import { useDispatch } from 'react-redux'
+import DeleteButton from './DeleteButton'
+import QuantityButton from './QuantityButton'
+
 import {
   GroupCardsContainer,
   Quantity,
@@ -7,12 +13,6 @@ import {
   ItemNameContainer,
   ActionContainer,
 } from '../../pages/Pair2Redux/styles/Pair2.styled'
-
-import { ListEntry } from '../../store/pair2/types'
-import { decListItemQuantity, deleteListItem, incListItemQuantity } from '../../store/pair2/actions'
-import { useDispatch } from 'react-redux'
-import DeleteButton from './DeleteButton'
-import QuantityButton from './QuantityButton'
 
 type Props = {
   list: ListEntry[]
