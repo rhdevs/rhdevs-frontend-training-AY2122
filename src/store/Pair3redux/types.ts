@@ -1,13 +1,9 @@
 /** Types */
-
-import { DecreaseItemQuantity } from './action'
-
 //create your own type!
 export type Item = {
+  key: number
   name: string
   quantity: number
-  price: number
-  total: number
 }
 
 /** Actions' types */
@@ -20,12 +16,12 @@ export enum ITEM_ACTIONS {
 /** Actions */
 type IncreaseItemQuantity = {
   type: typeof ITEM_ACTIONS.INCREASE_ITEM_QUANTITY
-  quantity: number //state name : state type
+  itemList: Item[] //state name : state type
 }
 
 type DecreaseItemQuantity = {
   type: typeof ITEM_ACTIONS.DECREASE_ITEM_QUANTITY
-  quantity: number //state name : state type
+  itemList: Item[] //state name : state type
 }
 
 export type ActionTypes = IncreaseItemQuantity | DecreaseItemQuantity

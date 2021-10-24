@@ -3,17 +3,17 @@ import { Table, Tooltip, Button } from 'antd'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import { QuantityElementsDiv, ButtonDiv, DeleteText, Space } from './styles/main.styled'
 import { DecreaseItemQuantity, IncreaseItemQuantity } from '../../store/Pair3redux/action'
+import { Item } from '../../store/Pair3redux/types'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/types'
 
 const Pair3redux = () => {
   const dispatch = useDispatch()
-  const { name, quantity, price, total } = useSelector((state: RootState) => state.Pair3redux)
-  const dataSource = [{ name, quantity, price, total }]
+  const { itemList } = useSelector((state: RootState) => state.pair3Redux)
 
   const columns = [
     {
-      title: 'Item Name',
+      title: 'Name',
       dataIndex: 'name',
       key: 'name',
     },
@@ -25,7 +25,7 @@ const Pair3redux = () => {
     {
       title: 'Actions',
       key: 'actions',
-      render: () => (
+      render: (text: Item, record: Item, index: number) => (
         <div>
           {/* Wrapped them in each divs so I can give them margin, not sure if this is okay */}
           <QuantityElementsDiv>
@@ -35,7 +35,7 @@ const Pair3redux = () => {
                   type="primary"
                   shape="circle"
                   icon={<MinusOutlined />}
-                  onClick={() => dispatch(DecreaseItemQuantity)}
+                  onClick={() => dispatch(DecreaseItemQuantity(index))}
                 />{' '}
               </ButtonDiv>
             </Tooltip>
@@ -45,7 +45,7 @@ const Pair3redux = () => {
                   type="primary"
                   shape="circle"
                   icon={<PlusOutlined />}
-                  onClick={() => dispatch(IncreaseItemQuantity)}
+                  onClick={() => dispatch(IncreaseItemQuantity(index))}
                 />
               </ButtonDiv>
             </Tooltip>
@@ -55,19 +55,9 @@ const Pair3redux = () => {
         </div>
       ),
     },
-    {
-      title: 'Price',
-      dataIndex: 'price',
-      key: 'price',
-    },
-    {
-      title: 'Total',
-      dataIndex: 'total',
-      key: 'total',
-    },
   ]
 
-  return <Table dataSource={dataSource} columns={columns} />
+  return <Table dataSource={itemList} columns={columns} />
 }
 
 export default Pair3redux
