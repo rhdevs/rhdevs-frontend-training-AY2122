@@ -22,6 +22,14 @@ export const pair3Redux: Reducer<State, ActionTypes> = (state = initialState, ac
       //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
       return { ...state, itemList: action.itemList }
     }
+    case ITEM_ACTIONS.REMOVE_ITEM_FROM_LIST: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, itemList: action.itemList }
+    }
+    case ITEM_ACTIONS.ADD_ITEM_TO_LIST: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, itemList: action.itemList }
+    }
     default:
       return state
   }
