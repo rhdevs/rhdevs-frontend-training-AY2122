@@ -3,11 +3,11 @@ import { ShoppingListHeader, FullScreenContainer } from './styles/Pair2.styled'
 
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/types'
-import ItemAdder from '../../components/Pair2/ItemAdder'
-import ListHeader from '../../components/Pair2/ListHeader'
-import ListItem from '../../components/Pair2/ListItem'
+import ItemAdder from '../../components/Pair2Redux/ItemAdder'
+import ListHeader from '../../components/Pair2Redux/ListHeader'
+import ListItem from '../../components/Pair2Redux/ListItem'
 
-function Pair2() {
+function Pair2Redux() {
   const { entryList } = useSelector((state: RootState) => state.pair2)
 
   return (
@@ -16,7 +16,7 @@ function Pair2() {
       <ItemAdder />
       <ListHeader />
       <FullScreenContainer>
-        {entryList.map((value) => (
+        {entryList.map((value: { id: number }) => (
           <ListItem key={`list-item-${value.id}`} list={entryList} id={value.id} />
         ))}
       </FullScreenContainer>
@@ -24,4 +24,4 @@ function Pair2() {
   )
 }
 
-export default Pair2
+export default Pair2Redux
