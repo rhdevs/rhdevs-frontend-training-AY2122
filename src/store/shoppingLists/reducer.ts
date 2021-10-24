@@ -4,7 +4,18 @@ import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, CartItem } from './typ
 //set an initial state for your variable
 const initialState = {
   exampleList: [],
-  shoppingCart: [],
+  shoppingCart: [
+    {
+      index: 1,
+      itemName: 'deez',
+      quantity: 2,
+    },
+    {
+      index: 2,
+      itemName: 'nutz',
+      quantity: 2,
+    },
+  ],
 }
 
 //declare your variable type
