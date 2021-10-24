@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'antd'
 import {
   GroupCardsContainer,
   Quantity,
@@ -8,12 +7,12 @@ import {
   ItemNameContainer,
   ActionContainer,
 } from '../../pages/Pair2/styles/Pair2.styled'
-import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 
 import { ListEntry } from '../../store/pair2/types'
 import { decListItemQuantity, deleteListItem, incListItemQuantity } from '../../store/pair2/actions'
 import { useDispatch } from 'react-redux'
 import DeleteButton from './DeleteButton'
+import QuantityButton from './QuantityButton'
 
 type Props = {
   list: ListEntry[]
@@ -46,9 +45,9 @@ const ListItem = (props: Props) => {
         <ItemName>{list.find((item) => item.id == id)?.itemName}</ItemName>
       </ItemNameContainer>
       <ActionContainer>
-        <Button icon={<PlusOutlined />} onClick={incQuantity} />
+        <QuantityButton type="+" onClick={incQuantity} />
         <span> Quantity </span>
-        <Button icon={<MinusOutlined />} onClick={decQuantity} />
+        <QuantityButton type="-" onClick={decQuantity} />
         <DeleteButton onClick={deleteItem} />
       </ActionContainer>
     </GroupCardsContainer>
