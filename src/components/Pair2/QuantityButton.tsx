@@ -3,7 +3,7 @@ import { Button } from 'antd'
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 
 type Props = {
-  type: string
+  type: '+' | '-' | string
   onClick?: React.MouseEventHandler
 }
 
