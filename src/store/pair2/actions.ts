@@ -1,14 +1,52 @@
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, SHOPPING_LIST_ACTIONS, ListEntry } from './types'
 
-//set my 'exampleList' state with my argument 'newList'
-//to call this in your component or page, wrap with dispatch
-//eg dispatch(mockActionSetMyExampleList(theNewList))
 export const pair2SetList = (newList: ListEntry[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  //you can also get the 'exampleList' state here
-  const { exampleList } = getState().shoppingLists
+  const { entryList } = getState().pair2
   dispatch({
-    type: SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST,
-    exampleList: newList ?? exampleList, // if newList is undefined, use exampleList
+    type: SHOPPING_LIST_ACTIONS.SET_ENTRY_LIST,
+    entryList: newList ?? entryList,
+  })
+}
+
+export const addItemToList = (newEntry: ListEntry) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { nextid, entryList } = getState().pair2
+  newEntry.id = nextid
+  const newList: ListEntry[] = newEntry.itemName ? [newEntry, ...entryList] : entryList
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.ADD_ITEM,
+    nextid: newEntry.itemName ? nextid + 1 : nextid,
+    entryList: newList,
+  })
+}
+
+export const incListItemQuantity =
+  (id: number, list: ListEntry[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+    const { entryList } = getState().pair2
+    const newList = list
+    newList.forEach((item) => item.id === id && ++item.quantity)
+    dispatch({
+      type: SHOPPING_LIST_ACTIONS.SET_ENTRY_LIST,
+      entryList: newList ?? entryList,
+    })
+  }
+
+export const decListItemQuantity =
+  (id: number, list: ListEntry[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+    const { entryList } = getState().pair2
+    const newList = list
+    newList.forEach((item) => item.id === id && item.quantity > 1 && --item.quantity)
+    dispatch({
+      type: SHOPPING_LIST_ACTIONS.SET_ENTRY_LIST,
+      entryList: newList ?? entryList,
+    })
+  }
+
+export const deleteListItem = (id: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { entryList } = getState().pair2
+  const newList = entryList.filter((item) => item.id !== id)
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.SET_ENTRY_LIST,
+    entryList: newList,
   })
 }
