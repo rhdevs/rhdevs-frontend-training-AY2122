@@ -28,3 +28,10 @@ export const AddItemQuantity = (item: CartItem) => async (dispatch: Dispatch<Act
     update: item,
   })
 }
+
+export const MinusItemQuantity = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>) => {
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.MINUS_ITEM_QUANTITY,
+    update: item,
+  })
+}

@@ -2,7 +2,7 @@ import { Button, Space, Table } from 'antd'
 import React, { ChangeEvent, useState } from 'react'
 import { ShoppingListHeader, ItemRowContainer, AddTextInput, CartTable } from './styles/ShoppingPage.styled'
 import { CartItem } from '../../store/shoppingLists/types'
-import { SetShoppingCart } from '../../store/shoppingLists/actions'
+import { AddItemQuantity, MinusItemQuantity, SetShoppingCart } from '../../store/shoppingLists/actions'
 import { RootState } from '../../store/types'
 import { PlusOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
@@ -45,12 +45,12 @@ const ShoppingPage = () => {
       key: 'action',
       render: (item: CartItem) => (
         <Space size="middle">
-          {/* <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
+          <Button type="primary" shape="circle" onClick={() => dispatch(AddItemQuantity(item))}>
             +
           </Button>
-          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
+          <Button type="primary" shape="circle" onClick={() => dispatch(MinusItemQuantity(item))}>
             -
-          </Button> */}
+          </Button>
           {/* <a onClick={() => removeItem(item)}>Delete</a> */}
         </Space>
       ),

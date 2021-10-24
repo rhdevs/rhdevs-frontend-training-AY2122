@@ -17,6 +17,7 @@ export enum SHOPPING_LIST_ACTIONS {
   SET_EXAMPLE_LIST = 'SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST',
   SET_SHOPPING_CART = 'SHOPPING_LIST_ACTIONS.SET_SHOPPING_CART',
   ADD_ITEM_QUANTITY = 'SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY',
+  MINUS_ITEM_QUANTITY = 'SHOPPING_LIST_ACTIONS.MINUS_ITEM_QUANTITY',
 }
 
 /** Actions */
@@ -35,4 +36,9 @@ type AddItemQuantity = {
   update: CartItem
 }
 
-export type ActionTypes = SetExampleList | SetShoppingCart | AddItemQuantity
+type MinusItemQuantity = {
+  type: typeof SHOPPING_LIST_ACTIONS.MINUS_ITEM_QUANTITY
+  update: CartItem
+}
+
+export type ActionTypes = SetExampleList | SetShoppingCart | AddItemQuantity | MinusItemQuantity
