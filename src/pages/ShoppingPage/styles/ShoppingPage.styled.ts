@@ -35,7 +35,6 @@ export const AddTextInput = styled.input`
 `
 
 export const CartTable = styled.table`
-  width: 100vw;
   padding: 10px;
   margin: auto;
   justify-content: center;

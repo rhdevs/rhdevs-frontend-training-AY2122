@@ -16,19 +16,6 @@ const ShoppingPage = () => {
     dispatch(SetShoppingCart([...shoppingCart, { index: shoppingCart.length + 1, itemName: userInput, quantity: 1 }]))
   }
 
-  // const [shoppingCart, setShoppingCart] = useState<CartItem[]>([
-  //   {
-  //     index: 1,
-  //     name: 'deez',
-  //     quantity: 2,
-  //   },
-  //   {
-  //     index: 2,
-  //     name: 'nutz',
-  //     quantity: 2,
-  //   },
-  // ])
-
   const columns = [
     {
       title: 'Item',
@@ -85,7 +72,7 @@ const ShoppingPage = () => {
         </ItemRowContainer>
       </ShoppingListHeader>
       <CartTable>
-        <Table dataSource={shoppingCart} columns={columns} />
+        <Table dataSource={shoppingCart} columns={columns} size="large" />
       </CartTable>
     </>
   )
