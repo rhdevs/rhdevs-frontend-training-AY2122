@@ -35,3 +35,10 @@ export const MinusItemQuantity = (item: CartItem) => async (dispatch: Dispatch<A
     update: item,
   })
 }
+
+export const DeleteCartItem = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>) => {
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.DELETE_CART_ITEM,
+    update: item,
+  })
+}

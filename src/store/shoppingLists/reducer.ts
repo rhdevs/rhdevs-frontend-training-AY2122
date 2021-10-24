@@ -47,6 +47,10 @@ export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState,
       )
       return { ...state, shoppingCart: update }
     }
+    case SHOPPING_LIST_ACTIONS.DELETE_CART_ITEM: {
+      const update = state.shoppingCart.filter((e) => e.index !== action.update.index)
+      return { ...state, shoppingCart: update }
+    }
     default:
       return state
   }

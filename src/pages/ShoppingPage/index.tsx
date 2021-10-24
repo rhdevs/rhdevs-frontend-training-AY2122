@@ -8,7 +8,7 @@ import {
   CartTable,
 } from './styles/ShoppingPage.styled'
 import { CartItem } from '../../store/shoppingLists/types'
-import { AddItemQuantity, MinusItemQuantity, SetShoppingCart } from '../../store/shoppingLists/actions'
+import { AddItemQuantity, DeleteCartItem, MinusItemQuantity, SetShoppingCart } from '../../store/shoppingLists/actions'
 import { RootState } from '../../store/types'
 import { PlusOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
@@ -19,7 +19,13 @@ const ShoppingPage = () => {
   const [userInput, setUserInput] = useState('')
 
   const addItem = () => {
-    dispatch(SetShoppingCart([...shoppingCart, { index: shoppingCart.length + 1, itemName: userInput, quantity: 1 }]))
+    dispatch(
+      SetShoppingCart([
+        ...shoppingCart,
+        { index: shoppingCart[shoppingCart.length - 1].index + 1, itemName: userInput, quantity: 1 },
+      ]),
+    )
+    console.log(shoppingCart[shoppingCart.length - 1].index)
   }
 
   const columns = [
@@ -45,7 +51,7 @@ const ShoppingPage = () => {
           <Button type="primary" shape="circle" onClick={() => dispatch(MinusItemQuantity(item))}>
             -
           </Button>
-          {/* <a onClick={() => removeItem(item)}>Delete</a> */}
+          <a onClick={() => dispatch(DeleteCartItem(item))}>Delete</a>
         </Space>
       ),
     },
@@ -56,7 +62,9 @@ const ShoppingPage = () => {
   }
 
   const handleSubmit = () => {
-    addItem()
+    if (userInput !== '') {
+      addItem()
+    }
     setUserInput('')
   }
 

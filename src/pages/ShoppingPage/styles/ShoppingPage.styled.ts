@@ -23,14 +23,14 @@ export const ItemRowContainer = styled.div`
 
 export const AddTextInput = styled.input`
   border-color: #000000;
-  width: 10vw;
+  width: 20vw;
   margin: 10px;
   padding: 10px;
-  font-size: 10px;
+  font-size: 1rem;
   align-items: center;
 `
 
 export const CartTable = styled.table`
   margin: auto;
-  width: 60vw;
+  width: 50vw;
 `
