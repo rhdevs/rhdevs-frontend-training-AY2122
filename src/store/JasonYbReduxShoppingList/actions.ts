@@ -1,10 +1,6 @@
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingItem } from './types'
 
-//set my 'exampleList' state with my argument 'newList'
-//to call this in your component or page, wrap with dispatch
-//eg dispatch(mockActionSetMyExampleList(theNewList))
-
 export const AddItemQuantity =
   (itemToChange: ShoppingItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
     const { itemList } = getState().JasonYbReduxShoppingList

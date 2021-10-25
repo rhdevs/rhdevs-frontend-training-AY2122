@@ -1,5 +1,4 @@
 /** Types */
-//create your own type!
 export type ShoppingItem = {
   key: number
   index: number
@@ -9,7 +8,6 @@ export type ShoppingItem = {
 
 /** Actions' types */
 export enum SHOPPING_LIST_ACTIONS {
-  //follow naming convention <enum name>.<enum item name>
   SET_ITEM_LIST = 'SHOPPING_LIST_ACTIONS.SET_ITEM_LIST',
   SET_KEY_AND_INDEX_COUNT = 'SHOPPING_LIST_ACTIONS.SET_KEY_AND_INDEX_COUNT',
   SET_NEW_ITEM_TO_BE_ADDED = 'SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED',
