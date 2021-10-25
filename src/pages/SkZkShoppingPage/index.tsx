@@ -60,9 +60,8 @@ const SkZkShoppingPage = () => {
   }
 
   const addCart = (userInput: string) => {
-    let copy = [...shoppingCart]
-    copy = [
-      ...copy,
+    const copy = [
+      ...shoppingCart,
       {
         index: shoppingCart.length + 1,
         name: userInput,
