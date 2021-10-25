@@ -10,10 +10,6 @@ import { Table, Button, Space, Input } from 'antd'
 import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
-// const handleIncreaseItemCount = () => {
-// }
-// onClick={() => handleIncreaseItemCount()}
-
 const initialList: Item[] = [
   {
     key: '1',
@@ -59,7 +55,7 @@ const ShoppingAnimegang = () => {
     setShoppingList(newList)
   }
   const handleOnDeleteClick = (record: Item) => {
-    const newList: Item[] = shoppingList.filter((item) => item.key != record.key)
+    const newList: Item[] = shoppingList.filter((item) => item.key !== record.key)
     setShoppingList(newList)
   }
   const handleOnAddItemClick = () => {
@@ -67,7 +63,6 @@ const ShoppingAnimegang = () => {
   }
   const handleOnType = (e: string) => {
     setAddItemName(e)
-    console.log(addItemName)
   }
   const handleOnEnter = () => {
     if (addItemName != '') {
@@ -132,7 +127,7 @@ const ShoppingAnimegang = () => {
   }
   const onInputChange = (record: Item) => (e: React.ChangeEvent<HTMLInputElement>) => {
     const newList: Item[] = shoppingList.filter((item) => {
-      if (item.key == record.key) {
+      if (item.key === record.key) {
         item.price = Number(e.target.value)
         item.total = item.quantity * item.price
       }

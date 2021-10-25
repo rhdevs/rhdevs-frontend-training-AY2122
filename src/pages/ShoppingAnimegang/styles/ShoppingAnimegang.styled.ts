@@ -15,9 +15,7 @@ export const FullScreenContainer = styled.div`
   height: 100%;
   left: 0;
   top: 0;
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 50px 50px auto 50px;
 `
 export const TopRow = styled.div`
   display: flex;
