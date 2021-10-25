@@ -3,7 +3,7 @@ import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListItem } from './types'
 
 //set an initial state for your variable
 const initialState = {
-  shoppingList: [],
+  shoppingList: [{ key: 1, ItemName: 'hello', ItemCount: 1 }],
   showAddItem: false,
 }
 
