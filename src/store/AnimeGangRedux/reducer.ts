@@ -1,22 +1,42 @@
 import { Reducer } from 'redux'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType } from './types'
+import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListItem } from './types'
 
 //set an initial state for your variable
 const initialState = {
-  exampleList: [],
+  shoppingList: [],
 }
 
 //declare your variable type
 type State = {
-  exampleList: ExampleType[]
+  shoppingList: ShoppingListItem[]
 }
 
-export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState, action) => {
+export const AnimeGangRedux: Reducer<State, ActionTypes> = (state = initialState, action) => {
   switch (action.type) {
     //this is to update the state if the action type is called
-    case SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST: {
+    case SHOPPING_LIST_ACTIONS.ADD_ITEM_TO_LIST: {
       //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
-      return { ...state, exampleList: action.exampleList }
+      return { ...state, shoppingList: action.shoppingList }
+    }
+    case SHOPPING_LIST_ACTIONS.ADD_QUANTITY_TO_ITEM: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, shoppingList: action.shoppingList }
+    }
+    case SHOPPING_LIST_ACTIONS.DECREASE_QUANTITY_TO_ITEM: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, shoppingList: action.shoppingList }
+    }
+    case SHOPPING_LIST_ACTIONS.REMOVE_ITEM_FROM_LIST: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, shoppingList: action.shoppingList }
+    }
+    case SHOPPING_LIST_ACTIONS.SHOW_ADD_ITEM_INPUT: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, shoppingList: action.shoppingList }
+    }
+    case SHOPPING_LIST_ACTIONS.HIDE_ADD_ITEM_INPUT: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, shoppingList: action.shoppingList }
     }
     default:
       return state
