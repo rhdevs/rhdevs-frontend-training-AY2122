@@ -20,6 +20,7 @@ export enum PATHS {
   SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
   SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
+  YIXUAN_WEIPIN_SHOPPING_REDUX = '/shopping/yxwp_redux',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -41,7 +42,7 @@ const SkZkShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "SkZKShoppingPageRedux" */ './pages/SkZkShoppingPageRedux'),
 )
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
-
+const YXWPRedux = React.lazy(() => import(/* webpackChunckName: "YXWPRedux" */ './pages/YXWPRedux'))
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render
@@ -63,45 +64,25 @@ function App() {
           <ShoppingListsMainPage />
         </StyledMain>
       </Route>
-      <>
-        <Route path={PATHS.JASON_YB_SHOPPING_LIST_PAGE} exact>
-          <StyledMain>
-            <MainNavigation />
-            <JasonYbShoppingListPage />
-          </StyledMain>
-        </Route>
-        <Route path={PATHS.JASON_YB_REDUX_SHOPPING_LIST_PAGE} exact>
-          <StyledMain>
-            <MainNavigation />
-            <JasonYbReduxShoppingListPage />
-          </StyledMain>
-        </Route>
-        <Route path={PATHS.SKZK_SHOPPING_PAGE} exact>
-          <StyledMain>
-            <MainNavigation />
-            <SkZkShoppingPage />
-          </StyledMain>
-        </Route>
-        <Route path={PATHS.SKZK_SHOPPING_PAGE_REDUX} exact>
-          <StyledMain>
-            <MainNavigation />
-            <SkZkShoppingPageRedux />
-          </StyledMain>
-        </Route>
-        <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
-          <StyledMain>
-            <MainNavigation />
-            <Groups />
-          </StyledMain>
-        </Route>
-        <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
-          <StyledMain>
-            <MainNavigation />
-            <Pair2MainPage />
-          </StyledMain>
-        </Route>
-        <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
-      </>
+      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Groups />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.YIXUAN_WEIPIN_SHOPPING_REDUX} exact>
+        <StyledMain>
+          <MainNavigation />
+          <YXWPRedux />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Pair2MainPage />
+        </StyledMain>
+      </Route>
+      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
       {/* example from lesson 1 (4oct) */}
       <Route path="/example" exact component={Lesson1Example} />
       <Route>
