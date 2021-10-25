@@ -21,27 +21,27 @@ export enum SHOPPING_LIST_ACTIONS {
 /** Actions */
 type AddItemToList = {
   type: typeof SHOPPING_LIST_ACTIONS.ADD_ITEM_TO_LIST
-  exampleList: ShoppingListItem[] //state name : state type
+  shoppingList: ShoppingListItem[] //state name : state type
 }
 type AddQuantityToItem = {
   type: typeof SHOPPING_LIST_ACTIONS.ADD_QUANTITY_TO_ITEM
-  exampleList: ShoppingListItem[] //state name : state type
+  shoppingList: ShoppingListItem[] //state name : state type
 }
 type DecreaseQuantityToItem = {
   type: typeof SHOPPING_LIST_ACTIONS.DECREASE_QUANTITY_TO_ITEM
-  exampleList: ShoppingListItem[] //state name : state type
+  shoppingList: ShoppingListItem[] //state name : state type
 }
 type RemoveItemFromList = {
   type: typeof SHOPPING_LIST_ACTIONS.REMOVE_ITEM_FROM_LIST
-  exampleList: ShoppingListItem[] //state name : state type
+  shoppingList: ShoppingListItem[] //state name : state type
 }
 type ShowAddItemInput = {
   type: typeof SHOPPING_LIST_ACTIONS.SHOW_ADD_ITEM_INPUT
-  exampleList: ShoppingListItem[] //state name : state type
+  shoppingList: ShoppingListItem[] //state name : state type
 }
 type HideAddItemInput = {
   type: typeof SHOPPING_LIST_ACTIONS.HIDE_ADD_ITEM_INPUT
-  exampleList: ShoppingListItem[] //state name : state type
+  shoppingList: ShoppingListItem[] //state name : state type
 }
 
 export type ActionTypes =

@@ -1,4 +1,4 @@
-import { Reducer } from 'redux'
+import { Reducer } from 'react'
 import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListItem } from './types'
 
 //set an initial state for your variable

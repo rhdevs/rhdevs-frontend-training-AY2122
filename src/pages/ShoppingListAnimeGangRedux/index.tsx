@@ -69,10 +69,3 @@ const ShoppingAnimeGangRedux = () => {
 }
 
 export default ShoppingAnimeGangRedux
-function useSelector(arg0: (state: RootState) => any): { shoppingList: any } {
-  throw new Error('Function not implemented.')
-}
-
-function useDispatch() {
-  throw new Error('Function not implemented.')
-}
