@@ -25,13 +25,16 @@ export const IncreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch
   })
 }
 
-// export const DecreaseQuantity = (ItemToChange: ShoppingListEntry) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-//   const { } = getState().shoppingLists
-//   dispatch({
-//       type: SHOPPING_LIST_ACTIONS.DECREASE_QUANTITY,
-
-//   })
-// }
+export const DecreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { ItemList } = getState().yxwp_store
+  const newList = ItemList.map((item) =>
+    item.key === ItemToChangeKey ? { ...item, itemQuantity: item.itemQuantity - 1 } : item,
+  )
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_LIST,
+    ItemList: newList,
+  })
+}
 
 // export const DeleteItem = (IndexOfItem:number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
 //   const { } = getState().shoppingLists

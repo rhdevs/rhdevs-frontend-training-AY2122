@@ -3,7 +3,7 @@ import { Button, Card, Input, Table, Space } from 'antd'
 import { ShoppingHeader } from './styles/YXWPRedux.styled'
 import { PlusCircleOutlined, MinusCircleOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { IncreaseQuantity } from '../../store/yxwp_store/actions'
+import { IncreaseQuantity, DecreaseQuantity } from '../../store/yxwp_store/actions'
 import { RootState } from '../../store/types'
 const { Column } = Table
 
@@ -73,7 +73,11 @@ const YXWPRedux = () => {
                   icon={<PlusCircleOutlined />}
                   onClick={() => dispatch(IncreaseQuantity(currItem.key))}
                 />
-                <Button type="link" icon={<MinusCircleOutlined />} onClick={() => handleDecreaseQuantity(currItem)} />
+                <Button
+                  type="link"
+                  icon={<MinusCircleOutlined />}
+                  onClick={() => dispatch(DecreaseQuantity(currItem.key))}
+                />
                 <Button type="link" onClick={() => handleDeleteItem(currItem)}>
                   Delete
                 </Button>
