@@ -3,6 +3,7 @@ import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import { Button, Tooltip, Table } from 'antd'
 import { ShoppingListHeader } from '../ShoppingListsMain/styles/ShoppingListMain.styled'
 import { QuantityElementsDiv, AddTextInput, ButtonDiv, DeleteText, Space } from './styles/main.styled'
+import { Prompt } from 'react-router'
 
 const Pair3 = () => {
   interface Data_entry {
@@ -23,8 +24,10 @@ const Pair3 = () => {
   const [userInputQuantity, setUserInputQuantity] = useState('')
 
   const handleSubmit = () => {
-    addCart(userInput)
-    setUserInput('')
+    if (parseInt(userInputQuantity) > 0 && userInput !== '') {
+      addCart(userInput)
+      setUserInput('')
+    }
   }
 
   const addCart = (userInput: string) => {
@@ -76,7 +79,6 @@ const Pair3 = () => {
       key: 'action',
       render: (entry: Data_entry) => (
         <div>
-          {/* Wrapped them in each divs so I can give them margin, not sure if this is okay */}
           <QuantityElementsDiv>
             <Tooltip title="Add">
               <ButtonDiv>
