@@ -12,6 +12,7 @@ const ShoppingListMain = () => {
       <ShoppingListHeader>Our Shopping Lists!</ShoppingListHeader>
       <GroupCardsContainer>
         <ShoppingCard names="name1, name2, name4" onClick={() => history.push(PATHS.EXAMPLE_SHOPPING_PAGE)} />
+        <ShoppingCard names="En Hao Venus" onClick={() => history.push(PATHS.PAIR3_SHOPPING_PAGE)} />
         <ShoppingCard names="En Hao Venus" onClick={() => history.push(PATHS.PAIR_3_SHOPPING_PAGE)} />
         <ShoppingCard names="Jason, Yong Bin" onClick={() => history.push(PATHS.JASON_YB_SHOPPING_LIST_PAGE)} />
         <ShoppingCard
