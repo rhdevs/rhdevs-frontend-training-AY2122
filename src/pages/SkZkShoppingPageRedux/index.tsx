@@ -25,7 +25,6 @@ const ShoppingPageRedux = () => {
         { index: shoppingCart[shoppingCart.length - 1].index + 1, itemName: userInput, quantity: 1 },
       ]),
     )
-    console.log(shoppingCart[shoppingCart.length - 1].index)
   }
 
   const columns = [
