@@ -7,8 +7,8 @@ import {
   AddTextInput,
   CartTable,
 } from './styles/ShoppingPageRedux.styled'
-import { CartItem } from '../../store/pair6/types'
-import { AddItemQuantity, DeleteCartItem, MinusItemQuantity, SetShoppingCart } from '../../store/pair6/actions'
+import { CartItem } from '../../store/skzk/types'
+import { AddItemQuantity, DeleteCartItem, MinusItemQuantity, SetShoppingCart } from '../../store/skzk/actions'
 import { RootState } from '../../store/types'
 import { PlusOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'

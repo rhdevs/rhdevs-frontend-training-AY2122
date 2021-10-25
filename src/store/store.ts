@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { shoppingLists } from './shoppingLists/reducer'
-import { shoppingListsSKZK } from './pair6/reducer'
+import { shoppingListsSKZK } from './skzk/reducer'
 
 export const rootReducer = combineReducers({
   shoppingLists,

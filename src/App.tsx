@@ -15,8 +15,8 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
-  SHOPPING_PAGE = '/shopping/page',
-  PAIR6_SHOPPING_PAGE = '/shopping/pair6',
+  SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
+  SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
 }
 
@@ -26,9 +26,11 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPage'))
-const ShoppingPageRedux = React.lazy(
-  () => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPageRedux'),
+const SkZkShoppingPage = React.lazy(
+  () => import(/* webpackChunckName: "SkZkShoppingPage" */ './pages/SkZkShoppingPage'),
+)
+const SkZkShoppingPageRedux = React.lazy(
+  () => import(/* webpackChunckName: "SkZKShoppingPageRedux" */ './pages/SkZkShoppingPageRedux'),
 )
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
 
@@ -53,16 +55,16 @@ function App() {
           <ShoppingListsMainPage />
         </StyledMain>
       </Route>
-      <Route path={PATHS.SHOPPING_PAGE} exact>
+      <Route path={PATHS.SKZK_SHOPPING_PAGE} exact>
         <StyledMain>
           <MainNavigation />
-          <ShoppingPage />
+          <SkZkShoppingPage />
         </StyledMain>
       </Route>
-      <Route path={PATHS.PAIR6_SHOPPING_PAGE} exact>
+      <Route path={PATHS.SKZK_SHOPPING_PAGE_REDUX} exact>
         <StyledMain>
           <MainNavigation />
-          <ShoppingPageRedux />
+          <SkZkShoppingPageRedux />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
