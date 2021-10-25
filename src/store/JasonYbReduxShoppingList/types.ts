@@ -11,6 +11,8 @@ export type ShoppingItem = {
 export enum SHOPPING_LIST_ACTIONS {
   //follow naming convention <enum name>.<enum item name>
   SET_ITEM_LIST = 'SHOPPING_LIST_ACTIONS.SET_ITEM_LIST',
+  SET_KEY_AND_INDEX_COUNT = 'SHOPPING_LIST_ACTIONS.SET_KEY_AND_INDEX_COUNT',
+  SET_NEW_ITEM_TO_BE_ADDED = 'SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED',
 }
 
 /** Actions */
@@ -19,4 +21,15 @@ type SetItemList = {
   itemList: ShoppingItem[]
 }
 
-export type ActionTypes = SetItemList
+type SetKeyAndIndexCount = {
+  type: typeof SHOPPING_LIST_ACTIONS.SET_KEY_AND_INDEX_COUNT
+  keyCount: number
+  indexCount: number
+}
+
+type SetNewItemToBeAdded = {
+  type: typeof SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED
+  itemToBeAdded: string
+}
+
+export type ActionTypes = SetItemList | SetKeyAndIndexCount | SetNewItemToBeAdded
