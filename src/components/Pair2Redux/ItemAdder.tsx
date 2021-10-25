@@ -10,11 +10,12 @@ import AddButton from './AddButton'
 
 const ItemAdder = () => {
   const dispatch = useDispatch()
-  const [entry, setEntry] = useState<ListEntry>({ id: -1, quantity: 1, itemName: '' })
+  const default_entry = { id: -1, quantity: 1, itemName: '' }
+  const [entry, setEntry] = useState<ListEntry>(default_entry)
 
   const addItem = () => {
-    setEntry({ ...entry }) // necessary to prevent weird behaviours when simultaneously adding items without changing its name
     dispatch(addItemToList(entry))
+    setEntry(default_entry)
   }
 
   const updateName = (value: string) => {
@@ -32,9 +33,15 @@ const ItemAdder = () => {
   return (
     <ItemAdderContainer>
       <AddButton onClick={addItem} />
-      <Input placeholder="Item name" addonBefore="Item Name" onChange={(e) => updateName(e.currentTarget.value)} />
+      <Input
+        placeholder="Item name"
+        addonBefore="Item Name"
+        onChange={(e) => updateName(e.currentTarget.value)}
+        value={entry.itemName}
+      />
       <QuantityInput
         onChange={(e) => updateQuantity(parseInt(Number(e.currentTarget.value) > 0 ? e.currentTarget.value : '1'))} // ensure user don't input numbers <= 0
+        value={entry.quantity}
       />
     </ItemAdderContainer>
   )
