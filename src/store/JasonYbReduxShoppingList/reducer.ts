@@ -31,9 +31,9 @@ export const initialState: State = {
 
 //declare your variable type
 type State = {
-  itemList: ShoppingItem[],
-  keyCount: number,
-  indexCount: number,
+  itemList: ShoppingItem[]
+  keyCount: number
+  indexCount: number
 }
 
 export const JasonYbReduxShoppingList: Reducer<State, ActionTypes> = (state = initialState, action) => {
@@ -43,6 +43,13 @@ export const JasonYbReduxShoppingList: Reducer<State, ActionTypes> = (state = in
       return {
         ...state,
         itemList: action.itemList,
+      }
+    }
+    case SHOPPING_LIST_ACTIONS.INCREMENT_KEY_AND_INDEX_COUNT: {
+      return {
+        ...state,
+        keyCount: action.keyCount,
+        indexCount: action.indexCount,
       }
     }
     default:

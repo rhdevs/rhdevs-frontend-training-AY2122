@@ -26,4 +26,4 @@ type IncrementKeyAndIndexCount = {
   indexCount: number
 }
 
-export type ActionTypes = SetItemList
+export type ActionTypes = SetItemList | IncrementKeyAndIndexCount
