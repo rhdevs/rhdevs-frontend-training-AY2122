@@ -24,7 +24,7 @@ const AddItemModal = (props: Props) => {
       setItemNameError('')
     }
     if (itemCount <= 0) {
-      setItemCountError('Please input a valid quantity!')
+      setItemCountError('Please input a quantity greater than 0!')
       return true
     } else {
       setItemCountError('')
