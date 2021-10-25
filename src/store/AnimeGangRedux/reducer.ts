@@ -38,7 +38,7 @@ export const AnimeGangRedux: Reducer<State, ActionTypes> = (state = initialState
     }
     case SHOPPING_LIST_ACTIONS.HIDE_ADD_ITEM_INPUT: {
       //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
-      return { ...state, shoppingList: action.shoppingList }
+      return { ...state, shoppingList: action.showAddItem }
     }
     default:
       return state
