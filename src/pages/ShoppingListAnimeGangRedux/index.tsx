@@ -1,79 +1,69 @@
 import React from 'react'
-import { Button } from 'antd'
+import { Button, Input } from 'antd'
 import { Table, Space } from 'antd'
-import { MinusCircleOutlined, PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
+import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 import {
-  MainPage,
-  HeaderShoppingCart,
-  Header,
-  AddItemButton,
-  ShoppingListForm,
+  AddItemsContainer,
+  FullScreenContainer,
+  ShoppingListHeader,
+  TablePart,
+  TopRow,
 } from './styles/ShoppingListAnimeGangRedux.styled'
-import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/types'
 
-const ShoppingCart4Redux = () => {
-  const dispatch = useDispatch()
-  const { shoppingList } = useSelector((state: RootState) => state.shoppingListAnimeGangRedux)
-
+const ShoppingAnimeGangRedux = () => {
   const columns = [
     {
       title: 'Quantity',
-      dataIndex: 'itemCount',
-      key: 'itemCount',
+      dataIndex: 'quantity',
+      key: 'quantity',
     },
     {
       title: 'Item Name',
-      dataIndex: 'shoppingListItemName',
-      key: 'shoppingListItemName',
+      dataIndex: 'item_name',
+      key: 'item_name',
     },
     {
       title: 'Action',
+      dataIndex: 'action',
       key: 'action',
-      render: (text: ShoppingListItem, record: ShoppingListItem, index: number) => (
+      render: (item: Item, record: Item) => (
         <Space size="middle">
-          <MinusCircleOutlined
-            onClick={() => {
-              dispatch(RemoveQuantityInList(index))
-            }}
-          ></MinusCircleOutlined>
-          <PlusCircleOutlined
-            onClick={() => {
-              dispatch(AddQuantityInList(index))
-            }}
-          ></PlusCircleOutlined>
-          <a
-            onClick={() => {
-              dispatch(RemoveItemFromList(index))
-            }}
-          >
-            Delete
-          </a>
+          <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
+          <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
+          <a onClick={() => handleOnDeleteClick(record)}>Delete</a>
         </Space>
       ),
     },
   ]
 
   return (
-    <MainPage>
-      <HeaderShoppingCart>
-        <AddItemButton>
-          <Button
-            onClick={() => {
-              dispatch(ShowAddItemModal())
-            }}
-          >
-            <PlusOutlined /> Add Item
-          </Button>
-        </AddItemButton>
-        <Header>Shopping List</Header>
-      </HeaderShoppingCart>
-      <ShoppingListForm>
-        <Table columns={columns} dataSource={[...shoppingList]} pagination={false}></Table>
-      </ShoppingListForm>
-      <AddItemModalRedux></AddItemModalRedux>
-    </MainPage>
+    <FullScreenContainer>
+      <TopRow>
+        <ShoppingListHeader> Shopping list</ShoppingListHeader>
+        <AddItemsContainer>
+          {!showInput && (
+            <Button onClick={() => handleOnAddItemClick()} type="primary">
+              + Add item
+            </Button>
+          )}
+          {showInput && (
+            <Input
+              addonBefore="Enter your item"
+              defaultValue=""
+              size="small"
+              placeholder={addItemName}
+              onChange={(e) => handleOnType(e.target.value)}
+              onPressEnter={() => handleOnEnter()}
+            />
+          )}
+        </AddItemsContainer>
+      </TopRow>
+      <TablePart>
+        <Table columns={columns} dataSource={shoppingList}></Table>
+      </TablePart>
+    </FullScreenContainer>
   )
 }
 
-export default ShoppingCart4Redux
+export default ShoppingAnimeGangRedux
