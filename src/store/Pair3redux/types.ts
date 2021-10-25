@@ -8,7 +8,6 @@ export type Item = {
 
 /** Actions' types */
 export enum ITEM_ACTIONS {
-  //follow naming convention <enum name>.<enum item name>
   INCREASE_ITEM_QUANTITY = 'ITEM_ACTIONS_.INCREASE_ITEM_QUANTITY',
   DECREASE_ITEM_QUANTITY = 'ITEM_ACTIONS_.DECREASE_ITEM_QUANTITY',
   ADD_ITEM_TO_LIST = 'ITEM_ACTIONS_.ADD_ITEM_TO_LIST',
@@ -18,7 +17,7 @@ export enum ITEM_ACTIONS {
 /** Actions */
 type IncreaseItemQuantity = {
   type: typeof ITEM_ACTIONS.INCREASE_ITEM_QUANTITY
-  itemList: Item[] //state name : state type
+  itemList: Item[]
 }
 
 type DecreaseItemQuantity = {
