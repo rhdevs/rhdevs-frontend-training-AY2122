@@ -15,7 +15,7 @@ import { ShoppingItem } from '../../store/JasonYbReduxShoppingList/types'
 
 export default function ShoppingLists() {
   const dispatch = useDispatch()
-  const { itemList } = useSelector((state: RootState) => state.JasonYbReduxShoppingList) // see here later
+  const { itemList } = useSelector((state: RootState) => state.JasonYbReduxShoppingList)
   const [newItemName, setNewItemName] = useState('')
 
   const handleNewitemToBeAdded = (e: ChangeEvent<HTMLInputElement>) => {
