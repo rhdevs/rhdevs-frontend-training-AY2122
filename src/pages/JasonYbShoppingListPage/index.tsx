@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { initialState } from '../../store/shoppingLists/reducer'
-import { AddItemQuantity } from '../../store/shoppingLists/actions'
+import { initialState } from '../../store/JasonYbReduxShoppingList/reducer'
+import { AddItemQuantity } from '../../store/JasonYbReduxShoppingList/actions'
 
 import {
   AddItemButtonContainer,
@@ -11,7 +11,7 @@ import {
   ShoppingListHeader,
 } from './styles/JasonYbShoppingListPage.styled'
 import { Button, Table, Space } from 'antd'
-import { ShoppingItem } from '../../store/shoppingLists/types'
+import { ShoppingItem } from '../../store/JasonYbReduxShoppingList/types'
 
 export default function ShoppingLists() {
   const dispatch = useDispatch()
