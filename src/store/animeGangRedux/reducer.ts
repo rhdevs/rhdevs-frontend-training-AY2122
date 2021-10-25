@@ -38,6 +38,7 @@ export const animeGangRedux: Reducer<State, ActionTypes> = (state = initialState
       //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
       return { ...state, shoppingList: action.shoppingList }
     }
+<<<<<<< HEAD:src/store/animeGangRedux/reducer.ts
     // case SHOPPING_LIST_ACTIONS.SHOW_ADD_ITEM_INPUT: {
     //   //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
     //   return { ...state, showAddItem: action.showAddItem }
@@ -46,6 +47,16 @@ export const animeGangRedux: Reducer<State, ActionTypes> = (state = initialState
     //   //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
     //   return { ...state, showAddItem: action.showAddItem }
     // }
+=======
+    case SHOPPING_LIST_ACTIONS.SHOW_ADD_ITEM_INPUT: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, shoppingList: action.showAddItem }
+    }
+    case SHOPPING_LIST_ACTIONS.HIDE_ADD_ITEM_INPUT: {
+      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
+      return { ...state, shoppingList: action.shoppingList }
+    }
+>>>>>>> 8d958a43cc1d422d77bdadcde430f0dc978604f7:src/store/AnimeGangRedux/reducer.ts
     default:
       return state
   }

@@ -50,13 +50,19 @@ const ShoppingAnimeGangRedux = () => {
     <FullScreenContainer>
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
+<<<<<<< HEAD
         {/* <AddItemsContainer>
           {showAddItem && (
             <Button onClick={() => ShowAddItemInput()} type="primary">
+=======
+        <AddItemsContainer>
+          {!showInput && (
+            <Button onClick={() => handleOnAddItemClick()} type="primary">
+>>>>>>> 8d958a43cc1d422d77bdadcde430f0dc978604f7
               + Add item
             </Button>
           )}
-          {showAddItem && (
+          {showInput && (
             <Input
               addonBefore="Enter your item"
               defaultValue=""
