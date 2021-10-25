@@ -10,8 +10,8 @@ import {
   TopRow,
 } from './styles/ShoppingListAnimeGangRedux.styled'
 import { RootState } from '../../store/types'
-import { ShoppingListItem } from '../../store/animeGangRedux/types'
-import { AddQuantityToItem, DecreaseQuantityToItem, RemoveItemFromList } from '../../store/animeGangRedux/actions'
+import { ShoppingListItem } from '../../store/AnimeGangRedux/types'
+import { AddQuantityToItem, DecreaseQuantityToItem, RemoveItemFromList } from '../../store/AnimeGangRedux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 const ShoppingAnimeGangRedux = () => {
@@ -50,15 +50,9 @@ const ShoppingAnimeGangRedux = () => {
     <FullScreenContainer>
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
-<<<<<<< HEAD
         {/* <AddItemsContainer>
           {showAddItem && (
             <Button onClick={() => ShowAddItemInput()} type="primary">
-=======
-        <AddItemsContainer>
-          {!showInput && (
-            <Button onClick={() => handleOnAddItemClick()} type="primary">
->>>>>>> 8d958a43cc1d422d77bdadcde430f0dc978604f7
               + Add item
             </Button>
           )}

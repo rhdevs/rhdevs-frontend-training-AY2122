@@ -22,7 +22,7 @@ const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" 
 const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './pages/ErrorPage/NotFound'))
 const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './pages/Groups'))
 const ShoppingListsMainPage = React.lazy(
-  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
+  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListAnimeGangRedux'),
 )
 const ShoppingListAnimeGangRedux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListAnimeGangRedux'),
