@@ -25,11 +25,15 @@ export const initialState: State = {
       itemName: 'oregano',
     },
   ],
+  keyCount: 3,
+  indexCount: 3,
 }
 
 //declare your variable type
 type State = {
-  itemList: ShoppingItem[]
+  itemList: ShoppingItem[],
+  keyCount: number,
+  indexCount: number,
 }
 
 export const JasonYbReduxShoppingList: Reducer<State, ActionTypes> = (state = initialState, action) => {
