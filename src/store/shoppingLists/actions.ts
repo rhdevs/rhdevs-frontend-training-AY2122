@@ -13,3 +13,31 @@ export const mockActionSetMyExampleList =
       exampleList: newList ?? exampleList, // if newList is undefined, use exampleList
     })
   }
+
+export const INCREASEITEMQUANTITY = (newList: ExampleType[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { } = getState().shoppingLists
+  dispatch({
+
+  })
+}
+
+export const DECREASEITEMQUANTITY = (newList: ExampleType[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { } = getState().shoppingLists
+  dispatch({
+
+  })
+}
+
+export const DELETEITEM = (newList: ExampleType[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { } = getState().shoppingLists
+  dispatch({
+
+  })
+}
+
+export const ADDITEM = (newList: ExampleType[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { } = getState().shoppingLists
+  dispatch({
+
+  })
+}

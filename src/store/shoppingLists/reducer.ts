@@ -1,14 +1,28 @@
 import { Reducer } from 'redux'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType } from './types'
+import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, ShoppingListEntry } from './types'
 
 //set an initial state for your variable
-const initialState = {
-  exampleList: [],
+const initialState: State = {
+  ItemList: [
+    {
+      key: 1,
+      itemQuantity: 3,
+      itemName: 'Dummy Item 1',
+    },
+    {
+      key: 2,
+      itemQuantity: 4,
+      itemName: 'Dummy Item 2',
+    },
+  ],
+  IndexOfItem: 2
 }
 
 //declare your variable type
 type State = {
-  exampleList: ExampleType[]
+  ItemList: ShoppingListEntry[]
+  IndexOfItem: number
+
 }
 
 export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState, action) => {
