@@ -1,4 +1,3 @@
-import { ChangeEvent } from 'react'
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingItem } from './types'
 
@@ -40,25 +39,20 @@ export const DeleteItem =
     })
   }
 
-const IncrementKeyAndIndexCount = () => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const IncrementKeyAndIndexCount = () => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { keyCount, indexCount } = getState().JasonYbReduxShoppingList
+  const newKeyCount = keyCount + 1
+  const newIndexCount = indexCount + 1
   dispatch({
-    type: SHOPPING_LIST_ACTIONS.INCREMENT_KEY_AND_INDEX_COUNT,
-    keyCount: keyCount + 1,
-    indexCount: indexCount + 1,
+    type: SHOPPING_LIST_ACTIONS.SET_KEY_AND_INDEX_COUNT,
+    keyCount: newKeyCount,
+    indexCount: newIndexCount,
   })
 }
 
-export const HandleNewitemToBeAdded = (e: ChangeEvent<HTMLInputElement>) => async (dispatch: Dispatch<ActionTypes>) => {
-  dispatch({
-    type: SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED,
-    itemToBeAdded: e.target.value,
-  })
-}
-
-export const AddItem = () => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  IncrementKeyAndIndexCount()
-  const { itemList, keyCount, indexCount, newItemName } = getState().JasonYbReduxShoppingList
+export const AddItem = (newItemName: string) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  dispatch(IncrementKeyAndIndexCount())
+  const { itemList, keyCount, indexCount } = getState().JasonYbReduxShoppingList
   const newItem: ShoppingItem = {
     key: keyCount,
     index: indexCount,

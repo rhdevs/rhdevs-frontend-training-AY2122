@@ -1,12 +1,6 @@
-import React from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  AddItemQuantity,
-  ReduceItemQuantity,
-  DeleteItem,
-  HandleNewitemToBeAdded,
-  AddItem,
-} from '../../store/JasonYbReduxShoppingList/actions'
+import { AddItemQuantity, ReduceItemQuantity, DeleteItem, AddItem } from '../../store/JasonYbReduxShoppingList/actions'
 import { RootState } from '../../store/types'
 
 import {
@@ -21,7 +15,12 @@ import { ShoppingItem } from '../../store/JasonYbReduxShoppingList/types'
 
 export default function ShoppingLists() {
   const dispatch = useDispatch()
-  const { itemList, newItemName } = useSelector((state: RootState) => state.JasonYbReduxShoppingList) // see here later
+  const { itemList } = useSelector((state: RootState) => state.JasonYbReduxShoppingList) // see here later
+  const [newItemName, setNewItemName] = useState('')
+
+  const handleNewitemToBeAdded = (e: ChangeEvent<HTMLInputElement>) => {
+    setNewItemName(e.target.value)
+  }
 
   const columns = [
     {
@@ -53,8 +52,6 @@ export default function ShoppingLists() {
     },
   ]
 
-  const temp = ''
-
   return (
     <>
       <HeaderContainer>
@@ -65,9 +62,9 @@ export default function ShoppingLists() {
               value={newItemName}
               type="text"
               placeholder="Item"
-              onChange={(e) => HandleNewitemToBeAdded(e)}
+              onChange={(e) => handleNewitemToBeAdded(e)}
             />
-            <Button type="dashed" onClick={() => dispatch(AddItem())}>
+            <Button type="dashed" onClick={() => dispatch(AddItem(newItemName))}>
               + Add item
             </Button>
           </form>

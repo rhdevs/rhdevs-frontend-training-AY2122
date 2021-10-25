@@ -11,7 +11,7 @@ export type ShoppingItem = {
 export enum SHOPPING_LIST_ACTIONS {
   //follow naming convention <enum name>.<enum item name>
   SET_ITEM_LIST = 'SHOPPING_LIST_ACTIONS.SET_ITEM_LIST',
-  INCREMENT_KEY_AND_INDEX_COUNT = 'SHOPPING_LIST_ACTIONS.INCREMENT_KEY_COUNT',
+  SET_KEY_AND_INDEX_COUNT = 'SHOPPING_LIST_ACTIONS.SET_KEY_AND_INDEX_COUNT',
   SET_NEW_ITEM_TO_BE_ADDED = 'SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED',
 }
 
@@ -21,8 +21,8 @@ type SetItemList = {
   itemList: ShoppingItem[]
 }
 
-type IncrementKeyAndIndexCount = {
-  type: typeof SHOPPING_LIST_ACTIONS.INCREMENT_KEY_AND_INDEX_COUNT
+type SetKeyAndIndexCount = {
+  type: typeof SHOPPING_LIST_ACTIONS.SET_KEY_AND_INDEX_COUNT
   keyCount: number
   indexCount: number
 }
@@ -32,4 +32,4 @@ type SetNewItemToBeAdded = {
   itemToBeAdded: string
 }
 
-export type ActionTypes = SetItemList | IncrementKeyAndIndexCount | SetNewItemToBeAdded
+export type ActionTypes = SetItemList | SetKeyAndIndexCount | SetNewItemToBeAdded
