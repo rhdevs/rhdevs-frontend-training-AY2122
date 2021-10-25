@@ -1,5 +1,5 @@
 import { Dispatch, GetState } from '../types'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, ShoppingListEntry } from './types'
+import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType } from './types'
 
 //set my 'exampleList' state with my argument 'newList'
 //to call this in your component or page, wrap with dispatch
@@ -13,34 +13,3 @@ export const mockActionSetMyExampleList =
       exampleList: newList ?? exampleList, // if newList is undefined, use exampleList
     })
   }
-
-export const INCREASEITEMQUANTITY = (ItemList: ShoppingListEntry[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  const { } = getState().shoppingLists
-  dispatch({
-    type: SHOPPING_LIST_ACTIONS.INCREASE_QUANTITY,
-
-  })
-}
-
-export const DECREASEITEMQUANTITY = (ItemList: ShoppingListEntry[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  const { } = getState().shoppingLists
-  dispatch({
-    type: SHOPPING_LIST_ACTIONS.DECREASE_QUANTITY,
-
-  })
-}
-
-export const DELETEITEM = (IndexOfItem: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  const { } = getState().shoppingLists
-  dispatch({
-    type: SHOPPING_LIST_ACTIONS.REMOVE_SHOPPING_ITEM,
-
-  })
-}
-
-export const ADDITEM = (IndexOfItem: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  const { } = getState().shoppingLists
-  dispatch({
-
-  })
-}

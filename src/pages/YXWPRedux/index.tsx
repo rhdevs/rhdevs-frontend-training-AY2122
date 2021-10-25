@@ -6,10 +6,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { IncreaseQuantity } from '../../store/yxwp_store/actions'
 import { RootState } from '../../store/types'
 const { Column } = Table
-const dispatch = useDispatch()
-const { ItemList } = useSelector((state: RootState) => state.yxwp_store)
-const [newItemName, setNewItemName] = useState('')
+
 const YXWPRedux = () => {
+  const dispatch = useDispatch()
+  const { ItemList } = useSelector((state: RootState) => state.yxwp_store)
+  const [newItemName, setNewItemName] = useState('')
   interface Props {
     key: number
     itemQuantity: number
@@ -59,7 +60,7 @@ const YXWPRedux = () => {
             Add item
           </Button>
         </Space>
-        <Table dataSource={data}>
+        <Table dataSource={ItemList}>
           <Column title="Item Name" dataIndex="itemName" key="itemName" />
           <Column title="Quantity" dataIndex="itemQuantity" key="itemQuantity" />
           <Column
@@ -67,7 +68,11 @@ const YXWPRedux = () => {
             key="action"
             render={(currItem: Props) => (
               <Space>
-                <Button type="link" icon={<PlusCircleOutlined />} onClick={() => dispatch(IncreaseQuantity(currItem))} />
+                <Button
+                  type="link"
+                  icon={<PlusCircleOutlined />}
+                  onClick={() => dispatch(IncreaseQuantity(currItem.key))}
+                />
                 <Button type="link" icon={<MinusCircleOutlined />} onClick={() => handleDecreaseQuantity(currItem)} />
                 <Button type="link" onClick={() => handleDeleteItem(currItem)}>
                   Delete

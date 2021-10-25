@@ -14,15 +14,15 @@ import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListEntry } from './types'
 //     })
 //   }
 
-export const IncreaseQuantity = (ItemToChange: ShoppingListEntry) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-    const { ItemList } = getState().yxwp_store
-    const newList = ItemList.map((item) =>
-        item.key === ItemToChange.key ? { ...item, quantity: item.itemQuantity + 1 } : item,
-    )
-    dispatch({
-        type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_LIST,
-        ItemList: newList,
-    })
+export const IncreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { ItemList } = getState().yxwp_store
+  const newList = ItemList.map((item) =>
+    item.key === ItemToChangeKey ? { ...item, itemQuantity: item.itemQuantity + 1 } : item,
+  )
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_LIST,
+    ItemList: newList,
+  })
 }
 
 // export const DecreaseQuantity = (ItemToChange: ShoppingListEntry) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
