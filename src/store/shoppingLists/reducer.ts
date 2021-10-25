@@ -1,6 +1,6 @@
 import { PropertySafetyTwoTone } from '@ant-design/icons'
 import { Reducer } from 'redux'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, ShoppingItem } from './types'
+import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingItem } from './types'
 
 //set an initial state for your variable
 // check whether export is allowed here
@@ -35,17 +35,10 @@ type State = {
 export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState, action) => {
   switch (action.type) {
     //this is to update the state if the action type is called
-    case SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST: {
-      //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
-      return {
-        ...state,
-        exampleList: action.exampleList,
-      }
-    }
     case SHOPPING_LIST_ACTIONS.SET_ITEM_LIST: {
       return {
         ...state,
-        newList: action.itemList,
+        itemList: action.itemList,
       }
     }
     default:

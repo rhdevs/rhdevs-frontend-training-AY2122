@@ -7,11 +7,6 @@ export type ShoppingItem = {
   quantity: number
 }
 
-export type ExampleType = {
-  varName: string //(variable name) : (its type)
-  numName: number
-}
-
 /** Actions' types */
 export enum SHOPPING_LIST_ACTIONS {
   //follow naming convention <enum name>.<enum item name>
@@ -20,14 +15,9 @@ export enum SHOPPING_LIST_ACTIONS {
 }
 
 /** Actions */
-type SetExampleList = {
-  type: typeof SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST
-  exampleList: ExampleType[] //state name : state type
-}
-
 type SetItemList = {
   type: typeof SHOPPING_LIST_ACTIONS.SET_ITEM_LIST
   itemList: ShoppingItem[]
 }
 
-export type ActionTypes = SetExampleList | SetItemList
+export type ActionTypes = SetItemList
