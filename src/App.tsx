@@ -22,7 +22,7 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/ShoppingPage'))
+const Pair6 = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPage'))
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render
@@ -47,7 +47,7 @@ function App() {
       <Route path={PATHS.SHOPPING_PAGE} exact>
         <StyledMain>
           <MainNavigation />
-          <ShoppingPage />
+          <Pair6 />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
