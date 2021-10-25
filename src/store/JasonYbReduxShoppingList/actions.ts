@@ -38,3 +38,29 @@ export const DeleteItem =
       itemList: updatedList,
     })
   }
+
+const IncrementKeyAndIndexCount = () => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { keyCount, indexCount } = getState().JasonYbReduxShoppingList
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.INCREMENT_KEY_AND_INDEX_COUNT,
+    keyCount: keyCount + 1,
+    indexCount: indexCount + 1,
+  })
+}
+
+export const AddItem =
+  (newItemString: string) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+    IncrementKeyAndIndexCount()
+    const { itemList, keyCount, indexCount } = getState().JasonYbReduxShoppingList
+    const newItem: ShoppingItem = {
+      key: keyCount,
+      index: indexCount,
+      quantity: 1,
+      itemName: newItemString,
+    }
+    const updatedList = [...itemList, newItem]
+    dispatch({
+      type: SHOPPING_LIST_ACTIONS.SET_ITEM_LIST,
+      itemList: updatedList,
+    })
+  }
