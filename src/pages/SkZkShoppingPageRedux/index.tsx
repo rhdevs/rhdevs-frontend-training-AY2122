@@ -6,14 +6,14 @@ import {
   ItemRowContainer,
   AddTextInput,
   CartTable,
-} from './styles/ShoppingPage.styled'
+} from './styles/ShoppingPageRedux.styled'
 import { CartItem } from '../../store/pair6/types'
 import { AddItemQuantity, DeleteCartItem, MinusItemQuantity, SetShoppingCart } from '../../store/pair6/actions'
 import { RootState } from '../../store/types'
 import { PlusOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
 
-const ShoppingPage = () => {
+const ShoppingPageRedux = () => {
   const dispatch = useDispatch()
   const { shoppingCart } = useSelector((state: RootState) => state.shoppingListsSKZK)
   const [userInput, setUserInput] = useState('')
@@ -93,4 +93,4 @@ const ShoppingPage = () => {
   )
 }
 
-export default ShoppingPage
+export default ShoppingPageRedux

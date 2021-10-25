@@ -10,12 +10,14 @@ import Footer from './shared/Navigation/Footer'
 
 import 'antd/dist/antd.css'
 import { StyledMain } from './App.styled'
+import ShoppingPageRedux from './pages/SkZkShoppingPageRedux'
 
 export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
   SHOPPING_PAGE = '/shopping/page',
+  PAIR6_SHOPPING_PAGE = '/shopping/pair6',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -25,6 +27,8 @@ const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
 const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/ShoppingPage'))
+const Pair6Redux = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPageRedux'))
+
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render
@@ -50,6 +54,12 @@ function App() {
         <StyledMain>
           <MainNavigation />
           <ShoppingPage />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.PAIR6_SHOPPING_PAGE} exact>
+        <StyledMain>
+          <MainNavigation />
+          <ShoppingPageRedux />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
