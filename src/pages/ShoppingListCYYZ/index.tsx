@@ -24,14 +24,14 @@ import {
   addOthersAmount,
   deleteOthersItem,
   minusOthersAmount,
+  setMenuVisible,
 } from '../../store/shoppingListsCYYZ/actions'
 
 const { Option } = Select
 
 const ShoppingListMain = () => {
   const dispatch = useDispatch()
-  const { foodList, othersList } = useSelector((state: RootState) => state.shoppingListsCYYZ)
-  const [isMenuVisible, setMenuVisible] = useState(false)
+  const { foodList, othersList, isMenuVisible } = useSelector((state: RootState) => state.shoppingListsCYYZ)
   const [category, setCategory] = useState('food')
   const [name, setName] = useState('')
 
@@ -71,9 +71,9 @@ const ShoppingListMain = () => {
             title="Add new item"
             visible={isMenuVisible}
             trigger={'click'}
-            onVisibleChange={(change) => setMenuVisible(change)}
+            onVisibleChange={(change) => dispatch(setMenuVisible(change))}
           />
-          <Button onClick={() => setMenuVisible(!isMenuVisible)}>Add Item</Button>
+          <Button onClick={() => dispatch(setMenuVisible(!isMenuVisible))}>Add Item</Button>
         </AddContainer>
       </BigHeader>
     )

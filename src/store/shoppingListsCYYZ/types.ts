@@ -22,9 +22,14 @@ export enum SHOPPING_LIST_ACTIONS_CYYZ {
   ADD_OTHERS_AMOUNT = 'SHOPPING_LIST_ACTIONS_CYYZ.ADD_OTHERS_AMOUNT',
   MINUS_OTHERS_AMOUNT = 'SHOPPING_LIST_ACTIONS_CYYZ.MINUS_OTHERS_AMOUNT',
   DELETE_OTHERS_ITEM = 'SHOPPING_LIST_ACTIONS_CYYZ.DELETE_OTHERS_ITEM',
+  SET_MENU_VISIBLE = 'SHOPPING_LIST_ACTIONS_CYYZ.SET_MENU_VISIBLE',
 }
 
 /** Actions */
+type SetMenuVisible = {
+  type: typeof SHOPPING_LIST_ACTIONS_CYYZ.SET_MENU_VISIBLE
+  update: boolean
+}
 type SetFoodList = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.SET_FOOD_LIST
   update: Item[] //state name : state type
@@ -74,3 +79,4 @@ export type ActionTypes =
   | addOthersAmount
   | minusOthersAmount
   | deleteOthersItem
+  | SetMenuVisible

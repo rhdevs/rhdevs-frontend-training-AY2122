@@ -3,17 +3,16 @@ import { ActionTypes, Item, SHOPPING_LIST_ACTIONS_CYYZ } from './types'
 
 //set an initial state for your variable
 const initialState = {
-  foodList: [
-    { name: 'Egg', amount: 2 },
-    { name: 'Milk', amount: 2 },
-  ],
-  othersList: [{ name: 'Pencil', amount: 1 }],
+  foodList: [],
+  othersList: [],
+  isMenuVisible: false,
 }
 
 //declare your variable type
 type State = {
   foodList: Item[]
   othersList: Item[]
+  isMenuVisible: boolean
 }
 
 export const shoppingListsCYYZ: Reducer<State, ActionTypes> = (state = initialState, action) => {
@@ -25,6 +24,9 @@ export const shoppingListsCYYZ: Reducer<State, ActionTypes> = (state = initialSt
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.SET_OTHERS_LIST: {
       return { ...state, othersList: action.update }
+    }
+    case SHOPPING_LIST_ACTIONS_CYYZ.SET_MENU_VISIBLE: {
+      return { ...state, isMenuVisible: action.update }
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.ADD_FOOD_AMOUNT: {
       const update = state.foodList.map((e) =>
