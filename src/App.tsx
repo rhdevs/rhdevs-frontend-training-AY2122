@@ -15,16 +15,13 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
-<<<<<<< HEAD
   PAIR3_SHOPPING_PAGE = '/shopping/pair3',
-=======
   SHOPPING_PAGE_CHUNYU_YONGZHANG = '/shopping-lists/chunyu-yongzhang',
   JASON_YB_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb',
   JASON_YB_REDUX_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb-redux',
   SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
   SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
->>>>>>> main
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -36,9 +33,7 @@ const ShoppingListCYYZ = React.lazy(
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-<<<<<<< HEAD
 const Pair3redux = React.lazy(() => import(/* webpackChunckName: "Pair3redux" */ './pages/Pair3redux'))
-=======
 const JasonYbShoppingListPage = React.lazy(
   () => import(/* webpackChunckName: "JasonYbShoppingListPage" */ './pages/JasonYbShoppingListPage'),
 )
@@ -52,7 +47,6 @@ const SkZkShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "SkZKShoppingPageRedux" */ './pages/SkZkShoppingPageRedux'),
 )
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
->>>>>>> main
 
 function App() {
   useEffect(() => {
@@ -81,7 +75,6 @@ function App() {
           <ShoppingListsMainPage />
         </StyledMain>
       </Route>
-<<<<<<< HEAD
       <Route path={PATHS.PAIR3_SHOPPING_PAGE} exact>
         <StyledMain>
           <MainNavigation />
@@ -89,7 +82,6 @@ function App() {
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
-=======
       <>
         <Route path={PATHS.JASON_YB_SHOPPING_LIST_PAGE} exact>
           <StyledMain>
@@ -129,7 +121,6 @@ function App() {
         </Route>
         <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
       </>
->>>>>>> main
       {/* example from lesson 1 (4oct) */}
       <Route path="/example" exact component={Lesson1Example} />
       <Route>

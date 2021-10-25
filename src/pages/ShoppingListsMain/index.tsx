@@ -12,9 +12,7 @@ const ShoppingListMain = () => {
       <ShoppingListHeader>Our Shopping Lists!</ShoppingListHeader>
       <GroupCardsContainer>
         <ShoppingCard names="name1, name2, name4" onClick={() => history.push(PATHS.EXAMPLE_SHOPPING_PAGE)} />
-<<<<<<< HEAD
         <ShoppingCard names="En Hao Venus" onClick={() => history.push(PATHS.PAIR3_SHOPPING_PAGE)} />
-=======
         <ShoppingCard names="Jason, Yong Bin" onClick={() => history.push(PATHS.JASON_YB_SHOPPING_LIST_PAGE)} />
         <ShoppingCard
           names="Jason, Yong Bin, REDUX"
@@ -23,7 +21,6 @@ const ShoppingListMain = () => {
         <ShoppingCard names="zhikai, shaokiat" onClick={() => history.push(PATHS.SKZK_SHOPPING_PAGE)} />
         <ShoppingCard names="zhikai, shaokiat (Redux)" onClick={() => history.push(PATHS.SKZK_SHOPPING_PAGE_REDUX)} />
         <ShoppingCard names="Maxim, Marcus" onClick={() => history.push(PATHS.PAIR_2_SHOPPING_PAGE)} />
->>>>>>> main
         {/* Create group cards here */}
         <ShoppingCard names="Chun Yu, Yong Zhang" onClick={() => history.push(PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG)} />
       </GroupCardsContainer>
