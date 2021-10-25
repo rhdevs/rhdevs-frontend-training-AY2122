@@ -13,6 +13,7 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
+  SHOPPING_LIST_ANIME_REDUX = '/shopping/shopping-list-anime-redux',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -20,6 +21,9 @@ const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './
 const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './pages/Groups'))
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
+)
+const ShoppingListAnimeRedux = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListAnimeRedux'),
 )
 
 function App() {
@@ -57,6 +61,12 @@ function App() {
           <MainNavigation />
           <NotFound />
           <Footer />
+        </StyledMain>
+      </Route>
+      <Route path={`${PATHS.SHOPPING_LIST_ANIME_REDUX}/:ShoppingListAnimeRedux`} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Groups />
         </StyledMain>
       </Route>
       <Redirect to="/" />
