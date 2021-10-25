@@ -37,11 +37,11 @@ type RemoveItemFromList = {
 }
 type ShowAddItemInput = {
   type: typeof SHOPPING_LIST_ACTIONS.SHOW_ADD_ITEM_INPUT
-  shoppingList: ShoppingListItem[] //state name : state type
+  showAddItem: boolean //state name : state type
 }
 type HideAddItemInput = {
   type: typeof SHOPPING_LIST_ACTIONS.HIDE_ADD_ITEM_INPUT
-  shoppingList: ShoppingListItem[] //state name : state type
+  showAddItem: boolean //state name : state type
 }
 
 export type ActionTypes =
