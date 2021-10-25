@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Button, Table, Space, Input } from 'antd'
-import { ConsoleSqlOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons'
+import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 import {
   AddItemsContainer,
   FullScreenContainer,
@@ -40,11 +40,9 @@ const ShoppingAnimeGangRedux = () => {
     }
     dispatch(AddItemKey())
     dispatch(HideAddItemInput())
-    console.log(shoppingList)
   }
 
   const [addItemName, setAddItemName] = useState<string>('')
-  // const [showAddItem, setShowAddItem] = useState<boolean>(false)
 
   const dispatch = useDispatch()
   const { shoppingList } = useSelector((state: RootState) => state.animeGangRedux)
@@ -96,7 +94,7 @@ const ShoppingAnimeGangRedux = () => {
               addonBefore="Enter your item"
               defaultValue=""
               size="small"
-              placeholder={addItemName}
+              placeholder=""
               onChange={(e) => handleOnType(e.target.value)}
               onPressEnter={() => handleOnEnter()}
             />

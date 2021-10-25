@@ -11,7 +11,6 @@ export const AddItemToList = (newItem: ShoppingListItem) => (dispatch: Dispatch<
   dispatch({
     type: ANIME_GANG_ACTIONS.ADD_ITEM_TO_LIST,
     shoppingList: newList,
-    // if newList is undefined, use exampleList
   })
 }
 export const AddQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
@@ -20,7 +19,6 @@ export const AddQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTy
   dispatch({
     type: ANIME_GANG_ACTIONS.ADD_QUANTITY_TO_ITEM,
     shoppingList: shoppingList,
-    // if newList is undefined, use exampleList
   })
 }
 export const DecreaseQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
@@ -31,7 +29,7 @@ export const DecreaseQuantityToItem = (index: number) => (dispatch: Dispatch<Act
   }
   dispatch({
     type: ANIME_GANG_ACTIONS.DECREASE_QUANTITY_TO_ITEM,
-    shoppingList: shoppingList, // if newList is undefined, use exampleList
+    shoppingList: shoppingList,
   })
 }
 export const RemoveItemFromList = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
@@ -44,21 +42,21 @@ export const RemoveItemFromList = (index: number) => (dispatch: Dispatch<ActionT
   }
   dispatch({
     type: ANIME_GANG_ACTIONS.REMOVE_ITEM_FROM_LIST,
-    shoppingList: newList, // if newList is undefined, use exampleList
+    shoppingList: newList,
   })
 }
-export const ShowAddItemInput = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const ShowAddItemInput = () => (dispatch: Dispatch<ActionTypes>) => {
   const newbool = true
   dispatch({
     type: ANIME_GANG_ACTIONS.SHOW_ADD_ITEM_INPUT,
-    showAddItem: newbool, // if newList is undefined, use exampleList
+    showAddItem: newbool,
   })
 }
-export const HideAddItemInput = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const HideAddItemInput = () => (dispatch: Dispatch<ActionTypes>) => {
   const newbool = false
   dispatch({
     type: ANIME_GANG_ACTIONS.HIDE_ADD_ITEM_INPUT,
-    showAddItem: newbool, // if newList is undefined, use exampleList
+    showAddItem: newbool,
   })
 }
 export const AddItemKey = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
