@@ -25,7 +25,7 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/ShoppingPage'))
+const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPage'))
 const ShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPageRedux'),
 )
