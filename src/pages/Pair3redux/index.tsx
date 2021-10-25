@@ -78,7 +78,7 @@ const Pair3redux = () => {
         <form>
           <AddTextInput value={ItemName} type="text" placeholder="Item" onChange={(e) => setItemName(e.target.value)} />
           <AddTextInput
-            value={Quantity}
+            value={isNaN(Quantity) ? '' : Quantity}
             type="text"
             placeholder="Quantity"
             onChange={(e) => setQuantity(parseInt(e.target.value))}
