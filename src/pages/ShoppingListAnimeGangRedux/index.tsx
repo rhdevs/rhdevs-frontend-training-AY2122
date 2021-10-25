@@ -11,7 +11,7 @@ import {
 } from './styles/ShoppingListAnimeGangRedux.styled'
 import { RootState } from '../../store/types'
 import { ShoppingListItem } from '../../store/AnimeGangRedux/types'
-import { AddQuantityToItem, DecreaseQuantityToItem, RemoveItemFromList } from '../../store/AnimeGangRedux/actions'
+import { AddQuantityToItem } from '../../store/AnimeGangRedux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 const ShoppingAnimeGangRedux = () => {
@@ -35,8 +35,8 @@ const ShoppingAnimeGangRedux = () => {
       render: (text: ShoppingListItem, record: ShoppingListItem, index: number) => (
         <Space size="middle">
           <Button onClick={() => dispatch(AddQuantityToItem(index))} shape="circle" icon={<PlusOutlined />}></Button>
-          <Button onClick={() => dispatch(DecreaseQuantityToItem(index))} shape="circle" icon={<MinusOutlined />}></Button>
-          <a onClick={() => dispatch(RemoveItemFromList(index))}>Delete</a>
+          <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
+          <a onClick={() => handleOnDeleteClick(record)}>Delete</a>
         </Space>
       ),
     },
@@ -47,12 +47,12 @@ const ShoppingAnimeGangRedux = () => {
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
         <AddItemsContainer>
-          {showAddItem && (
+          {!showInput && (
             <Button onClick={() => handleOnAddItemClick()} type="primary">
               + Add item
             </Button>
           )}
-          {showAddItem && (
+          {showInput && (
             <Input
               addonBefore="Enter your item"
               defaultValue=""
