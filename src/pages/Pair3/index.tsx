@@ -19,7 +19,6 @@ const Pair3 = () => {
     },
   ])
 
-  const [quantity, setQuantity] = useState(0)
   const [userInput, setUserInput] = useState('')
   const [userInputQuantity, setUserInputQuantity] = useState('')
 
@@ -51,7 +50,7 @@ const Pair3 = () => {
 
   const handleDecreaseQuantity = (entry: Data_entry) => {
     const updatedShoppingCart = shoppingCart.map((x) =>
-      x.key === entry.key ? { ...x, quantity: x.quantity === 0 ? x.quantity : x.quantity - 1 } : x,
+      x.key === entry.key ? { ...x, quantity: x.quantity === 1 ? x.quantity : x.quantity - 1 } : x,
     )
     setShoppingCart(updatedShoppingCart)
   }
@@ -59,14 +58,6 @@ const Pair3 = () => {
   const removeItem = (item: Data_entry) => {
     const updatedShoppingCart = shoppingCart.filter((x) => x.key != item.key)
     setShoppingCart(updatedShoppingCart)
-  }
-
-  const removeFromCart = () => {
-    let copy = [...shoppingCart]
-    copy = copy.filter((cartItem) => cartItem.name !== userInput)
-    setShoppingCart(copy)
-    setUserInputQuantity('')
-    setUserInput('')
   }
 
   const columns = [
