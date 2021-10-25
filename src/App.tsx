@@ -14,6 +14,7 @@ import { StyledMain } from './App.styled'
 export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
+  EXAMPLE_SHOPPING_PAGE = '/shopping/example',
   JASON_YB_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb',
   JASON_YB_REDUX_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb-redux',
 }
