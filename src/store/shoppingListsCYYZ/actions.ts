@@ -13,11 +13,11 @@ import { ActionTypes, SHOPPING_LIST_ACTIONS_CYYZ, Item } from './types'
 //       exampleList: newList ?? exampleList, // if newList is undefined, use exampleList
 //     })
 //   }
-export const setMenuVisible = (anything: boolean) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const setMenuVisible = (state: boolean) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { isMenuVisible } = getState().shoppingListsCYYZ
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.SET_MENU_VISIBLE,
-    update: anything ?? isMenuVisible,
+    update: state ?? isMenuVisible,
   })
 }
 export const setFoodList = (newList: Item[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
