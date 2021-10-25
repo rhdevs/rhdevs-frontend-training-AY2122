@@ -25,9 +25,9 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-const ShoppingListPair4 = React.lazy(() => import(/* webpackChunckName: "ShoppingListPair4" */ './pages/ShoppingCart4'))
-const ShoppingListPair4Redux = React.lazy(
-  () => import(/* webpackChunckName: "ShoppingListPair4Redux" */ './pages/ShoppingCart4Redux'),
+const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCart4" */ './pages/ShoppingCart4'))
+const ShoppingCart4Redux = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingCart4Redux" */ './pages/ShoppingCart4Redux'),
 )
 
 function App() {
@@ -54,13 +54,13 @@ function App() {
       <Route path={PATHS.SHOPPING_PAGE_PAIR_FOUR} exact>
         <StyledMain>
           <MainNavigation />
-          <ShoppingListPair4 />
+          <ShoppingCart4 />
         </StyledMain>
       </Route>
       <Route path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} exact>
         <StyledMain>
           <MainNavigation />
-          <ShoppingListPair4Redux />
+          <ShoppingCart4Redux />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.SHOPPING_LISTS}/:groupnumber`} exact>
