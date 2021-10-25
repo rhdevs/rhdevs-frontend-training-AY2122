@@ -11,6 +11,7 @@ export enum ANIME_GANG_ACTIONS {
   REMOVE_ITEM_FROM_LIST = 'ANIME_GANG_ACTIONS.REMOVE_ITEM_FROM_LIST',
   HIDE_ADD_ITEM_INPUT = 'ANIME_GANG_ACTIONS.HIDE_ADD_ITEM_INPUT',
   SHOW_ADD_ITEM_INPUT = 'ANIME_GANG_ACTIONS.SHOW_ADD_ITEM_INPUT',
+  ADD_ITEM_KEY = 'ANIME_GANG_ACTIONS.ADD_ITEM_KEY',
 }
 
 type AddItemToList = {
@@ -38,6 +39,10 @@ type HideAddItemInput = {
   type: typeof ANIME_GANG_ACTIONS.HIDE_ADD_ITEM_INPUT
   showAddItem: boolean
 }
+type AddItemKey = {
+  type: typeof ANIME_GANG_ACTIONS.ADD_ITEM_KEY
+  itemKey: number
+}
 
 export type ActionTypes =
   | AddItemToList
@@ -46,3 +51,4 @@ export type ActionTypes =
   | RemoveItemFromList
   | ShowAddItemInput
   | HideAddItemInput
+  | AddItemKey

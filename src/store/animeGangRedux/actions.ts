@@ -3,10 +3,14 @@ import { ActionTypes, ANIME_GANG_ACTIONS, ShoppingListItem } from './types'
 
 export const AddItemToList = (newItem: ShoppingListItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingList } = getState().animeGangRedux
-  shoppingList.push(newItem)
+  const newList = []
+  for (let i = 0; i < shoppingList.length; i += 1) {
+    newList.push(shoppingList[i])
+  }
+  newList.push(newItem)
   dispatch({
     type: ANIME_GANG_ACTIONS.ADD_ITEM_TO_LIST,
-    shoppingList: shoppingList,
+    shoppingList: newList,
     // if newList is undefined, use exampleList
   })
 }
@@ -32,21 +36,36 @@ export const DecreaseQuantityToItem = (index: number) => (dispatch: Dispatch<Act
 }
 export const RemoveItemFromList = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingList } = getState().animeGangRedux
-  shoppingList.splice(index, 1)
+  const newList = []
+  for (let i = 0; i < shoppingList.length; i += 1) {
+    if (i != index) {
+      newList.push(shoppingList[i])
+    }
+  }
   dispatch({
     type: ANIME_GANG_ACTIONS.REMOVE_ITEM_FROM_LIST,
-    shoppingList: shoppingList, // if newList is undefined, use exampleList
+    shoppingList: newList, // if newList is undefined, use exampleList
   })
 }
 export const ShowAddItemInput = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const newbool = true
   dispatch({
     type: ANIME_GANG_ACTIONS.SHOW_ADD_ITEM_INPUT,
-    showAddItem: true, // if newList is undefined, use exampleList
+    showAddItem: newbool, // if newList is undefined, use exampleList
   })
 }
 export const HideAddItemInput = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const newbool = false
   dispatch({
     type: ANIME_GANG_ACTIONS.HIDE_ADD_ITEM_INPUT,
-    showAddItem: false, // if newList is undefined, use exampleList
+    showAddItem: newbool, // if newList is undefined, use exampleList
+  })
+}
+export const AddItemKey = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { itemKey } = getState().animeGangRedux
+  const newKey = itemKey + 1
+  dispatch({
+    type: ANIME_GANG_ACTIONS.ADD_ITEM_KEY,
+    itemKey: newKey, // if newList is undefined, use exampleList
   })
 }

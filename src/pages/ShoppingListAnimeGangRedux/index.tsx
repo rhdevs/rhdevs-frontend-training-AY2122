@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { Button, Table, Space } from 'antd'
-import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
+import { Button, Table, Space, Input } from 'antd'
+import { ConsoleSqlOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons'
 import {
   AddItemsContainer,
   FullScreenContainer,
@@ -12,11 +12,44 @@ import {
 } from './styles/ShoppingListAnimeGangRedux.styled'
 import { RootState } from '../../store/types'
 import { ShoppingListItem } from '../../store/animeGangRedux/types'
-import { AddQuantityToItem, DecreaseQuantityToItem, RemoveItemFromList } from '../../store/animeGangRedux/actions'
+import {
+  AddItemKey,
+  AddItemToList,
+  AddQuantityToItem,
+  DecreaseQuantityToItem,
+  HideAddItemInput,
+  RemoveItemFromList,
+  ShowAddItemInput,
+} from '../../store/animeGangRedux/actions'
 
 const ShoppingAnimeGangRedux = () => {
+  const handleOnAddItemClick = () => {
+    dispatch(ShowAddItemInput())
+  }
+  const handleOnType = (e: string) => {
+    setAddItemName(e)
+  }
+  const handleOnEnter = () => {
+    if (addItemName != '') {
+      const newItem: ShoppingListItem = {
+        key: itemKey,
+        ItemName: addItemName,
+        Quantity: 1,
+      }
+      dispatch(AddItemToList(newItem))
+    }
+    dispatch(AddItemKey())
+    dispatch(HideAddItemInput())
+    console.log(shoppingList)
+  }
+
+  const [addItemName, setAddItemName] = useState<string>('')
+  // const [showAddItem, setShowAddItem] = useState<boolean>(false)
+
   const dispatch = useDispatch()
   const { shoppingList } = useSelector((state: RootState) => state.animeGangRedux)
+  const { itemKey } = useSelector((state: RootState) => state.animeGangRedux)
+  const { showAddItem } = useSelector((state: RootState) => state.animeGangRedux)
   const columns = [
     {
       title: 'Quantity',
@@ -53,21 +86,21 @@ const ShoppingAnimeGangRedux = () => {
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
         <AddItemsContainer>
-          {/* {showAddItem && (
-            <Button onClick={() => ShowAddItemInput()} type="primary">
+          {!showAddItem && (
+            <Button onClick={() => handleOnAddItemClick()} type="primary">
               + Add item
             </Button>
           )}
-          {showInput && (
+          {showAddItem && (
             <Input
               addonBefore="Enter your item"
               defaultValue=""
               size="small"
               placeholder={addItemName}
               onChange={(e) => handleOnType(e.target.value)}
-              onPressEnter={() => AddItemToList()}
+              onPressEnter={() => handleOnEnter()}
             />
-          )} */}
+          )}
         </AddItemsContainer>
       </TopRow>
       <TablePart>
