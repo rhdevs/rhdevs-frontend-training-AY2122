@@ -18,12 +18,12 @@ import { RootState } from '../../store/types'
 import {
   setFoodList,
   setOthersList,
-  addFoodAmount,
-  minusFoodAmount,
-  deleteFoodItem,
-  addOthersAmount,
-  deleteOthersItem,
-  minusOthersAmount,
+  AddFoodAmount,
+  MinusFoodAmount,
+  DeleteFoodAmount,
+  AddOthersAmount,
+  DeleteOthersItem,
+  MinusOthersAmount,
   setMenuVisible,
 } from '../../store/shoppingListsCYYZ/actions'
 
@@ -33,7 +33,7 @@ const ShoppingListMain = () => {
   const dispatch = useDispatch()
   const { foodList, othersList, isMenuVisible } = useSelector((state: RootState) => state.shoppingListsCYYZ)
   const [category, setCategory] = useState('food')
-  const [name, setName] = useState('')adsfadsf
+  const [name, setName] = useState('')
 
   const renderAddMenu = () => {
     const addItem = () => {
@@ -86,10 +86,10 @@ const ShoppingListMain = () => {
           <ListItem key={e.name}>
             <ItemName>{e.name}</ItemName>
             <ItemAction>
-              <Button shape="circle" icon={<MinusOutlined />} onClick={() => dispatch(minusFoodAmount(e))} />
+              <Button shape="circle" icon={<MinusOutlined />} onClick={() => dispatch(MinusFoodAmount(e))} />
               {e.amount}
-              <Button shape="circle" icon={<PlusOutlined />} onClick={() => dispatch(addFoodAmount(e))} />
-              <Button shape="circle" icon={<DeleteOutlined />} onClick={() => dispatch(deleteFoodItem(e))} />
+              <Button shape="circle" icon={<PlusOutlined />} onClick={() => dispatch(AddFoodAmount(e))} />
+              <Button shape="circle" icon={<DeleteOutlined />} onClick={() => dispatch(DeleteFoodAmount(e))} />
             </ItemAction>
           </ListItem>
         ))}
@@ -104,10 +104,10 @@ const ShoppingListMain = () => {
           <ListItem key={e.name}>
             <ItemName>{e.name}</ItemName>
             <ItemAction>
-              <Button shape="circle" icon={<MinusOutlined />} onClick={() => dispatch(minusOthersAmount(e))} />
+              <Button shape="circle" icon={<MinusOutlined />} onClick={() => dispatch(MinusOthersAmount(e))} />
               {e.amount}
-              <Button shape="circle" icon={<PlusOutlined />} onClick={() => dispatch(addOthersAmount(e))} />
-              <Button shape="circle" icon={<DeleteOutlined />} onClick={() => dispatch(deleteOthersItem(e))} />
+              <Button shape="circle" icon={<PlusOutlined />} onClick={() => dispatch(AddOthersAmount(e))} />
+              <Button shape="circle" icon={<DeleteOutlined />} onClick={() => dispatch(DeleteOthersItem(e))} />
             </ItemAction>
           </ListItem>
         ))}

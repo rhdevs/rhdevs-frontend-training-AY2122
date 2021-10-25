@@ -21,67 +21,59 @@ export const setMenuVisible = (anything: boolean) => (dispatch: Dispatch<ActionT
   })
 }
 export const setFoodList = (newList: Item[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  //you can also get the 'exampleList' state here
   const { foodList } = getState().shoppingListsCYYZ
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.SET_FOOD_LIST,
-    update: newList ?? foodList, // if newList is undefined, use exampleList
+    update: newList ?? foodList,
   })
 }
 
 export const setOthersList = (newList: Item[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-  //you can also get the 'exampleList' state here
   const { othersList } = getState().shoppingListsCYYZ
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.SET_OTHERS_LIST,
-    update: newList ?? othersList, // if newList is undefined, use exampleList
+    update: newList ?? othersList,
   })
 }
 
-export const addFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
-  //you can also get the 'exampleList' state here
+export const AddFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.ADD_FOOD_AMOUNT,
-    update: item, // if newList is undefined, use exampleList
+    update: item,
   })
 }
 
-export const minusFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
-  //you can also get the 'exampleList' state here
+export const MinusFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.MINUS_FOOD_AMOUNT,
-    update: item, // if newList is undefined, use exampleList
+    update: item,
   })
 }
 
-export const deleteFoodItem = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
-  //you can also get the 'exampleList' state here
+export const DeleteFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.DELETE_FOOD_ITEM,
-    update: item, // if newList is undefined, use exampleList
+    update: item,
   })
 }
 
-export const addOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
-  //you can also get the 'exampleList' state here
+export const AddOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.ADD_OTHERS_AMOUNT,
-    update: item, // if newList is undefined, use exampleList
+    update: item,
   })
 }
 
-export const minusOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
-  //you can also get the 'exampleList' state here
+export const MinusOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.MINUS_OTHERS_AMOUNT,
-    update: item, // if newList is undefined, use exampleList
+    update: item,
   })
 }
 
-export const deleteOthersItem = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
-  //you can also get the 'exampleList' state here
+export const DeleteOthersItem = (item: Item) => (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: SHOPPING_LIST_ACTIONS_CYYZ.DELETE_OTHERS_ITEM,
-    update: item, // if newList is undefined, use exampleList
+    update: item,
   })
 }

@@ -40,32 +40,32 @@ type SetOthersList = {
   update: Item[] //state name : state type
 }
 
-type addFoodAmount = {
+type AddFoodAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.ADD_FOOD_AMOUNT
   update: Item
 }
 
-type minusFoodAmount = {
+type MinusFoodAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.MINUS_FOOD_AMOUNT
   update: Item
 }
 
-type deleteFoodItem = {
+type DeleteFoodAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.DELETE_FOOD_ITEM
   update: Item
 }
 
-type addOthersAmount = {
+type AddOthersAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.ADD_OTHERS_AMOUNT
   update: Item
 }
 
-type minusOthersAmount = {
+type MinusOthersAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.MINUS_OTHERS_AMOUNT
   update: Item
 }
 
-type deleteOthersItem = {
+type DeleteOthersItem = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.DELETE_OTHERS_ITEM
   update: Item
 }
@@ -73,10 +73,10 @@ type deleteOthersItem = {
 export type ActionTypes =
   | SetFoodList
   | SetOthersList
-  | addFoodAmount
-  | minusFoodAmount
-  | deleteFoodItem
-  | addOthersAmount
-  | minusOthersAmount
-  | deleteOthersItem
+  | AddFoodAmount
+  | MinusFoodAmount
+  | DeleteFoodAmount
+  | AddOthersAmount
+  | MinusOthersAmount
+  | DeleteOthersItem
   | SetMenuVisible
