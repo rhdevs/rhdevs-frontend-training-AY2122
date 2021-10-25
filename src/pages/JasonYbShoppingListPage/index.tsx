@@ -1,6 +1,5 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { initialState } from '../../store/JasonYbReduxShoppingList/reducer'
 import { AddItemQuantity } from '../../store/JasonYbReduxShoppingList/actions'
 import { RootState } from '../../store/types'
 
