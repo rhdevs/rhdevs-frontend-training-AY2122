@@ -47,7 +47,7 @@ const Shopping_YXWP = () => {
   return (
     <>
       <Card>
-        <ShoppingHeader>Shopping time! whee! WIP!</ShoppingHeader>
+        <ShoppingHeader>Shopping Time!</ShoppingHeader>
         <Space>
           <Input placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
           <Input placeholder="Quantity" onChange={(e) => setQuantity(parseInt(e.target.value))} />
