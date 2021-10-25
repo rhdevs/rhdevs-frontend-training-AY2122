@@ -17,6 +17,7 @@ export enum PATHS {
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
   SHOPPING_PAGE = '/shopping/page',
   PAIR6_SHOPPING_PAGE = '/shopping/pair6',
+  PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -29,6 +30,7 @@ const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage
 const ShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPageRedux'),
 )
+const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
 
 function App() {
   useEffect(() => {
@@ -67,6 +69,12 @@ function App() {
         <StyledMain>
           <MainNavigation />
           <Groups />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Pair2MainPage />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
