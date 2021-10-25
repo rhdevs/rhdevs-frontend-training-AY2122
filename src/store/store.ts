@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { shoppingLists } from './shoppingLists/reducer'
-import { animeGangRedux } from './AnimeGangRedux/reducer'
+import { animeGangRedux } from './animeGangRedux/reducer'
 
 export const rootReducer = combineReducers({
   animeGangRedux,
