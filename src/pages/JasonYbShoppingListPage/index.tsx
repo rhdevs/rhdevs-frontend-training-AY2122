@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { initialState } from '../../store/JasonYbReduxShoppingList/reducer'
 import { AddItemQuantity } from '../../store/JasonYbReduxShoppingList/actions'
+import { RootState } from '../../store/types'
 
 import {
   AddItemButtonContainer,
@@ -15,7 +16,7 @@ import { ShoppingItem } from '../../store/JasonYbReduxShoppingList/types'
 
 export default function ShoppingLists() {
   const dispatch = useDispatch()
-  const { itemList } = useSelector((state: typeof initialState) => initialState) // see here later
+  const { itemList } = useSelector((state: RootState) => state.JasonYbReduxShoppingList) // see here later
 
   const columns = [
     {
