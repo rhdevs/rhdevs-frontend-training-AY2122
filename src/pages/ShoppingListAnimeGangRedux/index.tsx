@@ -10,6 +10,9 @@ import {
   TopRow,
 } from './styles/ShoppingListAnimeGangRedux.styled'
 import { RootState } from '../../store/types'
+import { ShoppingListItem } from '../../store/AnimeGangRedux/types'
+import { AddQuantityToItem } from '../../store/AnimeGangRedux/actions'
+import { useDispatch, useSelector } from 'react-redux'
 
 const ShoppingAnimeGangRedux = () => {
   const dispatch = useDispatch()
@@ -29,9 +32,9 @@ const ShoppingAnimeGangRedux = () => {
       title: 'Action',
       dataIndex: 'action',
       key: 'action',
-      render: (item: Item, record: Item) => (
+      render: (text: ShoppingListItem, record: ShoppingListItem, index: number) => (
         <Space size="middle">
-          <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
+          <Button onClick={() => dispatch(AddQuantityToItem(index))} shape="circle" icon={<PlusOutlined />}></Button>
           <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
           <a onClick={() => handleOnDeleteClick(record)}>Delete</a>
         </Space>
@@ -69,10 +72,10 @@ const ShoppingAnimeGangRedux = () => {
 }
 
 export default ShoppingAnimeGangRedux
-function useDispatch() {
+function reactRedux.useDispatch() {
   throw new Error('Function not implemented.')
 }
 
-function useSelector(arg0: (state: RootState) => any): { shoppingList: any } {
+function reactRedux.useSelector(arg0: (state: RootState) => any): { shoppingList: any } {
   throw new Error('Function not implemented.')
 }
