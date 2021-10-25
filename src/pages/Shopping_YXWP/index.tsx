@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import { Button, Card, Input, InputNumber, Table, Space } from 'antd'
+import { Button, Card, Input, Table, Space } from 'antd'
+import { ShoppingHeader } from './styles/Shopping_YXWP.styled'
 import { PlusCircleOutlined, MinusCircleOutlined } from '@ant-design/icons'
-import { valueType } from 'antd/lib/statistic/utils'
 
 const { Column } = Table
 
 const Shopping_YXWP = () => {
   interface Props {
     key: number
-    itemQuantity: valueType
+    itemQuantity: number
     itemName: string
   }
   const [name, setName] = useState('')
-  const [quantity, setQuantity] = useState<valueType>(0)
+  const [quantity, setQuantity] = useState(0)
   const [index, setIndex] = useState(3)
   const [data, setData] = useState<Props[]>([
     {
@@ -32,36 +32,34 @@ const Shopping_YXWP = () => {
     setIndex(index + 1)
   }
 
-  const handleIncreaseQuantity = (item: Props) => {
-    console.log('Increased')
+  const handleIncreaseQuantity = (currItem: Props) => {
+    setData(data.map((item) => (item.key === currItem.key ? { ...item, itemQuantity: item.itemQuantity + 1 } : item)))
   }
 
-  const handleDecreaseQuantity = (item: Props) => {
-    console.log('Decreased')
+  const handleDecreaseQuantity = (currItem: Props) => {
+    setData(data.map((item) => (item.key === currItem.key ? { ...item, itemQuantity: item.itemQuantity - 1 } : item)))
   }
 
-  const handleDeleteItem = (item: Props) => {
-    console.log('This needs to be fixed! Item is returning undefined.')
+  const handleDeleteItem = (currItem: Props) => {
+    setData(data.filter((item) => item.key != currItem.key))
   }
 
   return (
     <>
       <Card>
-        <h1>Shopping time! whee! WIP!</h1>
+        <ShoppingHeader>Shopping time! whee! WIP!</ShoppingHeader>
         <Space>
           <Input placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
-          <InputNumber placeholder="Quantity" onChange={(e) => setQuantity(e)} />
+          <Input placeholder="Quantity" onChange={(e) => setQuantity(parseInt(e.target.value))} />
           <Button type="primary" onClick={handleAddItem}>
             Add item
           </Button>
         </Space>
         <Table dataSource={data}>
-          <Column title="Index" dataIndex="key" key="key" />
           <Column title="Item Name" dataIndex="itemName" key="itemName" />
           <Column title="Quantity" dataIndex="itemQuantity" key="itemQuantity" />
           <Column
             title="Action"
-            dataIndex="action"
             key="action"
             render={(currItem: Props) => (
               <Space>
