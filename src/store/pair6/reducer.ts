@@ -29,20 +29,13 @@ export const shoppingListsSKZK: Reducer<State, ActionTypes> = (state = initialSt
       return { ...state, shoppingCart: action.shoppingCart }
     }
     case SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY: {
-      const update = state.shoppingCart.map((e) =>
-        e.index === action.update.index ? { ...e, quantity: action.update.quantity + 1 } : e,
-      )
-      return { ...state, shoppingCart: update }
+      return { ...state, shoppingCart: action.shoppingCart }
     }
     case SHOPPING_LIST_ACTIONS.MINUS_ITEM_QUANTITY: {
-      const update = state.shoppingCart.map((e) =>
-        e.index === action.update.index && e.quantity >= 1 ? { ...e, quantity: action.update.quantity - 1 } : e,
-      )
-      return { ...state, shoppingCart: update }
+      return { ...state, shoppingCart: action.shoppingCart }
     }
     case SHOPPING_LIST_ACTIONS.DELETE_CART_ITEM: {
-      const update = state.shoppingCart.filter((e) => e.index !== action.update.index)
-      return { ...state, shoppingCart: update }
+      return { ...state, shoppingCart: action.shoppingCart }
     }
     default:
       return state

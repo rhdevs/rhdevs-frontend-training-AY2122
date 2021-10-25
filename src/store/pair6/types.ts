@@ -24,17 +24,17 @@ type SetShoppingCart = {
 
 type AddItemQuantity = {
   type: typeof SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY
-  update: CartItem
+  shoppingCart: CartItem[]
 }
 
 type MinusItemQuantity = {
   type: typeof SHOPPING_LIST_ACTIONS.MINUS_ITEM_QUANTITY
-  update: CartItem
+  shoppingCart: CartItem[]
 }
 
 type DeleteCartItem = {
   type: typeof SHOPPING_LIST_ACTIONS.DELETE_CART_ITEM
-  update: CartItem
+  shoppingCart: CartItem[]
 }
 
 export type ActionTypes = SetShoppingCart | AddItemQuantity | MinusItemQuantity | DeleteCartItem

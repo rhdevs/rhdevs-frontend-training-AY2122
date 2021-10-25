@@ -12,23 +12,31 @@ export const SetShoppingCart = (newCart: CartItem[]) => async (dispatch: Dispatc
   })
 }
 
-export const AddItemQuantity = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>) => {
+export const AddItemQuantity = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { shoppingCart } = getState().shoppingListsSKZK
+  const newCart = shoppingCart.map((e) => (e.index === item.index ? { ...e, quantity: e.quantity + 1 } : e))
   dispatch({
     type: SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY,
-    update: item,
+    shoppingCart: newCart ?? shoppingCart,
   })
 }
 
-export const MinusItemQuantity = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>) => {
+export const MinusItemQuantity = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { shoppingCart } = getState().shoppingListsSKZK
+  const newCart = shoppingCart.map((e) =>
+    e.index === item.index && e.quantity >= 1 ? { ...e, quantity: item.quantity - 1 } : e,
+  )
   dispatch({
     type: SHOPPING_LIST_ACTIONS.MINUS_ITEM_QUANTITY,
-    update: item,
+    shoppingCart: newCart ?? shoppingCart,
   })
 }
 
-export const DeleteCartItem = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>) => {
+export const DeleteCartItem = (item: CartItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { shoppingCart } = getState().shoppingListsSKZK
+  const newCart = shoppingCart.filter((e) => e.index !== item.index)
   dispatch({
     type: SHOPPING_LIST_ACTIONS.DELETE_CART_ITEM,
-    update: item,
+    shoppingCart: newCart ?? shoppingCart,
   })
 }
