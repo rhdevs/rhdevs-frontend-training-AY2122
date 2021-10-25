@@ -24,12 +24,12 @@ export const initialState: State = {
       quantity: 60,
       itemName: 'oregano',
     },
-  ]
+  ],
 }
 
 //declare your variable type
 type State = {
-  itemList: ShoppingItem[],
+  itemList: ShoppingItem[]
 }
 
 export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState, action) => {
@@ -37,10 +37,16 @@ export const shoppingLists: Reducer<State, ActionTypes> = (state = initialState,
     //this is to update the state if the action type is called
     case SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST: {
       //this returns everything in your store (...state), and updates the 'exampleList' var with the new exampleList indicated in the action
-      return { ...state, exampleList: action.exampleList }
+      return {
+        ...state,
+        exampleList: action.exampleList,
+      }
     }
-    case SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY: {
-      return { ...state, newList: action.newList }
+    case SHOPPING_LIST_ACTIONS.SET_ITEM_LIST: {
+      return {
+        ...state,
+        newList: action.itemList,
+      }
     }
     default:
       return state

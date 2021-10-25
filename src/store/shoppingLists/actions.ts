@@ -5,13 +5,16 @@ import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, ShoppingItem } from '.
 //to call this in your component or page, wrap with dispatch
 //eg dispatch(mockActionSetMyExampleList(theNewList))
 
-export const AddItemQuantity = () =>
-  async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const AddItemQuantity =
+  (itemToChange: ShoppingItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
     //you can also get the 'exampleList' state here
     const { itemList } = getState().shoppingLists
+    const updatedList = itemList.map((item) =>
+      item.index === itemToChange.index ? { ...item, quantity: item.quantity + 1 } : item,
+    )
     dispatch({
-      type: SHOPPING_LIST_ACTIONS.ADD_ITEM_QUANTITY,
-      newList: [...itemList, quantity: quantity + 1], // if newList is undefined, use exampleList
+      type: SHOPPING_LIST_ACTIONS.SET_ITEM_LIST,
+      itemList: updatedList,
     })
   }
 
