@@ -16,3 +16,15 @@ export const AddItemQuantity =
       itemList: updatedList,
     })
   }
+
+export const ReduceItemQuantity =
+  (itemToChange: ShoppingItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+    const { itemList } = getState().JasonYbReduxShoppingList
+    const updatedList = itemList.map((item) =>
+      item.index === itemToChange.index ? { ...item, quantity: item.quantity - 1 } : item,
+    )
+    dispatch({
+      type: SHOPPING_LIST_ACTIONS.SET_ITEM_LIST,
+      itemList: updatedList,
+    })
+  }
