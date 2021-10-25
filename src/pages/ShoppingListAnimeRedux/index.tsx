@@ -5,9 +5,9 @@ import {
   TablePart,
   TopRow,
   TotalPricePart,
-} from './styles/ShoppingAnimegang.styled'
+  FullScreenContainer,
+} from './styles/ShoppingListAnimeRedux.styled'
 import { Table, Button, Space, Input } from 'antd'
-import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
 // const handleIncreaseItemCount = () => {
