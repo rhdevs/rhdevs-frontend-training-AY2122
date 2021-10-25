@@ -27,6 +27,7 @@ export const initialState: State = {
   ],
   keyCount: 3,
   indexCount: 3,
+  newItemName: '',
 }
 
 //declare your variable type
@@ -34,6 +35,7 @@ type State = {
   itemList: ShoppingItem[]
   keyCount: number
   indexCount: number
+  newItemName: string
 }
 
 export const JasonYbReduxShoppingList: Reducer<State, ActionTypes> = (state = initialState, action) => {
@@ -52,6 +54,7 @@ export const JasonYbReduxShoppingList: Reducer<State, ActionTypes> = (state = in
         indexCount: action.indexCount,
       }
     }
+
     default:
       return state
   }

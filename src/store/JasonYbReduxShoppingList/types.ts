@@ -12,6 +12,7 @@ export enum SHOPPING_LIST_ACTIONS {
   //follow naming convention <enum name>.<enum item name>
   SET_ITEM_LIST = 'SHOPPING_LIST_ACTIONS.SET_ITEM_LIST',
   INCREMENT_KEY_AND_INDEX_COUNT = 'SHOPPING_LIST_ACTIONS.INCREMENT_KEY_COUNT',
+  SET_NEW_ITEM_TO_BE_ADDED = 'SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED',
 }
 
 /** Actions */
@@ -26,4 +27,9 @@ type IncrementKeyAndIndexCount = {
   indexCount: number
 }
 
-export type ActionTypes = SetItemList | IncrementKeyAndIndexCount
+type SetNewItemToBeAdded = {
+  type: typeof SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED
+  itemToBeAdded: string
+}
+
+export type ActionTypes = SetItemList | IncrementKeyAndIndexCount | SetNewItemToBeAdded
