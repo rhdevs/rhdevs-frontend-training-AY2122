@@ -33,7 +33,7 @@ const ShoppingListMain = () => {
   const dispatch = useDispatch()
   const { foodList, othersList, isMenuVisible } = useSelector((state: RootState) => state.shoppingListsCYYZ)
   const [category, setCategory] = useState('food')
-  const [name, setName] = useState('')
+  const [name, setName] = useState('')adsfadsf
 
   const renderAddMenu = () => {
     const addItem = () => {
