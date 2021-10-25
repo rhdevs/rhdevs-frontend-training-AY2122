@@ -26,57 +26,57 @@ export enum SHOPPING_LIST_ACTIONS_CYYZ {
 }
 
 /** Actions */
-type SetMenuVisible = {
+type setMenuVisible = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.SET_MENU_VISIBLE
   update: boolean
 }
-type SetFoodList = {
+type setFoodList = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.SET_FOOD_LIST
   update: Item[] //state name : state type
 }
 
-type SetOthersList = {
+type setOthersList = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.SET_OTHERS_LIST
   update: Item[] //state name : state type
 }
 
-type AddFoodAmount = {
+type addFoodAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.ADD_FOOD_AMOUNT
   update: Item[]
 }
 
-type MinusFoodAmount = {
+type minusFoodAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.MINUS_FOOD_AMOUNT
   update: Item[]
 }
 
-type DeleteFoodAmount = {
+type deleteFoodItem = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.DELETE_FOOD_ITEM
   update: Item[]
 }
 
-type AddOthersAmount = {
+type addOthersAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.ADD_OTHERS_AMOUNT
   update: Item[]
 }
 
-type MinusOthersAmount = {
+type minusOthersAmount = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.MINUS_OTHERS_AMOUNT
   update: Item[]
 }
 
-type DeleteOthersItem = {
+type deleteOthersItem = {
   type: typeof SHOPPING_LIST_ACTIONS_CYYZ.DELETE_OTHERS_ITEM
   update: Item[]
 }
 
 export type ActionTypes =
-  | SetFoodList
-  | SetOthersList
-  | AddFoodAmount
-  | MinusFoodAmount
-  | DeleteFoodAmount
-  | AddOthersAmount
-  | MinusOthersAmount
-  | DeleteOthersItem
-  | SetMenuVisible
+  | setFoodList
+  | setOthersList
+  | addFoodAmount
+  | minusFoodAmount
+  | deleteFoodItem
+  | addOthersAmount
+  | minusOthersAmount
+  | deleteOthersItem
+  | setMenuVisible

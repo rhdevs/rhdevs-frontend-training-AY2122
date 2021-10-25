@@ -36,7 +36,7 @@ export const setOthersList = (newList: Item[]) => (dispatch: Dispatch<ActionType
   })
 }
 
-export const AddFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const addFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { foodList } = getState().shoppingListsCYYZ
   const update = foodList.map((e) => (e.name === item.name ? { ...e, amount: item.amount + 1 } : e))
   dispatch({
@@ -45,7 +45,7 @@ export const AddFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, g
   })
 }
 
-export const MinusFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const minusFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { foodList } = getState().shoppingListsCYYZ
   const update = foodList.map((e) => (e.name === item.name ? { ...e, amount: item.amount - 1 } : e))
   dispatch({
@@ -54,7 +54,7 @@ export const MinusFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>,
   })
 }
 
-export const DeleteFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const deleteFoodItem = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { foodList } = getState().shoppingListsCYYZ
   const update = foodList.filter((e) => e.name !== item.name)
   dispatch({
@@ -63,7 +63,7 @@ export const DeleteFoodAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>
   })
 }
 
-export const AddOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const addOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { othersList } = getState().shoppingListsCYYZ
   const update = othersList.map((e) => (e.name === item.name ? { ...e, amount: item.amount + 1 } : e))
   dispatch({
@@ -72,7 +72,7 @@ export const AddOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>,
   })
 }
 
-export const MinusOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const minusOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { othersList } = getState().shoppingListsCYYZ
   const update = othersList.map((e) => (e.name === item.name ? { ...e, amount: item.amount - 1 } : e))
   dispatch({
@@ -81,7 +81,7 @@ export const MinusOthersAmount = (item: Item) => (dispatch: Dispatch<ActionTypes
   })
 }
 
-export const DeleteOthersItem = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const deleteOthersItem = (item: Item) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { othersList } = getState().shoppingListsCYYZ
   const update = othersList.filter((e) => e.name !== item.name)
   dispatch({
