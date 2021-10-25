@@ -16,6 +16,7 @@ export enum PATHS {
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
+  YIXUAN_WEIPIN_SHOPPING_REDUX = '/shopping/yxwp_redux',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -25,7 +26,7 @@ const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
-
+const YXWPRedux = React.lazy(() => import(/* webpackChunckName: "YXWPRedux" */ './pages/YXWPRedux'))
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render
@@ -51,6 +52,12 @@ function App() {
         <StyledMain>
           <MainNavigation />
           <Groups />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.YIXUAN_WEIPIN_SHOPPING_REDUX} exact>
+        <StyledMain>
+          <MainNavigation />
+          <YXWPRedux />
         </StyledMain>
       </Route>
       <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
