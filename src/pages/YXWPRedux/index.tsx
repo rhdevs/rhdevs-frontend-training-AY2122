@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import { Button, Card, Input, Table, Space } from 'antd'
 import { ShoppingHeader } from './styles/YXWPRedux.styled'
 import { PlusCircleOutlined, MinusCircleOutlined } from '@ant-design/icons'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { IncreaseQuantity } from '../../store/yxwp_store/actions'
+import { RootState } from '../../store/types'
 const { Column } = Table
-
+const dispatch = useDispatch()
+const { ItemList } = useSelector((state: RootState) => state.yxwp_store)
+const [newItemName, setNewItemName] = useState('')
 const YXWPRedux = () => {
   interface Props {
     key: number
@@ -63,7 +67,7 @@ const YXWPRedux = () => {
             key="action"
             render={(currItem: Props) => (
               <Space>
-                <Button type="link" icon={<PlusCircleOutlined />} onClick={() => handleIncreaseQuantity(currItem)} />
+                <Button type="link" icon={<PlusCircleOutlined />} onClick={() => dispatch(IncreaseQuantity(currItem))} />
                 <Button type="link" icon={<MinusCircleOutlined />} onClick={() => handleDecreaseQuantity(currItem)} />
                 <Button type="link" onClick={() => handleDeleteItem(currItem)}>
                   Delete
