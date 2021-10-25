@@ -15,7 +15,7 @@ import { ShoppingItem } from '../../store/shoppingLists/types'
 
 export default function ShoppingLists() {
   const dispatch = useDispatch()
-  const { itemList } = useSelector((state: typeof initialState) => state) // see here later
+  const { itemList } = useSelector((state: typeof initialState) => initialState) // see here later
 
   const columns = [
     {
