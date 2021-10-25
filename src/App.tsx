@@ -10,7 +10,6 @@ import Footer from './shared/Navigation/Footer'
 
 import 'antd/dist/antd.css'
 import { StyledMain } from './App.styled'
-import ShoppingPageRedux from './pages/SkZkShoppingPageRedux'
 
 export enum PATHS {
   GROUP_ROUTE = '/group',
@@ -27,7 +26,9 @@ const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
 const ShoppingPage = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/ShoppingPage'))
-const Pair6Redux = React.lazy(() => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPageRedux'))
+const ShoppingPageRedux = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingPage" */ './pages/SkZkShoppingPageRedux'),
+)
 
 function App() {
   useEffect(() => {
