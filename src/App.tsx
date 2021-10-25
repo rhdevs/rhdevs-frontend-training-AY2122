@@ -22,7 +22,7 @@ const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" 
 const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './pages/ErrorPage/NotFound'))
 const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './pages/Groups'))
 const ShoppingListsMainPage = React.lazy(
-  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListAnimeGangRedux'),
+  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
 const ShoppingListAnimeGangRedux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListAnimeGangRedux'),
@@ -49,6 +49,12 @@ function App() {
           <ShoppingListsMainPage />
         </StyledMain>
       </Route>
+      <Route path={`${PATHS.SHOPPING_LIST_ANIME_GANG_REDUX}`} exact>
+        <StyledMain>
+          <MainNavigation />
+          <ShoppingListAnimeGangRedux />
+        </StyledMain>
+      </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
         <StyledMain>
           <MainNavigation />
@@ -63,12 +69,6 @@ function App() {
           <MainNavigation />
           <NotFound />
           <Footer />
-        </StyledMain>
-      </Route>
-      <Route path={`${PATHS.SHOPPING_LIST_ANIME_GANG_REDUX}`} exact>
-        <StyledMain>
-          <MainNavigation />
-          <ShoppingListAnimeGangRedux />
         </StyledMain>
       </Route>
       <Redirect to="/" />

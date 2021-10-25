@@ -6,7 +6,7 @@ const initialState = {
     {
       key: 0,
       ItemName: 'bread',
-      ItemCount: 1,
+      Quantity: 1,
     },
   ],
   showAddItem: false,

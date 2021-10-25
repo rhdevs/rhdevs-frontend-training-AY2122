@@ -20,13 +20,13 @@ const ShoppingAnimeGangRedux = () => {
   const columns = [
     {
       title: 'Quantity',
-      dataIndex: 'quantity',
-      key: 'quantity',
+      dataIndex: 'Quantity',
+      key: 'Quantity',
     },
     {
       title: 'Item Name',
-      dataIndex: 'item_name',
-      key: 'item_name',
+      dataIndex: 'ItemName',
+      key: 'ItemName',
     },
     {
       title: 'Action',

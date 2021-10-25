@@ -1,7 +1,7 @@
 export type ShoppingListItem = {
   key: number
   ItemName: string
-  ItemCount: number
+  Quantity: number
 }
 
 export enum ANIME_GANG_ACTIONS {
