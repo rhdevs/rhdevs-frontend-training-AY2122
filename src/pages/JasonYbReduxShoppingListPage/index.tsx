@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { AddItemQuantity, ReduceItemQuantity } from '../../store/JasonYbReduxShoppingList/actions'
+import { AddItemQuantity, ReduceItemQuantity, DeleteItem } from '../../store/JasonYbReduxShoppingList/actions'
 import { RootState } from '../../store/types'
 
 import {
@@ -12,7 +12,6 @@ import {
 } from './styles/JasonYbShoppingListPage.styled'
 import { Button, Table, Space } from 'antd'
 import { ShoppingItem } from '../../store/JasonYbReduxShoppingList/types'
-import { RedditCircleFilled } from '@ant-design/icons'
 
 export default function ShoppingLists() {
   const dispatch = useDispatch()
@@ -40,7 +39,7 @@ export default function ShoppingLists() {
           <Button type="primary" shape="circle" onClick={() => dispatch(ReduceItemQuantity(itemAffected))}>
             -
           </Button>
-          <Button danger onClick={() => dispatch(AddItemQuantity(itemAffected))}>
+          <Button danger onClick={() => dispatch(DeleteItem(itemAffected))}>
             Delete
           </Button>
         </Space>

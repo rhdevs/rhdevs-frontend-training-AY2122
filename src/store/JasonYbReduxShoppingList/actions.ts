@@ -28,3 +28,13 @@ export const ReduceItemQuantity =
       itemList: updatedList,
     })
   }
+
+export const DeleteItem =
+  (itemToDelete: ShoppingItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+    const { itemList } = getState().JasonYbReduxShoppingList
+    const updatedList = itemList.filter((item) => item.index !== itemToDelete.index)
+    dispatch({
+      type: SHOPPING_LIST_ACTIONS.SET_ITEM_LIST,
+      itemList: updatedList,
+    })
+  }
