@@ -3,7 +3,7 @@ import { ActionTypes, ITEM_ACTIONS, Item } from './types'
 
 //set an initial state for your variable
 const initialState = {
-  itemList: [{ key: 1, name: 'test', quantity: 0 }],
+  itemList: [{ key: 1, name: 'test', quantity: 1 }],
 }
 
 //declare your variable type

@@ -18,8 +18,8 @@ export const IncreaseItemQuantity = (index: number) => async (dispatch: Dispatch
 export const DecreaseItemQuantity = (index: number) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   //you can also get the 'exampleList' state here
   const { itemList } = getState().pair3Redux
-  itemList[index].quantity === 0
-    ? (itemList[index].quantity = 0)
+  itemList[index].quantity === 1
+    ? (itemList[index].quantity = 1)
     : (itemList[index].quantity = itemList[index].quantity - 1)
   dispatch({
     type: ITEM_ACTIONS.DECREASE_ITEM_QUANTITY,

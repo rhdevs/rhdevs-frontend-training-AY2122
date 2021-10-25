@@ -16,14 +16,14 @@ const Pair3redux = () => {
   const dispatch = useDispatch()
   const { itemList } = useSelector((state: RootState) => state.pair3Redux)
   const [ItemName, setItemName] = useState('')
-  const [Quantity, setQuantity] = useState(0)
+  const [Quantity, setQuantity] = useState(1)
 
   const validateData = () => {
     if (ItemName.length > 0 && Quantity > 0) {
-      const lastIndex = itemList.length === 0 ? 0 : itemList[itemList.length - 1].key
+      const lastIndex = itemList.length === 1 ? 1 : itemList[itemList.length - 1].key
       dispatch(AddItemToList({ key: lastIndex + 1, name: ItemName, quantity: Quantity }))
       setItemName('')
-      setQuantity(0)
+      setQuantity(1)
     }
   }
 
@@ -44,7 +44,7 @@ const Pair3redux = () => {
       render: (text: Item, record: Item, index: number) => (
         <div>
           <QuantityElementsDiv>
-            <Tooltip title="Add">
+            <Tooltip title="Minus">
               <ButtonDiv>
                 <Button
                   type="primary"
@@ -54,7 +54,7 @@ const Pair3redux = () => {
                 />{' '}
               </ButtonDiv>
             </Tooltip>
-            <Tooltip title="Minus">
+            <Tooltip title="Add">
               <ButtonDiv>
                 <Button
                   type="primary"
