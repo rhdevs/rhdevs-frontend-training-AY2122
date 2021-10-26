@@ -39,6 +39,7 @@ const ShoppingAnimeGangRedux = () => {
     }
     dispatch(addItemKey())
     dispatch(setShowAddItemInput(false))
+    setAddItemName('')
   }
 
   const [addItemName, setAddItemName] = useState<string>('')
