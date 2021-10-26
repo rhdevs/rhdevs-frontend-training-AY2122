@@ -1,11 +1,11 @@
 import React from 'react'
 import { Input } from 'antd'
+import { InputStyles } from './styles/Inputs.styled'
 
 type Props = {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
   value: number
 }
-const InputStyles = { width: '240px' }
 
 const QuantityInput = (props: Props) => {
   return (

@@ -36,7 +36,7 @@ const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
-const Pair2MainPageRedux = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2Redux'))
+const Pair2MainPageRedux = React.lazy(() => import(/* webpackChunckName: "Pair2MainPageRedux" */ './pages/Pair2Redux'))
 const Pair3redux = React.lazy(() => import(/* webpackChunckName: "Pair3redux" */ './pages/Pair3redux'))
 const Pair3MainPage = React.lazy(() => import(/* webpackChunckName: "Pair3" */ './pages/Pair3'))
 const JasonYbShoppingListPage = React.lazy(
