@@ -20,7 +20,7 @@ export const Header = styled.h1`
 `
 
 export const AddItemButton = styled.div`
-  background-color: Transparent;
+  background-color: transparent;
   border: none;
   position: absolute;
   right: 0;

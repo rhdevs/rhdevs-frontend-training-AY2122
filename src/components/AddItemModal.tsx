@@ -18,7 +18,7 @@ const AddItemModal = (props: Props) => {
 
   const validateDataError = () => {
     if (shoppingListItemName.length === 0) {
-      setItemNameError('Please input an item name'!)
+      setItemNameError('Please input an item name!')
       return true
     } else {
       setItemNameError('')
@@ -47,7 +47,7 @@ const AddItemModal = (props: Props) => {
       visible={props.showModal}
       onOk={onSubmit}
       onCancel={props.hideModal}
-      destroyOnClose={true}
+      destroyOnClose
     >
       <ModalHeader>
         <ModalTitle>Add Item</ModalTitle>

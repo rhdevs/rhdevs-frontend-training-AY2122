@@ -46,21 +46,21 @@ const ShoppingCart4 = () => {
   }
 
   const addQuantity = (item: ShoppingListItem) => {
-    const updatedShoppingList = shoppingList.map((x) =>
-      x.key === item.key ? { ...x, itemCount: item.itemCount + 1 } : x,
+    const updatedShoppingList = shoppingList.map((listItem) =>
+      listItem.key === item.key ? { ...listItem, itemCount: item.itemCount + 1 } : listItem,
     )
     setShoppingList(updatedShoppingList)
   }
 
   const minusQuantity = (item: ShoppingListItem) => {
-    const updatedShoppingList = shoppingList.map((x) =>
-      x.key === item.key && x.itemCount > 1 ? { ...x, itemCount: item.itemCount - 1 } : x,
+    const updatedShoppingList = shoppingList.map((listItem) =>
+      listItem.key === item.key && listItem.itemCount > 1 ? { ...listItem, itemCount: item.itemCount - 1 } : listItem,
     )
     setShoppingList(updatedShoppingList)
   }
 
   const removeItem = (item: ShoppingListItem) => {
-    const updatedShoppingList = shoppingList.filter((x) => x.key !== item.key)
+    const updatedShoppingList = shoppingList.filter((listItem) => listItem.key !== item.key)
     setShoppingList(updatedShoppingList)
   }
 

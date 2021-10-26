@@ -16,7 +16,7 @@ const AddItemModalRedux = () => {
 
   const validateDataError = () => {
     if (shoppingListItemName.length === 0) {
-      setItemNameError('Please input an item name'!)
+      setItemNameError('Please input an item name!')
       return true
     } else {
       setItemNameError('')
@@ -47,7 +47,7 @@ const AddItemModalRedux = () => {
       visible={showModal}
       onOk={onSubmit}
       onCancel={() => dispatch(HideAddItemModal())}
-      destroyOnClose={true}
+      destroyOnClose
     >
       <ModalHeader>
         <ModalTitle>Add Item</ModalTitle>
