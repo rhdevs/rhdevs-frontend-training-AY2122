@@ -13,18 +13,17 @@ import {
 import { RootState } from '../../store/types'
 import { ShoppingListItem } from '../../store/animeGangRedux/types'
 import {
-  AddItemKey,
-  AddItemToList,
-  AddQuantityToItem,
-  DecreaseQuantityToItem,
-  HideAddItemInput,
-  RemoveItemFromList,
-  ShowAddItemInput,
+  addItemKey,
+  addItemToList,
+  addQuantityToItem,
+  decreaseQuantityToItem,
+  removeItemFromList,
+  setShowAddItemInput,
 } from '../../store/animeGangRedux/actions'
 
 const ShoppingAnimeGangRedux = () => {
   const handleOnAddItemClick = () => {
-    dispatch(ShowAddItemInput())
+    dispatch(setShowAddItemInput(true))
   }
   const handleOnType = (e: string) => {
     setAddItemName(e)
@@ -36,18 +35,17 @@ const ShoppingAnimeGangRedux = () => {
         ItemName: addItemName,
         Quantity: 1,
       }
-      dispatch(AddItemToList(newItem))
+      dispatch(addItemToList(newItem))
     }
-    dispatch(AddItemKey())
-    dispatch(HideAddItemInput())
+    dispatch(addItemKey())
+    dispatch(setShowAddItemInput(false))
   }
 
   const [addItemName, setAddItemName] = useState<string>('')
 
   const dispatch = useDispatch()
-  const { shoppingList } = useSelector((state: RootState) => state.animeGangRedux)
-  const { itemKey } = useSelector((state: RootState) => state.animeGangRedux)
-  const { showAddItem } = useSelector((state: RootState) => state.animeGangRedux)
+  const { shoppingList, itemKey, showAddItem } = useSelector((state: RootState) => state.animeGangRedux)
+
   const columns = [
     {
       title: 'Quantity',
@@ -66,13 +64,13 @@ const ShoppingAnimeGangRedux = () => {
       render: function newFunction(text: ShoppingListItem, record: ShoppingListItem, index: number) {
         return (
           <Space size="middle">
-            <Button onClick={() => dispatch(AddQuantityToItem(index))} shape="circle" icon={<PlusOutlined />}></Button>
+            <Button onClick={() => dispatch(addQuantityToItem(index))} shape="circle" icon={<PlusOutlined />}></Button>
             <Button
-              onClick={() => dispatch(DecreaseQuantityToItem(index))}
+              onClick={() => dispatch(decreaseQuantityToItem(index))}
               shape="circle"
               icon={<MinusOutlined />}
             ></Button>
-            <a onClick={() => dispatch(RemoveItemFromList(index))}>Delete</a>
+            <a onClick={() => dispatch(removeItemFromList(index))}>Delete</a>
           </Space>
         )
       },
@@ -84,12 +82,11 @@ const ShoppingAnimeGangRedux = () => {
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
         <AddItemsContainer>
-          {!showAddItem && (
+          {!showAddItem ? (
             <Button onClick={() => handleOnAddItemClick()} type="primary">
               + Add item
             </Button>
-          )}
-          {showAddItem && (
+          ) : (
             <Input
               addonBefore="Enter your item"
               defaultValue=""

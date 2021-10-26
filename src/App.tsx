@@ -25,7 +25,7 @@ const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
 const ShoppingListAnimeGangRedux = React.lazy(
-  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListAnimeGangRedux'),
+  () => import(/* webpackChunckName: "ShoppingListAnimeGangReduxPage" */ './pages/ShoppingListAnimeGangRedux'),
 )
 
 function App() {

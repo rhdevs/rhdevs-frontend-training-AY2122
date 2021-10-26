@@ -1,7 +1,7 @@
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, ANIME_GANG_ACTIONS, ShoppingListItem } from './types'
 
-export const AddItemToList = (newItem: ShoppingListItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const addItemToList = (newItem: ShoppingListItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingList } = getState().animeGangRedux
   const newList = []
   for (let i = 0; i < shoppingList.length; i += 1) {
@@ -13,7 +13,7 @@ export const AddItemToList = (newItem: ShoppingListItem) => (dispatch: Dispatch<
     shoppingList: newList,
   })
 }
-export const AddQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const addQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingList } = getState().animeGangRedux
   shoppingList[index].Quantity += 1
   dispatch({
@@ -21,7 +21,7 @@ export const AddQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTy
     shoppingList: shoppingList,
   })
 }
-export const DecreaseQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const decreaseQuantityToItem = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingList } = getState().animeGangRedux
   const itemCount = shoppingList[index].Quantity
   if (itemCount > 1) {
@@ -32,11 +32,11 @@ export const DecreaseQuantityToItem = (index: number) => (dispatch: Dispatch<Act
     shoppingList: shoppingList,
   })
 }
-export const RemoveItemFromList = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const removeItemFromList = (index: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { shoppingList } = getState().animeGangRedux
   const newList = []
   for (let i = 0; i < shoppingList.length; i += 1) {
-    if (i != index) {
+    if (i !== index) {
       newList.push(shoppingList[i])
     }
   }
@@ -45,25 +45,17 @@ export const RemoveItemFromList = (index: number) => (dispatch: Dispatch<ActionT
     shoppingList: newList,
   })
 }
-export const ShowAddItemInput = () => (dispatch: Dispatch<ActionTypes>) => {
-  const newbool = true
+export const setShowAddItemInput = (newbool: boolean) => (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: ANIME_GANG_ACTIONS.SHOW_ADD_ITEM_INPUT,
     showAddItem: newbool,
   })
 }
-export const HideAddItemInput = () => (dispatch: Dispatch<ActionTypes>) => {
-  const newbool = false
-  dispatch({
-    type: ANIME_GANG_ACTIONS.HIDE_ADD_ITEM_INPUT,
-    showAddItem: newbool,
-  })
-}
-export const AddItemKey = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const addItemKey = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { itemKey } = getState().animeGangRedux
   const newKey = itemKey + 1
   dispatch({
     type: ANIME_GANG_ACTIONS.ADD_ITEM_KEY,
-    itemKey: newKey, // if newList is undefined, use exampleList
+    itemKey: newKey,
   })
 }
