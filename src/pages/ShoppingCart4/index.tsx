@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from 'antd'
-import { Table, Space } from 'antd'
+import { Button, Table, Space } from 'antd'
 import { MinusCircleOutlined, PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 import { MainPage, HeaderShoppingCart, Header, AddItemButton, ShoppingListForm } from './styles/ShoppingCart4.styled'
 import AddItemModal from '../../components/AddItemModal'
@@ -46,15 +45,17 @@ const ShoppingCart4 = () => {
   }
 
   const addQuantity = (item: ShoppingListItem) => {
-    const updatedShoppingList = shoppingList.map((x) =>
-      x.key === item.key ? { ...x, itemCount: item.itemCount + 1 } : x,
+    const updatedShoppingList = shoppingList.map((CheckItem) =>
+      CheckItem.key === item.key ? { ...CheckItem, itemCount: item.itemCount + 1 } : CheckItem,
     )
     setShoppingList(updatedShoppingList)
   }
 
   const minusQuantity = (item: ShoppingListItem) => {
-    const updatedShoppingList = shoppingList.map((x) =>
-      x.key === item.key && x.itemCount > 1 ? { ...x, itemCount: item.itemCount - 1 } : x,
+    const updatedShoppingList = shoppingList.map((CheckItem) =>
+      CheckItem.key === item.key && CheckItem.itemCount > 1
+        ? { ...CheckItem, itemCount: item.itemCount - 1 }
+        : CheckItem,
     )
     setShoppingList(updatedShoppingList)
   }
@@ -79,10 +80,10 @@ const ShoppingCart4 = () => {
         <Header>Shopping List</Header>
       </HeaderShoppingCart>
       <ShoppingListForm>
-        <Table columns={columns} dataSource={[...shoppingList]} pagination={false}></Table>
+        <Table columns={columns} dataSource={[shoppingList]} pagination={false}></Table>
       </ShoppingListForm>
       <AddItemModal
-        itemKey={shoppingList.length}
+        itemKey={shoppingList.length === 0 ? 0 : shoppingList[shoppingList.length - 1].key + 1}
         showModal={showModal}
         addData={addData}
         hideModal={hideModal}

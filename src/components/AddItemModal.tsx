@@ -11,31 +11,13 @@ type Props = {
 }
 
 const AddItemModal = (props: Props) => {
-  const [shoppingListItemName, setshoppingListItemName] = useState('')
+  const [shoppingListItemName, setShoppingListItemName] = useState('')
   const [itemCount, setItemCount] = useState(0)
-  const [itemNameError, setItemNameError] = useState('')
-  const [itemCountError, setItemCountError] = useState('')
 
-  const validateDataError = () => {
-    if (shoppingListItemName.length === 0) {
-      setItemNameError('Please input an item name'!)
-      return true
-    } else {
-      setItemNameError('')
-    }
-    if (itemCount <= 0) {
-      setItemCountError('Please input a quantity greater than 0!')
-      return true
-    } else {
-      setItemCountError('')
-    }
-    return false
-  }
-
-  const onSubmit = () => {
-    if (!validateDataError()) {
+  const validateData = () => {
+    if (shoppingListItemName && shoppingListItemName.length > 0 && itemCount > 0) {
       props.addData({ key: props.itemKey, shoppingListItemName, itemCount })
-      setshoppingListItemName('')
+      setShoppingListItemName('')
       setItemCount(0)
     }
   }
@@ -53,7 +35,7 @@ const AddItemModal = (props: Props) => {
         <ModalTitle>Add Item</ModalTitle>
       </ModalHeader>
       <InputContainer>
-        <Input addonBefore="Item Name" onChange={(e) => setshoppingListItemName(e.target.value)}></Input>
+        <Input addonBefore="Item Name" onChange={(e) => setShoppingListItemName(e.target.value)}></Input>
       </InputContainer>
       {itemNameError && <ErrorMessage>{itemNameError}</ErrorMessage>}
       <InputContainer>
