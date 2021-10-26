@@ -36,17 +36,21 @@ export const DecreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch
   })
 }
 
-// export const DeleteItem = (IndexOfItem:number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-//   const { } = getState().shoppingLists
-//   dispatch({
-//     type: SHOPPING_LIST_ACTIONS.REMOVE_SHOPPING_ITEM,
-
-//   })
-// }
+export const DeleteItem = (key: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { ItemList } = getState().yxwp_store
+  const newList = ItemList.filter((item) => item.key !== key)
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_LIST,
+    ItemList: newList,
+  })
+}
 
 // export const AddItem = (IndexOfItem:number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-//   const { } = getState().shoppingLists
+//   const { ItemList } = getState().yxwp_store
+//   const newList = Item
+//   setData((prevData: Props[]) => [...prevData, { key: index, itemQuantity: quantity, itemName: name }])
+//     setIndex(index + 1)
 //   dispatch({
 
 //   })
-// }
+//}
