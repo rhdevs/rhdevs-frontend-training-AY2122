@@ -1,7 +1,8 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+
 import { ListEntry } from '../../store/pair2/types'
 import { decListItemQuantity, deleteListItem, incListItemQuantity } from '../../store/pair2/actions'
-import { useDispatch } from 'react-redux'
 import DeleteButton from './DeleteButton'
 import QuantityButton from './QuantityButton'
 
@@ -25,11 +26,11 @@ const ListItem = (props: Props) => {
   const dispatch = useDispatch()
 
   const incQuantity = () => {
-    dispatch(incListItemQuantity(id, list))
+    dispatch(incListItemQuantity(id))
   }
 
   const decQuantity = () => {
-    dispatch(decListItemQuantity(id, list))
+    dispatch(decListItemQuantity(id))
   }
 
   const deleteItem = () => {

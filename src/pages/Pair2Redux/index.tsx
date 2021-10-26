@@ -1,7 +1,7 @@
 import React from 'react'
-import { ShoppingListHeader, FullScreenContainer } from './styles/Pair2.styled'
-
 import { useSelector } from 'react-redux'
+
+import { ShoppingListHeader, FullScreenContainer } from './styles/Pair2.styled'
 import { RootState } from '../../store/types'
 import { ListEntry } from '../../store/pair2/types'
 import ItemAdder from '../../components/Pair2Redux/ItemAdder'

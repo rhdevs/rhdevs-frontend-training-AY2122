@@ -10,7 +10,7 @@ import AddButton from './AddButton'
 
 const ItemAdder = () => {
   const dispatch = useDispatch()
-  const default_entry = { id: -1, quantity: 1, itemName: '' }
+  const default_entry: ListEntry = { id: -1, quantity: 1, itemName: '' }
   const [entry, setEntry] = useState<ListEntry>(default_entry)
 
   const addItem = () => {

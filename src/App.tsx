@@ -15,7 +15,7 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
-  PAIR_2_SHOPPING_PAGE = '/shopping/pair2-redux',
+  PAIR_2_SHOPPING_PAGE_REDUX = '/shopping/pair2-redux',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -24,7 +24,7 @@ const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './page
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2Redux'))
+const Pair2MainPageRedux = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2Redux'))
 
 function App() {
   useEffect(() => {
@@ -53,10 +53,10 @@ function App() {
           <Groups />
         </StyledMain>
       </Route>
-      <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
+      <Route path={PATHS.PAIR_2_SHOPPING_PAGE_REDUX} exact>
         <StyledMain>
           <MainNavigation />
-          <Pair2MainPage />
+          <Pair2MainPageRedux />
         </StyledMain>
       </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
