@@ -7,15 +7,20 @@ const initialState: State = {
     {
       key: 1,
       itemQuantity: 3,
-      itemName: 'Dummy Item 1',
+      itemName: 'I want to',
     },
     {
       key: 2,
       itemQuantity: 4,
-      itemName: 'Dummy Item 2',
+      itemName: 'Dropout',
+    },
+    {
+      key: 3,
+      itemQuantity: 4,
+      itemName: 'Already',
     },
   ],
-  IndexOfItem: 2,
+  IndexOfItem: 3,
 }
 
 //declare your variable type

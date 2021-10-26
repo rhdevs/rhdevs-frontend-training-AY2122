@@ -15,20 +15,31 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
+  PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
+  PAIR_2_SHOPPING_PAGE_REDUX = '/shopping/pair2-redux',
+  PAIR3_SHOPPING_PAGE = '/shopping/pair3redux',
+  PAIR_3_SHOPPING_PAGE = '/shopping/pair3',
+  SHOPPING_PAGE_CHUNYU_YONGZHANG = '/shopping-lists/chunyu-yongzhang',
   JASON_YB_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb',
   JASON_YB_REDUX_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb-redux',
   SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
   SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
-  PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
   YIXUAN_WEIPIN_SHOPPING_REDUX = '/shopping/yxwp_redux',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
 const NotFound = React.lazy(() => import(/* webpackChunckName: "NotFound" */ './pages/ErrorPage/NotFound'))
 const Groups = React.lazy(() => import(/* webpackChunckName: "Groups" */ './pages/Groups'))
+const ShoppingListCYYZ = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListCYYZ'),
+)
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
+const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
+const Pair2MainPageRedux = React.lazy(() => import(/* webpackChunckName: "Pair2MainPageRedux" */ './pages/Pair2Redux'))
+const Pair3redux = React.lazy(() => import(/* webpackChunckName: "Pair3redux" */ './pages/Pair3redux'))
+const Pair3MainPage = React.lazy(() => import(/* webpackChunckName: "Pair3" */ './pages/Pair3'))
 const JasonYbShoppingListPage = React.lazy(
   () => import(/* webpackChunckName: "JasonYbShoppingListPage" */ './pages/JasonYbShoppingListPage'),
 )
@@ -41,7 +52,6 @@ const SkZkShoppingPage = React.lazy(
 const SkZkShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "SkZKShoppingPageRedux" */ './pages/SkZkShoppingPageRedux'),
 )
-const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
 const YXWPRedux = React.lazy(() => import(/* webpackChunckName: "YXWPRedux" */ './pages/YXWPRedux'))
 function App() {
   useEffect(() => {
@@ -56,6 +66,12 @@ function App() {
           <MainNavigation />
           <LandingPage />
           <Footer />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} exact>
+        <StyledMain>
+          <MainNavigation />
+          <ShoppingListCYYZ />
         </StyledMain>
       </Route>
       <Route path={PATHS.SHOPPING_LISTS} exact>
