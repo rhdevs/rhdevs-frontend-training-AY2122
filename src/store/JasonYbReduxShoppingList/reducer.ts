@@ -34,7 +34,7 @@ type State = {
   indexCount: number
 }
 
-export const JasonYbReduxShoppingList: Reducer<State, ActionTypes> = (state = initialState, action) => {
+export const jasonYbReduxShoppingList: Reducer<State, ActionTypes> = (state = initialState, action) => {
   switch (action.type) {
     //this is to update the state if the action type is called
     case SHOPPING_LIST_ACTIONS.SET_ITEM_LIST: {
