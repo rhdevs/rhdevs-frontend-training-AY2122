@@ -88,7 +88,6 @@ function App() {
           <Shopping_YXWP />
         </StyledMain>
       </Route>
-      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
       <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
         <StyledMain>
           <MainNavigation />
