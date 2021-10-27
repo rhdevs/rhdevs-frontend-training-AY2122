@@ -54,7 +54,6 @@ const SkZkShoppingPageRedux = React.lazy(
 )
 const Shopping_YXWP = React.lazy(() => import('./pages/Shopping_YXWP'))
 
-
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render
