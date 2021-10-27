@@ -49,7 +49,7 @@ function App() {
           <ShoppingListsMainPage />
         </StyledMain>
       </Route>
-      <Route path={`${PATHS.SHOPPING_LIST_ANIME_GANG_REDUX}`} exact>
+      <Route path={PATHS.SHOPPING_LIST_ANIME_GANG_REDUX} exact>
         <StyledMain>
           <MainNavigation />
           <ShoppingListAnimeGangRedux />
