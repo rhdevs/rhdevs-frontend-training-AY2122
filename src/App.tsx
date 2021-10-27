@@ -24,6 +24,7 @@ export enum PATHS {
   JASON_YB_REDUX_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb-redux',
   SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
   SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
+  SHOPPING_PAGE_YIXUAN_WEIPIN = '/shopping/yixuanweipin',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -51,6 +52,7 @@ const SkZkShoppingPage = React.lazy(
 const SkZkShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "SkZKShoppingPageRedux" */ './pages/SkZkShoppingPageRedux'),
 )
+const Shopping_YXWP = React.lazy(() => import('./pages/Shopping_YXWP'))
 
 function App() {
   useEffect(() => {
@@ -77,6 +79,12 @@ function App() {
         <StyledMain>
           <MainNavigation />
           <ShoppingListsMainPage />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.SHOPPING_PAGE_YIXUAN_WEIPIN} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Shopping_YXWP />
         </StyledMain>
       </Route>
       <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
