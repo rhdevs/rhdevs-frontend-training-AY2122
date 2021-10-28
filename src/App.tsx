@@ -15,14 +15,11 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
-<<<<<<< HEAD
   SHOPPING_LIST_ANIME_GANG_REDUX = '/shopping-list-anime-gang-redux',
-=======
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
   PAIR_2_SHOPPING_PAGE_REDUX = '/shopping/pair2-redux',
   PAIR3_SHOPPING_PAGE = '/shopping/pair3redux',
   PAIR_3_SHOPPING_PAGE = '/shopping/pair3',
->>>>>>> main
   SHOPPING_PAGE_CHUNYU_YONGZHANG = '/shopping-lists/chunyu-yongzhang',
   JASON_YB_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb',
   JASON_YB_REDUX_SHOPPING_LIST_PAGE = '/shopping-lists/jason_yb-redux',
@@ -40,16 +37,13 @@ const ShoppingListCYYZ = React.lazy(
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
 )
-<<<<<<< HEAD
 const ShoppingListAnimeGangRedux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListAnimeGangReduxPage" */ './pages/ShoppingListAnimeGangRedux'),
 )
-=======
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
 const Pair2MainPageRedux = React.lazy(() => import(/* webpackChunckName: "Pair2MainPageRedux" */ './pages/Pair2Redux'))
 const Pair3redux = React.lazy(() => import(/* webpackChunckName: "Pair3redux" */ './pages/Pair3redux'))
 const Pair3MainPage = React.lazy(() => import(/* webpackChunckName: "Pair3" */ './pages/Pair3'))
->>>>>>> main
 const JasonYbShoppingListPage = React.lazy(
   () => import(/* webpackChunckName: "JasonYbShoppingListPage" */ './pages/JasonYbShoppingListPage'),
 )
