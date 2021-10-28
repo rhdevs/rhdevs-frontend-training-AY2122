@@ -56,19 +56,21 @@ const JasonYbShoppingListPage = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (itemAffected: ItemProps) => (
-        <Space size="middle">
-          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(itemAffected)}>
-            +
-          </Button>
-          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(itemAffected)}>
-            -
-          </Button>
-          <Button danger onClick={() => handleDeleteItem(itemAffected)}>
-            Delete
-          </Button>
-        </Space>
-      ),
+      render: function actions(itemAffected: ItemProps) {
+        return (
+          <Space size="middle">
+            <Button type="primary" shape="circle" onClick={() => handleAddQuantity(itemAffected)}>
+              +
+            </Button>
+            <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(itemAffected)}>
+              -
+            </Button>
+            <Button danger onClick={() => handleDeleteItem(itemAffected)}>
+              Delete
+            </Button>
+          </Space>
+        )
+      },
     },
   ]
 

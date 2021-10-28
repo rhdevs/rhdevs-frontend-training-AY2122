@@ -1,14 +1,20 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-import { PATHS } from '../../App'
+import { PATHS } from '../../routes/PATHS'
 import ShoppingCard from '../../components/ShoppingCard'
 import { ShoppingListHeader, GroupCardsContainer } from './styles/ShoppingListMain.styled'
+import PageHeader from '../../components/PageHeader'
+import { MembersSection } from '../LandingPage/styles/LandingPage.styled'
 
 const ShoppingListMain = () => {
   const history = useHistory()
   return (
-    <>
+    <MembersSection>
+      <PageHeader
+        title="ShoppingLists"
+        description="pair work to shopping lists with states to practice using React hooks and Redux"
+      />
       <ShoppingListHeader>Our Shopping Lists!</ShoppingListHeader>
       <GroupCardsContainer>
         <ShoppingCard names="name1, name2, name4" onClick={() => history.push(PATHS.EXAMPLE_SHOPPING_PAGE)} />
@@ -25,10 +31,9 @@ const ShoppingListMain = () => {
         />
         <ShoppingCard names="zhikai, shaokiat" onClick={() => history.push(PATHS.SKZK_SHOPPING_PAGE)} />
         <ShoppingCard names="zhikai, shaokiat (Redux)" onClick={() => history.push(PATHS.SKZK_SHOPPING_PAGE_REDUX)} />
-        {/* Create group cards here */}
         <ShoppingCard names="Chun Yu, Yong Zhang" onClick={() => history.push(PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG)} />
       </GroupCardsContainer>
-    </>
+    </MembersSection>
   )
 }
 

@@ -14,7 +14,7 @@ import {
   AddContainer,
   ButtonContainer,
 } from './styles/ShoppingListCYYZ.styled'
-import { RootState } from '../../store/types'
+import { RootState } from '../../../store/types'
 import {
   setFoodList,
   setOthersList,
@@ -25,7 +25,7 @@ import {
   DeleteOthersItem,
   MinusOthersAmount,
   setMenuVisible,
-} from '../../store/shoppingListsCYYZ/actions'
+} from '../../../store/shoppingListsCYYZ/actions'
 
 const { Option } = Select
 

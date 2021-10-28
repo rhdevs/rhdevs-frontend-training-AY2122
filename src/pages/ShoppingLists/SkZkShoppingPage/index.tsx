@@ -1,5 +1,5 @@
-import { Button, Space, Table } from 'antd'
 import React, { ChangeEvent, useState } from 'react'
+import { Button, Space, Table } from 'antd'
 import { ShoppingListHeader, ItemRowContainer, AddTextInput, CartTable } from './styles/ShoppingPage.styled'
 import { PlusOutlined } from '@ant-design/icons'
 
@@ -37,17 +37,19 @@ const SkZkShoppingPage = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (item: CartItem) => (
-        <Space size="middle">
-          <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
-            +
-          </Button>
-          <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
-            -
-          </Button>
-          <a onClick={() => removeItem(item)}>Delete</a>
-        </Space>
-      ),
+      render: function actions(item: CartItem) {
+        return (
+          <Space size="middle">
+            <Button type="primary" shape="circle" onClick={() => handleAddQuantity(item)}>
+              +
+            </Button>
+            <Button type="primary" shape="circle" onClick={() => handleReduceQuantity(item)}>
+              -
+            </Button>
+            <a onClick={() => removeItem(item)}>Delete</a>
+          </Space>
+        )
+      },
     },
   ]
 

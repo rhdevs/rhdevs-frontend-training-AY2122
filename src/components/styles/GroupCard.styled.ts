@@ -35,3 +35,7 @@ export const BoldText = styled.text`
 export const StyledNamesText = styled.text`
   padding-left: 5px;
 `
+
+export const StyledDescriptionText = styled.text`
+  text-align: center;
+`

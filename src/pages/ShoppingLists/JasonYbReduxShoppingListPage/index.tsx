@@ -1,7 +1,12 @@
 import React, { ChangeEvent, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { AddItemQuantity, ReduceItemQuantity, DeleteItem, AddItem } from '../../store/JasonYbReduxShoppingList/actions'
-import { RootState } from '../../store/types'
+import {
+  AddItemQuantity,
+  ReduceItemQuantity,
+  DeleteItem,
+  AddItem,
+} from '../../../store/JasonYbReduxShoppingList/actions'
+import { RootState } from '../../../store/types'
 
 import {
   AddItemButtonContainer,
@@ -11,7 +16,7 @@ import {
   ShoppingListHeader,
 } from './styles/JasonYbShoppingListPage.styled'
 import { Button, Table, Space } from 'antd'
-import { ShoppingItem } from '../../store/JasonYbReduxShoppingList/types'
+import { ShoppingItem } from '../../../store/JasonYbReduxShoppingList/types'
 
 export default function ShoppingLists() {
   const dispatch = useDispatch()
@@ -36,19 +41,21 @@ export default function ShoppingLists() {
     {
       title: 'Action',
       key: 'action',
-      render: (itemAffected: ShoppingItem) => (
-        <Space size="middle">
-          <Button type="primary" shape="circle" onClick={() => dispatch(AddItemQuantity(itemAffected))}>
-            +
-          </Button>
-          <Button type="primary" shape="circle" onClick={() => dispatch(ReduceItemQuantity(itemAffected))}>
-            -
-          </Button>
-          <Button danger onClick={() => dispatch(DeleteItem(itemAffected))}>
-            Delete
-          </Button>
-        </Space>
-      ),
+      render: function actions(itemAffected: ShoppingItem) {
+        return (
+          <Space size="middle">
+            <Button type="primary" shape="circle" onClick={() => dispatch(AddItemQuantity(itemAffected))}>
+              +
+            </Button>
+            <Button type="primary" shape="circle" onClick={() => dispatch(ReduceItemQuantity(itemAffected))}>
+              -
+            </Button>
+            <Button danger onClick={() => dispatch(DeleteItem(itemAffected))}>
+              Delete
+            </Button>
+          </Space>
+        )
+      },
     },
   ]
 
