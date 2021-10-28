@@ -1,9 +1,11 @@
 import React from 'react'
 import { StyledPageDescription, StyledPageHeader } from '../pages/LandingPage/styles/LandingPage.styled'
+import { StyledCardLink } from './styles/GroupCard.styled'
 
 type Props = {
   title: string
-  description?: string
+  description?: string | JSX.Element
+  link?: string
 }
 
 const PageHeader = (props: Props) => {
@@ -11,6 +13,7 @@ const PageHeader = (props: Props) => {
     <>
       <StyledPageHeader>{props.title}</StyledPageHeader>
       <StyledPageDescription>{props.description}</StyledPageDescription>
+      <StyledCardLink>{props.link}</StyledCardLink>
       <hr />
       <br />
     </>

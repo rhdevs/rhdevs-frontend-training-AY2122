@@ -15,6 +15,9 @@ export const ShoppingLists = React.lazy(() => import(/* webpackChunckName: "Shop
 export const ShoppingListExample = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListExample" */ '../pages/ShoppingLists/ShoppingExample'),
 )
+export const FrontendMentorLanding = React.lazy(
+  () => import(/* webpackChunckName: "FrontendMentorLanding" */ '../pages/FrontendMentor'),
+)
 export const ShoppingListCYYZ = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListCYYZ" */ '../pages/ShoppingLists/ShoppingListCYYZ'),
 )
@@ -54,6 +57,9 @@ export const Shopping_YXWP = React.lazy(() => import('../pages/ShoppingLists/Sho
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
+    <RouteWithBothNav exact path={PATHS.GROUP_ROUTE} component={Groups} />
+    <RouteWithTopNav exact path={`${PATHS.GROUP_ROUTE}/:groupNumber`} component={GroupsSwitch} />
+    <Route exact path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} component={GroupsSwitch} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_LISTS} component={ShoppingLists} />
     <RouteWithTopNav exact path={PATHS.EXAMPLE_SHOPPING_PAGE} component={ShoppingListExample} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} component={ShoppingListCYYZ} />
@@ -67,9 +73,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.JASON_YB_REDUX_SHOPPING_LIST_PAGE} component={JasonYbReduxShoppingListPage} />
     <RouteWithTopNav exact path={PATHS.SKZK_SHOPPING_PAGE} component={SkZkShoppingPage} />
     <RouteWithTopNav exact path={PATHS.SKZK_SHOPPING_PAGE_REDUX} component={SkZkShoppingPageRedux} />
-    <RouteWithBothNav exact path={PATHS.GROUP_ROUTE} component={Groups} />
-    <RouteWithTopNav exact path={`${PATHS.GROUP_ROUTE}/:groupNumber`} component={GroupsSwitch} />
-    <Route exact path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} component={GroupsSwitch} />
+    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}

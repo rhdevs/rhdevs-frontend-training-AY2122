@@ -13,4 +13,5 @@ export enum PATHS {
   SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
   SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
   SHOPPING_PAGE_YIXUAN_WEIPIN = '/shopping/yixuanweipin',
+  FRONTEND_MENTOR = '/frontendmentor',
 }

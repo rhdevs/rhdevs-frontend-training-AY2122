@@ -39,3 +39,8 @@ export const StyledNamesText = styled.text`
 export const StyledDescriptionText = styled.text`
   text-align: center;
 `
+
+export const StyledCardLink = styled.a`
+  text-align: center;
+  overflow-wrap: anywhere;
+`
