@@ -12,6 +12,9 @@ export const GroupsSwitch = React.lazy(
   () => import(/* webpackChunckName: "GroupsSwitch" */ '../pages/Groups/GroupsSwitch'),
 )
 export const ShoppingLists = React.lazy(() => import(/* webpackChunckName: "ShoppingLists" */ '../pages/ShoppingLists'))
+export const ShoppingListExample = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingListExample" */ '../pages/ShoppingLists/ShoppingExample'),
+)
 export const ShoppingListCYYZ = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListCYYZ" */ '../pages/ShoppingLists/ShoppingListCYYZ'),
 )
@@ -51,9 +54,10 @@ export const Shopping_YXWP = React.lazy(() => import('../pages/ShoppingLists/Sho
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
+    <RouteWithTopNav exact path={PATHS.SHOPPING_LISTS} component={ShoppingLists} />
+    <RouteWithTopNav exact path={PATHS.EXAMPLE_SHOPPING_PAGE} component={ShoppingListExample} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} component={ShoppingListCYYZ} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_LIST_ANIME_GANG_REDUX} component={ShoppingListAnimeGangRedux} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_LISTS} component={ShoppingLists} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_YIXUAN_WEIPIN} component={Shopping_YXWP} />
     <RouteWithTopNav exact path={PATHS.PAIR_2_SHOPPING_PAGE} component={Pair2MainPage} />
     <RouteWithTopNav exact path={PATHS.PAIR_2_SHOPPING_PAGE_REDUX} component={Pair2MainPageRedux} />
