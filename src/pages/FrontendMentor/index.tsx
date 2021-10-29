@@ -22,6 +22,7 @@ const FrontendMentor = () => {
       <InformationCardSection>
         {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
         <Card title="Meet landing page" description="your name" />
+        <Card title="3-column preview card component challenge hub (Maxim & Wei Pin)" description="your name" />
       </InformationCardSection>
     </MembersSection>
   )
