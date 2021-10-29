@@ -10,7 +10,7 @@ import {
   ModalCard,
   Overlay,
   StyledButton,
-} from './styles/AddItemModal.styled'
+} from './styles/AddExampleItemModal.styled'
 
 type Props = {
   isVisible: boolean
@@ -19,7 +19,7 @@ type Props = {
   shoppingListSetter: React.Dispatch<React.SetStateAction<ShoppingItem[]>>
 }
 
-const AddItemModal = (props: Props) => {
+const AddExampleItemModal = (props: Props) => {
   const [quantity, setQuantity] = useState<string | number | undefined>()
   const [itemName, setItemName] = useState<string | undefined>()
   const [showErrorMessage, setShowErrorMessage] = useState<boolean>(false)
@@ -39,7 +39,6 @@ const AddItemModal = (props: Props) => {
         qty: Number(quantity),
         name: itemName,
       }
-      console.log('submit')
       props.shoppingListSetter(props.shoppingList.concat([newItem]))
       props.modalSetter(false)
       resetValues()
@@ -83,4 +82,4 @@ const AddItemModal = (props: Props) => {
   )
 }
 
-export default AddItemModal
+export default AddExampleItemModal

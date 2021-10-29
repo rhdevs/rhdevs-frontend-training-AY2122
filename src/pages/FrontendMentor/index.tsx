@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from '../../components/Card'
 
+import Card from '../../components/Card'
 import PageHeader from '../../components/PageHeader'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
 
@@ -8,7 +8,7 @@ const FrontendMentor = () => {
   return (
     <MembersSection>
       <PageHeader
-        title="RHApp Redesign"
+        title="Frontend Mentor Practices"
         description={
           <>
             {'frontend mentor practices, challenges taken from '}

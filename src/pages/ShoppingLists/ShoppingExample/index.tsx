@@ -13,7 +13,7 @@ import {
 } from './styles/ShoppingExample.styled'
 import Button from 'antd/lib/button/button'
 import PlusOutlined from '@ant-design/icons/lib/icons/PlusOutlined'
-import AddItemModal from '../../../components/AddItemModal'
+import AddExampleItemModal from '../../../components/AddExampleItemModal'
 
 export type ShoppingItem = {
   key: string
@@ -102,7 +102,7 @@ const ShoppingExample = () => {
 
   return (
     <>
-      <AddItemModal
+      <AddExampleItemModal
         shoppingList={shoppingList}
         shoppingListSetter={setShoppingList}
         isVisible={modalIsOpen}
