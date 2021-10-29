@@ -21,19 +21,19 @@ type Props = {
 
 const AddExampleItemModal = (props: Props) => {
   const [quantity, setQuantity] = useState<string | number | undefined>()
-  const [itemName, setItemName] = useState<string | undefined>()
+  const [itemName, setItemName] = useState<string>('')
   const [showErrorMessage, setShowErrorMessage] = useState<boolean>(false)
 
   const uid = Date.now().toString(36) + Math.random().toString(36).substring(2)
 
   function resetValues() {
     setQuantity(undefined)
-    setItemName(undefined)
+    setItemName('')
     setShowErrorMessage(false)
   }
 
   function onSubmit() {
-    if (quantity !== undefined && itemName !== undefined && quantity >= 0 && itemName !== '') {
+    if (quantity !== undefined && quantity >= 0 && itemName !== '') {
       const newItem: ShoppingItem = {
         key: uid,
         qty: Number(quantity),
