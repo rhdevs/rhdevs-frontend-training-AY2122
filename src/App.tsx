@@ -15,6 +15,9 @@ export enum PATHS {
   GROUP_ROUTE = '/group',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
+  SHOPPING_PAGE_PAIR_FOUR = '/shopping-lists-pair-4',
+  SHOPPING_PAGE_PAIR_FOUR_REDUX = '/shopping-lists-pair-4-redux',
+  SHOPPING_LIST_ANIME_GANG_REDUX = '/shopping-list-anime-gang-redux',
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
   PAIR_2_SHOPPING_PAGE_REDUX = '/shopping/pair2-redux',
   PAIR3_SHOPPING_PAGE = '/shopping/pair3redux',
@@ -25,6 +28,7 @@ export enum PATHS {
   SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
   SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
   YIXUAN_WEIPIN_SHOPPING_REDUX = '/shopping/yxwp_redux',
+  SHOPPING_PAGE_YIXUAN_WEIPIN = '/shopping/yixuanweipin',
 }
 
 const LandingPage = React.lazy(() => import(/* webpackChunckName: "LandingPage" */ './pages/LandingPage'))
@@ -35,6 +39,13 @@ const ShoppingListCYYZ = React.lazy(
 )
 const ShoppingListsMainPage = React.lazy(
   () => import(/* webpackChunckName: "ShoppingListsMainPage" */ './pages/ShoppingListsMain'),
+)
+const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCart4" */ './pages/ShoppingCart4'))
+const ShoppingCart4Redux = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingCart4Redux" */ './pages/ShoppingCart4Redux'),
+)
+const ShoppingListAnimeGangRedux = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingListAnimeGangReduxPage" */ './pages/ShoppingListAnimeGangRedux'),
 )
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
 const Pair2MainPageRedux = React.lazy(() => import(/* webpackChunckName: "Pair2MainPageRedux" */ './pages/Pair2Redux'))
@@ -53,6 +64,8 @@ const SkZkShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "SkZKShoppingPageRedux" */ './pages/SkZkShoppingPageRedux'),
 )
 const YXWPRedux = React.lazy(() => import(/* webpackChunckName: "YXWPRedux" */ './pages/YXWPRedux'))
+const Shopping_YXWP = React.lazy(() => import('./pages/Shopping_YXWP'))
+
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render
@@ -74,13 +87,43 @@ function App() {
           <ShoppingListCYYZ />
         </StyledMain>
       </Route>
+      <Route path={PATHS.SHOPPING_LIST_ANIME_GANG_REDUX} exact>
+        <StyledMain>
+          <MainNavigation />
+          <ShoppingListAnimeGangRedux />
+        </StyledMain>
+      </Route>
       <Route path={PATHS.SHOPPING_LISTS} exact>
         <StyledMain>
           <MainNavigation />
           <ShoppingListsMainPage />
         </StyledMain>
       </Route>
-      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
+      <Route path={PATHS.SHOPPING_PAGE_PAIR_FOUR} exact>
+        <StyledMain>
+          <MainNavigation />
+          <ShoppingCart4 />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} exact>
+        <StyledMain>
+          <MainNavigation />
+          <ShoppingCart4Redux />
+        </StyledMain>
+      </Route>
+      <Route path={`${PATHS.SHOPPING_LISTS}/:groupnumber`} exact>
+        <StyledMain>
+          <MainNavigation />
+        </StyledMain>
+      </Route>
+      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact></Route>
+      <Route path={PATHS.SHOPPING_PAGE_YIXUAN_WEIPIN} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Shopping_YXWP />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
         <StyledMain>
           <MainNavigation />
           <Groups />
