@@ -10,8 +10,8 @@ import {
   TablePart,
   TopRow,
 } from './styles/ShoppingListAnimeGangRedux.styled'
-import { RootState } from '../../store/types'
-import { ShoppingListItem } from '../../store/animeGangRedux/types'
+import { RootState } from '../../../store/types'
+import { ShoppingListItem } from '../../../store/animeGangRedux/types'
 import {
   addItemKey,
   addItemToList,
@@ -19,7 +19,7 @@ import {
   decreaseQuantityToItem,
   removeItemFromList,
   setShowAddItemInput,
-} from '../../store/animeGangRedux/actions'
+} from '../../../store/animeGangRedux/actions'
 
 const ShoppingAnimeGangRedux = () => {
   const handleOnAddItemClick = () => {

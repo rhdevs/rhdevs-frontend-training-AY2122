@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Table, Tooltip, Button } from 'antd'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import { QuantityElementsDiv, ButtonDiv, DeleteText, Space, AddTextInput } from './styles/main.styled'
@@ -7,10 +8,9 @@ import {
   IncreaseItemQuantity,
   AddItemToList,
   RemoveItemFromList,
-} from '../../store/Pair3redux/action'
-import { Item } from '../../store/Pair3redux/types'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../store/types'
+} from '../../../store/Pair3redux/action'
+import { Item } from '../../../store/Pair3redux/types'
+import { RootState } from '../../../store/types'
 
 const Pair3redux = () => {
   const dispatch = useDispatch()
@@ -41,34 +41,36 @@ const Pair3redux = () => {
     {
       title: 'Actions',
       key: 'actions',
-      render: (text: Item, record: Item, index: number) => (
-        <div>
-          <QuantityElementsDiv>
-            <Tooltip title="Add">
-              <ButtonDiv>
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={<MinusOutlined />}
-                  onClick={() => dispatch(DecreaseItemQuantity(index))}
-                />{' '}
-              </ButtonDiv>
-            </Tooltip>
-            <Tooltip title="Minus">
-              <ButtonDiv>
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={<PlusOutlined />}
-                  onClick={() => dispatch(IncreaseItemQuantity(index))}
-                />
-              </ButtonDiv>
-            </Tooltip>
-          </QuantityElementsDiv>
-          <Space></Space>
-          <DeleteText onClick={() => dispatch(RemoveItemFromList(index))}>Delete</DeleteText>
-        </div>
-      ),
+      render: function actions(text: Item, record: Item, index: number) {
+        return (
+          <div>
+            <QuantityElementsDiv>
+              <Tooltip title="Add">
+                <ButtonDiv>
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<MinusOutlined />}
+                    onClick={() => dispatch(DecreaseItemQuantity(index))}
+                  />{' '}
+                </ButtonDiv>
+              </Tooltip>
+              <Tooltip title="Minus">
+                <ButtonDiv>
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<PlusOutlined />}
+                    onClick={() => dispatch(IncreaseItemQuantity(index))}
+                  />
+                </ButtonDiv>
+              </Tooltip>
+            </QuantityElementsDiv>
+            <Space></Space>
+            <DeleteText onClick={() => dispatch(RemoveItemFromList(index))}>Delete</DeleteText>
+          </div>
+        )
+      },
     },
   ]
 

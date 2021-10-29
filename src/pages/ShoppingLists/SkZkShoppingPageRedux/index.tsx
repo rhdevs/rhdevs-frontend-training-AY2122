@@ -1,5 +1,6 @@
-import { Button, Space, Table } from 'antd'
 import React, { ChangeEvent, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Button, Space, Table } from 'antd'
 import {
   ShoppingPageDiv,
   ShoppingListHeader,
@@ -7,11 +8,10 @@ import {
   AddTextInput,
   CartTable,
 } from './styles/ShoppingPageRedux.styled'
-import { CartItem } from '../../store/skzk/types'
-import { AddItemQuantity, DeleteCartItem, MinusItemQuantity, SetShoppingCart } from '../../store/skzk/actions'
-import { RootState } from '../../store/types'
+import { CartItem } from '../../../store/skzk/types'
+import { AddItemQuantity, DeleteCartItem, MinusItemQuantity, SetShoppingCart } from '../../../store/skzk/actions'
+import { RootState } from '../../../store/types'
 import { PlusOutlined } from '@ant-design/icons'
-import { useDispatch, useSelector } from 'react-redux'
 
 const ShoppingPageRedux = () => {
   const dispatch = useDispatch()
@@ -42,17 +42,19 @@ const ShoppingPageRedux = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (item: CartItem) => (
-        <Space size="middle">
-          <Button type="primary" shape="circle" onClick={() => dispatch(AddItemQuantity(item))}>
-            +
-          </Button>
-          <Button type="primary" shape="circle" onClick={() => dispatch(MinusItemQuantity(item))}>
-            -
-          </Button>
-          <a onClick={() => dispatch(DeleteCartItem(item))}>Delete</a>
-        </Space>
-      ),
+      render: function actions(item: CartItem) {
+        return (
+          <Space size="middle">
+            <Button type="primary" shape="circle" onClick={() => dispatch(AddItemQuantity(item))}>
+              +
+            </Button>
+            <Button type="primary" shape="circle" onClick={() => dispatch(MinusItemQuantity(item))}>
+              -
+            </Button>
+            <a onClick={() => dispatch(DeleteCartItem(item))}>Delete</a>
+          </Space>
+        )
+      },
     },
   ]
 

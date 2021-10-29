@@ -1,29 +1,34 @@
 import React from 'react'
+import { useHistory } from 'react-router'
 
 import frontend_webdev from '../../assets/frontend_webdev.svg'
-import GroupCard from '../../components/GroupCard'
+import Card from '../../components/Card'
+import { PATHS } from '../../routes/PATHS'
 import { FEImg, InformationCardSection, MembersSection, MembersSectionHeader } from './styles/LandingPage.styled'
 
 const LandingPage = () => {
+  const history = useHistory()
   return (
     <>
       <FEImg src={frontend_webdev} alt="frontend web development" />
       <MembersSection>
-        <MembersSectionHeader>Groups!</MembersSectionHeader>
+        <MembersSectionHeader>Our Work!</MembersSectionHeader>
         <InformationCardSection>
-          <GroupCard groupNumber={0} devs="name1, name2, name4" designers="name1, name2, name4" />
-          <GroupCard
-            groupNumber={1}
-            devs="Chun Yu, En Hao, Prince, Maxim, Richard"
-            designers="Shermaine, Nguyen, Felicia"
+          <Card
+            title="RHApp Redesign"
+            description="group work with designers to create redesign of 2 selected screens"
+            onClick={() => history.push(PATHS.GROUP_ROUTE)}
           />
-          <GroupCard
-            groupNumber={2}
-            devs="wenfeng, jason, shao kiat, yong zhang, yongbin"
-            designers="amos, yu an, audery"
+          <Card
+            title="Shopping Lists"
+            description="pair work to shopping lists with states to practice using React hooks and Redux"
+            onClick={() => history.push(PATHS.SHOPPING_LISTS)}
           />
-          <GroupCard groupNumber={3} devs="Yixuan, Tai, Venus, Kiyong" designers="Dennis, Austin" />
-          <GroupCard groupNumber={4} devs="Elva, Zhikai, Weipin, Marcus" designers="Gregory, Shannon, Brendan" />
+          <Card
+            title="Frontend Mentor"
+            description="frontend mentor practices, challenges taken from frontendmentor.io"
+            onClick={() => history.push(PATHS.FRONTEND_MENTOR)}
+          />
         </InformationCardSection>
       </MembersSection>
     </>

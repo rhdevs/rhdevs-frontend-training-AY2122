@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Input } from 'antd'
-import { ItemAdderContainer } from '../../pages/Pair2/styles/Pair2.styled'
+import { ItemAdderContainer } from '../../pages/ShoppingLists/Pair2/styles/Pair2.styled'
 
 import QuantityInput from './QuantityInput'
 import AddButton from './AddButton'

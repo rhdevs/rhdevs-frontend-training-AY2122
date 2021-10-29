@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Input } from 'antd'
 
-import { ItemAdderContainer } from '../../pages/Pair2Redux/styles/Pair2.styled'
+import { ItemAdderContainer } from '../../pages/ShoppingLists/Pair2Redux/styles/Pair2.styled'
 import { ListEntry } from '../../store/pair2/types'
 import { addItemToList } from '../../store/pair2/actions'
 import QuantityInput from './QuantityInput'

@@ -1,9 +1,8 @@
 import React, { useState, ChangeEvent } from 'react'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import { Button, Tooltip, Table } from 'antd'
-import { ShoppingListHeader } from '../ShoppingListsMain/styles/ShoppingListMain.styled'
+import { ShoppingListHeader } from '../styles/ShoppingListMain.styled'
 import { QuantityElementsDiv, AddTextInput, ButtonDiv, DeleteText, Space } from './styles/main.styled'
-import { Prompt } from 'react-router'
 
 const Pair3 = () => {
   interface Data_entry {
@@ -77,34 +76,36 @@ const Pair3 = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (entry: Data_entry) => (
-        <div>
-          <QuantityElementsDiv>
-            <Tooltip title="Add">
-              <ButtonDiv>
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={<MinusOutlined />}
-                  onClick={() => handleDecreaseQuantity(entry)}
-                />{' '}
-              </ButtonDiv>
-            </Tooltip>
-            <Tooltip title="Minus">
-              <ButtonDiv>
-                <Button
-                  type="primary"
-                  shape="circle"
-                  icon={<PlusOutlined />}
-                  onClick={() => handleIncreaseQuantity(entry)}
-                />
-              </ButtonDiv>
-            </Tooltip>
-          </QuantityElementsDiv>
-          <Space></Space>
-          <DeleteText onClick={() => removeItem(entry)}>Delete</DeleteText>
-        </div>
-      ),
+      render: function actions(entry: Data_entry) {
+        return (
+          <div>
+            <QuantityElementsDiv>
+              <Tooltip title="Add">
+                <ButtonDiv>
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<MinusOutlined />}
+                    onClick={() => handleDecreaseQuantity(entry)}
+                  />{' '}
+                </ButtonDiv>
+              </Tooltip>
+              <Tooltip title="Minus">
+                <ButtonDiv>
+                  <Button
+                    type="primary"
+                    shape="circle"
+                    icon={<PlusOutlined />}
+                    onClick={() => handleIncreaseQuantity(entry)}
+                  />
+                </ButtonDiv>
+              </Tooltip>
+            </QuantityElementsDiv>
+            <Space></Space>
+            <DeleteText onClick={() => removeItem(entry)}>Delete</DeleteText>
+          </div>
+        )
+      },
     },
   ]
 

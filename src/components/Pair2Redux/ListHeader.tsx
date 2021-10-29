@@ -5,7 +5,7 @@ import {
   QuantityContainer,
   ItemNameContainer,
   ActionContainer,
-} from '../../pages/Pair2Redux/styles/Pair2.styled'
+} from '../../pages/ShoppingLists/Pair2Redux/styles/Pair2.styled'
 
 const ListHeader = () => {
   return (
