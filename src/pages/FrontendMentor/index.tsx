@@ -1,10 +1,13 @@
 import React from 'react'
+import { useHistory } from 'react-router'
 
 import Card from '../../components/Card'
+import { PATHS } from '../../routes/PATHS'
 import PageHeader from '../../components/PageHeader'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
 
 const FrontendMentor = () => {
+  const history = useHistory()
   return (
     <MembersSection>
       <PageHeader
@@ -22,6 +25,7 @@ const FrontendMentor = () => {
       <InformationCardSection>
         {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
         <Card title="Meet landing page" description="your name" />
+        <Card title="Social Media Dashboard" description="Shao Kiat" onClick={() => history.push(PATHS.SK_DASHBOARD)} />
       </InformationCardSection>
     </MembersSection>
   )
