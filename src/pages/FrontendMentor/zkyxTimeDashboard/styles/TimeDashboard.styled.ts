@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import WorkIcon from '../images/icon-work.svg'
 
 export const Background = styled.div`
   position: fixed;
@@ -6,8 +7,10 @@ export const Background = styled.div`
   top: 50%;
   left: 50%;
   min-width: 100%;
-  min-height: 50%;
+  height: auto;
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
   transform: translate(-50%, -50%);
   background-color: #0f1424;
   justify-content: center;
@@ -30,18 +33,55 @@ export const FooterText = styled.h2`
   font-weight: 400;
   color: #cccfff;
 `
+export const BackgroundCardTop = styled.div`
+  background-repeat: no-repeat;
+  image-position: right;
+  background-origin: content-box;
+  margin-bottom: -1rem;
+`
+
+export const BackgroundIcon = styled.img`
+  width: fit-content;
+  margin-top: -0.6rem;
+  margin-left: 60%;
+  width: 5rem;
+  height: 5rem;
+`
+/*position: right;
+image-position: right;
+background-position-x: right;
+position-x: right;
+background-size: right;
+overflow: hidden;
+background-position: top right;
+background-image: WorkIcon;
+background-origin: content-box;
+background-color: #ff8c66;
+margin-bottom: 1rem;
+height: 5rem;*/
+// using display grid allowed the logo to be covered behind
 export const TimeCard = styled.div`
+  overflow: hidden;
+  display: grid;
   border-radius: 20px;
   width: 100%;
   height: 100%;
-  padding: 1.5rem;
   background-color: #1c1f4a;
   background-size: fill;
-  background-image: url(${require('../images/icon-play.svg')});
+`
+export const TimeInfoCard = styled.div`
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #1c1f4a;
+  width: auto;
+  height: auto;
+  padding: 1.5rem;
+  margin-top: -1rem;
   &: hover {
     background-color: #2a306f;
   }
 `
+
 export const UserCard = styled.div`
   grid-column-start: 1;
   grid-column-end: 1;
@@ -65,7 +105,7 @@ export const UserInfoCard = styled.div`
   background-color: #5847eb;
   border-radius: 20px;
   padding: 1.5rem;
-  padding-bottom: 4.5rem;
+  padding-bottom: 2rem;
 `
 export const LegendCard = styled.div`
   border-radius: 20px;

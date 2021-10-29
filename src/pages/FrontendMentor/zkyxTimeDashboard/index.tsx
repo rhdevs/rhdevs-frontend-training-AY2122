@@ -16,9 +16,18 @@ import {
   LegendCard,
   LegendText,
   UserCardImage,
+  BackgroundIcon,
+  TimeInfoCard,
+  BackgroundCardTop,
 } from './styles/TimeDashboard.styled'
-import WorkBackground from './images/icon-work.svg'
+import WorkIcon from './images/icon-work.svg'
+import PlayIcon from './images/icon-play.svg'
+import StudyIcon from './images/icon-study.svg'
+import ExerciseIcon from './images/icon-exercise.svg'
+import SocialIcon from './images/icon-social.svg'
+import SelfCareIcon from './images/icon-self-care.svg'
 import UserProfilePic from './images/image-jeremy.png'
+import EllipsisIcon from './images/icon-ellipsis.svg'
 
 const TimeDashBoardPage = () => {
   return (
@@ -42,34 +51,124 @@ const TimeDashBoardPage = () => {
             </LegendCard>
           </UserCard>
           <TimeCard>
-            <TitleText>Play</TitleText>
-            <HourText>42Hrs</HourText>
-            <FooterText>Last day - 0hr</FooterText>
+            <BackgroundCardTop style={{ backgroundColor: '#ff8c66' }}>
+              <BackgroundIcon src={WorkIcon} />
+            </BackgroundCardTop>
+            <TimeInfoCard>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <TitleText>Work</TitleText>
+                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
+              </div>
+              <HourText>1Hrs</HourText>
+              <FooterText>Last day - 0hr</FooterText>
+            </TimeInfoCard>
           </TimeCard>
           <TimeCard>
-            <TitleText>Work</TitleText>
-            <HourText>60Hrs</HourText>
-            <FooterText>Last day - 0hr</FooterText>
+            <BackgroundCardTop style={{ backgroundColor: '#56c2e6' }}>
+              <BackgroundIcon src={PlayIcon} />
+            </BackgroundCardTop>
+            <TimeInfoCard>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <TitleText>Play</TitleText>
+                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
+              </div>
+              <HourText>2Hrs</HourText>
+              <FooterText>Last day - 0hr</FooterText>
+            </TimeInfoCard>
           </TimeCard>
           <TimeCard>
-            <TitleText>Abit</TitleText>
-            <HourText>60Hrs</HourText>
-            <FooterText>Last day - 0hr</FooterText>
+            <BackgroundCardTop style={{ backgroundColor: '#ff7591' }}>
+              <BackgroundIcon src={StudyIcon} />
+            </BackgroundCardTop>
+            <TimeInfoCard>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <TitleText>Study</TitleText>
+                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
+              </div>
+              <HourText>3Hrs</HourText>
+              <FooterText>Last day - 0hr</FooterText>
+            </TimeInfoCard>
           </TimeCard>
           <TimeCard>
-            <TitleText>Choy</TitleText>
-            <HourText>60Hrs</HourText>
-            <FooterText>Last day - 0hr</FooterText>
+            <BackgroundCardTop style={{ backgroundColor: '#4ac481' }}>
+              <BackgroundIcon src={ExerciseIcon} />
+            </BackgroundCardTop>
+            <TimeInfoCard>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <TitleText>Exercise</TitleText>
+                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
+              </div>
+              <HourText>4Hrs</HourText>
+              <FooterText>Last day - 0hr</FooterText>
+            </TimeInfoCard>
           </TimeCard>
           <TimeCard>
-            <TitleText>Only</TitleText>
-            <HourText>60Hrs</HourText>
-            <FooterText>Last day - 0hr</FooterText>
+            <BackgroundCardTop style={{ backgroundColor: '#7536d3' }}>
+              <BackgroundIcon src={SocialIcon} />
+            </BackgroundCardTop>
+            <TimeInfoCard>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <TitleText>Social</TitleText>
+                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
+              </div>
+              <HourText>5Hrs</HourText>
+              <FooterText>Last day - 0hr</FooterText>
+            </TimeInfoCard>
           </TimeCard>
           <TimeCard>
-            <TitleText>FFFF</TitleText>
-            <HourText>60Hrs</HourText>
-            <FooterText>Last day - 0hr</FooterText>
+            <BackgroundCardTop style={{ backgroundColor: '#f1c65b' }}>
+              <BackgroundIcon src={SelfCareIcon} />
+            </BackgroundCardTop>
+            <TimeInfoCard>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <TitleText>Self-Care</TitleText>
+                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
+              </div>
+              <HourText>6Hrs</HourText>
+              <FooterText>Last day - 0hr</FooterText>
+            </TimeInfoCard>
           </TimeCard>
           {/*<CardContainer>
             <CardBody>
