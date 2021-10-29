@@ -3,8 +3,8 @@ import { ActionTypes, Item, SHOPPING_LIST_ACTIONS_CYYZ } from './types'
 
 //set an initial state for your variable
 const initialState = {
-  foodList: [],
-  othersList: [],
+  foodList: [{ name: 'Egg', amount: 1 }],
+  othersList: [{ name: 'Cat', amount: 1 }],
   isMenuVisible: false,
 }
 
@@ -29,36 +29,22 @@ export const shoppingListsCYYZ: Reducer<State, ActionTypes> = (state = initialSt
       return { ...state, isMenuVisible: action.update }
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.ADD_FOOD_AMOUNT: {
-      const update = state.foodList.map((e) =>
-        e.name === action.update.name ? { ...e, amount: action.update.amount + 1 } : e,
-      )
-      return { ...state, foodList: update }
+      return { ...state, foodList: action.update }
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.MINUS_FOOD_AMOUNT: {
-      const update = state.foodList.map((e) =>
-        e.name === action.update.name ? { ...e, amount: action.update.amount - 1 } : e,
-      )
-      return { ...state, foodList: update }
+      return { ...state, foodList: action.update }
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.DELETE_FOOD_ITEM: {
-      const update = state.foodList.filter((e) => e.name !== action.update.name)
-      return { ...state, foodList: update }
+      return { ...state, foodList: action.update }
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.ADD_OTHERS_AMOUNT: {
-      const update = state.othersList.map((e) =>
-        e.name === action.update.name ? { ...e, amount: action.update.amount + 1 } : e,
-      )
-      return { ...state, othersList: update }
+      return { ...state, othersList: action.update }
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.MINUS_OTHERS_AMOUNT: {
-      const update = state.othersList.map((e) =>
-        e.name === action.update.name ? { ...e, amount: action.update.amount - 1 } : e,
-      )
-      return { ...state, othersList: update }
+      return { ...state, othersList: action.update }
     }
     case SHOPPING_LIST_ACTIONS_CYYZ.DELETE_OTHERS_ITEM: {
-      const update = state.othersList.filter((e) => e.name !== action.update.name)
-      return { ...state, othersList: update }
+      return { ...state, othersList: action.update }
     }
     default:
       return state

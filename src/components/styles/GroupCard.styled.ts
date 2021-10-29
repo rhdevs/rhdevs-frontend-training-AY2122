@@ -21,6 +21,7 @@ export const StyledCard = styled.div`
 
 export const StyledGroupNumber = styled.text`
   font-size: calc(18px + 1.5vw);
+  text-align: center;
 `
 
 export const StyledMemberNameGroup = styled.div`
