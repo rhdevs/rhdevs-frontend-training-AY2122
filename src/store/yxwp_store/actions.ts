@@ -1,20 +1,7 @@
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListEntry } from './types'
 
-//set my 'exampleList' state with my argument 'newList'
-//to call this in your component or page, wrap with dispatch
-//eg dispatch(mockActionSetMyExampleList(theNewList))
-// export const mockActionSetMyExampleList =
-//   (newList: ExampleType[]) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-//     //you can also get the 'exampleList' state here
-//     const { exampleList } = getState().shoppingLists
-//     dispatch({
-//       type: SHOPPING_LIST_ACTIONS.SET_EXAMPLE_LIST,
-//       exampleList: newList ?? exampleList, // if newList is undefined, use exampleList
-//     })
-//   }
-
-export const IncreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const increaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { ItemList } = getState().yxwp_store
   const newList = ItemList.map((item) =>
     item.key === ItemToChangeKey ? { ...item, itemQuantity: item.itemQuantity + 1 } : item,
@@ -25,7 +12,7 @@ export const IncreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch
   })
 }
 
-export const DecreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const decreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { ItemList } = getState().yxwp_store
   const newList = ItemList.map((item) =>
     item.key === ItemToChangeKey ? { ...item, itemQuantity: item.itemQuantity - 1 } : item,
@@ -36,7 +23,7 @@ export const DecreaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch
   })
 }
 
-export const DeleteItem = (key: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const deleteItem = (key: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { ItemList } = getState().yxwp_store
   const newList = ItemList.filter((item) => item.key !== key)
   dispatch({
@@ -45,12 +32,12 @@ export const DeleteItem = (key: number) => (dispatch: Dispatch<ActionTypes>, get
   })
 }
 
-// export const AddItem = (IndexOfItem:number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+// export const AddItem = (newItem: ItemList) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
 //   const { ItemList } = getState().yxwp_store
-//   const newList = Item
+//   ItemList.push(s)
 //   setData((prevData: Props[]) => [...prevData, { key: index, itemQuantity: quantity, itemName: name }])
 //     setIndex(index + 1)
 //   dispatch({
 
 //   })
-//}
+// }

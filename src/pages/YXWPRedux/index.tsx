@@ -3,7 +3,7 @@ import { Button, Card, Input, Table, Space } from 'antd'
 import { ShoppingHeader } from './styles/YXWPRedux.styled'
 import { PlusCircleOutlined, MinusCircleOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { IncreaseQuantity, DecreaseQuantity, DeleteItem } from '../../store/yxwp_store/actions'
+import { increaseQuantity, decreaseQuantity, deleteItem } from '../../store/yxwp_store/actions'
 import { RootState } from '../../store/types'
 const { Column } = Table
 
@@ -16,41 +16,23 @@ const YXWPRedux = () => {
     itemQuantity: number
     itemName: string
   }
-  const [name, setName] = useState('')
-  const [quantity, setQuantity] = useState(0)
-  const [index, setIndex] = useState(3)
-  const [data, setData] = useState<Props[]>([
-    {
-      key: 1,
-      itemQuantity: 3,
-      itemName: 'Dummy Item 1',
-    },
-    {
-      key: 2,
-      itemQuantity: 4,
-      itemName: 'Dummy Item 2',
-    },
-  ])
 
-  const handleAddItem = () => {
-    setData((prevData: Props[]) => [...prevData, { key: index, itemQuantity: quantity, itemName: name }])
-    setIndex(index + 1)
-  }
-
-  const handleDeleteItem = (currItem: Props) => {
-    setData(data.filter((item) => item.key != currItem.key))
-  }
+  // **** Legacy Add Feature for reference only *****
+  // const handleAddItem = () => {
+  //   setData((prevData: Props[]) => [...prevData, { key: index, itemQuantity: quantity, itemName: name }])
+  //   setIndex(index + 1)
+  // }
 
   return (
     <>
       <Card>
         <ShoppingHeader>Shopping Time! (Redux ver.)</ShoppingHeader>
         <Space>
-          <Input placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
+          {/* <Input placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
           <Input placeholder="Quantity" onChange={(e) => setQuantity(parseInt(e.target.value))} />
           <Button type="primary" onClick={handleAddItem}>
             Add item
-          </Button>
+          </Button> */}
         </Space>
         <Table dataSource={ItemList}>
           <Column title="Item Name" dataIndex="itemName" key="itemName" />
@@ -63,14 +45,14 @@ const YXWPRedux = () => {
                 <Button
                   type="link"
                   icon={<PlusCircleOutlined />}
-                  onClick={() => dispatch(IncreaseQuantity(currItem.key))}
+                  onClick={() => dispatch(increaseQuantity(currItem.key))}
                 />
                 <Button
                   type="link"
                   icon={<MinusCircleOutlined />}
-                  onClick={() => dispatch(DecreaseQuantity(currItem.key))}
+                  onClick={() => dispatch(decreaseQuantity(currItem.key))}
                 />
-                <Button type="link" onClick={() => dispatch(DeleteItem(currItem.key))}>
+                <Button type="link" onClick={() => dispatch(deleteItem(currItem.key))}>
                   Delete
                 </Button>
               </Space>

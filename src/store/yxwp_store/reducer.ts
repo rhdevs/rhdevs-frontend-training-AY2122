@@ -1,5 +1,5 @@
 import { Reducer } from 'redux'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ExampleType, ShoppingListEntry } from './types'
+import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListEntry } from './types'
 
 //set an initial state for your variable
 const initialState: State = {
@@ -7,17 +7,17 @@ const initialState: State = {
     {
       key: 1,
       itemQuantity: 3,
-      itemName: 'I want to',
+      itemName: 'Apple',
     },
     {
       key: 2,
       itemQuantity: 4,
-      itemName: 'Dropout',
+      itemName: 'Orange',
     },
     {
       key: 3,
       itemQuantity: 4,
-      itemName: 'Already',
+      itemName: 'Banana',
     },
   ],
   IndexOfItem: 3,

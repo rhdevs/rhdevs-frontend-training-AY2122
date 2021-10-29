@@ -1,9 +1,5 @@
 /** Types */
 //create your own type!
-export type ExampleType = {
-  varName: string //(variable name) : (its type)
-  numName: number
-}
 
 export type ShoppingListEntry = {
   key: number
@@ -22,29 +18,29 @@ export enum SHOPPING_LIST_ACTIONS {
 }
 
 /** Actions */
-type SetShoppingList = {
+type setShoppingList = {
   type: typeof SHOPPING_LIST_ACTIONS.SET_SHOPPING_LIST
   ItemList: ShoppingListEntry[]
 }
 
-type AddShoppingItem = {
+type addShoppingItem = {
   type: typeof SHOPPING_LIST_ACTIONS.ADD_SHOPPING_ITEM
   IndexOfItem: number
 }
 
-type RemoveShoppingItem = {
+type removeShoppingItem = {
   type: typeof SHOPPING_LIST_ACTIONS.REMOVE_SHOPPING_ITEM
   IndexOfItem: number
 }
 
-type IncreaseQuantity = {
+type increaseQuantity = {
   type: typeof SHOPPING_LIST_ACTIONS.INCREASE_QUANTITY
   ItemList: ShoppingListEntry[]
 }
 
-type DecreaseQuantity = {
+type decreaseQuantity = {
   type: typeof SHOPPING_LIST_ACTIONS.DECREASE_QUANTITY
   ItemList: ShoppingListEntry[]
 }
 
-export type ActionTypes = AddShoppingItem | RemoveShoppingItem | IncreaseQuantity | DecreaseQuantity | SetShoppingList
+export type ActionTypes = addShoppingItem | removeShoppingItem | increaseQuantity | decreaseQuantity | setShoppingList
