@@ -1,17 +1,19 @@
 import React from 'react'
-
+import { useHistory } from 'react-router-dom'
 import Card from '../../components/Card'
 import PageHeader from '../../components/PageHeader'
+import { PATHS } from '../../routes/PATHS'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
 
 const FrontendMentor = () => {
+  const history = useHistory()
   return (
     <MembersSection>
       <PageHeader
         title="Frontend Mentor Practices"
         description={
           <>
-           {'frontend mentor practices, challenges taken from '}
+            {'frontend mentor practices, challenges taken from '}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -25,7 +27,11 @@ const FrontendMentor = () => {
       <MembersSectionHeader>Challenge Name</MembersSectionHeader>
       <InformationCardSection>
         {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
-        <Card title="3-Column Preview Card" description="Maxim and Wei Pin" />
+        <Card
+          title="3-Column Preview Card"
+          description="Maxim and Wei Pin"
+          onClick={() => history.push(PATHS.MAXIM_WEIPIN_WEBSITE)}
+        />
       </InformationCardSection>
     </MembersSection>
   )
