@@ -123,12 +123,6 @@ function App() {
           <Shopping_YXWP />
         </StyledMain>
       </Route>
-      <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
-        <StyledMain>
-          <MainNavigation />
-          <Groups />
-        </StyledMain>
-      </Route>
       <Route path={PATHS.YIXUAN_WEIPIN_SHOPPING_REDUX} exact>
         <StyledMain>
           <MainNavigation />
@@ -141,7 +135,58 @@ function App() {
           <Pair2MainPage />
         </StyledMain>
       </Route>
+      <Route path={PATHS.PAIR_2_SHOPPING_PAGE_REDUX} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Pair2MainPageRedux />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.PAIR3_SHOPPING_PAGE} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Pair3redux />
+        </StyledMain>
+      </Route>
+      <Route path={PATHS.PAIR_3_SHOPPING_PAGE} exact>
+        <StyledMain>
+          <MainNavigation />
+          <Pair3MainPage />
+        </StyledMain>
+      </Route>
       <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
+      <>
+        <Route path={PATHS.JASON_YB_SHOPPING_LIST_PAGE} exact>
+          <StyledMain>
+            <MainNavigation />
+            <JasonYbShoppingListPage />
+          </StyledMain>
+        </Route>
+        <Route path={PATHS.JASON_YB_REDUX_SHOPPING_LIST_PAGE} exact>
+          <StyledMain>
+            <MainNavigation />
+            <JasonYbReduxShoppingListPage />
+          </StyledMain>
+        </Route>
+        <Route path={PATHS.SKZK_SHOPPING_PAGE} exact>
+          <StyledMain>
+            <MainNavigation />
+            <SkZkShoppingPage />
+          </StyledMain>
+        </Route>
+        <Route path={PATHS.SKZK_SHOPPING_PAGE_REDUX} exact>
+          <StyledMain>
+            <MainNavigation />
+            <SkZkShoppingPageRedux />
+          </StyledMain>
+        </Route>
+        <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
+          <StyledMain>
+            <MainNavigation />
+            <Groups />
+          </StyledMain>
+        </Route>
+        <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
+      </>
       {/* example from lesson 1 (4oct) */}
       <Route path="/example" exact component={Lesson1Example} />
       <Route>

@@ -1,5 +1,5 @@
 import { Dispatch, GetState } from '../types'
-import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingListEntry } from './types'
+import { ActionTypes, SHOPPING_LIST_ACTIONS } from './types'
 
 export const increaseQuantity = (ItemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { ItemList } = getState().yxwp_store
