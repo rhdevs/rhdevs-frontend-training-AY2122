@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PATHS } from '../../App'
+import { PATHS } from '../../routes/PATHS'
 import { StyledNavLink, UnorderedList } from './styles/NavLinks.styled'
 
 const NavLinks = () => {

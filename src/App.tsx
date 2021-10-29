@@ -1,14 +1,13 @@
 import React, { Suspense, useEffect } from 'react'
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
+import { Routes } from './routes/Routes'
 import store from './store/store'
 import LoadingSpinner from './components/LoadingSpinner'
-import MainNavigation from './shared/Navigation/MainNavigation'
-import Lesson1Example from './pages/Lesson1Example'
-import Footer from './shared/Navigation/Footer'
 
 import 'antd/dist/antd.css'
+<<<<<<< HEAD
 import { StyledMain } from './App.styled'
 
 export enum PATHS {
@@ -37,6 +36,8 @@ const SkZkShoppingPageRedux = React.lazy(
   () => import(/* webpackChunckName: "SkZKShoppingPageRedux" */ './pages/SkZkShoppingPageRedux'),
 )
 const Pair2MainPage = React.lazy(() => import(/* webpackChunckName: "Pair2MainPage" */ './pages/Pair2'))
+=======
+>>>>>>> 603f6c96d8b7cef6cc63e31961818a202afdcc42
 
 function App() {
   useEffect(() => {
@@ -44,69 +45,12 @@ function App() {
     window.scrollTo(0, 0)
   }, [])
 
-  const routes = (
-    <Switch>
-      <Route path="/" exact>
-        <StyledMain hasFooter>
-          <MainNavigation />
-          <LandingPage />
-          <Footer />
-        </StyledMain>
-      </Route>
-      <Route path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} exact>
-        <StyledMain>
-          <MainNavigation />
-          <ShoppingListCYYZ />
-        </StyledMain>
-      </Route>
-      <Route path={PATHS.SHOPPING_LISTS} exact>
-        <StyledMain>
-          <MainNavigation />
-          <ShoppingListsMainPage />
-        </StyledMain>
-      </Route>
-      <Route path={PATHS.SKZK_SHOPPING_PAGE} exact>
-        <StyledMain>
-          <MainNavigation />
-          <SkZkShoppingPage />
-        </StyledMain>
-      </Route>
-      <Route path={PATHS.SKZK_SHOPPING_PAGE_REDUX} exact>
-        <StyledMain>
-          <MainNavigation />
-          <SkZkShoppingPageRedux />
-        </StyledMain>
-      </Route>
-      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} exact>
-        <StyledMain>
-          <MainNavigation />
-          <Groups />
-        </StyledMain>
-      </Route>
-      <Route path={PATHS.PAIR_2_SHOPPING_PAGE} exact>
-        <StyledMain>
-          <MainNavigation />
-          <Pair2MainPage />
-        </StyledMain>
-      </Route>
-      <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} exact component={Groups} />
-      {/* example from lesson 1 (4oct) */}
-      <Route path="/example" exact component={Lesson1Example} />
-      <Route>
-        <StyledMain>
-          <MainNavigation />
-          <NotFound />
-          <Footer />
-        </StyledMain>
-      </Route>
-      <Redirect to="/" />
-    </Switch>
-  )
-
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Suspense fallback={<LoadingSpinner />}>{routes}</Suspense>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes />
+        </Suspense>
       </BrowserRouter>
     </Provider>
   )
