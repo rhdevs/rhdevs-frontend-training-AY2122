@@ -1,44 +1,52 @@
 import React from 'react'
-
 import { Card } from 'antd'
-import { CardImage, CardStyle } from './styles/Components.styled'
+
+import { CardImage, StyledCard } from './styles/Cards.styled'
+import { Capital, Population, Region } from './CardComponents'
+
+type Name = {
+  common: string
+  [key: string]: any
+}
 
 type Country = {
-  name: string
-  flag: string
+  name: Name
+  flag?: string
   population: number
   region: string
-  capital: string
+  capital?: string[]
   [key: string]: any
 }
 
 type Props = {
   country: Country
+  onClick?: React.MouseEventHandler<HTMLDivElement>
 }
 
 const CountryCard = (props: Props) => {
   return (
-    <Card
-      style={CardStyle}
-      bordered={true}
-      cover={<CardImage alt={`${props.country.name} flag`} src={props.country.flag} />}
-    >
-      <h1>{props.country.name}</h1>
-      <text>
-        <strong>Population: </strong>
-        {props.country.population}
-      </text>
-      <br />
-      <text>
-        <strong>Region: </strong>
-        {props.country.region}
-      </text>
-      <br />
-      <text>
-        <strong>Capital: </strong>
-        {props.country.capital}
-      </text>
-    </Card>
+    <StyledCard>
+      <Card
+        bordered={true}
+        cover={
+          <CardImage
+            width="264px"
+            height="160px"
+            alt={`${props.country.name.common} flag`}
+            src={props.country.flags.svg}
+          />
+        }
+        onClick={props.onClick}
+      >
+        <h2>{props.country.name.common}</h2>
+
+        <Population population={props.country.population} />
+        <br />
+        <Region region={props.country.region} />
+        <br />
+        <Capital capital={props.country.capital} />
+      </Card>
+    </StyledCard>
   )
 }
 

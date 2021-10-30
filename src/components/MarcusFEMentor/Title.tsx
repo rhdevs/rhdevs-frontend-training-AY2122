@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TitleContainer, TitleText } from './styles/Components.styled'
+import { TitleContainer, TitleText } from './styles/Title.styled'
 
 type Props = {
   text: string
