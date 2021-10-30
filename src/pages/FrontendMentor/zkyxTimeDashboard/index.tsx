@@ -19,6 +19,7 @@ import {
   BackgroundIcon,
   TimeInfoCard,
   BackgroundCardTop,
+  LegendTextSelector,
 } from './styles/TimeDashboard.styled'
 import WorkIcon from './images/icon-work.svg'
 import PlayIcon from './images/icon-play.svg'
@@ -30,6 +31,7 @@ import UserProfilePic from './images/image-jeremy.png'
 import EllipsisIcon from './images/icon-ellipsis.svg'
 
 const TimeDashBoardPage = () => {
+  const [period, setPeriod] = React.useState('Daily')
   return (
     <>
       <Background>
@@ -45,9 +47,25 @@ const TimeDashBoardPage = () => {
               </HourText>
             </UserInfoCard>
             <LegendCard>
-              <LegendText>Daily</LegendText>
+              {period === 'Daily' ? (
+                <LegendTextSelector>Daily</LegendTextSelector>
+              ) : (
+                <LegendText onClick={() => setPeriod('Daily')}>Daily</LegendText>
+              )}
+              {period === 'Weekly' ? (
+                <LegendTextSelector>Weekly</LegendTextSelector>
+              ) : (
+                <LegendText onClick={() => setPeriod('Weekly')}>Weekly</LegendText>
+              )}
+              {period === 'Monthly' ? (
+                <LegendTextSelector>Monthly</LegendTextSelector>
+              ) : (
+                <LegendText onClick={() => setPeriod('Monthly')}>Monthly</LegendText>
+              )}
+
+              {/*<LegendText>Daily</LegendText>
               <LegendText>Weekly</LegendText>
-              <LegendText>Monthly</LegendText>
+              <LegendText>Monthly</LegendText>*/}
             </LegendCard>
           </UserCard>
           <TimeCard>
@@ -87,7 +105,13 @@ const TimeDashBoardPage = () => {
                 <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
               </div>
               <HourText>2Hrs</HourText>
-              <FooterText>Last day - 0hr</FooterText>
+              {period === 'Daily' ? (
+                <FooterText>Last day - 0hr</FooterText>
+              ) : period === 'Weekly' ? (
+                <FooterText>Last week - 0hr</FooterText>
+              ) : (
+                <FooterText>Last month - 0hr</FooterText>
+              )}
             </TimeInfoCard>
           </TimeCard>
           <TimeCard>

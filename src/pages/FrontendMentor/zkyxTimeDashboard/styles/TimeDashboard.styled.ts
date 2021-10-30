@@ -111,7 +111,14 @@ export const LegendCard = styled.div`
   border-radius: 20px;
   padding: 1.5rem;
 `
-export const LegendText = styled.h2`
+
+export const LegendTextSelector = styled.h2`
+  color: #f5f5f5;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: -0.1rem;
+`
+export const LegendText = styled.div`
   color: #cccfff;
   font-size: 18px;
   cursor: pointer;
