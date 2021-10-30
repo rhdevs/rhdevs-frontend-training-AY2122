@@ -1,10 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import CountryPage from './CountryPage'
 
 const CountriesSwitch = () => {
   const params = useParams<{ countryName: string }>()
 
-  return <h1>{params.countryName}</h1>
+  return <CountryPage countryName={params.countryName} />
 }
 
 export default CountriesSwitch

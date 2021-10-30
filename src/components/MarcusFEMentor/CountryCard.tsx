@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'antd'
 
-import { CardImage, StyledCard } from './styles/Cards.styled'
+import { CardImage, StyledCardDiv } from './styles/Cards.styled'
 import { Capital, Population, Region } from './CardComponents'
 
 type Name = {
@@ -25,8 +25,9 @@ type Props = {
 
 const CountryCard = (props: Props) => {
   return (
-    <StyledCard>
+    <StyledCardDiv>
       <Card
+        style={{ boxShadow: '2px 2px 5px gray' }}
         bordered={true}
         cover={
           <CardImage
@@ -46,7 +47,7 @@ const CountryCard = (props: Props) => {
         <br />
         <Capital capital={props.country.capital} />
       </Card>
-    </StyledCard>
+    </StyledCardDiv>
   )
 }
 

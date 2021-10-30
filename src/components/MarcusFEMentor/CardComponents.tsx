@@ -22,7 +22,7 @@ export const Capital = (props: { capital: string[] | undefined }) => {
   return (
     <text>
       <strong>Capital: </strong>
-      {props.capital?.join(', ') ?? '-'}
+      {props.capital?.join(', ') ?? 'none'}
     </text>
   )
 }

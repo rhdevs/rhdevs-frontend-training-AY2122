@@ -8,7 +8,7 @@ type Flags = {
   svg: string
 }
 
-type Country = {
+export type Country = {
   name: Name
   flags: Flags
   population: number

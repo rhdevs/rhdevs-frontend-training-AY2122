@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 export const CountriesDiv = styled.div`
@@ -8,7 +7,7 @@ export const CountriesDiv = styled.div`
   margin: 0 42.5px;
 `
 
-export const StyledCard = styled.div`
+export const StyledCardDiv = styled.div`
   width: 264px;
   height: 336px;
   margin: 37.5px;
