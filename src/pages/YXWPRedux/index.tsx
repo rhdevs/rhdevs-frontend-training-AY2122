@@ -3,14 +3,17 @@ import { Button, Card, Input, Table, Space } from 'antd'
 import { ShoppingHeader } from './styles/YXWPRedux.styled'
 import { PlusCircleOutlined, MinusCircleOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
-import { increaseQuantity, decreaseQuantity, deleteItem } from '../../store/yxwp_store/actions'
+import { increaseQuantity, decreaseQuantity, deleteItem, addItem } from '../../store/yxwp_store/actions'
 import { RootState } from '../../store/types'
+import { ShoppingListEntry } from '../../store/yxwp_store/types'
 const { Column } = Table
 
 const YXWPRedux = () => {
   const dispatch = useDispatch()
-  const { ItemList } = useSelector((state: RootState) => state.yxwp_store)
-  const [newItemName, setNewItemName] = useState('')
+  const { itemList } = useSelector((state: RootState) => state.yxwp_store)
+  const blankItem: ShoppingListEntry = { itemName: '', itemQuantity: 0, key: -1 }
+  const [item, setItem] = useState<ShoppingListEntry>(blankItem)
+
   interface Props {
     key: number
     itemQuantity: number
@@ -18,23 +21,35 @@ const YXWPRedux = () => {
   }
 
   // **** Legacy Add Feature for reference only *****
-  // const handleAddItem = () => {
-  //   setData((prevData: Props[]) => [...prevData, { key: index, itemQuantity: quantity, itemName: name }])
-  //   setIndex(index + 1)
-  // }
+  const handleAddItem = () => {
+    dispatch(addItem(item))
+    setItem(blankItem)
+  }
+
+  const updateName = (name: string) => {
+    const newItem = { ...item }
+    newItem.itemName = name
+    setItem(newItem)
+  }
+
+  const updateQuantity = (quantity: number) => {
+    const newItem = { ...item }
+    newItem.itemQuantity = quantity
+    setItem(newItem)
+  }
 
   return (
     <>
       <Card>
         <ShoppingHeader>Shopping Time! (Redux ver.)</ShoppingHeader>
         <Space>
-          {/* <Input placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
-          <Input placeholder="Quantity" onChange={(e) => setQuantity(parseInt(e.target.value))} />
+          <Input placeholder="Item Name" onChange={(e) => updateName(e.target.value)} />
+          <Input placeholder="Quantity" onChange={(e) => updateQuantity(parseInt(e.target.value))} />
           <Button type="primary" onClick={handleAddItem}>
             Add item
-          </Button> */}
+          </Button>
         </Space>
-        <Table dataSource={ItemList}>
+        <Table dataSource={itemList}>
           <Column title="Item Name" dataIndex="itemName" key="itemName" />
           <Column title="Quantity" dataIndex="itemQuantity" key="itemQuantity" />
           <Column
