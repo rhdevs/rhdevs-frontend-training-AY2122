@@ -51,7 +51,9 @@ const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCar
 const ShoppingCart4Redux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
 )
-const ElvaYBPractice = React.lazy(() => import('../pages/FrontendMentor/ElvaYBPractice'))
+const ElvaYBPractice = React.lazy(
+  () => import(/* webpackChunckName: "ElvaYBPractice" */ '../pages/FrontendMentor/ElvaYBPractice'),
+)
 
 export const Routes = () => (
   <Switch>
