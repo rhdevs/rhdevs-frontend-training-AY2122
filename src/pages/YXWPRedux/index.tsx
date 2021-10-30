@@ -20,7 +20,6 @@ const YXWPRedux = () => {
     itemName: string
   }
 
-  // **** Legacy Add Feature for reference only *****
   const handleAddItem = () => {
     dispatch(addItem(item))
     setItem(blankItem)

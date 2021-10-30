@@ -26,7 +26,9 @@ export const increaseQuantity = (itemToChangeKey: number) => (dispatch: Dispatch
 export const decreaseQuantity = (itemToChangeKey: number) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { itemList } = getState().yxwp_store
   const newList = itemList.map((item) =>
-    item.key === itemToChangeKey ? { ...item, itemQuantity: item.itemQuantity - 1 } : item,
+    item.key === itemToChangeKey
+      ? { ...item, itemQuantity: item.itemQuantity > 1 ? item.itemQuantity - 1 : item.itemQuantity }
+      : item,
   )
   dispatch({
     type: SHOPPING_LIST_ACTIONS.SET_SHOPPING_LIST,
@@ -42,13 +44,3 @@ export const deleteItem = (key: number) => (dispatch: Dispatch<ActionTypes>, get
     itemList: newList,
   })
 }
-
-// export const AddItem = (newItem: ItemList) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-//   const { ItemList } = getState().yxwp_store
-//   ItemList.push(s)
-//   setData((prevData: Props[]) => [...prevData, { key: index, itemQuantity: quantity, itemName: name }])
-//     setIndex(index + 1)
-//   dispatch({
-
-//   })
-// }
