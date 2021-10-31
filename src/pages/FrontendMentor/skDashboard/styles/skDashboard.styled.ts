@@ -6,6 +6,7 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     body: string
     text: string
+    headingText: string
     toggleBorder: string
     background: string
   }
@@ -14,6 +15,7 @@ declare module 'styled-components' {
 export const darkTheme: DefaultTheme = {
   body: '#363537',
   text: 'hsl(228, 34%, 66%)',
+  headingText: 'hsl(0, 0%, 100%)',
   toggleBorder: '#6B8096',
   background: '#999',
 }
@@ -21,6 +23,7 @@ export const darkTheme: DefaultTheme = {
 export const lightTheme: DefaultTheme = {
   body: '#FFF',
   text: 'hsl(228, 12%, 44%)',
+  headingText: 'hsl(230, 17%, 14%)',
   toggleBorder: '#FFF',
   background: '#363537',
 }
@@ -44,17 +47,16 @@ export const MainPage = styled.div`
 `
 
 export const DashboardHeader = styled.div`
-  color: hsl(230, 17%, 14%);
+  color: ${({ theme }) => theme.headingText};
   align-self: flex-start;
   font-size: 2rem;
   font-weight: 600;
 `
 
 export const FollowersCount = styled.div`
-  margin-top: -1.5vh;
+  margin-top: -1vh;
   font-size: 1rem;
   font-weight: 400;
-  color: hsl(228, 12%, 44%);
 `
 
 export const LineSeparator = styled.div``

@@ -12,6 +12,8 @@ import {
 } from './styles/skDashboard.styled'
 
 import SocialMediaCard from '../../../components/skDashboard/SocialMediaCard'
+import FacebookIcon from '../../../assets/skDashboard/icon-facebook.svg'
+import TwitterIcon from '../../../assets/skDashboard/icon-twitter.svg'
 
 const skDashboard = () => {
   const [theme, setTheme] = useState('light')
@@ -33,8 +35,8 @@ const skDashboard = () => {
             }}
           />
           <Switch onClick={themeToggler} />
-          <SocialMediaCard followerCount={'1987'} names={'Facebook'} />
-          <SocialMediaCard followerCount={'1044'} names={'Twitter'} />
+          <SocialMediaCard icon={FacebookIcon} followerCount={'1987'} names={'Facebook'} />
+          <SocialMediaCard icon={TwitterIcon} followerCount={'1044'} names={'Twitter'} />
           <OverviewHeading>Overview - Today</OverviewHeading>
         </MainPage>
       </>

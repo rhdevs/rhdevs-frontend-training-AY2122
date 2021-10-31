@@ -26,14 +26,19 @@ export const StyledCard = styled.div`
   }
 `
 
+export const StyledIcon = styled.img`
+  height: 5vh;
+  margin-bottom: 3vh;
+`
+
 export const StyledFollowerCount = styled.text`
   font-size: calc(32px + 4vh);
   font-weight: 700;
   text-align: center;
-  height: 5vh;
+  height: 6vh;
 `
 
 export const StyledNamesText = styled.text`
-  font-size: calc(16px + 1vw);
+  font-size: calc(16px + 1vh);
   text-align: center;
 `
