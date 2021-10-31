@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledCard = styled.div`
-  color: hsl(230, 17%, 14%);
+  color: ${({ theme }) => theme.headingText};
   border-top: 6px solid;
   border-top-color: hsl(208, 92%, 53%);
   line-height: 20px;
@@ -19,7 +19,7 @@ export const StyledCard = styled.div`
   height: 30vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  background: hsl(227, 47%, 96%);
+  background: ${({ theme }) => theme.cardBackground};
   :hover,
   :focus {
     transform: scale3d(1.05, 1.05, 1.1);

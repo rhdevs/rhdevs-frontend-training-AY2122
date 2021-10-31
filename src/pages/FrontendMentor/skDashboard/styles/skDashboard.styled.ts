@@ -9,6 +9,7 @@ declare module 'styled-components' {
     headingText: string
     toggleBorder: string
     background: string
+    cardBackground: string
   }
 }
 
@@ -18,6 +19,7 @@ export const darkTheme: DefaultTheme = {
   headingText: 'hsl(0, 0%, 100%)',
   toggleBorder: '#6B8096',
   background: '#999',
+  cardBackground: `hsl(228, 28%, 20%)`,
 }
 
 export const lightTheme: DefaultTheme = {
@@ -26,11 +28,12 @@ export const lightTheme: DefaultTheme = {
   headingText: 'hsl(230, 17%, 14%)',
   toggleBorder: '#FFF',
   background: '#363537',
+  cardBackground: `hsl(227, 47%, 96%)`,
 }
 
 export const GlobalStyles = createGlobalStyle`
-  body {
-    background: ${({ theme }) => theme.body};  // Why the background does not change?
+  main {
+    background: ${({ theme }) => `${theme.body} !important`};
     color: ${({ theme }) => theme.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
@@ -40,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
 export const MainPage = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contents: center;
+  justify-content: center;
   align-items: center;
   margin-left: 10vw;
   margin-right: 10vw;
