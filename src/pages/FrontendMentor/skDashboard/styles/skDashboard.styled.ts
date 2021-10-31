@@ -13,21 +13,21 @@ declare module 'styled-components' {
 
 export const darkTheme: DefaultTheme = {
   body: '#363537',
-  text: '#FAFAFA',
+  text: 'hsl(228, 34%, 66%)',
   toggleBorder: '#6B8096',
   background: '#999',
 }
 
 export const lightTheme: DefaultTheme = {
   body: '#FFF',
-  text: '#363537',
+  text: 'hsl(228, 12%, 44%)',
   toggleBorder: '#FFF',
   background: '#363537',
 }
 
 export const GlobalStyles = createGlobalStyle`
   body {
-    background: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.body};  // Why the background does not change?
     color: ${({ theme }) => theme.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
@@ -44,6 +44,8 @@ export const MainPage = styled.div`
 `
 
 export const DashboardHeader = styled.div`
+  color: hsl(230, 17%, 14%);
+  align-self: flex-start;
   font-size: 2rem;
   font-weight: 600;
 `
@@ -56,3 +58,9 @@ export const FollowersCount = styled.div`
 `
 
 export const LineSeparator = styled.div``
+
+export const OverviewHeading = styled.div`
+  align-self: flex-start;
+  font-size: 2rem;
+  font-weight: 600;
+`
