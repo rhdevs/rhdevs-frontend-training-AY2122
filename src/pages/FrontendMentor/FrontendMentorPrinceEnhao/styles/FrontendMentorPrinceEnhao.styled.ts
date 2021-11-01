@@ -1,9 +1,15 @@
 import styled from 'styled-components'
+import BackgroundBottom from '../../../assets/princeenhao/bg-pattern-bottom.svg'
+import BackgroundCard from '../../../assets/princeenhao/bg-pattern-card.svg'
+import img from '../../../assets/princeenhao/bg-pattern-top.svg'
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 1rem 3rem;
+  background-image: url(${img});
 `
 
 export const StyledHeader = styled.h1`
