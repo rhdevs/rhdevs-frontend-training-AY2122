@@ -48,7 +48,7 @@ const ShoppingAnimegang = () => {
   const handleOnMinusClick = (record: Item) => {
     const newList: Item[] = shoppingList.filter((item) => {
       if (item.key === record.key) {
-        item.quantity = item.quantity == 0 ? 0 : item.quantity - 1
+        item.quantity = item.quantity === 0 ? 0 : item.quantity - 1
       }
       return item
     })
@@ -65,7 +65,7 @@ const ShoppingAnimegang = () => {
     setAddItemName(e)
   }
   const handleOnEnter = () => {
-    if (addItemName != '') {
+    if (addItemName !== '') {
       const newList: Item[] = shoppingList.filter((item) => item)
       setNewKeyName(newKeyName + 1)
       const newKey: string = newKeyName.toString()
@@ -142,12 +142,7 @@ const ShoppingAnimegang = () => {
       <TopRow>
         <ShoppingListHeader> Shopping list</ShoppingListHeader>
         <AddItemsContainer>
-          {!showInput && (
-            <Button onClick={() => handleOnAddItemClick()} type="primary">
-              + Add item
-            </Button>
-          )}
-          {showInput && (
+          {showInput ? (
             <Input
               addonBefore="Enter your item"
               defaultValue=""
@@ -156,6 +151,10 @@ const ShoppingAnimegang = () => {
               onChange={(e) => handleOnType(e.target.value)}
               onPressEnter={() => handleOnEnter()}
             />
+          ) : (
+            <Button onClick={() => handleOnAddItemClick()} type="primary">
+              + Add item
+            </Button>
           )}
         </AddItemsContainer>
       </TopRow>
