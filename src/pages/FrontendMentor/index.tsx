@@ -6,6 +6,7 @@ import { InformationCardSection, MembersSection, MembersSectionHeader } from '..
 
 const FrontendMentor = () => {
   return (
+    const history = useHistory()
     <MembersSection>
       <PageHeader
         title="Frontend Mentor Practices"
@@ -23,14 +24,10 @@ const FrontendMentor = () => {
         {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
         <Card title="Meet landing page" description="your name" />
       </InformationCardSection>
+      <InformationCardSection>
+        <Card title="Hubble" description="Tai and Yong Zhong" />
+      </InformationCardSection>
     </MembersSection>
-
-<MembersSectionHeader>Challenge Name</MembersSectionHeader>
-<InformationCardSection>
-  {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
-  <Card title="Meet landing page" description="your name" />
-</InformationCardSection>
-</MembersSection>
   )
 }
 
