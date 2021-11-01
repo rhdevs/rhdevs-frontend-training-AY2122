@@ -11,17 +11,21 @@ export const MainPage = styled.div`
   background-color: rgba(225, 217, 221, 0.8);
 `
 
-export const MainText = styled.div`
-  width: 1440px;
+export const MainContainer = styled.div`
+  width: 70%;
+  border-radius: 50px;
+  border-style: solid;
+  overflow: hidden;
+`
+export const BottomContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 export const MiddleContainer = styled.div`
   color: hsl(179, 62%, 43%);
-  border-radius: 8px;
-  margin 50px 100px;
-  box-shadow: 0px 0px 14px 1px #00000024;
-  background-color: #FFFFFF;
-  width: 70%;
+  background-color: #ffffff;
+  width: 100%;
   height: 40vh;
 `
 
@@ -42,16 +46,68 @@ export const JoinCommText3 = styled.div`
 `
 export const BottomLeftContainer = styled.div`
   background-color: #2db3a3;
-  width: 40%;
+  width: 50%;
   height: 40vh;
+  border-radius: 8px;
+  box-shadow: 0px 0px 14px 1px #00000024;
 `
-export const Header2 = styled.div`
+export const BottomLeftMonthly = styled.div`
   color: white;
   font-size: 16px;
-  margin: 50px 100px;
+  margin: auto;
+  margin-left: 10%;
+`
+export const BottomLeftPrice = styled.div`
+  color: white;
+  font-size: 30px;
+  margin: auto;
+  margin-left: 10%;
+  font-weight: bold;
+`
+export const BottomLeftPerMonth = styled.div`
+  color: grey;
+  font-size: 12px;
+`
+export const BottomLeftFullAccess = styled.div`
+  color: white;
+  font-size: 12px;
+  margin: auto;
+  margin-left: 10%;
+`
+export const PriceAndPerMonth = styled.div`
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
 `
 export const BottomRightContainer = styled.div`
   background-color: #38e0cd;
-  width: 40%;
+  width: 50%;
   height: 40vh;
+  border-radius: 8px;
+  box-shadow: 0px 0px 14px 1px #00000024;
+`
+export const SignUpButton = styled.div`
+  text-align: center;
+  border-radius: 20px;
+  .ant-btn {
+    font-size: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    font-weight: 200;
+  }
+  .ant-btn-primary {
+    background-color: #72ba75;
+    border-color: #72ba75;
+    width: 40%;
+    margin-top: 10px;
+  }
+  .ant-btn-primary:focus {
+    background-color: #72ba75;
+    border-color: #72ba75;
+  }
+  .ant-btn-primary:hover {
+    background-color: #72ba75;
+    border-color: #72ba75;
+  }
 `
