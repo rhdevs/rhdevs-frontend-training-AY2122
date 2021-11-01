@@ -1,5 +1,4 @@
 import React from 'react'
-import { Card } from 'antd'
 
 import {
   Background,
@@ -34,6 +33,8 @@ import EllipsisIcon from './images/icon-ellipsis.svg'
 
 const TimeDashBoardPage = () => {
   const [period, setPeriod] = React.useState('Daily')
+  const [pastPeriod, setPastPeriod] = React.useState('Last day')
+
   return (
     <>
       <Background>
@@ -52,17 +53,38 @@ const TimeDashBoardPage = () => {
               {period === 'Daily' ? (
                 <LegendTextSelector>Daily</LegendTextSelector>
               ) : (
-                <LegendText onClick={() => setPeriod('Daily')}>Daily</LegendText>
+                <LegendText
+                  onClick={() => {
+                    setPeriod('Daily')
+                    setPastPeriod('Last day')
+                  }}
+                >
+                  Daily
+                </LegendText>
               )}
               {period === 'Weekly' ? (
                 <LegendTextSelector>Weekly</LegendTextSelector>
               ) : (
-                <LegendText onClick={() => setPeriod('Weekly')}>Weekly</LegendText>
+                <LegendText
+                  onClick={() => {
+                    setPeriod('Weekly')
+                    setPastPeriod('Last week')
+                  }}
+                >
+                  Weekly
+                </LegendText>
               )}
               {period === 'Monthly' ? (
                 <LegendTextSelector>Monthly</LegendTextSelector>
               ) : (
-                <LegendText onClick={() => setPeriod('Monthly')}>Monthly</LegendText>
+                <LegendText
+                  onClick={() => {
+                    setPeriod('Monthly')
+                    setPastPeriod('Last month')
+                  }}
+                >
+                  Monthly
+                </LegendText>
               )}
 
               {/*<LegendText>Daily</LegendText>
@@ -80,7 +102,7 @@ const TimeDashBoardPage = () => {
                 <EllipsisImage src={EllipsisIcon} />
               </TitleBox>
               <HourText>1Hrs</HourText>
-              <FooterText>Last day - 0hr</FooterText>
+              <FooterText>{pastPeriod} - 0hr</FooterText>
             </TimeInfoCard>
           </TimeCard>
           <TimeCard>
@@ -93,13 +115,7 @@ const TimeDashBoardPage = () => {
                 <EllipsisImage src={EllipsisIcon} />
               </TitleBox>
               <HourText>2Hrs</HourText>
-              {period === 'Daily' ? (
-                <FooterText>Last day - 0hr</FooterText>
-              ) : period === 'Weekly' ? (
-                <FooterText>Last week - 0hr</FooterText>
-              ) : (
-                <FooterText>Last month - 0hr</FooterText>
-              )}
+              <FooterText>{pastPeriod} - 0hr</FooterText>
             </TimeInfoCard>
           </TimeCard>
           <TimeCard>
@@ -112,7 +128,7 @@ const TimeDashBoardPage = () => {
                 <EllipsisImage src={EllipsisIcon} />
               </TitleBox>
               <HourText>3Hrs</HourText>
-              <FooterText>Last day - 0hr</FooterText>
+              <FooterText>{pastPeriod} - 0hr</FooterText>
             </TimeInfoCard>
           </TimeCard>
           <TimeCard>
@@ -125,7 +141,7 @@ const TimeDashBoardPage = () => {
                 <EllipsisImage src={EllipsisIcon} />
               </TitleBox>
               <HourText>4Hrs</HourText>
-              <FooterText>Last day - 0hr</FooterText>
+              <FooterText>{pastPeriod} - 0hr</FooterText>
             </TimeInfoCard>
           </TimeCard>
           <TimeCard>
@@ -138,7 +154,7 @@ const TimeDashBoardPage = () => {
                 <EllipsisImage src={EllipsisIcon} />
               </TitleBox>
               <HourText>5Hrs</HourText>
-              <FooterText>Last day - 0hr</FooterText>
+              <FooterText>{pastPeriod} - 0hr</FooterText>
             </TimeInfoCard>
           </TimeCard>
           <TimeCard>
@@ -151,7 +167,7 @@ const TimeDashBoardPage = () => {
                 <EllipsisImage src={EllipsisIcon} />
               </TitleBox>
               <HourText>6Hrs</HourText>
-              <FooterText>Last day - 0hr</FooterText>
+              <FooterText>{pastPeriod} - 0hr</FooterText>
             </TimeInfoCard>
           </TimeCard>
           {/*<CardContainer>
