@@ -33,7 +33,6 @@ const FrontendMentor = () => {
           onClick={() => history.push(PATHS.MAXIM_WEIPIN_WEBSITE)}
         />
         <Card title="Meet landing page" description="your name" />
-        <Card title="3-column preview card component challenge hub (Maxim and Wei Pin)" description="your name" />
       </InformationCardSection>
     </MembersSection>
   )
