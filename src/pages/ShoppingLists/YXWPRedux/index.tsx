@@ -11,7 +11,7 @@ const { Column } = Table
 const YXWPRedux = () => {
   const dispatch = useDispatch()
   const { itemList } = useSelector((state: RootState) => state.yxwp_store)
-  const blankItem: ShoppingListEntry = { itemName: '', itemQuantity: 0, key: -1 }
+  const blankItem: ShoppingListEntry = { itemName: '', itemQuantity: 1, key: -1 }
   const [item, setItem] = useState<ShoppingListEntry>(blankItem)
 
   interface Props {
@@ -42,8 +42,12 @@ const YXWPRedux = () => {
       <Card>
         <ShoppingHeader>Shopping Time! (Redux ver.)</ShoppingHeader>
         <Space>
-          <Input placeholder="Item Name" onChange={(e) => updateName(e.target.value)} />
-          <Input placeholder="Quantity" onChange={(e) => updateQuantity(parseInt(e.target.value))} />
+          <Input placeholder="Item Name" onChange={(e) => updateName(e.target.value)} value={item.itemName} />
+          <Input
+            placeholder="Quantity"
+            onChange={(e) => updateQuantity(parseInt(e.target.value))}
+            value={item.itemQuantity ? item.itemQuantity : ''}
+          />
           <Button type="primary" onClick={handleAddItem}>
             Add item
           </Button>
