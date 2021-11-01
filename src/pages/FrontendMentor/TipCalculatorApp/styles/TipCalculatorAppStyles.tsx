@@ -16,3 +16,16 @@ export const HeaderWords = styled.div`
   margin-top: 2vh;
   margin-bottom: 2vh;
 `
+export const MiddleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  width: 100vw;
+`
+
+export const Calculator = styled.div`
+  display: flex;
+  justify-content: center;
+  background: hsl(0, 0%, 100%);
+  width: 1000px;
+`

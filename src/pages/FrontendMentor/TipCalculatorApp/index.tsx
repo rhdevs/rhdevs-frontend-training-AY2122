@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainContainer, Header, HeaderWords } from './styles/TipCalculatorAppStyles'
+import { MainContainer, Header, HeaderWords, MiddleContainer, Calculator } from './styles/TipCalculatorAppStyles'
 
 const TipCalculatorApp = () => {
   return (
@@ -11,6 +11,13 @@ const TipCalculatorApp = () => {
           TTER
         </HeaderWords>
       </Header>
+      <MiddleContainer>
+        <Calculator>
+          SPLI
+          <br />
+          TTER
+        </Calculator>
+      </MiddleContainer>
     </MainContainer>
   )
 }
