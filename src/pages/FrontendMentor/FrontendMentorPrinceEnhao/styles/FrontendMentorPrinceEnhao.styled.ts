@@ -33,6 +33,7 @@ export const ProfileCardContainer = styled.div`
   width: 55vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: start;
   position: relative;
   background-color: white;
@@ -44,21 +45,14 @@ export const ProfileCardContainer = styled.div`
 `
 
 export const ProfileCardBackground = styled.img`
-  overflow: hidden;
   width: 100%;
   height: 35%;
-`
-
-export const ProfileCardMiddle = styled.div`
-  overflow: hidden;
-  width: 100%;
-  height: 40%;
 `
 
 export const ProfileCardBottom = styled.div`
   overflow: hidden;
   width: 100%;
-  height: 25%;
+  height: 30%;
   border-top: 0.2vh solid black;
   display: flex;
   justify-content: start;
@@ -99,6 +93,21 @@ export const ProfileCardSmallWords = styled.div`
   font-weight: 300;
   text-align: center;
   background-color: black;
+  position: relative;
+`
+export const ProfilePicContainer = styled.div`
+  width: 100%;  
+  height 0%; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+export const NameAgeContainer = styled.div`
+  width: 100%;
+  height: 35%;
+  position: relative;
 `
 
 export const StyledSubheader = styled.h2`
@@ -107,5 +116,10 @@ export const StyledSubheader = styled.h2`
 `
 
 export const StyledImg = styled.img`
-  border-radius: 10px;
+  z-index: 3;
+  border-radius: 50%;
+  position: relative;
+  width: 30%;
+  height: auto;
+  border: 3px solid white;
 `
