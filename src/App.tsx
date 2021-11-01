@@ -8,6 +8,13 @@ import LoadingSpinner from './components/LoadingSpinner'
 
 import 'antd/dist/antd.css'
 
+export enum PATHS {
+  GROUP_ROUTE = '/group',
+  SHOPPING_LISTS = '/shopping-lists',
+  EXAMPLE_SHOPPING_PAGE = '/shopping/example',
+  ANIMEGANG_SHOPPING_PAGE = '/shopping/animegang',
+}
+
 function App() {
   useEffect(() => {
     // To bring user to the top of the page on first render

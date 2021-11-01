@@ -3,6 +3,7 @@ export enum PATHS {
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
   SHOPPING_LIST_ANIME_GANG_REDUX = '/shopping-list-anime-gang-redux',
+  ANIMEGANG_SHOPPING_PAGE = '/shopping/animegang',
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
   PAIR_2_SHOPPING_PAGE_REDUX = '/shopping/pair2-redux',
   PAIR3_SHOPPING_PAGE = '/shopping/pair3redux',
