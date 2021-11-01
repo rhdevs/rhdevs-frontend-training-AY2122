@@ -36,5 +36,36 @@ export const Calculator = styled.div`
 export const InteractionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  font-family: 'Space Mono';
+  width: 40%;
+`
+
+export const ItemHeader = styled.div`
+  font-weight: bold;
+`
+
+export const ItemContainer = styled.div``
+
+export const InputContainer = styled.div`
+  height: 5vh;
+  line-height: 5vh;
+  background: hsl(189, 41%, 97%);
+`
+
+export const TipGridBox = styled.div`
+  display: grid;
+  height: 10vh;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  font-family: 'Space Mono';
+  font-weight: bold;
+`
+
+export const TipGridItem = styled.div`
+  background: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+  border-radius: 3px;
+  text-align: center;
 `
