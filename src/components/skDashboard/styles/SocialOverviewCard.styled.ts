@@ -13,7 +13,7 @@ export const StyledCard = styled.div`
   justify-content: center;
   align-items: center;
   margin: 2.5px;
-  width: 100%;
+  width: 18vw;
   height: 20vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -21,6 +21,9 @@ export const StyledCard = styled.div`
   :hover,
   :focus {
     transform: scale3d(1.05, 1.05, 1.1);
+  }
+  @media (max-width: 768px) {
+    width: 75vw;
   }
 `
 export const TopRow = styled.div`

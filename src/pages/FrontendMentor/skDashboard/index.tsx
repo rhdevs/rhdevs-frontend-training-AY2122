@@ -9,6 +9,8 @@ import {
   lightTheme,
   darkTheme,
   OverviewHeading,
+  CardSection,
+  StyledDarkMode,
 } from './styles/skDashboard.styled'
 
 import SocialMediaCard from '../../../components/skDashboard/SocialMediaCard'
@@ -37,20 +39,28 @@ const skDashboard = () => {
               width: '100%',
             }}
           />
-          <Switch onClick={themeToggler} />
-          <SocialMediaCard icon={FacebookIcon} followerCount={'1987'} names={''} />
-          <SocialMediaCard icon={TwitterIcon} followerCount={'1044'} names={''} />
-          <SocialMediaCard icon={InstagramIcon} followerCount={'11k'} names={''} />
-          <SocialMediaCard icon={YoutubeIcon} followerCount={'8239'} names={''} />
+          <StyledDarkMode>
+            DarkMode
+            <Switch onClick={themeToggler} />
+          </StyledDarkMode>
+
+          <CardSection>
+            <SocialMediaCard icon={FacebookIcon} followerCount={'1987'} names={''} />
+            <SocialMediaCard icon={TwitterIcon} followerCount={'1044'} names={''} />
+            <SocialMediaCard icon={InstagramIcon} followerCount={'11k'} names={''} />
+            <SocialMediaCard icon={YoutubeIcon} followerCount={'8239'} names={''} />
+          </CardSection>
           <OverviewHeading>Overview - Today</OverviewHeading>
-          <SocialOverviewCard icon={FacebookIcon} statsName="PageViews" stats={'87'} />
-          <SocialOverviewCard icon={FacebookIcon} statsName="Likes" stats={'52'} />
-          <SocialOverviewCard icon={InstagramIcon} statsName="Likes" stats={'5462'} />
-          <SocialOverviewCard icon={InstagramIcon} statsName="Profile Views" stats={'52k'} />
-          <SocialOverviewCard icon={TwitterIcon} statsName="Retweets" stats={'117'} />
-          <SocialOverviewCard icon={TwitterIcon} statsName="Likes" stats={'507'} />
-          <SocialOverviewCard icon={YoutubeIcon} statsName="Likes" stats={'107'} />
-          <SocialOverviewCard icon={YoutubeIcon} statsName="Total Views" stats={'1407'} />
+          <CardSection>
+            <SocialOverviewCard icon={FacebookIcon} statsName="PageViews" stats={'87'} />
+            <SocialOverviewCard icon={FacebookIcon} statsName="Likes" stats={'52'} />
+            <SocialOverviewCard icon={InstagramIcon} statsName="Likes" stats={'5462'} />
+            <SocialOverviewCard icon={InstagramIcon} statsName="Profile Views" stats={'52k'} />
+            <SocialOverviewCard icon={TwitterIcon} statsName="Retweets" stats={'117'} />
+            <SocialOverviewCard icon={TwitterIcon} statsName="Likes" stats={'507'} />
+            <SocialOverviewCard icon={YoutubeIcon} statsName="Likes" stats={'107'} />
+            <SocialOverviewCard icon={YoutubeIcon} statsName="Total Views" stats={'1407'} />
+          </CardSection>
         </MainPage>
       </>
     </ThemeProvider>

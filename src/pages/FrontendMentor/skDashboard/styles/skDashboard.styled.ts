@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { createGlobalStyle, DefaultTheme } from 'styled-components'
-import 'styled-components'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -35,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
   main {
     background: ${({ theme }) => `${theme.body} !important`};
     color: ${({ theme }) => theme.text};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    /* font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif; */
     transition: all 0.50s linear;
   }
   `
@@ -65,9 +64,31 @@ export const FollowersCount = styled.div`
 
 export const LineSeparator = styled.div``
 
+export const StyledDarkMode = styled.div`
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  margin: 1vw;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15vw;
+`
+
 export const OverviewHeading = styled.div`
   align-self: flex-start;
   font-size: 2rem;
   font-weight: 600;
   color: ${({ theme }) => theme.headingText};
+`
+export const CardSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
