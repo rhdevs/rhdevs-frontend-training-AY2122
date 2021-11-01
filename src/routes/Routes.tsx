@@ -52,6 +52,9 @@ const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCar
 const ShoppingCart4Redux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
 )
+const TipCalculatorApp = React.lazy(
+  () => import(/* webpackChunckName: "TipCalculatorApp" */ '../pages/FrontendMentor/TipCalculatorApp'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -78,6 +81,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
+    <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />
   </Switch>
