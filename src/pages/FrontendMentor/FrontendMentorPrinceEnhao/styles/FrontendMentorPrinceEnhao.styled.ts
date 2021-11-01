@@ -1,3 +1,4 @@
+import { BoldOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
 
 export const MainContainer = styled.div`
@@ -13,17 +14,17 @@ export const MainContainer = styled.div`
 `
 export const TopBackground = styled.img`
   z-index: 1;
-  height: auto;
-  width: 50vw;
-  left: 0vw;
+  height: 75vh;
+  width: 60vw;
+  left: -10vw;
   top: -40vh;
   position: fixed;
 `
 export const BottomBackground = styled.img`
   z-index: 1;
-  height: auto;
-  width: 50vw;
-  right: 0px;
+  height: 75vh;
+  width: 60vw;
+  right: -10vw;
   bottom: -40vh;
   position: fixed;
 `
@@ -80,22 +81,23 @@ export const ProfileCardBigWords = styled.div`
   color: black;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 1.5rem;
-  font-weight: 450;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: end;
 `
-export const ProfileCardSmallWords = styled.div`
+export const ProfileCardSmallWords = styled.div<{ fontSize?: string }>`
   overflow: hidden;
   width: 100%;
   height: 50%;
-  color: black;
+  color: grey;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 300;
   text-align: center;
   position: relative;
+  ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 export const ProfilePicContainer = styled.div`
   width: 100%;  
@@ -110,6 +112,10 @@ export const NameAgeContainer = styled.div`
   width: 100%;
   height: 25%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 8vh;
 `
 
