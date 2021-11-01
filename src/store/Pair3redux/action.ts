@@ -1,4 +1,3 @@
-import { ConsoleSqlOutlined } from '@ant-design/icons'
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, ITEM_ACTIONS, Item } from './types'
 

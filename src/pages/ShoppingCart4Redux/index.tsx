@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button } from 'antd'
-import { Table, Space } from 'antd'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { Table, Space, Button } from 'antd'
 import { MinusCircleOutlined, PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 import {
   MainPage,
@@ -10,7 +11,6 @@ import {
   ShoppingListForm,
 } from './styles/ShoppingCart4Redux.styled'
 import AddItemModalRedux from '../../components/AddItemModalRedux'
-import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/types'
 import {
   AddQuantityInList,
@@ -38,27 +38,29 @@ const ShoppingCart4Redux = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (text: ShoppingListItem, record: ShoppingListItem, index: number) => (
-        <Space size="middle">
-          <MinusCircleOutlined
-            onClick={() => {
-              dispatch(RemoveQuantityInList(index))
-            }}
-          ></MinusCircleOutlined>
-          <PlusCircleOutlined
-            onClick={() => {
-              dispatch(AddQuantityInList(index))
-            }}
-          ></PlusCircleOutlined>
-          <a
-            onClick={() => {
-              dispatch(RemoveItemFromList(index))
-            }}
-          >
-            Delete
-          </a>
-        </Space>
-      ),
+      render: function actions(text: ShoppingListItem, record: ShoppingListItem, index: number) {
+        return (
+          <Space size="middle">
+            <MinusCircleOutlined
+              onClick={() => {
+                dispatch(RemoveQuantityInList(index))
+              }}
+            ></MinusCircleOutlined>
+            <PlusCircleOutlined
+              onClick={() => {
+                dispatch(AddQuantityInList(index))
+              }}
+            ></PlusCircleOutlined>
+            <a
+              onClick={() => {
+                dispatch(RemoveItemFromList(index))
+              }}
+            >
+              Delete
+            </a>
+          </Space>
+        )
+      },
     },
   ]
 
