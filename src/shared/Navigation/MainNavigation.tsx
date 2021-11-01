@@ -6,7 +6,7 @@ import FEWebTitle from '../../components/FEWebTitle'
 import Dropdown from 'antd/lib/dropdown/dropdown'
 import Menu from 'antd/lib/menu'
 import { useHistory } from 'react-router'
-import { PATHS } from '../../App'
+import { PATHS } from '../../routes/PATHS'
 import { HamburgerContainer, MainHeader, NavLinksContainer, StyledMenu } from './styles/MainNavigation.styled'
 
 const MainNavigation = () => {
