@@ -1,9 +1,9 @@
 import React from 'react'
 import { Input } from 'antd'
-import { SearchBarStyle } from './styles/SearchBar.styled'
+import { SearchBarStyle } from './styles/FiltersDiv.styled'
 
 const SearchBar = () => {
-  return <Input placeholder="input search text" style={SearchBarStyle} />
+  return <Input placeholder="Search" style={SearchBarStyle} />
 }
 
 export default SearchBar

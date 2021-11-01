@@ -4,20 +4,25 @@ import { useHistory } from 'react-router-dom'
 import CountryCard from '../../../components/MarcusFEMentor/CountryCard'
 import SearchBar from '../../../components/MarcusFEMentor/SearchBar'
 import { CountriesDiv } from '../../../components/MarcusFEMentor/styles/Cards.styled'
-import { SearchBarBuffer } from '../../../components/MarcusFEMentor/styles/SearchBar.styled'
+import { SearchBarBuffer } from '../../../components/MarcusFEMentor/styles/FiltersDiv.styled'
 import { TitleContainerBuffer } from '../../../components/MarcusFEMentor/styles/Title.styled'
 import Title from '../../../components/MarcusFEMentor/Title'
 import { PATHS } from '../../../routes/PATHS'
 import countries from './countries'
-import { Background } from './styles/MarcusFEMentor.styled'
+import { Background, FiltersDiv } from './styles/MarcusFEMentor.styled'
+import RegionsDropdown from '../../../components/MarcusFEMentor/RegionsDropdown'
 
 function MarcusFEMentor() {
   const history = useHistory()
+
   return (
     <Background>
       <Title text="Where in the world?" /> {/* TODO add night mode? */}
       <TitleContainerBuffer />
-      <SearchBar />
+      <FiltersDiv>
+        <SearchBar />
+        <RegionsDropdown />
+      </FiltersDiv>
       <SearchBarBuffer />
       <CountriesDiv>
         {countries.map((country) => (

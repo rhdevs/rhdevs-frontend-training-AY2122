@@ -4,7 +4,7 @@ import { ArrowLeftOutlined } from '@ant-design/icons'
 
 import { useHistory } from 'react-router'
 import { PATHS } from '../../routes/PATHS'
-import { BackButtonStyle } from './styles/CountryInfoPage.styled'
+import { BackButtonStyle } from './styles/CountryPage.styled'
 
 const BackButton = () => {
   const history = useHistory()

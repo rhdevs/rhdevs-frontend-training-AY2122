@@ -4,7 +4,6 @@ import CountryPage from './CountryPage'
 
 const CountriesSwitch = () => {
   const params = useParams<{ countryName: string }>()
-
   return <CountryPage countryName={params.countryName} />
 }
 
