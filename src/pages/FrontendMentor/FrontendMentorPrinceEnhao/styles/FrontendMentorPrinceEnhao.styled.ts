@@ -36,11 +36,11 @@ export const ProfileCardContainer = styled.div`
   width: 55vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: start;
   position: relative;
   background-color: white;
   opacity: 1;
-  border: 0.3vh solid hsl(229, 23%, 23%);
   box-sizing: border-box;
   box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh rgba(0, 0, 0, 0.08);
   border-radius: 2vh;
@@ -48,9 +48,23 @@ export const ProfileCardContainer = styled.div`
 `
 
 export const ProfileCardBackground = styled.img`
-  overflow: hidden;
   width: 100%;
-  height: 20%;
+  height: 35%;
+  position: relative;
+`
+export const ProfilePicContainer = styled.div`
+  width: 100%;  
+  height 0%; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+export const NameAgeContainer = styled.div`
+  width: 100%;
+  height: 35%;
+  position: relative;
 `
 
 export const StyledSubheader = styled.h2`
@@ -59,5 +73,10 @@ export const StyledSubheader = styled.h2`
 `
 
 export const StyledImg = styled.img`
-  border-radius: 10px;
+  z-index: 3;
+  border-radius: 50%;
+  position: relative;
+  width: 30%;
+  height: auto;
+  border: 3px solid white;
 `
