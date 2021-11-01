@@ -7,7 +7,6 @@ const Hubble = () => {
   return (
     <>
       <MainContainer>Hello</MainContainer>
-      <img src={bgdesk} />
     </>
   )
 }
