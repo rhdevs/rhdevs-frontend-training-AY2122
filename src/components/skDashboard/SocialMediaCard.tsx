@@ -11,7 +11,7 @@ const SocialMediaCard = (props: Props) => {
     <StyledCard>
       <StyledIcon src={props.icon} />
       <StyledFollowerCount>{props.followerCount}</StyledFollowerCount>
-      <StyledNamesText>{props.names}</StyledNamesText>
+      <StyledNamesText>FOLLOWERS</StyledNamesText>
     </StyledCard>
   )
 }

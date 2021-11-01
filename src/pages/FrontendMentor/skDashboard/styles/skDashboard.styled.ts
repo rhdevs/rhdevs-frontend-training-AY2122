@@ -60,6 +60,7 @@ export const FollowersCount = styled.div`
   margin-top: -1vh;
   font-size: 1rem;
   font-weight: 400;
+  color: ${({ theme }) => theme.text};
 `
 
 export const LineSeparator = styled.div``
@@ -68,4 +69,5 @@ export const OverviewHeading = styled.div`
   align-self: flex-start;
   font-size: 2rem;
   font-weight: 600;
+  color: ${({ theme }) => theme.headingText};
 `

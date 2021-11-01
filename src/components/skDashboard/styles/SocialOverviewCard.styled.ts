@@ -2,8 +2,6 @@ import styled from 'styled-components'
 
 export const StyledCard = styled.div`
   color: ${({ theme }) => theme.headingText};
-  border-top: 6px solid;
-  border-top-color: hsl(208, 92%, 53%);
   line-height: 20px;
   display: flex;
   flex-direction: column;
@@ -16,7 +14,7 @@ export const StyledCard = styled.div`
   align-items: center;
   margin: 2.5px;
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   margin-top: 2vh;
   margin-bottom: 2vh;
   background: ${({ theme }) => theme.cardBackground};
@@ -25,22 +23,35 @@ export const StyledCard = styled.div`
     transform: scale3d(1.05, 1.05, 1.1);
   }
 `
-
-export const StyledIcon = styled.img`
-  height: 5vh;
-  margin-bottom: 3vh;
+export const TopRow = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vh;
 `
 
-export const StyledFollowerCount = styled.text`
-  font-size: calc(32px + 4vh);
+export const StyledPageView = styled.text`
+  color: ${({ theme }) => theme.text};
+  font-size: calc(12px + 1vh);
   font-weight: 700;
   text-align: center;
   height: 6vh;
+  margin-left: 30px;
 `
 
-export const StyledNamesText = styled.text`
-  font-size: calc(16px + 0.5vh);
+export const StyledIcon = styled.img`
+  height: 5vh;
+  margin-right: 30px;
+`
+export const BottomRow = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+`
+export const StyledStats = styled.text`
+  font-size: calc(24px + 3vh);
+  font-weight: 700;
   text-align: center;
-  letter-spacing: 0.4rem;
-  color: ${({ theme }) => theme.text};
+  margin-left: 30px;
 `
