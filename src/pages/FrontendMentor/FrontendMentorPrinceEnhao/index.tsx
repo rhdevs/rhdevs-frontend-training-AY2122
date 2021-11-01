@@ -26,7 +26,10 @@ const FrontendMentorPrinceEnhao = () => {
         <ProfilePicContainer>
           <StyledImg src={ProfilePicture} />
         </ProfilePicContainer>
-        <NameAgeContainer></NameAgeContainer>
+        <NameAgeContainer>
+          <ProfileCardBigWords>Victor Crest</ProfileCardBigWords>
+          <ProfileCardSmallWords>London</ProfileCardSmallWords>
+        </NameAgeContainer>
         <ProfileCardBottom>
           <ProfileCardWordsContainer>
             <ProfileCardBigWords>80k</ProfileCardBigWords>

@@ -80,12 +80,11 @@ export const ProfileCardBigWords = styled.div`
   color: black;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 450;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: end;
-  // background-color: black;
 `
 export const ProfileCardSmallWords = styled.div`
   overflow: hidden;
@@ -96,7 +95,6 @@ export const ProfileCardSmallWords = styled.div`
   font-size: 0.75rem;
   font-weight: 300;
   text-align: center;
-  // background-color: black;
   position: relative;
 `
 export const ProfilePicContainer = styled.div`
@@ -110,8 +108,9 @@ export const ProfilePicContainer = styled.div`
 `
 export const NameAgeContainer = styled.div`
   width: 100%;
-  height: 35%;
+  height: 25%;
   position: relative;
+  margin-top: 8vh;
 `
 
 export const StyledSubheader = styled.h2`
