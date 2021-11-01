@@ -13,6 +13,7 @@ export enum PATHS {
   SKZK_SHOPPING_PAGE = '/shopping/skzkpage',
   SKZK_SHOPPING_PAGE_REDUX = '/shopping/skzkredux',
   SHOPPING_PAGE_YIXUAN_WEIPIN = '/shopping/yixuanweipin',
+  YIXUAN_WEIPIN_SHOPPING_REDUX = '/shopping/yxwp_redux',
   SHOPPING_PAGE_PAIR_FOUR = '/shopping-lists-pair-4',
   SHOPPING_PAGE_PAIR_FOUR_REDUX = '/shopping-lists-pair-4-redux',
   FRONTEND_MENTOR = '/frontendmentor',
