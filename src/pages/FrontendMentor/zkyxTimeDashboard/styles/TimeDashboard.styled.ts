@@ -168,3 +168,14 @@ export const CardImage = styled.img`
   border-color: black;
   padding: 1px;
 `
+
+export const TitleBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+export const EllipsisImage = styled.img`
+  width: '21px';
+  height: '5px';
+`

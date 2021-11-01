@@ -20,6 +20,8 @@ import {
   TimeInfoCard,
   BackgroundCardTop,
   LegendTextSelector,
+  TitleBox,
+  EllipsisImage,
 } from './styles/TimeDashboard.styled'
 import WorkIcon from './images/icon-work.svg'
 import PlayIcon from './images/icon-play.svg'
@@ -73,17 +75,10 @@ const TimeDashBoardPage = () => {
               <BackgroundIcon src={WorkIcon} />
             </BackgroundCardTop>
             <TimeInfoCard>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
+              <TitleBox>
                 <TitleText>Work</TitleText>
-                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
-              </div>
+                <EllipsisImage src={EllipsisIcon} />
+              </TitleBox>
               <HourText>1Hrs</HourText>
               <FooterText>Last day - 0hr</FooterText>
             </TimeInfoCard>
@@ -93,17 +88,10 @@ const TimeDashBoardPage = () => {
               <BackgroundIcon src={PlayIcon} />
             </BackgroundCardTop>
             <TimeInfoCard>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
+              <TitleBox>
                 <TitleText>Play</TitleText>
-                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
-              </div>
+                <EllipsisImage src={EllipsisIcon} />
+              </TitleBox>
               <HourText>2Hrs</HourText>
               {period === 'Daily' ? (
                 <FooterText>Last day - 0hr</FooterText>
@@ -119,17 +107,10 @@ const TimeDashBoardPage = () => {
               <BackgroundIcon src={StudyIcon} />
             </BackgroundCardTop>
             <TimeInfoCard>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
+              <TitleBox>
                 <TitleText>Study</TitleText>
-                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
-              </div>
+                <EllipsisImage src={EllipsisIcon} />
+              </TitleBox>
               <HourText>3Hrs</HourText>
               <FooterText>Last day - 0hr</FooterText>
             </TimeInfoCard>
@@ -139,17 +120,10 @@ const TimeDashBoardPage = () => {
               <BackgroundIcon src={ExerciseIcon} />
             </BackgroundCardTop>
             <TimeInfoCard>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
+              <TitleBox>
                 <TitleText>Exercise</TitleText>
-                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
-              </div>
+                <EllipsisImage src={EllipsisIcon} />
+              </TitleBox>
               <HourText>4Hrs</HourText>
               <FooterText>Last day - 0hr</FooterText>
             </TimeInfoCard>
@@ -159,17 +133,10 @@ const TimeDashBoardPage = () => {
               <BackgroundIcon src={SocialIcon} />
             </BackgroundCardTop>
             <TimeInfoCard>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
+              <TitleBox>
                 <TitleText>Social</TitleText>
-                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
-              </div>
+                <EllipsisImage src={EllipsisIcon} />
+              </TitleBox>
               <HourText>5Hrs</HourText>
               <FooterText>Last day - 0hr</FooterText>
             </TimeInfoCard>
@@ -179,17 +146,10 @@ const TimeDashBoardPage = () => {
               <BackgroundIcon src={SelfCareIcon} />
             </BackgroundCardTop>
             <TimeInfoCard>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
+              <TitleBox>
                 <TitleText>Self-Care</TitleText>
-                <img src={EllipsisIcon} style={{ width: '21px', height: '5px' }} />
-              </div>
+                <EllipsisImage src={EllipsisIcon} />
+              </TitleBox>
               <HourText>6Hrs</HourText>
               <FooterText>Last day - 0hr</FooterText>
             </TimeInfoCard>
