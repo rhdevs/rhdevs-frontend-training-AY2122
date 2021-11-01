@@ -55,13 +55,16 @@ export const ProfileCardBottom = styled.div`
   height: 30%;
   border-top: 0.2vh solid black;
   display: flex;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: space-between;
 `
 
 export const ProfileCardWordsContainer = styled.div`
   z-index: 2;
   height: 100%;
   width: 33%;
+  padding: 5px;
+  margin: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,25 +77,26 @@ export const ProfileCardBigWords = styled.div`
   overflow: hidden;
   width: 100%;
   height: 50%;
-  margin: 3vh 5vh 5vh 1vh;
   color: black;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  background-color: black;
+  justify-content: end;
+  // background-color: black;
 `
 export const ProfileCardSmallWords = styled.div`
   overflow: hidden;
   width: 100%;
   height: 50%;
-  margin: 1vh 5vh 5vh 5vh;
   color: black;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 300;
   text-align: center;
-  background-color: black;
+  // background-color: black;
   position: relative;
 `
 export const ProfilePicContainer = styled.div`

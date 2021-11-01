@@ -34,11 +34,11 @@ const FrontendMentorPrinceEnhao = () => {
           </ProfileCardWordsContainer>
           <ProfileCardWordsContainer>
             <ProfileCardBigWords>803k</ProfileCardBigWords>
-            {/* <ProfileCardSmallWords>Likes</ProfileCardSmallWords> */}
+            <ProfileCardSmallWords>Likes</ProfileCardSmallWords>
           </ProfileCardWordsContainer>
           <ProfileCardWordsContainer>
             <ProfileCardBigWords>1.4k</ProfileCardBigWords>
-            {/* <ProfileCardSmallWords>Photos</ProfileCardSmallWords> */}
+            <ProfileCardSmallWords>Photos</ProfileCardSmallWords>
           </ProfileCardWordsContainer>
         </ProfileCardBottom>
       </ProfileCardContainer>
