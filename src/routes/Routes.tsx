@@ -53,6 +53,8 @@ const ShoppingCart4Redux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
 )
 
+const Hubble = React.lazy(() => import(/* webpackChunckName: "HUBBLE" */ '../pages/FrontendMentor/hubble'))
+
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
@@ -76,6 +78,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
+    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={Hubble} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}

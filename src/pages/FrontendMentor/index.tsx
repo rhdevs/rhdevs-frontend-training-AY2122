@@ -1,12 +1,13 @@
 import React from 'react'
-
+import { useHistory } from 'react-router-dom'
 import Card from '../../components/Card'
 import PageHeader from '../../components/PageHeader'
+import { PATHS } from '../../routes/PATHS'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
 
 const FrontendMentor = () => {
+  const history = useHistory()
   return (
-    const history = useHistory()
     <MembersSection>
       <PageHeader
         title="Frontend Mentor Practices"
@@ -25,7 +26,11 @@ const FrontendMentor = () => {
         <Card title="Meet landing page" description="your name" />
       </InformationCardSection>
       <InformationCardSection>
-        <Card title="Hubble" description="Tai and Yong Zhong" />
+        <Card
+          title="Hubble"
+          description="Tai and Yong Zhong"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_HUBBLE)}
+        />
       </InformationCardSection>
     </MembersSection>
   )
