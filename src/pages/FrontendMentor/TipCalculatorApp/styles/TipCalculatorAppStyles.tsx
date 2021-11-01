@@ -27,5 +27,6 @@ export const Calculator = styled.div`
   display: flex;
   justify-content: center;
   background: hsl(0, 0%, 100%);
-  width: 1000px;
+  width: 800px;
+  border-radius: 25px;
 `
