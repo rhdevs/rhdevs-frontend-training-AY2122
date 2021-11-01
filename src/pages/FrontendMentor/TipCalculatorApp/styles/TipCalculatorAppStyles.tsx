@@ -5,7 +5,8 @@ export const MainContainer = styled.div`
   height: 100vh;
 `
 export const Header = styled.div`
-  padding-top: 15vh;
+  padding-top: 10vh;
+  padding-bottom: 8vh;
   text-align: center;
 `
 export const HeaderWords = styled.div`
@@ -25,8 +26,15 @@ export const MiddleContainer = styled.div`
 
 export const Calculator = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row;
   background: hsl(0, 0%, 100%);
   width: 800px;
   border-radius: 25px;
+`
+
+export const InteractionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
