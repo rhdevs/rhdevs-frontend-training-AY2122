@@ -1,7 +1,4 @@
 import styled from 'styled-components'
-// import BackgroundBottom from '../../../assets/princeenhao/bg-pattern-bottom.svg'
-// import BackgroundCard from '../../../assets/princeenhao/bg-pattern-card.svg'
-// import img from '../../../assets/princeenhao/bg-pattern-top.svg'
 
 export const MainContainer = styled.div`
   display: flex;
@@ -40,7 +37,6 @@ export const ProfileCardContainer = styled.div`
   position: relative;
   background-color: white;
   opacity: 1;
-  border: 0.3vh solid hsl(229, 23%, 23%);
   box-sizing: border-box;
   box-shadow: 0.5vh 0.5vh 0.5vh 0.5vh rgba(0, 0, 0, 0.08);
   border-radius: 2vh;
@@ -50,7 +46,59 @@ export const ProfileCardContainer = styled.div`
 export const ProfileCardBackground = styled.img`
   overflow: hidden;
   width: 100%;
-  height: 20%;
+  height: 35%;
+`
+
+export const ProfileCardMiddle = styled.div`
+  overflow: hidden;
+  width: 100%;
+  height: 40%;
+`
+
+export const ProfileCardBottom = styled.div`
+  overflow: hidden;
+  width: 100%;
+  height: 25%;
+  border-top: 0.2vh solid black;
+  display: flex;
+  justify-content: start;
+`
+
+export const ProfileCardWordsContainer = styled.div`
+  z-index: 2;
+  height: 100%;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+`
+
+export const ProfileCardBigWords = styled.div`
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  margin: 3vh 5vh 5vh 1vh;
+  color: black;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: black;
+`
+export const ProfileCardSmallWords = styled.div`
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  margin: 1vh 5vh 5vh 5vh;
+  color: black;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-align: center;
+  background-color: black;
 `
 
 export const StyledSubheader = styled.h2`

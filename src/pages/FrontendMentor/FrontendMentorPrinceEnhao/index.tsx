@@ -3,8 +3,13 @@ import {
   BottomBackground,
   MainContainer,
   ProfileCardContainer,
-  StyledImg,
   ProfileCardBackground,
+  ProfileCardMiddle,
+  ProfileCardBottom,
+  ProfileCardBigWords,
+  ProfileCardSmallWords,
+  ProfileCardWordsContainer,
+  StyledImg,
   StyledSubheader,
   TopBackground,
 } from './styles/FrontendMentorPrinceEnhao.styled'
@@ -16,6 +21,21 @@ const FrontendMentorPrinceEnhao = () => {
     <MainContainer>
       <ProfileCardContainer>
         <ProfileCardBackground src={BackgroundCard} />
+        <ProfileCardMiddle></ProfileCardMiddle>
+        <ProfileCardBottom>
+          <ProfileCardWordsContainer>
+            <ProfileCardBigWords>80k</ProfileCardBigWords>
+            <ProfileCardSmallWords>Followers</ProfileCardSmallWords>
+          </ProfileCardWordsContainer>
+          <ProfileCardWordsContainer>
+            <ProfileCardBigWords>803k</ProfileCardBigWords>
+            {/* <ProfileCardSmallWords>Likes</ProfileCardSmallWords> */}
+          </ProfileCardWordsContainer>
+          <ProfileCardWordsContainer>
+            <ProfileCardBigWords>1.4k</ProfileCardBigWords>
+            {/* <ProfileCardSmallWords>Photos</ProfileCardSmallWords> */}
+          </ProfileCardWordsContainer>
+        </ProfileCardBottom>
       </ProfileCardContainer>
       <TopBackground src={BackgroundTop} />
       <BottomBackground src={BackgroundBottom} />
