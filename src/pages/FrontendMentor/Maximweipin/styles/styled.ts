@@ -61,9 +61,10 @@ export const StyledImg = styled.img`
   border-radius: 10px;
 `
 export const StyledLogo = styled.img`
-  width: 40px;
+  width: 100px;
   height: auto;
   top: 10px;
+  left: 30%;
   padding: 5px;
   position: relative;
 `
