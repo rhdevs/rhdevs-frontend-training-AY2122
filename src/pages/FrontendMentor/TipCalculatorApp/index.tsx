@@ -12,6 +12,10 @@ import {
   TipGridItem,
   ItemContainer,
   InputIcon,
+  InputField,
+  ResultContainer,
+  ResetButton,
+  ResetButtonContainer,
 } from './styles/TipCalculatorAppStyles'
 import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
 import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
@@ -33,6 +37,7 @@ const TipCalculatorApp = () => {
               <ItemHeader>Bill</ItemHeader>
               <InputContainer>
                 <InputIcon src={DollarIcon} alt="dollar sign"></InputIcon>
+                <InputField>TEST</InputField>
               </InputContainer>
             </ItemContainer>
             <ItemContainer>
@@ -50,10 +55,16 @@ const TipCalculatorApp = () => {
               <ItemHeader>Number of people</ItemHeader>
               <InputContainer>
                 <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
+                <InputField>TEST</InputField>
               </InputContainer>
             </ItemContainer>
           </InteractionContainer>
-          <InteractionContainer> #2 </InteractionContainer>
+          <ResultContainer>
+            <ResultContainer>TEST</ResultContainer>
+            <ResetButtonContainer>
+              <ResetButton>RESET</ResetButton>
+            </ResetButtonContainer>
+          </ResultContainer>
         </Calculator>
       </MiddleContainer>
     </MainContainer>
