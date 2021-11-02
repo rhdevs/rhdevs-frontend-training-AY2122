@@ -37,6 +37,7 @@ const Hubble = () => {
             <ButtonContainer>Register</ButtonContainer>
           </LColumn>
         </Rows>
+
         <IconRows>
           <SocialIcons>hellloo</SocialIcons>
           <SocialIcons>hellloo</SocialIcons>

@@ -16,6 +16,7 @@ export const MainContainer = styled.div`
     background-image: url(${bgmobile});
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 0px;
   }
 `
 export const LColumn = styled.div`
@@ -27,6 +28,9 @@ export const LColumn = styled.div`
   align-items: left;
   @media (max-width: 768px) {
     align-items: center;
+    img {
+      max-width: 80%;
+    }
   }
 `
 export const LogoBox = styled.div`
