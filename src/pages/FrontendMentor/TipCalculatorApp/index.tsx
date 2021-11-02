@@ -31,9 +31,7 @@ const TipCalculatorApp = () => {
     <MainContainer>
       <Header>
         <HeaderWords>
-          SPLI
-          <br />
-          TTER
+          S P L I<br />T T E R
         </HeaderWords>
       </Header>
       <MiddleContainer>

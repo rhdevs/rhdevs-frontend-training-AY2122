@@ -10,10 +10,10 @@ export const Header = styled.div`
   text-align: center;
 `
 export const HeaderWords = styled.div`
-  color: hsl(186, 14%, 43%);
+  color: hsl(183, 100%, 15%);
   font-family: 'Space Mono';
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
   margin-top: 2vh;
   margin-bottom: 2vh;
 `
