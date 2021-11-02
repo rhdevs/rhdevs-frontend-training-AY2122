@@ -1,4 +1,7 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../store/types'
+
 import {
   MainContainer,
   Header,
@@ -27,7 +30,9 @@ import {
 import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
 import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
 
-const TipCalculatorApp = () => {
+export default function TipCalculatorApp() {
+  const { billAmount, peopleAmount, tipAmount, totalAmount } = useSelector((state: RootState) => state.tipCalculatorApp)
+
   return (
     <MainContainer>
       <Header>
@@ -42,7 +47,7 @@ const TipCalculatorApp = () => {
               <ItemHeader>Bill</ItemHeader>
               <InputContainer>
                 <InputIcon src={DollarIcon} alt="dollar sign"></InputIcon>
-                <InputField>142.55</InputField>
+                <InputField>{billAmount}</InputField>
               </InputContainer>
             </ItemContainer>
             <ItemContainer>
@@ -60,7 +65,7 @@ const TipCalculatorApp = () => {
               <ItemHeader>Number of people</ItemHeader>
               <InputContainer>
                 <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
-                <InputField>5</InputField>
+                <InputField>{peopleAmount}</InputField>
               </InputContainer>
             </ItemContainer>
           </InteractionContainer>
@@ -71,14 +76,14 @@ const TipCalculatorApp = () => {
                   <AmountHeader>Tip Amount</AmountHeader>
                   <PerHeader>/ person</PerHeader>
                 </AmountTypeContainer>
-                <Amount>$4.27</Amount>
+                <Amount>{tipAmount.toFixed(2)}</Amount>
               </AmountContainer>
               <AmountContainer>
                 <AmountTypeContainer>
                   <AmountHeader>Total</AmountHeader>
                   <PerHeader>/ person</PerHeader>
                 </AmountTypeContainer>
-                <Amount>$32.79</Amount>
+                <Amount>{totalAmount.toFixed(2)}</Amount>
               </AmountContainer>
             </NumbersContainer>
             <ResetButtonContainer>
@@ -90,5 +95,3 @@ const TipCalculatorApp = () => {
     </MainContainer>
   )
 }
-
-export default TipCalculatorApp
