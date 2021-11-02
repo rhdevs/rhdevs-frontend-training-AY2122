@@ -9,7 +9,9 @@ import {
   MainContainer2,
   MainContainer3,
   StyledLogo,
+  AddButtonStyle,
 } from './styles/styled'
+import { Button } from 'antd'
 import styled from 'styled-components'
 import luxury from './images/icon-luxury.svg'
 import suvs from './images/icon-suvs.svg'
@@ -25,6 +27,9 @@ const Lesson1Example = () => {
           Choose a sedan for its affordability and excellent fuel economy. Ideal for curising in the city or on your
           next road trip
         </StyledParagraph>
+        <Button type="primary" style={AddButtonStyle}>
+          Learn more
+        </Button>
       </MainContainer1>
       <MainContainer2>
         <StyledLogo src={suvs} />
@@ -33,6 +38,9 @@ const Lesson1Example = () => {
           Take an SUV for its spacious interior, power, and verstality. Perfect for your next family vacation and
           off-road adventures
         </StyledParagraph>
+        <Button type="primary" style={AddButtonStyle}>
+          Learn more
+        </Button>
       </MainContainer2>
       <MainContainer3>
         <StyledLogo src={luxury} />
@@ -41,6 +49,9 @@ const Lesson1Example = () => {
           Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and
           arrive in a style.
         </StyledParagraph>
+        <Button type="primary" style={AddButtonStyle}>
+          Learn more
+        </Button>
       </MainContainer3>
     </FullScreenContainer>
   )

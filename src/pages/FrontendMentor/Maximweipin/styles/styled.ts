@@ -37,10 +37,10 @@ export const MainContainer3 = styled.div`
   background-color: rgb(0, 66, 65);
   border-radius: 5px;
 `
-export const StyledHeader = styled.h1`
+export const StyledHeader = styled.p`
   font-family: 'Lexend Deca';
-  margin: 2rem auto;
-  text-align: center;
+  margin: 2rem;
+  font-size: 40px;
   vertical-align: middle;
   color: #ffffff;
 `
@@ -62,9 +62,8 @@ export const StyledImg = styled.img`
 `
 export const StyledLogo = styled.img`
   width: 100px;
-  height: auto;
-  top: 10px;
-  left: 30%;
+  margin: 2rem;
   padding: 5px;
   position: relative;
 `
+export const AddButtonStyle = { width: '140px', margin: '2rem' }
