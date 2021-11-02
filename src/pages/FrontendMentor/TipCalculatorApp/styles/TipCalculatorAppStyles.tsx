@@ -56,25 +56,28 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   height: 5vh;
   line-height: 5vh;
   background: hsl(189, 41%, 97%);
   border-radius: 3px;
+  vertical-align: center;
 `
 
 export const InputIcon = styled.img`
-  padding-left: 2vh;
-  height: 30%;
+  object-fit: scale-down;
   vertical-align: middle;
+  margin-left: 1vh;
 `
 
-export const InputField = styled.div`
-  padding-right: 1vh;
-  font-family: 'Space Mono';
-  font-weight: 700;
-  color: hsl(183, 100%, 15%);
+export const InputField = styled.input`
+  background: hsl(189, 41%, 97%);
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
   font-size: 24px;
+  font-weight: 700;
+  text-align: right;
 `
 
 export const TipGridBox = styled.div`

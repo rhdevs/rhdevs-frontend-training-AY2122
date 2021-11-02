@@ -1,6 +1,7 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { ChangeEvent, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../store/types'
+import { Reset, SetBillAmount, SetPeopleAmount, SetTipAmount } from '../../../store/tipCalculatorApp/action'
 
 import {
   MainContainer,
@@ -31,7 +32,18 @@ import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
 import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
 
 export default function TipCalculatorApp() {
-  const { billAmount, peopleAmount, tipAmount, totalAmount } = useSelector((state: RootState) => state.tipCalculatorApp)
+  const dispatch = useDispatch()
+  const { billAmount, peopleAmount, tipAmount } = useSelector((state: RootState) => state.tipCalculatorApp)
+  const [newBillAmount, setNewBillAmount] = useState(0)
+  const [newPeopleAmount, setNewPeopleAmount] = useState(0)
+
+  const handleNewBillAmount = (e: ChangeEvent<HTMLInputElement>) => {
+    setNewBillAmount(e.target.valueAsNumber)
+  }
+
+  const handleNewPeopleAmount = (e: ChangeEvent<HTMLInputElement>) => {
+    setNewPeopleAmount(e.target.valueAsNumber)
+  }
 
   return (
     <MainContainer>
@@ -47,17 +59,27 @@ export default function TipCalculatorApp() {
               <ItemHeader>Bill</ItemHeader>
               <InputContainer>
                 <InputIcon src={DollarIcon} alt="dollar sign"></InputIcon>
-                <InputField>{billAmount}</InputField>
+                <form>
+                  <InputField
+                    value={newBillAmount}
+                    type="number"
+                    placeholder={billAmount.toString()}
+                    onChange={(e) => {
+                      handleNewBillAmount(e)
+                      dispatch(SetBillAmount(newBillAmount))
+                    }}
+                  />
+                </form>
               </InputContainer>
             </ItemContainer>
             <ItemContainer>
               <ItemHeader>Select Tip %</ItemHeader>
               <TipGridBox>
-                <TipGridItem>5%</TipGridItem>
-                <TipGridItem>10%</TipGridItem>
-                <TipGridItem>15%</TipGridItem>
-                <TipGridItem>25%</TipGridItem>
-                <TipGridItem>50%</TipGridItem>
+                <TipGridItem onClick={() => dispatch(SetTipAmount(5))}>5%</TipGridItem>
+                <TipGridItem onClick={() => dispatch(SetTipAmount(10))}>10%</TipGridItem>
+                <TipGridItem onClick={() => dispatch(SetTipAmount(15))}>15%</TipGridItem>
+                <TipGridItem onClick={() => dispatch(SetTipAmount(25))}>25%</TipGridItem>
+                <TipGridItem onClick={() => dispatch(SetTipAmount(50))}>50%</TipGridItem>
                 <TipGridCustomItem>Custom</TipGridCustomItem>
               </TipGridBox>
             </ItemContainer>
@@ -65,7 +87,17 @@ export default function TipCalculatorApp() {
               <ItemHeader>Number of people</ItemHeader>
               <InputContainer>
                 <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
-                <InputField>{peopleAmount}</InputField>
+                <form>
+                  <InputField
+                    value={newPeopleAmount}
+                    type="number"
+                    placeholder={peopleAmount.toString()}
+                    onChange={(e) => {
+                      handleNewPeopleAmount(e)
+                      dispatch(SetPeopleAmount(newPeopleAmount))
+                    }}
+                  />
+                </form>
               </InputContainer>
             </ItemContainer>
           </InteractionContainer>
@@ -83,11 +115,19 @@ export default function TipCalculatorApp() {
                   <AmountHeader>Total</AmountHeader>
                   <PerHeader>/ person</PerHeader>
                 </AmountTypeContainer>
-                <Amount>{totalAmount.toFixed(2)}</Amount>
+                <Amount>{tipAmount.toFixed(2)}</Amount>
               </AmountContainer>
             </NumbersContainer>
             <ResetButtonContainer>
-              <ResetButton>RESET</ResetButton>
+              <ResetButton
+                onClick={() => {
+                  setNewBillAmount(0)
+                  setNewPeopleAmount(0)
+                  dispatch(Reset)
+                }}
+              >
+                RESET
+              </ResetButton>
             </ResetButtonContainer>
           </ResultContainer>
         </Calculator>

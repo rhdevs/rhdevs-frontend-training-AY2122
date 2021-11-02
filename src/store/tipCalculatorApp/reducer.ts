@@ -1,5 +1,5 @@
 import { Reducer } from 'redux'
-import { ActionTypes, EXAMPLE_ACTIONS } from './types'
+import { ActionTypes, CALCULATOR_ACTIONS } from './types'
 
 //set an initial state for your variable
 export const initialState: State = {
@@ -20,10 +20,30 @@ type State = {
 export const tipCalculatorApp: Reducer<State, ActionTypes> = (state = initialState, action) => {
   switch (action.type) {
     //this is to update the state if the action type is called
-    case EXAMPLE_ACTIONS.SET_ITEM_LIST: {
+    case CALCULATOR_ACTIONS.SET_BILL_AMOUNT: {
       return {
         ...state,
-        itemList: action.itemList,
+        billAmount: action.billAmount,
+      }
+    }
+    case CALCULATOR_ACTIONS.SET_TIP_AMOUNT: {
+      return {
+        ...state,
+        tipAmount: action.tipAmount,
+      }
+    }
+    case CALCULATOR_ACTIONS.SET_PEOPLE_AMOUNT: {
+      return {
+        ...state,
+        peopleAmount: action.peopleAmount,
+      }
+    }
+    case CALCULATOR_ACTIONS.RESET: {
+      return {
+        billAmount: action.billAmount,
+        peopleAmount: action.peopleAmount,
+        tipAmount: action.tipAmount,
+        totalAmount: action.totalAmount,
       }
     }
     default:

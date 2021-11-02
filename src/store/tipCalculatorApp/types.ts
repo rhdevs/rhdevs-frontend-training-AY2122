@@ -1,22 +1,35 @@
 /** Types */
-export type example = {
-  key: number
-  index: number
-  itemName: string
-  quantity: number
-}
 
 /** Actions' types */
-export enum EXAMPLE_ACTIONS {
-  SET_ITEM_LIST = 'SHOPPING_LIST_ACTIONS.SET_ITEM_LIST',
-  SET_KEY_AND_INDEX_COUNT = 'SHOPPING_LIST_ACTIONS.SET_KEY_AND_INDEX_COUNT',
-  SET_NEW_ITEM_TO_BE_ADDED = 'SHOPPING_LIST_ACTIONS.SET_NEW_ITEM_TO_BE_ADDED',
+export enum CALCULATOR_ACTIONS {
+  SET_BILL_AMOUNT = 'CALCULATOR_ACTIONS.SET_BILL_AMOUNT',
+  SET_TIP_AMOUNT = 'CALCULATOR_ACTIONS.SET_TIP_AMOUNT',
+  SET_PEOPLE_AMOUNT = 'CALCULATOR_ACTIONS.SET_PEOPLE_AMOUNT',
+  RESET = 'CALCULATOR_ACTIONS.RESET',
 }
 
 /** Actions */
-type SetItemList = {
-  type: typeof EXAMPLE_ACTIONS.SET_ITEM_LIST
-  itemList: example[]
+type SetBillAmount = {
+  type: typeof CALCULATOR_ACTIONS.SET_BILL_AMOUNT
+  billAmount: number
 }
 
-export type ActionTypes = SetItemList
+type SetTipAmount = {
+  type: typeof CALCULATOR_ACTIONS.SET_TIP_AMOUNT
+  tipAmount: number
+}
+
+type SetPeopleAmount = {
+  type: typeof CALCULATOR_ACTIONS.SET_PEOPLE_AMOUNT
+  peopleAmount: number
+}
+
+type Reset = {
+  type: typeof CALCULATOR_ACTIONS.RESET
+  billAmount: number
+  peopleAmount: number
+  tipAmount: number
+  totalAmount: number
+}
+
+export type ActionTypes = SetBillAmount | SetTipAmount | SetPeopleAmount | Reset
