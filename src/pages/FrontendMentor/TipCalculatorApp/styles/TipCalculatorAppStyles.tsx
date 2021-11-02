@@ -55,12 +55,17 @@ export const InputContainer = styled.div`
   height: 5vh;
   line-height: 5vh;
   background: hsl(189, 41%, 97%);
+  border-radius: 3px;
+`
+
+export const InputIcon = styled.img`
+  padding-left: 2vh;
 `
 
 export const TipGridBox = styled.div`
   display: grid;
   height: 10vh;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   font-family: 'Space Mono';

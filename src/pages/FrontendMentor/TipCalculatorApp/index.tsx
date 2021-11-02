@@ -11,7 +11,10 @@ import {
   TipGridBox,
   TipGridItem,
   ItemContainer,
+  InputIcon,
 } from './styles/TipCalculatorAppStyles'
+import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
+import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
 
 const TipCalculatorApp = () => {
   return (
@@ -28,7 +31,9 @@ const TipCalculatorApp = () => {
           <InteractionContainer>
             <ItemContainer>
               <ItemHeader>Bill</ItemHeader>
-              <InputContainer>$</InputContainer>
+              <InputContainer>
+                <InputIcon src={DollarIcon} alt="dollar sign"></InputIcon>
+              </InputContainer>
             </ItemContainer>
             <ItemContainer>
               <ItemHeader>Select Tip %</ItemHeader>
@@ -43,7 +48,9 @@ const TipCalculatorApp = () => {
             </ItemContainer>
             <ItemContainer>
               <ItemHeader>Number of people</ItemHeader>
-              <InputContainer>5</InputContainer>
+              <InputContainer>
+                <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
+              </InputContainer>
             </ItemContainer>
           </InteractionContainer>
           <InteractionContainer> #2 </InteractionContainer>
