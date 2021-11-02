@@ -52,17 +52,14 @@ export const Score = styled.div`
 export const ScoreText = styled.div`
   font-size: 3rem;
 `
-export const GameContainer = styled.div<{ isSelectState: boolean }>`
+export const GameContainer = styled.div<{ gameState: string }>`
   width: 100%;
-  //max-width: 800px;
-  // min-height: 500px;
   height: 100%;
-  border-radius: 5px;
-  border: 2px solid #4e5f7d;
+  margin: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  ${(props) => props.isSelectState === false && `cursor: pointer;`}
+  ${(props) => props.gameState && props.gameState === 'pick' && `cursor: pointer;`}
 `
 export const Button = styled.div<{ borderColor: string }>`
   ${(props) => props.borderColor && `border-color: ${props.borderColor};`}
@@ -88,9 +85,54 @@ export const PickContainer = styled.div`
 export const PickText = styled.div`
   font-size: 2em;
 `
+
 export const PickStateContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+`
+export const ResultContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 15px;
+`
+
+export const PlayButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #fbfbfb;
+  background: #fbfbfb;
+  color: hsl(214, 47%, 23%);
+  font-size: 2em;
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+`
+
+export const ResultStateContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+export const Blank = styled.div`
+  border-color: #161f3e;
+  border-radius: 50%;
+  border-width: 20px;
+  border-style: solid;
+  background: #161f3e;
+  margin: 25px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `
