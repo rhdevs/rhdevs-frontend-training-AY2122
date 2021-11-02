@@ -120,6 +120,10 @@ export const InputCustomAmountField = styled.input`
   font-size: 20px;
   font-weight: 700;
   text-align: center;
+  &:hover {
+    border-style: solid;
+    border-color: hsl(172, 67%, 45%);
+  }
 `
 
 export const ResultContainer = styled.div`

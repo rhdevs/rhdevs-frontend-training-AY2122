@@ -92,7 +92,7 @@ export default function TipCalculatorApp() {
                     placeholder="Custom"
                     onChange={(e) => {
                       handleSetCustomAmount(e)
-                      dispatch(SetBillAmount(newBillAmount))
+                      dispatch(SetTipAmount(customAmount))
                     }}
                   />
                 </form>
