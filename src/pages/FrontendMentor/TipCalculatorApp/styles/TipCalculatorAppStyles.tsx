@@ -43,9 +43,13 @@ export const InteractionContainer = styled.div`
 
 export const ItemHeader = styled.div`
   font-weight: bold;
+  color: hsl(186, 14%, 43%);
+  padding-bottom: 1vh;
 `
 
-export const ItemContainer = styled.div``
+export const ItemContainer = styled.div`
+  padding-top: 0.5vh;
+`
 
 export const InputContainer = styled.div`
   height: 5vh;
@@ -60,12 +64,12 @@ export const TipGridBox = styled.div`
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   font-family: 'Space Mono';
-  font-weight: bold;
 `
 
-export const TipGridItem = styled.div`
+export const TipGridItem = styled.button`
   background: hsl(183, 100%, 15%);
   color: hsl(185, 41%, 84%);
   border-radius: 3px;
+  font-weight: 700;
   text-align: center;
 `
