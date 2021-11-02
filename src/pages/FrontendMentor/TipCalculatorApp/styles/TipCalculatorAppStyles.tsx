@@ -97,6 +97,10 @@ export const TipGridItem = styled.button`
   font-weight: 700;
   text-align: center;
   border: none;
+  &:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+  }
 `
 
 export const TipGridCustomItem = styled.button`
@@ -167,16 +171,20 @@ export const ResetButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   vertical-align: bottom;
-  height: 5vh;
+  height: 4vh;
   margin-bottom: 3vh;
 `
 
 export const ResetButton = styled.button`
   width: 80%;
-  border-radius: 7px;
-  background: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  background: hsl(186, 14%, 43%);
+  color: hsl(184, 14%, 56%);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   border: none;
+  &:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+  }
 `
