@@ -16,6 +16,12 @@ import {
   ResultContainer,
   ResetButton,
   ResetButtonContainer,
+  AmountContainer,
+  AmountTypeContainer,
+  AmountHeader,
+  PerHeader,
+  Amount,
+  NumbersContainer,
 } from './styles/TipCalculatorAppStyles'
 import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
 import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
@@ -37,7 +43,7 @@ const TipCalculatorApp = () => {
               <ItemHeader>Bill</ItemHeader>
               <InputContainer>
                 <InputIcon src={DollarIcon} alt="dollar sign"></InputIcon>
-                <InputField>TEST</InputField>
+                <InputField>142.55</InputField>
               </InputContainer>
             </ItemContainer>
             <ItemContainer>
@@ -55,12 +61,27 @@ const TipCalculatorApp = () => {
               <ItemHeader>Number of people</ItemHeader>
               <InputContainer>
                 <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
-                <InputField>TEST</InputField>
+                <InputField>5</InputField>
               </InputContainer>
             </ItemContainer>
           </InteractionContainer>
           <ResultContainer>
-            <ResultContainer>TEST</ResultContainer>
+            <NumbersContainer>
+              <AmountContainer>
+                <AmountTypeContainer>
+                  <AmountHeader>Tip Amount</AmountHeader>
+                  <PerHeader>/ person</PerHeader>
+                </AmountTypeContainer>
+                <Amount>$4.27</Amount>
+              </AmountContainer>
+              <AmountContainer>
+                <AmountTypeContainer>
+                  <AmountHeader>Total</AmountHeader>
+                  <PerHeader>/ person</PerHeader>
+                </AmountTypeContainer>
+                <Amount>$32.79</Amount>
+              </AmountContainer>
+            </NumbersContainer>
             <ResetButtonContainer>
               <ResetButton>RESET</ResetButton>
             </ResetButtonContainer>

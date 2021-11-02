@@ -29,7 +29,7 @@ export const Calculator = styled.div`
   justify-content: space-around;
   flex-direction: row;
   background: hsl(0, 0%, 100%);
-  width: 800px;
+  width: 900px;
   border-radius: 25px;
   height: 90%;
 `
@@ -107,7 +107,48 @@ export const ResultContainer = styled.div`
   margin-bottom: 3vh;
 `
 
-export const NumbersContainer = styled.div``
+export const NumbersContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5vh;
+`
+
+export const AmountContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: center;
+  font-weight: 700;
+  height: 8vh;
+`
+
+export const AmountTypeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  margin-left: 3vh;
+`
+
+export const AmountHeader = styled.div`
+  width: 10vh;
+  color: hsl(185, 41%, 84%);
+  height: 50%;
+  font-size: 13px;
+`
+
+export const PerHeader = styled.div`
+  color: hsl(186, 14%, 43%);
+  font-size: 10px;
+`
+
+export const Amount = styled.div`
+  display: flex;
+  color: hsl(172, 67%, 45%);
+  font-size: 34px;
+  line-height: 34px;
+  margin-right: 3vh;
+`
 
 export const ResetButtonContainer = styled.div`
   display: flex;
