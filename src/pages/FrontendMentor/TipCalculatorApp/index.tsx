@@ -26,7 +26,7 @@ import {
   PerHeader,
   Amount,
   NumbersContainer,
-  TipGridCustomItem,
+  InputCustomAmountField,
 } from './styles/TipCalculatorAppStyles'
 import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
 import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
@@ -36,6 +36,7 @@ export default function TipCalculatorApp() {
   const { billAmount, peopleAmount, tipAmount } = useSelector((state: RootState) => state.tipCalculatorApp)
   const [newBillAmount, setNewBillAmount] = useState(0)
   const [newPeopleAmount, setNewPeopleAmount] = useState(0)
+  const [customAmount, setCustomAmount] = useState(0)
 
   const handleNewBillAmount = (e: ChangeEvent<HTMLInputElement>) => {
     setNewBillAmount(e.target.valueAsNumber)
@@ -43,6 +44,10 @@ export default function TipCalculatorApp() {
 
   const handleNewPeopleAmount = (e: ChangeEvent<HTMLInputElement>) => {
     setNewPeopleAmount(e.target.valueAsNumber)
+  }
+
+  const handleSetCustomAmount = (e: ChangeEvent<HTMLInputElement>) => {
+    setCustomAmount(e.target.valueAsNumber)
   }
 
   return (
@@ -80,7 +85,17 @@ export default function TipCalculatorApp() {
                 <TipGridItem onClick={() => dispatch(SetTipAmount(15))}>15%</TipGridItem>
                 <TipGridItem onClick={() => dispatch(SetTipAmount(25))}>25%</TipGridItem>
                 <TipGridItem onClick={() => dispatch(SetTipAmount(50))}>50%</TipGridItem>
-                <TipGridCustomItem>Custom</TipGridCustomItem>
+                <form>
+                  <InputCustomAmountField
+                    value={customAmount}
+                    type="number"
+                    placeholder="Custom"
+                    onChange={(e) => {
+                      handleSetCustomAmount(e)
+                      dispatch(SetBillAmount(newBillAmount))
+                    }}
+                  />
+                </form>
               </TipGridBox>
             </ItemContainer>
             <ItemContainer>

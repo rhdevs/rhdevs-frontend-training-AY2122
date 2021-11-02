@@ -61,6 +61,10 @@ export const InputContainer = styled.div`
   background: hsl(189, 41%, 97%);
   border-radius: 3px;
   vertical-align: center;
+  &:hover {
+    border-style: solid;
+    border-color: hsl(172, 67%, 45%);
+  }
 `
 
 export const InputIcon = styled.img`
@@ -78,12 +82,16 @@ export const InputField = styled.input`
   font-size: 24px;
   font-weight: 700;
   text-align: right;
+  &:focus {
+    outline: none;
+  }
 `
 
 export const TipGridBox = styled.div`
   display: grid;
   height: 10vh;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   font-family: 'Space Mono';
@@ -103,13 +111,15 @@ export const TipGridItem = styled.button`
   }
 `
 
-export const TipGridCustomItem = styled.button`
+export const InputCustomAmountField = styled.input`
   background: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
-  border-radius: 3px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
-  border: none;
 `
 
 export const ResultContainer = styled.div`
