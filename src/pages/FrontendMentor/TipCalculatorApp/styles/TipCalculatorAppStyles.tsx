@@ -69,6 +69,7 @@ export const TipGridBox = styled.div`
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   font-family: 'Space Mono';
+  font-size: 20px;
 `
 
 export const TipGridItem = styled.button`
