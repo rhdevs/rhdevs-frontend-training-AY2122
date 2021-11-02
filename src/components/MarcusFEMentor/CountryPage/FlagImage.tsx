@@ -1,7 +1,7 @@
 import React from 'react'
 
+import { Country } from '../../../store/MarcusFEMentor/types'
 import { FlagImageStyle } from '../styles/CountryPage.styled'
-import { Country } from '../../../pages/FrontendMentor/MarcusFEMentor/countries'
 
 type Props = {
   country: Country

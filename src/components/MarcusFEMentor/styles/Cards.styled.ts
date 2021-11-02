@@ -1,3 +1,4 @@
+import { Card } from 'antd'
 import styled from 'styled-components'
 
 export const CountriesDiv = styled.div`
@@ -7,7 +8,12 @@ export const CountriesDiv = styled.div`
   margin: 0 42.5px;
 `
 
-export const StyledCardDiv = styled.div`
+export const CardImage = styled.img`
+  border: 1px solid #dadada;
+`
+
+export const StyledCard = styled(Card)`
+  box-shadow: 2px 2px 5px gray;
   width: 264px;
   height: 336px;
   margin: 37.5px;
@@ -15,8 +21,4 @@ export const StyledCardDiv = styled.div`
   :focus {
     transform: scale3d(1.05, 1.05, 1.1);
   }
-`
-
-export const CardImage = styled.img`
-  border: 1px solid #dadada;
 `

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 import Title from '../../../components/MarcusFEMentor/Title'
-import { Country } from './countries'
 import BackButton from '../../../components/MarcusFEMentor/BackButton'
 import CountryInfoBox from '../../../components/MarcusFEMentor/CountryPage/CountryInfoBox'
 import FlagImage from '../../../components/MarcusFEMentor/CountryPage/FlagImage'
-import LoadingPage from './LoadingPage'
 import ErrorPage from './ErrorPage'
+import { RootState } from '../../../store/types'
+import { getContents } from '../../../store/MarcusFEMentor/actions'
+
 import { TitleContainerBuffer } from '../../../components/MarcusFEMentor/styles/Title.styled'
 import { CountryPageContentDiv } from '../../../components/MarcusFEMentor/styles/CountryPage.styled'
 
@@ -20,19 +22,11 @@ const CountryPage = (props: Props) => {
     window.scrollTo(0, 0)
   }, [])
 
-  const [found, setFound] = useState<boolean>(true)
-  const [country, setCountry] = useState<Country | null>(null)
-
-  const getContents = async () => {
-    const url = `https://restcountries.com/v3.1/name/${props.countryName}?fullText=true`
-    const response = await fetch(url)
-    const json = await response.json()
-    !response.ok && setFound(false)
-    setCountry(json[0])
-  }
+  const { json } = useSelector((state: RootState) => state.marcusFEMentor)
+  const country = json.find((cnt) => cnt.name.common === props.countryName)
 
   useEffect(() => {
-    getContents()
+    !json && getContents()
   }, [])
 
   return (
@@ -47,8 +41,6 @@ const CountryPage = (props: Props) => {
             <CountryInfoBox country={country} />
           </CountryPageContentDiv>
         </>
-      ) : found ? (
-        <LoadingPage />
       ) : (
         <ErrorPage />
       )}

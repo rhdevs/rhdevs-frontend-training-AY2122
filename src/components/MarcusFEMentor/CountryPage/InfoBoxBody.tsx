@@ -1,5 +1,6 @@
 import React from 'react'
-import { Country } from '../../../pages/FrontendMentor/MarcusFEMentor/countries'
+
+import { Country } from '../../../store/MarcusFEMentor/types'
 import InfoBoxEntry from './InfoBoxEntry'
 import { InfoBoxBodyDiv } from '../styles/CountryPage.styled'
 

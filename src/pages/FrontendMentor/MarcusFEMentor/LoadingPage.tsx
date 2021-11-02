@@ -1,7 +1,8 @@
 import React from 'react'
+
+import Title from '../../../components/MarcusFEMentor/Title'
 import BackButton from '../../../components/MarcusFEMentor/BackButton'
 import { TitleContainerBuffer } from '../../../components/MarcusFEMentor/styles/Title.styled'
-import Title from '../../../components/MarcusFEMentor/Title'
 
 const LoadingPage = () => {
   return (

@@ -1,29 +1,43 @@
 import React from 'react'
-import { Button, Dropdown, Menu } from 'antd'
+import { useSelector } from 'react-redux'
+import { Button, Menu } from 'antd'
 import { DownOutlined } from '@ant-design/icons'
-import { RegionsDropdownStyle } from './styles/FiltersDiv.styled'
 
-const RegionsDropdown = () => {
-  const regions = ['Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']
+import { Country } from '../../store/MarcusFEMentor/types'
+import { RootState } from '../../store/types'
+import { StyledRegionsDropdown } from './styles/FiltersDiv.styled'
+
+type Props = {
+  setCountries: React.Dispatch<React.SetStateAction<Country[] | undefined>>
+}
+
+const RegionsDropdown = (props: Props) => {
+  const { json } = useSelector((state: RootState) => state.marcusFEMentor)
+  const setCountries = props.setCountries
+  const regions = ['All', 'Africa', 'Asia', 'Europe', 'Americas', 'Oceania']
   const menu = (
     <Menu>
       {regions.map((region) => (
         <Menu.Item key={region}>
-          <a>{region}</a>
+          <a
+            onClick={() =>
+              setCountries(region === 'All' ? json : json?.filter((country) => country.region === region) ?? [])
+            }
+          >
+            {region}
+          </a>
         </Menu.Item>
       ))}
     </Menu>
   )
 
   return (
-    <RegionsDropdownStyle>
-      <Dropdown overlay={menu}>
-        <Button>
-          Filter by Region
-          <DownOutlined />
-        </Button>
-      </Dropdown>
-    </RegionsDropdownStyle>
+    <StyledRegionsDropdown overlay={menu}>
+      <Button>
+        Filter by Region
+        <DownOutlined />
+      </Button>
+    </StyledRegionsDropdown>
   )
 }
 

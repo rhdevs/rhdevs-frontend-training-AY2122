@@ -1,10 +1,11 @@
 import React from 'react'
-import { Button } from 'antd'
-
+import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
+
 import { PATHS } from '../../../routes/PATHS'
-import countries, { Country } from '../../../pages/FrontendMentor/MarcusFEMentor/countries'
-import { BorderCountriesDiv, BorderCountriesLinksStyle } from '../styles/CountryPage.styled'
+import { Country } from '../../../store/MarcusFEMentor/types'
+import { RootState } from '../../../store/types'
+import { BorderCountriesDiv, StyledBorderCountriesLinks } from '../styles/CountryPage.styled'
 
 type Props = {
   country: Country
@@ -12,22 +13,21 @@ type Props = {
 
 const BorderCountriesLinks = (props: Props) => {
   const history = useHistory()
+  const { json } = useSelector((state: RootState) => state.marcusFEMentor)
   const borders: string[] | null = props.country.borders
-  const borderCountries: Country[] = countries.filter((country) => borders?.includes(country.cca3))
+  const borderCountries: Country[] = json.filter((country) => borders?.includes(country.cca3))
   return (
     <BorderCountriesDiv>
       <strong>Border Countries: </strong>
       {borderCountries?.map((border) => (
-        <Button
+        <StyledBorderCountriesLinks
           key={border.cca3}
           onClick={() => {
             history.push(`${PATHS.MARCUS_FE_MENTOR}/${border.name.common}`)
-            window.location.reload() // by default page won't load from country link btn without this
           }}
-          style={BorderCountriesLinksStyle}
         >
           {border.name.common}
-        </Button>
+        </StyledBorderCountriesLinks>
       ))}
     </BorderCountriesDiv>
   )

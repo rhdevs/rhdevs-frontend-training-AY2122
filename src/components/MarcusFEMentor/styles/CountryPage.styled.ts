@@ -1,6 +1,7 @@
-import React from 'react'
+import { Button } from 'antd'
 import styled from 'styled-components'
 
+const flagWidth = '560px'
 const infoboxFontSize = '16px'
 
 export const CountryPageContentDiv = styled.div`
@@ -10,22 +11,32 @@ export const CountryPageContentDiv = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin: 160px 10vw;
+  @media (max-width: 1440px) {
+    flex-direction: column;
+  }
 `
 
-export const BackButtonStyle: React.CSSProperties = {
-  position: 'fixed',
-  width: '136px',
-  height: '40px',
-  left: '80px',
-  top: '120px',
-  zIndex: 3,
-}
+export const StyledBackButton = styled(Button)`
+  position: fixed;
+  width: 136px;
+  height: 40px;
+  left: 80px;
+  top: 120px;
+  z-index: 3;
+`
 
 export const FlagImageStyle = styled.img`
-  width: 560px;
+  width: ${flagWidth};
   height: 401px;
   margin: auto;
   margin-left: 0;
+  @media (max-width: 1440px) {
+    margin: auto;
+  }
+  @media (max-width: calc(${flagWidth}*1.3)) {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 export const CountryInfoBoxDiv = styled.div`
@@ -34,6 +45,10 @@ export const CountryInfoBoxDiv = styled.div`
   margin-right: 0;
   padding-left: 5vw;
   padding-right: 5vw;
+  @media (max-width: 1440px) {
+    margin: auto;
+    width: 80%;
+  }
 `
 
 export const InfoBoxTitle = styled.h1`
@@ -54,6 +69,6 @@ export const BorderCountriesDiv = styled.div`
   font-size: ${infoboxFontSize};
 `
 
-export const BorderCountriesLinksStyle: React.CSSProperties = {
-  margin: '7px',
-}
+export const StyledBorderCountriesLinks = styled(Button)`
+  margin: 7px;
+`
