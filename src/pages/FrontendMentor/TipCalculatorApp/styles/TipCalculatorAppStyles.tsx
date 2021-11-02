@@ -93,6 +93,16 @@ export const TipGridItem = styled.button`
   border-radius: 3px;
   font-weight: 700;
   text-align: center;
+  border: none;
+`
+
+export const TipGridCustomItem = styled.button`
+  background: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+  border-radius: 3px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
 `
 
 export const ResultContainer = styled.div`
@@ -165,4 +175,5 @@ export const ResetButton = styled.button`
   color: hsl(183, 100%, 15%);
   font-weight: 700;
   font-size: 18px;
+  border: none;
 `

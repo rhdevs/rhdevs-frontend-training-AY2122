@@ -22,6 +22,7 @@ import {
   PerHeader,
   Amount,
   NumbersContainer,
+  TipGridCustomItem,
 } from './styles/TipCalculatorAppStyles'
 import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
 import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
@@ -52,7 +53,7 @@ const TipCalculatorApp = () => {
                 <TipGridItem>15%</TipGridItem>
                 <TipGridItem>25%</TipGridItem>
                 <TipGridItem>50%</TipGridItem>
-                <TipGridItem>Custom</TipGridItem>
+                <TipGridCustomItem>Custom</TipGridCustomItem>
               </TipGridBox>
             </ItemContainer>
             <ItemContainer>
