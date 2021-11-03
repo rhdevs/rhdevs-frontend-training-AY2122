@@ -1,6 +1,4 @@
-import { Content } from 'antd/lib/layout/layout'
 import styled from 'styled-components'
-import { preProcessFile } from 'typescript'
 
 export const MainPage = styled.div`
   min-height: 100vh;
@@ -29,49 +27,49 @@ export const MiddleContainer = styled.div`
 `
 
 export const JoinCommText1 = styled.div`
-  color: 239593;
+  color: hsl(179, 62%, 43%);
   font-size: 30px;
-  margin: 0 100px;
+  font-weight: bold;
+  padding: 30px 100px 30px 100px;
 `
 export const JoinCommText2 = styled.div`
-  color: #ded02b;
+  color: hsl(71, 73%, 54%);
   font-size: 16px;
+  font-weight: bold;
   margin: 0 100px;
 `
 export const JoinCommText3 = styled.div`
-  color: #9b9a8e;
+  color: hsl(218, 22%, 67%);
   font-size: 16px;
   margin: 0 100px;
 `
 export const BottomLeftContainer = styled.div`
-  background-color: #2db3a3;
+  background-color: hsl(179, 62%, 43%);
   width: 50%;
   height: 40vh;
   border-radius: 8px;
   box-shadow: 0px 0px 14px 1px #00000024;
 `
 export const BottomLeftMonthly = styled.div`
-  color: white;
+  color: hsl(204, 43%, 93%);
   font-size: 16px;
-  margin: auto;
-  margin-left: 10%;
+  padding: 20px 50px;
 `
 export const BottomLeftPrice = styled.div`
-  color: #fcfeff;
+  color: hsl(204, 43%, 93%);
   font-size: 30px;
-  margin: auto;
-  margin-left: 10%;
+  padding: 0px 50px;
   font-weight: bold;
 `
 export const BottomLeftPerMonth = styled.div`
-  color: #d4d7d9;
+  color: hsl(204, 43%, 93%);
   font-size: 16px;
+  padding: 15px 0px;
 `
 export const BottomLeftFullAccess = styled.div`
-  color: white;
+  color: hsl(204, 43%, 93%);
   font-size: 12px;
-  margin: auto;
-  margin-left: 10%;
+  padding: 0px 50px;
 `
 export const PriceAndPerMonth = styled.div`
   flex-direction: row;
@@ -80,23 +78,21 @@ export const PriceAndPerMonth = styled.div`
   text-align: center;
 `
 export const BottomRightContainer = styled.div`
-  background-color: #38e0cd;
+  background-color: hsl(179, 62%, 48%);
   width: 50%;
   height: 40vh;
   border-radius: 8px;
   box-shadow: 0px 0px 14px 1px #00000024;
 `
 export const BottomRightShort = styled.div`
-  color: #fcfeff;
+  color: hsl(204, 43%, 93%);
   font-size: 20px;
-  margin: auto;
-  margin-left: 10%;
+  padding: 20px 50px 8px 50px;
 `
 export const BottomRightLong = styled.div`
-  color: #d4d7d9;
+  color: hsl(204, 43%, 93%);
   font-size: 12px;
-  margin: auto;
-  margin-left: 10%;
+  padding: 0px 50px;
 `
 
 export const SignUpButton = styled.div`

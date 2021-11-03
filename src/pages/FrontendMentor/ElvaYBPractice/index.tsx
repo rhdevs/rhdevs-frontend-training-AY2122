@@ -1,4 +1,3 @@
-import { Content } from 'antd/lib/layout/layout'
 import { Button } from 'antd'
 import React from 'react'
 import {
@@ -26,11 +25,13 @@ const ElvaYBPractice = () => {
     <MainPage>
       <MainContainer>
         <MiddleContainer>
-          <JoinCommText1> Join our community</JoinCommText1>
+          <JoinCommText1>Join our community</JoinCommText1>
           <JoinCommText2>30-day, hassle-free money back guarantee</JoinCommText2>
           <JoinCommText3>
-            Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who
-            are serious about honing their skills
+            <br />
+            Gain access to our full library of tutorials along with expert code reviews.
+            <br />
+            Perfect for any developers who are serious about honing their skills.
           </JoinCommText3>
         </MiddleContainer>
         <BottomContainer>
@@ -46,10 +47,18 @@ const ElvaYBPractice = () => {
             </SignUpButton>
           </BottomLeftContainer>
           <BottomRightContainer>
-            <BottomRightShort> Why Us </BottomRightShort>
+            <BottomRightShort>Why Us</BottomRightShort>
             <BottomRightLong>
-              Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos
-              Community Forum Flashcard decks New videos every week
+              <br />
+              Tutorials by industry experts
+              <br />
+              Peer & expert code review Coding exercises
+              <br />
+              Access to our GitHub repos
+              <br />
+              Community Forum Flashcard decks
+              <br />
+              New videos every week
             </BottomRightLong>
           </BottomRightContainer>
         </BottomContainer>
