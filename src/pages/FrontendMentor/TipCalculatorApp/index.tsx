@@ -28,6 +28,8 @@ import {
   Amount,
   NumbersContainer,
   InputCustomAmountField,
+  ItemHeaderContainer,
+  Warning,
 } from './styles/TipCalculatorAppStyles'
 import DollarIcon from '../../../assets/TipCalculatorApp/icon-dollar.svg'
 import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
@@ -50,6 +52,8 @@ export default function TipCalculatorApp() {
   const handleSetCustomAmount = (e: ChangeEvent<HTMLInputElement>) => {
     setCustomAmount(e.target.valueAsNumber)
   }
+
+  const errorString = "Can't be zero"
 
   return (
     <MainContainer>
@@ -139,7 +143,10 @@ export default function TipCalculatorApp() {
               </TipGridBox>
             </ItemContainer>
             <ItemContainer>
-              <ItemHeader>Number of people</ItemHeader>
+              <ItemHeaderContainer>
+                <ItemHeader>Number of people</ItemHeader>
+                {newPeopleAmount === 0 && <Warning>{errorString}</Warning>}
+              </ItemHeaderContainer>
               <InputPeopleContainer peopleAmount={newPeopleAmount}>
                 <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
                 <form>

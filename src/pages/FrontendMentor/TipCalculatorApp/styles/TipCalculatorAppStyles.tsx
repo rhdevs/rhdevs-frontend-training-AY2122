@@ -49,14 +49,25 @@ export const InteractionContainer = styled.div`
   width: 40%;
 `
 
+export const ItemContainer = styled.div`
+  padding-top: 0.5vh;
+`
+
+export const ItemHeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 export const ItemHeader = styled.div`
   font-weight: bold;
   color: hsl(186, 14%, 43%);
   padding-bottom: 1vh;
 `
 
-export const ItemContainer = styled.div`
-  padding-top: 0.5vh;
+export const Warning = styled.div`
+  color: red;
+  font-family: 'Space Mono';
+  font-weight: bold;
 `
 
 export const InputContainer = styled.div`
