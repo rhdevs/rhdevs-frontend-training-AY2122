@@ -90,6 +90,8 @@ export const ButtonContainer = styled.button`
   border: none;
   size: 50px;
   font-size: 20px;
+  font: Poppins;
+  font-weight: 400px;
   color: hsl(300, 69%, 71%);
   cursor: pointer;
   display: block;
@@ -108,13 +110,12 @@ export const SocialIcons = styled.button`
   &:hover {
     color: hsl(300, 69%, 71%);
     border-color: hsl(300, 69%, 71%);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   cursor: pointer;
   height: 40px;
   overflow: hidden;
   width: 40px;
-  font: 40px;
+  font-size: 18px;
   border-radius: 50%;
   border: 2px solid white;
   margin: 0px 10px 20px 10px;
