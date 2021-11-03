@@ -14,7 +14,7 @@ export const MainContainer = styled.div`
 `
 export const TopBackground = styled.img`
   z-index: 1;
-  height: 75vh;
+  height: 90vh;
   width: 60vw;
   left: -10vw;
   top: -40vh;
@@ -22,7 +22,7 @@ export const TopBackground = styled.img`
 `
 export const BottomBackground = styled.img`
   z-index: 1;
-  height: 75vh;
+  height: 90vh;
   width: 60vw;
   right: -10vw;
   bottom: -40vh;
@@ -31,7 +31,7 @@ export const BottomBackground = styled.img`
 export const ProfileCardContainer = styled.div`
   z-index: 2;
   height: 60vh;
-  width: 55vh;
+  width: calc(35vh + 15vw);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@ export const ProfileCardBottom = styled.div`
   overflow: hidden;
   width: 100%;
   height: 30%;
-  border-top: 0.2vh solid black;
+  border-top: 0.1vh solid grey;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
