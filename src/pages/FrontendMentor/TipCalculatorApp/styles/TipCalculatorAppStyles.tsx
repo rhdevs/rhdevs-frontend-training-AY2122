@@ -95,7 +95,7 @@ export const InputPeopleContainer = styled.div<{ peopleAmount: number }>`
   vertical-align: center;
   ${(props) => props.peopleAmount === 0 && 'border: solid red 1px;'}
   &:hover {
-    border: hsl(172, 67%, 45%) solid 1px;
+    border: ${(props) => (props.peopleAmount === 0 ? 'border: solid red 1px;' : 'hsl(172, 67%, 45%) solid 1px')};
   }
 `
 
