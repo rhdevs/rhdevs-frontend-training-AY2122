@@ -50,7 +50,7 @@ export const Rows = styled.div`
 `
 
 export const HeaderText = styled.div`
-  padding: 20px 50px;
+  padding: 5px 50px;
   display: flex;
   font-family: Poppins;
   font-weight: 600;
@@ -58,18 +58,21 @@ export const HeaderText = styled.div`
   color: white;
   @media (max-width: 768px) {
     text-align: center;
+    padding: 80px 20px 10px 20px;
+    font-size: 30px;
   }
 `
 
 export const BodyText = styled.div`
-  padding: 30px 50px;
+  padding: 5px 50px;
   display: flex;
-  font-family: Poppins;
+  font-family: Open Sans;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   @media (max-width: 768px) {
     text-align: center;
+    padding: 20px 15px 40px 15px;
   }
 `
 export const ButtonContainer = styled.button`
@@ -83,15 +86,17 @@ export const ButtonContainer = styled.button`
   }
   border: none;
   size: 50px;
-  font-size: 30px;
+  font-size: 20px;
   color: hsl(300, 69%, 71%);
   cursor: pointer;
   display: block;
-  width: 40%;
-  padding: 20px 0px;
-  margin: 0px 0px 0px 50px;
+  width: 35%;
+  padding: 10px 0px;
+  margin: 20px 0px 0px 50px;
   @media (max-width: 768px) {
     margin: 0px 0px 100px 0px;
+    width: 60%;
+    font-size: 18px;
   }
 `
 export const SocialIcons = styled.button`
@@ -109,12 +114,15 @@ export const SocialIcons = styled.button`
   font: 40px;
   border-radius: 50%;
   border: 2px solid white;
-  margin: 0px 0px 20px 20px;
+  margin: 0px 10px 20px 10px;
 `
 
 export const IconRows = styled.div`
-  padding: 10px 50px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `
