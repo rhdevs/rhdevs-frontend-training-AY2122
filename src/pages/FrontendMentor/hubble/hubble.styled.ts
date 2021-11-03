@@ -30,7 +30,7 @@ export const LColumn = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     img {
-      max-width: 80%;
+      max-width: 95%;
     }
   }
 `
@@ -38,10 +38,13 @@ export const LogoBox = styled.div`
   height: 100%;
   width: 100%;
   margin: auto;
+  img {
+    max-width: 35%;
+  }
 `
 
 export const Rows = styled.div`
-  padding: 10px 50px;
+  padding: 35px 50px;
   display: flex;
   flex-direction: row;
   @media (max-width: 768px) {
@@ -58,7 +61,7 @@ export const HeaderText = styled.div`
   color: white;
   @media (max-width: 768px) {
     text-align: center;
-    padding: 80px 20px 10px 20px;
+    padding: 50px 20px 15px 20px;
     font-size: 30px;
   }
 `
@@ -94,7 +97,7 @@ export const ButtonContainer = styled.button`
   padding: 10px 0px;
   margin: 20px 0px 0px 50px;
   @media (max-width: 768px) {
-    margin: 0px 0px 100px 0px;
+    margin: 0px 0px 80px 0px;
     width: 60%;
     font-size: 18px;
   }
