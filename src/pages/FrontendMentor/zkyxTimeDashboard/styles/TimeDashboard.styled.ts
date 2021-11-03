@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import WorkIcon from '../images/icon-work.svg'
 
 export const Background = styled.div`
-  position: fixed;
+  position: absolute;
   margin: 0;
   top: 50%;
   left: 50%;
@@ -92,6 +92,14 @@ export const UserCard = styled.div`
   width: 100%;
   height: 100%;
   background-color: #1c1f4a;
+  @media (max-width: 768px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    flex-direction: column;
+    display: flex;
+  }
 `
 export const UserCardImage = styled.img`
   max-width: 40%;
@@ -99,6 +107,9 @@ export const UserCardImage = styled.img`
   margin-bottom: 0.8rem;
   border-style: solid;
   border-color: #f5f5f5;
+  @media (max-width: 768px) {
+    border-radius: 80px;
+  }
 `
 
 export const UserInfoCard = styled.div`
@@ -106,10 +117,18 @@ export const UserInfoCard = styled.div`
   border-radius: 20px;
   padding: 1.5rem;
   padding-bottom: 2rem;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
 `
 export const LegendCard = styled.div`
   border-radius: 20px;
   padding: 1.5rem;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
 `
 
 export const LegendTextSelector = styled.h2`
@@ -136,6 +155,11 @@ export const DashboardContainer = styled.div`
   position: center;
   border-radius: 20px;
   justify-content: center;
+  @media (max-width: 768px) {
+    margin-top: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 `
 
 export const CardContainer = styled.div`
