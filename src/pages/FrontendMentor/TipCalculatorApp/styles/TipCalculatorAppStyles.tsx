@@ -69,8 +69,7 @@ export const InputContainer = styled.div`
   border-radius: 3px;
   vertical-align: center;
   &:hover {
-    border-style: solid;
-    border-color: hsl(172, 67%, 45%);
+    border: hsl(172, 67%, 45%) solid 1px;
   }
 `
 
@@ -83,10 +82,9 @@ export const InputPeopleContainer = styled.div<{ peopleAmount: number }>`
   background: hsl(189, 41%, 97%);
   border-radius: 3px;
   vertical-align: center;
-  ${(props) => props.peopleAmount === 0 && 'border: solid red;'}
+  ${(props) => props.peopleAmount === 0 && 'border: solid red 1px;'}
   &:hover {
-    border-style: solid;
-    border-color: hsl(172, 67%, 45%);
+    border: hsl(172, 67%, 45%) solid 1px;
   }
 `
 
@@ -149,8 +147,7 @@ export const InputCustomAmountField = styled.input`
   font-weight: 700;
   text-align: center;
   &:hover {
-    border-style: solid;
-    border-color: hsl(172, 67%, 45%);
+    border: hsl(172, 67%, 45%) solid 1px;
   }
 `
 
