@@ -69,9 +69,7 @@ export default function TipCalculatorApp() {
                     value={newBillAmount}
                     type="number"
                     placeholder={billAmount.toString()}
-                    onChange={(e) => {
-                      handleNewBillAmount(e)
-                    }}
+                    onChange={(e) => handleNewBillAmount(e)}
                   />
                 </form>
               </InputContainer>
@@ -126,13 +124,11 @@ export default function TipCalculatorApp() {
                 </TipGridItem>
                 <form>
                   <InputCustomAmountField
-                    value={customAmount}
+                    value={customAmount === 0 ? '' : customAmount}
                     type="number"
                     placeholder="Custom"
-                    onChange={(e) => {
-                      handleSetCustomAmount(e)
-                    }}
-                    onClick={() => {
+                    onChange={(e) => handleSetCustomAmount(e)}
+                    onBlur={() => {
                       dispatch(SetBillAmount(newBillAmount))
                       dispatch(SetPeopleAmount(newPeopleAmount))
                       dispatch(SetTipAmount(customAmount))
@@ -150,9 +146,7 @@ export default function TipCalculatorApp() {
                     value={newPeopleAmount}
                     type="number"
                     placeholder={peopleAmount.toString()}
-                    onChange={(e) => {
-                      handleNewPeopleAmount(e)
-                    }}
+                    onChange={(e) => handleNewPeopleAmount(e)}
                   />
                 </form>
               </InputContainer>
