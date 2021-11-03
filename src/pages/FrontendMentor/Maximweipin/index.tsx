@@ -3,8 +3,6 @@ import {
   FullScreenContainer,
   StyledHeader,
   StyledParagraph,
-  StyledSubheader,
-  StyledImg,
   MainContainer1,
   MainContainer2,
   MainContainer3,
@@ -37,8 +35,8 @@ const Lesson1Example = () => {
         <StyledLogo src={suvs} />
         <StyledHeader>SUVs</StyledHeader>
         <StyledParagraph>
-          Take an SUV for its spacious interior, power, and verstality. Perfect for your next family vacation and
-          off-road adventures
+          Take an SUV for its spacious interior, power, and verstality. Perfect for your future family vacation and
+          off-road adventures.
         </StyledParagraph>
         <Button type="primary" style={RoundButton2}>
           Learn more

@@ -8,12 +8,14 @@ export const FullScreenContainer = styled.div`
   position: relative;
   width: 70%;
   left: 15%;
-  border-radius: 5px;
   padding-top: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 export const MainContainer1 = styled.div`
-  height: 500px;
-  flex-direction: column;
+  height: 90%,
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
@@ -21,8 +23,7 @@ export const MainContainer1 = styled.div`
   border-radius: 5px;
 `
 export const MainContainer2 = styled.div`
-  height: 500px;
-  flex-direction: column;
+  height: 90%,
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
@@ -30,8 +31,7 @@ export const MainContainer2 = styled.div`
   border-radius: 5px;
 `
 export const MainContainer3 = styled.div`
-  height: 500px;
-  flex-direction: column;
+  height: 90%,
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
@@ -41,7 +41,7 @@ export const MainContainer3 = styled.div`
 export const StyledHeader = styled.p`
   font-family: 'Lexend Deca';
   margin: 2rem;
-  font-size: 40px;
+  font-size: 36px;
   vertical-align: middle;
   color: #ffffff;
 `
@@ -49,17 +49,9 @@ export const StyledParagraph = styled.p`
   text-align: justify;
   margin: 2rem;
   font-family: 'Lexend Deca';
-  font-size: 10;
+  font-size: calc(10px);
   color: #ffffff;
-  border-radius: 5px;
-`
-export const StyledSubheader = styled.h2`
-  margin: 1rem 0 0 0;
-  font-family: 'Lexend Deca';
-  color: #ffffff;
-`
-export const StyledImg = styled.img`
-  border-radius: 10px;
+  line-height: 2.5;
 `
 export const StyledLogo = styled.img`
   width: 100px;
@@ -67,35 +59,37 @@ export const StyledLogo = styled.img`
   padding: 5px;
   position: relative;
 `
-
 export const RoundButton1 = {
-  width: '200px',
-  height: '60px',
+  width: '150px',
+  height: '45px',
   borderRadius: 100,
   backgroundColor: '#fff',
   color: '#e28525',
   alignItems: 'center',
-  marginLeft: '50px',
+  marginLeft: '2rem',
+  marginTop: '1rem',
+  'font-size': '20px',
 }
-
 export const RoundButton2 = {
-  width: '200px',
-  height: '60px',
+  width: '150px',
+  height: '45px',
   borderRadius: 100,
   backgroundColor: '#fff',
   color: '#016972',
   alignItems: 'center',
-  marginLeft: '60px',
-  marginTop: '20px',
+  marginLeft: '2rem',
+  marginTop: '1rem',
+  'font-size': '20px',
 }
 
 export const RoundButton3 = {
-  width: '200px',
-  height: '60px',
+  width: '150px',
+  height: '45px',
   borderRadius: 100,
   backgroundColor: '#fff',
   color: '#00403f',
   alignItems: 'center',
-  marginLeft: '70px',
-  marginTop: '20px',
+  marginLeft: '2rem',
+  marginTop: '1rem',
+  'font-size': '20px',
 }
