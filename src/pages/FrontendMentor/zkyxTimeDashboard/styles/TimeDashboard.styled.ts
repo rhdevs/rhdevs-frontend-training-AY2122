@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import WorkIcon from '../images/icon-work.svg'
 
 export const Background = styled.div`
-  position: fixed;
+  position: absolute;
   margin: 0;
   top: 50%;
   left: 50%;
@@ -136,6 +136,11 @@ export const DashboardContainer = styled.div`
   position: center;
   border-radius: 20px;
   justify-content: center;
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `
 
 export const CardContainer = styled.div`
