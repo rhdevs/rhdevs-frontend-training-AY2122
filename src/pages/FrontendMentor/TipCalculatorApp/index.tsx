@@ -131,6 +131,8 @@ export default function TipCalculatorApp() {
                     placeholder="Custom"
                     onChange={(e) => {
                       handleSetCustomAmount(e)
+                    }}
+                    onClick={() => {
                       dispatch(SetBillAmount(newBillAmount))
                       dispatch(SetPeopleAmount(newPeopleAmount))
                       dispatch(SetTipAmount(customAmount))
