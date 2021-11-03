@@ -9,7 +9,9 @@ import {
   MainContainer2,
   MainContainer3,
   StyledLogo,
-  AddButtonStyle,
+  RoundButton1,
+  RoundButton2,
+  RoundButton3,
 } from './styles/styled'
 import { Button } from 'antd'
 import styled from 'styled-components'
@@ -24,10 +26,10 @@ const Lesson1Example = () => {
         <StyledLogo src={sedans} />
         <StyledHeader>Sedans</StyledHeader>
         <StyledParagraph>
-          Choose a sedan for its affordability and excellent fuel economy. Ideal for curising in the city or on your
-          next road trip
+          Choose a sedan for its testy and excellent fuel economy. Ideal for curising in the city or on your next road
+          trip
         </StyledParagraph>
-        <Button type="primary" style={AddButtonStyle}>
+        <Button type="primary" style={RoundButton1}>
           Learn more
         </Button>
       </MainContainer1>
@@ -38,7 +40,7 @@ const Lesson1Example = () => {
           Take an SUV for its spacious interior, power, and verstality. Perfect for your next family vacation and
           off-road adventures
         </StyledParagraph>
-        <Button type="primary" style={AddButtonStyle}>
+        <Button type="primary" style={RoundButton2}>
           Learn more
         </Button>
       </MainContainer2>
@@ -49,7 +51,7 @@ const Lesson1Example = () => {
           Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and
           arrive in a style.
         </StyledParagraph>
-        <Button type="primary" style={AddButtonStyle}>
+        <Button type="primary" style={RoundButton3}>
           Learn more
         </Button>
       </MainContainer3>

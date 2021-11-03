@@ -9,6 +9,7 @@ export const FullScreenContainer = styled.div`
   width: 70%;
   left: 15%;
   border-radius: 5px;
+  padding-top: 100px;
 `
 export const MainContainer1 = styled.div`
   height: 500px;
@@ -16,7 +17,7 @@ export const MainContainer1 = styled.div`
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
-  background-color: rgb(238, 183, 124);
+  background-color: rgb(226, 133, 37);
   border-radius: 5px;
 `
 export const MainContainer2 = styled.div`
@@ -25,7 +26,7 @@ export const MainContainer2 = styled.div`
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
-  background-color: rgb(0, 105, 112);
+  background-color: rgb(1, 105, 114);
   border-radius: 5px;
 `
 export const MainContainer3 = styled.div`
@@ -34,7 +35,7 @@ export const MainContainer3 = styled.div`
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
-  background-color: rgb(0, 66, 65);
+  background-color: rgb(0, 64, 63);
   border-radius: 5px;
 `
 export const StyledHeader = styled.p`
@@ -66,4 +67,35 @@ export const StyledLogo = styled.img`
   padding: 5px;
   position: relative;
 `
-export const AddButtonStyle = { width: '140px', margin: '2rem' }
+
+export const RoundButton1 = {
+  width: '200px',
+  height: '60px',
+  borderRadius: 100,
+  backgroundColor: '#fff',
+  color: '#e28525',
+  alignItems: 'center',
+  marginLeft: '50px',
+}
+
+export const RoundButton2 = {
+  width: '200px',
+  height: '60px',
+  borderRadius: 100,
+  backgroundColor: '#fff',
+  color: '#016972',
+  alignItems: 'center',
+  marginLeft: '60px',
+  marginTop: '20px',
+}
+
+export const RoundButton3 = {
+  width: '200px',
+  height: '60px',
+  borderRadius: 100,
+  backgroundColor: '#fff',
+  color: '#00403f',
+  alignItems: 'center',
+  marginLeft: '70px',
+  marginTop: '20px',
+}
