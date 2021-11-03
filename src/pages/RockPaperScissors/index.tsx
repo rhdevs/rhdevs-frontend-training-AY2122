@@ -22,6 +22,7 @@ import {
   Overlay,
   MobileResultContainer,
   ResultWrapper,
+  ResultText,
 } from './styles/RockPaperScissors.styled'
 import titleIcon from '../../assets/RockPaperScissors/logo-bonus.svg'
 import scissorsIcon from '../../assets/RockPaperScissors/icon-scissors.svg'
@@ -136,7 +137,7 @@ const RockPaperScissors = () => {
     <ResultStateContainer>
       {renderPickContainer('YOU PICKED', currentSelection)}
       <ResultContainer>
-        <PickText>{getResultText()}</PickText>
+        <ResultText>{getResultText()}</ResultText>
         <PlayButton onClick={() => handleReset()}>PLAY AGAIN</PlayButton>
       </ResultContainer>
       {renderPickContainer('THE HOUSE PICKED', comSelection)}
@@ -145,7 +146,7 @@ const RockPaperScissors = () => {
 
   const renderMobileDesktopContainer = () => (
     <MobileResultContainer>
-      <PickText>{getResultText()}</PickText>
+      <ResultText>{getResultText()}</ResultText>
       <PlayButton onClick={() => handleReset()}>PLAY AGAIN</PlayButton>
     </MobileResultContainer>
   )

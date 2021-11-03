@@ -113,6 +113,10 @@ export const PickText = styled.div`
   }
 `
 
+export const ResultText = styled.div`
+  font-size: 2rem;
+`
+
 export const PickStateContainer = styled.div`
   width: 100%;
   display: flex;
