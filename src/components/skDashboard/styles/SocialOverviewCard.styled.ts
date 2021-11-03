@@ -23,7 +23,7 @@ export const StyledCard = styled.div`
     transform: scale3d(1.05, 1.05, 1.1);
   }
   @media (max-width: 768px) {
-    width: 75vw;
+    width: 100%;
   }
 `
 export const TopRow = styled.div`

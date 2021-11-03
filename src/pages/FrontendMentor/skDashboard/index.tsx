@@ -11,6 +11,7 @@ import {
   OverviewHeading,
   CardSection,
   StyledDarkMode,
+  LineSeparator,
 } from './styles/skDashboard.styled'
 
 import SocialMediaCard from '../../../components/skDashboard/SocialMediaCard'
@@ -21,7 +22,7 @@ import YoutubeIcon from '../../../assets/skDashboard/icon-youtube.svg'
 import SocialOverviewCard from '../../../components/skDashboard/SocialOverviewCard'
 
 const skDashboard = () => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }
@@ -34,14 +35,10 @@ const skDashboard = () => {
             Social Media Dashboard
             <FollowersCount>Total Followers: 23,000</FollowersCount>
           </DashboardHeader>
-          <hr
-            style={{
-              width: '100%',
-            }}
-          />
+          <LineSeparator />
           <StyledDarkMode>
-            DarkMode
-            <Switch onClick={themeToggler} />
+            Dark Mode
+            <Switch defaultChecked onClick={themeToggler} />
           </StyledDarkMode>
 
           <CardSection>

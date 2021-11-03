@@ -25,7 +25,7 @@ export const StyledCard = styled.div`
     transform: scale3d(1.05, 1.05, 1.1);
   }
   @media (max-width: 768px) {
-    width: 75vw;
+    width: 100%;
   }
 `
 
@@ -35,15 +35,15 @@ export const StyledIcon = styled.img`
 `
 
 export const StyledFollowerCount = styled.text`
-  font-size: calc(32px + 4vh);
-  font-weight: 700;
+  font-size: calc(24px + 4vh);
+  font-weight: 900;
   text-align: center;
   height: 6vh;
 `
 
 export const StyledNamesText = styled.text`
-  font-size: calc(16px + 0.5vh);
+  font-size: 12px;
   text-align: center;
-  letter-spacing: 0.4rem;
+  letter-spacing: 3px;
   color: ${({ theme }) => theme.text};
 `

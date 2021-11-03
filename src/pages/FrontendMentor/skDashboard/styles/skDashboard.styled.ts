@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { createGlobalStyle, DefaultTheme } from 'styled-components'
+//
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -13,11 +14,11 @@ declare module 'styled-components' {
 }
 
 export const darkTheme: DefaultTheme = {
-  body: '#363537',
-  text: 'hsl(228, 34%, 66%)',
+  body: 'hsl(230, 17%, 14%)',
+  text: 'hsl(0, 0%, 100%)',
   headingText: 'hsl(0, 0%, 100%)',
   toggleBorder: '#6B8096',
-  background: '#999',
+  background: 'hsl(230, 17%, 14%)',
   cardBackground: `hsl(228, 28%, 20%)`,
 }
 
@@ -34,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
   main {
     background: ${({ theme }) => `${theme.body} !important`};
     color: ${({ theme }) => theme.text};
-    /* font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif; */
+    font-family: 'Inter', Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
   }
   `
@@ -46,38 +47,58 @@ export const MainPage = styled.div`
   align-items: center;
   margin-left: 10vw;
   margin-right: 10vw;
+  margin-top: 2vh;
 `
 
 export const DashboardHeader = styled.div`
   color: ${({ theme }) => theme.headingText};
   align-self: flex-start;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
 `
 
 export const FollowersCount = styled.div`
   margin-top: -1vh;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 700;
   color: ${({ theme }) => theme.text};
+  margin-bottom: 1vh;
 `
 
-export const LineSeparator = styled.div``
+export const LineSeparator = styled.hr`
+  visibility: hidden;
+  @media (max-width: 768px) {
+    visibility: visible;
+    width: 100%;
+  }
+`
 
 export const StyledDarkMode = styled.div`
   display: flex;
   flex-direction: row;
-  font-weight: 500;
-  margin: 1vw;
-  justify-content: space-evenly;
+  font-size: 14px;
+  font-weight: 700;
   align-items: center;
-  width: 15vw;
+  width: 150px;
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    margin-right: 10vw;
+    justify-content: space-evenly;
+  }
+  @media (max-width: 768px) {
+    margin: 1vh;
+    margin-bottom: 3vh;
+    justify-content: space-between;
+    width: 100%;
+  }
 `
 
 export const OverviewHeading = styled.div`
   align-self: flex-start;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
   color: ${({ theme }) => theme.headingText};
 `
 export const CardSection = styled.div`
