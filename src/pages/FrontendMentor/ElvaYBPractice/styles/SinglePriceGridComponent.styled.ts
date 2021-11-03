@@ -49,23 +49,24 @@ export const BottomLeftContainer = styled.div`
   height: 40vh;
   border-radius: 8px;
   box-shadow: 0px 0px 14px 1px #00000024;
+  flex-direction: column;
+  align-items: center;
 `
 export const BottomLeftMonthly = styled.div`
   color: white;
   font-size: 16px;
-  margin: auto;
-  margin-left: 10%;
+  margin: auto 10%;
 `
 export const BottomLeftPrice = styled.div`
   color: #fcfeff;
   font-size: 30px;
-  margin: auto;
   margin-left: 10%;
   font-weight: bold;
 `
 export const BottomLeftPerMonth = styled.div`
   color: #d4d7d9;
   font-size: 16px;
+  margin-left: 5%;
 `
 export const BottomLeftFullAccess = styled.div`
   color: white;
@@ -78,6 +79,7 @@ export const PriceAndPerMonth = styled.div`
   display: flex;
   justify-content: flex-start;
   text-align: center;
+  align-items: center;
 `
 export const BottomRightContainer = styled.div`
   background-color: #38e0cd;
@@ -97,6 +99,7 @@ export const BottomRightLong = styled.div`
   font-size: 12px;
   margin: auto;
   margin-left: 10%;
+  white-space: pre-line;
 `
 
 export const SignUpButton = styled.div`
@@ -111,9 +114,10 @@ export const SignUpButton = styled.div`
   .ant-btn-primary {
     background-color: #dbed11;
     border-color: #72ba75;
-    width: 40%;
+    width: 80%;
     margin-top: 10px;
     border-radius: 10px;
+    height: 20%;
   }
   .ant-btn-primary:focus {
     background-color: #72ba75;

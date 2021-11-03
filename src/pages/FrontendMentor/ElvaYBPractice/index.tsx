@@ -38,7 +38,7 @@ const ElvaYBPractice = () => {
             <BottomLeftMonthly>Monthly subscription</BottomLeftMonthly>
             <PriceAndPerMonth>
               <BottomLeftPrice>$29</BottomLeftPrice>
-              <BottomLeftPerMonth>per month</BottomLeftPerMonth>
+              <BottomLeftPerMonth> per month</BottomLeftPerMonth>
             </PriceAndPerMonth>
             <BottomLeftFullAccess>Full access for less than $1 a day</BottomLeftFullAccess>
             <SignUpButton>
@@ -48,8 +48,11 @@ const ElvaYBPractice = () => {
           <BottomRightContainer>
             <BottomRightShort> Why Us </BottomRightShort>
             <BottomRightLong>
-              Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos
-              Community Forum Flashcard decks New videos every week
+              Tutorials by industry experts <br /> Peer & expert code review
+              <br /> Coding exercises
+              <br /> Access to our GitHub repos Community Forum
+              <br /> Flashcard decks
+              <br /> New videos every week
             </BottomRightLong>
           </BottomRightContainer>
         </BottomContainer>
