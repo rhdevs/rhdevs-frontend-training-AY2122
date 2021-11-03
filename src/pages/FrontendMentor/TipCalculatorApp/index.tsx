@@ -1,7 +1,13 @@
 import React, { ChangeEvent, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../store/types'
-import { Reset, SetBillAmount, SetPeopleAmount, SetTipAmount } from '../../../store/tipCalculatorApp/action'
+import {
+  Reset,
+  SetBillAmount,
+  SetPeopleAmount,
+  SetTipAmount,
+  SetTotalAmount,
+} from '../../../store/tipCalculatorApp/action'
 
 import {
   MainContainer,
@@ -36,7 +42,7 @@ import PersonIcon from '../../../assets/TipCalculatorApp/icon-person.svg'
 
 export default function TipCalculatorApp() {
   const dispatch = useDispatch()
-  const { billAmount, peopleAmount, tipAmount } = useSelector((state: RootState) => state.tipCalculatorApp)
+  const { billAmount, peopleAmount, tipAmount, totalAmount } = useSelector((state: RootState) => state.tipCalculatorApp)
   const [newBillAmount, setNewBillAmount] = useState(0)
   const [newPeopleAmount, setNewPeopleAmount] = useState(0)
   const [customAmount, setCustomAmount] = useState(0)
@@ -87,6 +93,7 @@ export default function TipCalculatorApp() {
                     dispatch(SetBillAmount(newBillAmount))
                     dispatch(SetPeopleAmount(newPeopleAmount))
                     dispatch(SetTipAmount(5))
+                    dispatch(SetTotalAmount())
                   }}
                 >
                   5%
@@ -96,6 +103,7 @@ export default function TipCalculatorApp() {
                     dispatch(SetBillAmount(newBillAmount))
                     dispatch(SetPeopleAmount(newPeopleAmount))
                     dispatch(SetTipAmount(10))
+                    dispatch(SetTotalAmount())
                   }}
                 >
                   10%
@@ -105,6 +113,7 @@ export default function TipCalculatorApp() {
                     dispatch(SetBillAmount(newBillAmount))
                     dispatch(SetPeopleAmount(newPeopleAmount))
                     dispatch(SetTipAmount(15))
+                    dispatch(SetTotalAmount())
                   }}
                 >
                   15%
@@ -114,6 +123,7 @@ export default function TipCalculatorApp() {
                     dispatch(SetBillAmount(newBillAmount))
                     dispatch(SetPeopleAmount(newPeopleAmount))
                     dispatch(SetTipAmount(25))
+                    dispatch(SetTotalAmount())
                   }}
                 >
                   25%
@@ -137,6 +147,7 @@ export default function TipCalculatorApp() {
                       dispatch(SetBillAmount(newBillAmount))
                       dispatch(SetPeopleAmount(newPeopleAmount))
                       dispatch(SetTipAmount(customAmount))
+                      dispatch(SetTotalAmount())
                     }}
                   />
                 </form>
@@ -167,14 +178,14 @@ export default function TipCalculatorApp() {
                   <AmountHeader>Tip Amount</AmountHeader>
                   <PerHeader>/ person</PerHeader>
                 </AmountTypeContainer>
-                <Amount>{tipAmount.toFixed(2)}</Amount>
+                <Amount>{'$' + tipAmount.toFixed(2)}</Amount>
               </AmountContainer>
               <AmountContainer>
                 <AmountTypeContainer>
                   <AmountHeader>Total</AmountHeader>
                   <PerHeader>/ person</PerHeader>
                 </AmountTypeContainer>
-                <Amount>{tipAmount.toFixed(2)}</Amount>
+                <Amount>{'$' + totalAmount.toFixed(2)}</Amount>
               </AmountContainer>
             </NumbersContainer>
             <ResetButtonContainer>

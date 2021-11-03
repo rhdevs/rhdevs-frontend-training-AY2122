@@ -5,6 +5,7 @@ export enum CALCULATOR_ACTIONS {
   SET_BILL_AMOUNT = 'CALCULATOR_ACTIONS.SET_BILL_AMOUNT',
   SET_TIP_AMOUNT = 'CALCULATOR_ACTIONS.SET_TIP_AMOUNT',
   SET_PEOPLE_AMOUNT = 'CALCULATOR_ACTIONS.SET_PEOPLE_AMOUNT',
+  SET_TOTAL_AMOUNT = 'CALCULATOR_ACTIONS.SET_TOTAL_AMOUNT',
   RESET = 'CALCULATOR_ACTIONS.RESET',
 }
 
@@ -24,6 +25,11 @@ type SetPeopleAmount = {
   peopleAmount: number
 }
 
+type SetTotalAmount = {
+  type: typeof CALCULATOR_ACTIONS.SET_TOTAL_AMOUNT
+  totalAmount: number
+}
+
 type Reset = {
   type: typeof CALCULATOR_ACTIONS.RESET
   billAmount: number
@@ -32,4 +38,4 @@ type Reset = {
   totalAmount: number
 }
 
-export type ActionTypes = SetBillAmount | SetTipAmount | SetPeopleAmount | Reset
+export type ActionTypes = SetBillAmount | SetTipAmount | SetPeopleAmount | SetTotalAmount | Reset

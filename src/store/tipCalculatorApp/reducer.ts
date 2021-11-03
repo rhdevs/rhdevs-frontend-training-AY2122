@@ -38,6 +38,12 @@ export const tipCalculatorApp: Reducer<State, ActionTypes> = (state = initialSta
         peopleAmount: action.peopleAmount,
       }
     }
+    case CALCULATOR_ACTIONS.SET_TOTAL_AMOUNT: {
+      return {
+        ...state,
+        totalAmount: action.totalAmount,
+      }
+    }
     case CALCULATOR_ACTIONS.RESET: {
       return {
         billAmount: action.billAmount,
