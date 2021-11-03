@@ -4,12 +4,12 @@ import '@fontsource/lexend-deca'
 export const FullScreenContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: space-around;
   position: relative;
   width: 70%;
   left: 15%;
   padding-top: 100px;
-
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -23,6 +23,7 @@ export const MainContainer1 = styled.div`
   border-radius: 5px;
 `
 export const MainContainer2 = styled.div`
+<<<<<<< HEAD
   height: 90%,
   flex-direction: row;
   align-items: center;
