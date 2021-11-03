@@ -13,7 +13,9 @@ import RegionsDropdown from '../../../components/MarcusFEMentor/RegionsDropdown'
 import LoadingPage from './LoadingPage'
 import ErrorPage from './ErrorPage'
 
-import { Background } from './styles/MarcusFEMentor.styled'
+import './styles/toggle.css'
+import setTheme from './styles/setTheme'
+// import { ToggleTheme } from './styles/ToggleTheme.styled'
 import { CountriesDiv } from '../../../components/MarcusFEMentor/styles/Cards.styled'
 import { FiltersDiv, SearchBarBuffer } from '../../../components/MarcusFEMentor/styles/FiltersDiv.styled'
 import { TitleContainerBuffer } from '../../../components/MarcusFEMentor/styles/Title.styled'
@@ -22,20 +24,27 @@ function MarcusFEMentor() {
   const history = useHistory()
   const dispatch = useDispatch()
 
-  const { json, response_ok } = useSelector((state: RootState) => state.marcusFEMentor)
+  const { all_countries, response_ok } = useSelector((state: RootState) => state.marcusFEMentor)
 
   useEffect(() => {
     dispatch(getContents())
-    setCountries(json)
-    setFound(response_ok)
   }, [])
 
+  useEffect(() => {
+    setCountries(all_countries)
+    setFound(response_ok)
+  }, [all_countries, response_ok])
+
+  useEffect(() => {
+    setTheme('theme-light'), []
+  })
+
   const [found, setFound] = useState<boolean>(response_ok)
-  const [countries, setCountries] = useState<Country[] | undefined>(json)
+  const [countries, setCountries] = useState<Country[] | undefined>(all_countries)
 
   return (
-    <Background>
-      <Title text="Where in the world?" /> {/* TODO add night mode? */}
+    <div id="toggle-theme">
+      <Title text="Where in the world?" />
       <TitleContainerBuffer />
       <FiltersDiv>
         <SearchBar setCountries={setCountries} />
@@ -57,7 +66,7 @@ function MarcusFEMentor() {
           <ErrorPage />
         )}
       </CountriesDiv>
-    </Background>
+    </div>
   )
 }
 

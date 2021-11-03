@@ -9,7 +9,7 @@ export const CountriesDiv = styled.div`
 `
 
 export const CardImage = styled.img`
-  border: 1px solid #dadada;
+  border-bottom: 1px solid #999;
 `
 
 export const StyledCard = styled(Card)`
@@ -17,6 +17,8 @@ export const StyledCard = styled(Card)`
   width: 264px;
   height: 336px;
   margin: 37.5px;
+  border-radius: 5%;
+  overflow: hidden;
   :hover,
   :focus {
     transform: scale3d(1.05, 1.05, 1.1);

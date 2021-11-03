@@ -10,15 +10,20 @@ type Props = {
 }
 
 const SearchBar = (props: Props) => {
-  const { json } = useSelector((state: RootState) => state.marcusFEMentor)
+  const { all_countries } = useSelector((state: RootState) => state.marcusFEMentor)
   const setCountries = props.setCountries
   return (
     <StyledSearchBar
+      id="search-bar"
       placeholder="Search"
       onChange={(e) =>
         setCountries(
-          json?.filter((country) => country.name.common.toLowerCase().search(e.target.value.toLowerCase()) !== -1) ??
-            [],
+          all_countries?.filter(
+            (country) =>
+              country.name.common
+                .toLowerCase()
+                .search(e.target.value.replace(/([.?*+^$[\]\\(){}|-])/g, '\\$1').toLowerCase()) !== -1, // escape certain characters to prevent invalid regex error when typing such characters
+          ) ?? [],
         )
       }
     />

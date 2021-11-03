@@ -30,7 +30,7 @@ export enum COUNTRY_DATA_ACTIONS {
 
 export type SetJson = {
   type: typeof COUNTRY_DATA_ACTIONS.GET_COUNTRIES_DATA
-  json: Country[]
+  all_countries: Country[]
   response_ok: boolean
 }
 

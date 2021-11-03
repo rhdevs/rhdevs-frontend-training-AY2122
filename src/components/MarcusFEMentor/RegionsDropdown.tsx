@@ -12,7 +12,7 @@ type Props = {
 }
 
 const RegionsDropdown = (props: Props) => {
-  const { json } = useSelector((state: RootState) => state.marcusFEMentor)
+  const { all_countries } = useSelector((state: RootState) => state.marcusFEMentor)
   const setCountries = props.setCountries
   const regions = ['All', 'Africa', 'Asia', 'Europe', 'Americas', 'Oceania']
   const menu = (
@@ -21,7 +21,9 @@ const RegionsDropdown = (props: Props) => {
         <Menu.Item key={region}>
           <a
             onClick={() =>
-              setCountries(region === 'All' ? json : json?.filter((country) => country.region === region) ?? [])
+              setCountries(
+                region === 'All' ? all_countries : all_countries?.filter((country) => country.region === region) ?? [],
+              )
             }
           >
             {region}

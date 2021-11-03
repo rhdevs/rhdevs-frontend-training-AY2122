@@ -1,3 +1,4 @@
+import { Switch } from 'antd'
 import styled from 'styled-components'
 
 const titleHeight = '80px'
@@ -11,9 +12,9 @@ export const TitleContainer = styled.div`
   top: 0px;
 
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: white;
   z-index: 3;
 `
 
@@ -24,8 +25,8 @@ export const TitleContainerBuffer = styled.div`
 export const TitleText = styled.h1`
   position: fixed;
   height: ${titleTextHeight};
-  left: 7%;
-  width: 100%;
+  left: 7vw;
+  width: auto;
 
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -36,4 +37,10 @@ export const TitleText = styled.h1`
 
   color: #111517;
   z-index: 3;
+`
+
+export const StyledDarkModeToggleSwitch = styled(Switch)`
+  z-index: 3;
+  margin: auto;
+  margin-right: 10vw;
 `

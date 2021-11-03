@@ -13,9 +13,9 @@ type Props = {
 
 const BorderCountriesLinks = (props: Props) => {
   const history = useHistory()
-  const { json } = useSelector((state: RootState) => state.marcusFEMentor)
+  const { all_countries } = useSelector((state: RootState) => state.marcusFEMentor)
   const borders: string[] | null = props.country.borders
-  const borderCountries: Country[] = json.filter((country) => borders?.includes(country.cca3))
+  const borderCountries: Country[] = all_countries.filter((country) => borders?.includes(country.cca3))
   return (
     <BorderCountriesDiv>
       <strong>Border Countries: </strong>

@@ -1,0 +1,40 @@
+.theme-dark {
+  --background: #797979;
+  --title-background: #808080;
+  --title-color: #eeeae8;
+  --card-color: #bebbba;
+  --card-shadow: 2px 2px 5px black;
+  --search-bar-color: #f7f5f4;
+}
+
+.theme-light {
+  --background: #f2f2f2;
+  --title-background: #ffffff;
+  --title-color: #111517;
+  --card-color: #ffffff;
+  --card-shadow: 2px 2px 5px gray;
+  --search-bar-color: #ffffff;
+}
+
+#toggle-theme {
+  background-color: var(--background);
+  height: 100vh;
+  overflow: auto;
+}
+
+#title {
+  background-color: var(--title-background);
+}
+
+#title-text {
+  color: var(--title-color);
+}
+
+#styled-card {
+  background-color: var(--card-color);
+  box-shadow: var(--card-shadow);
+}
+
+#search-bar {
+  background-color: var(--search-bar-color);
+}

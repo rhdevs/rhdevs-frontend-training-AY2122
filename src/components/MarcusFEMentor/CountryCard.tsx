@@ -1,21 +1,8 @@
 import React from 'react'
 
+import { Country } from '../../store/MarcusFEMentor/types'
 import { Capital, Population, Region } from './CardComponents'
 import { CardImage, StyledCard } from './styles/Cards.styled'
-
-type Name = {
-  common: string
-  [key: string]: any
-}
-
-type Country = {
-  name: Name
-  flag?: string
-  population: number
-  region: string
-  capital?: string[]
-  [key: string]: any
-}
 
 type Props = {
   country: Country
@@ -25,6 +12,7 @@ type Props = {
 const CountryCard = (props: Props) => {
   return (
     <StyledCard
+      id="styled-card"
       bordered={true}
       cover={
         <CardImage
