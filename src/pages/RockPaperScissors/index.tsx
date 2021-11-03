@@ -15,14 +15,21 @@ import {
   PlayButton,
   ResultStateContainer,
   Blank,
+  SelectContainer,
+  TopSelect,
+  MiddleSelect,
+  BottomSelect,
+  Overlay,
+  MobileResultContainer,
+  ResultWrapper,
 } from './styles/RockPaperScissors.styled'
-import titleIcon from '../../assets/RockPaperScissors/logo.svg'
+import titleIcon from '../../assets/RockPaperScissors/logo-bonus.svg'
 import scissorsIcon from '../../assets/RockPaperScissors/icon-scissors.svg'
 import rockIcon from '../../assets/RockPaperScissors/icon-rock.svg'
 import paperIcon from '../../assets/RockPaperScissors/icon-paper.svg'
-
-//TODO: Pick State UI Arrangement
-//TODO: Implement Lizard and Spock
+import lizardIcon from '../../assets/RockPaperScissors/icon-lizard.svg'
+import spockIcon from '../../assets/RockPaperScissors/icon-spock.svg'
+import pentagonIcon from '../../assets/RockPaperScissors/bg-pentagon.svg'
 
 const RockPaperScissors = () => {
   const [gameState, setGameState] = useState('select')
@@ -34,14 +41,30 @@ const RockPaperScissors = () => {
   const renderButton = (option: Option) => {
     return (
       <Button borderColor={option.color} key={option.name} onClick={() => handleSelect(option.name)}>
-        <StyledIcon imgSize="5rem" src={option.src} />
+        <StyledIcon src={option.src} />
       </Button>
     )
   }
 
-  const renderSelectState = () => <>{optionList.map((option) => renderButton(option))}</>
+  const renderSelectState = () => (
+    <SelectContainer>
+      <Overlay src={pentagonIcon} />
+      <TopSelect>{renderButton(optionList[0])}</TopSelect>
+      <MiddleSelect>
+        {renderButton(optionList[1])}
+        {renderButton(optionList[2])}
+      </MiddleSelect>
+      <BottomSelect>
+        {renderButton(optionList[3])}
+        {renderButton(optionList[4])}
+      </BottomSelect>
+    </SelectContainer>
+  )
 
   const handleSelect = (option: string) => {
+    if (gameState !== 'select') {
+      return
+    }
     setCurrentSelection(option)
     setTimeout(getCPUSelection, 1000)
     setGameState('pick')
@@ -69,7 +92,7 @@ const RockPaperScissors = () => {
   }
 
   const getCPUSelection = () => {
-    const choice = Math.floor(Math.random() * 3)
+    const choice = Math.floor(Math.random() * 5)
     switch (choice) {
       case 0:
         setComSelection(optionList[0].name)
@@ -80,6 +103,12 @@ const RockPaperScissors = () => {
       case 2:
         setComSelection(optionList[2].name)
         return
+      case 3:
+        setComSelection(optionList[3].name)
+        return
+      case 4:
+        setComSelection(optionList[4].name)
+        return
     }
     //return statement to handle linter error
     return ''
@@ -88,7 +117,6 @@ const RockPaperScissors = () => {
   const renderScoreboard = () => {
     return (
       <Scoreboard>
-        {/*<div>ROCK, PAPER, SCISSORS</div>*/}
         <StyledIconTitle imgSize="10rem" src={titleIcon} />
         <Score>
           <div>S C O R E</div>
@@ -104,7 +132,7 @@ const RockPaperScissors = () => {
     setResult('')
   }
 
-  const renderResultState = () => (
+  const renderDesktopResultsContainer = () => (
     <ResultStateContainer>
       {renderPickContainer('YOU PICKED', currentSelection)}
       <ResultContainer>
@@ -113,6 +141,20 @@ const RockPaperScissors = () => {
       </ResultContainer>
       {renderPickContainer('THE HOUSE PICKED', comSelection)}
     </ResultStateContainer>
+  )
+
+  const renderMobileDesktopContainer = () => (
+    <MobileResultContainer>
+      <PickText>{getResultText()}</PickText>
+      <PlayButton onClick={() => handleReset()}>PLAY AGAIN</PlayButton>
+    </MobileResultContainer>
+  )
+
+  const renderResultState = () => (
+    <ResultWrapper>
+      {renderDesktopResultsContainer()}
+      {renderMobileDesktopContainer()}
+    </ResultWrapper>
   )
 
   const getResultText = () => {
@@ -156,10 +198,31 @@ const RockPaperScissors = () => {
     if (current === 'scissors' && com === 'paper') {
       return 'win'
     }
+    if (current === 'rock' && com === 'lizard') {
+      return 'win'
+    }
+    if (current === 'lizard' && com === 'spock') {
+      return 'win'
+    }
+    if (current === 'spock' && com === 'scissors') {
+      return 'win'
+    }
+    if (current === 'scissors' && com === 'lizard') {
+      return 'win'
+    }
+    if (current === 'paper' && com === 'spock') {
+      return 'win'
+    }
+    if (current === 'lizard' && com === 'paper') {
+      return 'win'
+    }
+    if (current === 'spock' && com === 'rock') {
+      return 'win'
+    }
     if (getResult(com, current) === 'win') {
       return 'lose'
     }
-    return ''
+    return 'draw'
   }
 
   return (
@@ -171,15 +234,16 @@ const RockPaperScissors = () => {
         {gameState === 'pick' && renderPickState()}
         {gameState === 'result' && renderResultState()}
       </GameContainer>
-      {/*Rules You Picked The House Picked You Win You Lose Play Again*/}
     </MainContainer>
   )
 }
 
 const optionList = [
-  { name: 'rock', src: rockIcon, color: `hsl(349, 71%, 52%)` },
-  { name: 'paper', src: paperIcon, color: `hsl(230, 89%, 62%)` },
   { name: 'scissors', src: scissorsIcon, color: `hsl(39, 89%, 49%)` },
+  { name: 'spock', src: spockIcon, color: `hsl(189, 59%, 53%)` },
+  { name: 'paper', src: paperIcon, color: `hsl(230, 89%, 62%)` },
+  { name: 'lizard', src: lizardIcon, color: `hsl(261, 73%, 60%)` },
+  { name: 'rock', src: rockIcon, color: `hsl(349, 71%, 52%)` },
 ]
 
 type Option = { name: string; src: any; color: string }
