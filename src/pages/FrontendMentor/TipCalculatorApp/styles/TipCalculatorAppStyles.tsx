@@ -22,6 +22,9 @@ export const MiddleContainer = styled.div`
   justify-content: center;
   height: 50vh;
   width: 100vw;
+  @media (max-width: 768px) {
+    height: 90vh;
+  }
 `
 
 export const Calculator = styled.div`
@@ -32,6 +35,10 @@ export const Calculator = styled.div`
   width: 900px;
   border-radius: 25px;
   height: 90%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const InteractionContainer = styled.div`
@@ -96,6 +103,11 @@ export const TipGridBox = styled.div`
   grid-row-gap: 10px;
   font-family: 'Space Mono';
   font-size: 20px;
+  @media (max-width: 768px) {
+    height: 20vh;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
 `
 
 export const TipGridItem = styled.button`
