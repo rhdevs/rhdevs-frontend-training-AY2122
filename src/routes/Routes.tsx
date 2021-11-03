@@ -52,7 +52,7 @@ const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCar
 const ShoppingCart4Redux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
 )
-const maximwpwebsite = React.lazy(() => import('../pages/FrontendMentor/maximwp_website'))
+const maximwpwebsite = React.lazy(() => import('../pages/FrontendMentor/Maximweipin'))
 
 export const Routes = () => (
   <Switch>
