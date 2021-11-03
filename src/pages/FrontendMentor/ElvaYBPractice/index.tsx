@@ -17,6 +17,8 @@ import {
   BottomLeftPerMonth,
   BottomLeftFullAccess,
   PriceAndPerMonth,
+  BottomRightShort,
+  BottomRightLong,
 } from './styles/SinglePriceGridComponent.styled'
 
 const ElvaYBPractice = () => {
@@ -43,7 +45,13 @@ const ElvaYBPractice = () => {
               <Button type="primary">Sign Up</Button>
             </SignUpButton>
           </BottomLeftContainer>
-          <BottomRightContainer>Why us </BottomRightContainer>
+          <BottomRightContainer>
+            <BottomRightShort> Why Us </BottomRightShort>
+            <BottomRightLong>
+              Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos
+              Community Forum Flashcard decks New videos every week
+            </BottomRightLong>
+          </BottomRightContainer>
         </BottomContainer>
       </MainContainer>
     </MainPage>

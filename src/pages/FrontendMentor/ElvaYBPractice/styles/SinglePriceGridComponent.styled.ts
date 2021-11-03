@@ -13,8 +13,7 @@ export const MainPage = styled.div`
 
 export const MainContainer = styled.div`
   width: 70%;
-  border-radius: 50px;
-  border-style: solid;
+  border-radius: 15px;
   overflow: hidden;
 `
 export const BottomContainer = styled.div`
@@ -31,7 +30,7 @@ export const MiddleContainer = styled.div`
 
 export const JoinCommText1 = styled.div`
   color: 239593;
-  font-size: 16px;
+  font-size: 30px;
   margin: 0 100px;
 `
 export const JoinCommText2 = styled.div`
@@ -58,15 +57,15 @@ export const BottomLeftMonthly = styled.div`
   margin-left: 10%;
 `
 export const BottomLeftPrice = styled.div`
-  color: white;
+  color: #fcfeff;
   font-size: 30px;
   margin: auto;
   margin-left: 10%;
   font-weight: bold;
 `
 export const BottomLeftPerMonth = styled.div`
-  color: grey;
-  font-size: 12px;
+  color: #d4d7d9;
+  font-size: 16px;
 `
 export const BottomLeftFullAccess = styled.div`
   color: white;
@@ -87,6 +86,19 @@ export const BottomRightContainer = styled.div`
   border-radius: 8px;
   box-shadow: 0px 0px 14px 1px #00000024;
 `
+export const BottomRightShort = styled.div`
+  color: #fcfeff;
+  font-size: 20px;
+  margin: auto;
+  margin-left: 10%;
+`
+export const BottomRightLong = styled.div`
+  color: #d4d7d9;
+  font-size: 12px;
+  margin: auto;
+  margin-left: 10%;
+`
+
 export const SignUpButton = styled.div`
   text-align: center;
   border-radius: 20px;
@@ -97,10 +109,11 @@ export const SignUpButton = styled.div`
     font-weight: 200;
   }
   .ant-btn-primary {
-    background-color: #72ba75;
+    background-color: #dbed11;
     border-color: #72ba75;
     width: 40%;
     margin-top: 10px;
+    border-radius: 10px;
   }
   .ant-btn-primary:focus {
     background-color: #72ba75;
