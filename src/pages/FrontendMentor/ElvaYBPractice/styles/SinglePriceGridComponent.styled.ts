@@ -103,4 +103,8 @@ export const SignUpButton = styled.div`
     left: 215px;
     top: 520px;
   }
+  .ant-btn-primary:hover {
+    background-color: hsl(71, 57%, 54%);
+    border-color: hsl(71, 57%, 54%);
+      }
 `
