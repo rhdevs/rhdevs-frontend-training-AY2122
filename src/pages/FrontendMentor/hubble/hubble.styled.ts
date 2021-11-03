@@ -9,6 +9,7 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-image: url(${bgdesk});
+  background-size: cover;
   background-color: hsl(257, 40%, 49%);
   justify-content: center;
   allgin-items: center;
