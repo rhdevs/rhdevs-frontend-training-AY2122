@@ -71,7 +71,6 @@ export default function TipCalculatorApp() {
                     placeholder={billAmount.toString()}
                     onChange={(e) => {
                       handleNewBillAmount(e)
-                      dispatch(SetBillAmount(newBillAmount))
                     }}
                   />
                 </form>
@@ -80,11 +79,51 @@ export default function TipCalculatorApp() {
             <ItemContainer>
               <ItemHeader>Select Tip %</ItemHeader>
               <TipGridBox>
-                <TipGridItem onClick={() => dispatch(SetTipAmount(5))}>5%</TipGridItem>
-                <TipGridItem onClick={() => dispatch(SetTipAmount(10))}>10%</TipGridItem>
-                <TipGridItem onClick={() => dispatch(SetTipAmount(15))}>15%</TipGridItem>
-                <TipGridItem onClick={() => dispatch(SetTipAmount(25))}>25%</TipGridItem>
-                <TipGridItem onClick={() => dispatch(SetTipAmount(50))}>50%</TipGridItem>
+                <TipGridItem
+                  onClick={() => {
+                    dispatch(SetBillAmount(newBillAmount))
+                    dispatch(SetPeopleAmount(newPeopleAmount))
+                    dispatch(SetTipAmount(5))
+                  }}
+                >
+                  5%
+                </TipGridItem>
+                <TipGridItem
+                  onClick={() => {
+                    dispatch(SetBillAmount(newBillAmount))
+                    dispatch(SetPeopleAmount(newPeopleAmount))
+                    dispatch(SetTipAmount(10))
+                  }}
+                >
+                  10%
+                </TipGridItem>
+                <TipGridItem
+                  onClick={() => {
+                    dispatch(SetBillAmount(newBillAmount))
+                    dispatch(SetPeopleAmount(newPeopleAmount))
+                    dispatch(SetTipAmount(15))
+                  }}
+                >
+                  15%
+                </TipGridItem>
+                <TipGridItem
+                  onClick={() => {
+                    dispatch(SetBillAmount(newBillAmount))
+                    dispatch(SetPeopleAmount(newPeopleAmount))
+                    dispatch(SetTipAmount(25))
+                  }}
+                >
+                  25%
+                </TipGridItem>
+                <TipGridItem
+                  onClick={() => {
+                    dispatch(SetBillAmount(newBillAmount))
+                    dispatch(SetPeopleAmount(newPeopleAmount))
+                    dispatch(SetTipAmount(50))
+                  }}
+                >
+                  50%
+                </TipGridItem>
                 <form>
                   <InputCustomAmountField
                     value={customAmount}
@@ -92,6 +131,8 @@ export default function TipCalculatorApp() {
                     placeholder="Custom"
                     onChange={(e) => {
                       handleSetCustomAmount(e)
+                      dispatch(SetBillAmount(newBillAmount))
+                      dispatch(SetPeopleAmount(newPeopleAmount))
                       dispatch(SetTipAmount(customAmount))
                     }}
                   />
@@ -109,7 +150,6 @@ export default function TipCalculatorApp() {
                     placeholder={peopleAmount.toString()}
                     onChange={(e) => {
                       handleNewPeopleAmount(e)
-                      dispatch(SetPeopleAmount(newPeopleAmount))
                     }}
                   />
                 </form>

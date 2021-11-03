@@ -162,7 +162,7 @@ export const AmountTypeContainer = styled.div`
 `
 
 export const AmountHeader = styled.div`
-  width: 10vh;
+  width: 15vh;
   color: hsl(185, 41%, 84%);
   height: 50%;
   font-size: 13px;
