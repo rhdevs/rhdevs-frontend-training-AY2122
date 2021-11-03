@@ -39,9 +39,15 @@ const Hubble = () => {
         </Rows>
 
         <IconRows>
-          <SocialIcons>hellloo</SocialIcons>
-          <SocialIcons>hellloo</SocialIcons>
-          <SocialIcons>hellloo</SocialIcons>
+          <SocialIcons>
+            <i className="fa fa-facebook"></i>
+          </SocialIcons>
+          <SocialIcons>
+            <i className="fa fa-twitter"></i>
+          </SocialIcons>
+          <SocialIcons>
+            <i className="fa fa-instagram"></i>
+          </SocialIcons>
         </IconRows>
       </MainContainer>
     </>

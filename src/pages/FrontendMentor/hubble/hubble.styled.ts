@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import bgdesk from '../../../assets/hubble/bgdesk.svg'
 import bgmobile from '../../../assets/hubble/bg-mobile.svg'
-import icon from '../../../assets/hubble/favicon-32x32.png'
 
 export const MainContainer = styled.div`
   height: 100%;
   width: 100%;
+  min-width: 1200px;
   display: flex;
   flex-direction: column;
   background-image: url(${bgdesk});
@@ -94,20 +94,20 @@ export const ButtonContainer = styled.button`
   }
 `
 export const SocialIcons = styled.button`
-  background-color: white;
-  color: hsl(300, 69%, 71%);
+  background-color: transparent;
+  color: white;
   &:hover {
-    color: white;
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  border: none;
   cursor: pointer;
-  background: url(${icon}) no-repeat left center;
-  height: 35px;
+  height: 40px;
   overflow: hidden;
-  text-indent: -9999px;
-  width: 35px;
+  width: 40px;
+  font: 40px;
   border-radius: 50%;
+  border: 2px solid white;
   margin: 0px 0px 20px 20px;
 `
 
