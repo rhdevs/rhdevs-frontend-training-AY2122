@@ -47,7 +47,6 @@ export const BottomLeftContainer = styled.div`
   background-color: hsl(179, 62%, 43%);
   width: 50%;
   height: 40vh;
-  border-radius: 8px;
   box-shadow: 0px 0px 14px 1px #00000024;
 `
 export const BottomLeftMonthly = styled.div`
@@ -58,7 +57,7 @@ export const BottomLeftMonthly = styled.div`
 export const BottomLeftPrice = styled.div`
   color: hsl(204, 43%, 93%);
   font-size: 30px;
-  padding: 0px 50px;
+  padding: 0px 10px 20px 50px;
   font-weight: bold;
 `
 export const BottomLeftPerMonth = styled.div`
@@ -81,7 +80,6 @@ export const BottomRightContainer = styled.div`
   background-color: hsl(179, 62%, 48%);
   width: 50%;
   height: 40vh;
-  border-radius: 8px;
   box-shadow: 0px 0px 14px 1px #00000024;
 `
 export const BottomRightShort = styled.div`
@@ -96,27 +94,13 @@ export const BottomRightLong = styled.div`
 `
 
 export const SignUpButton = styled.div`
-  text-align: center;
-  border-radius: 20px;
-  .ant-btn {
-    font-size: 17px;
-    letter-spacing: 0em;
-    text-align: center;
-    font-weight: 200;
-  }
   .ant-btn-primary {
-    background-color: #dbed11;
-    border-color: #72ba75;
-    width: 40%;
-    margin-top: 10px;
-    border-radius: 10px;
-  }
-  .ant-btn-primary:focus {
-    background-color: #72ba75;
-    border-color: #72ba75;
-  }
-  .ant-btn-primary:hover {
-    background-color: #72ba75;
-    border-color: #72ba75;
+    background-color: hsl(71, 73%, 54%);
+    border-color: hsl(71, 73%, 54%);
+    border-radius: 5px;
+    padding: 0px 120px;
+    position: absolute;
+    left: 215px;
+    top: 520px;
   }
 `
