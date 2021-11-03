@@ -12,40 +12,40 @@ import {
 } from './styles/ProfileCard.styled'
 
 type Props = {
-  Background: string
-  ProfilePic: string
-  Name: string
-  Age: number
-  Location: string
-  Followers: number
-  Likes: number
-  Photos: number
+  background: string
+  profilePic: string
+  name: string
+  age: number
+  location: string
+  followers: number
+  likes: number
+  photos: number
 }
 
 const ProfileCard = (props: Props) => {
   return (
     <ProfileCardContainer>
-      <ProfileCardBackground src={props.Background} />
+      <ProfileCardBackground src={props.background} />
       <ProfilePicContainer>
-        <StyledImg src={props.ProfilePic} />
+        <StyledImg src={props.profilePic} />
       </ProfilePicContainer>
       <NameAgeContainer>
         <text style={{ fontSize: 1.5 + 'rem', color: 'black', fontWeight: 'bold', fontFamily: 'Kumbh Sans' }}>
-          {props.Name} <text style={{ color: 'grey' }}>{props.Age}</text>
+          {props.name} <text style={{ color: 'grey' }}>{props.age}</text>
         </text>
-        <ProfileCardSmallWords fontSize="1rem">{props.Location}</ProfileCardSmallWords>
+        <ProfileCardSmallWords fontSize="1rem">{props.location}</ProfileCardSmallWords>
       </NameAgeContainer>
       <ProfileCardBottom>
         <ProfileCardWordsContainer>
-          <ProfileCardBigWords>{props.Followers}k</ProfileCardBigWords>
+          <ProfileCardBigWords>{props.followers}k</ProfileCardBigWords>
           <ProfileCardSmallWords>Followers</ProfileCardSmallWords>
         </ProfileCardWordsContainer>
         <ProfileCardWordsContainer>
-          <ProfileCardBigWords>{props.Likes}k</ProfileCardBigWords>
+          <ProfileCardBigWords>{props.likes}k</ProfileCardBigWords>
           <ProfileCardSmallWords>Likes</ProfileCardSmallWords>
         </ProfileCardWordsContainer>
         <ProfileCardWordsContainer>
-          <ProfileCardBigWords>{props.Photos}k</ProfileCardBigWords>
+          <ProfileCardBigWords>{props.photos}k</ProfileCardBigWords>
           <ProfileCardSmallWords>Photos</ProfileCardSmallWords>
         </ProfileCardWordsContainer>
       </ProfileCardBottom>

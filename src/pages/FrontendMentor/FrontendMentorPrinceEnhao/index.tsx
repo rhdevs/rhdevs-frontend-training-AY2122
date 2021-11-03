@@ -9,14 +9,14 @@ const FrontendMentorPrinceEnhao = () => {
   return (
     <MainContainer>
       <ProfileCard
-        Background={BackgroundCard}
-        ProfilePic={ProfilePicture}
-        Name="Victor Crest"
-        Age={26}
-        Location="London"
-        Followers={80}
-        Likes={803}
-        Photos={1.4}
+        background={BackgroundCard}
+        profilePic={ProfilePicture}
+        name="Victor Crest"
+        age={26}
+        location="London"
+        followers={80}
+        likes={803}
+        photos={1.4}
       />
       <TopBackground src={BackgroundTop} />
       <BottomBackground src={BackgroundBottom} />
