@@ -5,17 +5,17 @@ export const FullScreenContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: relative;
   width: 70%;
   left: 15%;
   padding-top: 100px;
   @media (max-width: 768px) {
+    display: flex;
     flex-direction: column;
   }
 `
 export const MainContainer1 = styled.div`
-  height: 90%,
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
@@ -23,8 +23,6 @@ export const MainContainer1 = styled.div`
   border-radius: 5px;
 `
 export const MainContainer2 = styled.div`
-<<<<<<< HEAD
-  height: 90%,
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
@@ -32,7 +30,6 @@ export const MainContainer2 = styled.div`
   border-radius: 5px;
 `
 export const MainContainer3 = styled.div`
-  height: 90%,
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
@@ -67,8 +64,7 @@ export const RoundButton1 = {
   backgroundColor: '#fff',
   color: '#e28525',
   alignItems: 'center',
-  marginLeft: '2rem',
-  marginTop: '1rem',
+  margin: '10%',
   'font-size': '20px',
 }
 export const RoundButton2 = {
@@ -78,11 +74,9 @@ export const RoundButton2 = {
   backgroundColor: '#fff',
   color: '#016972',
   alignItems: 'center',
-  marginLeft: '2rem',
-  marginTop: '1rem',
+  margin: '10%',
   'font-size': '20px',
 }
-
 export const RoundButton3 = {
   width: '150px',
   height: '45px',
@@ -90,7 +84,6 @@ export const RoundButton3 = {
   backgroundColor: '#fff',
   color: '#00403f',
   alignItems: 'center',
-  marginLeft: '2rem',
-  marginTop: '1rem',
+  margin: '10%',
   'font-size': '20px',
 }
