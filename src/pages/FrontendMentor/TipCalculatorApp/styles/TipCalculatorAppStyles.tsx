@@ -74,6 +74,22 @@ export const InputContainer = styled.div`
   }
 `
 
+export const InputPeopleContainer = styled.div<{ peopleAmount: number }>`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5vh;
+  line-height: 5vh;
+  background: hsl(189, 41%, 97%);
+  border-radius: 3px;
+  vertical-align: center;
+  ${(props) => props.peopleAmount === 0 && 'border: solid red;'}
+  &:hover {
+    border-style: solid;
+    border-color: hsl(172, 67%, 45%);
+  }
+`
+
 export const InputIcon = styled.img`
   object-fit: scale-down;
   vertical-align: middle;

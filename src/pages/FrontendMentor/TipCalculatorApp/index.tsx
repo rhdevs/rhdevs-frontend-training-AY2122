@@ -12,6 +12,7 @@ import {
   InteractionContainer,
   ItemHeader,
   InputContainer,
+  InputPeopleContainer,
   TipGridBox,
   TipGridItem,
   ItemContainer,
@@ -139,7 +140,7 @@ export default function TipCalculatorApp() {
             </ItemContainer>
             <ItemContainer>
               <ItemHeader>Number of people</ItemHeader>
-              <InputContainer>
+              <InputPeopleContainer peopleAmount={newPeopleAmount}>
                 <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
                 <form>
                   <InputField
@@ -149,7 +150,7 @@ export default function TipCalculatorApp() {
                     onChange={(e) => handleNewPeopleAmount(e)}
                   />
                 </form>
-              </InputContainer>
+              </InputPeopleContainer>
             </ItemContainer>
           </InteractionContainer>
           <ResultContainer>
