@@ -16,4 +16,5 @@ export enum PATHS {
   SHOPPING_PAGE_PAIR_FOUR = '/shopping-lists-pair-4',
   SHOPPING_PAGE_PAIR_FOUR_REDUX = '/shopping-lists-pair-4-redux',
   FRONTEND_MENTOR = '/frontendmentor',
+  KY_SINGLE_PRICE_GRID_COMPONENT = '/frontendmentor/ky-single-price-grid-component',
 }

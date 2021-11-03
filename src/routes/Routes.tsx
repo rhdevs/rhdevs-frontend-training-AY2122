@@ -51,6 +51,12 @@ const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCar
 const ShoppingCart4Redux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
 )
+const KYSinglePriceGridComponentPage = React.lazy(
+  () =>
+    import(
+      /* webpackChunckName: "KYSinglePriceGridComponentPage" */ '../pages/FrontendMentor/KYSinglePriceGridComponentPage'
+    ),
+)
 
 export const Routes = () => (
   <Switch>
@@ -74,6 +80,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
+    <RouteWithTopNav exact path={PATHS.KY_SINGLE_PRICE_GRID_COMPONENT} component={KYSinglePriceGridComponentPage} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
