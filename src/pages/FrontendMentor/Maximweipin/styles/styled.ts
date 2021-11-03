@@ -4,17 +4,19 @@ import '@fontsource/lexend-deca'
 export const FullScreenContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: space-around;
   position: relative;
   width: 70%;
   left: 15%;
   border-radius: 5px;
   padding-top: 100px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 export const MainContainer1 = styled.div`
   height: 500px;
-  flex-direction: column;
-  flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
   background-color: rgb(226, 133, 37);
@@ -22,8 +24,6 @@ export const MainContainer1 = styled.div`
 `
 export const MainContainer2 = styled.div`
   height: 500px;
-  flex-direction: column;
-  flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
   background-color: rgb(1, 105, 114);
@@ -31,8 +31,6 @@ export const MainContainer2 = styled.div`
 `
 export const MainContainer3 = styled.div`
   height: 500px;
-  flex-direction: column;
-  flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
   background-color: rgb(0, 64, 63);
@@ -76,6 +74,7 @@ export const RoundButton1 = {
   color: '#e28525',
   alignItems: 'center',
   marginLeft: '50px',
+  'font-size': '20px',
 }
 
 export const RoundButton2 = {
@@ -87,6 +86,7 @@ export const RoundButton2 = {
   alignItems: 'center',
   marginLeft: '60px',
   marginTop: '20px',
+  'font-size': '20px',
 }
 
 export const RoundButton3 = {
@@ -98,4 +98,5 @@ export const RoundButton3 = {
   alignItems: 'center',
   marginLeft: '70px',
   marginTop: '20px',
+  'font-size': '20px',
 }
