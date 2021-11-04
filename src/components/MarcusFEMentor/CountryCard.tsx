@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Country } from '../../store/MarcusFEMentor/types'
 import { Capital, Population, Region } from './CardComponents'
-import { CardImage, StyledCard } from './styles/Cards.styled'
+import { StyledCard } from './styles/Cards.styled'
 
 type Props = {
   country: Country
@@ -13,18 +13,13 @@ const CountryCard = (props: Props) => {
   return (
     <StyledCard
       id="styled-card"
-      bordered={true}
+      bordered={false}
       cover={
-        <CardImage
-          width="264px"
-          height="160px"
-          alt={`${props.country.name.common} flag`}
-          src={props.country.flags.svg}
-        />
+        <img width="264px" height="160px" alt={`${props.country.name.common} flag`} src={props.country.flags.svg} />
       }
       onClick={props.onClick}
     >
-      <h2>{props.country.name.common}</h2>
+      <h2 className="card-text">{props.country.name.common}</h2>
 
       <Population population={props.country.population} />
       <br />

@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import Title from '../../../components/MarcusFEMentor/Title'
 import BackButton from '../../../components/MarcusFEMentor/CountryPage/BackButton'
 import CountryInfoBox from '../../../components/MarcusFEMentor/CountryPage/CountryInfoBox'
 import FlagImage from '../../../components/MarcusFEMentor/CountryPage/FlagImage'
-import ErrorPage from './ErrorPage'
 import { RootState } from '../../../store/types'
 import { getContents } from '../../../store/MarcusFEMentor/actions'
 
-import setTheme from './styles/setTheme'
+import './styles/toggle.css'
+import { keepTheme } from './styles/toggleTheme'
 import { TitleContainerBuffer } from '../../../components/MarcusFEMentor/styles/Title.styled'
 import { CountryPageContentDiv } from '../../../components/MarcusFEMentor/styles/CountryPage.styled'
-import { Country } from '../../../store/MarcusFEMentor/types'
+import LoadingPage from './LoadingPage'
 
 type Props = {
   countryName: string
@@ -27,19 +27,14 @@ const CountryPage = (props: Props) => {
   }, [])
 
   const { all_countries } = useSelector((state: RootState) => state.marcusFEMentor)
-  const [country, setCountry] = useState<Country | undefined>(undefined)
-  // const country = all_countries?.find((cnt) => cnt.name.common === props.countryName)
+  const country = all_countries?.find((cnt) => cnt.name.common === props.countryName)
 
   useEffect(() => {
-    setCountry(all_countries?.find((cnt) => cnt.name.common === props.countryName))
-  }, [all_countries])
-
-  useEffect(() => {
-    !all_countries && dispatch(getContents())
+    all_countries.length === 0 && dispatch(getContents())
   }, [])
 
   useEffect(() => {
-    setTheme('theme-light'), []
+    keepTheme(), []
   })
 
   return (
@@ -55,7 +50,7 @@ const CountryPage = (props: Props) => {
           </CountryPageContentDiv>
         </>
       ) : (
-        <ErrorPage />
+        <LoadingPage />
       )}
     </div>
   )

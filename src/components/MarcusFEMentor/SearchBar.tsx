@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { SearchOutlined } from '@ant-design/icons'
 
 import { Country } from '../../store/MarcusFEMentor/types'
 import { RootState } from '../../store/types'
@@ -14,8 +15,8 @@ const SearchBar = (props: Props) => {
   const setCountries = props.setCountries
   return (
     <StyledSearchBar
-      id="search-bar"
-      placeholder="Search"
+      prefix={<SearchOutlined />}
+      placeholder="Search for a country..."
       onChange={(e) =>
         setCountries(
           all_countries?.filter(

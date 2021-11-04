@@ -19,16 +19,20 @@ const BorderCountriesLinks = (props: Props) => {
   return (
     <BorderCountriesDiv>
       <strong>Border Countries: </strong>
-      {borderCountries?.map((border) => (
-        <StyledBorderCountriesLinks
-          key={border.cca3}
-          onClick={() => {
-            history.push(`${PATHS.MARCUS_FE_MENTOR}/${border.name.common}`)
-          }}
-        >
-          {border.name.common}
-        </StyledBorderCountriesLinks>
-      ))}
+      {borderCountries.length === 0 ? (
+        <span>&nbsp;none</span>
+      ) : (
+        borderCountries?.map((border) => (
+          <StyledBorderCountriesLinks
+            key={border.cca3}
+            onClick={() => {
+              history.push(`${PATHS.MARCUS_FE_MENTOR}/${border.name.common}`)
+            }}
+          >
+            {border.name.common}
+          </StyledBorderCountriesLinks>
+        ))
+      )}
     </BorderCountriesDiv>
   )
 }

@@ -1,10 +1,11 @@
 .theme-dark {
-  --background: #797979;
-  --title-background: #808080;
-  --title-color: #eeeae8;
-  --card-color: #bebbba;
+  --background: #202c36;
+  --title-background: #2b3844;
+  --title-color: #ffffff;
+  --card-color: #2b3844;
   --card-shadow: 2px 2px 5px black;
-  --search-bar-color: #f7f5f4;
+  --input-color: #2b3844;
+  --text-color: #ffffff;
 }
 
 .theme-light {
@@ -13,13 +14,15 @@
   --title-color: #111517;
   --card-color: #ffffff;
   --card-shadow: 2px 2px 5px gray;
-  --search-bar-color: #ffffff;
+  --input-color: #ffffff;
+  --text-color: #000000;
 }
 
 #toggle-theme {
   background-color: var(--background);
   height: 100vh;
   overflow: auto;
+  color: var(--text-color);
 }
 
 #title {
@@ -35,6 +38,14 @@
   box-shadow: var(--card-shadow);
 }
 
-#search-bar {
-  background-color: var(--search-bar-color);
+.ant-input-affix-wrapper,
+.ant-input,
+.ant-btn {
+  color: var(--text-color);
+  background-color: var(--input-color);
+}
+
+.card-text,
+.country-info-text {
+  color: var(--text-color);
 }

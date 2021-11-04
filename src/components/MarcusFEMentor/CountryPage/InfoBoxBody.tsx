@@ -18,9 +18,11 @@ const InfoBoxBody = (props: Props) => {
       <InfoBoxEntry
         title="Currencies"
         value={
-          Object.values<{ name: string }>(country.currencies)
-            .map((currency) => currency.name)
-            .join(', ') ?? 'none'
+          country.currencies
+            ? Object.values<{ name: string }>(country.currencies)
+                .map((currency) => currency.name)
+                .join(', ')
+            : 'none'
         }
       />
       <InfoBoxEntry title="Region" value={country.region ?? 'none'} />

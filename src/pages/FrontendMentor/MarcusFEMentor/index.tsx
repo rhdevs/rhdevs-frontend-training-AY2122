@@ -10,12 +10,10 @@ import CountryCard from '../../../components/MarcusFEMentor/CountryCard'
 import SearchBar from '../../../components/MarcusFEMentor/SearchBar'
 import Title from '../../../components/MarcusFEMentor/Title'
 import RegionsDropdown from '../../../components/MarcusFEMentor/RegionsDropdown'
-import LoadingPage from './LoadingPage'
-import ErrorPage from './ErrorPage'
+import IndexLoadingPage from './IndexLoadingPage'
 
 import './styles/toggle.css'
-import setTheme from './styles/setTheme'
-// import { ToggleTheme } from './styles/ToggleTheme.styled'
+import { keepTheme } from './styles/toggleTheme'
 import { CountriesDiv } from '../../../components/MarcusFEMentor/styles/Cards.styled'
 import { FiltersDiv, SearchBarBuffer } from '../../../components/MarcusFEMentor/styles/FiltersDiv.styled'
 import { TitleContainerBuffer } from '../../../components/MarcusFEMentor/styles/Title.styled'
@@ -36,7 +34,7 @@ function MarcusFEMentor() {
   }, [all_countries, response_ok])
 
   useEffect(() => {
-    setTheme('theme-light'), []
+    keepTheme(), []
   })
 
   const [found, setFound] = useState<boolean>(response_ok)
@@ -52,18 +50,16 @@ function MarcusFEMentor() {
       </FiltersDiv>
       <SearchBarBuffer />
       <CountriesDiv>
-        {countries ? (
-          countries.map((country) => (
+        {found ? (
+          countries?.map((country) => (
             <CountryCard
               key={country.cca2}
               country={country}
               onClick={() => history.push(`${PATHS.MARCUS_FE_MENTOR}/${country.name.common}`)}
             />
           ))
-        ) : found ? (
-          <LoadingPage />
         ) : (
-          <ErrorPage />
+          <IndexLoadingPage />
         )}
       </CountriesDiv>
     </div>

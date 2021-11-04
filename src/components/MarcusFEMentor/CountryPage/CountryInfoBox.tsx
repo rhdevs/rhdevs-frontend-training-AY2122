@@ -13,7 +13,7 @@ const CountryInfoBox = (props: Props) => {
   const country = props.country
   return (
     <CountryInfoBoxDiv>
-      <InfoBoxTitle>{country.name.common}</InfoBoxTitle>
+      <InfoBoxTitle className="country-info-text">{country.name.common}</InfoBoxTitle>
       <InfoBoxBody country={country} />
       <BorderCountriesLinks country={country} />
     </CountryInfoBoxDiv>

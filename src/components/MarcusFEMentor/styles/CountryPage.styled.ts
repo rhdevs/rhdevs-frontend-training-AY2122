@@ -23,6 +23,10 @@ export const StyledBackButton = styled(Button)`
   left: 80px;
   top: 120px;
   z-index: 3;
+  @media (max-width: 769px) {
+    left: 40px;
+    top: 140px;
+  }
 `
 
 export const FlagImageStyle = styled.img`
@@ -36,6 +40,10 @@ export const FlagImageStyle = styled.img`
   @media (max-width: calc(${flagWidth}*1.3)) {
     width: 100%;
     height: 100%;
+    margin-top: -40px;
+  }
+  @media (max-width: 460px) {
+    margin-top: -70px;
   }
 `
 
@@ -47,6 +55,7 @@ export const CountryInfoBoxDiv = styled.div`
   padding-right: 5vw;
   @media (max-width: 1440px) {
     margin: auto;
+    margin-top: 30px;
     width: 80%;
   }
 `
@@ -65,6 +74,10 @@ export const InfoBoxBodyDiv = styled.div`
 `
 
 export const BorderCountriesDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 15px;
   font-size: ${infoboxFontSize};
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import setTheme from '../../pages/FrontendMentor/MarcusFEMentor/styles/setTheme'
+import { setTheme } from '../../pages/FrontendMentor/MarcusFEMentor/styles/toggleTheme'
 import { StyledDarkModeToggleSwitch } from './styles/Title.styled'
 
 const DarkModeToggleSwitch = () => {
@@ -12,7 +12,14 @@ const DarkModeToggleSwitch = () => {
     }
   }
 
-  return <StyledDarkModeToggleSwitch checkedChildren="🌙" unCheckedChildren="🌞" onChange={handleOnClick} />
+  return (
+    <StyledDarkModeToggleSwitch
+      defaultChecked={localStorage.getItem('theme') === 'theme-dark'}
+      checkedChildren="🌙"
+      unCheckedChildren="🌞"
+      onChange={handleOnClick}
+    />
+  )
 }
 
 export default DarkModeToggleSwitch

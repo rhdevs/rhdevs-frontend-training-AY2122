@@ -3,6 +3,7 @@ import React from 'react'
 import Title from '../../../components/MarcusFEMentor/Title'
 import BackButton from '../../../components/MarcusFEMentor/CountryPage/BackButton'
 import { TitleContainerBuffer } from '../../../components/MarcusFEMentor/styles/Title.styled'
+import { LoadingText } from '../../../components/MarcusFEMentor/styles/BufferPage.styled'
 
 const LoadingPage = () => {
   return (
@@ -10,7 +11,7 @@ const LoadingPage = () => {
       <Title text="Where in the world?" />
       <TitleContainerBuffer />
       <BackButton />
-      <h1>loading...</h1>
+      <LoadingText>loading...</LoadingText>
     </>
   )
 }

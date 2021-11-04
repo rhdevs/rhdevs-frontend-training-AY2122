@@ -23,12 +23,15 @@ export const StyledSearchBar = styled(Input)`
   margin: ${searchBarTop} 0 0 80px;
   @media (max-width: 769px) {
     width: auto;
-    margin: ${searchBarTop} 80px 0;
+    margin: calc(${searchBarTop} / 3) 80px 0;
   }
 `
 
 export const SearchBarBuffer = styled.div`
   height: calc(${searchBarHeight} + ${searchBarTop} + 30px);
+  @media (max-width: 769px) {
+    height: calc(${searchBarHeight}*1.5 + ${searchBarTop} / 3 + 30px);
+  }
 `
 
 export const StyledRegionsDropdown = styled(Dropdown)`
@@ -37,7 +40,7 @@ export const StyledRegionsDropdown = styled(Dropdown)`
   margin: calc(${searchBarTop} + ${searchBarHeight} / 2 - ${dropdownHeight} / 2) 80px auto auto;
   text-align: center;
   @media (max-width: 769px) {
-    margin: calc(${searchBarHeight} / 2) auto auto;
+    margin: calc(${searchBarHeight} / 3) auto auto;
     width: 40vw;
   }
 `
