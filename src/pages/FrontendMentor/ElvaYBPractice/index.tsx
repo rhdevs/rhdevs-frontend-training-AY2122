@@ -1,4 +1,3 @@
-import { Button } from 'antd'
 import React from 'react'
 import {
   MainPage,
@@ -28,7 +27,6 @@ const ElvaYBPractice = () => {
           <JoinCommText1>Join our community</JoinCommText1>
           <JoinCommText2>30-day, hassle-free money back guarantee</JoinCommText2>
           <JoinCommText3>
-            <br />
             Gain access to our full library of tutorials along with expert code reviews.
             <br />
             Perfect for any developers who are serious about honing their skills.
@@ -42,21 +40,22 @@ const ElvaYBPractice = () => {
               <BottomLeftPerMonth>per month</BottomLeftPerMonth>
             </PriceAndPerMonth>
             <BottomLeftFullAccess>Full access for less than $1 a day</BottomLeftFullAccess>
-            <SignUpButton>
-              <Button type="primary">Sign Up</Button>
-            </SignUpButton>
+            <SignUpButton>Sign Up</SignUpButton>
           </BottomLeftContainer>
           <BottomRightContainer>
             <BottomRightShort>Why Us</BottomRightShort>
             <BottomRightLong>
-              <br />
               Tutorials by industry experts
               <br />
-              Peer & expert code review Coding exercises
+              Peer & expert code review
+              <br />
+              Coding exercises
               <br />
               Access to our GitHub repos
               <br />
-              Community Forum Flashcard decks
+              Community Forum
+              <br />
+              Flashcard decks
               <br />
               New videos every week
             </BottomRightLong>
