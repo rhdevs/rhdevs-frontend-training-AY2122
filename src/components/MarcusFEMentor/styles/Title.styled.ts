@@ -17,14 +17,14 @@ export const TitleContainer = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 3;
-  @media (max-width: 460px) {
+  @media (max-width: 375px) {
     height: ${titleHeightMobile};
   }
 `
 
 export const TitleContainerBuffer = styled.div`
   height: ${titleHeight};
-  @media (max-width: 460px) {
+  @media (max-width: 375px) {
     height: ${titleHeightMobile};
   }
 `
@@ -50,7 +50,7 @@ export const StyledDarkModeToggleSwitch = styled(Switch)`
   z-index: 3;
   margin: auto;
   margin-right: 10vw;
-  @media (max-width: 460px) {
+  @media (max-width: 375px) {
     margin-top: calc(${titleHeightMobile}*0.67);
   }
 `

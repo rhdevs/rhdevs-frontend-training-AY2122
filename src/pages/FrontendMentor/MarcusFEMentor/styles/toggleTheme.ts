@@ -12,6 +12,6 @@ export function keepTheme() {
       setTheme('theme-light')
     }
   } else {
-    setTheme('theme-dark')
+    setTheme('theme-light') // default
   }
 }

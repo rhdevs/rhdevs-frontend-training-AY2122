@@ -19,4 +19,7 @@ export const StyledCard = styled(Card)`
   :focus {
     transform: scale3d(1.05, 1.05, 1.1);
   }
+  @media (max-height: 420px) {
+    min-height: 306px;
+  }
 `
