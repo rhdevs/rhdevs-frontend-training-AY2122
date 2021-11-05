@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Button } from 'antd'
-import { Table, Space } from 'antd'
+
+import { Table, Space, Button } from 'antd'
 import { MinusCircleOutlined, PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 import { MainPage, HeaderShoppingCart, Header, AddItemButton, ShoppingListForm } from './styles/ShoppingCart4.styled'
 import AddItemModal from '../../components/AddItemModal'
@@ -29,13 +29,15 @@ const ShoppingCart4 = () => {
     {
       title: 'Action',
       key: 'action',
-      render: (record: ShoppingListItem) => (
-        <Space size="middle">
-          <MinusCircleOutlined onClick={() => minusQuantity(record)}></MinusCircleOutlined>
-          <PlusCircleOutlined onClick={() => addQuantity(record)}></PlusCircleOutlined>
-          <a onClick={() => removeItem(record)}>Delete</a>
-        </Space>
-      ),
+      render: function actions(record: ShoppingListItem) {
+        return (
+          <Space size="middle">
+            <MinusCircleOutlined onClick={() => minusQuantity(record)}></MinusCircleOutlined>
+            <PlusCircleOutlined onClick={() => addQuantity(record)}></PlusCircleOutlined>
+            <a onClick={() => removeItem(record)}>Delete</a>
+          </Space>
+        )
+      },
     },
   ]
 

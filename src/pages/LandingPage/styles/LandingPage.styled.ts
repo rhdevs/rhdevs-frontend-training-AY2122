@@ -9,6 +9,16 @@ export const MembersSection = styled.div`
   margin: 1.5rem 1rem;
 `
 
+export const StyledPageHeader = styled.h1`
+  width: 100%;
+  text-align: center;
+`
+
+export const StyledPageDescription = styled.p`
+  width: 100%;
+  text-align: center;
+`
+
 export const MembersSectionHeader = styled.h1`
   text-align: center;
   font-weight: 400;

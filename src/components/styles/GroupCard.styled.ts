@@ -21,6 +21,7 @@ export const StyledCard = styled.div`
 
 export const StyledGroupNumber = styled.text`
   font-size: calc(18px + 1.5vw);
+  text-align: center;
 `
 
 export const StyledMemberNameGroup = styled.div`
@@ -34,4 +35,13 @@ export const BoldText = styled.text`
 
 export const StyledNamesText = styled.text`
   padding-left: 5px;
+`
+
+export const StyledDescriptionText = styled.text`
+  text-align: center;
+`
+
+export const StyledCardLink = styled.a`
+  text-align: center;
+  overflow-wrap: anywhere;
 `

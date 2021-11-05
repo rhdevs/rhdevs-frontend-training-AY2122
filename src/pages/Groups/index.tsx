@@ -1,71 +1,33 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 
-import GroupX from './Group0'
-import Group1 from './Group1'
-import Group2 from './Group2'
-import Group3 from './Group3'
-import Group4 from './Group4'
-import NotFound from '../ErrorPage/NotFound'
-import Group0Screen1 from './Group0/Screen1'
-import Group0Screen2 from './Group0/Screen2'
-import Group1Screen1 from './Group1/Screen1'
-import Group1Screen2 from './Group1/Screen2'
-import Group2Screen1 from './Group2/Screen1'
-import Group2Screen2 from './Group2/Screen2'
-import Group3Screen1 from './Group3/Screen1'
-import Group3Screen2 from './Group3/Screen2'
-import Group4Screen1 from './Group4/Screen1'
-import Group4Screen2 from './Group4/Screen2'
+import GroupCard from '../../components/GroupCard'
+import PageHeader from '../../components/PageHeader'
+import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
 
 const Groups = () => {
-  const params = useParams<{ groupNumber: string; screenNumber?: string }>()
-
-  const screenNumber = Number(params.screenNumber)
-  switch (Number(params.groupNumber)) {
-    case 0:
-      if (screenNumber === 1) {
-        return <Group0Screen1 />
-      } else if (screenNumber === 2) {
-        return <Group0Screen2 />
-      } else {
-        return <GroupX />
-      }
-    case 1:
-      if (screenNumber === 1) {
-        return <Group1Screen1 />
-      } else if (screenNumber === 2) {
-        return <Group1Screen2 />
-      } else {
-        return <Group1 />
-      }
-    case 2:
-      if (screenNumber === 1) {
-        return <Group2Screen1 />
-      } else if (screenNumber === 2) {
-        return <Group2Screen2 />
-      } else {
-        return <Group2 />
-      }
-    case 3:
-      if (screenNumber === 1) {
-        return <Group3Screen1 />
-      } else if (screenNumber === 2) {
-        return <Group3Screen2 />
-      } else {
-        return <Group3 />
-      }
-    case 4:
-      if (screenNumber === 1) {
-        return <Group4Screen1 />
-      } else if (screenNumber === 2) {
-        return <Group4Screen2 />
-      } else {
-        return <Group4 />
-      }
-    default:
-      return <NotFound />
-  }
+  return (
+    <MembersSection>
+      <PageHeader
+        title="RHApp Redesign"
+        description="group work with designers to create redesign of 2 selected screens"
+      />
+      <MembersSectionHeader>Groups!</MembersSectionHeader>
+      <InformationCardSection>
+        <GroupCard
+          groupNumber={1}
+          devs="Chun Yu, En Hao, Prince, Maxim, Richard"
+          designers="Shermaine, Nguyen, Felicia"
+        />
+        <GroupCard
+          groupNumber={2}
+          devs="wenfeng, jason, shao kiat, yong zhang, yongbin"
+          designers="amos, yu an, audery"
+        />
+        <GroupCard groupNumber={3} devs="Yixuan, Tai, Venus, Kiyong" designers="Dennis, Austin" />
+        <GroupCard groupNumber={4} devs="Elva, Zhikai, Weipin, Marcus" designers="Gregory, Shannon, Brendan" />
+      </InformationCardSection>
+    </MembersSection>
+  )
 }
 
 export default Groups

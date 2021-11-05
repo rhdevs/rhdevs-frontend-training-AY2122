@@ -1,6 +1,5 @@
 /** Types */
 //create your own type!
-
 export type ShoppingListEntry = {
   key: number
   itemQuantity: number
@@ -20,27 +19,28 @@ export enum SHOPPING_LIST_ACTIONS {
 /** Actions */
 type setShoppingList = {
   type: typeof SHOPPING_LIST_ACTIONS.SET_SHOPPING_LIST
-  ItemList: ShoppingListEntry[]
+  itemList: ShoppingListEntry[]
 }
 
 type addShoppingItem = {
   type: typeof SHOPPING_LIST_ACTIONS.ADD_SHOPPING_ITEM
-  IndexOfItem: number
+  indexOfItem: number
+  itemList: ShoppingListEntry[]
 }
 
 type removeShoppingItem = {
   type: typeof SHOPPING_LIST_ACTIONS.REMOVE_SHOPPING_ITEM
-  IndexOfItem: number
+  indexOfItem: number
 }
 
 type increaseQuantity = {
   type: typeof SHOPPING_LIST_ACTIONS.INCREASE_QUANTITY
-  ItemList: ShoppingListEntry[]
+  itemList: ShoppingListEntry[]
 }
 
 type decreaseQuantity = {
   type: typeof SHOPPING_LIST_ACTIONS.DECREASE_QUANTITY
-  ItemList: ShoppingListEntry[]
+  itemList: ShoppingListEntry[]
 }
 
 export type ActionTypes = addShoppingItem | removeShoppingItem | increaseQuantity | decreaseQuantity | setShoppingList
