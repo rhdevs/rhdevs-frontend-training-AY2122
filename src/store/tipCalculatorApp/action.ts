@@ -1,21 +1,21 @@
 import { Dispatch, GetState } from '../types'
 import { ActionTypes, CALCULATOR_ACTIONS } from './types'
 
-export const SetBillAmount = (newAmount: number) => async (dispatch: Dispatch<ActionTypes>) => {
+export const setBillAmount = (newAmount: number) => async (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: CALCULATOR_ACTIONS.SET_BILL_AMOUNT,
     billAmount: newAmount,
   })
 }
 
-export const SetPeopleAmount = (newPeopleAmount: number) => async (dispatch: Dispatch<ActionTypes>) => {
+export const setPeopleAmount = (newPeopleAmount: number) => async (dispatch: Dispatch<ActionTypes>) => {
   dispatch({
     type: CALCULATOR_ACTIONS.SET_PEOPLE_AMOUNT,
     peopleAmount: newPeopleAmount,
   })
 }
 
-export const SetTipAmount = (percentage: number) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const setTipAmount = (percentage: number) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { billAmount, peopleAmount } = getState().tipCalculatorApp
   const newTipAmount = (percentage / 100) * (billAmount / (peopleAmount <= 0 ? 1 : peopleAmount))
   dispatch({
@@ -24,7 +24,7 @@ export const SetTipAmount = (percentage: number) => async (dispatch: Dispatch<Ac
   })
 }
 
-export const SetTotalAmount = () => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const setTotalAmount = () => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { billAmount, peopleAmount, tipAmount } = getState().tipCalculatorApp
   const newTotalAmount = billAmount / peopleAmount + tipAmount
   dispatch({

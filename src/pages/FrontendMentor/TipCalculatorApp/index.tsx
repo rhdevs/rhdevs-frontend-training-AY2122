@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../../store/types'
 import {
   Reset,
-  SetBillAmount,
-  SetPeopleAmount,
-  SetTipAmount,
-  SetTotalAmount,
+  setBillAmount,
+  setPeopleAmount,
+  setTipAmount,
+  setTotalAmount,
 } from '../../../store/tipCalculatorApp/action'
 
 import {
@@ -90,49 +90,49 @@ export default function TipCalculatorApp() {
               <TipGridBox>
                 <TipGridItem
                   onClick={() => {
-                    dispatch(SetBillAmount(newBillAmount))
-                    dispatch(SetPeopleAmount(newPeopleAmount))
-                    dispatch(SetTipAmount(5))
-                    dispatch(SetTotalAmount())
+                    dispatch(setBillAmount(newBillAmount))
+                    dispatch(setPeopleAmount(newPeopleAmount))
+                    dispatch(setTipAmount(5))
+                    dispatch(setTotalAmount())
                   }}
                 >
                   5%
                 </TipGridItem>
                 <TipGridItem
                   onClick={() => {
-                    dispatch(SetBillAmount(newBillAmount))
-                    dispatch(SetPeopleAmount(newPeopleAmount))
-                    dispatch(SetTipAmount(10))
-                    dispatch(SetTotalAmount())
+                    dispatch(setBillAmount(newBillAmount))
+                    dispatch(setPeopleAmount(newPeopleAmount))
+                    dispatch(setTipAmount(10))
+                    dispatch(setTotalAmount())
                   }}
                 >
                   10%
                 </TipGridItem>
                 <TipGridItem
                   onClick={() => {
-                    dispatch(SetBillAmount(newBillAmount))
-                    dispatch(SetPeopleAmount(newPeopleAmount))
-                    dispatch(SetTipAmount(15))
-                    dispatch(SetTotalAmount())
+                    dispatch(setBillAmount(newBillAmount))
+                    dispatch(setPeopleAmount(newPeopleAmount))
+                    dispatch(setTipAmount(15))
+                    dispatch(setTotalAmount())
                   }}
                 >
                   15%
                 </TipGridItem>
                 <TipGridItem
                   onClick={() => {
-                    dispatch(SetBillAmount(newBillAmount))
-                    dispatch(SetPeopleAmount(newPeopleAmount))
-                    dispatch(SetTipAmount(25))
-                    dispatch(SetTotalAmount())
+                    dispatch(setBillAmount(newBillAmount))
+                    dispatch(setPeopleAmount(newPeopleAmount))
+                    dispatch(setTipAmount(25))
+                    dispatch(setTotalAmount())
                   }}
                 >
                   25%
                 </TipGridItem>
                 <TipGridItem
                   onClick={() => {
-                    dispatch(SetBillAmount(newBillAmount))
-                    dispatch(SetPeopleAmount(newPeopleAmount))
-                    dispatch(SetTipAmount(50))
+                    dispatch(setBillAmount(newBillAmount))
+                    dispatch(setPeopleAmount(newPeopleAmount))
+                    dispatch(setTipAmount(50))
                   }}
                 >
                   50%
@@ -144,10 +144,10 @@ export default function TipCalculatorApp() {
                     placeholder="Custom"
                     onChange={(e) => handleSetCustomAmount(e)}
                     onBlur={() => {
-                      dispatch(SetBillAmount(newBillAmount))
-                      dispatch(SetPeopleAmount(newPeopleAmount))
-                      dispatch(SetTipAmount(customAmount))
-                      dispatch(SetTotalAmount())
+                      dispatch(setBillAmount(newBillAmount))
+                      dispatch(setPeopleAmount(newPeopleAmount))
+                      dispatch(setTipAmount(customAmount))
+                      dispatch(setTotalAmount())
                     }}
                   />
                 </form>
