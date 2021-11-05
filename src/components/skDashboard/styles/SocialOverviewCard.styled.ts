@@ -25,10 +25,11 @@ export const StyledCard = styled.div`
   }
 `
 export const TopRow = styled.div`
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2vh;
+  align-items: center;
+  margin-bottom: 5vh;
 `
 
 export const StyledPageView = styled.text`
@@ -36,7 +37,6 @@ export const StyledPageView = styled.text`
   font-size: calc(12px + 1vh);
   font-weight: 700;
   text-align: center;
-  height: 6vh;
   margin-left: 30px;
 `
 
@@ -45,7 +45,7 @@ export const StyledIcon = styled.img`
   margin-right: 30px;
 `
 export const BottomRow = styled.div`
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   margin-top: 1vh;
