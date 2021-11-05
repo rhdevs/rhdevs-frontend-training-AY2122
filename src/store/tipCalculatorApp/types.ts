@@ -1,6 +1,3 @@
-/** Types */
-
-/** Actions' types */
 export enum CALCULATOR_ACTIONS {
   SET_BILL_AMOUNT = 'CALCULATOR_ACTIONS.SET_BILL_AMOUNT',
   SET_TIP_AMOUNT = 'CALCULATOR_ACTIONS.SET_TIP_AMOUNT',
@@ -9,7 +6,6 @@ export enum CALCULATOR_ACTIONS {
   RESET = 'CALCULATOR_ACTIONS.RESET',
 }
 
-/** Actions */
 type SetBillAmount = {
   type: typeof CALCULATOR_ACTIONS.SET_BILL_AMOUNT
   billAmount: number
