@@ -9,8 +9,9 @@ interface MediaCard {
 
 export const StyledCard = styled.div<borderColor>`
   color: ${({ theme }) => theme.headingText};
-  border-top: 6px solid;
-  border-top-color: ${(props) => props.platform};
+  /* border-top: 6px solid;
+  border-top-color: ${(props) => props.platform}; */
+  background: ${({ theme }) => theme.cardBackground};
   line-height: 20px;
   display: flex;
   flex-direction: column;
@@ -21,11 +22,22 @@ export const StyledCard = styled.div<borderColor>`
   justify-content: center;
   align-items: center;
   margin: 2vh auto 2vh 0;
-  background: red;
   width: 18vw;
   height: 30vh;
 
-  background: ${({ theme }) => theme.cardBackground};
+  &:before {
+    content: '';
+    position: absolute;
+    height: 7px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background: ${(props) => props.platform};
+  }
+
   :hover,
   :focus {
     transform: scale3d(1.05, 1.05, 1.1);

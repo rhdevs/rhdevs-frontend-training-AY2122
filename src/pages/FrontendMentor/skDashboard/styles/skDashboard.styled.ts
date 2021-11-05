@@ -57,7 +57,6 @@ export const DashboardHeader = styled.div`
 `
 
 export const FollowersCount = styled.div`
-  margin-top: -1vh;
   font-size: 14px;
   font-weight: 700;
   color: ${({ theme }) => theme.text};
