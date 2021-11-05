@@ -2,7 +2,7 @@ import { Dispatch, GetState } from '../types'
 import { ActionTypes, SHOPPING_LIST_ACTIONS, ShoppingItem } from './types'
 
 export const AddItemQuantity =
-  (itemToChange: ShoppingItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  (itemToChange: ShoppingItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
     const { itemList } = getState().jasonYbReduxShoppingList
     const updatedList = itemList.map((item) =>
       item.index === itemToChange.index ? { ...item, quantity: item.quantity + 1 } : item,
@@ -14,7 +14,7 @@ export const AddItemQuantity =
   }
 
 export const ReduceItemQuantity =
-  (itemToChange: ShoppingItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  (itemToChange: ShoppingItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
     const { itemList } = getState().jasonYbReduxShoppingList
     const updatedList = itemList.map((item) =>
       item.index === itemToChange.index ? { ...item, quantity: item.quantity - 1 } : item,
@@ -26,7 +26,7 @@ export const ReduceItemQuantity =
   }
 
 export const DeleteItem =
-  (itemToDelete: ShoppingItem) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  (itemToDelete: ShoppingItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
     const { itemList } = getState().jasonYbReduxShoppingList
     const updatedList = itemList.filter((item) => item.index !== itemToDelete.index)
     dispatch({
@@ -35,7 +35,7 @@ export const DeleteItem =
     })
   }
 
-export const IncrementKeyAndIndexCount = () => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const IncrementKeyAndIndexCount = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { keyCount, indexCount } = getState().jasonYbReduxShoppingList
   const newKeyCount = keyCount + 1
   const newIndexCount = indexCount + 1
@@ -46,7 +46,7 @@ export const IncrementKeyAndIndexCount = () => async (dispatch: Dispatch<ActionT
   })
 }
 
-export const AddItem = (newItemName: string) => async (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+export const AddItem = (newItemName: string) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   dispatch(IncrementKeyAndIndexCount())
   const { itemList, keyCount, indexCount } = getState().jasonYbReduxShoppingList
   const newItem: ShoppingItem = {
