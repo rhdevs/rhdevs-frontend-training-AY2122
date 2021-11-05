@@ -48,7 +48,7 @@ export const BottomRow = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3vh;
+  margin-top: 1vh;
 `
 export const StyledStats = styled.text`
   font-size: calc(20px + 2vh);

@@ -50,6 +50,8 @@ export const StyledIcon = styled.img`
 
 export const StyledHandle = styled.div`
   margin-left: 15px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text};
 `
 
 export const StyledFollowerCount = styled.text`

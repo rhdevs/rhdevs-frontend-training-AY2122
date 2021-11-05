@@ -51,12 +51,12 @@ export const MainPage = styled.div`
 export const DashboardHeader = styled.div`
   color: ${({ theme }) => theme.headingText};
   align-self: flex-start;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
 `
 
 export const FollowersCount = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: ${({ theme }) => theme.text};
   margin-bottom: 1vh;
