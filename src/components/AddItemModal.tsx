@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal, Input } from 'antd'
 import { ModalHeader, ModalTitle, InputContainer, ErrorMessage } from './styles/AddItemModal.styled'
-import { ShoppingListItem } from '../pages/ShoppingCart4/index'
+import { ShoppingListItem } from '../pages/ShoppingLists/ShoppingCart4/index'
 
 type Props = {
   itemKey: number

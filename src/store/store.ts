@@ -11,6 +11,7 @@ import { pair3Redux } from './Pair3redux/reducer'
 import { shoppingListsCYYZ } from './shoppingListsCYYZ/reducer'
 import { shoppingListsSKZK } from './skzk/reducer'
 import { marcusFEMentor } from './MarcusFEMentor/reducer'
+import { yxwp_store } from './yxwp_store/reducer'
 
 export const rootReducer = combineReducers({
   animeGangRedux,
@@ -19,9 +20,10 @@ export const rootReducer = combineReducers({
   jasonYbReduxShoppingList,
   pair3Redux,
   shoppingListsSKZK,
-  shoppingListsCYYZ,
+  yxwp_store,
   pair2,
   marcusFEMentor,
+  shoppingListsCYYZ,
 })
 const middlewares = [thunk]
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)))
