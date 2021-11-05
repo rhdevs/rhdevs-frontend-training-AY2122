@@ -25,6 +25,7 @@ const FrontendMentor = () => {
       <InformationCardSection>
         {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
         <Card title="Meet landing page" description="your name" />
+        <Card title="REST Countries API" description="Marcus" onClick={() => history.push(PATHS.MARCUS_FE_MENTOR)} />
         <Card
           title="Profile card component"
           description="Prince, Enhao"
