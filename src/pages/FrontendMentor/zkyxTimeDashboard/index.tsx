@@ -21,6 +21,8 @@ import {
   LegendTextSelector,
   TitleBox,
   EllipsisImage,
+  FooterContainer,
+  UserReportContainer,
 } from './styles/TimeDashboard.styled'
 import WorkIcon from './images/icon-work.svg'
 import PlayIcon from './images/icon-play.svg'
@@ -42,12 +44,10 @@ const TimeDashBoardPage = () => {
           <UserCard>
             <UserInfoCard>
               <UserCardImage src={UserProfilePic} />
-              <FooterText>Report for</FooterText>
-              <HourText>
-                Jeremy
-                <br />
-                Robson
-              </HourText>
+              <UserReportContainer>
+                <FooterText>Report for</FooterText>
+                <HourText>Jeremy Robson</HourText>
+              </UserReportContainer>
             </UserInfoCard>
             <LegendCard>
               {period === 'Daily' ? (
@@ -101,8 +101,10 @@ const TimeDashBoardPage = () => {
                 <TitleText>Work</TitleText>
                 <EllipsisImage src={EllipsisIcon} />
               </TitleBox>
-              <HourText>1Hrs</HourText>
-              <FooterText>{pastPeriod} - 0hr</FooterText>
+              <FooterContainer>
+                <HourText>1Hrs</HourText>
+                <FooterText>{pastPeriod} - 0hr</FooterText>
+              </FooterContainer>
             </TimeInfoCard>
           </TimeCard>
           <TimeCard>

@@ -4,14 +4,11 @@ import WorkIcon from '../images/icon-work.svg'
 export const Background = styled.div`
   position: absolute;
   margin: 0;
-  top: 50%;
-  left: 50%;
   min-width: 100%;
   height: auto;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  transform: translate(-50%, -50%);
   background-color: #0f1424;
   justify-content: center;
   display: grid;
@@ -22,44 +19,61 @@ export const TitleText = styled.h1`
   font-size: 22px;
   font-weight: 500;
   color: #f5f5f5;
+  @media (max-width: 768px) {
+    font-size: 4vw;
+  }
 `
 export const HourText = styled.h2`
   font-size: 30px;
   font-weight: 500;
   color: #f5f5f5;
+  break-between: always;
+  @media (max-width: 768px) {
+    font-size: 5vw;
+    break-between: none;
+  }
 `
 export const FooterText = styled.h2`
   font-size: 14px;
   font-weight: 400;
   color: #cccfff;
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
+`
+
+export const FooterContainer = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 export const BackgroundCardTop = styled.div`
   background-repeat: no-repeat;
   image-position: right;
   background-origin: content-box;
-  margin-bottom: -1rem;
+  margin-bottom: -1vh;
+  height: auto;
+  @media (max-width: 768px) {
+    height: auto;
+    margin-bottom: -auto;
+  }
 `
 
 export const BackgroundIcon = styled.img`
   width: fit-content;
-  margin-top: -0.6rem;
+  margin-top: -0.6vh;
   margin-left: 60%;
-  width: 5rem;
-  height: 5rem;
+  width: 8vh;
+  height: 8vh;
+  @media (max-width: 768px) {
+    margin-left: 50vw;
+    width: auto;
+  }
 `
-/*position: right;
-image-position: right;
-background-position-x: right;
-position-x: right;
-background-size: right;
-overflow: hidden;
-background-position: top right;
-background-image: WorkIcon;
-background-origin: content-box;
-background-color: #ff8c66;
-margin-bottom: 1rem;
-height: 5rem;*/
-// using display grid allowed the logo to be covered behind
+
 export const TimeCard = styled.div`
   overflow: hidden;
   display: grid;
@@ -80,6 +94,10 @@ export const TimeInfoCard = styled.div`
   &: hover {
     background-color: #2a306f;
   }
+  @media (max-width: 768px) {
+    padding: 2rem;
+    padding-bottom: 1rem;
+  }
 `
 
 export const UserCard = styled.div`
@@ -90,26 +108,58 @@ export const UserCard = styled.div`
   display: block;
   border-radius: 20px;
   width: 100%;
-  height: 100%;
   background-color: #1c1f4a;
 `
+{
+  /*@media (max-width: 768px) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    flex-direction: column;
+    display: flex;
+  }*/
+}
+
+export const UserReportContainer = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+`
+
 export const UserCardImage = styled.img`
-  max-width: 40%;
-  border-radius: 50px;
+  max-width: 50%;
+  overflow: hidden;
+  border-radius: 50%;
   margin-bottom: 0.8rem;
   border-style: solid;
   border-color: #f5f5f5;
+  @media (max-width: 768px) {
+    max-width: 25%;
+    border-radius: 50%;
+  }
 `
 
 export const UserInfoCard = styled.div`
   background-color: #5847eb;
   border-radius: 20px;
-  padding: 1.5rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 2rem;
+  }
 `
 export const LegendCard = styled.div`
   border-radius: 20px;
   padding: 1.5rem;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
 `
 
 export const LegendTextSelector = styled.h2`
@@ -117,6 +167,9 @@ export const LegendTextSelector = styled.h2`
   font-size: 18px;
   cursor: pointer;
   margin-bottom: -0.1rem;
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
 `
 export const LegendText = styled.div`
   color: #cccfff;
@@ -125,21 +178,27 @@ export const LegendText = styled.div`
   &: hover {
     color: #f5f5f5;
   }
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
 `
 
 export const DashboardContainer = styled.div`
   display: grid;
   gap: 1.5rem;
+  overflow: hidden;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  background-color: ;
+  background-color: #0f1424;
   position: center;
   border-radius: 20px;
   justify-content: center;
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     display: flex;
+    border-color: red;
     flex-direction: column;
-    justify-content: flex-start;
+    background-color: transparent;
+    width: 70vw;
   }
 `
 
