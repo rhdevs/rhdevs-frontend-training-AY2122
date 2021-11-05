@@ -1,5 +1,5 @@
-import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons'
 import React from 'react'
+import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons'
 import {
   BottomRow,
   StyledCard,

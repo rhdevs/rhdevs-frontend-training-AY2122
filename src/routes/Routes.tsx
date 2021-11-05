@@ -51,8 +51,8 @@ const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCar
 const ShoppingCart4Redux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
 )
-const skDashboard = React.lazy(
-  () => import(/* webpackChunckName: "skDaskboard" */ '../pages/FrontendMentor/skDashboard'),
+const SkDashboard = React.lazy(
+  () => import(/* webpackChunckName: "SkDaskboard" */ '../pages/FrontendMentor/SkDashboard'),
 )
 
 export const Routes = () => (

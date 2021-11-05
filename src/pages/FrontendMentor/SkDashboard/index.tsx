@@ -12,7 +12,7 @@ import {
   CardSection,
   StyledDarkMode,
   LineSeparator,
-} from './styles/skDashboard.styled'
+} from './styles/SkDashboard.styled'
 
 import SocialMediaCard from '../../../components/skDashboard/SocialMediaCard'
 import SocialOverviewCard from '../../../components/skDashboard/SocialOverviewCard'

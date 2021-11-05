@@ -1,5 +1,5 @@
-import { CaretDownOutlined, CaretUpOutlined } from '@ant-design/icons'
 import React from 'react'
+import { CaretDownOutlined, CaretUpOutlined } from '@ant-design/icons'
 import {
   ChangeContainer,
   StyledCard,
