@@ -21,11 +21,39 @@ import InstagramIcon from '../../../assets/skDashboard/icon-instagram.svg'
 import YoutubeIcon from '../../../assets/skDashboard/icon-youtube.svg'
 import SocialOverviewCard from '../../../components/skDashboard/SocialOverviewCard'
 
+interface MediaCard {
+  icon: string
+  followerCount: string
+}
+
+interface OverviewCard {
+  icon: string
+  statsName: string
+  stats: string
+}
+
 const skDashboard = () => {
   const [theme, setTheme] = useState('dark')
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }
+  const MediaCardsList = [
+    { icon: FacebookIcon, followerCount: '1987' },
+    { icon: TwitterIcon, followerCount: '1044' },
+    { icon: InstagramIcon, followerCount: '11k' },
+    { icon: YoutubeIcon, followerCount: '8239' },
+  ]
+  const OverviewCardsList = [
+    { icon: FacebookIcon, statsName: 'Pageviews', stats: '87' },
+    { icon: FacebookIcon, statsName: 'Likes', stats: '52' },
+    { icon: InstagramIcon, statsName: 'Likes', stats: '5462' },
+    { icon: InstagramIcon, statsName: 'Profile Views', stats: '52k' },
+    { icon: TwitterIcon, statsName: 'Retweets', stats: '117' },
+    { icon: TwitterIcon, statsName: 'Likes', stats: '507' },
+    { icon: YoutubeIcon, statsName: 'Likes', stats: '107' },
+    { icon: YoutubeIcon, statsName: 'Total Likes', stats: '1407' },
+  ]
+
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <>
@@ -42,21 +70,15 @@ const skDashboard = () => {
           </StyledDarkMode>
 
           <CardSection>
-            <SocialMediaCard icon={FacebookIcon} followerCount={'1987'} names={''} />
-            <SocialMediaCard icon={TwitterIcon} followerCount={'1044'} names={''} />
-            <SocialMediaCard icon={InstagramIcon} followerCount={'11k'} names={''} />
-            <SocialMediaCard icon={YoutubeIcon} followerCount={'8239'} names={''} />
+            {MediaCardsList.map((e: MediaCard) => (
+              <SocialMediaCard key={e.followerCount} names="" icon={e.icon} followerCount={e.followerCount} />
+            ))}
           </CardSection>
           <OverviewHeading>Overview - Today</OverviewHeading>
           <CardSection>
-            <SocialOverviewCard icon={FacebookIcon} statsName="PageViews" stats={'87'} />
-            <SocialOverviewCard icon={FacebookIcon} statsName="Likes" stats={'52'} />
-            <SocialOverviewCard icon={InstagramIcon} statsName="Likes" stats={'5462'} />
-            <SocialOverviewCard icon={InstagramIcon} statsName="Profile Views" stats={'52k'} />
-            <SocialOverviewCard icon={TwitterIcon} statsName="Retweets" stats={'117'} />
-            <SocialOverviewCard icon={TwitterIcon} statsName="Likes" stats={'507'} />
-            <SocialOverviewCard icon={YoutubeIcon} statsName="Likes" stats={'107'} />
-            <SocialOverviewCard icon={YoutubeIcon} statsName="Total Views" stats={'1407'} />
+            {OverviewCardsList.map((e: OverviewCard) => (
+              <SocialOverviewCard key={e.stats} icon={e.icon} statsName={e.statsName} stats={e.stats} />
+            ))}
           </CardSection>
         </MainPage>
       </>

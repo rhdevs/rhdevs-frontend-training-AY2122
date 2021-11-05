@@ -12,11 +12,9 @@ export const StyledCard = styled.div`
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
   justify-content: center;
   align-items: center;
-  margin: 2.5px;
   width: 18vw;
   height: 20vh;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin: 2vh auto 2vh 0;
   background: ${({ theme }) => theme.cardBackground};
   :hover,
   :focus {

@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledCard, StyledFollowerCount, StyledIcon, StyledNamesText } from './styles/SocialMediaCard.styled'
+
 type Props = {
   names: string
   icon: string

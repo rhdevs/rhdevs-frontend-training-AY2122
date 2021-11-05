@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { createGlobalStyle, DefaultTheme } from 'styled-components'
-//
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -35,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
   main {
     background: ${({ theme }) => `${theme.body} !important`};
     color: ${({ theme }) => theme.text};
-    font-family: 'Inter', Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    font-family: Inter, Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;
   }
   `
