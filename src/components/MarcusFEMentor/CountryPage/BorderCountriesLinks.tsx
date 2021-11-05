@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { useHistory } from 'react-router'
+import { useHistory } from 'react-router-dom'
 
 import { PATHS } from '../../../routes/PATHS'
 import { Country } from '../../../store/MarcusFEMentor/types'

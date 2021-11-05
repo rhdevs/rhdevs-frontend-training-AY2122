@@ -10,7 +10,6 @@ export const getContents = () => (dispatch: Dispatch<ActionTypes>) => {
   })
     .then((resp) => resp.json())
     .then((data) => {
-      console.log(typeof data)
       dispatch({
         type: COUNTRY_DATA_ACTIONS.GET_COUNTRIES_DATA,
         allCountries: data,
