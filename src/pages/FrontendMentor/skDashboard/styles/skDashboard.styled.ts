@@ -14,7 +14,7 @@ declare module 'styled-components' {
 
 export const darkTheme: DefaultTheme = {
   body: 'hsl(230, 17%, 14%)',
-  text: 'hsl(0, 0%, 100%)',
+  text: 'hsl(228, 34%, 66%)',
   headingText: 'hsl(0, 0%, 100%)',
   toggleBorder: '#6B8096',
   background: 'hsl(230, 17%, 14%)',
