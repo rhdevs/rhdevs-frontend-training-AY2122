@@ -22,8 +22,12 @@ import YoutubeIcon from '../../../assets/skDashboard/icon-youtube.svg'
 import SocialOverviewCard from '../../../components/skDashboard/SocialOverviewCard'
 
 interface MediaCard {
+  names: string
+  platform: string
   icon: string
   followerCount: string
+  increase: boolean
+  change: string
 }
 
 interface OverviewCard {
@@ -38,10 +42,38 @@ const skDashboard = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }
   const MediaCardsList = [
-    { icon: FacebookIcon, followerCount: '1987' },
-    { icon: TwitterIcon, followerCount: '1044' },
-    { icon: InstagramIcon, followerCount: '11k' },
-    { icon: YoutubeIcon, followerCount: '8239' },
+    {
+      icon: FacebookIcon,
+      names: '@shaokiat',
+      followerCount: '1987',
+      increase: true,
+      change: '12',
+      platform: 'hsl(208, 92%, 53%)',
+    },
+    {
+      icon: TwitterIcon,
+      names: '@shaokiat',
+      followerCount: '1044',
+      increase: true,
+      change: '99',
+      platform: 'hsl(203, 89%, 53%)',
+    },
+    {
+      icon: InstagramIcon,
+      names: '@shaokiat',
+      followerCount: '11k',
+      increase: true,
+      change: '1000',
+      platform: 'linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
+    },
+    {
+      icon: YoutubeIcon,
+      names: '@shaokiat',
+      followerCount: '8239',
+      increase: false,
+      change: '144',
+      platform: 'hsl(348, 97%, 39%)',
+    },
   ]
   const OverviewCardsList = [
     { icon: FacebookIcon, statsName: 'Pageviews', stats: '87' },
@@ -71,7 +103,15 @@ const skDashboard = () => {
 
           <CardSection>
             {MediaCardsList.map((e: MediaCard) => (
-              <SocialMediaCard key={e.followerCount} names="" icon={e.icon} followerCount={e.followerCount} />
+              <SocialMediaCard
+                key={e.followerCount}
+                names={e.names}
+                icon={e.icon}
+                followerCount={e.followerCount}
+                increase={e.increase}
+                change={e.change}
+                platform={e.platform}
+              />
             ))}
           </CardSection>
           <OverviewHeading>Overview - Today</OverviewHeading>

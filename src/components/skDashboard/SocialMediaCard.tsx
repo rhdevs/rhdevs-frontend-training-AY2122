@@ -1,18 +1,33 @@
 import React from 'react'
-import { StyledCard, StyledFollowerCount, StyledIcon, StyledNamesText } from './styles/SocialMediaCard.styled'
+import {
+  ChangeContainer,
+  StyledCard,
+  StyledCardTop,
+  StyledFollowerCount,
+  StyledHandle,
+  StyledIcon,
+  StyledNamesText,
+} from './styles/SocialMediaCard.styled'
 
-type Props = {
+interface MediaCard {
   names: string
+  platform: string
   icon: string
   followerCount: string
+  increase: boolean
+  change: string
 }
 
-const SocialMediaCard = (props: Props) => {
+const SocialMediaCard = (props: MediaCard) => {
   return (
-    <StyledCard>
-      <StyledIcon src={props.icon} />
+    <StyledCard platform={props.platform}>
+      <StyledCardTop>
+        <StyledIcon src={props.icon} />
+        <StyledHandle>{props.names}</StyledHandle>
+      </StyledCardTop>
       <StyledFollowerCount>{props.followerCount}</StyledFollowerCount>
       <StyledNamesText>FOLLOWERS</StyledNamesText>
+      <ChangeContainer increase={props.increase}>{props.change} Today</ChangeContainer>
     </StyledCard>
   )
 }

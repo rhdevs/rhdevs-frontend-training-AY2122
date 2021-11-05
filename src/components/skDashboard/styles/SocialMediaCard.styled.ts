@@ -1,13 +1,19 @@
 import styled from 'styled-components'
 
-export const StyledCard = styled.div`
+interface borderColor {
+  platform: string
+}
+interface MediaCard {
+  increase: boolean
+}
+
+export const StyledCard = styled.div<borderColor>`
   color: ${({ theme }) => theme.headingText};
   border-top: 6px solid;
-  border-top-color: hsl(208, 92%, 53%);
+  border-top-color: ${(props) => props.platform};
   line-height: 20px;
   display: flex;
   flex-direction: column;
-  background: #fff;
   border-radius: 10px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
   cursor: pointer;
@@ -28,13 +34,23 @@ export const StyledCard = styled.div`
     width: 100%;
   }
 `
-
+export const StyledCardTop = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+`
 export const StyledIcon = styled.img`
-  height: 5vh;
-  margin-bottom: 3vh;
+  height: 3vh;
+`
+
+export const StyledHandle = styled.div`
+  margin-left: 15px;
 `
 
 export const StyledFollowerCount = styled.text`
+  margin-top: 3vh;
   font-size: calc(24px + 4vh);
   font-weight: 900;
   text-align: center;
@@ -42,8 +58,16 @@ export const StyledFollowerCount = styled.text`
 `
 
 export const StyledNamesText = styled.text`
-  font-size: 12px;
+  font-weight: 900;
+  font-size: 20px;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   color: ${({ theme }) => theme.text};
+`
+
+export const ChangeContainer = styled.div<MediaCard>`
+  margin-top: 3vh;
+  font-size: 18px;
+  font-weight: 900;
+  color: ${(props) => (props.increase ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)')};
 `
