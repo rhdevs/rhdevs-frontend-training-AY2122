@@ -25,15 +25,14 @@ export const ReduceItemQuantity =
     })
   }
 
-export const DeleteItem =
-  (itemToDelete: ShoppingItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
-    const { itemList } = getState().jasonYbReduxShoppingList
-    const updatedList = itemList.filter((item) => item.index !== itemToDelete.index)
-    dispatch({
-      type: SHOPPING_LIST_ACTIONS.SET_ITEM_LIST,
-      itemList: updatedList,
-    })
-  }
+export const DeleteItem = (itemToDelete: ShoppingItem) => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
+  const { itemList } = getState().jasonYbReduxShoppingList
+  const updatedList = itemList.filter((item) => item.index !== itemToDelete.index)
+  dispatch({
+    type: SHOPPING_LIST_ACTIONS.SET_ITEM_LIST,
+    itemList: updatedList,
+  })
+}
 
 export const IncrementKeyAndIndexCount = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { keyCount, indexCount } = getState().jasonYbReduxShoppingList
