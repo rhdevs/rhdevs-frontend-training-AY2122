@@ -10,13 +10,7 @@ import {
   ChangeContainer,
 } from './styles/SocialOverviewCard.styled'
 
-interface OverviewCard {
-  icon: string
-  statsName: string
-  stats: string
-  increase: boolean
-  change: string
-}
+import { OverviewCard } from '../../store/skDashboard/types'
 
 const SocialOverviewCard = (props: OverviewCard) => {
   return (

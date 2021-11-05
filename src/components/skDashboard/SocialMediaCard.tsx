@@ -10,14 +10,7 @@ import {
   StyledNamesText,
 } from './styles/SocialMediaCard.styled'
 
-interface MediaCard {
-  names: string
-  borderColor: string
-  icon: string
-  followerCount: string
-  increase: boolean
-  change: string
-}
+import { MediaCard } from '../../store/skDashboard/types'
 
 const SocialMediaCard = (props: MediaCard) => {
   return (
