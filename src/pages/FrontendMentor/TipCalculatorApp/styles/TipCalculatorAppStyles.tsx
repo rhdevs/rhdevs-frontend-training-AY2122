@@ -4,11 +4,13 @@ export const MainContainer = styled.div`
   background: hsl(185, 41%, 84%);
   height: 100vh;
 `
+
 export const Header = styled.div`
   padding-top: 10vh;
   padding-bottom: 8vh;
   text-align: center;
 `
+
 export const HeaderWords = styled.div`
   color: hsl(183, 100%, 15%);
   font-family: 'Space Mono';
@@ -17,6 +19,7 @@ export const HeaderWords = styled.div`
   margin-top: 2vh;
   margin-bottom: 2vh;
 `
+
 export const MiddleContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -198,7 +201,6 @@ export const AmountTypeContainer = styled.div`
 `
 
 export const AmountHeader = styled.div`
-  width: 15vh;
   color: hsl(185, 41%, 84%);
   height: 50%;
   font-size: 13px;
@@ -212,7 +214,7 @@ export const PerHeader = styled.div`
 export const Amount = styled.div`
   display: flex;
   color: hsl(172, 67%, 45%);
-  font-size: 34px;
+  font-size: 5vw;
   line-height: 34px;
   margin-right: 3vh;
 `

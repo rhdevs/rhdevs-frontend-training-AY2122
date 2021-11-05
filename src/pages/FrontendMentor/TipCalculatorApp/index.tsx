@@ -156,7 +156,7 @@ export default function TipCalculatorApp() {
             <ItemContainer>
               <ItemHeaderContainer>
                 <ItemHeader>Number of people</ItemHeader>
-                {newPeopleAmount === 0 && <Warning>{errorString}</Warning>}
+                {newPeopleAmount <= 0 && <Warning>{errorString}</Warning>}
               </ItemHeaderContainer>
               <InputPeopleContainer peopleAmount={newPeopleAmount}>
                 <InputIcon src={PersonIcon} alt="dollar sign"></InputIcon>
