@@ -1,5 +1,5 @@
-import { Switch } from 'antd'
 import styled from 'styled-components'
+import { Switch } from 'antd'
 
 const titleHeight = '80px'
 const titleHeightMobile = '120px'
@@ -13,6 +13,7 @@ export const TitleContainer = styled.div`
   top: 0px;
 
   display: flex;
+  background-color: ${(props) => props.theme.titleBackground};
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -40,9 +41,8 @@ export const TitleText = styled.h1`
   font-weight: 800;
   font-size: 28px;
   line-height: ${titleTextHeight};
-  /* identical to box height */
 
-  color: #111517;
+  color: ${(props) => props.theme.titleColor};
   z-index: 3;
 `
 

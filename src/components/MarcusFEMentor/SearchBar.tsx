@@ -1,25 +1,21 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { SearchOutlined } from '@ant-design/icons'
 
-import { Country } from '../../store/MarcusFEMentor/types'
+import { SetCountries } from '../../store/MarcusFEMentor/types'
 import { RootState } from '../../store/types'
+import { SearchOutlined } from '@ant-design/icons'
 import { StyledSearchBar } from './styles/FiltersDiv.styled'
 
-type Props = {
-  setCountries: React.Dispatch<React.SetStateAction<Country[] | undefined>>
-}
+const SearchBar = ({ setCountries }: SetCountries) => {
+  const { allCountries } = useSelector((state: RootState) => state.marcusFEMentor)
 
-const SearchBar = (props: Props) => {
-  const { all_countries } = useSelector((state: RootState) => state.marcusFEMentor)
-  const setCountries = props.setCountries
   return (
     <StyledSearchBar
       prefix={<SearchOutlined />}
       placeholder="Search for a country..."
       onChange={(e) =>
         setCountries(
-          all_countries?.filter(
+          allCountries?.filter(
             (country) =>
               country.name.common
                 .toLowerCase()

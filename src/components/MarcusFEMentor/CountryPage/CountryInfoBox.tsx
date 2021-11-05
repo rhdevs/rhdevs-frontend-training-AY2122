@@ -1,19 +1,14 @@
 import React from 'react'
 
 import { Country } from '../../../store/MarcusFEMentor/types'
-import BorderCountriesLinks from './BorderCountriesLinks'
 import InfoBoxBody from './InfoBoxBody'
+import BorderCountriesLinks from './BorderCountriesLinks'
 import { CountryInfoBoxDiv, InfoBoxTitle } from '../styles/CountryPage.styled'
 
-type Props = {
-  country: Country
-}
-
-const CountryInfoBox = (props: Props) => {
-  const country = props.country
+const CountryInfoBox = ({ country }: { country: Country }) => {
   return (
     <CountryInfoBoxDiv>
-      <InfoBoxTitle className="country-info-text">{country.name.common}</InfoBoxTitle>
+      <InfoBoxTitle>{country.name.common}</InfoBoxTitle>
       <InfoBoxBody country={country} />
       <BorderCountriesLinks country={country} />
     </CountryInfoBoxDiv>

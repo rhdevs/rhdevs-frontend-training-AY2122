@@ -1,8 +1,8 @@
 import React from 'react'
-import { useHistory } from 'react-router'
-import { ArrowLeftOutlined } from '@ant-design/icons'
+import { useHistory } from 'react-router-dom'
 
 import { PATHS } from '../../../routes/PATHS'
+import { ArrowLeftOutlined } from '@ant-design/icons'
 import { StyledBackButton } from '../styles/CountryPage.styled'
 
 const BackButton = () => {

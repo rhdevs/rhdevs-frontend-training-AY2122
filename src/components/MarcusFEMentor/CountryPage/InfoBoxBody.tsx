@@ -4,15 +4,13 @@ import { Country } from '../../../store/MarcusFEMentor/types'
 import InfoBoxEntry from './InfoBoxEntry'
 import { InfoBoxBodyDiv } from '../styles/CountryPage.styled'
 
-type Props = {
-  country: Country
-}
+const InfoBoxBody = ({ country }: { country: Country }) => {
+  const nativeLangs: string[] = Object.keys(country.languages)
+  const nativeNames: string[] = nativeLangs.map((lang) => country.name.nativeName[lang].common)
 
-const InfoBoxBody = (props: Props) => {
-  const country = props.country
   return (
     <InfoBoxBodyDiv>
-      <InfoBoxEntry title="Official Name" value={country.name.official} />
+      <InfoBoxEntry title="Native Name(s)" value={nativeNames.join(', ')} />
       <InfoBoxEntry title="Top Level Domain" value={country.tld?.join(', ') ?? 'none'} />
       <InfoBoxEntry title="Population" value={country.population.toLocaleString()} />
       <InfoBoxEntry

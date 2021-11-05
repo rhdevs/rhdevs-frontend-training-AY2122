@@ -1,28 +1,31 @@
 import React from 'react'
 
-export const Population = (props: { population: number }) => {
+export const Population = ({ population }: { population: number }) => {
   return (
-    <text className="card-text">
+    <span>
       <strong>Population: </strong>
-      {props.population.toLocaleString('en', { useGrouping: true })}
-    </text>
+      {population.toLocaleString('en', { useGrouping: true })}
+      <br />
+    </span>
   )
 }
 
-export const Region = (props: { region: string }) => {
+export const Region = ({ region }: { region: string }) => {
   return (
-    <text className="card-text">
+    <span>
       <strong>Region: </strong>
-      {props.region}
-    </text>
+      {region}
+      <br />
+    </span>
   )
 }
 
-export const Capital = (props: { capital: string[] | undefined }) => {
+export const Capital = ({ capital }: { capital: string[] | undefined }) => {
   return (
-    <text className="card-text">
+    <span>
       <strong>Capital: </strong>
-      {props.capital?.join(', ') ?? 'none'}
-    </text>
+      {capital?.join(', ') ?? 'none'}
+      <br />
+    </span>
   )
 }

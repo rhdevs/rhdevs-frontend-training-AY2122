@@ -1,19 +1,14 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+
+import { SetCountries } from '../../store/MarcusFEMentor/types'
+import { RootState } from '../../store/types'
 import { Button, Menu } from 'antd'
 import { DownOutlined } from '@ant-design/icons'
-
-import { Country } from '../../store/MarcusFEMentor/types'
-import { RootState } from '../../store/types'
 import { StyledRegionsDropdown } from './styles/FiltersDiv.styled'
 
-type Props = {
-  setCountries: React.Dispatch<React.SetStateAction<Country[] | undefined>>
-}
-
-const RegionsDropdown = (props: Props) => {
-  const { all_countries } = useSelector((state: RootState) => state.marcusFEMentor)
-  const setCountries = props.setCountries
+const RegionsDropdown = ({ setCountries }: SetCountries) => {
+  const { allCountries } = useSelector((state: RootState) => state.marcusFEMentor)
   const regions = ['All', 'Africa', 'Asia', 'Europe', 'Americas', 'Oceania']
   const menu = (
     <Menu>
@@ -22,7 +17,7 @@ const RegionsDropdown = (props: Props) => {
           <a
             onClick={() =>
               setCountries(
-                region === 'All' ? all_countries : all_countries?.filter((country) => country.region === region) ?? [],
+                region === 'All' ? allCountries : allCountries?.filter((country) => country.region === region) ?? [],
               )
             }
           >

@@ -11,6 +11,8 @@ export const CountryPageContentDiv = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin: 160px 10vw;
+  color: ${(props) => props.theme.textColor};
+
   @media (max-width: 1440px) {
     flex-direction: column;
   }
@@ -26,6 +28,9 @@ export const StyledBackButton = styled(Button)`
   @media (max-width: 769px) {
     left: 40px;
     top: 140px;
+  }
+  @media (max-width: 460px) {
+    top: 100px;
   }
 `
 
@@ -45,6 +50,9 @@ export const FlagImageStyle = styled.img`
   @media (max-width: 460px) {
     margin-top: -70px;
   }
+  @media (max-height: 380px) {
+    margin-top: -120px;
+  }
 `
 
 export const CountryInfoBoxDiv = styled.div`
@@ -63,6 +71,7 @@ export const CountryInfoBoxDiv = styled.div`
 export const InfoBoxTitle = styled.h1`
   margin-bottom: 30px;
   font-size: 36px;
+  color: ${(props) => props.theme.textColor};
 `
 
 export const InfoBoxBodyDiv = styled.div`

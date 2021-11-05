@@ -1,23 +1,20 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { setTheme } from '../../pages/FrontendMentor/MarcusFEMentor/styles/toggleTheme'
+import { RootState } from '../../store/types'
+import { switchMode } from '../../store/MarcusFEMentor/actions'
 import { StyledDarkModeToggleSwitch } from './styles/Title.styled'
 
 const DarkModeToggleSwitch = () => {
-  const handleOnClick = () => {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-      setTheme('theme-light')
-    } else {
-      setTheme('theme-dark')
-    }
-  }
+  const dispatch = useDispatch()
+  const { themeMode } = useSelector((state: RootState) => state.marcusFEMentor)
 
   return (
     <StyledDarkModeToggleSwitch
-      defaultChecked={localStorage.getItem('theme') === 'theme-dark'}
+      defaultChecked={themeMode.type === 'dark'}
       checkedChildren="🌙"
       unCheckedChildren="🌞"
-      onChange={handleOnClick}
+      onChange={() => dispatch(switchMode())}
     />
   )
 }
