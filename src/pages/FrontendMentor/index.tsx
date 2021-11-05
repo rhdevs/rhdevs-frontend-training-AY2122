@@ -30,6 +30,11 @@ const FrontendMentor = () => {
           description="Jason"
           onClick={() => history.push(PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP)}
         />
+        <Card
+          title="Profile card component"
+          description="Prince, Enhao"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRINCE_ENHAO)}
+        />
       </InformationCardSection>
     </MembersSection>
   )

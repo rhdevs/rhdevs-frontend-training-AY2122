@@ -3,6 +3,7 @@ export enum PATHS {
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
   SHOPPING_LIST_ANIME_GANG_REDUX = '/shopping-list-anime-gang-redux',
+  SHOPPING_LIST_ANIME_GANG = '/shopping-list-anime-gang',
   PAIR_2_SHOPPING_PAGE = '/shopping/pair2',
   PAIR_2_SHOPPING_PAGE_REDUX = '/shopping/pair2-redux',
   PAIR3_SHOPPING_PAGE = '/shopping/pair3redux',
@@ -18,4 +19,5 @@ export enum PATHS {
   SHOPPING_PAGE_PAIR_FOUR_REDUX = '/shopping-lists-pair-4-redux',
   FRONTEND_MENTOR = '/frontendmentor',
   FRONTEND_MENTOR_TIP_CALCULATOR_APP = '/frontendmentor/tip-calculator-app',
+  FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
 }
