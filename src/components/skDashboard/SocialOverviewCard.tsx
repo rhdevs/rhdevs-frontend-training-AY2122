@@ -6,14 +6,18 @@ import {
   StyledStats,
   StyledPageView,
   TopRow,
+  ChangeContainer,
 } from './styles/SocialOverviewCard.styled'
-type Props = {
+
+interface OverviewCard {
   icon: string
   statsName: string
   stats: string
+  increase: boolean
+  change: string
 }
 
-const SocialOverviewCard = (props: Props) => {
+const SocialOverviewCard = (props: OverviewCard) => {
   return (
     <StyledCard>
       <TopRow>
@@ -22,6 +26,7 @@ const SocialOverviewCard = (props: Props) => {
       </TopRow>
       <BottomRow>
         <StyledStats>{props.stats}</StyledStats>
+        <ChangeContainer increase={props.increase}>{props.change}%</ChangeContainer>
       </BottomRow>
     </StyledCard>
   )

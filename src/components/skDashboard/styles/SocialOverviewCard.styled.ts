@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface OverviewCard {
+  increase: boolean
+}
+
 export const StyledCard = styled.div`
   color: ${({ theme }) => theme.headingText};
   line-height: 20px;
@@ -41,7 +45,7 @@ export const StyledPageView = styled.text`
 `
 
 export const StyledIcon = styled.img`
-  height: 5vh;
+  height: 4vh;
   margin-right: 30px;
 `
 export const BottomRow = styled.div`
@@ -51,8 +55,14 @@ export const BottomRow = styled.div`
   margin-bottom: 3vh;
 `
 export const StyledStats = styled.text`
-  font-size: calc(24px + 3vh);
+  font-size: calc(20px + 2vh);
   font-weight: 700;
   text-align: center;
   margin-left: 30px;
+`
+export const ChangeContainer = styled.div<OverviewCard>`
+  margin-right: 1vw;
+  font-size: 18px;
+  font-weight: 900;
+  color: ${(props) => (props.increase ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)')};
 `

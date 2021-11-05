@@ -34,6 +34,8 @@ interface OverviewCard {
   icon: string
   statsName: string
   stats: string
+  increase: boolean
+  change: string
 }
 
 const skDashboard = () => {
@@ -76,14 +78,14 @@ const skDashboard = () => {
     },
   ]
   const OverviewCardsList = [
-    { icon: FacebookIcon, statsName: 'Pageviews', stats: '87' },
-    { icon: FacebookIcon, statsName: 'Likes', stats: '52' },
-    { icon: InstagramIcon, statsName: 'Likes', stats: '5462' },
-    { icon: InstagramIcon, statsName: 'Profile Views', stats: '52k' },
-    { icon: TwitterIcon, statsName: 'Retweets', stats: '117' },
-    { icon: TwitterIcon, statsName: 'Likes', stats: '507' },
-    { icon: YoutubeIcon, statsName: 'Likes', stats: '107' },
-    { icon: YoutubeIcon, statsName: 'Total Likes', stats: '1407' },
+    { icon: FacebookIcon, statsName: 'Pageviews', stats: '87', increase: true, change: '3' },
+    { icon: FacebookIcon, statsName: 'Likes', stats: '52', increase: false, change: '2' },
+    { icon: InstagramIcon, statsName: 'Likes', stats: '5462', increase: true, change: '2257' },
+    { icon: InstagramIcon, statsName: 'Profile Views', stats: '52k', increase: true, change: '1375' },
+    { icon: TwitterIcon, statsName: 'Retweets', stats: '117', increase: true, change: '303' },
+    { icon: TwitterIcon, statsName: 'Likes', stats: '507', increase: true, change: '553' },
+    { icon: YoutubeIcon, statsName: 'Likes', stats: '107', increase: false, change: '19' },
+    { icon: YoutubeIcon, statsName: 'Total Likes', stats: '1407', increase: false, change: '12' },
   ]
 
   return (
@@ -117,7 +119,14 @@ const skDashboard = () => {
           <OverviewHeading>Overview - Today</OverviewHeading>
           <CardSection>
             {OverviewCardsList.map((e: OverviewCard) => (
-              <SocialOverviewCard key={e.stats} icon={e.icon} statsName={e.statsName} stats={e.stats} />
+              <SocialOverviewCard
+                key={e.stats}
+                icon={e.icon}
+                statsName={e.statsName}
+                stats={e.stats}
+                increase={e.increase}
+                change={e.change}
+              />
             ))}
           </CardSection>
         </MainPage>
