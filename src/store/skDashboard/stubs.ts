@@ -1,7 +1,7 @@
-import FacebookIcon from '../../../assets/skDashboard/icon-facebook.svg'
-import TwitterIcon from '../../../assets/skDashboard/icon-twitter.svg'
-import InstagramIcon from '../../../assets/skDashboard/icon-instagram.svg'
-import YoutubeIcon from '../../../assets/skDashboard/icon-youtube.svg'
+import FacebookIcon from '../../assets/skDashboard/icon-facebook.svg'
+import TwitterIcon from '../../assets/skDashboard/icon-twitter.svg'
+import InstagramIcon from '../../assets/skDashboard/icon-instagram.svg'
+import YoutubeIcon from '../../assets/skDashboard/icon-youtube.svg'
 
 export const mediaCardsList = [
   {
