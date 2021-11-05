@@ -77,7 +77,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
-    <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={skDashboard} />
+    <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
