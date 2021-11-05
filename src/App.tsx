@@ -1,8 +1,10 @@
 import React, { Suspense, useEffect } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
 import { Routes } from './routes/Routes'
 import LoadingSpinner from './components/LoadingSpinner'
+import store from './store/store'
 
 import 'antd/dist/antd.css'
 
@@ -13,11 +15,13 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes />
-      </Suspense>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes />
+        </Suspense>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
