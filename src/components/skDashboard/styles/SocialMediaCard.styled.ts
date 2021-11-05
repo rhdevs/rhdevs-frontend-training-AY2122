@@ -1,16 +1,7 @@
 import styled from 'styled-components'
 
-interface borderColor {
-  platform: string
-}
-interface MediaCard {
-  increase: boolean
-}
-
-export const StyledCard = styled.div<borderColor>`
+export const StyledCard = styled.div<{ borderColor: string }>`
   color: ${({ theme }) => theme.headingText};
-  /* border-top: 6px solid;
-  border-top-color: ${(props) => props.platform}; */
   background: ${({ theme }) => theme.cardBackground};
   line-height: 20px;
   display: flex;
@@ -35,7 +26,7 @@ export const StyledCard = styled.div<borderColor>`
     left: 0;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    background: ${(props) => props.platform};
+    background: ${(props) => props.borderColor};
   }
 
   :hover,
@@ -77,7 +68,7 @@ export const StyledNamesText = styled.text`
   color: ${({ theme }) => theme.text};
 `
 
-export const ChangeContainer = styled.div<MediaCard>`
+export const ChangeContainer = styled.div<{ increase: boolean }>`
   margin-top: 3vh;
   font-size: 18px;
   font-weight: 900;

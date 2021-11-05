@@ -1,9 +1,5 @@
 import styled from 'styled-components'
 
-interface OverviewCard {
-  increase: boolean
-}
-
 export const StyledCard = styled.div`
   color: ${({ theme }) => theme.headingText};
   line-height: 20px;
@@ -60,7 +56,7 @@ export const StyledStats = styled.text`
   text-align: center;
   margin-left: 30px;
 `
-export const ChangeContainer = styled.div<OverviewCard>`
+export const ChangeContainer = styled.div<{ increase: boolean }>`
   margin-right: 1vw;
   font-size: 18px;
   font-weight: 900;

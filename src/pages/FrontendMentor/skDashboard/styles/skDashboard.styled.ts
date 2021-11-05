@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { createGlobalStyle, DefaultTheme } from 'styled-components'
+import styled, { createGlobalStyle, DefaultTheme } from 'styled-components'
 
 declare module 'styled-components' {
   export interface DefaultTheme {

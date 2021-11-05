@@ -1,3 +1,4 @@
+import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons'
 import React from 'react'
 import {
   BottomRow,
@@ -26,7 +27,10 @@ const SocialOverviewCard = (props: OverviewCard) => {
       </TopRow>
       <BottomRow>
         <StyledStats>{props.stats}</StyledStats>
-        <ChangeContainer increase={props.increase}>{props.change}%</ChangeContainer>
+        <ChangeContainer increase={props.increase}>
+          {props.increase ? <CaretUpOutlined /> : <CaretDownOutlined />}
+          {props.change}%
+        </ChangeContainer>
       </BottomRow>
     </StyledCard>
   )
