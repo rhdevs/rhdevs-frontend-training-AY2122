@@ -56,17 +56,20 @@ export const StyledHandle = styled.div`
 
 export const StyledFollowerCount = styled.text`
   margin-top: 3vh;
-  font-size: calc(24px + 4vh);
+  font-size: calc(24px + 2vh);
   font-weight: 900;
   text-align: center;
   height: 6vh;
+  @media (min-width: 768px) {
+    font-size: calc(24px + 2vw);
+  }
 `
 
 export const StyledNamesText = styled.text`
-  font-weight: 900;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: calc(10px + 0.5vw);
   text-align: center;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   color: ${({ theme }) => theme.text};
 `
 
@@ -75,4 +78,7 @@ export const ChangeContainer = styled.div<{ increase: boolean }>`
   font-size: 18px;
   font-weight: 900;
   color: ${(props) => (props.increase ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)')};
+  @media (min-width: 768px) {
+    font-size: calc(8px + 0.5vw);
+  }
 `

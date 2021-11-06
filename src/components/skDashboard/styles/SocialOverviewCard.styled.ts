@@ -25,7 +25,7 @@ export const StyledCard = styled.div`
   }
 `
 export const TopRow = styled.div`
-  width: 95%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,31 +34,40 @@ export const TopRow = styled.div`
 
 export const StyledPageView = styled.text`
   color: ${({ theme }) => theme.text};
-  font-size: calc(12px + 1vh);
+  font-size: calc(14px + 1vh);
   font-weight: 700;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 1vw;
+  @media (min-width: 768px) {
+    font-size: calc(8px + 1vw);
+  }
 `
 
 export const StyledIcon = styled.img`
-  height: 4vh;
-  margin-right: 30px;
+  height: 3vh;
+  margin-right: 1vw;
 `
 export const BottomRow = styled.div`
-  width: 95%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   margin-top: 1vh;
 `
 export const StyledStats = styled.text`
-  font-size: calc(20px + 2vh);
+  font-size: calc(16px + 2vh);
   font-weight: 700;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 2vw;
+  @media (min-width: 768px) {
+    font-size: calc(12px + 1vw);
+  }
 `
 export const ChangeContainer = styled.div<{ increase: boolean }>`
   margin-right: 1vw;
-  font-size: 18px;
+  font-size: calc(16px + 0.1vw);
   font-weight: 900;
   color: ${(props) => (props.increase ? 'hsl(163, 72%, 41%)' : 'hsl(356, 69%, 56%)')};
+  @media (min-width: 768px) {
+    font-size: calc(6px + 0.5vw);
+  }
 `
