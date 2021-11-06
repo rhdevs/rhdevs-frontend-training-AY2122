@@ -10,8 +10,7 @@ import {
   SocialIcons,
   IconRows,
 } from './hubble.styled'
-//import HubbleCard from '../../../components/HubbleCard'
-import comp from '../../../assets/hubble/illustration-mockups.svg'
+import interfaceDesign from '../../../assets/hubble/illustration-mockups.svg'
 import logo from '../../../assets/hubble/logo.svg'
 
 const Hubble = () => {
@@ -25,7 +24,7 @@ const Hubble = () => {
         </Rows>
         <Rows>
           <LColumn>
-            <img src={comp} />
+            <img src={interfaceDesign} />
           </LColumn>
 
           <LColumn>
