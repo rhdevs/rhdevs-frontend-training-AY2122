@@ -4,21 +4,21 @@ import pentagonIcon from '../../assets/RockPaperScissors/bg-pentagon.svg'
 import { Option } from '../../pages/RockPaperScissors/util'
 
 type Props = {
-  renderButton: (option: Option) => ReactElement
+  renderOption: (option: Option) => ReactElement
   optionList: Option[]
 }
 
-const SelectState = ({ renderButton, optionList }: Props) => (
+const SelectState = ({ renderOption, optionList }: Props) => (
   <SelectContainer>
     <Overlay src={pentagonIcon} />
-    <TopSelect>{renderButton(optionList[0])}</TopSelect>
+    <TopSelect>{renderOption(optionList[0])}</TopSelect>
     <MiddleSelect>
-      {renderButton(optionList[1])}
-      {renderButton(optionList[2])}
+      {renderOption(optionList[1])}
+      {renderOption(optionList[2])}
     </MiddleSelect>
     <BottomSelect>
-      {renderButton(optionList[3])}
-      {renderButton(optionList[4])}
+      {renderOption(optionList[3])}
+      {renderOption(optionList[4])}
     </BottomSelect>
   </SelectContainer>
 )

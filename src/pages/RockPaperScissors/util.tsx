@@ -4,14 +4,14 @@ import paperIcon from '../../assets/RockPaperScissors/icon-paper.svg'
 import lizardIcon from '../../assets/RockPaperScissors/icon-lizard.svg'
 import rockIcon from '../../assets/RockPaperScissors/icon-rock.svg'
 
-export type Option = { name: string; src: string | undefined; color: string }
+export type Option = { name: string; src: string | undefined; color: string; shadow: string }
 
 export const optionList = [
-  { name: 'scissors', src: scissorsIcon, color: `hsl(39, 89%, 49%)` },
-  { name: 'spock', src: spockIcon, color: `hsl(189, 59%, 53%)` },
-  { name: 'paper', src: paperIcon, color: `hsl(230, 89%, 62%)` },
-  { name: 'lizard', src: lizardIcon, color: `hsl(261, 73%, 60%)` },
-  { name: 'rock', src: rockIcon, color: `hsl(349, 71%, 52%)` },
+  { name: 'scissors', src: scissorsIcon, color: `hsl(39, 89%, 49%)`, shadow: `hsl(39, 89%, 39%)` },
+  { name: 'spock', src: spockIcon, color: `hsl(189, 59%, 53%)`, shadow: `hsl(189, 59%, 43%)` },
+  { name: 'paper', src: paperIcon, color: `hsl(230, 89%, 62%)`, shadow: `hsl(230, 89%, 52%)` },
+  { name: 'lizard', src: lizardIcon, color: `hsl(261, 73%, 60%)`, shadow: `hsl(261, 73%, 50%)` },
+  { name: 'rock', src: rockIcon, color: `hsl(349, 71%, 52%)`, shadow: `hsl(349, 71%, 42%)` },
 ]
 export const getCPUSelection = (setComSelection: (name: string) => void) => {
   const choice = Math.floor(Math.random() * 5)

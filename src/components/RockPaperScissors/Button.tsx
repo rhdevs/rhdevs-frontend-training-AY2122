@@ -10,7 +10,7 @@ type Props = {
 
 const Button = (props: Props) => {
   return (
-    <StyledButton borderColor={props.option.color} onClick={props.onClick}>
+    <StyledButton borderColor={props.option.color} shadowColor={props.option.shadow} onClick={props.onClick}>
       {props.children}
     </StyledButton>
   )

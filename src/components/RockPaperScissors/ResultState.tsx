@@ -11,22 +11,22 @@ import PickContainer from './PickContainer'
 import { getResultText, Option } from '../../pages/RockPaperScissors/util'
 
 type Props = {
-  renderButton: (option: Option) => ReactElement
+  renderOption: (option: Option) => ReactElement
   result: string
   handleReset: () => void
   currentSelection: string
   comSelection: string
 }
 
-const ResultState = ({ renderButton, result, handleReset, currentSelection, comSelection }: Props) => {
+const ResultState = ({ renderOption, result, handleReset, currentSelection, comSelection }: Props) => {
   const renderDesktopResultsContainer = () => (
     <ResultStateContainer>
-      <PickContainer renderButton={renderButton} header="YOU PICKED" selection={currentSelection} />
+      <PickContainer renderOption={renderOption} header="YOU PICKED" selection={currentSelection} />
       <ResultContainer>
         <ResultText>{getResultText(result)}</ResultText>
         <PlayButton onClick={() => handleReset()}>PLAY AGAIN</PlayButton>
       </ResultContainer>
-      <PickContainer renderButton={renderButton} header="THE HOUSE PICKED" selection={comSelection} />
+      <PickContainer renderOption={renderOption} header="THE HOUSE PICKED" selection={comSelection} />
     </ResultStateContainer>
   )
 

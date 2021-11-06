@@ -15,7 +15,7 @@ const RockPaperScissors = () => {
   const [result, setResult] = useState('')
   const [score, setScore] = useState(0)
 
-  const renderButton = (option: Option) => {
+  const renderOption = (option: Option) => {
     return (
       <Button key={option.name} option={option} onClick={() => handleSelect(option.name)}>
         <StyledIcon src={option.src} />
@@ -59,13 +59,13 @@ const RockPaperScissors = () => {
       <title>Frontend Mentor | Rock, Paper, Scissors</title>
       <Scoreboard score={score} />
       <GameContainer gameState={gameState} onClick={() => gameState === 'pick' && handleResults()}>
-        {gameState === 'select' && <SelectState renderButton={renderButton} optionList={optionList} />}
+        {gameState === 'select' && <SelectState renderOption={renderOption} optionList={optionList} />}
         {gameState === 'pick' && (
-          <PickState currentSelection={currentSelection} comSelection={comSelection} renderButton={renderButton} />
+          <PickState currentSelection={currentSelection} comSelection={comSelection} renderOption={renderOption} />
         )}
         {gameState === 'result' && (
           <ResultState
-            renderButton={renderButton}
+            renderOption={renderOption}
             result={result}
             handleReset={handleReset}
             currentSelection={currentSelection}

@@ -5,17 +5,17 @@ import { Blank, PickText, StyledPickContainer } from './styles/PickContainer.sty
 type Props = {
   header: string
   selection: string
-  renderButton: (option: Option) => ReactElement
+  renderOption: (option: Option) => ReactElement
 }
 
-const PickContainer = ({ header, selection, renderButton }: Props) => {
+const PickContainer = ({ header, selection, renderOption }: Props) => {
   const renderBlank = () => <Blank />
 
   return (
     <StyledPickContainer>
       <PickText>{header}</PickText>
       {selection === '' && renderBlank()}
-      {optionList.filter((option) => option.name === selection).map((option) => renderButton(option))}
+      {optionList.filter((option) => option.name === selection).map((option) => renderOption(option))}
     </StyledPickContainer>
   )
 }
