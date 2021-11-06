@@ -46,6 +46,7 @@ export const JoinCommHeader = styled.p`
   @media only screen and (max-width: 600px) {
     font-size: 5vw;
     padding: 2vw;
+    margin: 0vw;
   }
 `
 export const JoinCommSubHeader = styled.h2`
@@ -99,7 +100,7 @@ export const LeftPrice = styled.div`
   font-weight: bold;
   @media only screen and (max-width: 600px) {
     font-size: 7vw;
-    padding: 2vw;
+    padding: 0vw 2vw;
   }
 `
 export const LeftPerMonth = styled.div`
@@ -108,7 +109,7 @@ export const LeftPerMonth = styled.div`
   padding: 15px 0px;
   @media only screen and (max-width: 600px) {
     font-size: 3vw;
-    padding: 2vw;
+    padding: 0vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,8 +122,8 @@ export const LeftFullAccess = styled.div`
   @media only screen and (max-width: 600px) {
     font-size: 3vw;
     padding: 2vw;
-    margin-top: -5vw;
-    margin-bottom: 4vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
   }
 `
 export const PriceAndPerMonth = styled.div`
@@ -132,7 +133,7 @@ export const PriceAndPerMonth = styled.div`
   text-align: center;
   @media only screen and (max-width: 600px) {
     font-size: 5vw;
-    padding: 2vw;
+    padding: 0vw 0vw 0vw 0vw;
   }
 `
 export const RightComponent = styled.div`
@@ -148,22 +149,22 @@ export const RightComponent = styled.div`
     padding: 10%;
   }
 `
-export const RightHeader = styled.h1`
+export const RightHeader = styled.div`
   color: hsl(204, 43%, 93%);
   font-size: 20px;
-  padding: 40px 50px 10px 50px;
-  @media only screen and (max-width: 375px) {
+  padding: 40px 50px 10px 30px;
+  @media only screen and (max-width: 600px) {
     font-size: 4vw;
-    padding: 2vw;
+    padding: 2vw 0vw 0vw 2vw;
   }
 `
 export const RightBody = styled.div`
   color: hsl(204, 43%, 83%);
   font-size: 16px;
-  padding: 0px 0px 0px 50px;
-  @media only screen and (max-width: 375px) {
-    font-size: 2.5vw;
-    padding: 2vw;
+  padding: 0px 10px 0px 0px;
+  @media only screen and (max-width: 600px) {
+    font-size: 3vw;
+    padding: 4vw 4vw 4vw 2vw;
   }
 `
 
