@@ -13,14 +13,14 @@ export const MainContainer = styled.div`
   width: 70%;
   border-radius: 15px;
   overflow: hidden;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     border-radius: 5px;
   }
 `
 export const BottomComponent = styled.div`
   display: flex;
   flex-direction: row;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     flex-direction: column;
   }
 `
@@ -30,7 +30,7 @@ export const TopComponent = styled.div`
   background-color: #ffffff;
   width: 100%;
   height: 35vh;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
     padding: 10%;
@@ -38,12 +38,12 @@ export const TopComponent = styled.div`
   }
 `
 
-export const JoinCommHeader = styled.h1`
+export const JoinCommHeader = styled.p`
   color: hsl(179, 62%, 43%);
   font-size: 30px;
   font-weight: bold;
   padding: 30px 80px 10px 80px;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 5vw;
     padding: 2vw;
   }
@@ -53,7 +53,7 @@ export const JoinCommSubHeader = styled.h2`
   font-size: 16px;
   font-weight: bold;
   padding: 00px 80px 10px 80px;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 3vw;
     padding: 2vw;
   }
@@ -63,7 +63,7 @@ export const JoinCommBody = styled.div`
   font-size: 16px;
   padding: 00px 80px 00px 80px;
   break-between: always;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 2.5vw;
     padding: 2vw;
     break-between: none;
@@ -73,7 +73,7 @@ export const LeftComponent = styled.div`
   background-color: hsl(179, 62%, 43%);
   width: 50%;
   height: 45vh;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -87,7 +87,7 @@ export const LeftHeader = styled.h1`
   font-size: 20px;
   padding: 40px 30px 5px 50px;
   font-weight: bold;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 4vw;
     padding: 2vw;
   }
@@ -97,7 +97,7 @@ export const LeftPrice = styled.div`
   font-size: 30px;
   padding: 0px 10px 0px 50px;
   font-weight: bold;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 7vw;
     padding: 2vw;
   }
@@ -106,7 +106,7 @@ export const LeftPerMonth = styled.div`
   color: hsl(204, 43%, 83%);
   font-size: 16px;
   padding: 15px 0px;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 3vw;
     padding: 2vw;
     display: flex;
@@ -118,7 +118,7 @@ export const LeftFullAccess = styled.div`
   color: hsl(204, 43%, 93%);
   font-size: 16px;
   padding: 0px 50px;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 3vw;
     padding: 2vw;
     margin-top: -5vw;
@@ -130,7 +130,7 @@ export const PriceAndPerMonth = styled.div`
   display: flex;
   justify-content: flex-start;
   text-align: center;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 5vw;
     padding: 2vw;
   }
@@ -139,17 +139,20 @@ export const RightComponent = styled.div`
   background-color: hsl(179, 62%, 48%);
   width: 50%;
   height: 45vh;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     width: 100%;
+    display: flex;
+    flex-direction: column;
     height: 60vw;
+    overflow: hidden;
     padding: 10%;
   }
 `
 export const RightHeader = styled.h1`
   color: hsl(204, 43%, 93%);
   font-size: 20px;
-  padding: 40px 0px 10px 50px;
-  @media (max-width: 375px) {
+  padding: 40px 50px 10px 50px;
+  @media only screen and (max-width: 375px) {
     font-size: 4vw;
     padding: 2vw;
   }
@@ -158,16 +161,12 @@ export const RightBody = styled.div`
   color: hsl(204, 43%, 83%);
   font-size: 16px;
   padding: 0px 0px 0px 50px;
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 375px) {
     font-size: 2.5vw;
     padding: 2vw;
   }
 `
 
-export const ButtonContainer = styled.div`
-  @media (max-width: 375px) {
-  }
-`
 export const SignUpButton = styled.button`
   background-color: hsl(71, 73%, 54%);
   border: none;
@@ -180,7 +179,7 @@ export const SignUpButton = styled.button`
   color: hsl(204, 43%, 93%);
   font-size: 15px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  @media (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     margin: 1vw;
     margin-bottom: 5vw;
     justify-content: center;
