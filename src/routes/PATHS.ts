@@ -19,5 +19,6 @@ export enum PATHS {
   SHOPPING_PAGE_PAIR_FOUR_REDUX = '/shopping-lists-pair-4-redux',
   FRONTEND_MENTOR = '/frontendmentor',
   FRONTEND_MENTOR_TIP_CALCULATOR_APP = '/frontendmentor/tip-calculator-app',
+  MARCUS_FE_MENTOR = '/frontendmentor/marcus-fe-mentor',
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
 }
