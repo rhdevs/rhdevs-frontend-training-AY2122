@@ -15,8 +15,8 @@ import EllipsisIcon from '../../pages/FrontendMentor/zkyxTimeDashboard/images/ic
 
 type Props = {
   titleText: string
-  hourText: string
-  footerText: string
+  hourText: number
+  footerText: number
   pastPeriod: string
   backgroundColor: string
   icon: string
@@ -44,9 +44,9 @@ const TimeCard = (props: Props) => {
           <EllipsisImage src={EllipsisIcon} />
         </TitleBox>
         <FooterContainer>
-          <HourText>{props.hourText}</HourText>
+          <HourText>{props.hourText}hrs</HourText>
           <FooterText>
-            {props.pastPeriod} {props.footerText}
+            {props.pastPeriod} - {props.footerText}hrs
           </FooterText>
         </FooterContainer>
       </TimeInfoCard>

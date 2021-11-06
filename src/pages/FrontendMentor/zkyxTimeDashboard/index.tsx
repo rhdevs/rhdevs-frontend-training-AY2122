@@ -29,8 +29,8 @@ const TimeDashBoardPage = () => {
   type Card = {
     key: number
     titleText: string
-    hourText: string
-    footerText: string
+    hourText: number
+    footerText: number
     backgroundColor: string
     icon: string
   }
@@ -39,48 +39,48 @@ const TimeDashBoardPage = () => {
     {
       key: 1,
       titleText: 'Work',
-      hourText: '2hrs',
-      footerText: ' - 1hrs',
+      hourText: 2,
+      footerText: 1,
       backgroundColor: '#ff8c66',
       icon: WorkIcon,
     },
     {
       key: 2,
       titleText: 'Play',
-      hourText: '0.5hrs',
-      footerText: ' - 6hrs',
+      hourText: 0.5,
+      footerText: 6,
       backgroundColor: '#56e2c6',
       icon: PlayIcon,
     },
     {
       key: 3,
       titleText: 'Study',
-      hourText: '5hrs',
-      footerText: ' - 3hrs',
+      hourText: 5,
+      footerText: 3,
       backgroundColor: '#ff7591',
       icon: StudyIcon,
     },
     {
       key: 4,
       titleText: 'Exercise',
-      hourText: '8hrs',
-      footerText: ' - 2hrs',
+      hourText: 8,
+      footerText: 2,
       backgroundColor: '#4ac481',
       icon: ExerciseIcon,
     },
     {
       key: 5,
       titleText: 'Social',
-      hourText: '10hrs',
-      footerText: ' - 9hrs',
+      hourText: 10,
+      footerText: 9,
       backgroundColor: '#7536d3',
       icon: SocialIcon,
     },
     {
       key: 6,
       titleText: 'Self Care',
-      hourText: '4hrs',
-      footerText: ' - 1hrs',
+      hourText: 4,
+      footerText: 1,
       backgroundColor: '#f1c65b',
       icon: SelfCareIcon,
     },

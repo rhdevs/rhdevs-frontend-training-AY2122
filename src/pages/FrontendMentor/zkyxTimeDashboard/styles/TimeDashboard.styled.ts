@@ -4,13 +4,12 @@ export const Background = styled.div`
   position: absolute;
   margin: 0;
   min-width: 100%;
-  height: auto;
+  height: 100%;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #0f1424;
   justify-content: center;
-  display: grid;
   padding-inline: 1.5rem;
   margin-inline: auto;
 `
@@ -109,14 +108,6 @@ export const UserCard = styled.div`
   width: 100%;
   background-color: #1c1f4a;
 `
-{
-  /*@media (max-width: 768px) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    flex-direction: column;
-    display: flex;
-  }*/
-}
 
 export const UserReportContainer = styled.div`
   @media (max-width: 768px) {
@@ -184,6 +175,7 @@ export const LegendText = styled.div`
 
 export const DashboardContainer = styled.div`
   display: grid;
+  top: 50%;
   gap: 1.5rem;
   overflow: hidden;
   grid-template-columns: repeat(4, 1fr);
