@@ -161,7 +161,7 @@ export const RightHeader = styled.div`
 export const RightBody = styled.div`
   color: hsl(204, 43%, 83%);
   font-size: 16px;
-  padding: 0px 10px 0px 0px;
+  padding: 0px 10px 0px 30px;
   @media only screen and (max-width: 600px) {
     font-size: 3vw;
     padding: 4vw 4vw 4vw 2vw;
