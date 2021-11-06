@@ -17,7 +17,7 @@ export const MainContainer = styled.div`
     border-radius: 5px;
   }
 `
-export const BottomContainer = styled.div`
+export const BottomComponent = styled.div`
   display: flex;
   flex-direction: row;
   @media (max-width: 375px) {
@@ -25,7 +25,7 @@ export const BottomContainer = styled.div`
   }
 `
 
-export const MiddleContainer = styled.div`
+export const TopComponent = styled.div`
   color: hsl(179, 62%, 43%);
   background-color: #ffffff;
   width: 100%;
@@ -38,30 +38,30 @@ export const MiddleContainer = styled.div`
   }
 `
 
-export const JoinCommText1 = styled.div`
+export const JoinCommHeader = styled.h1`
   color: hsl(179, 62%, 43%);
   font-size: 30px;
   font-weight: bold;
-  padding: 30px 00px 10px 80px;
+  padding: 30px 80px 10px 80px;
   @media (max-width: 375px) {
     font-size: 5vw;
     padding: 2vw;
   }
 `
-export const JoinCommText2 = styled.div`
+export const JoinCommSubHeader = styled.h2`
   color: hsl(71, 73%, 54%);
   font-size: 16px;
   font-weight: bold;
-  padding: 00px 00px 10px 80px;
+  padding: 00px 80px 10px 80px;
   @media (max-width: 375px) {
     font-size: 3vw;
     padding: 2vw;
   }
 `
-export const JoinCommText3 = styled.div`
+export const JoinCommBody = styled.div`
   color: hsl(218, 22%, 67%);
   font-size: 16px;
-  padding: 00px 00px 00px 80px;
+  padding: 00px 80px 00px 80px;
   break-between: always;
   @media (max-width: 375px) {
     font-size: 2.5vw;
@@ -69,10 +69,10 @@ export const JoinCommText3 = styled.div`
     break-between: none;
   }
 `
-export const BottomLeftContainer = styled.div`
+export const LeftComponent = styled.div`
   background-color: hsl(179, 62%, 43%);
   width: 50%;
-  height: 50vh;
+  height: 45vh;
   @media (max-width: 375px) {
     width: 100%;
     display: flex;
@@ -82,7 +82,7 @@ export const BottomLeftContainer = styled.div`
     padding: 10%;
   }
 `
-export const BottomLeftMonthly = styled.div`
+export const LeftHeader = styled.h1`
   color: hsl(204, 43%, 93%);
   font-size: 20px;
   padding: 40px 30px 5px 50px;
@@ -92,7 +92,7 @@ export const BottomLeftMonthly = styled.div`
     padding: 2vw;
   }
 `
-export const BottomLeftPrice = styled.div`
+export const LeftPrice = styled.div`
   color: hsl(204, 43%, 93%);
   font-size: 30px;
   padding: 0px 10px 0px 50px;
@@ -102,7 +102,7 @@ export const BottomLeftPrice = styled.div`
     padding: 2vw;
   }
 `
-export const BottomLeftPerMonth = styled.div`
+export const LeftPerMonth = styled.div`
   color: hsl(204, 43%, 83%);
   font-size: 16px;
   padding: 15px 0px;
@@ -114,7 +114,7 @@ export const BottomLeftPerMonth = styled.div`
     align-items: center;
   }
 `
-export const BottomLeftFullAccess = styled.div`
+export const LeftFullAccess = styled.div`
   color: hsl(204, 43%, 93%);
   font-size: 16px;
   padding: 0px 50px;
@@ -135,17 +135,17 @@ export const PriceAndPerMonth = styled.div`
     padding: 2vw;
   }
 `
-export const BottomRightContainer = styled.div`
+export const RightComponent = styled.div`
   background-color: hsl(179, 62%, 48%);
   width: 50%;
-  height: 50vh;
+  height: 45vh;
   @media (max-width: 375px) {
     width: 100%;
     height: 60vw;
     padding: 10%;
   }
 `
-export const BottomRightShort = styled.div`
+export const RightHeader = styled.h1`
   color: hsl(204, 43%, 93%);
   font-size: 20px;
   padding: 40px 0px 10px 50px;
@@ -154,7 +154,7 @@ export const BottomRightShort = styled.div`
     padding: 2vw;
   }
 `
-export const BottomRightLong = styled.div`
+export const RightBody = styled.div`
   color: hsl(204, 43%, 83%);
   font-size: 16px;
   padding: 0px 0px 0px 50px;

@@ -1,51 +1,50 @@
 import React from 'react'
-import { ButtonContainer } from '../../Groups/Group1/styles/Screen2.styled'
 import {
   MainPage,
   MainContainer,
-  MiddleContainer,
-  JoinCommText1,
-  JoinCommText2,
-  JoinCommText3,
-  BottomLeftContainer,
-  BottomRightContainer,
-  BottomContainer,
+  TopComponent,
+  JoinCommHeader,
+  JoinCommSubHeader,
+  JoinCommBody,
+  BottomComponent,
+  LeftComponent,
+  RightComponent,
   SignUpButton,
-  BottomLeftMonthly,
-  BottomLeftPrice,
-  BottomLeftPerMonth,
-  BottomLeftFullAccess,
+  LeftHeader,
+  LeftPrice,
+  LeftPerMonth,
+  LeftFullAccess,
   PriceAndPerMonth,
-  BottomRightShort,
-  BottomRightLong,
+  RightHeader,
+  RightBody,
 } from './styles/SinglePriceGridComponent.styled'
 
 const ElvaYBPractice = () => {
   return (
     <MainPage>
       <MainContainer>
-        <MiddleContainer>
-          <JoinCommText1>Join our community</JoinCommText1>
-          <JoinCommText2>30-day, hassle-free money back guarantee</JoinCommText2>
-          <JoinCommText3>
+        <TopComponent>
+          <JoinCommHeader>Join our community</JoinCommHeader>
+          <JoinCommSubHeader>30-day, hassle-free money back guarantee</JoinCommSubHeader>
+          <JoinCommBody>
             Gain access to our full library of tutorials along with expert code reviews.
             <br />
             Perfect for any developers who are serious about honing their skills.
-          </JoinCommText3>
-        </MiddleContainer>
-        <BottomContainer>
-          <BottomLeftContainer>
-            <BottomLeftMonthly>Monthly subscription</BottomLeftMonthly>
+          </JoinCommBody>
+        </TopComponent>
+        <BottomComponent>
+          <LeftComponent>
+            <LeftHeader>Monthly subscription</LeftHeader>
             <PriceAndPerMonth>
-              <BottomLeftPrice>$29</BottomLeftPrice>
-              <BottomLeftPerMonth>per month</BottomLeftPerMonth>
+              <LeftPrice>$29</LeftPrice>
+              <LeftPerMonth>per month</LeftPerMonth>
             </PriceAndPerMonth>
-            <BottomLeftFullAccess>Full access for less than $1 a day</BottomLeftFullAccess>
+            <LeftFullAccess>Full access for less than $1 a day</LeftFullAccess>
             <SignUpButton>Sign Up</SignUpButton>
-          </BottomLeftContainer>
-          <BottomRightContainer>
-            <BottomRightShort>Why Us</BottomRightShort>
-            <BottomRightLong>
+          </LeftComponent>
+          <RightComponent>
+            <RightHeader>Why Us</RightHeader>
+            <RightBody>
               Tutorials by industry experts
               <br />
               Peer & expert code review
@@ -59,9 +58,9 @@ const ElvaYBPractice = () => {
               Flashcard decks
               <br />
               New videos every week
-            </BottomRightLong>
-          </BottomRightContainer>
-        </BottomContainer>
+            </RightBody>
+          </RightComponent>
+        </BottomComponent>
       </MainContainer>
     </MainPage>
   )
