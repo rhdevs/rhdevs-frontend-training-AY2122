@@ -18,16 +18,20 @@ const ShoppingListMain = () => {
       <ShoppingListHeader>Our Shopping Lists!</ShoppingListHeader>
       <GroupCardsContainer>
         <ShoppingCard names="Example" onClick={() => history.push(PATHS.EXAMPLE_SHOPPING_PAGE)} />
+        <ShoppingCard names="Tai, Prince" onClick={() => history.push(PATHS.SHOPPING_LIST_ANIME_GANG)} />
         <ShoppingCard names="Prince, Tai (Redux)" onClick={() => history.push(PATHS.SHOPPING_LIST_ANIME_GANG_REDUX)} />
 
         <ShoppingCard names="Elva, Ki Yong" onClick={() => history.push(PATHS.SHOPPING_PAGE_PAIR_FOUR)} />
         <ShoppingCard names="Elva, Ki Yong (Redux)" onClick={() => history.push(PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX)} />
 
         <ShoppingCard names="Yixuan, Weipin" onClick={() => history.push(PATHS.SHOPPING_PAGE_YIXUAN_WEIPIN)} />
+        <ShoppingCard
+          names="Yi Xuan Wei Pin (Redux)"
+          onClick={() => history.push(PATHS.YIXUAN_WEIPIN_SHOPPING_REDUX)}
+        />
 
         <ShoppingCard names="Maxim, Marcus" onClick={() => history.push(PATHS.PAIR_2_SHOPPING_PAGE)} />
         <ShoppingCard names="Maxim, Marcus (Redux)" onClick={() => history.push(PATHS.PAIR_2_SHOPPING_PAGE_REDUX)} />
-
         <ShoppingCard names="En Hao Venus" onClick={() => history.push(PATHS.PAIR_3_SHOPPING_PAGE)} />
         <ShoppingCard names="En Hao Venus (Redux)" onClick={() => history.push(PATHS.PAIR3_SHOPPING_PAGE)} />
 
