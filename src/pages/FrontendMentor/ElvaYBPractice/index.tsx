@@ -1,4 +1,5 @@
 import React from 'react'
+import { ButtonContainer } from '../../Groups/Group1/styles/Screen2.styled'
 import {
   MainPage,
   MainContainer,
