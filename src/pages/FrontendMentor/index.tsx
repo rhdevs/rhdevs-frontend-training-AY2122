@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom'
 import { PATHS } from '../../routes/PATHS'
 import Card from '../../components/Card'
 import PageHeader from '../../components/PageHeader'
-import { PATHS } from '../../routes/PATHS'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
 
 const FrontendMentor = () => {
