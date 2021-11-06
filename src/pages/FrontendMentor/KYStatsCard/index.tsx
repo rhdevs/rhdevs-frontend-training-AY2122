@@ -19,7 +19,6 @@ const KYStatsCard = () => {
     <MainPage>
       <InformationCard>
         <ImageContainer>
-          {/* <Overlay></Overlay> */}
           <Image src={image}></Image>
         </ImageContainer>
         <InformationContainer>
