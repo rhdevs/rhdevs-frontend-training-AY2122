@@ -90,19 +90,23 @@ const ShoppingAnimegang = () => {
       title: 'Action',
       dataIndex: 'action',
       key: 'action',
-      render: (item: Item, record: Item) => (
-        <Space size="middle">
-          <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
-          <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
-          <a onClick={() => handleOnDeleteClick(record)}>Delete</a>
-        </Space>
-      ),
+      render: function actions(item: Item, record: Item) {
+        return (
+          <Space size="middle">
+            <Button onClick={() => handleOnPlusClick(record)} shape="circle" icon={<PlusOutlined />}></Button>
+            <Button onClick={() => handleOnMinusClick(record)} shape="circle" icon={<MinusOutlined />}></Button>
+            <a onClick={() => handleOnDeleteClick(record)}>Delete</a>
+          </Space>
+        )
+      },
     },
     {
       title: 'Price',
       dataIndex: 'price',
       key: 'price',
-      render: (text: string, record: Item) => <Input value={text} onChange={onInputChange(record)} />,
+      render: function actions(text: string, record: Item) {
+        return <Input value={text} onChange={onInputChange(record)} />
+      },
     },
     {
       title: 'Total',

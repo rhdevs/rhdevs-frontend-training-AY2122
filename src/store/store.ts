@@ -10,6 +10,7 @@ import { pair2 } from './pair2/reducer'
 import { pair3Redux } from './Pair3redux/reducer'
 import { shoppingListsCYYZ } from './shoppingListsCYYZ/reducer'
 import { shoppingListsSKZK } from './skzk/reducer'
+import { marcusFEMentor } from './MarcusFEMentor/reducer'
 import { yxwp_store } from './yxwp_store/reducer'
 
 export const rootReducer = combineReducers({
@@ -21,6 +22,7 @@ export const rootReducer = combineReducers({
   shoppingListsSKZK,
   yxwp_store,
   pair2,
+  marcusFEMentor,
   shoppingListsCYYZ,
 })
 const middlewares = [thunk]
