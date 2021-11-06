@@ -1,0 +1,57 @@
+import React from 'react'
+import {
+  BackgroundCardTop,
+  BackgroundIcon,
+  EllipsisImage,
+  FooterContainer,
+  FooterText,
+  HourText,
+  TimeInfoCard,
+  TitleBox,
+  TitleText,
+} from '../../pages/FrontendMentor/zkyxTimeDashboard/styles/TimeDashboard.styled'
+
+import EllipsisIcon from '../../pages/FrontendMentor/zkyxTimeDashboard/images/icon-ellipsis.svg'
+
+type Props = {
+  titleText: string
+  hourText: string
+  footerText: string
+  pastPeriod: string
+  backgroundColor: string
+  icon: string
+}
+
+const TimeCardStyles = {
+  overflow: 'hidden',
+  display: 'grid',
+  borderRadius: '20px',
+  width: '100%',
+  height: '100%',
+  backgroundColor: '#1c1f4a',
+  backgroundSize: 'fill',
+}
+
+const TimeCard = (props: Props) => {
+  return (
+    <div style={TimeCardStyles}>
+      <BackgroundCardTop style={{ backgroundColor: props.backgroundColor }}>
+        <BackgroundIcon src={props.icon} />
+      </BackgroundCardTop>
+      <TimeInfoCard>
+        <TitleBox>
+          <TitleText>{props.titleText}</TitleText>
+          <EllipsisImage src={EllipsisIcon} />
+        </TitleBox>
+        <FooterContainer>
+          <HourText>{props.hourText}</HourText>
+          <FooterText>
+            {props.pastPeriod} {props.footerText}
+          </FooterText>
+        </FooterContainer>
+      </TimeInfoCard>
+    </div>
+  )
+}
+
+export default TimeCard

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import WorkIcon from '../images/icon-work.svg'
 
 export const Background = styled.div`
   position: absolute;
