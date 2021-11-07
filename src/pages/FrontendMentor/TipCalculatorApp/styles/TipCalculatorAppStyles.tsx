@@ -50,6 +50,9 @@ export const InteractionContainer = styled.div`
   justify-content: space-evenly;
   font-family: 'Space Mono';
   width: 40%;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `
 
 export const ItemContainer = styled.div`
@@ -175,6 +178,9 @@ export const ResultContainer = styled.div`
   border-radius: 13px;
   margin-top: 3vh;
   margin-bottom: 3vh;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `
 
 export const NumbersContainer = styled.div`
