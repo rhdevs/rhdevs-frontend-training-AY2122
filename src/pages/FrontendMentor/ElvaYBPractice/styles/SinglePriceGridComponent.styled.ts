@@ -8,7 +8,7 @@ export const MainPage = styled.div`
   justify-content: center;
   background-color: rgba(225, 217, 221, 0.8);
   @media only screen and (max-width: 600px) {
-    padding-top: 5px;
+    padding-top: 15px;
   }
 `
 
