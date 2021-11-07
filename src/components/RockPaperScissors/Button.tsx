@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import { StyledButton } from './styles/Button.styled'
-import { Option } from '../../pages/RockPaperScissors/util'
+import { Option } from '../../pages/FrontendMentor/RockPaperScissors/util'
 
 type Props = {
   option: Option

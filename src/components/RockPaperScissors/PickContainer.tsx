@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { Option, optionList } from '../../pages/RockPaperScissors/util'
+import { Option, optionList } from '../../pages/FrontendMentor/RockPaperScissors/util'
 import { Blank, PickText, StyledPickContainer } from './styles/PickContainer.styled'
 
 type Props = {

@@ -1,8 +1,8 @@
-import scissorsIcon from '../../assets/RockPaperScissors/icon-scissors.svg'
-import spockIcon from '../../assets/RockPaperScissors/icon-spock.svg'
-import paperIcon from '../../assets/RockPaperScissors/icon-paper.svg'
-import lizardIcon from '../../assets/RockPaperScissors/icon-lizard.svg'
-import rockIcon from '../../assets/RockPaperScissors/icon-rock.svg'
+import scissorsIcon from '../../../assets/RockPaperScissors/icon-scissors.svg'
+import spockIcon from '../../../assets/RockPaperScissors/icon-spock.svg'
+import paperIcon from '../../../assets/RockPaperScissors/icon-paper.svg'
+import lizardIcon from '../../../assets/RockPaperScissors/icon-lizard.svg'
+import rockIcon from '../../../assets/RockPaperScissors/icon-rock.svg'
 
 export type Option = { name: string; src: string | undefined; color: string; shadow: string }
 

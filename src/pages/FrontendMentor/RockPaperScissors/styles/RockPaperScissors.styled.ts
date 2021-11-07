@@ -3,10 +3,9 @@ import styled from 'styled-components'
 export const MainContainer = styled.div`
   width: 100%;
   height: 100%;
-  min-width: 100vw;
   min-height: calc(100vh - 3rem);
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-  font-family: Barlow Semi Condensed;
+  font-family: Barlow Semi Condensed, sans-serif;
   color: white;
   display: flex;
   flex-direction: column;

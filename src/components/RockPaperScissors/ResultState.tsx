@@ -8,7 +8,7 @@ import {
   ResultWrapper,
 } from './styles/ResultState.styled'
 import PickContainer from './PickContainer'
-import { getResultText, Option } from '../../pages/RockPaperScissors/util'
+import { getResultText, Option } from '../../pages/FrontendMentor/RockPaperScissors/util'
 
 type Props = {
   renderOption: (option: Option) => ReactElement

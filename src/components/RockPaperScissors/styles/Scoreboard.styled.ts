@@ -5,11 +5,10 @@ export const StyledIconTitle = styled.img<{ imgSize?: string }>`
   width: ${(props) => props.imgSize ?? '2rem'};
 `
 export const StyledScoreboard = styled.div`
-  width: 100%;
+  width: 85%;
   max-width: 800px;
-  //min-height: 150px;
-  border-radius: 5px;
-  border: 2px solid #4e5f7d;
+  border-radius: 10px;
+  border: 3px solid #4e5f7d;
   font-size: 3rem;
   padding: 20px;
   display: flex;
@@ -32,5 +31,7 @@ export const Score = styled.div`
 `
 
 export const ScoreText = styled.div`
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
 `

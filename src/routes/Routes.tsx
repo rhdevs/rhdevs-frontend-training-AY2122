@@ -68,7 +68,7 @@ const CountriesSwitch = React.lazy(
   () => import(/* webpackChunckName: "CountriesSwitch" */ '../pages/FrontendMentor/MarcusFEMentor/CountriesSwitch'),
 )
 const RockPaperScissors = React.lazy(
-  () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/RockPaperScissors'),
+  () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
 
 export const Routes = () => (
