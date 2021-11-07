@@ -130,8 +130,7 @@ export const TipGridBox = styled.div`
   height: 10vh;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-gap: 10px;
   font-family: 'Space Mono';
   font-size: 20px;
   @media (max-width: 768px) {
