@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {
   MainPage,
   MainContainer,
@@ -18,20 +19,13 @@ import {
   RightHeader,
   RightBody,
 } from './styles/SinglePriceGridComponent.styled'
+import { TopComponentContainer } from '../../../components/ElvaYBPractice/styles/TopComponent.styled'
 
 const ElvaYBPractice = () => {
   return (
     <MainPage>
       <MainContainer>
-        <TopComponent>
-          <JoinCommHeader>Join our community</JoinCommHeader>
-          <JoinCommSubHeader>30-day, hassle-free money back guarantee</JoinCommSubHeader>
-          <JoinCommBody>
-            Gain access to our full library of tutorials along with expert code reviews.
-            <br />
-            Perfect for any developers who are serious about honing their skills.
-          </JoinCommBody>
-        </TopComponent>
+        <TopComponentContainer />
         <BottomComponent>
           <LeftComponent>
             <LeftHeader>Monthly subscription</LeftHeader>
