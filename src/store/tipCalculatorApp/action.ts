@@ -26,7 +26,7 @@ export const setTipAmount = (percentage: number) => (dispatch: Dispatch<ActionTy
 
 export const setTotalAmount = () => (dispatch: Dispatch<ActionTypes>, getState: GetState) => {
   const { billAmount, peopleAmount, tipAmount } = getState().tipCalculatorApp
-  const newTotalAmount = billAmount / peopleAmount + tipAmount
+  const newTotalAmount = billAmount / (peopleAmount <= 0 ? 1 : peopleAmount) + tipAmount
   dispatch({
     type: CALCULATOR_ACTIONS.SET_TOTAL_AMOUNT,
     totalAmount: newTotalAmount,
