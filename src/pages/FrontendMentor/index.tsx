@@ -28,6 +28,11 @@ const FrontendMentor = () => {
         <Card title="Social Media Dashboard" description="Shao Kiat" onClick={() => history.push(PATHS.SK_DASHBOARD)} />
         <Card title="REST Countries API" description="Marcus" onClick={() => history.push(PATHS.MARCUS_FE_MENTOR)} />
         <Card
+          title="Tip Calculator App"
+          description="Jason"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP)}
+        />
+        <Card
           title="Profile card component"
           description="Prince, Enhao"
           onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRINCE_ENHAO)}
