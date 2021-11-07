@@ -38,8 +38,13 @@ export const InformationContainer = styled.div`
 export const ImageContainer = styled.div`
   width: 50%;
   background-color: hsl(277, 64%, 61%);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   @media (max-width: 800px) {
     width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
   }
 `
 
@@ -47,6 +52,13 @@ export const Image = styled.img`
   height: 100%;
   width: 100%;
   opacity: 0.4;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  @media (max-width: 800px) {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+  }
 `
 
 export const Header = styled.span`
