@@ -1,10 +1,10 @@
 import React, { ChangeEvent, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
-  AddItemQuantity,
-  ReduceItemQuantity,
-  DeleteItem,
-  AddItem,
+  addItemQuantity,
+  reduceItemQuantity,
+  deleteItem,
+  addItem,
 } from '../../../store/JasonYbReduxShoppingList/actions'
 import { RootState } from '../../../store/types'
 
@@ -44,13 +44,13 @@ export default function ShoppingLists() {
       render: function actions(itemAffected: ShoppingItem) {
         return (
           <Space size="middle">
-            <Button type="primary" shape="circle" onClick={() => dispatch(AddItemQuantity(itemAffected))}>
+            <Button type="primary" shape="circle" onClick={() => dispatch(addItemQuantity(itemAffected))}>
               +
             </Button>
-            <Button type="primary" shape="circle" onClick={() => dispatch(ReduceItemQuantity(itemAffected))}>
+            <Button type="primary" shape="circle" onClick={() => dispatch(reduceItemQuantity(itemAffected))}>
               -
             </Button>
-            <Button danger onClick={() => dispatch(DeleteItem(itemAffected))}>
+            <Button danger onClick={() => dispatch(deleteItem(itemAffected))}>
               Delete
             </Button>
           </Space>
@@ -71,7 +71,7 @@ export default function ShoppingLists() {
               placeholder="Item"
               onChange={(e) => handleNewitemToBeAdded(e)}
             />
-            <Button type="dashed" onClick={() => dispatch(AddItem(newItemName))}>
+            <Button type="dashed" onClick={() => dispatch(addItem(newItemName))}>
               + Add item
             </Button>
           </form>
