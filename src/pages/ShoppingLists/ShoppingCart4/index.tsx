@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Table, Space, Button } from 'antd'
 import { MinusCircleOutlined, PlusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 import { MainPage, HeaderShoppingCart, Header, AddItemButton, ShoppingListForm } from './styles/ShoppingCart4.styled'
-import AddItemModal from '../../components/AddItemModal'
+import AddItemModal from '../../../components/AddItemModal'
 
 export interface ShoppingListItem {
   key: number

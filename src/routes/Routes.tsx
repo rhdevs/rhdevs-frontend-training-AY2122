@@ -48,12 +48,31 @@ const SkZkShoppingPageRedux = React.lazy(
 )
 const Shopping_YXWP = React.lazy(() => import('../pages/ShoppingLists/Shopping_YXWP'))
 const YXWPRedux = React.lazy(() => import(/* webpackChunckName: "YXWPRedux" */ '../pages/ShoppingLists/YXWPRedux'))
-const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCart4" */ '../pages/ShoppingCart4'))
-const ShoppingCart4Redux = React.lazy(
-  () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
+const ShoppingCart4 = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingCart4" */ '../pages/ShoppingLists/ShoppingCart4'),
 )
-
-const Hubble = React.lazy(() => import(/* webpackChunckName: "HUBBLE" */ '../pages/FrontendMentor/hubble'))
+const ShoppingCart4Redux = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingLists/ShoppingCart4Redux'),
+)
+const ShoppingAnimegang = React.lazy(
+  () => import(/* webpackChunckName: "ShoppingAnimegang" */ '../pages/ShoppingLists/ShoppingListAnimeGang'),
+)
+const FrontendMentorPrinceEnhao = React.lazy(
+  () =>
+    import(/* webpackChunckName: "FrontendMentorPrinceEnhao" */ '../pages/FrontendMentor/FrontendMentorPrinceEnhao'),
+)
+const TipCalculatorApp = React.lazy(
+  () => import(/* webpackChunckName: "TipCalculatorApp" */ '../pages/FrontendMentor/TipCalculatorApp'),
+)
+const MarcusFEMentor = React.lazy(
+  () => import(/* webpackChunckName: "MarcusFEMentor" */ '../pages/FrontendMentor/MarcusFEMentor'),
+)
+const CountriesSwitch = React.lazy(
+  () => import(/* webpackChunckName: "CountriesSwitch" */ '../pages/FrontendMentor/MarcusFEMentor/CountriesSwitch'),
+)
+const SkDashboard = React.lazy(
+  () => import(/* webpackChunckName: "SkDashboard" */ '../pages/FrontendMentor/SkDashboard'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -65,6 +84,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.EXAMPLE_SHOPPING_PAGE} component={ShoppingListExample} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} component={ShoppingListCYYZ} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_LIST_ANIME_GANG_REDUX} component={ShoppingListAnimeGangRedux} />
+    <RouteWithTopNav exact path={PATHS.SHOPPING_LIST_ANIME_GANG} component={ShoppingAnimegang} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_YIXUAN_WEIPIN} component={Shopping_YXWP} />
     <RouteWithTopNav exact path={PATHS.YIXUAN_WEIPIN_SHOPPING_REDUX} component={YXWPRedux} />
     <RouteWithTopNav exact path={PATHS.PAIR_2_SHOPPING_PAGE} component={Pair2MainPage} />
@@ -78,9 +98,13 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
-    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={Hubble} />
+    <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
+    <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
+    <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
+    <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
+    <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />
   </Switch>
