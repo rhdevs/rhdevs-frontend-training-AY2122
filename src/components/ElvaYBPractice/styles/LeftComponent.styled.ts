@@ -8,7 +8,7 @@ export const LeftComponent = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 60vw;
+    height: auto;
     overflow: hidden;
     padding: 10%;
   }
