@@ -57,7 +57,7 @@ export const StyledStats = styled.text`
   font-size: calc(16px + 2vh);
   font-weight: 700;
   text-align: center;
-  margin-left: 2vw;
+  margin-left: 1vw;
   @media (min-width: 768px) {
     font-size: calc(12px + 1vw);
   }

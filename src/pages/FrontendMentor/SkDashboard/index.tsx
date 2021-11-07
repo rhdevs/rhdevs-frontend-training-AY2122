@@ -5,13 +5,13 @@ import {
   DashboardHeader,
   FollowersCount,
   MainPage,
-  GlobalStyles,
   lightTheme,
   darkTheme,
   OverviewHeading,
   CardSection,
   StyledDarkMode,
   LineSeparator,
+  ThemeDiv,
 } from './styles/SkDashboard.styled'
 
 import SocialMediaCard from '../../../components/skDashboard/SocialMediaCard'
@@ -29,8 +29,7 @@ const skDashboard = () => {
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <>
-        <GlobalStyles />
+      <ThemeDiv>
         <MainPage>
           <DashboardHeader>
             Social Media Dashboard
@@ -69,7 +68,7 @@ const skDashboard = () => {
             ))}
           </CardSection>
         </MainPage>
-      </>
+      </ThemeDiv>
     </ThemeProvider>
   )
 }

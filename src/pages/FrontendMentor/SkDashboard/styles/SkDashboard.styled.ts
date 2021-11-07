@@ -1,42 +1,35 @@
-import styled, { createGlobalStyle, DefaultTheme } from 'styled-components'
+import styled, { createGlobalStyle, DefaultTheme, ThemeProviderComponent } from 'styled-components'
 
-declare module 'styled-components' {
-  export interface DefaultTheme {
-    body: string
-    text: string
-    headingText: string
-    toggleBorder: string
-    background: string
-    cardBackground: string
-  }
-}
+// declare module 'styled-components' {
+//   export interface DefaultTheme {
+//     body: string
+//     text: string
+//     headingText: string
+//     toggleBorder: string
+//     background: string
+//     cardBackground: string
+//   }
+// }
 
 export const darkTheme: DefaultTheme = {
   body: 'hsl(230, 17%, 14%)',
   text: 'hsl(228, 34%, 66%)',
   headingText: 'hsl(0, 0%, 100%)',
-  toggleBorder: '#6B8096',
-  background: 'hsl(230, 17%, 14%)',
   cardBackground: `hsl(228, 28%, 20%)`,
 }
 
 export const lightTheme: DefaultTheme = {
-  body: '#FFF',
+  body: 'hsl(0, 0%, 100%)',
   text: 'hsl(228, 12%, 44%)',
   headingText: 'hsl(230, 17%, 14%)',
-  toggleBorder: '#FFF',
-  background: '#363537',
   cardBackground: `hsl(227, 47%, 96%)`,
 }
-
-export const GlobalStyles = createGlobalStyle`
-  main {
-    background: ${({ theme }) => `${theme.body} !important`};
-    color: ${({ theme }) => theme.text};
-    font-family: Inter, Tahoma, Helvetica, Arial, Roboto, sans-serif;
-    transition: all 0.50s linear;
-  }
-  `
+export const ThemeDiv = styled.div`
+  background: ${({ theme }) => `${theme.body} !important`};
+  color: ${({ theme }) => theme.text};
+  font-family: Inter, Tahoma, Helvetica, Arial, Roboto, sans-serif;
+  transition: all 0.5s linear;
+`
 
 export const MainPage = styled.div`
   display: flex;
@@ -45,7 +38,6 @@ export const MainPage = styled.div`
   align-items: center;
   margin-left: 10vw;
   margin-right: 10vw;
-  margin-top: 2vh;
 `
 
 export const DashboardHeader = styled.div`
