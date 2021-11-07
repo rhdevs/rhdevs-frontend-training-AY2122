@@ -3,7 +3,6 @@ import React from 'react'
 import {
   MainPage,
   MainContainer,
-  TopComponent,
   JoinCommHeader,
   JoinCommSubHeader,
   JoinCommBody,
@@ -19,13 +18,13 @@ import {
   RightHeader,
   RightBody,
 } from './styles/SinglePriceGridComponent.styled'
-import { TopComponentContainer } from '../../../components/ElvaYBPractice/styles/TopComponent.styled'
+import TopComponent from '../../../components/ElvaYBPractice/TopComponent'
 
 const ElvaYBPractice = () => {
   return (
     <MainPage>
       <MainContainer>
-        <TopComponentContainer />
+        <TopComponent />
         <BottomComponent>
           <LeftComponent>
             <LeftHeader>Monthly subscription</LeftHeader>
