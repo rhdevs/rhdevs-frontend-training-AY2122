@@ -9,7 +9,7 @@ import {
   TimeInfoCard,
   TitleBox,
   TitleText,
-} from '../../pages/FrontendMentor/zkyxTimeDashboard/styles/TimeDashboard.styled'
+} from './styles/TimeCard.styled'
 
 import EllipsisIcon from '../../pages/FrontendMentor/zkyxTimeDashboard/images/icon-ellipsis.svg'
 

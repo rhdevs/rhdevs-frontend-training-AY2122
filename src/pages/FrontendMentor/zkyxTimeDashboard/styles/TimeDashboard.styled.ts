@@ -12,15 +12,12 @@ export const Background = styled.div`
   justify-content: center;
   padding-inline: 1.5rem;
   margin-inline: auto;
-`
-export const TitleText = styled.h1`
-  font-size: 22px;
-  font-weight: 500;
-  color: #f5f5f5;
   @media (max-width: 768px) {
-    font-size: 4vw;
+    display: grid;
+    height: auto;
   }
 `
+
 export const HourText = styled.h2`
   font-size: 30px;
   font-weight: 500;
@@ -37,64 +34,6 @@ export const FooterText = styled.h2`
   color: #cccfff;
   @media (max-width: 768px) {
     font-size: 3vw;
-  }
-`
-
-export const FooterContainer = styled.div`
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-`
-export const BackgroundCardTop = styled.div`
-  background-repeat: no-repeat;
-  image-position: right;
-  background-origin: content-box;
-  margin-bottom: -1vh;
-  height: auto;
-  @media (max-width: 768px) {
-    height: auto;
-    margin-bottom: -auto;
-  }
-`
-
-export const BackgroundIcon = styled.img`
-  width: fit-content;
-  margin-top: -0.6vh;
-  margin-left: 60%;
-  width: 8vh;
-  height: 8vh;
-  @media (max-width: 768px) {
-    margin-left: 50vw;
-    width: auto;
-  }
-`
-
-export const TimeCard = styled.div`
-  overflow: hidden;
-  display: grid;
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
-  background-color: #1c1f4a;
-  background-size: fill;
-`
-export const TimeInfoCard = styled.div`
-  overflow: hidden;
-  border-radius: 20px;
-  background-color: #1c1f4a;
-  width: auto;
-  height: auto;
-  padding: 1.5rem;
-  margin-top: -1rem;
-  &: hover {
-    background-color: #2a306f;
-  }
-  @media (max-width: 768px) {
-    padding: 2rem;
-    padding-bottom: 1rem;
   }
 `
 
@@ -191,46 +130,4 @@ export const DashboardContainer = styled.div`
     background-color: transparent;
     width: 70vw;
   }
-`
-
-export const CardContainer = styled.div`
-  justify-content: center;
-  display: grid;
-  flex-direction: column;
-  margin: 30px;
-  border-style: solid;
-  border-radius: 4px;
-  background-color: #f0f0f0;
-  border-color: #ffffff;
-  border-width: 12px;
-  height: 30%;
-  padding: 10px;
-  box-shadow: 0px 0px 15px #000000;
-`
-
-export const CardBody = styled.div`
-  justify-content: center;
-  background-color: #ffffff;
-  border-style: solid;
-  border-radius: 4px;
-  display: grid;
-  width: 100px;
-`
-
-export const CardImage = styled.img`
-  display: grid;
-  border-style: solid;
-  border-color: black;
-  padding: 1px;
-`
-
-export const TitleBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`
-export const EllipsisImage = styled.img`
-  width: '21px';
-  height: '5px';
 `
