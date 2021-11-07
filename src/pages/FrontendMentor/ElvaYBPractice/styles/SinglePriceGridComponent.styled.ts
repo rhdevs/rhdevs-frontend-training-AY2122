@@ -42,7 +42,7 @@ export const JoinCommHeader = styled.p`
   color: hsl(179, 62%, 43%);
   font-size: 30px;
   font-weight: bold;
-  padding: 30px 80px 10px 80px;
+  padding: 30px 80px 10px 50px;
   margin: 0px;
   @media only screen and (max-width: 600px) {
     font-size: 18px;
@@ -54,7 +54,7 @@ export const JoinCommSubHeader = styled.h2`
   color: hsl(71, 73%, 54%);
   font-size: 16px;
   font-weight: bold;
-  padding: 00px 80px 10px 80px;
+  padding: 00px 80px 10px 50px;
   @media only screen and (max-width: 600px) {
     font-size: 12px;
     padding: 10px 20px 0px 10px;
@@ -63,7 +63,7 @@ export const JoinCommSubHeader = styled.h2`
 export const JoinCommBody = styled.div`
   color: hsl(218, 22%, 67%);
   font-size: 16px;
-  padding: 00px 80px 10px 80px;
+  padding: 00px 80px 10px 50px;
   break-between: always;
   @media only screen and (max-width: 600px) {
     font-size: 10px;
@@ -150,7 +150,7 @@ export const RightComponent = styled.div`
 export const RightHeader = styled.div`
   color: hsl(204, 43%, 93%);
   font-size: 20px;
-  padding: 30px 40px 10px 40px;
+  padding: 30px 40px 10px 50px;
   @media only screen and (max-width: 600px) {
     font-size: 14px;
     padding: 10px 20px 0px 10px;
@@ -159,7 +159,7 @@ export const RightHeader = styled.div`
 export const RightBody = styled.div`
   color: hsl(204, 43%, 83%);
   font-size: 16px;
-  padding: 0px 10px 0px 40px;
+  padding: 0px 10px 0px 50px;
   @media only screen and (max-width: 600px) {
     font-size: 11px;
     padding: 10px 20px 0px 10px;
