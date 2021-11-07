@@ -8,14 +8,20 @@ export const Container = styled.div`
 export const Number = styled.p`
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2vw;
   color: hsl(0, 0%, 100%);
   margin-bottom: 0;
+  @media (max-width: 800px) {
+    font-size: 24px;
+  }
 `
 
 export const Text = styled.p`
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1vw;
   color: hsla(0, 0%, 100%, 0.6);
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
 `

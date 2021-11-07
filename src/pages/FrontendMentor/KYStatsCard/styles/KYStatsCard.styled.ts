@@ -19,7 +19,8 @@ export const InformationCard = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: row-reverse;
-  @media (max-width: 375px) {
+  @media (max-width: 800px) {
+    width: 75%;
     flex-direction: column;
     height: 80%;
   }
@@ -28,7 +29,7 @@ export const InformationCard = styled.div`
 export const InformationContainer = styled.div`
   width: 50%;
   padding: 50px;
-  @media (max-width: 375px) {
+  @media (max-width: 800px) {
     width: 100%;
     text-align: center;
     padding: 20px;
@@ -37,7 +38,7 @@ export const InformationContainer = styled.div`
 export const ImageContainer = styled.div`
   width: 50%;
   background-color: hsl(277, 64%, 61%);
-  @media (max-width: 375px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 `
@@ -51,10 +52,13 @@ export const Image = styled.img`
 export const Header = styled.span`
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 3vw;
   color: hsl(0, 0%, 100%);
-  @media (max-width: 375px) {
-    font-size: 24px;
+  @media (max-width: 800px) {
+    font-size: 4vw;
+  }
+  @media (max-width: 700px) {
+    font-size: 6vw;
   }
 `
 
@@ -65,11 +69,11 @@ export const Highlight = styled.span`
 export const DescriptionText = styled.p`
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: hsla(0, 0%, 100%, 0.75);
   margin-top: 20px;
-  width: 90%;
-  @media (max-width: 375px) {
+  width: 100%;
+  @media (max-width: 800px) {
     text-align: center;
     width: 100%;
     font-size: 15px;
@@ -77,12 +81,12 @@ export const DescriptionText = styled.p`
 `
 
 export const StatsContainer = styled.div`
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 55px;
-  @media (max-width: 375px) {
+  @media (max-width: 500px) {
     flex-direction: column;
     width: 100%;
   }
