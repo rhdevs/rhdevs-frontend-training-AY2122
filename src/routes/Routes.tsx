@@ -52,7 +52,9 @@ const ShoppingCart4 = React.lazy(() => import(/* webpackChunckName: "ShoppingCar
 const ShoppingCart4Redux = React.lazy(
   () => import(/* webpackChunckName: "ShoppingCart4Redux" */ '../pages/ShoppingCart4Redux'),
 )
-const maximwpwebsite = React.lazy(() => import('../pages/FrontendMentor/Maximweipin'))
+const maximwpWebsite = React.lazy(
+  () => import(/* webpackChunckName: "Maximweipin" */ '../pages/FrontendMentor/Maximweipin'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -77,7 +79,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
-    <RouteWithTopNav exact path={PATHS.MAXIM_WEIPIN_WEBSITE} component={maximwpwebsite} />
+    <RouteWithTopNav exact path={PATHS.MAXIM_WEIPIN_WEBSITE} component={maximwpWebsite} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}

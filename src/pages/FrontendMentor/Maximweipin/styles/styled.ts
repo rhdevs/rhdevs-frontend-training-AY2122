@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import '@fontsource/lexend-deca'
 
-export const FullScreenContainer = styled.div`
+export const MainContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -10,31 +10,43 @@ export const FullScreenContainer = styled.div`
   width: 70%;
   left: 15%;
   padding-top: 100px;
-  @media (max-width: 768px) {
+  padding-bottom: 100px;
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
   }
 `
-export const MainContainer1 = styled.div`
+export const CardContainer1 = styled.div`
+  height: 600px;
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
   background-color: rgb(226, 133, 37);
-  border-radius: 5px;
+  border-radius: 10px 0px 0px 10px;
+  @media (max-width: 1024px) {
+    border-radius: 10px 10px 0px 0px;
+  }
 `
-export const MainContainer2 = styled.div`
+export const CardContainer2 = styled.div`
+  height: 600px;
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
   background-color: rgb(1, 105, 114);
-  border-radius: 5px;
+  @media (max-width: 1024px) {
+    border-radius: 0px 0px 0px 0px;
+  }
 `
-export const MainContainer3 = styled.div`
+export const CardContainer3 = styled.div`
+  height: 600px;
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
   background-color: rgb(0, 64, 63);
-  border-radius: 5px;
+  border-radius: 0px 10px 10px 0px;
+  @media (max-width: 1024px) {
+    border-radius: 0px 0px 10px 10px;
+  }
 `
 export const StyledHeader = styled.p`
   font-family: 'Lexend Deca';
@@ -47,7 +59,7 @@ export const StyledParagraph = styled.p`
   text-align: justify;
   margin: 2rem;
   font-family: 'Lexend Deca';
-  font-size: calc(10px);
+  font-size: 15px;
   color: #ffffff;
   line-height: 2.5;
 `
@@ -65,7 +77,7 @@ export const RoundButton1 = {
   color: '#e28525',
   alignItems: 'center',
   margin: '10%',
-  'font-size': '20px',
+  'font-size': '15px',
 }
 export const RoundButton2 = {
   width: '150px',
@@ -75,7 +87,7 @@ export const RoundButton2 = {
   color: '#016972',
   alignItems: 'center',
   margin: '10%',
-  'font-size': '20px',
+  'font-size': '15px',
 }
 export const RoundButton3 = {
   width: '150px',
@@ -85,5 +97,5 @@ export const RoundButton3 = {
   color: '#00403f',
   alignItems: 'center',
   margin: '10%',
-  'font-size': '20px',
+  'font-size': '15px',
 }

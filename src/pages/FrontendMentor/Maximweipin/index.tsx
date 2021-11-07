@@ -1,11 +1,11 @@
 import React from 'react'
 import {
-  FullScreenContainer,
+  MainContainer,
   StyledHeader,
   StyledParagraph,
-  MainContainer1,
-  MainContainer2,
-  MainContainer3,
+  CardContainer1,
+  CardContainer2,
+  CardContainer3,
   StyledLogo,
   RoundButton1,
   RoundButton2,
@@ -19,8 +19,8 @@ import sedans from './images/icon-sedans.svg'
 
 const Lesson1Example = () => {
   return (
-    <FullScreenContainer>
-      <MainContainer1>
+    <MainContainer>
+      <CardContainer1>
         <StyledLogo src={sedans} />
         <StyledHeader>Sedans</StyledHeader>
         <StyledParagraph>
@@ -30,8 +30,8 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton1}>
           Learn more
         </Button>
-      </MainContainer1>
-      <MainContainer2>
+      </CardContainer1>
+      <CardContainer2>
         <StyledLogo src={suvs} />
         <StyledHeader>SUVs</StyledHeader>
         <StyledParagraph>
@@ -41,8 +41,8 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton2}>
           Learn more
         </Button>
-      </MainContainer2>
-      <MainContainer3>
+      </CardContainer2>
+      <CardContainer3>
         <StyledLogo src={luxury} />
         <StyledHeader> Luxury </StyledHeader>
         <StyledParagraph>
@@ -52,8 +52,8 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton3}>
           Learn more
         </Button>
-      </MainContainer3>
-    </FullScreenContainer>
+      </CardContainer3>
+    </MainContainer>
   )
 }
 
