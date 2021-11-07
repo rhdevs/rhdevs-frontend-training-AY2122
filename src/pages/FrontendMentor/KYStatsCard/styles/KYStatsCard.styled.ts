@@ -28,13 +28,18 @@ export const InformationCard = styled.div`
 
 export const InformationContainer = styled.div`
   width: 50%;
-  padding: 50px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
   @media (max-width: 800px) {
     width: 100%;
     text-align: center;
     padding: 20px;
+    height: 65%;
   }
 `
+
 export const ImageContainer = styled.div`
   width: 50%;
   background-color: hsl(277, 64%, 61%);
@@ -45,6 +50,7 @@ export const ImageContainer = styled.div`
     width: 100%;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 0px;
+    height: 35%;
   }
 `
 
@@ -64,8 +70,9 @@ export const Image = styled.img`
 export const Header = styled.span`
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 3vw;
+  font-size: 2.8vh;
   color: hsl(0, 0%, 100%);
+  display: inline-block;
   @media (max-width: 800px) {
     font-size: 4vw;
   }
@@ -88,18 +95,23 @@ export const DescriptionText = styled.p`
   @media (max-width: 800px) {
     text-align: center;
     width: 100%;
-    font-size: 15px;
+    font-size: 12px;
   }
 `
 
 export const StatsContainer = styled.div`
-  width: 100%;
+  width: 90%;
+  height: 40%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 55px;
+  margin-left: 5%;
   @media (max-width: 500px) {
     flex-direction: column;
     width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    height: 50%;
   }
 `

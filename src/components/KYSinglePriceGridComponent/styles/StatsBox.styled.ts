@@ -12,7 +12,7 @@ export const Number = styled.p`
   color: hsl(0, 0%, 100%);
   margin-bottom: 0;
   @media (max-width: 800px) {
-    font-size: 24px;
+    font-size: 16px;
   }
 `
 
@@ -22,6 +22,6 @@ export const Text = styled.p`
   font-size: 1vw;
   color: hsla(0, 0%, 100%, 0.6);
   @media (max-width: 800px) {
-    font-size: 16px;
+    font-size: 10px;
   }
 `
