@@ -1,6 +1,5 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-
 import Card from '../../components/Card'
 import { PATHS } from '../../routes/PATHS'
 import PageHeader from '../../components/PageHeader'
@@ -25,6 +24,11 @@ const FrontendMentor = () => {
       <InformationCardSection>
         {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
         <Card title="Meet landing page" description="your name" />
+        <Card
+          title="Time tracking dashboard"
+          description="zhikai-yixuan"
+          onClick={() => history.push(PATHS.TIME_DASHBOARD)}
+        />
         <Card title="Social Media Dashboard" description="Shao Kiat" onClick={() => history.push(PATHS.SK_DASHBOARD)} />
         <Card title="REST Countries API" description="Marcus" onClick={() => history.push(PATHS.MARCUS_FE_MENTOR)} />
         <Card
