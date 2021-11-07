@@ -10,15 +10,15 @@ import {
   AddItemButton,
   ShoppingListForm,
 } from './styles/ShoppingCart4Redux.styled'
-import AddItemModalRedux from '../../components/AddItemModalRedux'
-import { RootState } from '../../store/types'
+import AddItemModalRedux from '../../../components/AddItemModalRedux'
+import { RootState } from '../../../store/types'
 import {
   AddQuantityInList,
   RemoveQuantityInList,
   RemoveItemFromList,
   ShowAddItemModal,
-} from '../../store/shoppingCart4Redux/actions'
-import { ShoppingListItem } from '../../store/shoppingCart4Redux/types'
+} from '../../../store/shoppingCart4Redux/actions'
+import { ShoppingListItem } from '../../../store/shoppingCart4Redux/types'
 
 const ShoppingCart4Redux = () => {
   const dispatch = useDispatch()
