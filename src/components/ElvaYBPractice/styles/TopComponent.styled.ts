@@ -9,7 +9,8 @@ export const TopComponent = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10%;
-    height: 60vw;
+    height: 30vh;
+    width: 100%;
   }
 `
 
@@ -21,7 +22,7 @@ export const JoinCommHeader = styled.p`
   margin: 0px;
   @media only screen and (max-width: 600px) {
     font-size: 18px;
-    padding: 10px 20px 0px 10px;
+    padding: 10px 20px 0px 0px;
     margin: 0vw;
   }
 `
@@ -32,7 +33,7 @@ export const JoinCommSubHeader = styled.h2`
   padding: 00px 80px 10px 50px;
   @media only screen and (max-width: 600px) {
     font-size: 12px;
-    padding: 10px 20px 0px 10px;
+    padding: 10px 20px 0px 0px;
   }
 `
 export const JoinCommBody = styled.div`
@@ -42,7 +43,7 @@ export const JoinCommBody = styled.div`
   break-between: always;
   @media only screen and (max-width: 600px) {
     font-size: 10px;
-    padding: 0px 20px 0px 10px;
+    padding: 0px 20px 0px 0px;
     break-between: none;
   }
 `

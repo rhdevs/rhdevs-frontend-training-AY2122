@@ -7,6 +7,9 @@ export const MainPage = styled.div`
   align-items: center;
   justify-content: center;
   background-color: rgba(225, 217, 221, 0.8);
+  @media only screen and (max-width: 600px) {
+    padding-top: 5px;
+  }
 `
 
 export const MainContainer = styled.div`
@@ -14,7 +17,8 @@ export const MainContainer = styled.div`
   border-radius: 15px;
   overflow: hidden;
   @media only screen and (max-width: 600px) {
-    border-radius: 5px;
+    border-radius: 5px;\
+    width: 80%;
   }
 `
 export const BottomComponent = styled.div`

@@ -8,7 +8,7 @@ export const RightComponent = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 60vw;
+    height: 30vh;
     overflow: hidden;
     padding: 10%;
   }
@@ -19,7 +19,7 @@ export const RightHeader = styled.div`
   padding: 30px 40px 10px 50px;
   @media only screen and (max-width: 600px) {
     font-size: 14px;
-    padding: 10px 20px 0px 10px;
+    padding: 10px 20px 0px 0px;
   }
 `
 export const RightBody = styled.div`
@@ -28,6 +28,6 @@ export const RightBody = styled.div`
   padding: 0px 10px 0px 50px;
   @media only screen and (max-width: 600px) {
     font-size: 11px;
-    padding: 10px 20px 0px 10px;
+    padding: 10px 20px 0px 0px;
   }
 `

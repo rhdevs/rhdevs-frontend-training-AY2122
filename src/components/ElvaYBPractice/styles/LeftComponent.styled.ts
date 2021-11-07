@@ -20,7 +20,7 @@ export const LeftHeader = styled.h1`
   font-weight: bold;
   @media only screen and (max-width: 600px) {
     font-size: 16px;
-    padding: 10px 20px 0px 10px;
+    padding: 10px 20px 0px 0px;
   }
 `
 export const LeftPrice = styled.div`
@@ -30,7 +30,7 @@ export const LeftPrice = styled.div`
   font-weight: bold;
   @media only screen and (max-width: 600px) {
     font-size: 20px;
-    padding: 10px 0px 0px 10px;
+    padding: 10px 0px 0px 0px;
   }
 `
 export const LeftPerMonth = styled.div`
@@ -39,7 +39,7 @@ export const LeftPerMonth = styled.div`
   padding: 15px 0px;
   @media only screen and (max-width: 600px) {
     font-size: 10px;
-    padding: 10px 20px 0px 10px;
+    padding: 10px 20px 0px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ export const LeftFullAccess = styled.div`
   padding: 0px 50px;
   @media only screen and (max-width: 600px) {
     font-size: 10px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 0px;
   }
 `
 export const PriceAndPerMonth = styled.div`
@@ -76,7 +76,7 @@ export const SignUpButton = styled.button`
   font-size: 15px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   @media only screen and (max-width: 600px) {
-    margin: 1vw;
+    margin: 0vw;
     margin-bottom: 5vw;
     justify-content: center;
     padding: 2vw 20vw;
