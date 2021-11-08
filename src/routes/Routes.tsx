@@ -83,6 +83,8 @@ const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
 
+const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '../pages/FrontendMentor/Pomodoro'))
+
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
@@ -114,6 +116,7 @@ export const Routes = () => (
     <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
     <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
     {/* example from lesson 1 (4oct) */}
+    <RouteWithTopNav exact path={PATHS.POMODORO} component={Pomodoro} />
     <Route exact path="/example" component={Lesson1Example} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
