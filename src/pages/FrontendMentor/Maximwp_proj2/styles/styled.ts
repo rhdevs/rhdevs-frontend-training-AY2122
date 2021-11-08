@@ -35,11 +35,16 @@ export const MainContainer = styled.div`
   padding-top: 50px;
   padding-bottom: 100px;
   background-image: url(${bgbtm}) bottom left, url(${bgtop}) top right;
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 export const CentreCont = styled.div`
   height: 600px;
-  width: 300px;
-  flex-direction: row;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: hsl(234, 14%, 74%);
   border-width: 5px;
@@ -47,36 +52,71 @@ export const CentreCont = styled.div`
 `
 export const SideCont = styled.div`
   height: 600px;
-  width: 300px;
-  flex-direction: row;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: hsl(240, 78%, 98%);
   border-width: 5px;
   border-radius: 5px;
 `
-export const StyledHeader = styled.p`
+export const StyledHeader = styled.p<{ typ?: string }>`
   margin: 2rem;
   font-size: 24px;
   font-weight: 700;
   vertical-align: middle;
   text-align: center;
+  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: hsl(234, 14%, 74%);')}
+    }
 `
-export const StyledNumber = styled.p`
+export const StyledNumber = styled.p<{ typ?: string }>`
   margin: 2rem;
   font-size: 52px;
   font-weight: 700;
   vertical-align: middle;
   text-align: center;
+  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: hsl(234, 14%, 74%);')}
+}
 `
-export const Detailsincont = styled.p`
-  margin: 2rem;
+export const Detailsincont = styled.p<{ typ?: string }>`
+  margin: 1rem;
   font-size: 24px;
   font-weight: 500;
   vertical-align: middle;
   text-align: center;
+  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: hsl(234, 14%, 74%);')}
 `
-export const Switch = {
+export const SwitchStyle = {
+  width: '150px',
+  height: '45px',
+  borderRadius: 100,
+  backgroundColor: '#fff',
+  color: '#016972',
   alignItems: 'center',
   margin: '10%',
   'font-size': '15px',
+}
+export const ButtonStyle = {
+  width: '150px',
+  height: '45px',
+  borderRadius: 100,
+  backgroundColor: 'hsl(240, 78%, 98%)',
+  color: '#016972',
+  'vertical-align': 'middle',
+  alignItems: 'center',
+  margin: 'auto',
+  'font-size': '15px',
+  'border-radius': '2px',
+}
+export const ButtonStyle2 = {
+  width: '150px',
+  height: '45px',
+  borderRadius: 100,
+  backgroundColor: 'hsl(234, 14%, 74%)',
+  color: '#016972',
+  'vertical-align': 'middle',
+  alignItems: 'center',
+  margin: 'auto',
+  'font-size': '15px',
+  'border-radius': '2px',
 }
