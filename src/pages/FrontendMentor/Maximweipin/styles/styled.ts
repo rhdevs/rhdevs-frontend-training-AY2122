@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import '@fontsource/lexend-deca'
 
 export const MainContainer = styled.div`
   display: flex;
