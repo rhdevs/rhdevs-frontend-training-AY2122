@@ -82,6 +82,9 @@ const SkDashboard = React.lazy(
 const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
+const maximwp_proj2 = React.lazy(
+  () => import(/* webpackChunckName: "maximwp_proj2" */ '../pages/FrontendMentor/Maximwp_proj2'),
+)
 
 export const Routes = () => (
   <Switch>
