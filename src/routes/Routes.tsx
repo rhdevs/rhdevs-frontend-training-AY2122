@@ -76,6 +76,9 @@ const CountriesSwitch = React.lazy(
 const SkDashboard = React.lazy(
   () => import(/* webpackChunckName: "SkDashboard" */ '../pages/FrontendMentor/SkDashboard'),
 )
+const RockPaperScissors = React.lazy(
+  () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -105,6 +108,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
     <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
     <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
+    <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
