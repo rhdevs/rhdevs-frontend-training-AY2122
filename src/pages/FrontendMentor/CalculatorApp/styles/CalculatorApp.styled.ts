@@ -31,6 +31,7 @@ export const NumberContainer = styled.div`
   position: relative;
   background-color: hsl(224, 36%, 15%);
   padding: 5px;
+  border-radius: 10px;
 `
 export const CalcContainer = styled.div`
   display: flex;
@@ -42,4 +43,5 @@ export const CalcContainer = styled.div`
   position: relative;
   background-color: hsl(223, 31%, 20%);
   padding: 5px;
+  border-radius: 10px;
 `
