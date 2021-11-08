@@ -3,40 +3,32 @@ import CalculatorButton from './CalculatorButton'
 import { DoubleSize, DoubleSize2, NewContainer } from './styles/CalculatorKeypad.styled'
 
 type Props = {
-  isNumber?: boolean
-  isOperator?: boolean
-  isRemoval?: boolean
-  isEqual?: boolean
-  isDecimal?: boolean
-  number?: number
-  operator?: string
-  removal?: string
+  colorScheme: number
 }
-
 const CalculatorKeypad = (props: Props) => {
   return (
     <NewContainer>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
-      <CalculatorButton></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isRemoval={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isOperator={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isOperator={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isDecimal={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isNumber={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isOperator={true}></CalculatorButton>
+      <CalculatorButton colorScheme={props.colorScheme} isOperator={true}></CalculatorButton>
       <DoubleSize>
-        <CalculatorButton></CalculatorButton>
+        <CalculatorButton colorScheme={props.colorScheme} isRemoval={true}></CalculatorButton>
       </DoubleSize>
       <DoubleSize2>
-        <CalculatorButton></CalculatorButton>
+        <CalculatorButton colorScheme={props.colorScheme} isEqual={true}></CalculatorButton>
       </DoubleSize2>
     </NewContainer>
   )
