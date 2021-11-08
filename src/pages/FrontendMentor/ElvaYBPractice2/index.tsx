@@ -5,9 +5,10 @@ import { MainPage, Background, TopComponent, MainComponent } from './styles/Slid
 const ElvaYBPractice = () => {
   return (
     <MainPage>
-      <Background></Background>
-      <TopComponent>Simple, Traffic Based Pricing</TopComponent>
-      <MainComponent></MainComponent>
+      <Background>
+        <TopComponent>Simple, Traffic Based Pricing</TopComponent>
+        <MainComponent></MainComponent>
+      </Background>
     </MainPage>
   )
 }
