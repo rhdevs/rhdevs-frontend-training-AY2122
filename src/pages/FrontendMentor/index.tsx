@@ -51,6 +51,11 @@ const FrontendMentor = () => {
           description="Chun Yu"
           onClick={() => history.push(PATHS.ROCK_PAPER_SCISSORS)}
         />
+        <Card
+          title="Pricing component with toggle challenge hard"
+          description="Max and WP"
+          onClick={() => history.push(PATHS.MAXIMWP_PROJ2)}
+        />
       </InformationCardSection>
     </MembersSection>
   )
