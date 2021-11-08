@@ -85,6 +85,9 @@ const RockPaperScissors = React.lazy(
 const SkIPAddress = React.lazy(
   () => import(/* webpackChunckName: "SkIPAddress" */ '../pages/FrontendMentor/SkIPAddress'),
 )
+const KYStatsCard = React.lazy(
+  () => import(/* webpackChunckName: "KYStatsCard" */ '../pages/FrontendMentor/KYStatsCard'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -110,6 +113,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
+    <RouteWithTopNav exact path={PATHS.KY_STATS_CARD_COMPONENT} component={KYStatsCard} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE} component={ElvaYBPractice} />
     <RouteWithTopNav exact path={PATHS.TIME_DASHBOARD} component={TimeDashboard} />
     <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
