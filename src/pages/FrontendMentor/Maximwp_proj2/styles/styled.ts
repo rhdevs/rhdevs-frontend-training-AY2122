@@ -2,6 +2,14 @@ import styled from 'styled-components'
 import bgbtm from '../images/bg-bottom.svg'
 import bgtop from '../images/bg-top.svg'
 
+export const MainScreen = styled.div`
+  align-items: center;
+  width: 100%
+  background: url(${bgbtm});
+  background-repeat: no-repeat;
+  background-position: left bottom, right top;
+`
+
 export const MainContainer = styled.div`
   display: flex;
   align-items: center;
@@ -12,7 +20,6 @@ export const MainContainer = styled.div`
   left: 15%;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url(${bgbtm}) bottom left, url(${bgtop}) top right;
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
