@@ -1,10 +1,9 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-
 import Card from '../../components/Card'
+import { PATHS } from '../../routes/PATHS'
 import PageHeader from '../../components/PageHeader'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
-import { PATHS } from '../../routes/PATHS'
 
 const FrontendMentor = () => {
   const history = useHistory()
@@ -29,6 +28,33 @@ const FrontendMentor = () => {
           title="Stats card component"
           description="Kiyong"
           onClick={() => history.push(PATHS.KY_STATS_CARD_COMPONENT)}
+        />
+        <Card
+          title="Single price grid component"
+          description="Elva & Yongbin"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE)}
+        />
+        <Card
+          title="Time tracking dashboard"
+          description="zhikai-yixuan"
+          onClick={() => history.push(PATHS.TIME_DASHBOARD)}
+        />
+        <Card title="Social Media Dashboard" description="Shao Kiat" onClick={() => history.push(PATHS.SK_DASHBOARD)} />
+        <Card title="REST Countries API" description="Marcus" onClick={() => history.push(PATHS.MARCUS_FE_MENTOR)} />
+        <Card
+          title="Tip Calculator App"
+          description="Jason"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP)}
+        />
+        <Card
+          title="Profile card component"
+          description="Prince, Enhao"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRINCE_ENHAO)}
+        />
+        <Card
+          title="Rock, Paper, Scissors"
+          description="Chun Yu"
+          onClick={() => history.push(PATHS.ROCK_PAPER_SCISSORS)}
         />
       </InformationCardSection>
     </MembersSection>
