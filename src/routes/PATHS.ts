@@ -23,6 +23,7 @@ export enum PATHS {
   FRONTEND_MENTOR_TIP_CALCULATOR_APP = '/frontendmentor/tip-calculator-app',
   SK_DASHBOARD = '/frontendmentor/skDashboard',
   MARCUS_FE_MENTOR = '/frontendmentor/marcus-fe-mentor',
+  MARCUS_FE_MENTOR_2 = '/frontendmentor/marcus-fe-mentor-2',
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
   ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
 }
