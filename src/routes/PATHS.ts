@@ -24,4 +24,5 @@ export enum PATHS {
   SK_DASHBOARD = '/frontendmentor/skDashboard',
   MARCUS_FE_MENTOR = '/frontendmentor/marcus-fe-mentor',
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
+  FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE2 = '/frontend-mentor/elva-yb-practice2',
 }

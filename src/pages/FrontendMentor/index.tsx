@@ -30,6 +30,11 @@ const FrontendMentor = () => {
           onClick={() => history.push(PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE)}
         />
         <Card
+          title="Interactive Pricing Component"
+          description="Elva & Yongbin"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE2)}
+        />
+        <Card
           title="Time tracking dashboard"
           description="zhikai-yixuan"
           onClick={() => history.push(PATHS.TIME_DASHBOARD)}
