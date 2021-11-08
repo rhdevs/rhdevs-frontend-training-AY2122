@@ -73,6 +73,9 @@ const MarcusFEMentor = React.lazy(
 const CountriesSwitch = React.lazy(
   () => import(/* webpackChunckName: "CountriesSwitch" */ '../pages/FrontendMentor/MarcusFEMentor/CountriesSwitch'),
 )
+const ElvaYBPractice = React.lazy(
+  () => import(/* webpackChunckName: "ElvaYBPractice" */ '../pages/FrontendMentor/ElvaYBPractice'),
+)
 const SkDashboard = React.lazy(
   () => import(/* webpackChunckName: "SkDashboard" */ '../pages/FrontendMentor/SkDashboard'),
 )
@@ -104,6 +107,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
+    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE} component={ElvaYBPractice} />
     <RouteWithTopNav exact path={PATHS.TIME_DASHBOARD} component={TimeDashboard} />
     <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
     <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
