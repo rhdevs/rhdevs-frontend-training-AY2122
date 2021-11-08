@@ -8,7 +8,7 @@ export const RightComponent = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 30vh;
+    height: auto;
     overflow: hidden;
     padding: 10%;
   }

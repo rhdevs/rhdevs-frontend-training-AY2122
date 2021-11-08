@@ -9,7 +9,7 @@ export const TopComponent = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10%;
-    height: 30vh;
+    height: auto;
     width: 100%;
   }
 `
