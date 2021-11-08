@@ -33,6 +33,16 @@ const FrontendMentor = () => {
           onClick={() => history.push(PATHS.MAXIM_WEIPIN_WEBSITE)}
         />
         <Card title="Meet landing page" description="your name" />
+        <Card
+          title="Single price grid component"
+          description="Elva & Yongbin"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE)}
+        />
+        <Card
+          title="Time tracking dashboard"
+          description="zhikai-yixuan"
+          onClick={() => history.push(PATHS.TIME_DASHBOARD)}
+        />
         <Card title="Social Media Dashboard" description="Shao Kiat" onClick={() => history.push(PATHS.SK_DASHBOARD)} />
         <Card title="REST Countries API" description="Marcus" onClick={() => history.push(PATHS.MARCUS_FE_MENTOR)} />
         <Card
@@ -44,6 +54,11 @@ const FrontendMentor = () => {
           title="Profile card component"
           description="Prince, Enhao"
           onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRINCE_ENHAO)}
+        />
+        <Card
+          title="Rock, Paper, Scissors"
+          description="Chun Yu"
+          onClick={() => history.push(PATHS.ROCK_PAPER_SCISSORS)}
         />
       </InformationCardSection>
     </MembersSection>
