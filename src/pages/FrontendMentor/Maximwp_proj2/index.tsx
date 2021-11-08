@@ -1,54 +1,65 @@
-import React from 'react'
+import { Button, Switch } from 'antd'
+import React, { useState, useCallback } from 'react'
 import {
   MainContainer,
+  TopBox,
+  Minibox,
+  SideCont,
+  CentreCont,
   StyledHeader,
-  StyledParagraph,
-  CardContainer,
-  StyledLogo,
-  RoundButton1,
-  RoundButton2,
-  RoundButton3,
-  MainScreen,
+  Pricing,
+  StyledNumber,
+  ToggleBetween,
+  Detailsincont,
+  ButtonStyle,
+  ButtonStyle2,
 } from './styles/styled'
-import { Button } from 'antd'
 
-const Lesson1Example = () => {
+export default function App() {
+  const [monthly, setMonthly] = useState(false)
+
   return (
-    <MainScreen>
+    <>
+      <TopBox>
+        <div className="App">
+          <Pricing> Our Pricing </Pricing>
+          <Minibox>
+            <ToggleBetween> Annually </ToggleBetween>
+            <Switch onChange={() => setMonthly(!monthly)}></Switch>
+            <ToggleBetween> Monthly </ToggleBetween>
+          </Minibox>
+        </div>
+      </TopBox>
       <MainContainer>
-        <CardContainer typ={'Sedan'}>
-          <StyledHeader>Sedans</StyledHeader>
-          <StyledParagraph>
-            Choose a sedan for its testy and excellent fuel economy. Ideal for curising in the city or on your next road
-            trip
-          </StyledParagraph>
-          <Button type="primary" style={RoundButton1}>
-            Learn more
-          </Button>
-        </CardContainer>
-        <CardContainer typ={'SUV'}>
-          <StyledHeader>SUVs</StyledHeader>
-          <StyledParagraph>
-            Take an SUV for its spacious interior, power, and verstality. Perfect for your family vacation and off-road
-            adventures.
-          </StyledParagraph>
-          <Button type="primary" style={RoundButton2}>
-            Learn more
-          </Button>
-        </CardContainer>
-        <CardContainer>
-          <StyledHeader> Luxury </StyledHeader>
-          <StyledParagraph>
-            Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and
-            arrive in a style.
-          </StyledParagraph>
-          <Button type="primary" style={RoundButton3}>
-            Learn more
-          </Button>
-        </CardContainer>
+        <SideCont>
+          <StyledHeader>Basic</StyledHeader>
+          {monthly ? <StyledNumber> $19.99 </StyledNumber> : <StyledNumber> $199.99 </StyledNumber>}
+          <Detailsincont>500 GB Storage</Detailsincont>
+          <Detailsincont>2 Users Allowed</Detailsincont>
+          <Detailsincont>Send up to 3 GB</Detailsincont>
+          <Button style={ButtonStyle2}> Learn more </Button>
+        </SideCont>
+        <CentreCont>
+          <StyledHeader typ={'Main'}>Professional</StyledHeader>
+          {monthly ? (
+            <StyledNumber typ={'Main'}> $24.99 </StyledNumber>
+          ) : (
+            <StyledNumber typ={'Main'}> $249.99 </StyledNumber>
+          )}
+          <Detailsincont typ={'Main'}>1 TB Storage</Detailsincont>
+          <Detailsincont typ={'Main'}>5 Users Allowed</Detailsincont>
+          <Detailsincont typ={'Main'}>Send up to 10 GB</Detailsincont>
+          <Button style={ButtonStyle}> Learn more </Button>
+        </CentreCont>
+        <SideCont>
+          <StyledHeader>Master</StyledHeader>
+          {monthly ? <StyledNumber> $39.99 </StyledNumber> : <StyledNumber> $359.99 </StyledNumber>}
+          <Detailsincont>2 TB Storage</Detailsincont>
+          <Detailsincont>10 Users Allowed</Detailsincont>
+          <Detailsincont>Send up to 20 GB</Detailsincont>
+          <Button style={ButtonStyle2}> Learn more </Button>
+        </SideCont>
       </MainContainer>
-    </MainScreen>
+    </>
   )
 }
-
-export default Lesson1Example
