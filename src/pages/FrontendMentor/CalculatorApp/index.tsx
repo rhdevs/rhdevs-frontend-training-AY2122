@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
-import { CalcContainer, MainContainer, NumberContainer, TopContainer } from './styles/CalculatorApp.styled'
+import {
+  CalcContainer,
+  DisplayNumber,
+  MainContainer,
+  NumberContainer,
+  TopContainer,
+} from './styles/CalculatorApp.styled'
 import CalculatorKeypad from '../../../components/CalculatorKeypad'
 
 type Colors = {
@@ -26,11 +32,13 @@ const ColorList: Colors[] = [
   },
 ]
 const CalculatorApp = () => {
-  const [colorScheme, setColorScheme] = useState<number>(2)
+  const [colorScheme, setColorScheme] = useState<number>(1)
   return (
     <MainContainer backgroundColor={ColorList[colorScheme].MainBackground}>
       <TopContainer backgroundColor={ColorList[colorScheme].MainBackground}></TopContainer>
-      <NumberContainer backgroundColor={ColorList[colorScheme].ScreenBackground}></NumberContainer>
+      <NumberContainer backgroundColor={ColorList[colorScheme].ScreenBackground}>
+        <DisplayNumber>35431</DisplayNumber>
+      </NumberContainer>
       <CalcContainer backgroundColor={ColorList[colorScheme].KeypadBackground}>
         <CalculatorKeypad colorScheme={colorScheme}></CalculatorKeypad>
       </CalcContainer>

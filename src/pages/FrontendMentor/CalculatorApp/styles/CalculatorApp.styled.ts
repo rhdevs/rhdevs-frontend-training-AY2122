@@ -45,3 +45,11 @@ export const CalcContainer = styled.div<{ backgroundColor?: string }>`
   padding: 5px;
   border-radius: 10px;
 `
+export const DisplayNumber = styled.div`
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  margin-top: 1.3vh;
+  font-weight: 700;
+  font-size: 500%;
+`
