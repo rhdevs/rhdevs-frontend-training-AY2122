@@ -1,8 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Card from '../../components/Card'
-import { PATHS } from '../../routes/PATHS'
 import PageHeader from '../../components/PageHeader'
+import { PATHS } from '../../routes/PATHS'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'
 
 const FrontendMentor = () => {
@@ -55,6 +55,13 @@ const FrontendMentor = () => {
           title="Rock, Paper, Scissors"
           description="Chun Yu"
           onClick={() => history.push(PATHS.ROCK_PAPER_SCISSORS)}
+        />
+      </InformationCardSection>
+      <InformationCardSection>
+        <Card
+          title="Hubble"
+          description="Tai and Yong Zhong"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_HUBBLE)}
         />
       </InformationCardSection>
     </MembersSection>
