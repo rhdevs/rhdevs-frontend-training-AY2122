@@ -5,11 +5,10 @@ export const StyledContainer = styled.div`
   left: 0;
   position: absolute;
   width: 100%;
-  height: 35vh;
 `
 
 export const StyledImage = styled.img`
   width: 100%;
-  height: 35vh;
+  height: 45vh;
   object-fit: fill;
 `

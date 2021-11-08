@@ -1,13 +1,32 @@
-import React from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import Background from '../../../components/SkIPAddress/Background'
-import { MainContainer, StyledHeader } from './styles/SkIPAddress.styled'
+import {
+  DisplayContainer,
+  InputContainer,
+  MainContainer,
+  StyledButton,
+  StyledHeader,
+  StyledInput,
+} from './styles/SkIPAddress.styled'
 
 const SkIPAddress = () => {
+  const [Input, setInput] = useState('')
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value)
+  }
   return (
-    <MainContainer>
+    <>
       <Background />
-      <StyledHeader>IP Address Tracker</StyledHeader>
-    </MainContainer>
+      <MainContainer>
+        <StyledHeader>IP Address Tracker</StyledHeader>
+        <InputContainer>
+          <StyledInput value={Input} placeholder="Input IP Address" onChange={(e) => handleInputChange(e)} />
+          <StyledButton>{'>'}</StyledButton>
+        </InputContainer>
+        <DisplayContainer></DisplayContainer>
+      </MainContainer>
+    </>
   )
 }
 
