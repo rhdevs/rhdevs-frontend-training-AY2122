@@ -24,10 +24,10 @@ export const CardContainer1 = styled.div<{ typ?: string }>`
   background-color: rgb(226, 133, 37);
   ${(props) =>
     props.typ === 'Sedan'
-      ? 'background-color: rgb(226, 133, 37);'
+      ? 'background-color: rgb(226, 133, 37); border-radius: 10px 0px 0px 10px;'
       : props.typ === 'SUV'
       ? 'background-color: rgb(1, 105, 114);'
-      : 'background-color: rgb(0, 64, 63);'}
+      : 'background-color: rgb(0, 64, 63); border-radius: 0px 10px 10px 0px;'}
 `
 export const CardContainer2 = styled.div`
   height: 600px;
