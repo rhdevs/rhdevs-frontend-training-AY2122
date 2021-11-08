@@ -2,9 +2,9 @@ import React, { Suspense, useEffect } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
+import store from './store/store'
 import { Routes } from './routes/Routes'
 import LoadingSpinner from './components/LoadingSpinner'
-import store from './store/store'
 
 import 'antd/dist/antd.css'
 
