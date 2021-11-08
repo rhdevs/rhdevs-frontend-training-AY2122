@@ -12,7 +12,6 @@ import {
   RoundButton3,
 } from './styles/styled'
 import { Button } from 'antd'
-import styled from 'styled-components'
 import luxury from './images/icon-luxury.svg'
 import suvs from './images/icon-suvs.svg'
 import sedans from './images/icon-sedans.svg'
@@ -20,7 +19,7 @@ import sedans from './images/icon-sedans.svg'
 const Lesson1Example = () => {
   return (
     <MainContainer>
-      <CardContainer1>
+      <CardContainer1 typ={'Sedan'}>
         <StyledLogo src={sedans} />
         <StyledHeader>Sedans</StyledHeader>
         <StyledParagraph>
@@ -31,7 +30,7 @@ const Lesson1Example = () => {
           Learn more
         </Button>
       </CardContainer1>
-      <CardContainer2>
+      <CardContainer1 typ={'SUV'}>
         <StyledLogo src={suvs} />
         <StyledHeader>SUVs</StyledHeader>
         <StyledParagraph>
@@ -41,8 +40,8 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton2}>
           Learn more
         </Button>
-      </CardContainer2>
-      <CardContainer3>
+      </CardContainer1>
+      <CardContainer1>
         <StyledLogo src={luxury} />
         <StyledHeader> Luxury </StyledHeader>
         <StyledParagraph>
@@ -52,7 +51,7 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton3}>
           Learn more
         </Button>
-      </CardContainer3>
+      </CardContainer1>
     </MainContainer>
   )
 }
