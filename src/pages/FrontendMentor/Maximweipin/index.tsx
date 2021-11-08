@@ -3,9 +3,7 @@ import {
   MainContainer,
   StyledHeader,
   StyledParagraph,
-  CardContainer1,
-  CardContainer2,
-  CardContainer3,
+  CardContainer,
   StyledLogo,
   RoundButton1,
   RoundButton2,
@@ -19,7 +17,7 @@ import sedans from './images/icon-sedans.svg'
 const Lesson1Example = () => {
   return (
     <MainContainer>
-      <CardContainer1 typ={'Sedan'}>
+      <CardContainer typ={'Sedan'}>
         <StyledLogo src={sedans} />
         <StyledHeader>Sedans</StyledHeader>
         <StyledParagraph>
@@ -29,8 +27,8 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton1}>
           Learn more
         </Button>
-      </CardContainer1>
-      <CardContainer1 typ={'SUV'}>
+      </CardContainer>
+      <CardContainer typ={'SUV'}>
         <StyledLogo src={suvs} />
         <StyledHeader>SUVs</StyledHeader>
         <StyledParagraph>
@@ -40,8 +38,8 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton2}>
           Learn more
         </Button>
-      </CardContainer1>
-      <CardContainer1>
+      </CardContainer>
+      <CardContainer>
         <StyledLogo src={luxury} />
         <StyledHeader> Luxury </StyledHeader>
         <StyledParagraph>
@@ -51,7 +49,7 @@ const Lesson1Example = () => {
         <Button type="primary" style={RoundButton3}>
           Learn more
         </Button>
-      </CardContainer1>
+      </CardContainer>
     </MainContainer>
   )
 }

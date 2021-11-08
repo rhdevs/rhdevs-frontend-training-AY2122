@@ -15,7 +15,7 @@ export const MainContainer = styled.div`
     flex-direction: column;
   }
 `
-export const CardContainer1 = styled.div<{ typ?: string }>`
+export const CardContainer = styled.div<{ typ?: string }>`
   height: 600px;
   flex-direction: row;
   align-items: center;
@@ -27,27 +27,6 @@ export const CardContainer1 = styled.div<{ typ?: string }>`
       : props.typ === 'SUV'
       ? 'background-color: rgb(1, 105, 114);'
       : 'background-color: rgb(0, 64, 63); border-radius: 0px 10px 10px 0px;'}
-`
-export const CardContainer2 = styled.div`
-  height: 600px;
-  flex-direction: row;
-  align-items: center;
-  font-family: 'Lexend Deca';
-  background-color: rgb(1, 105, 114);
-  @media (max-width: 1024px) {
-    border-radius: 0px 0px 0px 0px;
-  }
-`
-export const CardContainer3 = styled.div`
-  height: 600px;
-  flex-direction: row;
-  align-items: center;
-  font-family: 'Lexend Deca';
-  background-color: rgb(0, 64, 63);
-  border-radius: 0px 10px 10px 0px;
-  @media (max-width: 1024px) {
-    border-radius: 0px 0px 10px 10px;
-  }
 `
 export const StyledHeader = styled.p`
   font-family: 'Lexend Deca';
