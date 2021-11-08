@@ -25,4 +25,5 @@ export enum PATHS {
   MARCUS_FE_MENTOR = '/frontendmentor/marcus-fe-mentor',
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
   ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
+  FRONTEND_MENTOR_PRINCE_ENHAO_CALC = '/FrontendMentor/CalculatorApp',
 }
