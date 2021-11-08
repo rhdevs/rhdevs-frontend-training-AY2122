@@ -1,14 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-=======
->>>>>>> main
 import Card from '../../components/Card'
-import { PATHS } from '../../routes/PATHS'
 import PageHeader from '../../components/PageHeader'
 import { PATHS } from '../../routes/PATHS'
 import { InformationCardSection, MembersSection, MembersSectionHeader } from '../LandingPage/styles/LandingPage.styled'

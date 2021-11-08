@@ -65,13 +65,8 @@ const ShoppingAnimegang = () => {
     setAddItemName(e)
   }
   const handleOnEnter = () => {
-<<<<<<< HEAD:src/pages/ShoppingLists/ShoppingListAnimeGang/index.tsx
-    if (addItemName != '') {
-      const newList: Item[] = { ...shoppingList }
-=======
     if (addItemName !== '') {
       const newList: Item[] = shoppingList.filter((item) => item)
->>>>>>> 8834c537c93fc1c3ce1e8e82e4556ae268d968ae:src/pages/ShoppingLists/ShoppingAnimegang/index.tsx
       setNewKeyName(newKeyName + 1)
       const newKey: string = newKeyName.toString()
       const newItem: Item = { key: newKey, quantity: 1, item_name: addItemName, price: 0, total: 0 }
