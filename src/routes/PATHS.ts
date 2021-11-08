@@ -22,8 +22,11 @@ export enum PATHS {
   SHOPPING_PAGE_PAIR_FOUR = '/shopping-lists-pair-4',
   SHOPPING_PAGE_PAIR_FOUR_REDUX = '/shopping-lists-pair-4-redux',
   FRONTEND_MENTOR = '/frontendmentor',
+  FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE = '/frontend-mentor/elva-yb-practice',
+  TIME_DASHBOARD = '/frontendmentor/time-dashboard',
   FRONTEND_MENTOR_TIP_CALCULATOR_APP = '/frontendmentor/tip-calculator-app',
   SK_DASHBOARD = '/frontendmentor/skDashboard',
   MARCUS_FE_MENTOR = '/frontendmentor/marcus-fe-mentor',
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
+  ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
 }
