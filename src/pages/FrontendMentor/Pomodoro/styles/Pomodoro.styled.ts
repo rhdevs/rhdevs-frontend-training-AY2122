@@ -45,7 +45,12 @@ export const StyledLabelContainer = styled.div`
 `
 //hacky solution to prevent circle from going out of shape
 export const StyledTimerMainContainer = styled.div`
-  margin: 0 0 30px 0;
+  @media (min-width: 601px) {
+    margin: 0 0 30px 0;
+  }
+  @media (max-width: 600px) {
+    margin: 0 0 79px 0;
+  }
 `
 
 export const StyledTimerContainer = styled.div`
