@@ -1,10 +1,10 @@
+import { HashRouter } from 'react-router-dom'
 import styled from 'styled-components'
 import bgbtm from '../images/bg-bottom.svg'
 import bgtop from '../images/bg-top.svg'
 
 export const MainBox = styled.div`
   width: 100%;
-  background-color: hsl(228, 100%, 98%);
   background: url(${bgbtm}), url(${bgtop});
   background-repeat: no-repeat;
   background-position: left bottom, right top;
@@ -90,11 +90,12 @@ export const StyledNumber = styled.p<{ typ?: string }>`
 `
 export const Detailsincont = styled.p<{ typ?: string }>`
   margin: 1rem;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   vertical-align: middle;
   text-align: center;
-  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: hsl(234, 14%, 74%);')}
+  'font-family': 'Montserrat';
+  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: rgb(74, 76, 97);')}
 `
 export const SwitchStyle = {
   width: '60px',
@@ -110,13 +111,16 @@ export const ButtonStyle = {
   height: '45px',
   borderRadius: 180,
   backgroundColor: 'hsl(0, 0%, 100%)',
-  color: '#000',
+  color: '#7276e1',
   'vertical-align': 'middle',
   alignItems: 'center',
   margin: 'auto',
   'font-size': '15px',
   'border-radius': '2px',
+  'font-weight': '700',
+  'font-family': 'Montserrat',
 }
+
 export const ButtonStyle2 = {
   width: '300px',
   height: '45px',
@@ -129,4 +133,6 @@ export const ButtonStyle2 = {
   margin: 'auto',
   'font-size': '15px',
   'border-radius': '2px',
+  'font-weight': '700',
+  'font-family': 'Montserrat',
 }
