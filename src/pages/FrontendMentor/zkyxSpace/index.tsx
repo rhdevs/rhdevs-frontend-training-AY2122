@@ -1,12 +1,16 @@
 import React from 'react'
+import { Button } from 'antd'
+import { useHistory, BrowserRouter } from 'react-router-dom'
+import { PATHS } from './routes/PATHS'
+import { Routes } from './routes/Routes'
 
 const SpacePage = () => {
-  const [period, setPeriod] = React.useState('Daily')
-  const [pastPeriod, setPastPeriod] = React.useState('Last day')
-
+  const history = useHistory()
   return (
     <>
-      <div>Hello Space Website</div>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </>
   )
 }
