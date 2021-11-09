@@ -76,7 +76,7 @@ const CountriesSwitch = React.lazy(
 const SkDashboard = React.lazy(
   () => import(/* webpackChunckName: "SkDashboard" */ '../pages/FrontendMentor/SkDashboard'),
 )
-
+const zkyxSpace = React.lazy(() => import(/* webpackChunckName: "zkyxSpace" */ '../pages/FrontendMentor/zkyxSpace'))
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
@@ -103,6 +103,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
     <RouteWithTopNav exact path={PATHS.TIME_DASHBOARD} component={TimeDashboard} />
     <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
+    <RouteWithTopNav exact path={PATHS.ZKYX_SPACE} component={zkyxSpace} />
     <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
     <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
     {/* example from lesson 1 (4oct) */}
