@@ -10,11 +10,6 @@ const CrewPage = () => {
   return (
     <>
       <div>Crew Page</div>
-      <NavBarContainer>
-        <NavBarRow>
-          <NavBarTitle></NavBarTitle>
-        </NavBarRow>
-      </NavBarContainer>
       <Button onClick={() => history.push(PATHS.HOME)}>HOME</Button>
     </>
   )
