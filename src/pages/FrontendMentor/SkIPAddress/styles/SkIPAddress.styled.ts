@@ -17,7 +17,7 @@ export const StyledHeader = styled.div`
   font-weight: 500;
 `
 
-export const InputContainer = styled.form`
+export const InputContainer = styled.div`
   margin-top: 2vh;
   z-index: 1;
   width: 35vw;
@@ -46,9 +46,18 @@ export const StyledButton = styled.button`
 `
 export const DisplayContainer = styled.div`
   margin-top: 5vh;
-  border-radius: 20px;
+  border-radius: 15px;
   width: 70vw;
   height: 20vh;
   background: #ffffff;
   z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+`
+export const BoxSeparator = styled.div`
+  width: 1px;
+  height: 10vh;
+  background: hsl(0, 0%, 80%);
 `
