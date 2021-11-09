@@ -1,3 +1,4 @@
+import { MapContainer } from 'react-leaflet'
 import styled from 'styled-components'
 
 export const MainContainer = styled.div`
@@ -7,6 +8,7 @@ export const MainContainer = styled.div`
   align-items: center;
   font-family: Rubik;
   z-index: 1;
+  width: 100%;
 `
 
 export const StyledHeader = styled.div`
@@ -60,4 +62,17 @@ export const BoxSeparator = styled.div`
   width: 1px;
   height: 10vh;
   background: hsl(0, 0%, 80%);
+`
+
+export const MyMap = styled(MapContainer)<{ height: string }>`
+  /*
+    Any dynamic styling that will change the
+    dynamically generated classname will remove
+    the leaflet classnames from the container.
+  */
+  top: 40vh;
+  position: absolute;
+  height: ${(props) => props.height};
+  width: 100%;
+  z-index: 0;
 `

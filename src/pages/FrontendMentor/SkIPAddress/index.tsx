@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, useEffect, useState } from 'react'
 import Background from '../../../components/SkIPAddress/Background'
 import ContentBox from '../../../components/SkIPAddress/ContentBox'
 import {
@@ -6,16 +6,32 @@ import {
   DisplayContainer,
   InputContainer,
   MainContainer,
+  MyMap,
   StyledButton,
   StyledHeader,
   StyledInput,
 } from './styles/SkIPAddress.styled'
-// API Request at https://geo.ipify.org/api/v2/country?apiKey=at_StGwLfCoqwr9pCBTJ7lw0vOT5Xubd&ipAddress=8.8.8.8
+import { TileLayer, Marker, Tooltip } from 'react-leaflet'
+interface RequestData {
+  location?: Location
+  ip: string
+  isp: string
+}
+interface Location {
+  city: string
+  country: string
+  region: string
+  lat: number
+  lng: number
+  postalCode: string
+  timezone: string
+}
+
 const SkIPAddress = () => {
   const [Input, setInput] = useState('')
-  const [Info, setInfo] = useState('')
+  const [Info, setInfo] = useState<RequestData>({ ip: '', isp: '' })
 
-  const url = 'https://geo.ipify.org/api/v2/country?apiKey=at_StGwLfCoqwr9pCBTJ7lw0vOT5Xubd&ipAddress='
+  const url = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_StGwLfCoqwr9pCBTJ7lw0vOT5Xubd&ipAddress='
   const handleSubmit = () => {
     const newURL = url + Input
     console.log(newURL)
@@ -23,24 +39,18 @@ const SkIPAddress = () => {
       method: 'GET',
       mode: 'cors',
     })
-      .then((resp: any) => {
-        if (!resp.ok) {
-          if (resp.status >= 500) {
-            throw new Error('Server Error')
-          }
-        }
-        setInfo(resp.json())
-        console.log(Info)
+      .then((resp) => {
+        return resp.json()
       })
-      //   .then((data) => {
-      //     dispatch({
-      //       type: COUNTRY_DATA_ACTIONS.GET_COUNTRIES_DATA,
-      //       allCountries: data,
-      //       responseOk: true,
-      //     })
-      //   })
+      .then((data) => {
+        setInfo({ location: data.location, ip: data.ip, isp: data.isp })
+      })
       .catch((err) => alert(err))
   }
+
+  useEffect(() => {
+    console.log(Info)
+  }, [Info])
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value)
@@ -48,6 +58,15 @@ const SkIPAddress = () => {
   return (
     <>
       <Background />
+      {Info.location && (
+        <MyMap height={'500px'} center={[Info.location?.lat, Info.location?.lng]} zoom={13}>
+          <TileLayer
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={Info.location ? [Info.location?.lat, Info.location?.lng] : [0, 0]} />
+        </MyMap>
+      )}
       <MainContainer>
         <StyledHeader>IP Address Tracker</StyledHeader>
         <InputContainer>
@@ -55,13 +74,18 @@ const SkIPAddress = () => {
           <StyledButton onClick={() => handleSubmit()}>{'>'}</StyledButton>
         </InputContainer>
         <DisplayContainer>
-          <ContentBox header="IP ADDRESS" body="8.8.8.8" />
+          <ContentBox header="IP ADDRESS" body={Info.ip} />
           <BoxSeparator />
-          <ContentBox header="LOCATION" body="8.8.8.8" />
+          <ContentBox
+            header="LOCATION"
+            body={
+              Info.location ? Info.location.city + ', ' + Info.location.country + ' ' + Info.location.postalCode : ''
+            }
+          />
           <BoxSeparator />
-          <ContentBox header="TIMEZONE" body="8.8.8.8" />
+          <ContentBox header="TIMEZONE" body={Info.location ? 'UTC' + Info.location.timezone : ''} />
           <BoxSeparator />
-          <ContentBox header="ISP" body="8.8.8.8" />
+          <ContentBox header="ISP" body={Info.isp} />
         </DisplayContainer>
       </MainContainer>
     </>

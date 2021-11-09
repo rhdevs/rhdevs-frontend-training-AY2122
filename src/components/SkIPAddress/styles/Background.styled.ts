@@ -9,6 +9,6 @@ export const StyledContainer = styled.div`
 
 export const StyledImage = styled.img`
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   object-fit: fill;
 `
