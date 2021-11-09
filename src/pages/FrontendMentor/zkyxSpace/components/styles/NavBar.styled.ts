@@ -24,6 +24,7 @@ export const NavBarContainer = styled.div`
   padding: 0.5rem 1rem;
   height: 6rem;
   width: 100%;
+  margin-top: 2rem;
   border-color: blue;
   border-style: solid;
   position: absolute;
