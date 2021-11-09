@@ -53,3 +53,44 @@ export const DisplayNumber = styled.div`
   font-weight: 700;
   font-size: 500%;
 `
+export const MainContainerButton = styled.button<{
+  backgroundColor?: string
+  backgroundShadow?: string
+}>`
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+  ${(props) => props.backgroundColor && `background-color: ${props.backgroundColor};`}
+  ${(props) => props.backgroundShadow && `box-shadow: 0px 3px ${props.backgroundShadow};`}
+`
+export const ButtonNumber = styled.div`
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 1.3vh;
+  font-weight: 700;
+  font-size: 200%;
+`
+
+export const NewContainer = styled.div`
+  display: grid;
+  width: 95%;
+  height: 95%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    'DoubleSize DoubleSize DoubleSize2 DoubleSize2';
+`
+export const DoubleSize = styled.div`
+  grid-area: DoubleSize;
+`
+export const DoubleSize2 = styled.div`
+  grid-area: DoubleSize2;
+`

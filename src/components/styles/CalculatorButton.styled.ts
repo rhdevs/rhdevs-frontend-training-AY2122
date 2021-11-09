@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-export const MainContainer = styled.button<{
+export const MainContainerButton = styled.button<{
   backgroundColor?: string
   backgroundShadow?: string
 }>`
