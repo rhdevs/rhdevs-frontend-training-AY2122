@@ -5,20 +5,21 @@ import { PATHS } from '../routes/PATHS'
 import { Routes } from '../routes/Routes'
 import BackgroundPicture from '../assets/home/background-home-desktop.jpg'
 import {
-  HomeBackground,
-  HomeBackgroundContainer,
+  Background,
+  BackgroundContainer,
   NavBarContainer,
   NavBarRow,
   NavBarTitle,
 } from '../components/styles/NavBar.styled'
+import NavBar from '../components/NavBar'
 
 const HomePage = () => {
   const history = useHistory()
   return (
     <>
       <div>
-        <HomeBackgroundContainer>
-          <HomeBackground src={BackgroundPicture} />
+        <BackgroundContainer>
+          <Background src={BackgroundPicture} />
           <NavBarContainer>
             <NavBarRow>
               <NavBarTitle>Home Page</NavBarTitle>
@@ -27,7 +28,7 @@ const HomePage = () => {
               <Button onClick={() => history.push(PATHS.TECHNOLOGY)}>Technology</Button>
             </NavBarRow>
           </NavBarContainer>
-        </HomeBackgroundContainer>
+        </BackgroundContainer>
       </div>
     </>
   )

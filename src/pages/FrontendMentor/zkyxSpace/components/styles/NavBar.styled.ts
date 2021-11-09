@@ -1,6 +1,7 @@
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const HomeBackgroundContainer = styled.div`
+export const BackgroundContainer = styled.div`
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -13,9 +14,12 @@ export const HomeBackgroundContainer = styled.div`
   z-index: 0;
 `
 
-export const HomeBackground = styled.img`
+export const Background = styled.img`
   width: 100vw;
   height: 100vh;
+`
+export const LogoContainer = styled.img`
+  width: auto;
 `
 export const NavBarContainer = styled.div`
   display: flex;
@@ -28,6 +32,18 @@ export const NavBarContainer = styled.div`
   border-color: blue;
   border-style: solid;
   position: absolute;
+`
+export const StyledNavLink = styled(NavLink)`
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: regular;
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  &:hover {
+    color: grey;
+  }
 `
 
 export const NavBarTitle = styled.div`
@@ -44,7 +60,10 @@ export const NavBarRow = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   border-color: red;
   border-style: solid;
 `
