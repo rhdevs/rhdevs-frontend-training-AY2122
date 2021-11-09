@@ -1,12 +1,10 @@
 import React from 'react'
+
+import { ContactButton, HeaderBarLinks, MyTeamLogo } from './IndexPageComponents'
 import {
-  BarLink,
-  ContactBtnText,
   HeaderBar,
-  HeaderBarLinks,
   HeaderBarTextDiv,
-  HeaderContactBtn,
-  MyTeamLogo,
+  Page1LineAbovePara,
   Title,
   TitleEm,
   TitleParagraph,
@@ -18,15 +16,10 @@ export const Page1HeaderBar = () => {
     <>
       <HeaderBar>
         <HeaderBarTextDiv>
-          <MyTeamLogo>myteam</MyTeamLogo>
-          <HeaderBarLinks>
-            <BarLink>home</BarLink>
-            <BarLink>about</BarLink>
-          </HeaderBarLinks>
+          <MyTeamLogo top="2px" />
+          <HeaderBarLinks left="17vw" top="5px" responsive={true} />
         </HeaderBarTextDiv>
-        <HeaderContactBtn>
-          <ContactBtnText>contact us</ContactBtnText>
-        </HeaderContactBtn>
+        <ContactButton color="light" />
       </HeaderBar>
     </>
   )
@@ -39,6 +32,7 @@ export const Page1HeaderContents = () => {
         Find the best <TitleEm>talent</TitleEm>
       </Title>
       <TitleParagraphDiv>
+        <Page1LineAbovePara />
         <TitleParagraph>
           Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into
           the abundance of global talent. We’re about to change that.
