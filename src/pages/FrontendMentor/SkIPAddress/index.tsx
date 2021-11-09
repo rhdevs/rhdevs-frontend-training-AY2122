@@ -11,7 +11,7 @@ import {
   StyledHeader,
   StyledInput,
 } from './styles/SkIPAddress.styled'
-import { TileLayer, Marker, Tooltip } from 'react-leaflet'
+import { TileLayer, Marker, useMap } from 'react-leaflet'
 interface RequestData {
   location?: Location
   ip: string
@@ -55,22 +55,32 @@ const SkIPAddress = () => {
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value)
   }
+
+  const ChangeView = () => {
+    const map = useMap()
+    if (Info.location) {
+      map.setView([Info.location.lat, Info.location.lng], 13)
+    }
+    return null
+  }
+
   return (
     <>
       <Background />
       {Info.location && (
-        <MyMap height={'500px'} center={[Info.location?.lat, Info.location?.lng]} zoom={13}>
+        <MyMap height={'500px'} center={[Info.location.lat, Info.location.lng]} zoom={13}>
+          <ChangeView />
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
           />
-          <Marker position={Info.location ? [Info.location?.lat, Info.location?.lng] : [0, 0]} />
+          <Marker position={[Info.location.lat, Info.location.lng]} />
         </MyMap>
       )}
       <MainContainer>
         <StyledHeader>IP Address Tracker</StyledHeader>
         <InputContainer>
-          <StyledInput value={Input} placeholder="Input IP Address" onChange={(e) => handleInputChange(e)} />
+          <StyledInput value={Input} placeholder="8.8.8.8" onChange={(e) => handleInputChange(e)} />
           <StyledButton onClick={() => handleSubmit()}>{'>'}</StyledButton>
         </InputContainer>
         <DisplayContainer>
