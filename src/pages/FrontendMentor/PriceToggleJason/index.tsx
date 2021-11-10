@@ -30,15 +30,10 @@ import RightImage from './info/images/bg-top.svg'
 import LeftImage from './info/images/bg-bottom.svg'
 
 export default function PriceToggleJason() {
-  enum PackageType {
-    Annually = 0,
-    Monthly = 1,
-  }
+  const [monthly, setPackageType] = useState(false)
 
-  const [currentPackageType, setPackageType] = useState(PackageType.Annually)
-
-  const changeToMonthly = () => {
-    setPackageType(PackageType.Monthly)
+  const togglePackageType = () => {
+    setPackageType(!monthly)
   }
 
   return (
@@ -49,7 +44,7 @@ export default function PriceToggleJason() {
         <PageHeader>Our Pricing</PageHeader>
         <ToggleContainer>
           <ToggleWord>Annually</ToggleWord>
-          <Switch></Switch>
+          <Switch onChange={() => togglePackageType}></Switch>
           <ToggleWord>Monthly</ToggleWord>
         </ToggleContainer>
         <PackagesContainer>
@@ -57,7 +52,7 @@ export default function PriceToggleJason() {
             <PackageHeader>Basic</PackageHeader>
             <NormalPriceContainer>
               <DollarSign>$</DollarSign>
-              <NormalPrice>{currentPackageType === PackageType.Annually ? '199.99' : '19.99'}</NormalPrice>
+              <NormalPrice>{monthly ? '19.99' : '199.99'}</NormalPrice>
             </NormalPriceContainer>
             <NormalDetailsContainer>500 GB Storage</NormalDetailsContainer>
             <NormalDetailsContainer>2 Users Allowed</NormalDetailsContainer>
@@ -69,7 +64,7 @@ export default function PriceToggleJason() {
               <HighlightPackageHeader>Professional</HighlightPackageHeader>
               <HighlightPriceContainer>
                 <HighlightDollarSign>$</HighlightDollarSign>
-                <HighlightPrice>{currentPackageType === PackageType.Annually ? '249.99' : '24.99'}</HighlightPrice>
+                <HighlightPrice>{monthly ? '24.99' : '249.99'}</HighlightPrice>
               </HighlightPriceContainer>
               <HighlightDetailsContainer>2 TB Storage</HighlightDetailsContainer>
               <HighlightDetailsContainer>10 Users Allowed</HighlightDetailsContainer>
@@ -81,7 +76,7 @@ export default function PriceToggleJason() {
             <PackageHeader>Master</PackageHeader>
             <NormalPriceContainer>
               <DollarSign>$</DollarSign>
-              <NormalPrice>{currentPackageType === PackageType.Annually ? '399.99' : '39.99'}</NormalPrice>
+              <NormalPrice>{monthly ? '39.99' : '399.99'}</NormalPrice>
             </NormalPriceContainer>
             <NormalDetailsContainer>2 TB Storage</NormalDetailsContainer>
             <NormalDetailsContainer>10 Users Allowed</NormalDetailsContainer>
