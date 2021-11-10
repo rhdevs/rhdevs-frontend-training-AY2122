@@ -6,7 +6,7 @@ import {
   TopRow,
   TotalPricePart,
   FullScreenContainer,
-} from './styles/ShoppingAnimegang.styled'
+} from './styles/ShoppingListAnimeGang.styled'
 import { Table, Button, Space, Input } from 'antd'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
