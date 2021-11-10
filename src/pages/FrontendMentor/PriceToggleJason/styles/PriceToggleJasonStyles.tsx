@@ -17,6 +17,7 @@ export const BackgroundRight = styled.img`
   float: right;
   height: 80vh;
   width: 30vw;
+  top: 0;
   right: 0;
   z-index: -2;
 `
@@ -66,6 +67,11 @@ export const PackagesContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 `
 
 export const NormalPackageContainerLeft = styled.div`
@@ -77,6 +83,9 @@ export const NormalPackageContainerLeft = styled.div`
   width: 25%;
   background: hsl(0, 100%, 100%);
   border-radius: 15px 0px 0px 15px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const NormalPackageContainerRight = styled.div`
@@ -88,6 +97,9 @@ export const NormalPackageContainerRight = styled.div`
   width: 25%;
   background: hsl(0, 100%, 100%);
   border-radius: 0px 15px 15px 0px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const PackageHeader = styled.div`
@@ -152,6 +164,9 @@ export const HighlightPackageContainer = styled.div`
   width: 25%;
   background: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-radius: 15px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const HighlightPackageHeader = styled.div`
