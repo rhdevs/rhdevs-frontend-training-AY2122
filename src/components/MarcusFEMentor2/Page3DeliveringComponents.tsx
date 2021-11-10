@@ -4,26 +4,28 @@ import {
   Page3ContentDiv,
   Page3StoriesDiv,
   Page3StoryDiv,
-  Page3StoryImage,
+  Page3StoryBg,
   Page3StoryName,
   Page3StoryPara,
   Page3StoryTitle,
   Page3TitleEm,
   Page3TitleStyled,
 } from './styles/Page3DeliveringComponents.styled'
+import { FaceImage } from '../../pages/FrontendMentor/MarcusFEMentor2/styles/DivStyles.styled'
 
 import kadyPic from '../../assets/MarcusFEMentor2/avatar-kady.jpg'
 import aiyshaPic from '../../assets/MarcusFEMentor2/avatar-aiysha.jpg'
 import arthurPic from '../../assets/MarcusFEMentor2/avatar-arthur.jpg'
+import quotPic from '../../assets/MarcusFEMentor2/icon-quotes.svg'
 
-type successStory = {
+type SuccessStory = {
   quote: string
   name: string
   title: string
   pic: string
 }
 
-const successStories: successStory[] = [
+const successStories: SuccessStory[] = [
   {
     quote:
       'The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.',
@@ -62,13 +64,14 @@ export const Page3Content = () => {
   )
 }
 
-export const Page3Story = ({ story }: { story: successStory }) => {
+export const Page3Story = ({ story }: { story: SuccessStory }) => {
   return (
     <Page3StoryDiv>
-      <Page3StoryPara>{`"${story.quote}"`}</Page3StoryPara>
+      <Page3StoryBg src={quotPic} />
+      <Page3StoryPara>&quot;{story.quote}&quot;</Page3StoryPara>
       <Page3StoryName>{story.name}</Page3StoryName>
       <Page3StoryTitle>{story.title}</Page3StoryTitle>
-      <Page3StoryImage src={story.pic} width="62px" height="62px" />
+      <FaceImage src={story.pic} width="62px" height="62px" />
     </Page3StoryDiv>
   )
 }

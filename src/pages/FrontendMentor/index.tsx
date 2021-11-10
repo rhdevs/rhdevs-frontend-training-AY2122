@@ -39,7 +39,7 @@ const FrontendMentor = () => {
         <Card
           title="myteam multi-page website"
           description="Marcus"
-          onClick={() => history.push(PATHS.MARCUS_FE_MENTOR_2)}
+          onClick={() => history.push(PATHS.MARCUS_FE_MENTOR_2_HOME)}
         />
         <Card
           title="Tip Calculator App"

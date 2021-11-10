@@ -1,9 +1,9 @@
 import React from 'react'
 
+import Footer from '../../../components/MarcusFEMentor2/FooterComponents'
 import Page1Main from './Page1Main'
 import Page2Build from './Page2Build'
 import Page3Delivering from './Page3Delivering'
-import Page4Footer from './Page4Footer'
 import { MainPageStyled } from './styles/MainPage.styled'
 
 function MarcusFEMentor2() {
@@ -12,7 +12,7 @@ function MarcusFEMentor2() {
       <Page1Main />
       <Page2Build />
       <Page3Delivering />
-      <Page4Footer />
+      <Footer />
     </MainPageStyled>
   )
 }

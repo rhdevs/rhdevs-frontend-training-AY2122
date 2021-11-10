@@ -70,8 +70,15 @@ const TipCalculatorApp = React.lazy(
 const MarcusFEMentor = React.lazy(
   () => import(/* webpackChunckName: "MarcusFEMentor" */ '../pages/FrontendMentor/MarcusFEMentor'),
 )
-const MarcusFEMentor2 = React.lazy(
-  () => import(/* webpackChunckName: "MarcusFEMentor2" */ '../pages/FrontendMentor/MarcusFEMentor2'),
+const MarcusFEMentor2Home = React.lazy(
+  () => import(/* webpackChunckName: "MarcusFEMentor2" */ '../pages/FrontendMentor/MarcusFEMentor2/'),
+)
+const MarcusFEMentor2About = React.lazy(
+  () => import(/* webpackChunckName: "MarcusFEMentor2_about" */ '../pages/FrontendMentor/MarcusFEMentor2/about_page'),
+)
+const MarcusFEMentor2Contact = React.lazy(
+  () =>
+    import(/* webpackChunckName: "MarcusFEMentor2_contact" */ '../pages/FrontendMentor/MarcusFEMentor2/contact_page'),
 )
 const CountriesSwitch = React.lazy(
   () => import(/* webpackChunckName: "CountriesSwitch" */ '../pages/FrontendMentor/MarcusFEMentor/CountriesSwitch'),
@@ -114,8 +121,10 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.TIME_DASHBOARD} component={TimeDashboard} />
     <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
     <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
-    <Route exact path={PATHS.MARCUS_FE_MENTOR_2} component={MarcusFEMentor2} />
     <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
+    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_HOME} component={MarcusFEMentor2Home} />
+    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_ABOUT} component={MarcusFEMentor2About} />
+    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_CONTACT} component={MarcusFEMentor2Contact} />
     <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />

@@ -1,29 +1,12 @@
 import React from 'react'
 
-import { ContactButton, HeaderBarLinks, MyTeamLogo } from './IndexPageComponents'
 import {
-  HeaderBar,
-  HeaderBarTextDiv,
   Page1LineAbovePara,
   Title,
   TitleEm,
   TitleParagraph,
   TitleParagraphDiv,
 } from './styles/Page1MainComponents.styled'
-
-export const Page1HeaderBar = () => {
-  return (
-    <>
-      <HeaderBar>
-        <HeaderBarTextDiv>
-          <MyTeamLogo top="2px" />
-          <HeaderBarLinks left="17vw" top="5px" responsive={true} />
-        </HeaderBarTextDiv>
-        <ContactButton color="light" />
-      </HeaderBar>
-    </>
-  )
-}
 
 export const Page1HeaderContents = () => {
   return (

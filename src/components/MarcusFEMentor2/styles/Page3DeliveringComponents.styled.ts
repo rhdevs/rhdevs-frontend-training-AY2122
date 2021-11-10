@@ -1,5 +1,10 @@
 import styled from 'styled-components'
+
+import { raptureBlue, white } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/Colours.styled'
+import { body1, body2, h2Styled } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
+
 // width 1440px (rel), height 745px (abs)
+
 export const Page3ContentDiv = styled.div`
   position: absolute;
   width: 77vw;
@@ -8,24 +13,18 @@ export const Page3ContentDiv = styled.div`
   top: 140px;
 `
 
-export const Page3TitleStyled = styled.h1`
+export const Page3TitleStyled = styled(h2Styled)`
   position: absolute;
   width: 65vw;
   height: 96px;
   left: 6vw;
   top: 0;
 
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 100%;
-
   text-align: center;
-
-  color: #ffffff;
 `
 
 export const Page3TitleEm = styled.span`
-  color: #79c8c7;
+  color: ${raptureBlue};
 `
 
 export const Page3StoriesDiv = styled.div`
@@ -49,26 +48,22 @@ export const Page3StoryDiv = styled.div`
   align-items: center;
 `
 
-export const Page3StoryPara = styled.p`
-  margin-top: 36px;
+export const Page3StoryBg = styled.img`
+  margin-top: 22px;
+`
 
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 25px;
+export const Page3StoryPara = styled(body2)`
+  margin-top: -22px;
 
   text-align: center;
 `
 
-export const Page3StoryName = styled.p`
+export const Page3StoryName = styled(body1)`
   height: 28px;
-
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 28px;
 
   text-align: center;
 
-  color: #79c8c7;
+  color: ${raptureBlue};
 `
 
 export const Page3StoryTitle = styled.p`
@@ -81,12 +76,5 @@ export const Page3StoryTitle = styled.p`
 
   text-align: center;
 
-  color: #ffffff;
-`
-
-export const Page3StoryImage = styled.img`
-  width: 62px;
-  height: 62px;
-  border: 2px solid #c4fffe;
-  border-radius: 50%;
+  color: ${white};
 `

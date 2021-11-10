@@ -1,5 +1,11 @@
 import styled from 'styled-components'
+
+import { lightCoral, white } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/Colours.styled'
+import { LineAbovePara } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/DivStyles.styled'
+import { h3Styled, body2 } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
+
 // width 1440px (rel), height 684px (abs)
+
 export const Page2ContentDiv = styled.div`
   position: absolute;
   width: 77vw;
@@ -8,16 +14,9 @@ export const Page2ContentDiv = styled.div`
   top: 140px;
 `
 
-export const Page2LineAboveTitle = styled.div`
+export const Page2LineAboveTitle = styled(LineAbovePara)`
   /* Rectangle */
-
-  position: absolute;
-  width: 50px;
-  height: 4px;
-  left: 0;
-  top: 0;
-
-  background: #f67e7e;
+  background: ${lightCoral};
 `
 
 export const Page2TitleDiv = styled.div`
@@ -31,7 +30,7 @@ export const Page2TitleDiv = styled.div`
   font-size: 48px;
   line-height: 100%;
 
-  color: #ffffff;
+  color: ${white};
 `
 
 export const Page2ParagraphsDiv = styled.div`
@@ -62,23 +61,11 @@ export const Page2Icon = styled.img`
   margin-right: 3vw;
 `
 
-export const Page2ParaTitle = styled.h1`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 156%;
-
-  color: #f67e7e;
+export const Page2ParaTitle = styled(h3Styled)`
+  color: ${lightCoral};
 `
 
-export const Page2ParaPara = styled.p`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 167%;
-
-  color: #ffffff;
-
+export const Page2ParaPara = styled(body2)`
   mix-blend-mode: normal;
   opacity: 0.8;
 `

@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+import {
+  lightCoral,
+  sacramentoStateGreen,
+  white,
+} from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/Colours.styled'
+
 export const MyTeamLogoStyled = styled.h1<{ top?: string }>`
   position: absolute;
   width: 160px;
@@ -9,7 +15,7 @@ export const MyTeamLogoStyled = styled.h1<{ top?: string }>`
   font-size: 30px;
   font-weight: bold;
 
-  color: #ffffff;
+  color: ${white};
 `
 
 export const HeaderBarLinksStyled = styled.div<{ left?: string; top?: string; responsive?: boolean }>`
@@ -24,11 +30,15 @@ export const HeaderBarLinksStyled = styled.div<{ left?: string; top?: string; re
 `
 
 export const BarLink = styled.a`
-  color: #ffffff;
+  color: ${white};
 
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+
+  :hover {
+    color: ${lightCoral};
+  }
 `
 
 export const ContactBtnDiv = styled.div`
@@ -43,7 +53,13 @@ export const ContactBtnDiv = styled.div`
   border-width: 3px;
   border-radius: 24px;
 
-  color: ${(props) => (props.color === 'light' ? '#ffffff' : '#012F34')};
+  color: ${(props) => (props.color === 'light' ? white : sacramentoStateGreen)};
+
+  :hover {
+    background: ${(props) => (props.color === 'light' ? white : sacramentoStateGreen)};
+    border-color: ${(props) => (props.color === 'light' ? white : sacramentoStateGreen)};
+    color: ${(props) => (props.color === 'dark' ? white : sacramentoStateGreen)};
+  }
 `
 
 export const ContactBtnText = styled.p`
@@ -53,5 +69,5 @@ export const ContactBtnText = styled.p`
   font-size: 18px;
   line-height: 28px;
 
-  margin-top: 4px;
+  margin-top: 5px;
 `
