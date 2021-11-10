@@ -138,7 +138,7 @@ export const NormalDetailsContainer = styled.div`
 
 export const NormalLearnMoreButton = styled.button`
   border-radius: 5px;
-  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: hsl(0, 100%, 100%);
   height: 5vh;
   width: 80%;
@@ -150,7 +150,7 @@ export const NormalLearnMoreButton = styled.button`
 
 export const HighlightPackageContainer = styled.div`
   width: 25%;
-  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  background: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-radius: 15px;
 `
 
