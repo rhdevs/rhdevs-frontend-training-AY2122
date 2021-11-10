@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 export const MainContainer = styled.div`
+  position: relative;
+  background: hsl(240, 78%, 98%);
   height: 100vh;
+  z-index: -50;
 `
 
 export const BackgroundContainer = styled.div`
@@ -19,7 +22,7 @@ export const BackgroundRight = styled.img`
   width: 30vw;
   top: 0;
   right: 0;
-  z-index: -2;
+  z-index: -99;
 `
 
 export const BackgroundLeft = styled.img`
@@ -28,12 +31,10 @@ export const BackgroundLeft = styled.img`
   height: 33vh;
   width: 25vw;
   bottom: 0;
-  z-index: -2;
+  z-index: -99;
 `
 
 export const PageHeader = styled.div`
-  position: relative;
-  z-index: 0;
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 40px;
@@ -42,8 +43,6 @@ export const PageHeader = styled.div`
 `
 
 export const ToggleContainer = styled.div`
-  position: relative;
-  z-index: 0;
   display: flex;
   justify-content: center;
   padding-top: 4vh;
@@ -60,8 +59,6 @@ export const ToggleWord = styled.div`
 `
 
 export const PackagesContainer = styled.div`
-  position: relative;
-  z-index: 0;
   margin-top: 10vh;
   height: 60vh;
   display: flex;
@@ -97,6 +94,8 @@ export const PackageHeader = styled.div`
 `
 
 export const NormalPriceContainer = styled.div`
+  position: relative;
+  z-index: 999;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -144,6 +143,10 @@ export const NormalLearnMoreButton = styled.button`
   font-weight: 800;
   font-family: 'Montserrat';
   border: none;
+  &:hover {
+    background: hsl(0, 100%, 100%);
+    color: hsl(237, 63%, 64%);
+  }
 `
 
 export const HighlightPackageContainer = styled.div`
@@ -195,6 +198,8 @@ export const HighlightDollarSign = styled.div`
 `
 
 export const HighlightPrice = styled.div`
+  position: relative;
+  z-index: 50;
   font-family: 'Montserrat';
   font-size: 60px;
   font-weight: 700;
