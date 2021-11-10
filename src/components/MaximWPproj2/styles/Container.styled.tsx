@@ -1,15 +1,5 @@
 import { HashRouter } from 'react-router-dom'
 import styled from 'styled-components'
-import bgbtm from '../images/bg-bottom.svg'
-import bgtop from '../images/bg-top.svg'
-
-export const MainBox = styled.div`
-  width: 100%;
-  background: url(${bgbtm}), url(${bgtop});
-  background-repeat: no-repeat;
-  background-position: left bottom, right top;
-  background-color: rgb(247, 247, 255);
-`
 
 export const TopBox = styled.div`
   display: flex;
@@ -79,6 +69,7 @@ export const StyledHeader = styled.p<{ typ?: string }>`
   font-size: 24px;
   font-weight: 700;
   vertical-align: middle;
+  font-family: 'Montserrat';
   text-align: center;
   ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'hsl(233, 13%, 49%);')}
     }
@@ -89,6 +80,7 @@ export const StyledNumber = styled.p<{ typ?: string }>`
   font-weight: 700;
   vertical-align: middle;
   text-align: center;
+  font-family: 'Montserrat';
   ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: rgb(74, 76, 97);')}
 }
 `
