@@ -21,29 +21,42 @@ export const TopContainer = styled.div<{ backgroundColor?: string }>`
   ${(props) => props.backgroundColor && `background-color: ${props.backgroundColor};`}
   padding: 5px;
 `
-export const StyledLabel = styled.div<{ isSelected: boolean }>`
-  background: ${(props) => (props.isSelected ? `#f87070` : `#161932`)};
-  color: ${(props) => (props.isSelected ? `#1e213f` : `#d7e0ff`)};
-  border-radius: 25px;
-  font-family: Kumbh Sans, serif;
-  font-size: 14px;
-  width: 120px;
-  height: 48px;
+export const ButtonContainer = styled.div<{ backgroundColor?: string }>`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  justify-content: space-between;
+  border-radius: 3vh;
+  height: 4vh;
+  width: 12vh;
+  padding-left: 1vh;
+  padding-right: 0.8vh;
+  padding-top: 0.7vh;
+  ${(props) => props.backgroundColor && `background-color: ${props.backgroundColor};`}
 `
-export const StyledLabelContainer = styled.div`
+export const Button = styled.button<{
+  clicked?: boolean
+  backgroundColorClicked?: string
+  backgroundColorNotClicked?: string
+}>`
+  width: 2.5vh;
+  height: 2.5vh;
+  border-radius: 8vh;
+  border-width: 0vh;
+  ${(props) =>
+    props.clicked
+      ? `background-color: ${props.backgroundColorClicked};`
+      : `background-color: ${props.backgroundColorNotClicked};`}
+`
+export const Textbox = styled.div<{ TextColor?: string }>`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  background: #161932;
-  @media (min-width: 601px) {
-    margin: 0 0 45px 0;
-  }
-  @media (max-width: 600px) {
-    margin: 0 0 109px 0;
-  }
+  justify-content: space-between;
+  width: 8.5vh;
+  font-weight: 700;
+  margin-bottom: 0.5vh;
+  float: right;
+  ${(props) => props.TextColor && `color: ${props.TextColor};`}
+`
+export const Containers = styled.div<{ width?: number }>`
+  display: flex;
+  justify-content: right;
+  ${(props) => props.width && `width: ${props.width}%;`}
 `
