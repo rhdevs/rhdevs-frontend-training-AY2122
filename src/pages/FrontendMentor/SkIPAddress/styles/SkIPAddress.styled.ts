@@ -1,5 +1,5 @@
-import { MapContainer } from 'react-leaflet'
 import styled from 'styled-components'
+import { MapContainer } from 'react-leaflet'
 
 export const MainContainer = styled.div`
   display: flex;
