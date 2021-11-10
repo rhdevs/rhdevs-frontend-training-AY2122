@@ -47,7 +47,7 @@ export default function App() {
             <Divider style={SideDivider} />
             <Detailsincont>Send up to 3 GB</Detailsincont>
             <Divider style={SideDivider} />
-            <Button style={ButtonStyle2}> Learn more </Button>
+            <Button style={ButtonStyle2}> LEARN MORE </Button>
           </SideCont>
           <CentreCont>
             <StyledHeader typ={'Main'}>Professional</StyledHeader>
@@ -63,11 +63,11 @@ export default function App() {
             <Divider style={CentreDivider} />
             <Detailsincont typ={'Main'}>Send up to 10 GB</Detailsincont>
             <Divider style={CentreDivider} />
-            <Button style={ButtonStyle}> Learn more </Button>
+            <Button style={ButtonStyle}> LEARN MORE </Button>
           </CentreCont>
           <SideCont>
             <StyledHeader>Master</StyledHeader>
-            {monthly ? <StyledNumber> $39.99 </StyledNumber> : <StyledNumber> $359.99 </StyledNumber>}
+            {monthly ? <StyledNumber> $39.99 </StyledNumber> : <StyledNumber> $399.99 </StyledNumber>}
             <Divider style={SideDivider} />
             <Detailsincont>2 TB Storage</Detailsincont>
             <Divider style={SideDivider} />
@@ -75,7 +75,7 @@ export default function App() {
             <Divider style={SideDivider} />
             <Detailsincont>Send up to 20 GB</Detailsincont>
             <Divider style={SideDivider} />
-            <Button style={ButtonStyle2}> Learn more </Button>
+            <Button style={ButtonStyle2}> LEARN MORE </Button>
           </SideCont>
         </MainContainer>
       </MainBox>
