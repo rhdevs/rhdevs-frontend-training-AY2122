@@ -1,14 +1,17 @@
+import Slider from '@ant-design/react-slick'
 import React from 'react'
 
-import { MainPage, Background, TopComponent, MainComponent } from './styles/SliderComponent.styled'
+import { MainPage, TopComponent, MainComponent, SliderBar, Slidercontainer } from './styles/SliderComponent.styled'
 
 const ElvaYBPractice = () => {
   return (
     <MainPage>
-      <Background>
-        <TopComponent>Simple, Traffic Based Pricing</TopComponent>
-        <MainComponent></MainComponent>
-      </Background>
+      <TopComponent>Simple, Traffic Based Pricing</TopComponent>
+      <MainComponent>
+        <Slidercontainer>
+          <Slider />
+        </Slidercontainer>
+      </MainComponent>
     </MainPage>
   )
 }
