@@ -23,10 +23,10 @@ export const CardContainer = styled.div<{ description?: string }>`
   background-color: rgb(226, 133, 37);
   ${(props) =>
     props.description === 'Sedan'
-      ? 'background-color: rgb(226, 133, 37); border-radius: 10px 0px 0px 10px;'
+      ? 'background-color: rgb(226, 133, 37); border-radius: 10px 10px 0px 0px;'
       : props.description === 'SUV'
       ? 'background-color: rgb(1, 105, 114);'
-      : 'background-color: rgb(0, 64, 63); border-radius: 0px 10px 10px 0px;'}
+      : 'background-color: rgb(0, 64, 63); border-radius: 0px 0px 10px 10px;'}
 `
 export const StyledHeader = styled.p`
   font-family: 'Lexend Deca';

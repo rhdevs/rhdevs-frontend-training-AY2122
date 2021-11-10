@@ -80,7 +80,7 @@ const SkDashboard = React.lazy(
   () => import(/* webpackChunckName: "SkDashboard" */ '../pages/FrontendMentor/SkDashboard'),
 )
 const MaximWpWebsite = React.lazy(
-  () => import(/* webpackChunckName: "Maximweipin" */ '../pages/FrontendMentor/Maximweipin'),
+  () => import(/* webpackChunckName: "MaximWpWebsite " */ '../pages/FrontendMentor/Maximweipin'),
 )
 const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
