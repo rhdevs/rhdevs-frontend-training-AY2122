@@ -17,6 +17,9 @@ export const StyledHeader = styled.div`
   font-size: 32px;
   color: #fff;
   font-weight: 500;
+  @media (max-width: 786px) {
+    font-size: calc(24px + 0.5vw);
+  }
 `
 
 export const InputContainer = styled.div`
@@ -26,6 +29,9 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 18px;
+  @media (max-width: 786px) {
+    width: 85vw;
+  }
 `
 
 export const StyledInput = styled.input`
@@ -37,7 +43,7 @@ export const StyledInput = styled.input`
 
 export const StyledButton = styled.button`
   font-weight: 700;
-  width: 10%;
+  width: 70px;
   background: hsl(0, 0%, 17%);
   color: #fff;
   border: none;
@@ -50,29 +56,37 @@ export const DisplayContainer = styled.div`
   margin-top: 5vh;
   border-radius: 15px;
   width: 70vw;
-  height: 20vh;
+  height: 19vh;
   background: #ffffff;
   z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 786px) {
+    width: 85vw;
+    margin-top: 3vh;
+    flex-direction: column;
+    height: auto;
+  }
 `
 export const BoxSeparator = styled.div`
-  width: 1px;
-  height: 10vh;
-  background: hsl(0, 0%, 80%);
+  @media (min-width: 786px) {
+    width: 1px;
+    height: 8vh;
+    background: hsl(0, 0%, 80%);
+  }
 `
 
-export const MyMap = styled(MapContainer)<{ height: string }>`
+export const MyMap = styled(MapContainer)`
   /*
     Any dynamic styling that will change the
     dynamically generated classname will remove
     the leaflet classnames from the container.
   */
-  top: 40vh;
+  top: 37vh;
   position: absolute;
-  height: ${(props) => props.height};
+  height: 63vh;
   width: 100%;
   z-index: 0;
 `

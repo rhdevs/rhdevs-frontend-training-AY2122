@@ -49,8 +49,8 @@ const SkIPAddress = () => {
   }
 
   useEffect(() => {
-    console.log(Info)
-  }, [Info])
+    handleSubmit()
+  }, [])
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value)
@@ -59,7 +59,7 @@ const SkIPAddress = () => {
   const ChangeView = () => {
     const map = useMap()
     if (Info.location) {
-      map.setView([Info.location.lat, Info.location.lng], 13)
+      map.setView([Info.location.lat, Info.location.lng], 15)
     }
     return null
   }
@@ -68,7 +68,7 @@ const SkIPAddress = () => {
     <>
       <Background />
       {Info.location && (
-        <MyMap height={'500px'} center={[Info.location.lat, Info.location.lng]} zoom={13}>
+        <MyMap center={[Info.location.lat, Info.location.lng]} zoom={15}>
           <ChangeView />
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -80,7 +80,11 @@ const SkIPAddress = () => {
       <MainContainer>
         <StyledHeader>IP Address Tracker</StyledHeader>
         <InputContainer>
-          <StyledInput value={Input} placeholder="8.8.8.8" onChange={(e) => handleInputChange(e)} />
+          <StyledInput
+            value={Input}
+            placeholder="Search for any IP address or domain"
+            onChange={(e) => handleInputChange(e)}
+          />
           <StyledButton onClick={() => handleSubmit()}>{'>'}</StyledButton>
         </InputContainer>
         <DisplayContainer>
@@ -93,7 +97,7 @@ const SkIPAddress = () => {
             }
           />
           <BoxSeparator />
-          <ContentBox header="TIMEZONE" body={Info.location ? 'UTC' + Info.location.timezone : ''} />
+          <ContentBox header="TIMEZONE" body={Info.location ? 'UTC ' + Info.location.timezone : ''} />
           <BoxSeparator />
           <ContentBox header="ISP" body={Info.isp} />
         </DisplayContainer>

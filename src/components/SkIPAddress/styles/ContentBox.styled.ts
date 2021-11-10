@@ -3,26 +3,33 @@ import styled from 'styled-components'
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 8vh auto 0 2vw;
+  margin: 7vh auto 0 2vw;
   width: 13vw;
   height: 100%;
   flex-wrap: wrap;
-  /* background: red; */
   overflow-y: auto;
+  @media (max-width: 786px) {
+    width: 100%;
+    margin: 2vh 0 1vh 0;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const StyledHeader = styled.div`
   color: hsl(0, 0%, 59%);
   font-weight: 700;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
 `
 
 export const StyledBody = styled.div`
   display: inline-block;
-  font-size: 24px;
+  font-size: calc(16px + 0.5vw);
   font-weight: 500;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+
+  @media (max-width: 786px) {
+    font-size: calc(18px + 0.5vw);
+  }
   /* word-break: break-all; */
 `
