@@ -79,7 +79,7 @@ const ElvaYBPractice = React.lazy(
 const SkDashboard = React.lazy(
   () => import(/* webpackChunckName: "SkDashboard" */ '../pages/FrontendMentor/SkDashboard'),
 )
-const maximwpWebsite = React.lazy(
+const MaximWpWebsite = React.lazy(
   () => import(/* webpackChunckName: "Maximweipin" */ '../pages/FrontendMentor/Maximweipin'),
 )
 const RockPaperScissors = React.lazy(
@@ -110,7 +110,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
     <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
-    <RouteWithTopNav exact path={PATHS.MAXIM_WEIPIN_WEBSITE} component={maximwpWebsite} />
+    <RouteWithTopNav exact path={PATHS.MAXIM_WEIPIN_WEBSITE} component={MaximWpWebsite} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE} component={ElvaYBPractice} />
     <RouteWithTopNav exact path={PATHS.TIME_DASHBOARD} component={TimeDashboard} />
     <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />

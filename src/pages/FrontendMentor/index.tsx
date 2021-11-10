@@ -14,11 +14,7 @@ const FrontendMentor = () => {
         description={
           <>
             {'frontend mentor practices, challenges taken from '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={'https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-'}
-            >
+            <a target="_blank" rel="noopener noreferrer" href={'https://frontendmentor.io'}>
               frontendmentor.io
             </a>
           </>

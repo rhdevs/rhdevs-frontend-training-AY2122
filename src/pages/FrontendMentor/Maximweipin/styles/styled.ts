@@ -15,16 +15,16 @@ export const MainContainer = styled.div`
     flex-direction: column;
   }
 `
-export const CardContainer = styled.div<{ typ?: string }>`
+export const CardContainer = styled.div<{ description?: string }>`
   height: 600px;
   flex-direction: row;
   align-items: center;
   font-family: 'Lexend Deca';
   background-color: rgb(226, 133, 37);
   ${(props) =>
-    props.typ === 'Sedan'
+    props.description === 'Sedan'
       ? 'background-color: rgb(226, 133, 37); border-radius: 10px 0px 0px 10px;'
-      : props.typ === 'SUV'
+      : props.description === 'SUV'
       ? 'background-color: rgb(1, 105, 114);'
       : 'background-color: rgb(0, 64, 63); border-radius: 0px 10px 10px 0px;'}
 `

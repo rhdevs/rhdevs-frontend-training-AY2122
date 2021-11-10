@@ -17,7 +17,7 @@ import sedans from './images/icon-sedans.svg'
 const Lesson1Example = () => {
   return (
     <MainContainer>
-      <CardContainer typ={'Sedan'}>
+      <CardContainer description={'Sedan'}>
         <StyledLogo src={sedans} />
         <StyledHeader>Sedans</StyledHeader>
         <StyledParagraph>
@@ -28,7 +28,7 @@ const Lesson1Example = () => {
           Learn more
         </Button>
       </CardContainer>
-      <CardContainer typ={'SUV'}>
+      <CardContainer description={'SUV'}>
         <StyledLogo src={suvs} />
         <StyledHeader>SUVs</StyledHeader>
         <StyledParagraph>
