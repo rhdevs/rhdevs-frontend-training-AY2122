@@ -8,6 +8,7 @@ export const MainBox = styled.div`
   background: url(${bgbtm}), url(${bgtop});
   background-repeat: no-repeat;
   background-position: left bottom, right top;
+  background-color: rgb(247, 247, 255);
 `
 
 export const TopBox = styled.div`
@@ -51,7 +52,7 @@ export const MainContainer = styled.div`
 `
 //  #background-color: hsl(234, 14%, 74%);
 export const CentreCont = styled.div`
-  height: 650px;
+  height: 600px;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -59,9 +60,10 @@ export const CentreCont = styled.div`
   background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-width: 5px;
   border-radius: 10px;
+  font-family: 'Montserrat';
 `
 export const SideCont = styled.div`
-  height: 600px;
+  height: 550px;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -69,6 +71,7 @@ export const SideCont = styled.div`
   background-color: hsl(0, 0%, 100%);
   border-width: 5px;
   border-radius: 5px;
+  font-family: 'Montserrat';
 `
 export const StyledHeader = styled.p<{ typ?: string }>`
   margin: 2rem;
@@ -109,7 +112,7 @@ export const SwitchStyle = {
 export const ButtonStyle = {
   width: '300px',
   height: '45px',
-  borderRadius: 180,
+  borderRadius: '20px',
   backgroundColor: 'hsl(0, 0%, 100%)',
   color: '#7276e1',
   'vertical-align': 'middle',
@@ -124,7 +127,7 @@ export const ButtonStyle = {
 export const ButtonStyle2 = {
   width: '300px',
   height: '45px',
-  borderRadius: 100,
+  borderRadius: '20px',
   backgroundColor: 'hsl(234, 14%, 74%)',
   backgroundImage: 'linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))',
   color: '#fff',
@@ -135,4 +138,14 @@ export const ButtonStyle2 = {
   'border-radius': '2px',
   'font-weight': '700',
   'font-family': 'Montserrat',
+}
+
+export const SideDivider = {
+  width: '85%',
+  color: 'black',
+}
+
+export const CentreDivider = {
+  width: '85%',
+  backgroundColor: 'hsl(240, 78%, 98%)',
 }
