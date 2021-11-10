@@ -1,7 +1,7 @@
 import { PropertySafetyFilled } from '@ant-design/icons'
 import React from 'react'
 import CalculatorKeypad from './CalculatorKeypad'
-import { MainContainer, ButtonNumber } from './styles/CalculatorButton.styled'
+import { MainContainerButton, ButtonNumber } from './styles/CalculatorButton.styled'
 
 type Props = {
   isNumber?: boolean | false
@@ -70,26 +70,26 @@ const CalculatorButton = (props: Props) => {
   return (
     <>
       {props.isNumber || props.isDecimal || props.isOperator ? (
-        <MainContainer
+        <MainContainerButton
           backgroundColor={ColorList[props.colorScheme].BaseKeyBackground}
           backgroundShadow={ColorList[props.colorScheme].BaseKeyShadow}
         >
           <ButtonNumber onClick={test}>{props.value}</ButtonNumber>
-        </MainContainer>
+        </MainContainerButton>
       ) : props.isRemoval ? (
-        <MainContainer
+        <MainContainerButton
           backgroundColor={ColorList[props.colorScheme].RemovalKeyBackground}
           backgroundShadow={ColorList[props.colorScheme].RemovalKeyShadow}
         >
           <ButtonNumber>{props.value}</ButtonNumber>
-        </MainContainer>
+        </MainContainerButton>
       ) : props.isEqual ? (
-        <MainContainer
+        <MainContainerButton
           backgroundColor={ColorList[props.colorScheme].EqualKeyBackground}
           backgroundShadow={ColorList[props.colorScheme].EqualKeyShadow}
         >
           <ButtonNumber>{props.value}</ButtonNumber>
-        </MainContainer>
+        </MainContainerButton>
       ) : (
         console.log('no button')
       )}
