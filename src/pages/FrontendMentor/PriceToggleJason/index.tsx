@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import {
   HighlightPackageContainer,
   MainContainer,
-  NormalPackageContainerLeft,
-  NormalPackageContainerRight,
+  NormalPackageContainer,
   PackageHeader,
   HighlightPackageHeader,
   PackagesContainer,
@@ -48,7 +47,7 @@ export default function PriceToggleJason() {
           <ToggleWord>Monthly</ToggleWord>
         </ToggleContainer>
         <PackagesContainer>
-          <NormalPackageContainerLeft>
+          <NormalPackageContainer left={true}>
             <PackageHeader>Basic</PackageHeader>
             <NormalPriceContainer>
               <DollarSign>$</DollarSign>
@@ -58,7 +57,7 @@ export default function PriceToggleJason() {
             <NormalDetailsContainer>2 Users Allowed</NormalDetailsContainer>
             <NormalDetailsContainer>Send up to 3 GB</NormalDetailsContainer>
             <NormalLearnMoreButton>LEARN MORE</NormalLearnMoreButton>
-          </NormalPackageContainerLeft>
+          </NormalPackageContainer>
           <HighlightPackageContainer>
             <HighlightAlignmentContainer>
               <HighlightPackageHeader>Professional</HighlightPackageHeader>
@@ -72,7 +71,7 @@ export default function PriceToggleJason() {
               <HighlightLearnMoreButton>LEARN MORE</HighlightLearnMoreButton>
             </HighlightAlignmentContainer>
           </HighlightPackageContainer>
-          <NormalPackageContainerRight>
+          <NormalPackageContainer left={false}>
             <PackageHeader>Master</PackageHeader>
             <NormalPriceContainer>
               <DollarSign>$</DollarSign>
@@ -82,7 +81,7 @@ export default function PriceToggleJason() {
             <NormalDetailsContainer>10 Users Allowed</NormalDetailsContainer>
             <NormalDetailsContainer>Send up to 20 GB</NormalDetailsContainer>
             <NormalLearnMoreButton>LEARN MORE</NormalLearnMoreButton>
-          </NormalPackageContainerRight>
+          </NormalPackageContainer>
         </PackagesContainer>
       </BackgroundContainer>
     </MainContainer>

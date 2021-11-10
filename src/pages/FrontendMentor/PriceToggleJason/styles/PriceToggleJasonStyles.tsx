@@ -74,7 +74,7 @@ export const PackagesContainer = styled.div`
   }
 `
 
-export const NormalPackageContainerLeft = styled.div`
+export const NormalPackageContainer = styled.div<{ left: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,21 +82,7 @@ export const NormalPackageContainerLeft = styled.div`
   height: 90%;
   width: 25%;
   background: hsl(0, 100%, 100%);
-  border-radius: 15px 0px 0px 15px;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-`
-
-export const NormalPackageContainerRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 3vh;
-  height: 90%;
-  width: 25%;
-  background: hsl(0, 100%, 100%);
-  border-radius: 0px 15px 15px 0px;
+  ${(props) => (props.left ? 'border-radius: 15px 0px 0px 15px;' : 'border-radius: 0px 15px 15px 0px;')}
   @media (max-width: 768px) {
     width: 90%;
   }
