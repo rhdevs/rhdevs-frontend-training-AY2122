@@ -2,10 +2,37 @@ import styled from 'styled-components'
 
 export const MainContainer = styled.div`
   height: 100vh;
+`
+
+export const BackgroundContainer = styled.div`
+  position: relative;
+  height: 100%;
   background: hsl(240, 78%, 98%);
+  z-index: -100;
+`
+
+export const BackgroundRight = styled.img`
+  object-fit: contain;
+  position: fixed;
+  float: right;
+  height: 80vh;
+  width: 30vw;
+  right: 0;
+  z-index: -2;
+`
+
+export const BackgroundLeft = styled.img`
+  object-fit: fill;
+  position: fixed;
+  height: 33vh;
+  width: 25vw;
+  bottom: 0;
+  z-index: -2;
 `
 
 export const PageHeader = styled.div`
+  position: relative;
+  z-index: 0;
   font-family: 'Montserrat';
   font-weight: 700;
   font-size: 40px;
@@ -14,6 +41,8 @@ export const PageHeader = styled.div`
 `
 
 export const ToggleContainer = styled.div`
+  position: relative;
+  z-index: 0;
   display: flex;
   justify-content: center;
   padding-top: 4vh;
@@ -30,6 +59,8 @@ export const ToggleWord = styled.div`
 `
 
 export const PackagesContainer = styled.div`
+  position: relative;
+  z-index: 0;
   margin-top: 10vh;
   height: 60vh;
   display: flex;
