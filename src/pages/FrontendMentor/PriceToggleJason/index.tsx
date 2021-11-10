@@ -12,7 +12,10 @@ import {
   ToggleWord,
   HighlightAlignmentContainer,
   NormalPriceContainer,
+  DollarSign,
+  NormalPrice,
   HighlightPriceContainer,
+  HighlightPrice,
   NormalDetailsContainer,
   NormalLearnMoreButton,
   HighlightDetailsContainer,
@@ -20,6 +23,7 @@ import {
   BackgroundRight,
   BackgroundLeft,
   BackgroundContainer,
+  HighlightDollarSign,
 } from './styles/PriceToggleJasonStyles'
 import { Switch } from 'antd'
 import RightImage from './info/images/bg-top.svg'
@@ -52,7 +56,8 @@ export default function PriceToggleJason() {
           <NormalPackageContainerLeft>
             <PackageHeader>Basic</PackageHeader>
             <NormalPriceContainer>
-              {currentPackageType === PackageType.Annually ? '$199.99' : '$19.99'}
+              <DollarSign>$</DollarSign>
+              <NormalPrice>{currentPackageType === PackageType.Annually ? '199.99' : '19.99'}</NormalPrice>
             </NormalPriceContainer>
             <NormalDetailsContainer>500 GB Storage</NormalDetailsContainer>
             <NormalDetailsContainer>2 Users Allowed</NormalDetailsContainer>
@@ -63,7 +68,8 @@ export default function PriceToggleJason() {
             <HighlightAlignmentContainer>
               <HighlightPackageHeader>Professional</HighlightPackageHeader>
               <HighlightPriceContainer>
-                {currentPackageType === PackageType.Annually ? '$249.99' : '$24.99'}
+                <HighlightDollarSign>$</HighlightDollarSign>
+                <HighlightPrice>{currentPackageType === PackageType.Annually ? '249.99' : '24.99'}</HighlightPrice>
               </HighlightPriceContainer>
               <HighlightDetailsContainer>2 TB Storage</HighlightDetailsContainer>
               <HighlightDetailsContainer>10 Users Allowed</HighlightDetailsContainer>
@@ -74,7 +80,8 @@ export default function PriceToggleJason() {
           <NormalPackageContainerRight>
             <PackageHeader>Master</PackageHeader>
             <NormalPriceContainer>
-              {currentPackageType === PackageType.Annually ? '$399.99' : '$39.99'}
+              <DollarSign>$</DollarSign>
+              <NormalPrice>{currentPackageType === PackageType.Annually ? '399.99' : '39.99'}</NormalPrice>
             </NormalPriceContainer>
             <NormalDetailsContainer>2 TB Storage</NormalDetailsContainer>
             <NormalDetailsContainer>10 Users Allowed</NormalDetailsContainer>
