@@ -27,4 +27,5 @@ export enum PATHS {
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
   ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
   FRONTEND_MENTOR_HUBBLE = '/frontendmentor/hubble',
+  FRONTEND_MENTOR_PRICE_TOGGLE_JASON = '/frontendmentor/price-toggle-jason',
 }
