@@ -62,6 +62,9 @@ export const CentreCont = styled.div`
   border-width: 5px;
   border-radius: 10px;
   font-family: 'Montserrat';
+  @media (max-width: 1024px) {
+    margin: 50px;
+  }
 `
 export const SideCont = styled.div`
   height: 500px;
@@ -73,6 +76,9 @@ export const SideCont = styled.div`
   border-width: 5px;
   border-radius: 5px;
   font-family: 'Montserrat';
+  @media (max-width: 1024px) {
+    border-radius: 10px;
+  }
 `
 export const StyledHeader = styled.p<{ typ?: string }>`
   margin: 2rem;
