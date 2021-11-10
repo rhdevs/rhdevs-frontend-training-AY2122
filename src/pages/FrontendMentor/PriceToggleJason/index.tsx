@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   HighlightPackageContainer,
   MainContainer,
@@ -26,6 +26,17 @@ import RightImage from './info/images/bg-top.svg'
 import LeftImage from './info/images/bg-bottom.svg'
 
 export default function PriceToggleJason() {
+  enum PackageType {
+    Annually = 0,
+    Monthly = 1,
+  }
+
+  const [currentPackageType, setPackageType] = useState(PackageType.Annually)
+
+  const changeToMonthly = () => {
+    setPackageType(PackageType.Monthly)
+  }
+
   return (
     <MainContainer>
       <BackgroundContainer>
@@ -40,7 +51,9 @@ export default function PriceToggleJason() {
         <PackagesContainer>
           <NormalPackageContainerLeft>
             <PackageHeader>Basic</PackageHeader>
-            <NormalPriceContainer>$199.99</NormalPriceContainer>
+            <NormalPriceContainer>
+              {currentPackageType === PackageType.Annually ? '$199.99' : '$19.99'}
+            </NormalPriceContainer>
             <NormalDetailsContainer>500 GB Storage</NormalDetailsContainer>
             <NormalDetailsContainer>2 Users Allowed</NormalDetailsContainer>
             <NormalDetailsContainer>Send up to 3 GB</NormalDetailsContainer>
@@ -49,7 +62,9 @@ export default function PriceToggleJason() {
           <HighlightPackageContainer>
             <HighlightAlignmentContainer>
               <HighlightPackageHeader>Professional</HighlightPackageHeader>
-              <HighlightPriceContainer>$249.99</HighlightPriceContainer>
+              <HighlightPriceContainer>
+                {currentPackageType === PackageType.Annually ? '$249.99' : '$24.99'}
+              </HighlightPriceContainer>
               <HighlightDetailsContainer>2 TB Storage</HighlightDetailsContainer>
               <HighlightDetailsContainer>10 Users Allowed</HighlightDetailsContainer>
               <HighlightDetailsContainer>Send up to 20 GB</HighlightDetailsContainer>
@@ -58,7 +73,9 @@ export default function PriceToggleJason() {
           </HighlightPackageContainer>
           <NormalPackageContainerRight>
             <PackageHeader>Master</PackageHeader>
-            <NormalPriceContainer>$399.99</NormalPriceContainer>
+            <NormalPriceContainer>
+              {currentPackageType === PackageType.Annually ? '$399.99' : '$39.99'}
+            </NormalPriceContainer>
             <NormalDetailsContainer>2 TB Storage</NormalDetailsContainer>
             <NormalDetailsContainer>10 Users Allowed</NormalDetailsContainer>
             <NormalDetailsContainer>Send up to 20 GB</NormalDetailsContainer>
