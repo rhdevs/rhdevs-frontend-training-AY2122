@@ -61,12 +61,15 @@ const CalculatorKeypad = (props: Props) => {
   }
 
   const TypeOperator = (operator: string) => {
-    if (number2 === '') {
-      setOperator(operator)
-    } else {
-      ExecuteCalc(operator)
+    if (number1 !== '') {
+      if (number2 === '') {
+        setOperator(operator)
+      } else {
+        ExecuteCalc(operator)
+      }
     }
   }
+
   const ExecuteCalc = (newOperator: string) => {
     let number: number
     if (operator === '+') {
