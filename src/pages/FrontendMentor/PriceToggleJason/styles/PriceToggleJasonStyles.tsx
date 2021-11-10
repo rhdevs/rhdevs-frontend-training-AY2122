@@ -4,14 +4,7 @@ export const MainContainer = styled.div`
   position: relative;
   background: hsl(240, 78%, 98%);
   height: 100vh;
-  z-index: -50;
-`
-
-export const BackgroundContainer = styled.div`
-  position: relative;
-  height: 100%;
-  background: hsl(240, 78%, 98%);
-  z-index: -100;
+  z-index: 0;
 `
 
 export const BackgroundRight = styled.img`
