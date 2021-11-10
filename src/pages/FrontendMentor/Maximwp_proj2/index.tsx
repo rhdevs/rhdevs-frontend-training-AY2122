@@ -22,6 +22,7 @@ export default function App() {
           </div>
         </TopBox>
         <MainContainer>
+<<<<<<< HEAD
           <Cont
             title="Basic"
             number={monthly ? '$19.99' : '$199.99'}
@@ -43,6 +44,48 @@ export default function App() {
             text2={'10 Users Allowed'}
             text3={'Send up to 20 GB'}
           ></Cont>
+=======
+          <SideCont>
+            <StyledHeader>Basic</StyledHeader>
+            {monthly ? <StyledNumber> $19.99 </StyledNumber> : <StyledNumber> $199.99 </StyledNumber>}
+            <Divider style={SideDivider} />
+            <Detailsincont>500 GB Storage</Detailsincont>
+            <Divider style={SideDivider} />
+            <Detailsincont>2 Users Allowed</Detailsincont>
+            <Divider style={SideDivider} />
+            <Detailsincont>Send up to 3 GB</Detailsincont>
+            <Divider style={SideDivider} />
+            <Button style={ButtonStyle2}> LEARN MORE </Button>
+          </SideCont>
+          <CentreCont>
+            <StyledHeader typ={'Main'}>Professional</StyledHeader>
+            {monthly ? (
+              <StyledNumber typ={'Main'}> $24.99 </StyledNumber>
+            ) : (
+              <StyledNumber typ={'Main'}> $249.99 </StyledNumber>
+            )}
+            <Divider style={CentreDivider} />
+            <Detailsincont typ={'Main'}>1 TB Storage</Detailsincont>
+            <Divider style={CentreDivider} />
+            <Detailsincont typ={'Main'}>5 Users Allowed</Detailsincont>
+            <Divider style={CentreDivider} />
+            <Detailsincont typ={'Main'}>Send up to 10 GB</Detailsincont>
+            <Divider style={CentreDivider} />
+            <Button style={ButtonStyle}> LEARN MORE </Button>
+          </CentreCont>
+          <SideCont>
+            <StyledHeader>Master</StyledHeader>
+            {monthly ? <StyledNumber> $39.99 </StyledNumber> : <StyledNumber> $399.99 </StyledNumber>}
+            <Divider style={SideDivider} />
+            <Detailsincont>2 TB Storage</Detailsincont>
+            <Divider style={SideDivider} />
+            <Detailsincont>10 Users Allowed</Detailsincont>
+            <Divider style={SideDivider} />
+            <Detailsincont>Send up to 20 GB</Detailsincont>
+            <Divider style={SideDivider} />
+            <Button style={ButtonStyle2}> LEARN MORE </Button>
+          </SideCont>
+>>>>>>> bec8fc3bf75bb1a68a33c6bd6d643d9d4b384c3a
         </MainContainer>
       </MainBox>
     </>
