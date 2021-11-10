@@ -39,38 +39,24 @@ const ColorList: Colors[] = [
 
 const CalculatorKeypad = (props: Props) => {
   const TypeNumber = (number: string) => {
-    CheckIllegal()
-    if ((number1 + ' ' + operator + ' ' + number2).length < 17) {
-      if (operator === '') {
-        if (number === '.') {
-          if (decimal1 === false) {
-            setDecimal1(true)
-            setNumber1(number1 + number)
-          }
-        } else {
+    if (operator === '') {
+      if (number === '.') {
+        if (decimal1 === false) {
+          setDecimal1(true)
           setNumber1(number1 + number)
         }
       } else {
-        if (number === '.') {
-          if (decimal2 === false) {
-            setDecimal2(true)
-            setNumber2(number2 + number)
-          }
-        } else {
+        setNumber1(number1 + number)
+      }
+    } else {
+      if (number === '.') {
+        if (decimal2 === false) {
+          setDecimal2(true)
           setNumber2(number2 + number)
         }
+      } else {
+        setNumber2(number2 + number)
       }
-    }
-  }
-
-  const CheckIllegal = () => {
-    if (number1 === 'NaN' || number1 === '-Infinity') {
-      console.log('infinity')
-      setNumber1('')
-      setNumber2('ewtewrewr')
-      console.log(number1)
-      console.log(number2)
-      console.log(operator)
     }
   }
 
@@ -89,8 +75,10 @@ const CalculatorKeypad = (props: Props) => {
       number = parseFloat(number1) / parseFloat(number2)
     } else if (operator === '*') {
       number = parseFloat(number1) * parseFloat(number2)
-    } else {
+    } else if (operator === '-') {
       number = parseFloat(number1) - parseFloat(number2)
+    } else {
+      number = parseFloat(number1)
     }
     if (number - Math.floor(number) > 0) {
       setNumber1(number.toFixed(3).toString())
@@ -110,12 +98,18 @@ const CalculatorKeypad = (props: Props) => {
   }
   const Delete = () => {
     if (number2 !== '') {
+      if (number2.slice(-1) === '.') {
+        setDecimal2(false)
+      }
       setNumber2(number2.slice(0, -1))
     } else if (operator !== '') {
       setOperator('')
-    } else if (number1 === 'Infinity' || number1 === '-Infinity') {
-      setNumber1('')
+    } else if (number1 === 'Infinity' || number1 === '-Infinity' || number1 === 'NaN') {
+      ClearScreen()
     } else {
+      if (number1.slice(-1) === '.') {
+        setDecimal1(false)
+      }
       setNumber1(number1.slice(0, -1))
     }
   }
