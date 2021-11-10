@@ -4,7 +4,6 @@ import { Button } from 'antd'
 
 import {
   ButtonStyle2,
-  CentreCont,
   Detailsincont,
   SideCont,
   SideDivider,

@@ -1,4 +1,3 @@
-import { HashRouter } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const TopBox = styled.div`

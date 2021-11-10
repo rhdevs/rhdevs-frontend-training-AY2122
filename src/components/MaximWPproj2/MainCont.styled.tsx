@@ -6,7 +6,6 @@ import {
   ButtonStyle,
   CentreCont,
   Detailsincont,
-  SideCont,
   SideDivider,
   StyledHeader,
   StyledNumber,
