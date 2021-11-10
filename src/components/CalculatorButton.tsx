@@ -58,10 +58,6 @@ const ColorList: Colors[] = [
   },
 ]
 
-function test() {
-  console.log('hi there')
-}
-
 const CalculatorButton = (props: Props) => {
   return (
     <>
@@ -70,9 +66,7 @@ const CalculatorButton = (props: Props) => {
           backgroundColor={ColorList[props.colorScheme].BaseKeyBackground}
           backgroundShadow={ColorList[props.colorScheme].BaseKeyShadow}
         >
-          <ButtonNumber onClick={test} textColor={ColorList[props.colorScheme].DarkText}>
-            {props.value}
-          </ButtonNumber>
+          <ButtonNumber textColor={ColorList[props.colorScheme].DarkText}>{props.value}</ButtonNumber>
         </MainContainerButton>
       ) : props.isRemoval ? (
         <MainContainerButton
