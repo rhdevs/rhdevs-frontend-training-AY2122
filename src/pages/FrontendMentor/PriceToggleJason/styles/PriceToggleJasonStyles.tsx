@@ -22,7 +22,7 @@ export const ToggleContainer = styled.div`
 export const ToggleWord = styled.div`
   font-family: 'Montserrat';
   font-size: 20px;
-  color: hsl(204, 8%, 76%);
+  color: hsl(234, 14%, 74%);
   line-height: 20px;
   font-weight: 700;
   padding-left: 2vw;
@@ -134,7 +134,7 @@ export const HighlightPriceContainer = styled.div`
   width: 80%;
   color: hsl(0, 100%, 100%);
   text-align: center;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid white;
 `
 
 export const HighlightDetailsContainer = styled.div`
@@ -146,7 +146,7 @@ export const HighlightDetailsContainer = styled.div`
   font-weight: 800;
   width: 80%;
   vertical-align: middle;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid white;
 `
 
 export const HighlightLearnMoreButton = styled.button`
