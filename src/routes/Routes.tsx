@@ -126,7 +126,7 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
-    <Route exact path={PATHS.YX_ZK_COUNTDOWN} component={YxZkCountdown} />
+    <RouteWithTopNav exact path={PATHS.YX_ZK_COUNTDOWN} component={YxZkCountdown} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
