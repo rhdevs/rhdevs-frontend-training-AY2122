@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MainContainer, TopContainer } from './styles/CalculatorApp.styled'
+import { MainContainer, TopContainer, StyledLabel, StyledLabelContainer } from './styles/CalculatorApp.styled'
 import CalculatorKeypad from '../../../components/CalculatorKeypad'
 
 type Colors = {

@@ -40,9 +40,23 @@ const ColorList: Colors[] = [
 const CalculatorKeypad = (props: Props) => {
   const TypeNumber = (number: string) => {
     if (operator === '') {
-      setNumber1(number1 + number)
+      if (number === '.') {
+        if (decimal1 === false) {
+          setDecimal1(true)
+          setNumber1(number1 + number)
+        }
+      } else {
+        setNumber1(number1 + number)
+      }
     } else {
-      setNumber2(number2 + number)
+      if (number === '.') {
+        if (decimal2 === false) {
+          setDecimal2(true)
+          setNumber2(number2 + number)
+        }
+      } else {
+        setNumber2(number2 + number)
+      }
     }
   }
   const TypeOperator = (operator: string) => {
@@ -70,11 +84,14 @@ const CalculatorKeypad = (props: Props) => {
     }
     setOperator(newOperator)
     setNumber2('')
+    setDecimal2(false)
   }
   const ClearScreen = () => {
     setNumber1('')
     setNumber2('')
     setOperator('')
+    setDecimal1(false)
+    setDecimal2(false)
   }
   const Delete = () => {
     if (number2 !== '') {
@@ -90,6 +107,8 @@ const CalculatorKeypad = (props: Props) => {
   const [number1, setNumber1] = useState<string>('')
   const [number2, setNumber2] = useState<string>('')
   const [operator, setOperator] = useState<string>('')
+  const [decimal1, setDecimal1] = useState<boolean>(false)
+  const [decimal2, setDecimal2] = useState<boolean>(false)
 
   return (
     <MainContainer>
