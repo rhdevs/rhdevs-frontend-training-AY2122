@@ -29,6 +29,7 @@ const FrontendMentor = () => {
           description="Kiyong"
           onClick={() => history.push(PATHS.KY_STATS_CARD_COMPONENT)}
         />
+        <Card title="Job Listings" description="Kiyong" onClick={() => history.push(PATHS.KY_JOB_LISTING)} />
         <Card
           title="Single price grid component"
           description="Elva & Yongbin"
