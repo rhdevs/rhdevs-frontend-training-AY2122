@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const BackgroundContainer = styled.div`
   display: flex;
@@ -25,6 +25,9 @@ export const StarBackground = styled.img`
   display: flex;
   position: relative;
   background-position: top;
+  object-fit: cover;
+  @media (max-width: 768px) {
+  }
 `
 export const HillBackgroundContainer = styled.div`
   background-size: cover;
@@ -35,22 +38,41 @@ export const HillBackground = styled.img`
   height: 100%;
   margin-top: auto;
   margin-bottom: auto;
+  object-fit: cover;
   @media (max-width: 768px) {
   }
 `
 
+const FoldUp = keyframes`
+  from {
+    transform: rotateX(0deg);}
+  to {
+    transform: rotateX(-180deg);}
+`
+const FoldDown = keyframes`
+  from {
+    transform: rotateX(180deg);}
+  to {
+    transform: rotateX(0deg);}
+`
 export const Header = styled.div`
   width: 100%;
-  font-size: 4.5vw;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.7vw;
   position: absolute;
+  font-family: 'Red Hat Text', sans-serif;
   color: white;
   justify-content: center;
   display: flex;
-  top: 10%;
+  top: 20%;
+  @media (max-width: 768px) {
+    font-size: 5vw;
+  }
 `
 export const Countdown = styled.div`
   width: 100%;
+  margin-bottom: 20px;
   font-size: 2.5rem;
   font-weight: 500;
   position: absolute;
@@ -58,4 +80,7 @@ export const Countdown = styled.div`
   justify-content: center;
   display: flex;
   top: 45%;
+  @media (max-width: 768px) {
+    font-size: 6vw;
+  }
 `

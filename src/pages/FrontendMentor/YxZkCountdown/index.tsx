@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import TimeCard from '../../../components/YxZkCountdown/TimeCard'
 import BackgroundStars from '../../../assets/YxZkCountdown/bg-stars.svg'
 import BackgroundHills from '../../../assets/YxZkCountdown/pattern-hills.svg'
 import {
@@ -45,6 +45,7 @@ const CountdownTimer = () => {
     <>
       <BackgroundContainer>
         <Header>{"WE'RE LAUNCHING SOON"}</Header>
+        <TimeCard days={days} hours={hours} minutes={minutes} seconds={seconds} />
         <Countdown>
           {days} days {hours} hours {minutes} minutes {seconds} seconds
         </Countdown>
