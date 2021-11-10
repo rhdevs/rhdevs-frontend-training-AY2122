@@ -5,8 +5,8 @@ export const NewContainer = styled.div`
   width: 95%;
   height: 95%;s
   position: relative;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
   gap: 20px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -42,6 +42,7 @@ export const NumberContainer = styled.div<{ backgroundColor?: string }>`
   padding: 5px;
   border-radius: 10px;
   margin: 5px;
+  overflow: hidden;
 `
 export const DisplayNumber = styled.div`
   width: 100%;
@@ -49,6 +50,7 @@ export const DisplayNumber = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: right;
+  white-space: nowrap;
   align-items: center;
   font-weight: 700;
   font-size: 500%;
