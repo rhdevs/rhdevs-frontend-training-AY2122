@@ -13,8 +13,10 @@ export const MainContainerButton = styled.button<{
 export const ButtonNumber = styled.div<{ textColor?: string }>`
   width: 100%;
   height: 100%;
-  text-align: center;
-  margin-top: 1.3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   font-size: 200%;
   color: white;
