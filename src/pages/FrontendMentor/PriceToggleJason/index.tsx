@@ -16,7 +16,7 @@ import {
   HighlightPriceContainer,
   HighlightPrice,
   NormalDetailsContainer,
-  NormalLearnMoreButton,
+  LearnMoreButton,
   HighlightDetailsContainer,
   HighlightLearnMoreButton,
   BackgroundRight,
@@ -41,7 +41,10 @@ export default function PriceToggleJason() {
       <PageHeader>Our Pricing</PageHeader>
       <ToggleContainer>
         <ToggleWord>Annually</ToggleWord>
-        <Switch onChange={() => togglePackageType}></Switch>
+        <Switch
+          style={{ backgroundImage: 'linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))' }}
+          onChange={() => togglePackageType()}
+        ></Switch>
         <ToggleWord>Monthly</ToggleWord>
       </ToggleContainer>
       <PackagesContainer>
@@ -54,7 +57,7 @@ export default function PriceToggleJason() {
           <NormalDetailsContainer>500 GB Storage</NormalDetailsContainer>
           <NormalDetailsContainer>2 Users Allowed</NormalDetailsContainer>
           <NormalDetailsContainer>Send up to 3 GB</NormalDetailsContainer>
-          <NormalLearnMoreButton>LEARN MORE</NormalLearnMoreButton>
+          <LearnMoreButton isHighlightPackage={false}>LEARN MORE</LearnMoreButton>
         </NormalPackageContainer>
         <HighlightPackageContainer>
           <HighlightAlignmentContainer>
@@ -78,7 +81,7 @@ export default function PriceToggleJason() {
           <NormalDetailsContainer>2 TB Storage</NormalDetailsContainer>
           <NormalDetailsContainer>10 Users Allowed</NormalDetailsContainer>
           <NormalDetailsContainer>Send up to 20 GB</NormalDetailsContainer>
-          <NormalLearnMoreButton>LEARN MORE</NormalLearnMoreButton>
+          <LearnMoreButton isHighlightPackage={false}>LEARN MORE</LearnMoreButton>
         </NormalPackageContainer>
       </PackagesContainer>
     </MainContainer>

@@ -75,6 +75,8 @@ export const NormalPackageContainer = styled.div<{ left: boolean }>`
   ${(props) => (props.left ? 'border-radius: 15px 0px 0px 15px;' : 'border-radius: 0px 15px 15px 0px;')}
   @media (max-width: 768px) {
     width: 90%;
+    margin-bottom: 3vh;
+    border-radius: 15px;
   }
 `
 
@@ -126,7 +128,7 @@ export const NormalDetailsContainer = styled.div`
   color: hsl(233, 13%, 49%);
 `
 
-export const NormalLearnMoreButton = styled.button`
+export const LearnMoreButton = styled.button<{ isHighlightPackage: boolean }>`
   border-radius: 5px;
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: hsl(0, 100%, 100%);
@@ -138,6 +140,7 @@ export const NormalLearnMoreButton = styled.button`
   border: none;
   &:hover {
     background: hsl(0, 100%, 100%);
+    border: 1px solid hsl(237, 63%, 64%);
     color: hsl(237, 63%, 64%);
   }
 `
