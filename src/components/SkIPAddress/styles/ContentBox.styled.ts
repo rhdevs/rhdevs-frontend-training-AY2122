@@ -27,6 +27,7 @@ export const StyledHeader = styled.div`
 `
 
 export const StyledBody = styled.div`
+  margin-top: 1vh;
   font-size: calc(16px + 0.5vw);
   font-weight: 700;
   line-height: 125%;
