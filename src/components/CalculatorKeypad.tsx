@@ -16,20 +16,24 @@ type Props = {
 type Colors = {
   ScreenBackground: string
   KeypadBackground: string
+  textColor: string
 }
 
 const ColorList: Colors[] = [
   {
     ScreenBackground: 'hsl(224, 36%, 15%)',
     KeypadBackground: 'hsl(223, 31%, 20%)',
+    textColor: 'white',
   },
   {
     ScreenBackground: 'hsl(0, 0%, 93%)',
     KeypadBackground: 'hsl(0, 5%, 81%)',
+    textColor: 'hsl(60, 10%, 19%)',
   },
   {
     ScreenBackground: 'hsl(268, 71%, 12%)',
     KeypadBackground: 'hsl(268, 71%, 12%)',
+    textColor: 'hsl(52, 100%, 62%)',
   },
 ]
 
@@ -77,7 +81,7 @@ const CalculatorKeypad = (props: Props) => {
       setNumber2(number2.slice(0, -1))
     } else if (operator !== '') {
       setOperator('')
-    } else if (number1 === 'infinity') {
+    } else if (number1 === 'Infinity' || number1 === '-Infinity') {
       setNumber1('')
     } else {
       setNumber1(number1.slice(0, -1))
@@ -90,7 +94,9 @@ const CalculatorKeypad = (props: Props) => {
   return (
     <MainContainer>
       <NumberContainer backgroundColor={ColorList[props.colorScheme].ScreenBackground}>
-        <DisplayNumber>{number1 + ' ' + operator + ' ' + number2}</DisplayNumber>
+        <DisplayNumber textColor={ColorList[props.colorScheme].textColor}>
+          {number1 + ' ' + operator + ' ' + number2}
+        </DisplayNumber>
       </NumberContainer>
       <CalcContainer backgroundColor={ColorList[props.colorScheme].KeypadBackground}>
         <NewContainer>

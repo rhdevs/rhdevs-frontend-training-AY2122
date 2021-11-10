@@ -44,7 +44,7 @@ export const NumberContainer = styled.div<{ backgroundColor?: string }>`
   margin: 5px;
   overflow: hidden;
 `
-export const DisplayNumber = styled.div`
+export const DisplayNumber = styled.div<{ textColor?: string }>`
   width: 100%;
   height: 100%;
   display: flex;
@@ -54,6 +54,8 @@ export const DisplayNumber = styled.div`
   align-items: center;
   font-weight: 700;
   font-size: 500%;
+  color: white;
+  ${(props) => props.textColor && `color: ${props.textColor};`}
 `
 export const CalcContainer = styled.div<{ backgroundColor?: string }>`
   display: flex;

@@ -22,7 +22,7 @@ const ColorList: Colors[] = [
   },
 ]
 const CalculatorApp = () => {
-  const [colorScheme, setColorScheme] = useState<number>(1)
+  const [colorScheme, setColorScheme] = useState<number>(0)
   return (
     <MainContainer backgroundColor={ColorList[colorScheme].MainBackground}>
       <TopContainer backgroundColor={ColorList[colorScheme].MainBackground}></TopContainer>

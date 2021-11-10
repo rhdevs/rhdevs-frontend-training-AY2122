@@ -24,7 +24,6 @@ type Colors = {
   EqualKeyBackground: string
   EqualKeyShadow: string
   DarkText: string
-  LightText: string
   SpecialText?: string
 }
 
@@ -37,7 +36,6 @@ const ColorList: Colors[] = [
     EqualKeyBackground: 'hsl(6, 63%, 50%)',
     EqualKeyShadow: 'hsl(6, 70%, 34%)',
     DarkText: 'hsl(221, 14%, 31%)',
-    LightText: 'hsl(0, 0, 100%)',
   },
   {
     BaseKeyBackground: 'hsl(45, 7%, 89%)',
@@ -47,7 +45,6 @@ const ColorList: Colors[] = [
     EqualKeyBackground: 'hsl(25, 98%, 40%)',
     EqualKeyShadow: 'hsl(25, 99%, 27%)',
     DarkText: 'hsl(60, 10%, 19%)',
-    LightText: 'hsl(0, 0, 100%)',
   },
   {
     BaseKeyBackground: 'hsl(268, 47%, 21%)',
@@ -56,9 +53,8 @@ const ColorList: Colors[] = [
     RemovalKeyShadow: 'hsl(285, 91%, 52%)',
     EqualKeyBackground: 'hsl(176, 100%, 44%)',
     EqualKeyShadow: 'hsl(177, 92%, 70%)',
-    DarkText: 'hsl(198, 20%, 13%)',
-    LightText: 'hsl(0, 0, 100%)',
-    SpecialText: 'hsl(52, 100%, 62%)',
+    SpecialText: 'hsl(198, 20%, 13%)',
+    DarkText: 'hsl(52, 100%, 62%)',
   },
 ]
 
@@ -74,7 +70,9 @@ const CalculatorButton = (props: Props) => {
           backgroundColor={ColorList[props.colorScheme].BaseKeyBackground}
           backgroundShadow={ColorList[props.colorScheme].BaseKeyShadow}
         >
-          <ButtonNumber onClick={test}>{props.value}</ButtonNumber>
+          <ButtonNumber onClick={test} textColor={ColorList[props.colorScheme].DarkText}>
+            {props.value}
+          </ButtonNumber>
         </MainContainerButton>
       ) : props.isRemoval ? (
         <MainContainerButton
@@ -88,7 +86,7 @@ const CalculatorButton = (props: Props) => {
           backgroundColor={ColorList[props.colorScheme].EqualKeyBackground}
           backgroundShadow={ColorList[props.colorScheme].EqualKeyShadow}
         >
-          <ButtonNumber>{props.value}</ButtonNumber>
+          <ButtonNumber textColor={ColorList[props.colorScheme].SpecialText}>{props.value}</ButtonNumber>
         </MainContainerButton>
       ) : (
         console.log('no button')
