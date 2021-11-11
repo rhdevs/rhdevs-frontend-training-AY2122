@@ -64,7 +64,7 @@ export const NormalDetailsContainer = styled.div`
   color: hsl(233, 13%, 49%);
 `
 
-export const LearnMoreButton = styled.button<{ isHighlightPackage: boolean }>`
+export const LearnMoreButton = styled.button`
   border-radius: 5px;
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: hsl(0, 100%, 100%);

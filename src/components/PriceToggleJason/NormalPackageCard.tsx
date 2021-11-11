@@ -17,7 +17,6 @@ interface PackageDetails {
   storageCapacity: string
   noOfUsers: number
   sendCapacity: number
-  isHighlightPackage: boolean
 }
 
 const NormalPackageCard = (props: PackageDetails) => {
@@ -31,7 +30,7 @@ const NormalPackageCard = (props: PackageDetails) => {
       <NormalDetailsContainer>{props.storageCapacity} Storage</NormalDetailsContainer>
       <NormalDetailsContainer>{props.noOfUsers} Users Allowed</NormalDetailsContainer>
       <NormalDetailsContainer>Send up to {props.sendCapacity} GB</NormalDetailsContainer>
-      <LearnMoreButton isHighlightPackage={props.isHighlightPackage}>LEARN MORE</LearnMoreButton>
+      <LearnMoreButton>LEARN MORE</LearnMoreButton>
     </NormalPackageContainer>
   )
 }
