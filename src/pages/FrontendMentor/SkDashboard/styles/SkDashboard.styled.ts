@@ -1,15 +1,4 @@
-import styled, { createGlobalStyle, DefaultTheme, ThemeProviderComponent } from 'styled-components'
-
-// declare module 'styled-components' {
-//   export interface DefaultTheme {
-//     body: string
-//     text: string
-//     headingText: string
-//     toggleBorder: string
-//     background: string
-//     cardBackground: string
-//   }
-// }
+import styled, { DefaultTheme } from 'styled-components'
 
 export const darkTheme: DefaultTheme = {
   body: 'hsl(230, 17%, 14%)',
