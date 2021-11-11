@@ -6,9 +6,9 @@ export const StyledContainer = styled.div`
   width: 13vw;
   height: 100%;
   @media (min-width: 786px) {
-    margin: 0 auto 0 2vw;
-    padding-top: 3vh;
-    overflow-y: auto;
+    margin: 0 auto 4vh 2vw;
+    padding-top: 6vh;
+    overflow: auto;
   }
   @media (max-width: 786px) {
     width: 100%;
@@ -34,8 +34,9 @@ export const StyledBody = styled.div`
   margin-top: 1vh;
   font-size: calc(10px + 0.5vw + 0.8vh);
   font-weight: 700;
-  line-height: 125%;
+  line-height: 110%;
   @media (max-width: 786px) {
     font-size: calc(14px + 0.5vw);
+    line-height: 125%;
   }
 `
