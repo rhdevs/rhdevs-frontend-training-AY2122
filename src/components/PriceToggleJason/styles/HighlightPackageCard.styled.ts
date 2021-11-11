@@ -64,7 +64,7 @@ export const HighlightDetailsContainer = styled.div`
   font-size: 16px;
   color: hsl(0, 100%, 100%);
   padding-bottom: 2vh;
-  font-weight: 800;
+  font-weight: 700;
   font-family: 'Montserrat';
   width: 80%;
   vertical-align: middle;
@@ -78,7 +78,7 @@ export const HighlightLearnMoreButton = styled.button`
   height: 5vh;
   width: 80%;
   margin: auto;
-  font-weight: 800;
+  font-weight: 700;
   font-family: 'Montserrat';
   border: none;
   border: none;

@@ -58,7 +58,7 @@ export const NormalDetailsContainer = styled.div`
   font-size: 16px;
   padding-bottom: 2vh;
   font-family: 'Montserrat';
-  font-weight: 800;
+  font-weight: 700;
   width: 80%;
   border-bottom: 1px solid grey;
   color: hsl(233, 13%, 49%);
@@ -71,7 +71,7 @@ export const LearnMoreButton = styled.button`
   height: 5vh;
   width: 80%;
   margin: auto;
-  font-weight: 800;
+  font-weight: 700;
   font-family: 'Montserrat';
   border: none;
   &:hover {
