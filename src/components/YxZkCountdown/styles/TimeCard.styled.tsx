@@ -123,5 +123,7 @@ export const TimeCardLabel = styled.div`
   color: #8486a9;
   @media (max-width: 768px) {
     font-size: 0.5rem;
+    letter-spacing: 0.2rem;
+    margin-top: 0.5rem;
   }
 `
