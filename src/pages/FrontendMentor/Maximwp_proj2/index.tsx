@@ -3,7 +3,16 @@ import React, { useState } from 'react'
 import { Cont } from '../../../components/MaximWPproj2/Containers'
 import { CentCont } from '../../../components/MaximWPproj2/MainCont.styled'
 
-import { MainContainer, MainBox, TopBox, Minibox, Pricing, ToggleBetween, SwitchStyle } from './styles/styled'
+import {
+  MainContainer,
+  MainBox,
+  TopBox,
+  Minibox,
+  Pricing,
+  ToggleBetween,
+  SwitchStyle,
+  SwitchStyle1,
+} from './styles/styled'
 
 export default function App() {
   const [monthly, setMonthly] = useState(false)
@@ -17,6 +26,7 @@ export default function App() {
             <Minibox>
               <ToggleBetween> Annually </ToggleBetween>
               <Switch transform-function={[2, 2]} style={SwitchStyle} onChange={() => setMonthly(!monthly)}></Switch>
+              <SwitchStyle1></SwitchStyle1>
               <ToggleBetween> Monthly </ToggleBetween>
             </Minibox>
           </div>

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import bgbtm from '../images/bg-bottom.svg'
 import bgtop from '../images/bg-top.svg'
+import { Switch } from 'antd'
 
 export const MainBox = styled.div`
   width: 100%;
@@ -72,3 +73,40 @@ export const SwitchStyle = {
   margin: '1rem',
   alignItems: 'center',
 }
+
+export const SwitchStyle1 = styled(Switch)`
+  .ant-switch-primary {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 44px;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 0;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .ant-switch-handle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    transition: all 0.2s ease-in-out;
+  }
+`
