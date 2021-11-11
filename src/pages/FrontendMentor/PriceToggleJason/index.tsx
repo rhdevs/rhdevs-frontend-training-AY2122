@@ -2,27 +2,21 @@ import React, { useState } from 'react'
 import {
   HighlightPackageContainer,
   MainContainer,
-  NormalPackageContainer,
-  PackageHeader,
   HighlightPackageHeader,
   PackagesContainer,
   PageHeader,
   ToggleContainer,
   ToggleWord,
   HighlightAlignmentContainer,
-  NormalPriceContainer,
-  DollarSign,
-  NormalPrice,
   HighlightPriceContainer,
   HighlightPrice,
-  NormalDetailsContainer,
-  LearnMoreButton,
   HighlightDetailsContainer,
   HighlightLearnMoreButton,
   BackgroundRight,
   BackgroundLeft,
   HighlightDollarSign,
 } from './styles/PriceToggleJasonStyles'
+import NormalPackageCard from '../../../components/PriceToggleJason/NormalPackageCard'
 import { Switch } from 'antd'
 import RightImage from './info/images/bg-top.svg'
 import LeftImage from './info/images/bg-bottom.svg'
@@ -48,17 +42,16 @@ export default function PriceToggleJason() {
         <ToggleWord>Monthly</ToggleWord>
       </ToggleContainer>
       <PackagesContainer>
-        <NormalPackageContainer left={true}>
-          <PackageHeader>Basic</PackageHeader>
-          <NormalPriceContainer>
-            <DollarSign>$</DollarSign>
-            <NormalPrice>{monthly ? '19.99' : '199.99'}</NormalPrice>
-          </NormalPriceContainer>
-          <NormalDetailsContainer>500 GB Storage</NormalDetailsContainer>
-          <NormalDetailsContainer>2 Users Allowed</NormalDetailsContainer>
-          <NormalDetailsContainer>Send up to 3 GB</NormalDetailsContainer>
-          <LearnMoreButton isHighlightPackage={false}>LEARN MORE</LearnMoreButton>
-        </NormalPackageContainer>
+        <NormalPackageCard
+          left={true}
+          isMonthly={monthly}
+          monthlyPrice={19.99}
+          annuallyPrice={199.99}
+          storageCapacity={'500 GB'}
+          noOfUsers={2}
+          sendCapacity={3}
+          isHighlightPackage={false}
+        />
         <HighlightPackageContainer>
           <HighlightAlignmentContainer>
             <HighlightPackageHeader>Professional</HighlightPackageHeader>
@@ -72,17 +65,16 @@ export default function PriceToggleJason() {
             <HighlightLearnMoreButton>LEARN MORE</HighlightLearnMoreButton>
           </HighlightAlignmentContainer>
         </HighlightPackageContainer>
-        <NormalPackageContainer left={false}>
-          <PackageHeader>Master</PackageHeader>
-          <NormalPriceContainer>
-            <DollarSign>$</DollarSign>
-            <NormalPrice>{monthly ? '39.99' : '399.99'}</NormalPrice>
-          </NormalPriceContainer>
-          <NormalDetailsContainer>2 TB Storage</NormalDetailsContainer>
-          <NormalDetailsContainer>10 Users Allowed</NormalDetailsContainer>
-          <NormalDetailsContainer>Send up to 20 GB</NormalDetailsContainer>
-          <LearnMoreButton isHighlightPackage={false}>LEARN MORE</LearnMoreButton>
-        </NormalPackageContainer>
+        <NormalPackageCard
+          left={false}
+          isMonthly={monthly}
+          monthlyPrice={39.99}
+          annuallyPrice={399.99}
+          storageCapacity={'2 TB'}
+          noOfUsers={10}
+          sendCapacity={20}
+          isHighlightPackage={false}
+        />
       </PackagesContainer>
     </MainContainer>
   )
