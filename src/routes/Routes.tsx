@@ -71,14 +71,14 @@ const MarcusFEMentor = React.lazy(
   () => import(/* webpackChunckName: "MarcusFEMentor" */ '../pages/FrontendMentor/MarcusFEMentor'),
 )
 const MarcusFEMentor2Home = React.lazy(
-  () => import(/* webpackChunckName: "MarcusFEMentor2" */ '../pages/FrontendMentor/MarcusFEMentor2/'),
+  () => import(/* webpackChunckName: "MarcusFEMentor2" */ '../pages/FrontendMentor/MarcusFEMentor2/mainPage'),
 )
 const MarcusFEMentor2About = React.lazy(
-  () => import(/* webpackChunckName: "MarcusFEMentor2_about" */ '../pages/FrontendMentor/MarcusFEMentor2/about_page'),
+  () => import(/* webpackChunckName: "MarcusFEMentor2_about" */ '../pages/FrontendMentor/MarcusFEMentor2/aboutPage'),
 )
 const MarcusFEMentor2Contact = React.lazy(
   () =>
-    import(/* webpackChunckName: "MarcusFEMentor2_contact" */ '../pages/FrontendMentor/MarcusFEMentor2/contact_page'),
+    import(/* webpackChunckName: "MarcusFEMentor2_contact" */ '../pages/FrontendMentor/MarcusFEMentor2/contactPage'),
 )
 const CountriesSwitch = React.lazy(
   () => import(/* webpackChunckName: "CountriesSwitch" */ '../pages/FrontendMentor/MarcusFEMentor/CountriesSwitch'),

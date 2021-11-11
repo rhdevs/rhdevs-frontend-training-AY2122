@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ContactButton, HeaderBarLinks, MyTeamLogo } from './IndexPageComponents'
+import { ContactButton, HeaderBarLinks, MyTeamLogo } from './GlobalComponents'
 import {
   FooterAddressStyled,
   FooterCopyrightStyled,

@@ -4,8 +4,12 @@ import {
   darkGreen,
   lightCoral,
   sacramentoStateGreen,
+  white,
 } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/Colours.styled'
-import { PageDiv, SocialMediaIconHover } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/DivStyles.styled'
+import {
+  PageDiv,
+  SocialMediaIconHover,
+} from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/GlobalDivStyles.styled'
 import { h2Styled, body2 } from '../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
 
 // width 1440px (rel), height 745px (abs)
@@ -92,6 +96,8 @@ export const FooterAddressStyled = styled.div`
 
   mix-blend-mode: normal;
   opacity: 0.6;
+
+  color: ${white};
 `
 
 export const FooterLowerRightStyled = styled.div`
