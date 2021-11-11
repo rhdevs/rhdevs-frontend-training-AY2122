@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyledContainer, StyledImage } from './styles/Background.styled'
-import BgImage from '../../assets/SkIPAddress/images/pattern-bg.png'
+import bgImage from '../../assets/SkIPAddress/images/pattern-bg.png'
 
 const Background = () => {
   return (
     <StyledContainer>
-      <StyledImage src={BgImage} />
+      <StyledImage src={bgImage} />
     </StyledContainer>
   )
 }

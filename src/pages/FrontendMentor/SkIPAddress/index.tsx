@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
+import { TileLayer, Marker, useMap } from 'react-leaflet'
 
 import Background from '../../../components/SkIPAddress/Background'
 import ContentBox from '../../../components/SkIPAddress/ContentBox'
@@ -12,7 +13,6 @@ import {
   StyledHeader,
   StyledInput,
 } from './styles/SkIPAddress.styled'
-import { TileLayer, Marker, useMap } from 'react-leaflet'
 
 type RequestData = {
   location?: Location
@@ -60,7 +60,7 @@ const SkIPAddress = () => {
   const ChangeView = () => {
     const map = useMap()
     if (info.location) {
-      map.setView([info.location.lat, info.location.lng], 15)
+      map.setView([info.location.lat, info.location.lng], 15, { animate: true })
     }
     return null
   }
