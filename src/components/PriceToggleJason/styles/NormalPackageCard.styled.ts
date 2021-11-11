@@ -33,7 +33,7 @@ export const NormalPriceContainer = styled.div`
   width: 80%;
   margin-top: 1vh;
   height: 12vh;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid hsl(197, 10%, 87%);
   @media (max-width: 768px) {
     margin-top: 0vh;
     height: 15vh;
@@ -64,7 +64,7 @@ export const NormalDetailsContainer = styled.div`
   font-family: 'Montserrat';
   font-weight: 700;
   width: 80%;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid hsl(197, 10%, 87%);
   color: hsl(233, 13%, 49%);
   @media (max-width: 768px) {
     font-size: 14px;
