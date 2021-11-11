@@ -81,4 +81,10 @@ export const HighlightLearnMoreButton = styled.button`
   font-weight: 800;
   font-family: 'Montserrat';
   border: none;
+  border: none;
+  &:hover {
+    background: hsl(237, 63%, 64%);
+    border: 1px solid hsl(0, 100%, 100%);
+    color: hsl(0, 100%, 100%);
+  }
 `
