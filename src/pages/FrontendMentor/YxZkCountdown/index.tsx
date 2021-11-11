@@ -10,7 +10,14 @@ import {
   StarBackgroundContainer,
   HillBackgroundContainer,
   Countdown,
+  TimeCardContainer,
+  SocialMediaContainer,
+  SocialMediaIcon,
 } from './styles/YxZkCountdown.styled'
+
+import PinterestIcon from '../../../assets/YxZkCountdown/icon-pinterest.svg'
+import FacebookIcon from '../../../assets/YxZkCountdown/icon-facebook.svg'
+import InstagramIcon from '../../../assets/YxZkCountdown/icon-instagram.svg'
 
 const CountdownTimer = () => {
   const [days, setDays] = useState<number>(0)
@@ -45,16 +52,20 @@ const CountdownTimer = () => {
     <>
       <BackgroundContainer>
         <Header>{"WE'RE LAUNCHING SOON"}</Header>
-        <TimeCard days={days} hours={hours} minutes={minutes} seconds={seconds} />
-        <Countdown>
-          {days} days {hours} hours {minutes} minutes {seconds} seconds
-        </Countdown>
+        <TimeCardContainer>
+          <TimeCard days={days} hours={hours} minutes={minutes} seconds={seconds} />
+        </TimeCardContainer>
         <StarBackgroundContainer>
           <StarBackground src={BackgroundStars} />
         </StarBackgroundContainer>
         <HillBackgroundContainer>
           <HillBackground src={BackgroundHills} />
         </HillBackgroundContainer>
+        <SocialMediaContainer>
+          <SocialMediaIcon src={FacebookIcon} />
+          <SocialMediaIcon src={PinterestIcon} />
+          <SocialMediaIcon src={InstagramIcon} />
+        </SocialMediaContainer>
       </BackgroundContainer>
     </>
   )

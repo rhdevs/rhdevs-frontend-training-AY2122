@@ -63,34 +63,38 @@ const TransformTop = keyframes`
 `
 
 export const TimeBox = styled.div`
-  width: 7rem;
-  height: 7rem;
+  width: 8.5rem;
+  height: 8rem;
   display: block;
-  position: absolute;
-  border-radius: 0.4rem;
-  perspective: 30rem;
+  position: relative;
+  border-radius: 0.6rem;
+  perspective: 800px;
   background-color: #343650;
   perspective-origin: center;
   &.tophalf {
-    background-color: rgba(0, 255, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    z-index: 2;
     width: 100%;
     height: 50%;
-    animation: ${TransformTop} 1s ease-in-out infinite;
+    animation: ${TransformTop} 1s linear 1;
   }
   &.bottomhalf {
     width: 100%;
+    position: absolute;
     top: 50%;
     height: 50%;
-    background-color: rgba(0, 255, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.1);
   }
   &.bar {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.25);
     width: 100%;
-    height: 0.5px;
+    height: 1px;
     top: 50%;
     left: 0;
     right: 0;
+    z-index: 1;
   }
   &.right-curve {
     top: 50%;
@@ -102,6 +106,7 @@ export const TimeBox = styled.div`
     left: auto;
     background-color: #1e1f29;
     transform: translate(50%, -50%);
+    z-index: 1;
   }
   &.left-curve {
     top: 50%;
@@ -112,6 +117,25 @@ export const TimeBox = styled.div`
     left: 0;
     background-color: #1e1f29;
     transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  &.number {
+    font-size: 5.5rem;
+    color: #fb6087;
+    font-weight: 700;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    font-family: 'Red Hat Text', sans-serif;
+    @media (max-width: 768px) {
+      font-size: 3.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 5.25rem;
+    height: 5rem;
   }
 `
 
@@ -127,5 +151,26 @@ export const Countdown = styled.div`
   top: 45%;
   @media (max-width: 768px) {
     font-size: 6vw;
+  }
+`
+export const TimeCardContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+`
+export const TimeCardLabel = styled.div`
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-family: 'Red Hat Text', sans-serif;
+  color: #8486a9;
+  @media (max-width: 768px) {
+    font-size: 0.5rem;
   }
 `

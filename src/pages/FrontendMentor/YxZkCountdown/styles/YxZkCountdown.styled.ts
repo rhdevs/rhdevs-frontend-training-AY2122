@@ -4,6 +4,7 @@ export const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: #1e1f29;
   background-size: cover;
@@ -57,9 +58,9 @@ const FoldDown = keyframes`
 `
 export const Header = styled.div`
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.7vw;
+  letter-spacing: 0.5vw;
   position: absolute;
   font-family: 'Red Hat Text', sans-serif;
   color: white;
@@ -67,7 +68,8 @@ export const Header = styled.div`
   display: flex;
   top: 20%;
   @media (max-width: 768px) {
-    font-size: 5vw;
+    font-size: 1rem;
+    top: 30%;
   }
 `
 export const Countdown = styled.div`
@@ -82,5 +84,29 @@ export const Countdown = styled.div`
   top: 45%;
   @media (max-width: 768px) {
     font-size: 6vw;
+  }
+`
+
+export const TimeCardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  @media (max-width: 768px) {
+  }
+`
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  gap: 30px;
+  bottom: 10vh;
+`
+
+export const SocialMediaIcon = styled.img`
+  width: 2rem;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
   }
 `
