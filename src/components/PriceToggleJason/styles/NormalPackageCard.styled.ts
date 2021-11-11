@@ -34,19 +34,23 @@ export const NormalPriceContainer = styled.div`
   margin-top: 1vh;
   height: 12vh;
   border-bottom: 1px solid grey;
+  @media (max-width: 768px) {
+    margin-top: 0vh;
+    height: 15vh;
+  }
 `
 
 export const DollarSign = styled.div`
   font-family: 'Montserrat';
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 2vh;
   color: hsl(232, 13%, 33%);
 `
 
 export const NormalPrice = styled.div`
   font-family: 'Montserrat';
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 700;
   text-align: center;
   color: hsl(232, 13%, 33%);
@@ -62,6 +66,9 @@ export const NormalDetailsContainer = styled.div`
   width: 80%;
   border-bottom: 1px solid grey;
   color: hsl(233, 13%, 49%);
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `
 
 export const LearnMoreButton = styled.button`

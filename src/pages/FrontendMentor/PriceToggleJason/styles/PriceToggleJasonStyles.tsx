@@ -5,6 +5,10 @@ export const MainContainer = styled.div`
   background: hsl(240, 78%, 98%);
   height: 100vh;
   z-index: 0;
+  @media (max-width: 768px) {
+    margin-top: 0vh;
+    height: 200vh;
+  }
 `
 
 export const BackgroundRight = styled.img`
@@ -61,5 +65,6 @@ export const PackagesContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: 180vh;
   }
 `

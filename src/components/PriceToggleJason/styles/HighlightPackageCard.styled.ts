@@ -6,6 +6,8 @@ export const HighlightPackageContainer = styled.div`
   border-radius: 15px;
   @media (max-width: 768px) {
     width: 90%;
+    margin-bottom: 3vh;
+    height: 100vh;
   }
 `
 
@@ -27,6 +29,10 @@ export const HighlightAlignmentContainer = styled.div`
   justify-content: center;
   height: 90%;
   margin-top: 3vh;
+  @media (max-width: 768px) {
+    margin-bottom: 3vh;
+    border-radius: 15px;
+  }
 `
 
 export const HighlightPriceContainer = styled.div`
@@ -38,12 +44,16 @@ export const HighlightPriceContainer = styled.div`
   height: 12vh;
   color: hsl(0, 100%, 100%);
   border-bottom: 1px solid white;
+  @media (max-width: 768px) {
+    margin-top: 0;
+    height: 15vh;
+  }
 `
 
 export const HighlightDollarSign = styled.div`
   font-family: 'Montserrat';
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
   margin-top: 2vh;
   color: hsl(0, 100%, 100%);
 `
@@ -52,7 +62,7 @@ export const HighlightPrice = styled.div`
   position: relative;
   z-index: 50;
   font-family: 'Montserrat';
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 700;
   text-align: center;
   color: hsl(0, 100%, 100%);
@@ -67,8 +77,12 @@ export const HighlightDetailsContainer = styled.div`
   font-weight: 700;
   font-family: 'Montserrat';
   width: 80%;
-  vertical-align: middle;
   border-bottom: 1px solid white;
+  @media (max-width: 768px) {
+    padding-top: 1.5vh;
+    height: 7vh;
+    font-size: 14px;
+  }
 `
 
 export const HighlightLearnMoreButton = styled.button`
@@ -81,10 +95,13 @@ export const HighlightLearnMoreButton = styled.button`
   font-weight: 700;
   font-family: 'Montserrat';
   border: none;
-  border: none;
   &:hover {
+    margin-top: 5vh;
     background: hsl(237, 63%, 64%);
     border: 1px solid hsl(0, 100%, 100%);
     color: hsl(0, 100%, 100%);
+  }
+  @media (max-width: 768px) {
+    margin-top: 2.5vh;
   }
 `
