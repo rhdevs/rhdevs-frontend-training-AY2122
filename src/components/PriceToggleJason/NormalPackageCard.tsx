@@ -22,7 +22,7 @@ interface PackageDetails {
 const NormalPackageCard = (props: PackageDetails) => {
   return (
     <NormalPackageContainer left={props.left}>
-      <PackageHeader>Basic</PackageHeader>
+      <PackageHeader>{props.left ? 'Basic' : 'Master'}</PackageHeader>
       <NormalPriceContainer>
         <DollarSign>$</DollarSign>
         <NormalPrice>{props.isMonthly ? props.monthlyPrice : props.annuallyPrice}</NormalPrice>
