@@ -1,54 +1,5 @@
 import styled, { keyframes } from 'styled-components'
 
-const FoldUp = keyframes`
-  from {
-    transform: rotateX(0deg);}
-  to {
-    transform: rotateX(-180deg);}
-`
-const FoldDown = keyframes`
-  from {
-    transform: rotateX(180deg);}
-  to {
-    transform: rotateX(0deg);}
-`
-
-const RotateTop = keyframes`
-  transform: translate(-50%, -50%);
-  0% {
-    transform: rotate3d(0);
-  }
-  50% {
-    transform: rotate3d(-1, 0, 0, 90deg);
-  }
-  100% {
-    transform: rotate3d(-1, 0, 0, 90deg);
-  }
-`
-const RotateBottom = keyframes`
-  transform: translate(-50%, -50%);
-  0% {
-    transform: rotate3d(1, 0, 0, 90deg);
-  }
-  50% {
-    transform: rotate3d(1, 0, 0, 90deg);
-  }
-  100% {
-    transform: rotate3d(0);
-  }
-`
-const TransformAbout = keyframes`
-  0% {
-    transform: rotate3d(1, 0, 0, 90deg);
-    transform-origin: -50% -10%;
-  }
-  50% {
-    transform: rotate3d(1, 0, 0, 45deg);
-  }
-  100% {
-    transform: rotate3d(1, 0, 0, 0deg);
-  }
-`
 const TransformTop = keyframes`
   0% {
     transform: rotate3d(-1, 0, 0, 0deg);
