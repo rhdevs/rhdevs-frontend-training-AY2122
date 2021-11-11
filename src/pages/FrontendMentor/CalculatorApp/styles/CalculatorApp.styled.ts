@@ -30,6 +30,7 @@ export const ButtonContainer = styled.div<{ backgroundColor?: string }>`
   padding-left: 1vh;
   padding-right: 0.8vh;
   padding-top: 0.7vh;
+
   ${(props) => props.backgroundColor && `background-color: ${props.backgroundColor};`}
 `
 export const Button = styled.button<{
@@ -48,11 +49,10 @@ export const Button = styled.button<{
 `
 export const Textbox = styled.div<{ TextColor?: string }>`
   display: flex;
-  justify-content: space-between;
   width: 8.5vh;
+  justify-content: space-between;
   font-weight: 700;
   margin-bottom: 0.5vh;
-  float: right;
   ${(props) => props.TextColor && `color: ${props.TextColor};`}
 `
 export const Containers = styled.div<{ width?: number }>`
