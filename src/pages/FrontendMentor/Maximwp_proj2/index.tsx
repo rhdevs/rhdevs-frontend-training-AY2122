@@ -25,8 +25,7 @@ export default function App() {
             <Pricing> Our Pricing </Pricing>
             <Minibox>
               <ToggleBetween> Annually </ToggleBetween>
-              <Switch transform-function={[2, 2]} style={SwitchStyle} onChange={() => setMonthly(!monthly)}></Switch>
-              <SwitchStyle1></SwitchStyle1>
+              <SwitchStyle1 onChange={() => setMonthly(!monthly)}></SwitchStyle1>
               <ToggleBetween> Monthly </ToggleBetween>
             </Minibox>
           </div>

@@ -36,8 +36,7 @@ export const Pricing = styled.div`
 `
 export const ToggleBetween = styled.div`
   text-align: center;
-  font-size: 12px;
-  margin: 1rem;
+  font-size: 15px;
 `
 export const MainContainer = styled.div`
   display: flex;
@@ -72,41 +71,19 @@ export const SwitchStyle = {
   color: '#016972',
   margin: '1rem',
   alignItems: 'center',
+  width: '80px',
+  height: '30px',
 }
 
 export const SwitchStyle1 = styled(Switch)`
-  .ant-switch-primary {
-    margin: 0;
-    padding: 0;
-    color: rgba(0, 0, 0, 0.85);
-    font-size: 14px;
-    font-variant: tabular-nums;
-    line-height: 1.5715;
-    list-style: none;
-    font-feature-settings: 'tnum';
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    min-width: 44px;
-    height: 22px;
-    line-height: 22px;
-    vertical-align: middle;
-    background-color: rgba(0, 0, 0, 0.25);
-    border: 0;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: all 0.2s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 80px;
+  height: 30px;
   .ant-switch-handle {
-    position: absolute;
-    top: 2px;
-    left: 2px;
     width: 18px;
-    height: 18px;
-    transition: all 0.2s ease-in-out;
+    height: 25px;
+  }
+  .ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 25px - 2px);
   }
 `
