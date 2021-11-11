@@ -74,10 +74,12 @@ export const PageViewPriceContainer = styled.div`
 export const PageViewContainer = styled.div`
   width: 50%;
   color: black;
+  text-align: center;
 `
 export const PriceContainer = styled.div`
   width: 50%;
   color: black;
+  text-align: center;
 `
 export const RightTrialButton = styled.div``
 export const LeftTrialText = styled.div``

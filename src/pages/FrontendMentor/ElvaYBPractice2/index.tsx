@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Slider, Switch } from 'antd'
 
 import {
@@ -15,18 +15,17 @@ import {
 } from './styles/SliderComponent.styled'
 
 const marks = {
-  0: '0°C',
-  26: '26°C',
-  37: '37°C',
-  100: {
-    style: {
-      color: '#f50',
-    },
-    label: <strong>100°C</strong>,
-  },
+  0: '',
+  25: '',
+  50: '',
+  75: '',
+  100: '',
 }
 
 const ElvaYBPractice = () => {
+  const [views, setViews] = useState(50)
+  const [toggle, setToggle] = useState(false)
+  console.log(views)
   return (
     <>
       <MainPage>
@@ -36,12 +35,59 @@ const ElvaYBPractice = () => {
         </TopComponent>
         <MainComponent>
           <PageViewPriceContainer>
-            <PageViewContainer>100k PageViews</PageViewContainer>
-            <PriceContainer>$16.00/Month</PriceContainer>
+            {toggle === false ? (
+              views === 0 ? (
+                <PageViewContainer>{10}k Pageviews</PageViewContainer>
+              ) : views === 25 ? (
+                <PageViewContainer>{50}k Pageviews</PageViewContainer>
+              ) : views === 50 ? (
+                <PageViewContainer>{100}k Pageviews</PageViewContainer>
+              ) : views === 75 ? (
+                <PageViewContainer>{500}k Pageviews</PageViewContainer>
+              ) : (
+                <PageViewContainer>{1}M Pageviews</PageViewContainer>
+              )
+            ) : views === 0 ? (
+              <PageViewContainer>{10}k Pageviews</PageViewContainer>
+            ) : views === 25 ? (
+              <PageViewContainer>{50}k Pageviews</PageViewContainer>
+            ) : views === 50 ? (
+              <PageViewContainer>{100}k Pageviews</PageViewContainer>
+            ) : views === 75 ? (
+              <PageViewContainer>{500}k Pageviews</PageViewContainer>
+            ) : (
+              <PageViewContainer>{1}M Pageviews</PageViewContainer>
+            )}
+
+            {toggle === false ? (
+              views === 0 ? (
+                <PriceContainer>$8.00</PriceContainer>
+              ) : views === 25 ? (
+                <PriceContainer>$12.00</PriceContainer>
+              ) : views === 50 ? (
+                <PriceContainer>$16.00</PriceContainer>
+              ) : views === 75 ? (
+                <PriceContainer>$24.00</PriceContainer>
+              ) : (
+                <PriceContainer>$36.00</PriceContainer>
+              )
+            ) : views === 0 ? (
+              <PriceContainer>$6.00</PriceContainer>
+            ) : views === 25 ? (
+              <PriceContainer>$9.00</PriceContainer>
+            ) : views === 50 ? (
+              <PriceContainer>$12.00</PriceContainer>
+            ) : views === 75 ? (
+              <PriceContainer>$18.00</PriceContainer>
+            ) : (
+              <PriceContainer>$27.00</PriceContainer>
+            )}
+            <PriceContainer>/Month</PriceContainer>
           </PageViewPriceContainer>
           <Slidercontainer>
-            <Slider marks={marks} step={null} defaultValue={37} />
+            <Slider marks={marks} onChange={(value) => setViews(value)} step={null} defaultValue={50} />
           </Slidercontainer>
+          <Switch onChange={(checked) => setToggle(checked)} />
         </MainComponent>
       </MainPage>
     </>
