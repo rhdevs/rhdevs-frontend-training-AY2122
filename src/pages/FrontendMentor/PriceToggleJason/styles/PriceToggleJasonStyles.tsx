@@ -46,12 +46,11 @@ export const ToggleContainer = styled.div`
   padding-top: 4vh;
 `
 
-export const ToggleSwitch = {
-  backgroundImage: 'linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))',
-}
-
 export const SwitchButton = styled(Switch)`
   background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  &:hover {
+    opacity: 0.6;
+  }
 `
 
 export const ToggleWord = styled.div`
