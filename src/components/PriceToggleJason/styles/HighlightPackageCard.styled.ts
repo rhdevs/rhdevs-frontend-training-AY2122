@@ -4,6 +4,7 @@ export const HighlightPackageContainer = styled.div`
   width: 25%;
   background: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-radius: 15px;
+  width: 280px;
   @media (max-width: 768px) {
     width: 90%;
     margin-top: 3vh;

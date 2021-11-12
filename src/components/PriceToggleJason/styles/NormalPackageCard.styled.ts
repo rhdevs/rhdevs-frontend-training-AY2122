@@ -6,7 +6,7 @@ export const NormalPackageContainer = styled.div<{ left: boolean }>`
   justify-content: center;
   margin-top: 3vh;
   height: 90%;
-  width: 25%;
+  width: 280px;
   background: hsl(0, 100%, 100%);
   ${(props) => (props.left ? 'border-radius: 15px 0px 0px 15px;' : 'border-radius: 0px 15px 15px 0px;')}
   @media (max-width: 768px) {
