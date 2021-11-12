@@ -20,6 +20,7 @@ const ShoppingListMain = () => {
         <ShoppingCard names="Example" onClick={() => history.push(PATHS.EXAMPLE_SHOPPING_PAGE)} />
         <ShoppingCard names="Tai, Prince" onClick={() => history.push(PATHS.SHOPPING_LIST_ANIME_GANG)} />
         <ShoppingCard names="Prince, Tai (Redux)" onClick={() => history.push(PATHS.SHOPPING_LIST_ANIME_GANG_REDUX)} />
+        <ShoppingCard names="Tai, Prince" onClick={() => history.push(PATHS.SHOPPING_LIST_ANIME_GANG)} />
 
         <ShoppingCard names="Elva, Ki Yong" onClick={() => history.push(PATHS.SHOPPING_PAGE_PAIR_FOUR)} />
         <ShoppingCard names="Elva, Ki Yong (Redux)" onClick={() => history.push(PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX)} />
