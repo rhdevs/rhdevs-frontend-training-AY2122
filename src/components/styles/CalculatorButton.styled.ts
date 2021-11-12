@@ -11,12 +11,7 @@ export const MainContainerButton = styled.button<{
   ${(props) => props.backgroundShadow && `box-shadow: 0px 3px ${props.backgroundShadow};`}
 `
 export const ButtonNumber = styled.div<{ textColor?: string }>`
-  @media (min-width: 601px) {
-    font-size: 200%;
-  }
-  @media (max-width: 600px) {
-    font-size: 100%;
-  }
+  font-size: 200%;
   width: 100%;
   height: 100%;
   display: flex;

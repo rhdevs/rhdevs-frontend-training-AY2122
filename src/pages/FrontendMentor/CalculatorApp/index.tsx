@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import {
   MainContainer,
-  TopContainer,
   ButtonContainer,
   Button,
   Textbox,
   Containers,
+  TopRightContainer,
+  TopLeftContainer,
 } from './styles/CalculatorApp.styled'
 import CalculatorKeypad from '../../../components/CalculatorKeypad'
 
@@ -67,40 +68,45 @@ const CalculatorApp = () => {
 
   return (
     <MainContainer backgroundColor={ColorList[colorScheme].MainBackground}>
-      <TopContainer backgroundColor={ColorList[colorScheme].MainBackground}></TopContainer>
-      <Containers width={46.5}>
+      <Containers>
         <Textbox TextColor={ColorList[colorScheme].TextColor}>
           <div>1</div>
           <div>2</div>
           <div>3</div>
         </Textbox>
       </Containers>
-      <Containers width={48}>
-        <Textbox TextColor={ColorList[colorScheme].TextColor}> THEME </Textbox>
-        <ButtonContainer backgroundColor={ColorList[colorScheme].SliderBackground}>
-          <div onClick={() => ClickButton(1)}>
-            <Button
-              clicked={Button1}
-              backgroundColorClicked={ColorList[colorScheme].ButtonBackground}
-              backgroundColorNotClicked={ColorList[colorScheme].SliderBackground}
-            ></Button>
-          </div>
-          <div onClick={() => ClickButton(2)}>
-            <Button
-              clicked={Button2}
-              backgroundColorClicked={ColorList[colorScheme].ButtonBackground}
-              backgroundColorNotClicked={ColorList[colorScheme].SliderBackground}
-            ></Button>
-          </div>
-          <div onClick={() => ClickButton(3)}>
-            <Button
-              clicked={Button3}
-              backgroundColorClicked={ColorList[colorScheme].ButtonBackground}
-              backgroundColorNotClicked={ColorList[colorScheme].SliderBackground}
-            ></Button>
-          </div>
-        </ButtonContainer>
+      <Containers>
+        <TopLeftContainer TextColor={ColorList[colorScheme].TextColor}>Calc</TopLeftContainer>
+        <TopRightContainer>
+          <Textbox TextColor={ColorList[colorScheme].TextColor} width={'3vh'}>
+            THEME
+          </Textbox>
+          <ButtonContainer backgroundColor={ColorList[colorScheme].SliderBackground}>
+            <div onClick={() => ClickButton(1)}>
+              <Button
+                clicked={Button1}
+                backgroundColorClicked={ColorList[colorScheme].ButtonBackground}
+                backgroundColorNotClicked={ColorList[colorScheme].SliderBackground}
+              ></Button>
+            </div>
+            <div onClick={() => ClickButton(2)}>
+              <Button
+                clicked={Button2}
+                backgroundColorClicked={ColorList[colorScheme].ButtonBackground}
+                backgroundColorNotClicked={ColorList[colorScheme].SliderBackground}
+              ></Button>
+            </div>
+            <div onClick={() => ClickButton(3)}>
+              <Button
+                clicked={Button3}
+                backgroundColorClicked={ColorList[colorScheme].ButtonBackground}
+                backgroundColorNotClicked={ColorList[colorScheme].SliderBackground}
+              ></Button>
+            </div>
+          </ButtonContainer>
+        </TopRightContainer>
       </Containers>
+
       <CalculatorKeypad colorScheme={colorScheme}></CalculatorKeypad>
     </MainContainer>
   )

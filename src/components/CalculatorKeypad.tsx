@@ -179,15 +179,11 @@ const CalculatorKeypad = (props: Props) => {
           <div onClick={() => TypeOperator('/')}>
             <CalculatorButton colorScheme={props.colorScheme} isOperator={true} value={'/'}></CalculatorButton>
           </div>
-          <DoubleSize>
-            <div onClick={() => ClearScreen()}>
-              <CalculatorButton colorScheme={props.colorScheme} isRemoval={true} value="Clear"></CalculatorButton>
-            </div>
+          <DoubleSize onClick={() => ClearScreen()}>
+            <CalculatorButton colorScheme={props.colorScheme} isRemoval={true} value="Clear"></CalculatorButton>
           </DoubleSize>
-          <DoubleSize2>
-            <div onClick={() => ExecuteCalc('')}>
-              <CalculatorButton colorScheme={props.colorScheme} isEqual={true} value={'='}></CalculatorButton>
-            </div>
+          <DoubleSize2 onClick={() => ExecuteCalc('')}>
+            <CalculatorButton colorScheme={props.colorScheme} isEqual={true} value={'='}></CalculatorButton>
           </DoubleSize2>
         </NewContainer>
       </CalcContainer>

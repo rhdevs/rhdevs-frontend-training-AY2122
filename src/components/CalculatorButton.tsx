@@ -1,6 +1,4 @@
-import { PropertySafetyFilled } from '@ant-design/icons'
 import React from 'react'
-import CalculatorKeypad from './CalculatorKeypad'
 import { MainContainerButton, ButtonNumber } from './styles/CalculatorButton.styled'
 
 type Props = {

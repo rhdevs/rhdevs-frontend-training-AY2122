@@ -5,12 +5,6 @@ export const NewContainer = styled.div`
   width: 95%;
   height: 95%;
   position: relative;
-  @media (min-width: 601px) {
-    gap: 20px;
-  }
-  @media (max-width: 600px) {
-    gap: 10px;
-  }
   grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
   grid-template-columns: 2fr 2fr 2fr 2fr;
   gap: 20px;
@@ -27,14 +21,6 @@ export const MainContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (min-width: 601px) {
-    width: 100%;
-    height: 100%;
-  }
-  @media (max-width: 600px) {
-    width: 50%;
-    height: 50%;
-  }
 `
 export const DoubleSize = styled.div`
   grid-area: DoubleSize;
@@ -47,7 +33,12 @@ export const NumberContainer = styled.div<{ backgroundColor?: string }>`
   flex-direction: row;
   justify-content: right;
   align-items: center;
-  width: 50vw;
+  @media (min-width: 601px) {
+    width: 50vw;
+  }
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
   height: 20vh;
   position: relative;
   ${(props) => props.backgroundColor && `background-color: ${props.backgroundColor};`}
@@ -57,12 +48,7 @@ export const NumberContainer = styled.div<{ backgroundColor?: string }>`
   overflow: hidden;
 `
 export const DisplayNumber = styled.div<{ textColor?: string }>`
-  @media (min-width: 601px) {
-    font-size: 500%;
-  }
-  @media (max-width: 600px) {
-    font-size: 300%;
-  }
+  font-size: 500%;
   width: 100%;
   height: 100%;
   display: flex;
@@ -79,8 +65,12 @@ export const CalcContainer = styled.div<{ backgroundColor?: string }>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  width: 50vw;
+  @media (min-width: 601px) {
+    width: 50vw;
+  }
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
   height: 60vh;
   position: relative;
   ${(props) => props.backgroundColor && `background-color: ${props.backgroundColor};`}
