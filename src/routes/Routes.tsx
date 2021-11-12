@@ -82,11 +82,9 @@ const SkDashboard = React.lazy(
 const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
-<<<<<<< HEAD
 const CalculatorApp = React.lazy(
   () => import(/* webpackChunckName: "CalculatorApp" */ '../pages/FrontendMentor/CalculatorApp'),
 )
-=======
 const SkIPAddress = React.lazy(
   () => import(/* webpackChunckName: "SkIPAddress" */ '../pages/FrontendMentor/SkIPAddress'),
 )
@@ -98,7 +96,6 @@ const FrontEndMentorHubble = React.lazy(
   () => import(/* webpackChunckName: "hubble" */ '../pages/FrontendMentor/hubble'),
 )
 
->>>>>>> main
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
@@ -134,12 +131,9 @@ export const Routes = () => (
     <Route exact path="/example" component={Lesson1Example} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
-<<<<<<< HEAD
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO_CALC} component={CalculatorApp} />
-=======
     <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
->>>>>>> main
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />
   </Switch>
