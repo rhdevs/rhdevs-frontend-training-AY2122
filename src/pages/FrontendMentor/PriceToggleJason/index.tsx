@@ -7,10 +7,10 @@ import {
   ToggleWord,
   BackgroundRight,
   BackgroundLeft,
+  SwitchButton,
 } from './styles/PriceToggleJasonStyles'
 import NormalPackageCard from '../../../components/PriceToggleJason/NormalPackageCard'
 import HighlightPackageCard from '../../../components/PriceToggleJason/HighlightPackageCard'
-import { Switch } from 'antd'
 import RightImage from './info/images/bg-top.svg'
 import LeftImage from './info/images/bg-bottom.svg'
 
@@ -28,10 +28,7 @@ export default function PriceToggleJason() {
       <PageHeader>Our Pricing</PageHeader>
       <ToggleContainer>
         <ToggleWord>Annually</ToggleWord>
-        <Switch
-          style={{ backgroundImage: 'linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))' }}
-          onChange={() => togglePackageType()}
-        ></Switch>
+        <SwitchButton onChange={() => togglePackageType()}></SwitchButton>
         <ToggleWord>Monthly</ToggleWord>
       </ToggleContainer>
       <PackagesContainer>
