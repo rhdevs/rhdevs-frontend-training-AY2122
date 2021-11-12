@@ -3,6 +3,7 @@ import { Slider, Switch } from 'antd'
 
 import BackgroundPic from '../../../../assets/ElvaYongbin/BackgroundPic.svg'
 import PatternCirclePic from '../../../../assets/ElvaYongbin/images/pattern-circles.svg'
+import SliderIcon from '../../../../assets/ElvaYongbin/images/icon-slider.svg'
 
 export const MainPage = styled.div`
   z-index: 0;
@@ -66,9 +67,9 @@ export const ToggleContainer = styled.div`
 export const Slidercontainer = styled.div`
   width: 60%;
   align-items: center;
-  display: flex;
+  display: block;
   flex-direction: row;
-  position: absolute;
+  position: relative;
 `
 
 export const MainBottomComponent = styled.div`

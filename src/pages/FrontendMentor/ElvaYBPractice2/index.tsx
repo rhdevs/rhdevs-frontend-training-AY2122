@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Slider, Switch } from 'antd'
 
 import IconCheck from '../../../assets/ElvaYongbin/images/icon-check.svg'
+import SliderIcon from '../../../../assets/ElvaYongbin/images/icon-slider.svg'
 
 import {
   MainPage,
