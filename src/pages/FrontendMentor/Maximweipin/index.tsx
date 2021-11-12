@@ -8,7 +8,7 @@ import {
   RoundButton1,
   RoundButton2,
   RoundButton3,
-} from './styles/styled'
+} from './styles/Maximweipin.styled'
 import { Button } from 'antd'
 import luxury from './images/icon-luxury.svg'
 import suvs from './images/icon-suvs.svg'
