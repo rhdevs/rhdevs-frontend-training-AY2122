@@ -61,6 +61,7 @@ const FrontendMentor = () => {
           description="Max and WP"
           onClick={() => history.push(PATHS.MAXIMWP_PROJ2)}
         />
+        <Card title="IP Address Tracker" description="Shao Kiat" onClick={() => history.push(PATHS.SK_IPADDRESS)} />
       </InformationCardSection>
       <InformationCardSection>
         <Card

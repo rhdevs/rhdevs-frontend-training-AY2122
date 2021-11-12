@@ -27,5 +27,6 @@ export enum PATHS {
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
   ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
   MAXIMWP_PROJ2 = '/frontendmentor/Maximwp_proj2',
+  SK_IPADDRESS = '/frontendmentor/SkIPAddress',
   FRONTEND_MENTOR_HUBBLE = '/frontendmentor/hubble',
 }
