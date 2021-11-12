@@ -33,7 +33,7 @@ export default function PriceToggleJason() {
       </ToggleContainer>
       <PackagesContainer>
         <NormalPackageCard
-          left={true}
+          left
           isMonthly={monthly}
           monthlyPrice={19.99}
           annuallyPrice={199.99}
