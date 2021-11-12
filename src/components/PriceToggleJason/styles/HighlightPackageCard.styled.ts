@@ -6,7 +6,7 @@ export const HighlightPackageContainer = styled.div`
   border-radius: 15px;
   @media (max-width: 768px) {
     width: 90%;
-    margin-bottom: 3vh;
+    margin-top: 3vh;
     height: 100vh;
   }
 `

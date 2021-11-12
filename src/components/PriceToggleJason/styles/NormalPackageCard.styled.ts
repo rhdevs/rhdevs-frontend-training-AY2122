@@ -11,7 +11,7 @@ export const NormalPackageContainer = styled.div<{ left: boolean }>`
   ${(props) => (props.left ? 'border-radius: 15px 0px 0px 15px;' : 'border-radius: 0px 15px 15px 0px;')}
   @media (max-width: 768px) {
     width: 90%;
-    margin-bottom: 3vh;
+    margin-top: 3vh;
     border-radius: 15px;
   }
 `
