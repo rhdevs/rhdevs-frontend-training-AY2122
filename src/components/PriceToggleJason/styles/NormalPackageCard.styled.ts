@@ -8,11 +8,11 @@ export const NormalPackageContainer = styled.div<{ left: boolean }>`
   height: 90%;
   width: 280px;
   background: hsl(0, 100%, 100%);
-  ${(props) => (props.left ? 'border-radius: 15px 0px 0px 15px;' : 'border-radius: 0px 15px 15px 0px;')}
+  ${(props) => (props.left ? 'border-radius: 10px 0px 0px 10px;' : 'border-radius: 0px 10px 10px 0px;')}
   @media (max-width: 768px) {
     width: 90%;
     margin-top: 3vh;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 `
 
