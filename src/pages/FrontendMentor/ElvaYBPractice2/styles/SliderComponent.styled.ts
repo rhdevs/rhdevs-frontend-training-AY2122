@@ -32,10 +32,11 @@ export const TopComponent = styled.div`
   align-items: center;
 `
 export const TopComponentTopText = styled.div`
-  color: black;
   font-size: 20px;
   height: 10vh;
   align-items: center;
+  font-weight: bold;
+  color: hsl(227, 35%, 25%);
 `
 export const TopComponentBottomText = styled.div`
   color: grey;
@@ -67,6 +68,7 @@ export const Slidercontainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
+  position: absolute;
 `
 
 export const MainBottomComponent = styled.div`
@@ -92,7 +94,7 @@ export const PriceContainer = styled.div`
   width: 10%;
   text-align: right;
   margin-left: 40px;
-  font-weight: 600;
+  font-weight: bold;
   color: hsl(227, 35%, 25%);
   font-size: 50px;
 `
