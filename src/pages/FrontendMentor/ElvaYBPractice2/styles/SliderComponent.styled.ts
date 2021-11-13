@@ -22,7 +22,6 @@ export const MainPage = styled.div`
 
 export const TopComponent = styled.div`
   background-image: url(${PatternCirclePic});
-  background-size: 40% 40%;
   background-repeat: no-repeat;
   background-position: center;
   width: 40%;
@@ -33,15 +32,16 @@ export const TopComponent = styled.div`
   align-items: center;
 `
 export const TopComponentTopText = styled.div`
-  font-size: 20px;
+  font-size: 25px;
   height: 10vh;
   align-items: center;
   font-weight: bold;
   color: hsl(227, 35%, 25%);
+  padding-top: 35px;
 `
 export const TopComponentBottomText = styled.div`
   color: grey;
-  font-size: 15px;
+  font-size: 13px;
   height: 10vh;
 `
 export const MainComponent = styled.div`
@@ -55,14 +55,17 @@ export const MainComponent = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 5px 5px black;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
   top: -30px;
 `
 
 export const ToggleContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding-left: 100px;
+  margin-left: 120px;
+  position: relative;
+  top: 70px;
+  width: 80%;
 `
 export const Slidercontainer = styled.div`
   width: 60%;
@@ -70,6 +73,7 @@ export const Slidercontainer = styled.div`
   display: block;
   flex-direction: row;
   position: relative;
+  top: 70px;
 `
 
 export const MainBottomComponent = styled.div`
@@ -77,12 +81,16 @@ export const MainBottomComponent = styled.div`
   display: flex;
   flex-direction: row;
   box-shadow: 0 -1px 0 #d3d3d3;
+  position: relative;
+  top: 100px;
 `
 export const PageViewPriceContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   margin-top: -20vh;
+  position: relative;
+  top: 50px;
 `
 export const PageViewContainer = styled.div`
   width: 50%;
@@ -90,6 +98,7 @@ export const PageViewContainer = styled.div`
   text-align: center;
   margin-left: 20px;
   font-size: 15px;
+  font-weight: 500;
 `
 export const PriceContainer = styled.div`
   width: 10%;
@@ -97,12 +106,14 @@ export const PriceContainer = styled.div`
   margin-left: 40px;
   font-weight: bold;
   color: hsl(227, 35%, 25%);
-  font-size: 50px;
+  font-size: 30px;
+  margin-top: -13px;
 `
 export const MonthContainer = styled.div`
   width: 50%;
   text-align: center;
   color: hsl(225, 20%, 60%);
+  margin-left: -40px;
 `
 export const StartTrialButton = styled.button`
   background-color: hsl(227, 35%, 25%);
@@ -110,6 +121,10 @@ export const StartTrialButton = styled.button`
   width: 65%;
   height: 35%;
   color: hsl(226, 100%, 87%);
+  border: none;
+  margin-top: -20px;
+  margin-left: 40px;
+  position: relative;
 `
 export const BottomLeftContainer = styled.div`
   display: flex;
@@ -120,9 +135,19 @@ export const BottomLeftContainer = styled.div`
   padding-right: 30px;
   padding-top: 20px;
 `
-export const BottomLeftText = styled.div`
+export const BottomLeftText1 = styled.div`
   color: hsl(225, 20%, 60%);
   margin-top: 10px;
+  margin-right: 18px;
+`
+export const BottomLeftText2 = styled.div`
+  color: hsl(225, 20%, 60%);
+  margin-top: 10px;
+`
+export const BottomLeftText3 = styled.div`
+  color: hsl(225, 20%, 60%);
+  margin-top: 10px;
+  margin-right: 50px;
 `
 export const TrialButtonContainer = styled.div`
   width: 50%;
@@ -136,10 +161,12 @@ export const DiscountButton = styled.button`
   color: hsl(15, 100%, 70%);
   border-radius: 15px;
   font-size: 10px;
-  width: 55%;
-  height: 50%;
-  margin-left: 20px;
+  font-weight: 700;
+  width: 65%;
+  height: 85%;
+  margin-right: 30px;
   border: none;
+  position: relative;
 `
 export const CheckIcon = styled.img`
   object-fit: scale-down;
@@ -148,7 +175,9 @@ export const CheckIcon = styled.img`
 `
 export const ToggleContainerText = styled.div`
   color: hsl(225, 20%, 60%);
-  width: 70%;
+  width: 90%;
   height: 100%;
   text-align: center;
+  font-size: 12px;
+  margin: auto;
 `

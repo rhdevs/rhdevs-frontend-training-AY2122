@@ -17,13 +17,15 @@ import {
   MonthContainer,
   StartTrialButton,
   BottomLeftContainer,
-  BottomLeftText,
   MainBottomComponent,
   ToggleContainer,
   DiscountButton,
   CheckIcon,
   ToggleContainerText,
   TrialButtonContainer,
+  BottomLeftText3,
+  BottomLeftText2,
+  BottomLeftText1,
 } from './styles/SliderComponent.styled'
 
 const marks = {
@@ -94,10 +96,17 @@ const ElvaYBPractice = () => {
             ) : (
               <PriceContainer>$27.00</PriceContainer>
             )}
-            <MonthContainer>/Month</MonthContainer>
+            <MonthContainer>/month</MonthContainer>
           </PageViewPriceContainer>
           <Slidercontainer>
-            <Slider marks={marks} onChange={(value) => setViews(value)} step={null} defaultValue={50} />
+            <Slider
+              marks={marks}
+              onChange={(value) => setViews(value)}
+              step={null}
+              defaultValue={50}
+              handleStyle={{ backgroundColor: 'hsl(174, 86%, 45%)' }}
+              trackStyle={{ backgroundColor: 'hsl(174, 86%, 45%)' }}
+            />
           </Slidercontainer>
           <ToggleContainer>
             <ToggleContainerText>Monthly Billing</ToggleContainerText>
@@ -107,15 +116,15 @@ const ElvaYBPractice = () => {
           </ToggleContainer>
           <MainBottomComponent>
             <BottomLeftContainer>
-              <BottomLeftText>
+              <BottomLeftText1>
                 <CheckIcon src={IconCheck} alt="Tick"></CheckIcon>Unlimited websites
-              </BottomLeftText>
-              <BottomLeftText>
+              </BottomLeftText1>
+              <BottomLeftText2>
                 <CheckIcon src={IconCheck} alt="Tick"></CheckIcon>100% data ownership
-              </BottomLeftText>
-              <BottomLeftText>
+              </BottomLeftText2>
+              <BottomLeftText3>
                 <CheckIcon src={IconCheck} alt="Tick"></CheckIcon>Email reports
-              </BottomLeftText>
+              </BottomLeftText3>
             </BottomLeftContainer>
             <TrialButtonContainer>
               <StartTrialButton>Start my trial</StartTrialButton>
