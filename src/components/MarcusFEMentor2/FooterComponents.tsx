@@ -43,7 +43,7 @@ const FooterUpperContent = () => {
   return (
     <FooterUpperContentDiv>
       <FooterUpperTextStyled>Ready to get started?</FooterUpperTextStyled>
-      <ContactButton color="dark" margin={width > mobileMaxWidthValue ? '0 0 0 auto' : '88px auto 0'} />
+      <ContactButton color="dark" margin={width > mobileMaxWidthValue ? '0 0 0 auto' : '70px auto 0'} />
     </FooterUpperContentDiv>
   )
 }
