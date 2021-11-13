@@ -15,6 +15,7 @@ import {
   About2CardIconsDiv,
   About2CardIcon,
   About2CardButtonHoverZone,
+  About2CardNameReverse,
 } from './styles/About2MeetComponents.styled'
 
 import nikitaPic from '../../../assets/MarcusFEMentor2/avatar-nikita.jpg'
@@ -80,7 +81,7 @@ const About2FlipCardObverse = ({ info }: { info: DirectorInfo }) => {
   return (
     <>
       <About2CardFaceImage src={info.pic} />
-      <About2CardName top="16px">{info.name}</About2CardName>
+      <About2CardName top="1.1vw">{info.name}</About2CardName>
       <About2CardTitle>{info.title}</About2CardTitle>
     </>
   )
@@ -89,7 +90,7 @@ const About2FlipCardObverse = ({ info }: { info: DirectorInfo }) => {
 const About2FlipCardReverse = ({ info }: { info: DirectorInfo }) => {
   return (
     <>
-      <About2CardName top="35px">{info.name}</About2CardName>
+      <About2CardNameReverse top="2.4vw">{info.name}</About2CardNameReverse>
       <About2CardQuote>&quot;{info.quote}&quot;</About2CardQuote>
       <About2CardIconsDiv>
         <About2CardIcon src={twtrIcon} />

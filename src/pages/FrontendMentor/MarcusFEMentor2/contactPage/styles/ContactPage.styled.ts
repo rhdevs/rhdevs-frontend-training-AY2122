@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-import { midnightGreen } from '../../styles/Colours.styled'
+import { midnightGreen } from '../../styles/Colours'
+import { mobileMaxWidth, tabletMaxWidth } from '../../styles/ResponsiveWidths'
 import { PageDiv } from '../../styles/GlobalDivStyles.styled'
 
 export const Contact1MainBg = styled(PageDiv)`
@@ -9,6 +10,10 @@ export const Contact1MainBg = styled(PageDiv)`
   top: 0px;
 
   background: ${midnightGreen};
+
+  @media (max-width: ${tabletMaxWidth}) {
+    height: 1204px;
+  }
 `
 
 export const Contact1LeftLogoBg = styled.img`
@@ -17,6 +22,14 @@ export const Contact1LeftLogoBg = styled.img`
   height: 200px;
   left: -100px;
   top: 245px;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    top: 216px;
+  }
+
+  @media (max-width: ${mobileMaxWidth}) {
+    opacity: 0;
+  }
 `
 
 export const Contact1RightLogoBg = styled.img`
@@ -25,4 +38,8 @@ export const Contact1RightLogoBg = styled.img`
   height: 200px;
   right: -100px;
   bottom: 0;
+
+  @media (max-width: ${mobileMaxWidth}) {
+    bottom: -100px;
+  }
 `

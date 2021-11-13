@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { SubmitButton, TextAreaInputEntry, TextInputEntry } from '../GlobalComponents'
+import TextInputEntry from '../TextInputEntry'
+import SubmitButton from '../SubmitButton'
+import TextAreaInputEntry from '../TextAreaInputEntry'
 import {
   Contact1AboutContent,
   Contact1AboutDiv,

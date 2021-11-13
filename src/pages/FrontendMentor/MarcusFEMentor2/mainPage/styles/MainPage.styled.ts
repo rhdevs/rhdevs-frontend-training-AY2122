@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 
-import { deepJungleGreen, midnightGreen, sacramentoStateGreen } from '../../styles/Colours.styled'
+import { deepJungleGreen, midnightGreen, sacramentoStateGreen } from '../../styles/Colours'
+import { mobileMaxWidth, tabletMaxWidth } from '../../styles/ResponsiveWidths'
 import { PageDiv } from '../../styles/GlobalDivStyles.styled'
 
 export const Page1MainBg = styled(PageDiv)`
   height: 700px;
 
   background: ${midnightGreen};
+
+  @media (max-width: ${mobileMaxWidth}) {
+    height: 567px;
+  }
 `
 
 export const Page1LeftLogoBg = styled.img`
@@ -15,6 +20,10 @@ export const Page1LeftLogoBg = styled.img`
   height: 200px;
   left: -100px;
   top: 250px;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    opacity: 0;
+  }
 `
 
 export const Page1BottomLogoBg = styled.img`
@@ -22,13 +31,26 @@ export const Page1BottomLogoBg = styled.img`
   width: 358px;
   height: 100px;
   left: 63.5vw;
-  top: 600px;
+  bottom: 0;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    left: calc(50vw - (358px / 2));
+    bottom: 0;
+  }
 `
 
 export const Page2BuildBg = styled(PageDiv)`
   height: 684px;
 
   background: ${sacramentoStateGreen};
+
+  @media (max-width: ${tabletMaxWidth}) {
+    height: 710px;
+  }
+
+  @media (max-width: ${mobileMaxWidth}) {
+    height: 1073px;
+  }
 `
 
 export const Page2RightLogoBg = styled.img`
@@ -36,13 +58,25 @@ export const Page2RightLogoBg = styled.img`
   width: 200px;
   height: 244px;
   right: -100px;
-  top: 440px;
+  bottom: 0;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    top: 0;
+  }
 `
 
 export const Page3DeliveringBg = styled(PageDiv)`
-  height: 745px;
+  height: calc(23vw + 372px); // or 745px
 
   background: ${deepJungleGreen};
+
+  @media (max-width: ${tabletMaxWidth}) {
+    height: 1199px;
+  }
+
+  @media (max-width: ${mobileMaxWidth}) {
+    height: 1410px;
+  }
 `
 
 export const Page3TopLeftLogoBg = styled.img`
@@ -50,7 +84,7 @@ export const Page3TopLeftLogoBg = styled.img`
   width: 147px;
   height: 100px;
   left: 0;
-  top: 0px;
+  top: 0;
 `
 
 export const Page3BottomRightLogoBg = styled.img`
@@ -58,5 +92,5 @@ export const Page3BottomRightLogoBg = styled.img`
   width: 200px;
   height: 100px;
   right: 0;
-  top: 645px;
+  bottom: 0;
 `

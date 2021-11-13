@@ -11,7 +11,7 @@ import {
 const Page1MainContents = () => {
   return (
     <>
-      <Title>
+      <Title responsive>
         Find the best <TitleEm>talent</TitleEm>
       </Title>
       <TitleParagraphDiv>

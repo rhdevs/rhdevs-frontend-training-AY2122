@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-import { sacramentoStateGreen, white } from './Colours.styled'
-import { filterWhiteToLightCoral, styledInput } from './cssVariables.styled'
+import { sacramentoStateGreen, white } from './Colours'
+import { filterWhiteToLightCoral, livvicFont, styledInput } from './cssVariables.styled'
+import { Body1 } from './TextStyles.styled'
 
 // div styles
 
@@ -23,8 +24,8 @@ export const LineAbovePara = styled.div`
 `
 
 export const FaceImage = styled.img`
-  width: 62px;
-  height: 62px;
+  width: max(4.3vw, 62px);
+  height: max(4.3vw, 62px);
   border: 2px solid #c4fffe;
   border-radius: 50%;
 `
@@ -36,9 +37,6 @@ export const SocialMediaIconHover = styled.img`
 `
 
 export const BtnDiv = styled.button`
-  text-align: center;
-  text-justify: inter-word;
-
   border-style: solid;
   border-width: 3px;
   border-radius: 24px;
@@ -46,6 +44,9 @@ export const BtnDiv = styled.button`
 
   color: ${white};
   background-color: transparent;
+
+  display: flex;
+  justify-content: center;
 `
 
 export const SubmitBtnDiv = styled(BtnDiv)`
@@ -60,30 +61,26 @@ export const SubmitBtnDiv = styled(BtnDiv)`
   }
 `
 
-export const BtnText = styled.p`
+export const BtnText = styled(Body1)`
+  margin-top: 4.25px;
   height: 100%;
 
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
-
-  margin-top: 5px;
+  color: inherit;
 `
 
-export const TextInput = styled.input.attrs({ type: 'text' })`
+export const TextInput = styled.input.attrs({ type: 'text', responsive: true })`
   ${styledInput}
 `
 
-export const TextAreaInput = styled.textarea`
+export const TextAreaInput = styled.textarea.attrs({ responsive: true })`
   ${styledInput}
 `
 
-export const TextInputRequiredWarningLabel = styled.label`
-  /* font-family: Livvic; */
+export const TextInputRequiredWarningLabel = styled.label.attrs({ responsive: true })`
+  ${livvicFont}
   font-style: italic;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 13px;
+  font-size: ${(props) => (props.responsive ? 'max(0.7vw, 10px)' : '10px')};
+  line-height: ${(props) => (props.responsive ? 'max(13px, 0.9vw)' : '13px')};
   color: transparent;
-  /* color: transparent; */
 `

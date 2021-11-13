@@ -1,6 +1,5 @@
 import React from 'react'
 
-import HeaderBar from '../../../../components/MarcusFEMentor2/Header'
 import About1MainContents from '../../../../components/MarcusFEMentor2/aboutPageComponents/About1MainComponents'
 import { About1MainBg, About1RightLogoBg } from './styles/AboutPage.styled'
 
@@ -9,7 +8,6 @@ import About1RightLogo from '../../../../assets/MarcusFEMentor2/bg-pattern-about
 function About1Main() {
   return (
     <About1MainBg>
-      <HeaderBar />
       <About1RightLogoBg src={About1RightLogo} />
       <About1MainContents />
     </About1MainBg>

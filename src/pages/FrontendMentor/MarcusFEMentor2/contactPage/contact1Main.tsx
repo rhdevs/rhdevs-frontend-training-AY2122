@@ -1,6 +1,5 @@
 import React from 'react'
 
-import HeaderBar from '../../../../components/MarcusFEMentor2/Header'
 import Contact1MainContents from '../../../../components/MarcusFEMentor2/contactPageComponents/Contact1MainComponents'
 import { Contact1LeftLogoBg, Contact1MainBg, Contact1RightLogoBg } from './styles/ContactPage.styled'
 
@@ -10,7 +9,6 @@ import Contact1RightLogo from '../../../../assets/MarcusFEMentor2/bg-pattern-con
 function Contact1Main() {
   return (
     <Contact1MainBg>
-      <HeaderBar />
       <Contact1LeftLogoBg src={Contact1LeftLogo} />
       <Contact1MainContents />
       <Contact1RightLogoBg src={Contact1RightLogo} />

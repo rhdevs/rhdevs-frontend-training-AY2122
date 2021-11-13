@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
-import { lightCoral, white } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/Colours.styled'
-import { h1Small, h2Styled, h3Styled } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
+import { lightCoral, white } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/Colours'
+import {
+  mobileMaxWidth,
+  tabletMaxWidth,
+} from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/ResponsiveWidths'
+import { H1Small, H2Styled, H3Styled } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
 
 export const Contact1ContentsDiv = styled.div`
   position: absolute;
@@ -9,9 +13,20 @@ export const Contact1ContentsDiv = styled.div`
   height: 428px;
   left: 11.5vw;
   top: 241px;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    width: 69vw;
+    height: 868px;
+    left: 15.5vw;
+    top: 224px;
+  }
+
+  @media (max-width: ${mobileMaxWidth}) {
+    top: 160px;
+  }
 `
 
-export const Contact1Title = styled(h1Small)`
+export const Contact1Title = styled(H1Small).attrs({ responsive: true })`
   position: absolute;
   width: max(350px, 24vw);
   height: 100px;
@@ -19,9 +34,16 @@ export const Contact1Title = styled(h1Small)`
   top: 0;
 
   line-height: 100px;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    width: 100%;
+    height: 56px;
+
+    text-align: center;
+  }
 `
 
-export const Contact1Subtitle = styled(h2Styled)`
+export const Contact1Subtitle = styled(H2Styled).attrs({ responsive: true })`
   position: absolute;
   width: 37.5vw;
   height: 48px;
@@ -32,12 +54,23 @@ export const Contact1Subtitle = styled(h2Styled)`
   line-height: 48px;
 
   color: ${lightCoral};
+
+  @media (max-width: ${tabletMaxWidth}) {
+    width: 100%;
+    height: 48px;
+    left: 0;
+    top: 80px;
+    font-size: 32px;
+    line-height: 150%;
+
+    text-align: center;
+  }
 `
 
 export const Contact1AboutDiv = styled.div`
   position: absolute;
   width: 37.5vw;
-  height: 232px;
+  height: 16vw; // or 232 px
   left: 0;
   top: 196px;
 
@@ -46,23 +79,42 @@ export const Contact1AboutDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    width: 100%;
+    height: 232px;
+    top: 152px;
+  }
+
+  @media (max-width: ${mobileMaxWidth}) {
+    top: 144px;
+  }
 `
 
 export const Contact1AboutEntryDiv = styled.div`
   width: 100%;
-  height: 72px;
+  height: 5vw; // or 72px
 
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    height: 72px;
+  }
 `
 
 export const Contact1Icon = styled.img`
-  width: 72px;
-  height: 72px;
+  width: 5vw; // or 72px
+  height: 5vw;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    width: 72px;
+    height: 72px;
+  }
 `
 
-export const Contact1AboutContent = styled(h3Styled)`
+export const Contact1AboutContent = styled(H3Styled).attrs({ responsive: true })`
   height: 28px;
   margin-left: 23px;
 `
@@ -70,11 +122,19 @@ export const Contact1AboutContent = styled(h3Styled)`
 export const Contact1FormDiv = styled.form`
   position: absolute;
   width: 37.5vw;
-  height: 420px;
+  height: 29vw; // or 420px
   top: 0;
   right: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: ${tabletMaxWidth}) {
+    width: 69vw;
+    height: 420px; // nice
+
+    top: 448px;
+    left: 0;
+  }
 `

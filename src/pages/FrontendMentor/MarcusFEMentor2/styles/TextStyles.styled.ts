@@ -1,65 +1,29 @@
 import styled from 'styled-components'
 
-import { white } from './Colours.styled'
+import { body1Size, body2Size, h1LargeSize, h1SmallSize, h2Size, h3Size } from './cssVariables.styled'
 
 // text styles
 
-export const h1Large = styled.h1`
-  /* font-family: Livvic; */
-  font-style: normal;
-  font-weight: bold;
-  font-size: 7vw; // or 100px
-  line-height: max(100px, 5.5vw); //prevent text overlap on very wide screens
-
-  color: ${white};
+export const H1Large = styled.h1<{ responsive?: boolean }>`
+  ${h1LargeSize}
 `
 
-export const h1Small = styled.h1`
-  /* font-family: Livvic; */
-  font-style: normal;
-  font-weight: bold;
-  font-size: 64px;
-  line-height: 56px;
-
-  color: ${white};
+export const H1Small = styled.h1<{ responsive?: boolean }>`
+  ${h1SmallSize}
 `
 
-export const h2Styled = styled.h2`
-  /* font-family: Livvic; */
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  line-height: 48px;
-
-  color: ${white};
+export const H2Styled = styled.h2<{ responsive?: boolean }>`
+  ${h2Size}
 `
 
-export const h3Styled = styled.h3`
-  /* font-family: Livvic; */
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 28px;
-
-  color: ${white};
+export const H3Styled = styled.h3<{ responsive?: boolean }>`
+  ${h3Size}
 `
 
-export const body1 = styled.p`
-  /* font-family: Livvic; */
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
-
-  color: ${white};
+export const Body1 = styled.p<{ responsive?: boolean }>`
+  ${body1Size}
 `
 
-export const body2 = styled.p`
-  /* font-family: Livvic; */
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 25px;
-
-  color: ${white};
+export const Body2 = styled.p<{ responsive?: boolean }>`
+  ${body2Size}
 `
