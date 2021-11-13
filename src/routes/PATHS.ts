@@ -28,4 +28,5 @@ export enum PATHS {
   ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
   SK_IPADDRESS = '/frontendmentor/SkIPAddress',
   FRONTEND_MENTOR_HUBBLE = '/frontendmentor/hubble',
+  FRONTEND_MENTOR_PRICE_TOGGLE_JASON = '/frontendmentor/price-toggle-jason',
 }

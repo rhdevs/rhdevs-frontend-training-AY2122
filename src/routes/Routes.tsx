@@ -92,6 +92,9 @@ const KYStatsCard = React.lazy(
 const FrontEndMentorHubble = React.lazy(
   () => import(/* webpackChunckName: "hubble" */ '../pages/FrontendMentor/hubble'),
 )
+const PriceToggleJason = React.lazy(
+  () => import(/* webpackChunckName: "PriceToggleJason" */ '../pages/FrontendMentor/PriceToggleJason'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -128,6 +131,7 @@ export const Routes = () => (
     <Route exact path="/example" component={Lesson1Example} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
+    <Route exact path={PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON} component={PriceToggleJason} />
     <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
