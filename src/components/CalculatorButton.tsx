@@ -2,16 +2,13 @@ import React from 'react'
 import { MainContainerButton, ButtonNumber } from './styles/CalculatorButton.styled'
 
 type Props = {
-  isNumber?: boolean | false
-  isOperator?: boolean | false
-  isRemoval?: boolean | false
-  isEqual?: boolean | false
-  isDecimal?: boolean | false
+  isNumber?: boolean
+  isOperator?: boolean
+  isRemoval?: boolean
+  isEqual?: boolean
+  isDecimal?: boolean
   colorScheme: number
   value?: number | string
-  // number?: number
-  // operator?: string
-  // removal?: string
 }
 
 type Colors = {
@@ -73,15 +70,13 @@ const CalculatorButton = (props: Props) => {
         >
           <ButtonNumber>{props.value}</ButtonNumber>
         </MainContainerButton>
-      ) : props.isEqual ? (
+      ) : (
         <MainContainerButton
           backgroundColor={ColorList[props.colorScheme].EqualKeyBackground}
           backgroundShadow={ColorList[props.colorScheme].EqualKeyShadow}
         >
           <ButtonNumber textColor={ColorList[props.colorScheme].SpecialText}>{props.value}</ButtonNumber>
         </MainContainerButton>
-      ) : (
-        console.log('no button')
       )}
     </>
   )
