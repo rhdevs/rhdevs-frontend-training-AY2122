@@ -61,6 +61,7 @@ const FrontendMentor = () => {
           description="Jason"
           onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON)}
         />
+        <Card title="IP Address Tracker" description="Shao Kiat" onClick={() => history.push(PATHS.SK_IPADDRESS)} />
       </InformationCardSection>
       <InformationCardSection>
         <Card
