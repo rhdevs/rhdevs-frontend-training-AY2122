@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const HighlightPackageContainer = styled.div`
-  width: 25%;
   background: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border-radius: 10px;
   width: 280px;
