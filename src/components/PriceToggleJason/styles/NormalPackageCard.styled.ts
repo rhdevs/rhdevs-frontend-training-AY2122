@@ -25,7 +25,7 @@ export const PackageHeader = styled.div`
 
 export const NormalPriceContainer = styled.div`
   position: relative;
-  z-index: 999;
+  z-index: 2;
   display: flex;
   justify-content: center;
   margin: auto;
