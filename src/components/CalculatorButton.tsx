@@ -1,5 +1,6 @@
 import React from 'react'
 import { MainContainerButton, ButtonNumber } from './styles/CalculatorButton.styled'
+import { ColorList } from '../pages/FrontendMentor/CalculatorApp/styles/Themes'
 
 type Props = {
   isNumber?: boolean
@@ -10,48 +11,6 @@ type Props = {
   colorScheme: number
   value?: number | string
 }
-
-type Colors = {
-  BaseKeyBackground: string
-  BaseKeyShadow: string
-  RemovalKeyBackground: string
-  RemovalKeyShadow: string
-  EqualKeyBackground: string
-  EqualKeyShadow: string
-  DarkText: string
-  SpecialText?: string
-}
-
-const ColorList: Colors[] = [
-  {
-    BaseKeyBackground: 'hsl(30, 25%, 89%)',
-    BaseKeyShadow: 'hsl(28, 16%, 65%)',
-    RemovalKeyBackground: 'hsl(225, 21%, 49%)',
-    RemovalKeyShadow: 'hsl(224, 28%, 35%)',
-    EqualKeyBackground: 'hsl(6, 63%, 50%)',
-    EqualKeyShadow: 'hsl(6, 70%, 34%)',
-    DarkText: 'hsl(221, 14%, 31%)',
-  },
-  {
-    BaseKeyBackground: 'hsl(45, 7%, 89%)',
-    BaseKeyShadow: 'hsl(35, 11%, 61%)',
-    RemovalKeyBackground: 'hsl(185, 42%, 37%)',
-    RemovalKeyShadow: 'hsl(185, 58%, 25%)',
-    EqualKeyBackground: 'hsl(25, 98%, 40%)',
-    EqualKeyShadow: 'hsl(25, 99%, 27%)',
-    DarkText: 'hsl(60, 10%, 19%)',
-  },
-  {
-    BaseKeyBackground: 'hsl(268, 47%, 21%)',
-    BaseKeyShadow: 'hsl(290, 70%, 36%)',
-    RemovalKeyBackground: 'hsl(281, 89%, 26%)',
-    RemovalKeyShadow: 'hsl(285, 91%, 52%)',
-    EqualKeyBackground: 'hsl(176, 100%, 44%)',
-    EqualKeyShadow: 'hsl(177, 92%, 70%)',
-    SpecialText: 'hsl(198, 20%, 13%)',
-    DarkText: 'hsl(52, 100%, 62%)',
-  },
-]
 
 const CalculatorButton = (props: Props) => {
   return (
