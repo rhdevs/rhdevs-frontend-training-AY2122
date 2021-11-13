@@ -92,6 +92,9 @@ const SkDashboard = React.lazy(
 const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
+const SkIPAddress = React.lazy(
+  () => import(/* webpackChunckName: "SkIPAddress" */ '../pages/FrontendMentor/SkIPAddress'),
+)
 const KYStatsCard = React.lazy(
   () => import(/* webpackChunckName: "KYStatsCard" */ '../pages/FrontendMentor/KYStatsCard'),
 )
@@ -138,6 +141,7 @@ export const Routes = () => (
     <Route exact path="/example" component={Lesson1Example} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
+    <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />

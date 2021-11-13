@@ -29,5 +29,6 @@ export enum PATHS {
   MARCUS_FE_MENTOR_2_CONTACT = '/frontendmentor/marcus-fe-mentor-2/contact',
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
   ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
+  SK_IPADDRESS = '/frontendmentor/SkIPAddress',
   FRONTEND_MENTOR_HUBBLE = '/frontendmentor/hubble',
 }
