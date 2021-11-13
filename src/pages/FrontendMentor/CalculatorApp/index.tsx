@@ -78,7 +78,7 @@ const CalculatorApp = () => {
       <Containers>
         <TopLeftContainer TextColor={ColorList[colorScheme].TextColor}>Calc</TopLeftContainer>
         <TopRightContainer>
-          <Textbox TextColor={ColorList[colorScheme].TextColor} width={'3vh'}>
+          <Textbox TextColor={ColorList[colorScheme].TextColor} width={'5vh'}>
             THEME
           </Textbox>
           <ButtonContainer backgroundColor={ColorList[colorScheme].SliderBackground}>
