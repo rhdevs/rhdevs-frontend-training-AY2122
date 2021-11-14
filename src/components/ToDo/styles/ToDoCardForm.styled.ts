@@ -9,20 +9,17 @@ export const Rectangle = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 15px;
+  padding: 25px;
 `
-export const Circle = styled.input`
+export const Circle = styled.button`
   height: 25px;
   width: 25px;
   background-color: transparent;
   border-radius: 50%;
   border: 2px solid hsl(234, 39%, 85%);
   cursor: pointer;
-  &:active {
-    background-color: black;
-  }
 `
-export const TextBox = styled.div`
+export const TextBox = styled.input`
   font: Josefin Sans;
   font-weight: 400;
   color: hsl(234, 39%, 85%);
