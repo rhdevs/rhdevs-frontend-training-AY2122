@@ -18,7 +18,7 @@ type Props = {
 const ToDoCard = (props: Props) => {
   const handleClick = () => {
     const mapped = props.todos.map((item) => {
-      return item.key == props.todo.key ? { ...item } : { ...item }
+      return item.key == props.todo.key ? { ...item, completed: !item.completed } : { ...item }
     })
     props.setToDos(mapped)
   }

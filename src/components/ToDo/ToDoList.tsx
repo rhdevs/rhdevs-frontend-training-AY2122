@@ -1,4 +1,5 @@
 import React from 'react'
+import LastRow from './LastRow'
 import ToDoCard from './ToDoCard'
 
 type todo = {
@@ -18,6 +19,7 @@ const ToDoList = (props: Props) => {
       {props.todos.map((todo: todo) => (
         <ToDoCard key={todo.key} todo={todo} setToDos={props.setTodos} todos={props.todos} />
       ))}
+      <LastRow />
     </>
   )
 }
