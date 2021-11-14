@@ -93,6 +93,8 @@ const FrontEndMentorHubble = React.lazy(
   () => import(/* webpackChunckName: "hubble" */ '../pages/FrontendMentor/hubble'),
 )
 
+const FrontEndMentorTodo = React.lazy(() => import(/* webpackChunckName: "Todo" */ '../pages/FrontendMentor/Todo'))
+
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
@@ -130,6 +132,7 @@ export const Routes = () => (
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
     <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
+    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_TODO} component={FrontEndMentorTodo} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />
   </Switch>

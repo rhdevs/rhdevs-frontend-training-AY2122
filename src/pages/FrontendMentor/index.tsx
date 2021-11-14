@@ -65,6 +65,9 @@ const FrontendMentor = () => {
           onClick={() => history.push(PATHS.FRONTEND_MENTOR_HUBBLE)}
         />
       </InformationCardSection>
+      <InformationCardSection>
+        <Card title="To-do" description="Tai and Yong Zhong" onClick={() => history.push(PATHS.FRONTEND_MENTOR_TODO)} />
+      </InformationCardSection>
     </MembersSection>
   )
 }
