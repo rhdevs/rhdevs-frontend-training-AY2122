@@ -36,6 +36,7 @@ export const StyledLabelContainer = styled.div`
   justify-content: center;
   border-radius: 25px;
   background: #161932;
+  z-index: 1;
   @media (min-width: 601px) {
     margin: 0 0 45px 0;
   }
