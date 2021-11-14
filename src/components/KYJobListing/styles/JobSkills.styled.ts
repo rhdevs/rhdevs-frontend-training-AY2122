@@ -13,18 +13,55 @@ export const Container = styled.div`
   }
 `
 
-export const Tag = styled.div`
-  background-color: hsl(180, 52%, 96%);
-  margin-radius: 3px;
-  height: fit-content;
-  padding: 5px;
-  margin: 5px;
-`
-
 export const Text = styled.p`
   font-family: 'Spartan', sans-serif;
   font-weight: 700;
   font-size: 10px;
   color: hsl(180, 29%, 50%);
-  margin: 0;
+  background-color: hsl(180, 52%, 96%);
+  margin-radius: 3px;
+  height: fit-content;
+  margin: 5px;
+  padding: 5px;
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: hsl(180, 29%, 50%);
+  }
+`
+
+export const FilterTag = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 340px) {
+    margin: 5px 0;
+  }
+`
+
+export const FilterText = styled.p`
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 52%, 96%);
+  margin-radius: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 5px;
+`
+
+export const Cross = styled.div`
+  color: white;
+  background-color: hsl(180, 29%, 50%);
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+  }
 `

@@ -72,4 +72,8 @@ export const JobTitle = styled.p`
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 5px;
+  &:hover {
+    cursor: pointer;
+    color: hsl(180, 29%, 50%);
+  }
 `
