@@ -24,12 +24,6 @@ export enum JobTypeEnum {
   PART_TIME = 'Part Time',
   CONTRACT = 'Contract',
 }
-// company: string
-// jobTitle: string
-// tags: JobTagEnum[]
-// time: string
-// jobType: JobTypeEnum
-// location: string
 
 const KYJobListing = () => {
   return (

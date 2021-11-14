@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-//media: set flex-direction to col
 export const Card = styled.div<{ active?: boolean }>`
   display: flex;
   flex-direction: row;
@@ -11,11 +10,7 @@ export const Card = styled.div<{ active?: boolean }>`
   background-color: white;
   border-radius: 5px;
   box-shadow: 5px 10px 10px #dedede;
-  ${(props) =>
-    props.active &&
-    `
-    border-left: 5px solid hsl(180, 29%, 50%);
-  `}
+  ${(props) => props.active && `border-left: 5px solid hsl(180, 29%, 50%);`}
 
   @media (max-width: 950px) {
     flex-direction: column;

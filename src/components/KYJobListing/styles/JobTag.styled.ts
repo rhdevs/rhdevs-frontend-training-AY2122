@@ -30,6 +30,3 @@ export const Text = styled.p`
   margin: 0;
   height: min-content;
 `
-// position: absolute;
-// top: 50%;
-// transform: translateY(-50%);

@@ -14,13 +14,13 @@ const JobTag = (props: Props) => {
         switch (tag) {
           case JobTagEnum.NEW:
             return (
-              <NewBadge>
+              <NewBadge key={tag}>
                 <Text>{tag}</Text>
               </NewBadge>
             )
           case JobTagEnum.FEATURED:
             return (
-              <FeaturedBadge>
+              <FeaturedBadge key={tag}>
                 <Text>{tag}</Text>
               </FeaturedBadge>
             )
