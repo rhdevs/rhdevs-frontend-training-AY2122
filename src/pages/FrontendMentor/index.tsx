@@ -63,6 +63,11 @@ const FrontendMentor = () => {
           onClick={() => history.push(PATHS.ROCK_PAPER_SCISSORS)}
         />
         <Card
+          title="Calculator App"
+          description="Prince, Enhao"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRINCE_ENHAO_CALC)}
+        />
+        <Card
           title="Pricing Component with toggle"
           description="Jason"
           onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON)}
