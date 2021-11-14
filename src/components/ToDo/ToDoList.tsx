@@ -19,7 +19,7 @@ const ToDoList = (props: Props) => {
       {props.todos.map((todo: todo) => (
         <ToDoCard key={todo.key} todo={todo} setToDos={props.setTodos} todos={props.todos} />
       ))}
-      <LastRow />
+      <LastRow setTodos={props.setTodos} todos={props.todos} />
     </>
   )
 }
