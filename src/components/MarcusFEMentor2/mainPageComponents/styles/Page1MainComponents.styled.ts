@@ -9,8 +9,6 @@ import {
 import { LineAbovePara } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/GlobalDivStyles.styled'
 import { H1Large, Body1 } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
 
-// component desktop width 1440px (100vw), height 700px (absolute)
-
 export const Title = styled(H1Large).attrs({ responsive: true })`
   position: absolute;
   width: 40vw;

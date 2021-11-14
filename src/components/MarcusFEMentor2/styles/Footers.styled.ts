@@ -137,7 +137,6 @@ export const FooterLowerContentDiv = styled.div`
 
 export const FooterLowerLeftStyled = styled.div`
   position: absolute;
-  /* width: 20vw; */
   height: 100%;
   left: 0;
   top: 0;

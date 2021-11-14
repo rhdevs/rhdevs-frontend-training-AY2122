@@ -19,9 +19,9 @@ import { H2Styled, H3Styled, Body2 } from '../../../../pages/FrontendMentor/Marc
 export const About2ContentsDiv = styled.div`
   position: absolute;
   width: 77vw;
-  height: 50vw; // or 722px
+  height: 50vw;
   left: 11.5vw;
-  top: 140px; // or 9.7vw
+  top: 140px;
 
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ export const About2Title = styled(H2Styled)`
 export const About2DirectorsDiv = styled.div`
   position: absolute;
   width: 100%;
-  height: 42.3vw; // or 610px
+  height: 42.3vw;
   left: 0;
   top: 112px;
 
@@ -78,7 +78,7 @@ export const About2DirectorsDiv = styled.div`
 
 export const About2DirectorCardDiv = styled.div`
   width: 24.3vw;
-  height: 19.5vw; // or 281px
+  height: 19.5vw;
 
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@ export const About2DirectorCardDiv = styled.div`
 
 export const About2DirectorFlipCardDiv = styled.div`
   width: 100%;
-  height: 17.5vw; // or 253px
+  height: 17.5vw;
   background: ${sacramentoStateGreen};
 
   display: flex;
@@ -118,7 +118,7 @@ export const About2CardFaceImage = styled(FaceImage)`
   width: 4.3vw;
   height: 4.3vw;
 
-  margin-top: 2.2vw; // or 32px
+  margin-top: 2.2vw;
 
   @media (max-width: ${tabletMaxWidth}) {
     margin-top: -2vw;
@@ -137,7 +137,7 @@ export const About2CardFaceImage = styled(FaceImage)`
 export const About2CardName = styled(H3Styled).attrs({ responsive: true })<{ top: string }>`
   margin-top: ${(props) => props.top};
   width: 21vw;
-  height: 1.9vw; // or 28px
+  height: 1.9vw;
 
   text-align: center;
 
@@ -157,7 +157,7 @@ export const About2CardNameReverse = styled(About2CardName).attrs({ responsive: 
 export const About2CardTitle = styled(Body2).attrs({ responsive: true })`
   margin-top: 0;
   width: 21vw;
-  height: 1.9vw; // or 28px
+  height: 1.9vw;
 
   text-align: center;
 
@@ -219,6 +219,8 @@ export const About2CardButtonHoverZone = styled.div`
   top: 0;
   left: 0;
 
+  cursor: pointer;
+
   z-index: 10;
 `
 
@@ -243,7 +245,7 @@ export const About2CardQuote = styled(Body2).attrs({ responsive: true })`
   margin-top: 8px;
 
   width: 17.5vw;
-  height: 5.2vw; // or 75px
+  height: 5.2vw;
 
   text-align: center;
 
@@ -274,7 +276,7 @@ export const About2CardIconsDiv = styled.div`
 `
 
 export const About2CardIcon = styled(SocialMediaIconHover)`
-  width: 1.5vw; // or 22px
+  width: 1.5vw;
   height: 1.5vw;
 
   @media (max-width: ${tabletMaxWidth}) {

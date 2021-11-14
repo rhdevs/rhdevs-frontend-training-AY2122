@@ -66,7 +66,7 @@ export const Page2RightLogoBg = styled.img`
 `
 
 export const Page3DeliveringBg = styled(PageDiv)`
-  height: calc(23vw + 372px); // or 745px
+  height: calc(23vw + 372px);
 
   background: ${deepJungleGreen};
 

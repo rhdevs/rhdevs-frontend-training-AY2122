@@ -104,7 +104,14 @@ const About2DirectorCard = ({ info }: { info: DirectorInfo }) => {
   const [hoverBtn, setHoverBtn] = useState(false)
   const [clickBtn, setClickBtn] = useState(false)
 
-  const flip = hoverBtn || clickBtn
+  // check if webpage is rendered on a touchscreen device
+  const isTouchDevice = () => {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0
+  }
+
+  // for touchscreen and desktop devices, cards flip permanently when user taps/clicks on button;
+  // for desktop, an additional hover feature allows user to flip the card temporarily on button hover
+  const flip = isTouchDevice() ? clickBtn : hoverBtn || clickBtn
 
   return (
     <About2DirectorCardDiv>

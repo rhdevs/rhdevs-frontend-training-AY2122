@@ -5,7 +5,7 @@ import { mobileMaxWidth, tabletMaxWidth } from '../../styles/ResponsiveWidths'
 import { PageDiv } from '../../styles/GlobalDivStyles.styled'
 
 export const About1MainBg = styled(PageDiv)`
-  height: calc(258px + 18vw); // or 517px
+  height: calc(258px + 18vw);
   left: 0px;
   top: 0px;
 
@@ -33,7 +33,7 @@ export const About1RightLogoBg = styled.img`
 `
 
 export const About2MeetBg = styled(PageDiv)`
-  height: 69.5vw; // or 1002px
+  height: 69.5vw;
   left: 0;
 
   background: ${deepJungleGreen};

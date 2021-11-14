@@ -9,8 +9,6 @@ import {
 import { livvicFont } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/cssVariables.styled'
 import { Body2, H2Styled, H3Styled } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
 
-// component desktop width 1440px (100vw), height 745px (absolute)
-
 export const Page3ContentDiv = styled.div`
   position: absolute;
   width: 77vw;

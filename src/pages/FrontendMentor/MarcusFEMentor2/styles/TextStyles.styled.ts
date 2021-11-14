@@ -5,7 +5,7 @@ import { body1Size, body2Size, h1LargeSize, h1SmallSize, h2Size, h3Size } from '
 // text styles
 
 export const H1Large = styled.h1<{ responsive?: boolean }>`
-  ${h1LargeSize}
+  ${h1LargeSize}// css values 'copy and pasted' over here
 `
 
 export const H1Small = styled.h1<{ responsive?: boolean }>`

@@ -31,6 +31,8 @@ export const FaceImage = styled.img`
 `
 
 export const SocialMediaIconHover = styled.img`
+  cursor: pointer;
+
   :hover {
     ${filterWhiteToLightCoral}// magic that converts icon from white to lightCoral on hover
   }
@@ -44,6 +46,8 @@ export const BtnDiv = styled.button`
 
   color: ${white};
   background-color: transparent;
+
+  cursor: pointer;
 
   display: flex;
   justify-content: center;

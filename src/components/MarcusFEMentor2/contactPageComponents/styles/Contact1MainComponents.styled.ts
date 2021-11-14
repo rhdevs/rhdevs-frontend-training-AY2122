@@ -70,7 +70,7 @@ export const Contact1Subtitle = styled(H2Styled).attrs({ responsive: true })`
 export const Contact1AboutDiv = styled.div`
   position: absolute;
   width: 37.5vw;
-  height: 16vw; // or 232 px
+  height: 16vw;
   left: 0;
   top: 196px;
 
@@ -93,7 +93,7 @@ export const Contact1AboutDiv = styled.div`
 
 export const Contact1AboutEntryDiv = styled.div`
   width: 100%;
-  height: 5vw; // or 72px
+  height: 5vw;
 
   display: flex;
   flex-direction: row;
@@ -105,7 +105,7 @@ export const Contact1AboutEntryDiv = styled.div`
 `
 
 export const Contact1Icon = styled.img`
-  width: 5vw; // or 72px
+  width: 5vw;
   height: 5vw;
 
   @media (max-width: ${tabletMaxWidth}) {
@@ -122,7 +122,7 @@ export const Contact1AboutContent = styled(H3Styled).attrs({ responsive: true })
 export const Contact1FormDiv = styled.form`
   position: absolute;
   width: 37.5vw;
-  height: 29vw; // or 420px
+  height: 29vw;
   top: 0;
   right: 0;
 
@@ -132,7 +132,7 @@ export const Contact1FormDiv = styled.form`
 
   @media (max-width: ${tabletMaxWidth}) {
     width: 69vw;
-    height: 420px; // nice
+    height: 420px;
 
     top: 448px;
     left: 0;

@@ -24,6 +24,8 @@ export const HeaderHamburger = styled.img`
 
   width: 20px;
   height: 17px;
+
+  cursor: pointer;
 `
 
 export const HeaderBarStyled = styled.div`
@@ -97,6 +99,8 @@ export const SideMenuExitBtn = styled.img`
   height: 16px;
   left: 56.8vw;
   top: 56px;
+
+  cursor: pointer;
 `
 
 export const HeaderBarTextDiv = styled.div`
@@ -126,6 +130,8 @@ export const BarLink = styled.span<{ responsive?: boolean }>`
   line-height: 100%;
 
   color: ${white};
+
+  cursor: pointer;
 
   :hover {
     color: ${lightCoral};

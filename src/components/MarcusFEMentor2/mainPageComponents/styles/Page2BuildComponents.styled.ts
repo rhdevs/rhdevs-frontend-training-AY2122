@@ -9,8 +9,6 @@ import {
 import { LineAbovePara } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/GlobalDivStyles.styled'
 import { H3Styled, Body2 } from '../../../../pages/FrontendMentor/MarcusFEMentor2/styles/TextStyles.styled'
 
-// component desktop width 1440px (100vw), height 684px (absolute)
-
 export const Page2ContentDiv = styled.div`
   position: absolute;
   width: 77vw;
