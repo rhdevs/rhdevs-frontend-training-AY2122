@@ -121,3 +121,90 @@ export const StyledSettings = styled.img`
   color: #d7e0ff;
   cursor: pointer;
 `
+
+export const StyledButton = styled.div`
+  border-radius: 25px;
+  width: 140px;
+  height: 53px;
+  background: #f87070;
+  font-family: Kumbh Sans, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -25px;
+  cursor: pointer;
+`
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+export const SettingSubheader = styled.p`
+  font-family: Kumbh Sans, serif;
+  font-weight: 700;
+  @media (min-width: 601px) {
+    font-size: 13px;
+    letter-spacing: 5px;
+  }
+  @media (max-width: 600px) {
+    font-size: 11px;
+    letter-spacing: 4px;
+    justify-self: center;
+  }
+`
+
+export const SettingHeader = styled.h1`
+  font-family: Kumbh Sans, serif;
+  font-weight: 700;
+  @media (min-width: 601px) {
+    font-size: 28px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+`
+export const TimeSettingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const OptionContainer = styled.div`
+  width: 140px;
+  height: 70px;
+`
+
+export const OptionHeader = styled.h2`
+  font-family: Kumbh Sans, serif;
+  font-weight: 700;
+  font-size: 12px;
+`
+
+export const NumberContainer = styled.div`
+  width: 140px;
+  height: 48px;
+  border-radius: 10px;
+  position: relative;
+  background: #eff1fa;
+  font-family: Kumbh Sans, serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+`
+
+export const ArrowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+`
+
+export const Icon = styled.img`
+  width: 12px;
+  height: 4px;
+  cursor: pointer;
+`
