@@ -221,6 +221,9 @@ export const ToggleContainerText = styled.div`
   margin: auto;
 `
 export const StyleSlider = styled(Slider)`
-  background-image: url(${SliderIcon});
   background-size: 100%;
+  .ant-slider-handle {
+    background-image: url(${SliderIcon});
+    background-size: cover;
+  }
 `

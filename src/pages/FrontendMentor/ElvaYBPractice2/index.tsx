@@ -99,9 +99,9 @@ const ElvaYBPractice = () => {
             <MonthContainer>/month</MonthContainer>
           </PageViewPriceContainer>
           <Slidercontainer>
-            <Slider
+            <StyleSlider
               marks={marks}
-              onChange={(value) => setViews(value)}
+              onChange={(value: React.SetStateAction<number>) => setViews(value)}
               step={null}
               defaultValue={50}
               handleStyle={{ backgroundColor: 'hsl(174, 86%, 45%)' }}
