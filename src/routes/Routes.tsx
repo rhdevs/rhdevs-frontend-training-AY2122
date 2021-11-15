@@ -82,7 +82,7 @@ const SkDashboard = React.lazy(
 const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
-const Maximwp_proj2 = React.lazy(
+const MaximWPProj2 = React.lazy(
   () => import(/* webpackChunckName: "Maximwp_proj2" */ '../pages/FrontendMentor/Maximwp_proj2'),
 )
 const SkIPAddress = React.lazy(
@@ -126,7 +126,7 @@ export const Routes = () => (
     <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
     <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
     <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
-    <RouteWithTopNav exact path={PATHS.MAXIMWP_PROJ2} component={Maximwp_proj2} />
+    <RouteWithTopNav exact path={PATHS.MAXIMWP_PROJ2} component={MaximWPProj2} />
     {/* example from lesson 1 (4oct) */}
     <Route exact path="/example" component={Lesson1Example} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />

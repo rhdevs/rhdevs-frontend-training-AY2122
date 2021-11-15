@@ -1,7 +1,6 @@
-import { Switch } from 'antd'
 import React, { useState } from 'react'
-import { Cont } from '../../../components/MaximWPproj2/Containers'
-import { CentCont } from '../../../components/MaximWPproj2/MainCont.styled'
+import { Container } from '../../../components/MaximWPproj2/Container'
+import { CentCont } from '../../../components/MaximWPproj2/CentCont.styled'
 
 import {
   MainContainer,
@@ -12,32 +11,30 @@ import {
   ToggleBetween,
   SwitchStyle,
   SwitchStyle1,
-} from './styles/styled'
+} from './styles/Maximwpproject2.styled'
 
-export default function App() {
+export default function PricingApp() {
   const [monthly, setMonthly] = useState(false)
 
   return (
     <>
       <MainBox>
         <TopBox>
-          <div className="App">
-            <Pricing> Our Pricing </Pricing>
-            <Minibox>
-              <ToggleBetween> Annually </ToggleBetween>
-              <SwitchStyle1 onChange={() => setMonthly(!monthly)}></SwitchStyle1>
-              <ToggleBetween> Monthly </ToggleBetween>
-            </Minibox>
-          </div>
+          <Pricing> Our Pricing </Pricing>
+          <Minibox>
+            <ToggleBetween> Annually </ToggleBetween>
+            <SwitchStyle1 onChange={() => setMonthly(!monthly)}></SwitchStyle1>
+            <ToggleBetween> Monthly </ToggleBetween>
+          </Minibox>
         </TopBox>
         <MainContainer>
-          <Cont
+          <Container
             title="Basic"
             number={monthly ? '$19.99' : '$199.99'}
             text1="500 GB Storage"
             text2={'2 Users Allowed'}
             text3={'Send up to 3 GB'}
-          ></Cont>
+          ></Container>
           <CentCont
             title="Professional"
             number={monthly ? '$24.99' : '$249.99'}
@@ -45,13 +42,13 @@ export default function App() {
             text2={'5 Users Allowed'}
             text3={'Send up to 10 GB'}
           ></CentCont>
-          <Cont
+          <Container
             title="Master"
             number={monthly ? '$39.99' : '$359.99'}
             text1={'2 TB Storage'}
             text2={'10 Users Allowed'}
             text3={'Send up to 20 GB'}
-          ></Cont>
+          ></Container>
         </MainContainer>
       </MainBox>
     </>

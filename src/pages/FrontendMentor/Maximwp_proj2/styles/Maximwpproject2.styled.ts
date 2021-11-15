@@ -10,14 +10,13 @@ export const MainBox = styled.div`
   background-position: left bottom, right top;
   background-color: rgb(247, 247, 255);
 `
-
 export const TopBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 `
 export const Minibox = styled.div`
   display: flex;
@@ -29,14 +28,16 @@ export const Minibox = styled.div`
 export const Pricing = styled.div`
   text-align: center;
   margin: 1rem;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 700;
   color: rgb(110, 114, 143);
   font-family: 'Montserrat';
 `
 export const ToggleBetween = styled.div`
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
+  margin: 0.5rem;
+  font-family: 'Montserrat';
 `
 export const MainContainer = styled.div`
   display: flex;
@@ -44,26 +45,11 @@ export const MainContainer = styled.div`
   flex-direction: row;
   justify-content: safe center;
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
-  }
-`
-//  #background-color: hsl(234, 14%, 74%);
-export const CentreCont = styled.div`
-  height: 550px;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  border-width: 5px;
-  border-radius: 10px;
-  font-family: 'Montserrat';
-  @media (max-width: 1024px) {
-    margin: 50px;
   }
 `
 export const SwitchStyle = {

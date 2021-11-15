@@ -40,10 +40,9 @@ export const MainContainer = styled.div`
     flex-direction: column;
   }
 `
-//  #background-color: hsl(234, 14%, 74%);
 export const CentreCont = styled.div`
-  height: 600px;
-  width: 400px;
+  height: 570px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,10 +50,13 @@ export const CentreCont = styled.div`
   border-width: 5px;
   border-radius: 10px;
   font-family: 'Montserrat';
+  @media (max-width: 1024px) {
+    margin: 1rem;
+  }
 `
 export const SideCont = styled.div`
-  height: 550px;
-  width: 400px;
+  height: 520px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,34 +65,35 @@ export const SideCont = styled.div`
   border-radius: 5px;
   font-family: 'Montserrat';
 `
-export const StyledHeader = styled.p<{ typ?: string }>`
+export const StyledHeader = styled.p<{ containertype?: string }>`
   margin: 2rem;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   vertical-align: middle;
   font-family: 'Montserrat';
   text-align: center;
-  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'hsl(233, 13%, 49%);')}
+  ${(props) => (props.containertype === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'hsl(233, 13%, 49%);')}
     }
 `
-export const StyledNumber = styled.p<{ typ?: string }>`
-  margin: 2rem;
-  font-size: 80px;
+export const StyledNumber = styled.p<{ containertype?: string }>`
+  margin: 1rem;
+  font-size: 60px;
   font-weight: 700;
   vertical-align: middle;
   text-align: center;
   font-family: 'Montserrat';
-  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: rgb(74, 76, 97);')}
+  ${(props) => (props.containertype === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: rgb(74, 76, 97);')}
 }
 `
-export const Detailsincont = styled.p<{ typ?: string }>`
+export const Detailsincont = styled.p<{ containertype?: string }>`
   margin: 1rem;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
+  line-height: 3rem;
   vertical-align: middle;
   text-align: center;
-  'font-family': 'Montserrat';
-  ${(props) => (props.typ === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: rgb(74, 76, 97);')}
+  font-family: 'Montserrat';
+  ${(props) => (props.containertype === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: rgb(74, 76, 97);')}
 `
 export const SwitchStyle = {
   borderRadius: 100,
@@ -100,7 +103,7 @@ export const SwitchStyle = {
   alignItems: 'center',
 }
 export const ButtonStyle = {
-  width: '300px',
+  width: '250px',
   height: '45px',
   borderRadius: '20px',
   backgroundColor: 'hsl(0, 0%, 100%)',
@@ -115,7 +118,7 @@ export const ButtonStyle = {
 }
 
 export const ButtonStyle2 = {
-  width: '300px',
+  width: '250px',
   height: '45px',
   borderRadius: '20px',
   backgroundColor: 'hsl(234, 14%, 74%)',
