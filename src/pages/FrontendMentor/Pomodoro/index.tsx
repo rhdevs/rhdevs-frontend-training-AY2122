@@ -52,7 +52,7 @@ const Pomodoro = () => {
   const [isPaused, setPaused] = useState<boolean>(true)
   const [timeLeft, setTimeLeft] = useState<number>(15 * 60)
   const [isSettingsOpen, setSettingsOpen] = useState<boolean>(false)
-  const [times, setTimes] = useState({ pomodoro: 15 * 60, short: 5 * 60, long: 30 * 60 })
+  const [times, setTimes] = useState<Record<string, number>>({ pomodoro: 15 * 60, short: 5 * 60, long: 30 * 60 })
 
   const states = ['pomodoro', 'short', 'long']
 
@@ -99,9 +99,7 @@ const Pomodoro = () => {
   const switchState = (state: string) => {
     setCurrentState(state)
     setPaused(true)
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    setTimeLeft(times[state]) //idk why this is banned in ts?
+    setTimeLeft(times[state])
   }
 
   const renderLabel = () => (
@@ -148,29 +146,19 @@ const Pomodoro = () => {
     </Modal>
   )
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const getTime = (key: string) => times[key] / 60 //same as before ts checks this for some reason?
+  const getTime = (key: string) => times[key] / 60
 
   const handleTimeChange = (key: string, direction: string) => {
     if (direction === 'up') {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
       setTimes({ ...times, [key]: times[key] + 60 })
       if (currentState === key) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        setTimeLeft(times[key]) //idk why this is banned in ts?
+        setTimeLeft(times[key] + 60)
       }
       return
     }
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     setTimes({ ...times, [key]: times[key] - 60 })
     if (currentState === key) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      setTimeLeft(times[key]) //idk why this is banned in ts?
+      setTimeLeft(times[key] - 60)
     }
     return
   }
