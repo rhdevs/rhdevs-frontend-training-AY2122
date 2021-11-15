@@ -26,6 +26,7 @@ import {
   BottomLeftText3,
   BottomLeftText2,
   BottomLeftText1,
+  StyleSlider,
 } from './styles/SliderComponent.styled'
 
 const marks = {
@@ -35,7 +36,6 @@ const marks = {
   75: '',
   100: '',
 }
-
 const ElvaYBPractice = () => {
   const [views, setViews] = useState(50)
   const [toggle, setToggle] = useState(false)

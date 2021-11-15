@@ -30,6 +30,10 @@ export const TopComponent = styled.div`
   position: absolute;
   top: 50px;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    margin-top: 30px;
+    height: 22vh;
+  }
 `
 export const TopComponentTopText = styled.div`
   font-size: 25px;
@@ -38,11 +42,20 @@ export const TopComponentTopText = styled.div`
   font-weight: bold;
   color: hsl(227, 35%, 25%);
   padding-top: 35px;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    font-size: 18px;
+  }
 `
 export const TopComponentBottomText = styled.div`
   color: grey;
   font-size: 13px;
   height: 10vh;
+  @media only screen and (max-width: 600px) {
+    width: 65%;
+    font-size: 12px;
+    margin-left: 40px;
+  }
 `
 export const MainComponent = styled.div`
   z-index: 2;
@@ -57,6 +70,10 @@ export const MainComponent = styled.div`
   flex-direction: column;
   box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
   top: -30px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 180px;
+    height: 60vh;
+    width: 40vw;
 `
 
 export const ToggleContainer = styled.div`
@@ -66,6 +83,10 @@ export const ToggleContainer = styled.div`
   position: relative;
   top: 70px;
   width: 80%;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-left: 40px;
+  }
 `
 export const Slidercontainer = styled.div`
   width: 60%;
@@ -74,6 +95,9 @@ export const Slidercontainer = styled.div`
   flex-direction: row;
   position: relative;
   top: 70px;
+  @media only screen and (max-width: 600px) {
+    width: 85%;
+  }
 `
 
 export const MainBottomComponent = styled.div`
@@ -83,6 +107,10 @@ export const MainBottomComponent = styled.div`
   box-shadow: 0 -1px 0 #d3d3d3;
   position: relative;
   top: 100px;
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 export const PageViewPriceContainer = styled.div`
   width: 100%;
@@ -125,6 +153,12 @@ export const StartTrialButton = styled.button`
   margin-top: -20px;
   margin-left: 40px;
   position: relative;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: 0px;
+    position: relative;
+  }
 `
 export const BottomLeftContainer = styled.div`
   display: flex;
@@ -134,6 +168,11 @@ export const BottomLeftContainer = styled.div`
   align-items: center;
   padding-right: 30px;
   padding-top: 20px;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    height: 30%;
+    margin-top: -20px;
+  }
 `
 export const BottomLeftText1 = styled.div`
   color: hsl(225, 20%, 60%);
@@ -180,4 +219,8 @@ export const ToggleContainerText = styled.div`
   text-align: center;
   font-size: 12px;
   margin: auto;
+`
+export const StyleSlider = styled(Slider)`
+  background-image: url(${SliderIcon});
+  background-size: 100%;
 `
