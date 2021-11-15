@@ -165,14 +165,25 @@ export const SettingHeader = styled.h1`
   }
 `
 export const TimeSettingContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @media (min-width: 501px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 500px) {
+  }
 `
 
 export const OptionContainer = styled.div`
-  width: 140px;
-  height: 70px;
+  @media (min-width: 501px) {
+    width: 140px;
+    height: 70px;
+  }
+  @media (max-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 
 export const OptionHeader = styled.h2`
