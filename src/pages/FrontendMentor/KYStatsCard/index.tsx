@@ -22,17 +22,13 @@ const KYStatsCard = () => {
           <Image src={image}></Image>
         </ImageContainer>
         <InformationContainer>
-          {/* <HeaderContainer> */}
           <Header>
             Get <Highlight>insights</Highlight> that help your business grow.
           </Header>
-          {/* </HeaderContainer> */}
-          {/* <DescriptionContainer> */}
           <DescriptionText>
             Discover the benefits of data analytics and make better decisions regarding revenue, customer experience,
             and overall efficiency.
           </DescriptionText>
-          {/* </DescriptionContainer> */}
           <StatsContainer>
             <StatsBox number="10k+" text="COMPANIES"></StatsBox>
             <StatsBox number="314" text="TEMPLATES"></StatsBox>
