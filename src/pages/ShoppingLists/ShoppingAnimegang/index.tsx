@@ -5,9 +5,9 @@ import {
   TablePart,
   TopRow,
   TotalPricePart,
+  FullScreenContainer,
 } from './styles/ShoppingAnimegang.styled'
 import { Table, Button, Space, Input } from 'antd'
-import { FullScreenContainer } from './styles/ShoppingAnimegang.styled'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 
 const initialList: Item[] = [
