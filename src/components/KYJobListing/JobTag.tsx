@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { JobTagContainer, NewBadge, FeaturedBadge, Text } from './styles/JobTag.styled'
-import { JobTagEnum } from '../../pages/FrontendMentor/KYJobListing'
+import { JobTagEnum } from '../../store/KYJobListing/types'
 
 type Props = {
   tags: JobTagEnum[]

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, TextContainer } from './styles/JobInformation.styled'
-import { JobTypeEnum } from '../../pages/FrontendMentor/KYJobListing'
+import { JobTypeEnum } from '../../store/KYJobListing/types'
 
 type Props = {
   time: string

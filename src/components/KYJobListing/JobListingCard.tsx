@@ -5,16 +5,17 @@ import { Card, Image, Information, Details, TopRow, CompanyName, JobTitle } from
 import JobTag from './JobTag'
 import JobInformation from './JobInformation'
 import JobSkills from './JobSkills'
-import { JobTypeEnum, JobTagEnum } from '../../pages/FrontendMentor/KYJobListing'
+import { JobTypeEnum, JobTagEnum, SkillsEnum } from '../../store/KYJobListing/types'
 
 type Props = {
+  key: string
   image: string
   company: string
   jobTitle: string
   time: string
   jobType: JobTypeEnum
   location: string
-  skills: string[]
+  skills: SkillsEnum[]
   active: boolean
   tags?: JobTagEnum[]
 }
@@ -33,7 +34,7 @@ const JobListingCard = (props: Props) => {
           <JobInformation time={props.time} jobType={props.jobType} location={props.location}></JobInformation>
         </Details>
       </Information>
-      <JobSkills skills={props.skills}></JobSkills>
+      <JobSkills skills={props.skills} isFilter={false}></JobSkills>
     </Card>
   )
 }
