@@ -81,7 +81,7 @@ const Pomodoro = () => {
     }
   }
 
-  const getTimeLeft = () => {
+  const getTimeLeft = (timeLeft: number) => {
     return [Math.floor(timeLeft / 60), Math.floor(timeLeft % 60)]
   }
 
@@ -91,7 +91,7 @@ const Pomodoro = () => {
   }
 
   const timeToString = () => {
-    const timeArray = getTimeLeft()
+    const timeArray = getTimeLeft(timeLeft)
     const seconds = timeArray[1].toString().length === 1 ? '0' + timeArray[1].toString() : timeArray[1].toString()
     return timeArray[0].toString() + ':' + seconds
   }
@@ -112,7 +112,7 @@ const Pomodoro = () => {
     </StyledLabelContainer>
   )
 
-  function getPauseText() {
+  function getPauseText(isPaused: boolean) {
     return isPaused ? 'START' : 'PAUSE'
   }
 
@@ -121,7 +121,7 @@ const Pomodoro = () => {
       <StyledTimerContainer>
         <StyledTimerSubContainer>
           <StyledTimer>{timeToString()}</StyledTimer>
-          <StyledPause>{getPauseText()}</StyledPause>
+          <StyledPause>{getPauseText(isPaused)}</StyledPause>
         </StyledTimerSubContainer>
       </StyledTimerContainer>
     </StyledTimerMainContainer>
