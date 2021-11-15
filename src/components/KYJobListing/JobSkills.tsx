@@ -1,5 +1,6 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../store/types'
 
 import { Container, Text, FilterTag, FilterText, Cross } from './styles/JobSkills.styled'
 import { AddFilter, RemoveFilter } from '../../store/KYJobListing/action'
@@ -13,6 +14,12 @@ type Props = {
 
 const JobSkills = (props: Props) => {
   const dispatch = useDispatch()
+  const { filters } = useSelector((state: RootState) => state.kyJobListing)
+
+  const checkActive = (skill: SkillsEnum) => {
+    return filters.includes(skill)
+  }
+
   return (
     <Container>
       {props.isFilter
@@ -30,7 +37,7 @@ const JobSkills = (props: Props) => {
           })
         : props.skills.map((skill) => {
             return (
-              <Text key={skill} onClick={() => dispatch(AddFilter(skill))}>
+              <Text active={checkActive(skill)} key={skill} onClick={() => dispatch(AddFilter(skill))}>
                 {skill}
               </Text>
             )

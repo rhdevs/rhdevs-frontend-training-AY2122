@@ -13,7 +13,7 @@ export const Container = styled.div`
   }
 `
 
-export const Text = styled.p`
+export const Text = styled.p<{ active?: boolean }>`
   font-family: 'Spartan', sans-serif;
   font-weight: 700;
   font-size: 10px;
@@ -23,6 +23,7 @@ export const Text = styled.p`
   height: fit-content;
   margin: 5px;
   padding: 5px;
+  ${(props) => props.active && `background-color: hsl(180, 29%, 50%); color: white; cursor: pointer;`}
   &:hover {
     cursor: pointer;
     color: white;
