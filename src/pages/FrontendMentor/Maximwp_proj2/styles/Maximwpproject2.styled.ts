@@ -52,14 +52,6 @@ export const MainContainer = styled.div`
     flex-direction: column;
   }
 `
-export const SwitchStyle = {
-  'background-image': 'linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))',
-  color: '#016972',
-  margin: '1rem',
-  alignItems: 'center',
-  width: '80px',
-  height: '30px',
-}
 
 export const SwitchStyle1 = styled(Switch)`
   background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -71,5 +63,8 @@ export const SwitchStyle1 = styled(Switch)`
   }
   .ant-switch-checked .ant-switch-handle {
     left: calc(100% - 25px - 2px);
+  }
+  :hover {
+    background-image: linear-gradient(to right, hsl(236, 82%, 89%), hsl(237, 73%, 74%));
   }
 `

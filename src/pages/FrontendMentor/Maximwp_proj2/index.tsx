@@ -9,7 +9,6 @@ import {
   Minibox,
   Pricing,
   ToggleBetween,
-  SwitchStyle,
   SwitchStyle1,
 } from './styles/Maximwpproject2.styled'
 

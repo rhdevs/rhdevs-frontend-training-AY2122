@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'antd'
 
 import { ButtonStyle, CentreCont, Detailsincont, StyledHeader, StyledNumber } from './styles/Container.styled'
 
@@ -24,7 +23,7 @@ export const CentCont = (props: Props) => {
         <hr />
         {props.text3}
       </Detailsincont>
-      <Button style={ButtonStyle}> Learn more </Button>
+      <ButtonStyle> Learn more </ButtonStyle>
     </CentreCont>
   )
 }

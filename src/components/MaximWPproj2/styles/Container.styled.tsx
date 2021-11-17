@@ -1,3 +1,4 @@
+import { Button } from 'antd'
 import styled from 'styled-components'
 
 export const TopBox = styled.div`
@@ -102,36 +103,44 @@ export const SwitchStyle = {
   margin: '1rem',
   alignItems: 'center',
 }
-export const ButtonStyle = {
-  width: '250px',
-  height: '45px',
-  borderRadius: '20px',
-  backgroundColor: 'hsl(0, 0%, 100%)',
-  color: '#7276e1',
-  'vertical-align': 'middle',
-  alignItems: 'center',
-  margin: 'auto',
-  'font-size': '15px',
-  'border-radius': '2px',
-  'font-weight': '700',
-  'font-family': 'Montserrat',
-}
+export const ButtonStyle = styled(Button)`
+  width: 250px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+  color: #7276e1;
+  vertical-align: middle;
+  align-items: center;
+  margin: auto;
+  font-size: 15px;
+  border-radius: 2px;
+  font-weight: 700;
+  font-family: Montserrat;
+  :hover {
+    background-color: hsl(237, 63%, 64%);
+    color: hsl(0, 0%, 100%);
+  }
+`
 
-export const ButtonStyle2 = {
-  width: '250px',
-  height: '45px',
-  borderRadius: '20px',
-  backgroundColor: 'hsl(234, 14%, 74%)',
-  backgroundImage: 'linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))',
-  color: '#fff',
-  'vertical-align': 'middle',
-  alignItems: 'center',
-  margin: 'auto',
-  'font-size': '15px',
-  'border-radius': '2px',
-  'font-weight': '700',
-  'font-family': 'Montserrat',
-}
+export const ButtonStyle2 = styled(Button)`
+  width: 250px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: hsl(234, 14%, 74%);
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  vertical-align: middle;
+  align-items: center;
+  margin: auto;
+  font-size: 15px;
+  border-radius: 2px;
+  font-weight: 700;
+  font-family: Montserrat;
+  :hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(237, 63%, 64%);
+  }
+`
 
 export const SideDivider = {
   width: '85%',
