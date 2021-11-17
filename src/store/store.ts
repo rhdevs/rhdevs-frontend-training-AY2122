@@ -13,6 +13,7 @@ import { shoppingListsSKZK } from './skzk/reducer'
 import { marcusFEMentor } from './MarcusFEMentor/reducer'
 import { yxwp_store } from './yxwp_store/reducer'
 import { tipCalculatorApp } from './tipCalculatorApp/reducer'
+import { kyJobListing } from './KYJobListing/reducer'
 
 export const rootReducer = combineReducers({
   animeGangRedux,
@@ -26,6 +27,7 @@ export const rootReducer = combineReducers({
   marcusFEMentor,
   shoppingListsCYYZ,
   tipCalculatorApp,
+  kyJobListing,
 })
 const middlewares = [thunk]
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)))
