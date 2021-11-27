@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { getAllJSDocTagsOfKind } from 'typescript'
 import { Rectangle, Circle, TextBox } from './styles/ToDoCard.styled'
 
 type todo = {
   key: string
   task: string
   completed: boolean
+  visible: boolean
 }
 
 type Props = {

@@ -5,6 +5,7 @@ type todo = {
   key: string
   task: string
   completed: boolean
+  visible: boolean
 }
 
 type Props = {
@@ -13,39 +14,37 @@ type Props = {
 }
 
 const LastRow = (props: Props) => {
-  const [allToDo, setAllToDo] = useState(props.todos)
-
   const clearCompleted = () => {
     const filtered = props.todos.filter((task) => {
       return !task.completed
     })
     props.setTodos(filtered)
-    setAllToDo(filtered)
   }
 
   const showAll = () => {
-    props.setTodos(allToDo)
+    const mapped = props.todos.map((task: todo) => {
+      return task.completed === false ? { ...task, visible: true } : { ...task, visible: true }
+    })
+    props.setTodos(mapped)
   }
 
   const showActive = () => {
-    setAllToDo(props.todos)
-    const filtered = props.todos.filter((task) => {
-      return !task.completed
+    const mapped = props.todos.map((task: todo) => {
+      return task.completed === false ? { ...task, visible: true } : { ...task, visible: false }
     })
-    props.setTodos(filtered)
+    props.setTodos(mapped)
   }
 
   const showCompleted = () => {
-    setAllToDo(props.todos)
-    const filtered = props.todos.filter((task) => {
-      return task.completed
+    const mapped = props.todos.map((task) => {
+      return task.completed === true ? { ...task, visible: true } : { ...task, visible: false }
     })
-    props.setTodos(filtered)
+    props.setTodos(mapped)
   }
 
   return (
     <Rectangle>
-      <ItemsLeft>{props.todos.length} items left</ItemsLeft>
+      <ItemsLeft>{props.todos.filter((todo) => !todo.completed).length} items left</ItemsLeft>
       <MiddleTBox>
         <TextBox onClick={showAll}>All</TextBox>
         <TextBox onClick={showActive}>Active</TextBox>

@@ -6,6 +6,7 @@ type todo = {
   key: string
   task: string
   completed: boolean
+  visible: boolean
 }
 
 type Props = {
@@ -16,9 +17,13 @@ type Props = {
 const ToDoList = (props: Props) => {
   return (
     <>
-      {props.todos.map((todo: todo) => (
-        <ToDoCard key={todo.key} todo={todo} setToDos={props.setTodos} todos={props.todos} />
-      ))}
+      {props.todos
+        .filter((todo: todo) => {
+          return todo.visible
+        })
+        .map((todo: todo) => (
+          <ToDoCard key={todo.key} todo={todo} setToDos={props.setTodos} todos={props.todos} />
+        ))}
       <LastRow setTodos={props.setTodos} todos={props.todos} />
     </>
   )
