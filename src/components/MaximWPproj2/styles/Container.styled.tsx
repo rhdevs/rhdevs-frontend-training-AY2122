@@ -1,6 +1,17 @@
 import { Button } from 'antd'
 import styled from 'styled-components'
 
+export const Hrstyle = styled.hr`
+  width: 250px !important;
+  border-top: 1px solid;
+  color: rgb(219, 219, 219);
+`
+export const Hrstyle2 = styled.hr`
+  width: 250px !important;
+  border-top: 1px solid;
+  color: rgb(168, 173, 254);
+`
+
 export const TopBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -39,35 +50,34 @@ export const MainContainer = styled.div`
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
+    column-gap: 20px;
   }
 `
 export const CentreCont = styled.div`
-  height: 570px;
+  height: 450px;
   width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  border-width: 5px;
   border-radius: 10px;
   font-family: 'Montserrat';
   @media (max-width: 1024px) {
-    margin: 1rem;
+    margin: 3rem;
   }
 `
 export const SideCont = styled.div`
-  height: 520px;
+  height: 420px;
   width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: hsl(0, 0%, 100%);
-  border-width: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: 'Montserrat';
 `
 export const StyledHeader = styled.p<{ containertype?: string }>`
-  margin: 2rem;
+  margin: 2em 0em 0em 0em;
   font-size: 18px;
   font-weight: 700;
   vertical-align: middle;
@@ -77,8 +87,8 @@ export const StyledHeader = styled.p<{ containertype?: string }>`
     }
 `
 export const StyledNumber = styled.p<{ containertype?: string }>`
-  margin: 1rem;
-  font-size: 60px;
+  margin: 0rem;
+  font-size: 52px;
   font-weight: 700;
   vertical-align: middle;
   text-align: center;
@@ -90,7 +100,7 @@ export const Detailsincont = styled.p<{ containertype?: string }>`
   margin: 1rem;
   font-size: 14px;
   font-weight: 700;
-  line-height: 3rem;
+  line-height: 2rem;
   vertical-align: middle;
   text-align: center;
   font-family: 'Montserrat';
@@ -106,26 +116,31 @@ export const SwitchStyle = {
 export const ButtonStyle = styled(Button)`
   width: 250px;
   height: 45px;
-  border-radius: 20px;
+  border-radius: 8px;
   background-color: hsl(0, 0%, 100%);
   color: #7276e1;
   vertical-align: middle;
   align-items: center;
   margin: auto;
   font-size: 15px;
-  border-radius: 2px;
   font-weight: 700;
   font-family: Montserrat;
+  :focus {
+    color: #fff;
+    border-color: #fff;
+    background: #fff;
+  }
   :hover {
     background-color: hsl(237, 63%, 64%);
     color: hsl(0, 0%, 100%);
+    border-color: #fff;
   }
 `
 
 export const ButtonStyle2 = styled(Button)`
   width: 250px;
   height: 45px;
-  border-radius: 20px;
+  border-radius: 8px;
   background-color: hsl(234, 14%, 74%);
   background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: #fff;
@@ -133,12 +148,12 @@ export const ButtonStyle2 = styled(Button)`
   align-items: center;
   margin: auto;
   font-size: 15px;
-  border-radius: 2px;
   font-weight: 700;
   font-family: Montserrat;
   :hover {
     background-color: hsl(0, 0%, 100%);
     color: hsl(237, 63%, 64%);
+    border-color: hsl(237, 63%, 64%);
   }
 `
 

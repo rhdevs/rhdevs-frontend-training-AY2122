@@ -21,8 +21,10 @@ export const TopBox = styled.div`
 export const Minibox = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin: 1rem;
+  justify-content: space-between;
+  text-align: justify;
+  padding: 10px;
+  column-gap: 20px;
   font-size: 30px;
 `
 export const Pricing = styled.div`
@@ -36,8 +38,8 @@ export const Pricing = styled.div`
 export const ToggleBetween = styled.div`
   text-align: center;
   font-size: 14px;
-  margin: 0.5rem;
   font-family: 'Montserrat';
+  word-spacing: 14px;
 `
 export const MainContainer = styled.div`
   display: flex;
@@ -55,16 +57,35 @@ export const MainContainer = styled.div`
 
 export const SwitchStyle1 = styled(Switch)`
   background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  width: 80px;
+  box-shadow: none;
+  .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+  }
+  :hover {
+    color: #ffffff !important;
+    background-image: linear-gradient(to right, hsl(236, 82%, 89%), hsl(237, 73%, 74%));
+  }
+`
+
+export const Switchfail = styled(Switch)`
+  width: 60px;
   height: 30px;
   .ant-switch-handle {
-    width: 18px;
+    width: 25px;
     height: 25px;
   }
   .ant-switch-checked .ant-switch-handle {
-    left: calc(100% - 25px - 2px);
+    left: calc(100% - 25px - 2px) !important;
   }
-  :hover {
-    background-image: linear-gradient(to right, hsl(236, 82%, 89%), hsl(237, 73%, 74%));
+  .ant-switch:not(.ant-switch-disabled):active .ant-switch-handle::before {
+    right: -50% !important;
+    left: 0 !important;
+  }
+  .ant-switch:not(.ant-switch-disabled):active.ant-switch-checked .ant-switch-handle::before {
+    right: 0 !important;
+    left: -50% !important;
+  }
+  .ant-switch-handle::before {
+    border-radius: 14px;
   }
 `

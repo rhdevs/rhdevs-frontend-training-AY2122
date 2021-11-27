@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ButtonStyle, CentreCont, Detailsincont, StyledHeader, StyledNumber } from './styles/Container.styled'
+import { ButtonStyle, CentreCont, Detailsincont, Hrstyle2, StyledHeader, StyledNumber } from './styles/Container.styled'
 
 type Props = {
   title: string
@@ -16,11 +16,11 @@ export const CentCont = (props: Props) => {
       <StyledHeader containertype={'Main'}>{props.title}</StyledHeader>
       <StyledNumber containertype={'Main'}>{props.number}</StyledNumber>
       <Detailsincont containertype={'Main'}>
-        <hr style={{ width: 250 }} />
+        <Hrstyle2></Hrstyle2>
         {props.text1}
-        <hr />
+        <Hrstyle2></Hrstyle2>
         {props.text2}
-        <hr />
+        <Hrstyle2></Hrstyle2>
         {props.text3}
       </Detailsincont>
       <ButtonStyle> Learn more </ButtonStyle>
