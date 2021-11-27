@@ -34,6 +34,7 @@ const FrontendMentor = () => {
           description="Kiyong"
           onClick={() => history.push(PATHS.KY_STATS_CARD_COMPONENT)}
         />
+        <Card title="Job Listings" description="Kiyong" onClick={() => history.push(PATHS.KY_JOB_LISTING)} />
         <Card
           title="Single price grid component"
           description="Elva & Yongbin"
@@ -46,6 +47,11 @@ const FrontendMentor = () => {
         />
         <Card title="Social Media Dashboard" description="Shao Kiat" onClick={() => history.push(PATHS.SK_DASHBOARD)} />
         <Card title="REST Countries API" description="Marcus" onClick={() => history.push(PATHS.MARCUS_FE_MENTOR)} />
+        <Card
+          title="myteam multi-page website"
+          description="Marcus"
+          onClick={() => history.push(PATHS.MARCUS_FE_MENTOR_2_HOME)}
+        />
         <Card
           title="Tip Calculator App"
           description="Jason"
@@ -60,6 +66,16 @@ const FrontendMentor = () => {
           title="Rock, Paper, Scissors"
           description="Chun Yu"
           onClick={() => history.push(PATHS.ROCK_PAPER_SCISSORS)}
+        />
+        <Card
+          title="Calculator App"
+          description="Prince, Enhao"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRINCE_ENHAO_CALC)}
+        />
+        <Card
+          title="Pricing Component with toggle"
+          description="Jason"
+          onClick={() => history.push(PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON)}
         />
         <Card title="IP Address Tracker" description="Shao Kiat" onClick={() => history.push(PATHS.SK_IPADDRESS)} />
       </InformationCardSection>
