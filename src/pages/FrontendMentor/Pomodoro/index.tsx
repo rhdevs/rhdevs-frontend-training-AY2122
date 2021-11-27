@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from 'react'
 
-import { Modal } from 'antd'
-
 import {
   MainContainer,
   StyledTitle,
   StyledLabel,
   StyledLabelContainer,
-  StyledTimerContainer,
-  StyledTimerSubContainer,
-  StyledPause,
-  StyledTimer,
   StyledSettings,
-  StyledTimerMainContainer,
   StyledButton,
   ButtonContainer,
-  SettingSubheader,
-  SettingHeader,
-  TimeSettingContainer,
   OptionContainer,
   OptionHeader,
   NumberContainer,
   ArrowContainer,
   Icon,
 } from './styles/Pomodoro.styled'
+import Timer from '../../../components/Pomodoro/Timer'
+import SettingsModal from '../../../components/Pomodoro/SettingsModal'
 import settingsIcon from '../../../assets/Pomodoro/icon-settings.svg'
 import upArrow from '../../../assets/Pomodoro/icon-arrow-up.svg'
 import downArrow from '../../../assets/Pomodoro/icon-arrow-down.svg'
@@ -117,14 +109,14 @@ const Pomodoro = () => {
   }
 
   const renderTimer = () => (
-    <StyledTimerMainContainer onClick={togglePause}>
-      <StyledTimerContainer>
-        <StyledTimerSubContainer>
-          <StyledTimer>{timeToString()}</StyledTimer>
-          <StyledPause>{getPauseText(isPaused)}</StyledPause>
-        </StyledTimerSubContainer>
-      </StyledTimerContainer>
-    </StyledTimerMainContainer>
+    <Timer
+      onClick={togglePause}
+      timeLeft={timeLeft}
+      times={times}
+      currentState={currentState}
+      s={timeToString()}
+      pauseText={getPauseText(isPaused)}
+    />
   )
 
   const toggleSettings = () => {
@@ -139,11 +131,13 @@ const Pomodoro = () => {
   )
 
   const renderModal = () => (
-    <Modal visible={isSettingsOpen} footer={renderModalFooter()} centered maskClosable onCancel={toggleSettings}>
-      <SettingHeader>Settings</SettingHeader>
-      <SettingSubheader>TIME(MINUTES)</SettingSubheader>
-      <TimeSettingContainer>{Object.keys(times).map((key) => renderOptions(key))}</TimeSettingContainer>
-    </Modal>
+    <SettingsModal
+      visible={isSettingsOpen}
+      footer={renderModalFooter()}
+      onCancel={toggleSettings}
+      times={times}
+      renderOptions={renderOptions}
+    />
   )
 
   const getTime = (key: string) => times[key] / 60
