@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledSvg = styled.svg`
   position: absolute;
   z-index: 1000;
+  transform: rotate(-90deg);
   @media (min-width: 601px) {
     width: 366px;
     height: 366px;
@@ -28,6 +29,12 @@ export const StyledCircle = styled.circle<{ percentage: number }>`
   stroke: #f87070;
   stroke-width: 11;
   stroke-linecap: round;
-  stroke-dasharray: 1055;
-  stroke-dashoffset: ${(props) => props.percentage && props.percentage};
+  @media (min-width: 601px) {
+    stroke-dasharray: 1055;
+    stroke-dashoffset: ${(props) => props.percentage && props.percentage * 1055};
+  }
+  @media (max-width: 600px) {
+    stroke-dasharray: 753;
+    stroke-dashoffset: ${(props) => props.percentage && props.percentage * 753};
+  }
 `

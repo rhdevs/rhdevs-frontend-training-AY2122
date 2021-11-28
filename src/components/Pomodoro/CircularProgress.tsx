@@ -3,11 +3,11 @@ import { StyledSvg, StyledCircle } from './styles/CircularProgress.styled'
 
 const CircularProgress = ({ percent }: { percent: number }) => {
   const getPercentage = () => {
-    return (1 - percent) * 1055
+    return 1 - percent
   }
 
   return (
-    <StyledSvg transform="rotate(-90)">
+    <StyledSvg>
       <StyledCircle percentage={getPercentage()} />
     </StyledSvg>
   )

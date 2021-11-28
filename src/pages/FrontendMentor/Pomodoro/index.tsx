@@ -21,16 +21,21 @@ import upArrow from '../../../assets/Pomodoro/icon-arrow-up.svg'
 import downArrow from '../../../assets/Pomodoro/icon-arrow-down.svg'
 
 const Pomodoro = () => {
+  const [pomodoroCount, setPomodoroCount] = useState<number>(0)
+  const [currentState, setCurrentState] = useState<string>('pomodoro')
+  const [isPaused, setPaused] = useState<boolean>(true)
+  const [timeLeft, setTimeLeft] = useState<number>(15 * 60)
+  const [isSettingsOpen, setSettingsOpen] = useState<boolean>(false)
+  const [times, setTimes] = useState<Record<string, number>>({ pomodoro: 15 * 60, short: 5 * 60, long: 30 * 60 })
+
   useEffect(() => {
     const timer = setTimeout(() => {
       !isPaused && setTimeLeft(timeLeft - 1)
     }, 1000)
-
     return () => {
       !isPaused && clearTimeout(timer)
     }
   })
-
   useEffect(() => {
     timeLeft === 0 && nextState()
   })
@@ -38,13 +43,6 @@ const Pomodoro = () => {
   useEffect(() => {
     setTimeLeft(times.pomodoro)
   }, [])
-
-  const [pomodoroCount, setPomodoroCount] = useState<number>(0)
-  const [currentState, setCurrentState] = useState<string>('pomodoro')
-  const [isPaused, setPaused] = useState<boolean>(true)
-  const [timeLeft, setTimeLeft] = useState<number>(15 * 60)
-  const [isSettingsOpen, setSettingsOpen] = useState<boolean>(false)
-  const [times, setTimes] = useState<Record<string, number>>({ pomodoro: 15 * 60, short: 5 * 60, long: 30 * 60 })
 
   const states = ['pomodoro', 'short', 'long']
 
