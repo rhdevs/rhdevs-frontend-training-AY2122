@@ -34,4 +34,5 @@ export enum PATHS {
   FRONTEND_MENTOR_HUBBLE = '/frontendmentor/hubble',
   KY_JOB_LISTING = '/frontendmentor/ky-job-listing',
   FRONTEND_MENTOR_PRICE_TOGGLE_JASON = '/frontendmentor/price-toggle-jason',
+  POMODORO = '/frontendmentor/pomodoro',
 }
