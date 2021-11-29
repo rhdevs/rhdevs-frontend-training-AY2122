@@ -55,12 +55,8 @@ const CountdownTimer = () => {
         <TimeCardContainer>
           <TimeCard days={days} hours={hours} minutes={minutes} seconds={seconds} />
         </TimeCardContainer>
-        <StarBackgroundContainer>
-          <StarBackground src={BackgroundStars} />
-        </StarBackgroundContainer>
-        <HillBackgroundContainer>
-          <HillBackground src={BackgroundHills} />
-        </HillBackgroundContainer>
+        <StarBackground src={BackgroundStars} />
+        <HillBackground src={BackgroundHills} />
         <SocialMediaContainer>
           <SocialMediaIcon src={FacebookIcon} />
           <SocialMediaIcon src={PinterestIcon} />

@@ -22,6 +22,9 @@ export const StarBackgroundContainer = styled.div`
   height: 80vh;
 `
 export const StarBackground = styled.img`
+  display: flex;
+  position: relative;
+  height: 80vh;
   width: 100vw;
   display: flex;
   position: relative;
@@ -35,8 +38,9 @@ export const HillBackgroundContainer = styled.div`
   height: 20vh;
 `
 export const HillBackground = styled.img`
+  background-size: cover;
+  height: 20vh;
   width: 100vw;
-  height: 100%;
   margin-top: auto;
   margin-bottom: auto;
   object-fit: cover;
