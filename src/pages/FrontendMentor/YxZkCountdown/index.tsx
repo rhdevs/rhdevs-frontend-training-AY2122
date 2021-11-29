@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import TimeCard from '../../../components/YxZkCountdown/TimeCard'
+import SocialMediaBox from '../../../components/YxZkCountdown/SocialMediaBox'
 import BackgroundStars from '../../../assets/YxZkCountdown/bg-stars.svg'
 import BackgroundHills from '../../../assets/YxZkCountdown/pattern-hills.svg'
 import {
@@ -7,12 +8,7 @@ import {
   StarBackground,
   HillBackground,
   Header,
-  StarBackgroundContainer,
-  HillBackgroundContainer,
-  Countdown,
   TimeCardContainer,
-  SocialMediaContainer,
-  SocialMediaIcon,
 } from './styles/YxZkCountdown.styled'
 
 import PinterestIcon from '../../../assets/YxZkCountdown/icon-pinterest.svg'
@@ -57,11 +53,7 @@ const CountdownTimer = () => {
         </TimeCardContainer>
         <StarBackground src={BackgroundStars} />
         <HillBackground src={BackgroundHills} />
-        <SocialMediaContainer>
-          <SocialMediaIcon src={FacebookIcon} />
-          <SocialMediaIcon src={PinterestIcon} />
-          <SocialMediaIcon src={InstagramIcon} />
-        </SocialMediaContainer>
+        <SocialMediaBox />
       </BackgroundContainer>
     </>
   )
