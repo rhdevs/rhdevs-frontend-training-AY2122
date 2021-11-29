@@ -44,18 +44,6 @@ export const HillBackground = styled.img`
   }
 `
 
-const FoldUp = keyframes`
-  from {
-    transform: rotateX(0deg);}
-  to {
-    transform: rotateX(-180deg);}
-`
-const FoldDown = keyframes`
-  from {
-    transform: rotateX(180deg);}
-  to {
-    transform: rotateX(0deg);}
-`
 export const Header = styled.div`
   width: 100%;
   font-size: 1.5rem;
