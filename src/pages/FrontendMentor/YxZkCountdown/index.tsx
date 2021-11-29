@@ -11,10 +11,6 @@ import {
   TimeCardContainer,
 } from './styles/YxZkCountdown.styled'
 
-import PinterestIcon from '../../../assets/YxZkCountdown/icon-pinterest.svg'
-import FacebookIcon from '../../../assets/YxZkCountdown/icon-facebook.svg'
-import InstagramIcon from '../../../assets/YxZkCountdown/icon-instagram.svg'
-
 const CountdownTimer = () => {
   const [days, setDays] = useState<number>(0)
   const [hours, setHours] = useState<number>(0)
