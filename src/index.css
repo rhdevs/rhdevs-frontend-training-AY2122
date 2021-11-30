@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*hacky solution to modify ant design modals*/
+.ant-modal-content {
+  border-radius: 15px !important;
+}

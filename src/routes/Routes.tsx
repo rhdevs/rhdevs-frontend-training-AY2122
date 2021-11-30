@@ -70,6 +70,16 @@ const TipCalculatorApp = React.lazy(
 const MarcusFEMentor = React.lazy(
   () => import(/* webpackChunckName: "MarcusFEMentor" */ '../pages/FrontendMentor/MarcusFEMentor'),
 )
+const MarcusFEMentor2Home = React.lazy(
+  () => import(/* webpackChunckName: "MarcusFEMentor2" */ '../pages/FrontendMentor/MarcusFEMentor2/mainPage'),
+)
+const MarcusFEMentor2About = React.lazy(
+  () => import(/* webpackChunckName: "MarcusFEMentor2_about" */ '../pages/FrontendMentor/MarcusFEMentor2/aboutPage'),
+)
+const MarcusFEMentor2Contact = React.lazy(
+  () =>
+    import(/* webpackChunckName: "MarcusFEMentor2_contact" */ '../pages/FrontendMentor/MarcusFEMentor2/contactPage'),
+)
 const CountriesSwitch = React.lazy(
   () => import(/* webpackChunckName: "CountriesSwitch" */ '../pages/FrontendMentor/MarcusFEMentor/CountriesSwitch'),
 )
@@ -82,6 +92,9 @@ const SkDashboard = React.lazy(
 const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
+const CalculatorApp = React.lazy(
+  () => import(/* webpackChunckName: "CalculatorApp" */ '../pages/FrontendMentor/CalculatorApp'),
+)
 const SkIPAddress = React.lazy(
   () => import(/* webpackChunckName: "SkIPAddress" */ '../pages/FrontendMentor/SkIPAddress'),
 )
@@ -92,6 +105,14 @@ const KYStatsCard = React.lazy(
 const FrontEndMentorHubble = React.lazy(
   () => import(/* webpackChunckName: "hubble" */ '../pages/FrontendMentor/hubble'),
 )
+const KYJobListing = React.lazy(
+  () => import(/* webpackChunckName: "KYJobListing" */ '../pages/FrontendMentor/KYJobListing'),
+)
+const PriceToggleJason = React.lazy(
+  () => import(/* webpackChunckName: "PriceToggleJason" */ '../pages/FrontendMentor/PriceToggleJason'),
+)
+
+const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '../pages/FrontendMentor/Pomodoro'))
 
 const FrontEndMentorTodo = React.lazy(() => import(/* webpackChunckName: "Todo" */ '../pages/FrontendMentor/Todo'))
 
@@ -125,14 +146,24 @@ export const Routes = () => (
     <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
     <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
     <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
+    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_HOME} component={MarcusFEMentor2Home} />
+    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_ABOUT} component={MarcusFEMentor2About} />
+    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_CONTACT} component={MarcusFEMentor2Contact} />
     <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
     {/* example from lesson 1 (4oct) */}
+    <RouteWithTopNav exact path={PATHS.POMODORO} component={Pomodoro} />
     <Route exact path="/example" component={Lesson1Example} />
     <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
     <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
+    <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO_CALC} component={CalculatorApp} />
+    <Route exact path={PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON} component={PriceToggleJason} />
     <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
+<<<<<<< HEAD
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_TODO} component={FrontEndMentorTodo} />
+=======
+    <RouteWithTopNav exact path={PATHS.KY_JOB_LISTING} component={KYJobListing} />
+>>>>>>> main
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />
   </Switch>
