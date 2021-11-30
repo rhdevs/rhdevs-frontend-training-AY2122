@@ -7,7 +7,7 @@ type todo = {
   completed: boolean
 }
 
-const ToDoForm = ({ addTodo }: any) => {
+const ToDoForm = ({ addTodo, isDarkMode }: any) => {
   const [userInput, setUserInput] = useState('')
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setUserInput(e.currentTarget.value)
@@ -21,7 +21,7 @@ const ToDoForm = ({ addTodo }: any) => {
   }
 
   return (
-    <Rectangle>
+    <Rectangle isDarkMode={isDarkMode}>
       <Circle></Circle>
       <TextBox
         value={userInput}

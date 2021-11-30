@@ -1,39 +1,41 @@
 import styled from 'styled-components'
 import bgdeskdark from '../../../assets/todo/bg-desktop-dark.jpg'
-import bgmobile from '../../../assets/hubble/bg-mobile.svg'
+import bgdesklight from '../../../assets/todo/bg-desktop-light.jpg'
+import bgmobile from '../../../assets/todo/bg-mobile-dark.jpg'
+import moon from '../../../assets/todo/icon-moon.svg'
+import sun from '../../../assets/todo/icon-sun.svg'
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<{ isDarkMode: boolean }>`
   height: 100%;
   width: 100%;
   min-height: 1500px;
+  min-width: 1200px;
   display: flex;
   flex-direction: column;
-  background-color: hsl(235, 21%, 11%);
-  background-image: url(${bgdeskdark});
+  background-color: ${(props) => (props.isDarkMode ? 'hsl(235, 21%, 11%)' : 'hsl(236, 33%, 92%)')};
+  background-image: url(${(props) => (props.isDarkMode ? bgdeskdark : bgdesklight)});
   background-repeat: no-repeat;
+  background-size: 100%;
   justify-content: top;
   @media (max-width: 1200px) {
     background-image: url(${bgmobile});
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 0px;
   }
 `
 
 export const TopRow = styled.div`
-  padding: 15px 50px;
+  padding: 0px 50px 10px 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 60%;
   @media (max-width: 1200px) {
-    flex-direction: column;
   }
 `
 export const LogoBox = styled.div`
   font: Josefin Sans;
+  letter-spacing: 25px;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 35px;
   color: white;
 `
 
@@ -46,7 +48,7 @@ export const MainBox = styled.div`
 
 export const Rows = styled.div`
   padding: 10px 50px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -107,8 +109,10 @@ export const ButtonContainer = styled.button`
     font-size: 18px;
   }
 `
-export const SocialIcons = styled.button`
+export const SocialIcons = styled.button<{ isDarkMode: boolean }>`
   background-color: transparent;
+  background-image: url(${(props) => (props.isDarkMode ? sun : moon)});
+  background-repeat: no-repeat;
   color: white;
   &:hover {
     color: hsl(300, 69%, 71%);
@@ -118,9 +122,9 @@ export const SocialIcons = styled.button`
   height: 40px;
   overflow: hidden;
   width: 40px;
-  font-size: 20px;
+  font-size: 0px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 0px solid white;
   margin: 0px 10px 20px 10px;
 `
 

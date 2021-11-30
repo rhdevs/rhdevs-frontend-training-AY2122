@@ -13,6 +13,7 @@ type Props = {
   todo: todo
   setToDos: any
   todos: todo[]
+  isDarkMode: boolean
 }
 
 const ToDoCard = (props: Props) => {
@@ -23,8 +24,8 @@ const ToDoCard = (props: Props) => {
     props.setToDos(mapped)
   }
   return (
-    <Rectangle>
-      <Circle onClick={handleClick} />
+    <Rectangle isDarkMode={props.isDarkMode}>
+      <Circle isSelected={props.todo.completed} isDarkMode={props.isDarkMode} onClick={handleClick} />
       <TextBox> {props.todo.completed === true ? <del>{props.todo.task}</del> : props.todo.task}</TextBox>
     </Rectangle>
   )

@@ -11,6 +11,7 @@ type todo = {
 type Props = {
   todos: todo[]
   setTodos: any
+  isDarkMode: boolean
 }
 
 const LastRow = (props: Props) => {
@@ -43,7 +44,7 @@ const LastRow = (props: Props) => {
   }
 
   return (
-    <Rectangle>
+    <Rectangle isDarkMode={props.isDarkMode}>
       <ItemsLeft>{props.todos.filter((todo) => !todo.completed).length} items left</ItemsLeft>
       <MiddleTBox>
         <TextBox onClick={showAll}>All</TextBox>

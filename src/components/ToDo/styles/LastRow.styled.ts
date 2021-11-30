@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
-export const Rectangle = styled.div`
+export const Rectangle = styled.div<{ isDarkMode: boolean }>`
   height: 30px;
-  background-color: hsl(235, 24%, 19%);
+  background-color: ${(props) => (props.isDarkMode ? 'hsl(235, 24%, 19%)' : 'hsl(0, 0%, 98%)')};
   border-radius: 5px;
-  box-shadow: 2px 2px 4px #000000;
+  color: ${(props) => (props.isDarkMode ? 'hsl(234, 39%, 85%)' : 'hsl(235, 19%, 35%)')};
+  box-shadow: ${(props) => (props.isDarkMode ? '2px 2px 4px #000000' : '')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,7 +23,6 @@ export const Circle = styled.button`
 export const ItemsLeft = styled.div`
   font: Josefin Sans;
   font-weight: 400;
-  color: hsl(234, 39%, 85%);
   padding: 5px;
   font-size: 15px;
   background-color: transparent;
@@ -34,7 +34,6 @@ export const ItemsLeft = styled.div`
 export const TextBox = styled.button`
   font: Josefin Sans;
   font-weight: 700;
-  color: hsl(234, 39%, 85%);
   padding: 5px;
   font-size: 15px;
   background-color: transparent;
@@ -50,7 +49,6 @@ export const TextBox = styled.button`
 export const Clear = styled.button`
   font: Josefin Sans;
   font-weight: 400;
-  color: hsl(234, 39%, 85%);
   padding: 5px;
   font-size: 15px;
   background-color: transparent;

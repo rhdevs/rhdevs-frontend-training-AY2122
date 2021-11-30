@@ -1,7 +1,6 @@
 import React from 'react'
 import { LogoBox, MainBox, Rows } from './Todo.styled'
-import { TopRow } from './Todo.styled'
-import { MainContainer } from './Todo.styled'
+import { TopRow, MainContainer, SocialIcons } from './Todo.styled'
 import { useState } from 'react'
 import ToDoList from '../../../components/ToDo/ToDoList'
 import ToDoForm from '../../../components/ToDo/ToDoForm'
@@ -30,23 +29,29 @@ const initialList: todo[] = [
 
 const Todo = () => {
   const [todos, setTodos] = useState(initialList)
+  const [isDarkMode, setDarkMode] = useState(true)
   function addTodo(todo: string) {
     // adds new todo to beginning of todos array
     const newTodo = { key: String(todos.length + 1), task: todo, completed: false, visible: true }
     setTodos([newTodo, ...todos])
   }
+  function toggleDarkMode() {
+    setDarkMode(!isDarkMode)
+  }
   return (
-    <MainContainer>
+    <MainContainer isDarkMode={isDarkMode}>
       <MainBox>
         <TopRow>
           <LogoBox>TODO</LogoBox>
-          <LogoBox>O</LogoBox>
+          <LogoBox>
+            <SocialIcons isDarkMode={isDarkMode} onClick={toggleDarkMode} />
+          </LogoBox>
         </TopRow>
         <Rows>
-          <ToDoForm addTodo={addTodo} />
+          <ToDoForm addTodo={addTodo} isDarkMode={isDarkMode} />
         </Rows>
         <Rows>
-          <ToDoList todos={todos} setTodos={setTodos} />
+          <ToDoList isDarkMode={isDarkMode} todos={todos} setTodos={setTodos} />
         </Rows>
       </MainBox>
     </MainContainer>

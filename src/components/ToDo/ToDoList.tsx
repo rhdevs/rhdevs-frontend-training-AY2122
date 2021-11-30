@@ -12,6 +12,7 @@ type todo = {
 type Props = {
   todos: todo[]
   setTodos: any
+  isDarkMode: boolean
 }
 
 const ToDoList = (props: Props) => {
@@ -22,9 +23,15 @@ const ToDoList = (props: Props) => {
           return todo.visible
         })
         .map((todo: todo) => (
-          <ToDoCard key={todo.key} todo={todo} setToDos={props.setTodos} todos={props.todos} />
+          <ToDoCard
+            isDarkMode={props.isDarkMode}
+            key={todo.key}
+            todo={todo}
+            setToDos={props.setTodos}
+            todos={props.todos}
+          />
         ))}
-      <LastRow setTodos={props.setTodos} todos={props.todos} />
+      <LastRow isDarkMode={props.isDarkMode} setTodos={props.setTodos} todos={props.todos} />
     </>
   )
 }
