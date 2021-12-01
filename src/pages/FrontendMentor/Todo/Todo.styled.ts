@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import bgdeskdark from '../../../assets/todo/bg-desktop-dark.jpg'
 import bgdesklight from '../../../assets/todo/bg-desktop-light.jpg'
-import bgmobile from '../../../assets/todo/bg-mobile-dark.jpg'
+import bgmobiledark from '../../../assets/todo/bg-mobile-dark.jpg'
+import bgmobilelight from '../../../assets/todo/bg-mobile-light.jpg'
 import moon from '../../../assets/todo/icon-moon.svg'
 import sun from '../../../assets/todo/icon-sun.svg'
 
@@ -18,7 +19,7 @@ export const MainContainer = styled.div<{ isDarkMode: boolean }>`
   background-size: 100%;
   justify-content: top;
   @media (max-width: 1200px) {
-    background-image: url(${bgmobile});
+    background-image: url(${(props) => (props.isDarkMode ? bgmobiledark : bgmobilelight)});
   }
 `
 
@@ -123,7 +124,6 @@ export const SocialIcons = styled.button<{ isDarkMode: boolean }>`
   overflow: hidden;
   width: 40px;
   font-size: 0px;
-  border-radius: 50%;
   border: none;
   margin: 0px 10px 20px 10px;
 `
