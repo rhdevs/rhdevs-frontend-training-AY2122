@@ -159,11 +159,8 @@ export const Routes = () => (
     <Route exact path={PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON} component={PriceToggleJason} />
     <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
-<<<<<<< HEAD
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_TODO} component={FrontEndMentorTodo} />
-=======
     <RouteWithTopNav exact path={PATHS.KY_JOB_LISTING} component={KYJobListing} />
->>>>>>> main
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />
   </Switch>
