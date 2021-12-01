@@ -1,44 +1,38 @@
 import React, { useState } from 'react'
-import Todo from '../../pages/FrontendMentor/Todo'
+import { Todo } from '../../pages/FrontendMentor/Todo'
 import { ItemsLeft, MiddleTBox, Rectangle, TextBox, Clear } from './styles/LastRow.styled'
-type todo = {
-  key: string
-  task: string
-  completed: boolean
-  visible: boolean
-}
 
 type Props = {
-  todos: todo[]
+  todos: Todo[]
   setTodos: any
   isDarkMode: boolean
 }
 
 const LastRow = (props: Props) => {
   const clearCompleted = () => {
-    const filtered = props.todos.filter((task) => {
+    const notCompleted = props.todos.filter((task) => {
       return !task.completed
     })
-    props.setTodos(filtered)
+    props.setTodos(notCompleted)
   }
 
   const showAll = () => {
-    const mapped = props.todos.map((task: todo) => {
-      return task.completed === false ? { ...task, visible: true } : { ...task, visible: true }
+    const all = props.todos.map((task: Todo) => {
+      return { ...task, visible: true }
     })
-    props.setTodos(mapped)
+    props.setTodos(all)
   }
 
   const showActive = () => {
-    const mapped = props.todos.map((task: todo) => {
-      return task.completed === false ? { ...task, visible: true } : { ...task, visible: false }
+    const active = props.todos.map((task: Todo) => {
+      return { ...task, visible: task.completed === false }
     })
-    props.setTodos(mapped)
+    props.setTodos(active)
   }
 
   const showCompleted = () => {
     const mapped = props.todos.map((task) => {
-      return task.completed === true ? { ...task, visible: true } : { ...task, visible: false }
+      return { ...task, visible: task.completed === true }
     })
     props.setTodos(mapped)
   }

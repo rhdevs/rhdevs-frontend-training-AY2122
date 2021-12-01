@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
 import { Rectangle, Circle, TextBox } from './styles/ToDoCard.styled'
-
-type todo = {
-  key: string
-  task: string
-  completed: boolean
-  visible: boolean
-}
+import { Todo } from '../../pages/FrontendMentor/Todo'
 
 type Props = {
   key: string
-  todo: todo
+  todo: Todo
   setToDos: any
-  todos: todo[]
+  todos: Todo[]
   isDarkMode: boolean
 }
 

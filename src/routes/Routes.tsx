@@ -114,7 +114,9 @@ const PriceToggleJason = React.lazy(
 
 const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '../pages/FrontendMentor/Pomodoro'))
 
-const FrontEndMentorTodo = React.lazy(() => import(/* webpackChunckName: "Todo" */ '../pages/FrontendMentor/Todo'))
+const FrontEndMentorTodo = React.lazy(
+  () => import(/* webpackChunckName: "FrontEndMentorTodo" */ '../pages/FrontendMentor/Todo'),
+)
 
 export const Routes = () => (
   <Switch>

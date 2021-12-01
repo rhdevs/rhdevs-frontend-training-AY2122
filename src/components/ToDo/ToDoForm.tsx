@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 import { Rectangle, Circle, TextBox } from './styles/ToDoCardForm.styled'
-
-type todo = {
-  id: string
-  task: string
-  completed: boolean
-}
+import { Todo } from '../../pages/FrontendMentor/Todo'
 
 const ToDoForm = ({ addTodo, isDarkMode }: any) => {
   const [userInput, setUserInput] = useState('')

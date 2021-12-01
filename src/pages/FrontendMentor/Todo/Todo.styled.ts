@@ -101,7 +101,7 @@ export const ButtonContainer = styled.button`
   cursor: pointer;
   display: block;
   width: 35%;
-  padding: 10px 0px;
+  padding: 10px 0;
   margin: 20px 0px 0px 50px;
   @media (max-width: 1200px) {
     margin: 0px 0px 80px 0px;
@@ -124,7 +124,7 @@ export const SocialIcons = styled.button<{ isDarkMode: boolean }>`
   width: 40px;
   font-size: 0px;
   border-radius: 50%;
-  border: 0px solid white;
+  border: none;
   margin: 0px 10px 20px 10px;
 `
 

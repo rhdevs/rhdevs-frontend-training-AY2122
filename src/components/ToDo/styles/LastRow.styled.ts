@@ -43,7 +43,10 @@ export const TextBox = styled.button`
   flex-direction: row;
   cursor: pointer;
   &:hover {
-    color: white;
+    color: hsl(220, 98%, 61%);
+  }
+  &:focus {
+    color: hsl(220, 98%, 61%);
   }
 `
 export const Clear = styled.button`
@@ -58,7 +61,7 @@ export const Clear = styled.button`
   flex-direction: row;
   cursor: pointer;
   &:hover {
-    color: white;
+    color: hsl(220, 98%, 61%);
   }
 `
 export const MiddleTBox = styled.div`

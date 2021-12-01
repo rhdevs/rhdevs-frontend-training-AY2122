@@ -1,16 +1,10 @@
 import React from 'react'
 import LastRow from './LastRow'
 import ToDoCard from './ToDoCard'
-
-type todo = {
-  key: string
-  task: string
-  completed: boolean
-  visible: boolean
-}
+import { Todo } from '../../pages/FrontendMentor/Todo'
 
 type Props = {
-  todos: todo[]
+  todos: Todo[]
   setTodos: any
   isDarkMode: boolean
 }
@@ -19,10 +13,10 @@ const ToDoList = (props: Props) => {
   return (
     <>
       {props.todos
-        .filter((todo: todo) => {
+        .filter((todo: Todo) => {
           return todo.visible
         })
-        .map((todo: todo) => (
+        .map((todo: Todo) => (
           <ToDoCard
             isDarkMode={props.isDarkMode}
             key={todo.key}

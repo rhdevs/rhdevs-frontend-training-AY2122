@@ -1,18 +1,18 @@
 import React from 'react'
-import { LogoBox, MainBox, Rows } from './Todo.styled'
-import { TopRow, MainContainer, SocialIcons } from './Todo.styled'
+import { LogoBox, MainBox, Rows, TopRow, MainContainer, SocialIcons } from './Todo.styled'
 import { useState } from 'react'
 import ToDoList from '../../../components/ToDo/ToDoList'
 import ToDoForm from '../../../components/ToDo/ToDoForm'
 
-type todo = {
+type Todo = {
   key: string
   task: string
   completed: boolean
   visible: boolean
 }
+export type { Todo }
 
-const initialList: todo[] = [
+const initialList: Todo[] = [
   {
     key: '1',
     task: 'Buy groceries',
@@ -27,8 +27,8 @@ const initialList: todo[] = [
   },
 ]
 
-const Todo = () => {
-  const [todos, setTodos] = useState(initialList)
+const TodoApp = () => {
+  const [todos, setTodos] = useState<Todo[]>(initialList)
   const [isDarkMode, setDarkMode] = useState(true)
   function addTodo(todo: string) {
     // adds new todo to beginning of todos array
@@ -58,4 +58,4 @@ const Todo = () => {
   )
 }
 
-export default Todo
+export default TodoApp
