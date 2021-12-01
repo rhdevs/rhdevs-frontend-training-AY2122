@@ -9,7 +9,7 @@ import sun from '../../../assets/todo/icon-sun.svg'
 export const MainContainer = styled.div<{ isDarkMode: boolean }>`
   height: 100%;
   width: 100%;
-  min-height: 1500px;
+  min-height: 800px;
   min-width: 1200px;
   display: flex;
   flex-direction: column;
