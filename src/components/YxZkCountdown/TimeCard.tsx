@@ -1,6 +1,6 @@
 import React from 'react'
 import TimeBoxCard from './TimeBoxCard'
-import { TimeBox, TimeCardContainer, TimeCardLabel } from './styles/TimeCard.styled'
+import { TimeCardContainer } from './styles/TimeCard.styled'
 type Props = {
   days: number
   hours: number

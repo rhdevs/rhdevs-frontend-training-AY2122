@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Countdown, TimeBox, TimeCardContainer, TimeCardLabel } from './styles/TimeCard.styled'
+import { TimeBox, TimeCardLabel } from './styles/TimeCard.styled'
 type Props = {
   value: number
   label: string
