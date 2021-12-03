@@ -1,17 +1,13 @@
 import { Button } from 'antd'
 import styled from 'styled-components'
 
-export const Hrstyle = styled.hr`
+export const StyledHr = styled.hr<{ color: 'main' | 'side' }>`
   width: 250px !important;
-  border-top: 1px solid;
+  border: 1px solid;
   color: rgb(219, 219, 219);
+  background-color: transparent;
+  ${(props) => (props.color === 'main' ? 'color: rgb(168, 173, 254);' : 'color: rgb(219, 219, 219);')}
 `
-export const Hrstyle2 = styled.hr`
-  width: 250px !important;
-  border-top: 1px solid;
-  color: rgb(168, 173, 254);
-`
-
 export const TopBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -77,13 +73,13 @@ export const SideCont = styled.div`
   font-family: 'Montserrat';
 `
 export const StyledHeader = styled.p<{ containertype?: string }>`
-  margin: 2em 0em 0em 0em;
+  margin: 2em 0 0 0;
   font-size: 18px;
   font-weight: 700;
   vertical-align: middle;
   font-family: 'Montserrat';
   text-align: center;
-  ${(props) => (props.containertype === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'hsl(233, 13%, 49%);')}
+  ${(props) => (props.containertype === 'Main' ? 'color: hsl(240, 78%, 98%);' : 'color: hsl(233, 13%, 49%);')}
     }
 `
 export const StyledNumber = styled.p<{ containertype?: string }>`
@@ -113,7 +109,7 @@ export const SwitchStyle = {
   margin: '1rem',
   alignItems: 'center',
 }
-export const ButtonStyle = styled(Button)`
+export const ButtonStyled = styled(Button)`
   width: 250px;
   height: 45px;
   border-radius: 8px;
@@ -137,7 +133,7 @@ export const ButtonStyle = styled(Button)`
   }
 `
 
-export const ButtonStyle2 = styled(Button)`
+export const ButtonStyled2 = styled(Button)`
   width: 250px;
   height: 45px;
   border-radius: 8px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container } from '../../../components/MaximWPproj2/Container'
-import { CentCont } from '../../../components/MaximWPproj2/CentCont.styled'
+import { CentCont } from '../../../components/MaximWPproj2/CentCont'
 
 import {
   MainContainer,
