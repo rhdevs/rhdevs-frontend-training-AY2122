@@ -2,6 +2,7 @@ import React from 'react'
 import LastRow from './LastRow'
 import ToDoCard from './ToDoCard'
 import { Todo } from '../../pages/FrontendMentor/Todo'
+import { Wrapper } from './styles/ToDoList.styled'
 
 type Props = {
   todos: Todo[]
@@ -11,7 +12,7 @@ type Props = {
 
 const ToDoList = (props: Props) => {
   return (
-    <>
+    <Wrapper>
       {props.todos
         .filter((todo: Todo) => {
           return todo.visible
@@ -26,7 +27,7 @@ const ToDoList = (props: Props) => {
           />
         ))}
       <LastRow isDarkMode={props.isDarkMode} setTodos={props.setTodos} todos={props.todos} />
-    </>
+    </Wrapper>
   )
 }
 

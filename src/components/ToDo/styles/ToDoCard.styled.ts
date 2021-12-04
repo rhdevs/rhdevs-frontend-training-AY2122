@@ -4,7 +4,7 @@ import iconcheck from '../../../assets/todo/icon-check.svg'
 export const Rectangle = styled.div<{ isDarkMode: boolean }>`
   height: 60px;
   background-color: ${(props) => (props.isDarkMode ? 'hsl(235, 24%, 19%)' : 'hsl(0, 0%, 98%)')};
-  border-radius: 5px;
+  border-radius: 0px;
   box-shadow: ${(props) => (props.isDarkMode ? '2px 2px 4px #000000' : '')};
   display: flex;
   color: ${(props) => (props.isDarkMode ? 'hsl(234, 39%, 85%)' : 'hsl(235, 19%, 35%)')};
