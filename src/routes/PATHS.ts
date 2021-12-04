@@ -17,6 +17,7 @@ export enum PATHS {
   YIXUAN_WEIPIN_SHOPPING_REDUX = '/shopping/yxwp_redux',
   SHOPPING_PAGE_PAIR_FOUR = '/shopping-lists-pair-4',
   SHOPPING_PAGE_PAIR_FOUR_REDUX = '/shopping-lists-pair-4-redux',
+  MAXIM_WEIPIN_WEBSITE = '/frontendmentor/Maximweipin',
   FRONTEND_MENTOR = '/frontendmentor',
   KY_STATS_CARD_COMPONENT = '/frontendmentor/ky-stats-card-component',
   FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE = '/frontend-mentor/elva-yb-practice',
