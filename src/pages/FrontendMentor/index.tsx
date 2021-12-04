@@ -23,6 +23,11 @@ const FrontendMentor = () => {
       <MembersSectionHeader>Challenge Name</MembersSectionHeader>
       <InformationCardSection>
         {/* Example; title: challenge name, description: your name, onclick: go to new page with attempt*/}
+        <Card
+          title="3-Column Preview Card"
+          description="Maxim and Wei Pin"
+          onClick={() => history.push(PATHS.MAXIM_WEIPIN_WEBSITE)}
+        />
         <Card title="Meet landing page" description="your name" />
         <Card
           title="Stats card component"
@@ -39,6 +44,11 @@ const FrontendMentor = () => {
           title="Time tracking dashboard"
           description="zhikai-yixuan"
           onClick={() => history.push(PATHS.TIME_DASHBOARD)}
+        />
+        <Card
+          title="Launch Countdown Timer"
+          description="zhikai-yixuan"
+          onClick={() => history.push(PATHS.YX_ZK_COUNTDOWN)}
         />
         <Card title="Social Media Dashboard" description="Shao Kiat" onClick={() => history.push(PATHS.SK_DASHBOARD)} />
         <Card title="REST Countries API" description="Marcus" onClick={() => history.push(PATHS.MARCUS_FE_MENTOR)} />
@@ -88,5 +98,4 @@ const FrontendMentor = () => {
     </MembersSection>
   )
 }
-
 export default FrontendMentor
