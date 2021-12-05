@@ -18,21 +18,21 @@ const LastRow = (props: Props) => {
 
   const showAll = () => {
     const all = props.todos.map((task: Todo) => {
-      return { ...task, visible: true }
+      return { ...task, isVisible: true }
     })
     props.setTodos(all)
   }
 
   const showActive = () => {
     const active = props.todos.map((task: Todo) => {
-      return { ...task, visible: task.isCompleted === false }
+      return { ...task, isVisible: task.isCompleted === false }
     })
     props.setTodos(active)
   }
 
   const showCompleted = () => {
     const mapped = props.todos.map((task) => {
-      return { ...task, visible: task.isCompleted === true }
+      return { ...task, isVisible: task.isCompleted === true }
     })
     props.setTodos(mapped)
   }

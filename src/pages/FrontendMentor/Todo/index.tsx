@@ -3,6 +3,7 @@ import { LogoBox, MainBox, Rows, TopRow, MainContainer, SocialIcons } from './To
 import { useState } from 'react'
 import ToDoList from '../../../components/ToDo/ToDoList'
 import ToDoForm from '../../../components/ToDo/ToDoForm'
+import { uuid } from 'uuidv4'
 
 type Todo = {
   key: string
@@ -32,7 +33,7 @@ const TodoApp = () => {
   const [isDarkMode, setDarkMode] = useState(true)
   function addTodo(todo: string) {
     // adds new todo to beginning of todos array
-    const newTodo = { key: String(todos.length + 1), task: todo, isCompleted: false, isVisible: true }
+    const newTodo = { key: uuid(), task: todo, isCompleted: false, isVisible: true }
     setTodos([newTodo, ...todos])
   }
   function toggleDarkMode() {
