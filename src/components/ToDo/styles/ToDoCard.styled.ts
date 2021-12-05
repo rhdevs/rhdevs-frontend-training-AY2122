@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import iconcheck from '../../../assets/todo/icon-check.svg'
+import iconcheckblack from '../../../assets/todo/icon-check-black.svg'
 
 export const Rectangle = styled.div<{ isDarkMode: boolean }>`
   height: 60px;
@@ -13,19 +14,19 @@ export const Rectangle = styled.div<{ isDarkMode: boolean }>`
   align-items: center;
   padding: 15px;
 `
-export const Circle = styled.button<{ isSelected: boolean; isDarkMode: boolean }>`
+export const CircleButton = styled.button<{ isSelected: boolean; isDarkMode: boolean }>`
   height: 25px;
   width: 25px;
-  background-color: ${(props) => (!props.isSelected ? 'transparent' : props.isDarkMode ? 'white' : 'black')};
   border-radius: 50%;
   border: 2px solid;
   cursor: pointer;
-  &:active {
-    background-color: black;
-  }
+  background-color: ${(props) => (!props.isSelected ? 'transparent' : props.isDarkMode ? 'white' : 'black')};
+  background: url(${(props) => props.isSelected && (props.isDarkMode ? iconcheck : iconcheckblack)}) no-repeat center;
+
+}
 `
 export const TextBox = styled.div`
-  font: Josefin Sans;
+  font-family: Josefin Sans;
   font-weight: 400;
   padding-left: 30px;
   font-size: 20px;

@@ -7,8 +7,8 @@ import ToDoForm from '../../../components/ToDo/ToDoForm'
 type Todo = {
   key: string
   task: string
-  completed: boolean
-  visible: boolean
+  isCompleted: boolean
+  isVisible: boolean
 }
 export type { Todo }
 
@@ -16,14 +16,14 @@ const initialList: Todo[] = [
   {
     key: '1',
     task: 'Buy groceries',
-    completed: false,
-    visible: true,
+    isCompleted: false,
+    isVisible: true,
   },
   {
     key: '2',
     task: 'Study finals',
-    completed: false,
-    visible: true,
+    isCompleted: false,
+    isVisible: true,
   },
 ]
 
@@ -32,7 +32,7 @@ const TodoApp = () => {
   const [isDarkMode, setDarkMode] = useState(true)
   function addTodo(todo: string) {
     // adds new todo to beginning of todos array
-    const newTodo = { key: String(todos.length + 1), task: todo, completed: false, visible: true }
+    const newTodo = { key: String(todos.length + 1), task: todo, isCompleted: false, isVisible: true }
     setTodos([newTodo, ...todos])
   }
   function toggleDarkMode() {

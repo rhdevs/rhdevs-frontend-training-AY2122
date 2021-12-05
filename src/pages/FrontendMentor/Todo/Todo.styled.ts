@@ -29,8 +29,6 @@ export const TopRow = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 60%;
-  @media (max-width: 1200px) {
-  }
 `
 export const LogoBox = styled.div`
   font: Josefin Sans;
@@ -53,9 +51,6 @@ export const Rows = styled.div`
   display: flex;
   flex-direction: column;
   width: 60%;
-  @media (max-width: 1200px) {
-    flex-direction: column;
-  }
 `
 
 export const HeaderText = styled.div`
@@ -94,7 +89,6 @@ export const ButtonContainer = styled.button`
     color: white;
   }
   border: none;
-  size: 50px;
   font-size: 20px;
   font: Poppins;
   font-weight: 400px;

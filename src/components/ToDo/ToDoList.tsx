@@ -6,7 +6,7 @@ import { Wrapper } from './styles/ToDoList.styled'
 
 type Props = {
   todos: Todo[]
-  setTodos: any
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
   isDarkMode: boolean
 }
 
@@ -15,7 +15,7 @@ const ToDoList = (props: Props) => {
     <Wrapper>
       {props.todos
         .filter((todo: Todo) => {
-          return todo.visible
+          return todo.isVisible
         })
         .map((todo: Todo) => (
           <ToDoCard

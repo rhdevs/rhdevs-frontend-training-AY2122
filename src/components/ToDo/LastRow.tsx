@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Todo } from '../../pages/FrontendMentor/Todo'
 import { ItemsLeft, MiddleTBox, Rectangle, TextBox, Clear } from './styles/LastRow.styled'
 
 type Props = {
   todos: Todo[]
-  setTodos: any
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
   isDarkMode: boolean
 }
 
 const LastRow = (props: Props) => {
   const clearCompleted = () => {
     const notCompleted = props.todos.filter((task) => {
-      return !task.completed
+      return !task.isCompleted
     })
     props.setTodos(notCompleted)
   }
@@ -25,21 +25,21 @@ const LastRow = (props: Props) => {
 
   const showActive = () => {
     const active = props.todos.map((task: Todo) => {
-      return { ...task, visible: task.completed === false }
+      return { ...task, visible: task.isCompleted === false }
     })
     props.setTodos(active)
   }
 
   const showCompleted = () => {
     const mapped = props.todos.map((task) => {
-      return { ...task, visible: task.completed === true }
+      return { ...task, visible: task.isCompleted === true }
     })
     props.setTodos(mapped)
   }
 
   return (
     <Rectangle isDarkMode={props.isDarkMode}>
-      <ItemsLeft>{props.todos.filter((todo) => !todo.completed).length} items left</ItemsLeft>
+      <ItemsLeft>{props.todos.filter((todo) => !todo.isCompleted).length} items left</ItemsLeft>
       <MiddleTBox>
         <TextBox onClick={showAll}>All</TextBox>
         <TextBox onClick={showActive}>Active</TextBox>

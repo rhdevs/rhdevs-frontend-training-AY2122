@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import { Rectangle, Circle, TextBox } from './styles/ToDoCardForm.styled'
-import { Todo } from '../../pages/FrontendMentor/Todo'
+import { Rectangle, CircleButton, TextBox } from './styles/ToDoCardForm.styled'
 
-const ToDoForm = ({ addTodo, isDarkMode }: any) => {
+type Props = {
+  addTodo: (text: string) => void
+  isDarkMode: boolean
+}
+
+const ToDoForm = (props: Props) => {
   const [userInput, setUserInput] = useState('')
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setUserInput(e.currentTarget.value)
@@ -10,14 +14,14 @@ const ToDoForm = ({ addTodo, isDarkMode }: any) => {
   const handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault()
-      addTodo(userInput)
+      props.addTodo(userInput)
       setUserInput('')
     }
   }
 
   return (
-    <Rectangle isDarkMode={isDarkMode}>
-      <Circle></Circle>
+    <Rectangle isDarkMode={props.isDarkMode}>
+      <CircleButton />
       <TextBox
         value={userInput}
         type="text"

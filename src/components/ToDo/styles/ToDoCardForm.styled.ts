@@ -12,7 +12,7 @@ export const Rectangle = styled.div<{ isDarkMode: boolean }>`
   align-items: center;
   padding: 25px;
 `
-export const Circle = styled.button`
+export const CircleButton = styled.button`
   height: 25px;
   width: 25px;
   background-color: transparent;
@@ -21,9 +21,10 @@ export const Circle = styled.button`
   cursor: pointer;
 `
 export const TextBox = styled.input`
-  font: Josefin Sans;
+  font-family: Josefin Sans;
   font-weight: 400;
   padding-left: 30px;
+  width: 500px;
   font-size: 20px;
   background-color: transparent;
   border: none;
