@@ -32,7 +32,7 @@ const LastRow = (props: Props) => {
 
   const showCompleted = () => {
     const mapped = props.todos.map((task) => {
-      return { ...task, isVisible: task.isCompleted === true }
+      return { ...task, isVisible: task.isCompleted }
     })
     props.setTodos(mapped)
   }

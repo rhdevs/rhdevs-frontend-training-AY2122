@@ -44,9 +44,7 @@ export const TextBox = styled.button`
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  &:hover {
-    color: hsl(220, 98%, 61%);
-  }
+  &:hover,
   &:focus {
     color: hsl(220, 98%, 61%);
   }

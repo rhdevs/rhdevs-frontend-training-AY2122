@@ -90,7 +90,7 @@ export const ButtonContainer = styled.button`
   }
   border: none;
   font-size: 20px;
-  font: Poppins;
+  font-family: Poppins;
   font-weight: 400px;
   color: hsl(300, 69%, 71%);
   cursor: pointer;

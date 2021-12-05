@@ -5,13 +5,12 @@ import ToDoList from '../../../components/ToDo/ToDoList'
 import ToDoForm from '../../../components/ToDo/ToDoForm'
 import { uuid } from 'uuidv4'
 
-type Todo = {
+export type Todo = {
   key: string
   task: string
   isCompleted: boolean
   isVisible: boolean
 }
-export type { Todo }
 
 const initialList: Todo[] = [
   {
