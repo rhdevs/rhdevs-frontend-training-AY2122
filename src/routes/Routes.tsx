@@ -95,6 +95,9 @@ const MaximWpWebsite = React.lazy(
 const RockPaperScissors = React.lazy(
   () => import(/* webpackChunckName: "RockPaperScissors" */ '../pages/FrontendMentor/RockPaperScissors'),
 )
+const MaximWPProj2 = React.lazy(
+  () => import(/* webpackChunckName: "Maximwp_proj2" */ '../pages/FrontendMentor/Maximwp_proj2'),
+)
 const CalculatorApp = React.lazy(
   () => import(/* webpackChunckName: "CalculatorApp" */ '../pages/FrontendMentor/CalculatorApp'),
 )
@@ -104,7 +107,6 @@ const SkIPAddress = React.lazy(
 const KYStatsCard = React.lazy(
   () => import(/* webpackChunckName: "KYStatsCard" */ '../pages/FrontendMentor/KYStatsCard'),
 )
-
 const FrontEndMentorHubble = React.lazy(
   () => import(/* webpackChunckName: "hubble" */ '../pages/FrontendMentor/hubble'),
 )
@@ -159,6 +161,7 @@ export const Routes = () => (
     <Route exact path={PATHS.MARCUS_FE_MENTOR_2_ABOUT} component={MarcusFEMentor2About} />
     <Route exact path={PATHS.MARCUS_FE_MENTOR_2_CONTACT} component={MarcusFEMentor2Contact} />
     <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
+    <RouteWithTopNav exact path={PATHS.MAXIMWP_PROJ2} component={MaximWPProj2} />
     {/* example from lesson 1 (4oct) */}
     <RouteWithTopNav exact path={PATHS.POMODORO} component={Pomodoro} />
     <Route exact path="/example" component={Lesson1Example} />
