@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import Card from '../../components/Card'
 import PageHeader from '../../components/PageHeader'
 import { PATHS } from '../../routes/PATHS'
@@ -91,6 +92,7 @@ const FrontendMentor = () => {
         <Card title="Pomodoro App" description="Chun Yu" onClick={() => navigate(PATHS.POMODORO)} />
 
         <Card title="Hubble" description="Tai and Yong Zhong" onClick={() => navigate(PATHS.FRONTEND_MENTOR_HUBBLE)} />
+        <Card title="To-do" description="Tai" onClick={() => navigate(PATHS.FRONTEND_MENTOR_TODO)} />
       </InformationCardSection>
     </MembersSection>
   )

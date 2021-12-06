@@ -122,10 +122,17 @@ const PriceToggleJason = React.lazy(
 
 const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '../pages/FrontendMentor/Pomodoro'))
 
+const FrontEndMentorTodo = React.lazy(
+  () => import(/* webpackChunckName: "FrontEndMentorTodo" */ '../pages/FrontendMentor/Todo'),
+)
+
 export const Routes = () => (
   <Switch>
+    {/* pages with both top and bottom nav */}
     <Route path="/" element={<RouteWithBothNav component={LandingPage} />} />
     <Route path={PATHS.GROUP_ROUTE} element={<RouteWithBothNav component={Groups} />} />
+    <Route path="*" element={<RouteWithBothNav component={NotFound} />} /> {/* fallback */}
+    {/* pages with top nav */}
     <Route path={PATHS.SHOPPING_LISTS} element={<RouteWithTopNav component={ShoppingLists} />} />
     <Route path={PATHS.EXAMPLE_SHOPPING_PAGE} element={<RouteWithTopNav component={ShoppingListExample} />} />
     <Route path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} element={<RouteWithTopNav component={ShoppingListCYYZ} />} />
@@ -166,6 +173,8 @@ export const Routes = () => (
     <Route path={PATHS.SK_IPADDRESS} element={<RouteWithTopNav component={SkIPAddress} />} />
     <Route path={PATHS.FRONTEND_MENTOR_HUBBLE} element={<RouteWithTopNav component={FrontEndMentorHubble} />} />
     <Route path={PATHS.KY_JOB_LISTING} element={<RouteWithTopNav component={KYJobListing} />} />
+    <Route path={PATHS.FRONTEND_MENTOR_TODO} element={<RouteWithTopNav component={FrontEndMentorTodo} />} />
+    {/* pages without top or bottom nav */}
     <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} element={<GroupsSwitch />} />
     <Route path={PATHS.MARCUS_FE_MENTOR} element={<MarcusFEMentor />} />
     <Route path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} element={<CountriesSwitch />} />
@@ -178,7 +187,5 @@ export const Routes = () => (
     <Route path={PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON} element={<PriceToggleJason />} />
     {/* example from lesson 1 (4oct) */}
     <Route path="/example" element={<Lesson1Example />} />
-    <Route path="*" element={<RouteWithBothNav component={NotFound} />} />
-    {/* fallback */}
   </Switch>
 )
