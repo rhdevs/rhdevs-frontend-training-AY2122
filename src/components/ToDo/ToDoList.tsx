@@ -1,32 +1,32 @@
 import React from 'react'
 import LastRow from './LastRow'
 import ToDoCard from './ToDoCard'
-import { Todo } from '../../pages/FrontendMentor/Todo'
+import { ToDo } from '../../pages/FrontendMentor/Todo'
 import { Wrapper } from './styles/ToDoList.styled'
 
 type Props = {
-  todos: Todo[]
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
+  toDos: ToDo[]
+  setTodos: React.Dispatch<React.SetStateAction<ToDo[]>>
   isDarkMode: boolean
 }
 
 const ToDoList = (props: Props) => {
   return (
     <Wrapper>
-      {props.todos
-        .filter((todo: Todo) => {
-          return todo.isVisible
+      {props.toDos
+        .filter((toDo: ToDo) => {
+          return toDo.isVisible
         })
-        .map((todo: Todo) => (
+        .map((toDo: ToDo) => (
           <ToDoCard
             isDarkMode={props.isDarkMode}
-            key={todo.key}
-            todo={todo}
-            setToDos={props.setTodos}
-            todos={props.todos}
+            key={toDo.key}
+            toDo={toDo}
+            setToDos={props.setToDos}
+            toDos={props.toDos}
           />
         ))}
-      <LastRow isDarkMode={props.isDarkMode} setTodos={props.setTodos} todos={props.todos} />
+      <LastRow isDarkMode={props.isDarkMode} setToDos={props.setToDos} toDos={props.toDos} />
     </Wrapper>
   )
 }

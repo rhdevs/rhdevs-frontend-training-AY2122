@@ -4,14 +4,14 @@ import ToDoList from '../../../components/ToDo/ToDoList'
 import ToDoForm from '../../../components/ToDo/ToDoForm'
 import { uuid } from 'uuidv4'
 
-export type Todo = {
+export type ToDo = {
   key: string
   task: string
   isCompleted: boolean
   isVisible: boolean
 }
 
-const initialList: Todo[] = [
+const initialList: ToDo[] = [
   {
     key: '1',
     task: 'Buy groceries',
@@ -27,12 +27,12 @@ const initialList: Todo[] = [
 ]
 
 const TodoApp = () => {
-  const [todos, setTodos] = useState<Todo[]>(initialList)
+  const [toDos, setToDos] = useState<ToDo[]>(initialList)
   const [isDarkMode, setDarkMode] = useState(true)
   function addTodo(todo: string) {
     // adds new todo to beginning of todos array
-    const newTodo = { key: uuid(), task: todo, isCompleted: false, isVisible: true }
-    setTodos([newTodo, ...todos])
+    const newToDo = { key: uuid(), task: todo, isCompleted: false, isVisible: true }
+    setToDos([newToDo, ...toDos])
   }
   function toggleDarkMode() {
     setDarkMode(!isDarkMode)
@@ -50,7 +50,7 @@ const TodoApp = () => {
           <ToDoForm addTodo={addTodo} isDarkMode={isDarkMode} />
         </Rows>
         <Rows>
-          <ToDoList isDarkMode={isDarkMode} todos={todos} setTodos={setTodos} />
+          <ToDoList isDarkMode={isDarkMode} toDos={toDos} setToDos={setToDos} />
         </Rows>
       </MainBox>
     </MainContainer>
