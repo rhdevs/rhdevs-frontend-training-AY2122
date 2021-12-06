@@ -6,7 +6,7 @@ import { Wrapper } from './styles/ToDoList.styled'
 
 type Props = {
   toDos: ToDo[]
-  setTodos: React.Dispatch<React.SetStateAction<ToDo[]>>
+  setToDos: React.Dispatch<React.SetStateAction<ToDo[]>>
   isDarkMode: boolean
 }
 
