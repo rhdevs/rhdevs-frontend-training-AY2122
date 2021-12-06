@@ -122,6 +122,10 @@ const PriceToggleJason = React.lazy(
 
 const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '../pages/FrontendMentor/Pomodoro'))
 
+const FrontEndMentorTodo = React.lazy(
+  () => import(/* webpackChunckName: "FrontEndMentorTodo" */ '../pages/FrontendMentor/Todo'),
+)
+
 export const Routes = () => (
   <Switch>
     <RouteWithBothNav exact path="/" component={LandingPage} />
@@ -168,6 +172,7 @@ export const Routes = () => (
     <Route exact path={PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON} component={PriceToggleJason} />
     <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
     <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
+    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_TODO} component={FrontEndMentorTodo} />
     <RouteWithTopNav exact path={PATHS.KY_JOB_LISTING} component={KYJobListing} />
     <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
     <Redirect to="/" />

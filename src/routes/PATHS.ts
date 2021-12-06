@@ -34,6 +34,7 @@ export enum PATHS {
   FRONTEND_MENTOR_PRINCE_ENHAO_CALC = '/FrontendMentor/CalculatorApp',
   SK_IPADDRESS = '/frontendmentor/SkIPAddress',
   FRONTEND_MENTOR_HUBBLE = '/frontendmentor/hubble',
+  FRONTEND_MENTOR_TODO = '/frontendmentor/todo',
   YX_ZK_COUNTDOWN = '/frontendmentor/yxzkcountdown',
   KY_JOB_LISTING = '/frontendmentor/ky-job-listing',
   FRONTEND_MENTOR_PRICE_TOGGLE_JASON = '/frontendmentor/price-toggle-jason',
