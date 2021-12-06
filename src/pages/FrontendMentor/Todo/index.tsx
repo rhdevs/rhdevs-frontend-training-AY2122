@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LogoBox, MainBox, Rows, TopRow, MainContainer, SocialIcons } from './Todo.styled'
-import { useState } from 'react'
 import ToDoList from '../../../components/ToDo/ToDoList'
 import ToDoForm from '../../../components/ToDo/ToDoForm'
 import { uuid } from 'uuidv4'
