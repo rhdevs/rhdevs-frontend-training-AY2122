@@ -74,6 +74,7 @@ export const MainComponent = styled.div`
     margin-top: 180px;
     height: 60vh;
     width: 40vw;
+    
 `
 
 export const ToggleContainer = styled.div`
@@ -110,6 +111,7 @@ export const MainBottomComponent = styled.div`
   @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 `
 export const PageViewPriceContainer = styled.div`
@@ -119,6 +121,9 @@ export const PageViewPriceContainer = styled.div`
   margin-top: -20vh;
   position: relative;
   top: 50px;
+  @media only screen and (max-width: 600px) {
+    display: ;
+  }
 `
 export const PageViewContainer = styled.div`
   width: 50%;
@@ -157,7 +162,7 @@ export const StartTrialButton = styled.button`
     width: 100%;
     margin-top: 25px;
     margin-left: 0px;
-    position: relative;
+    height: 25%;
   }
 `
 export const BottomLeftContainer = styled.div`

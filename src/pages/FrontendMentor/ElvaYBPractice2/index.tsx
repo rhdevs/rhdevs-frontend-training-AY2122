@@ -39,7 +39,6 @@ const marks = {
 const ElvaYBPractice = () => {
   const [views, setViews] = useState(50)
   const [toggle, setToggle] = useState(false)
-  console.log(views)
   return (
     <>
       <MainPage>
