@@ -62,7 +62,7 @@ export const ForgetPwButton = styled.div`
     border-color: #72ba75;
     font-weight: bold;
   }
-  .ant-btn-default: {
+  .ant-btn-default {
     height: min-content;
     margin: 10px;
     float: left;
@@ -105,7 +105,7 @@ export const RegisterButton = styled.div`
     text-align: center;
     font-weight: 200;
   }
-  .ant-btn-default: {
+  .ant-btn-default {
     height: min-content;
     margin: 10px;
     float: left;

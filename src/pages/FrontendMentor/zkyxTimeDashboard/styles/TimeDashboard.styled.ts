@@ -104,7 +104,7 @@ export const LegendText = styled.div`
   color: #cccfff;
   font-size: 18px;
   cursor: pointer;
-  &: hover {
+  &hover {
     color: #f5f5f5;
   }
   @media (max-width: 768px) {

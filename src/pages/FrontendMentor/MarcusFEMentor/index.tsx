@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { PATHS } from '../../../routes/PATHS'
@@ -19,7 +19,7 @@ import { FiltersDiv, SearchBarBuffer } from '../../../components/MarcusFEMentor/
 import { CountriesDiv } from '../../../components/MarcusFEMentor/styles/Cards.styled'
 
 function MarcusFEMentor() {
-  const history = useHistory()
+  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const { allCountries, responseOk, themeMode } = useSelector((state: RootState) => state.marcusFEMentor)
@@ -57,7 +57,7 @@ function MarcusFEMentor() {
               <CountryCard
                 key={country.cca2}
                 country={country}
-                onClick={() => history.push(`${PATHS.MARCUS_FE_MENTOR}/${country.name.common}`)}
+                onClick={() => navigate(`${PATHS.MARCUS_FE_MENTOR}/${country.name.common}`)}
               />
             ))
           ) : (

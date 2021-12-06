@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { PATHS } from '../routes/PATHS'
 import {
   BoldText,
@@ -16,10 +16,10 @@ type Props = {
 }
 
 const GroupCard = (props: Props) => {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   return (
-    <StyledCard onClick={() => history.push(`${PATHS.GROUP_ROUTE}/${props.groupNumber}`)}>
+    <StyledCard onClick={() => navigate(`${PATHS.GROUP_ROUTE}/${props.groupNumber}`)}>
       <StyledGroupNumber>Group {props.groupNumber}</StyledGroupNumber>
       <StyledMemberNameGroup>
         <BoldText>Devs:</BoldText>

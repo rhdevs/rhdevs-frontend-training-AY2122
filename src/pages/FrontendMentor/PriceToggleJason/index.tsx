@@ -8,7 +8,7 @@ import {
   BackgroundRight,
   BackgroundLeft,
   SwitchButton,
-} from './styles/PriceToggleJasonStyles'
+} from './styles/PriceToggleJason.styled'
 import NormalPackageCard from '../../../components/PriceToggleJason/NormalPackageCard'
 import HighlightPackageCard from '../../../components/PriceToggleJason/HighlightPackageCard'
 import RightImage from './info/images/bg-top.svg'

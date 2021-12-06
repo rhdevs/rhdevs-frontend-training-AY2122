@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect, Switch } from 'react-router-dom'
+import { Route, Routes as Switch } from 'react-router-dom'
 
 import Lesson1Example from '../pages/Lesson1Example'
 import { PATHS } from './PATHS'
@@ -124,52 +124,61 @@ const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '..
 
 export const Routes = () => (
   <Switch>
-    <RouteWithBothNav exact path="/" component={LandingPage} />
-    <RouteWithBothNav exact path={PATHS.GROUP_ROUTE} component={Groups} />
-    <RouteWithTopNav exact path={`${PATHS.GROUP_ROUTE}/:groupNumber`} component={GroupsSwitch} />
-    <Route exact path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} component={GroupsSwitch} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_LISTS} component={ShoppingLists} />
-    <RouteWithTopNav exact path={PATHS.EXAMPLE_SHOPPING_PAGE} component={ShoppingListExample} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} component={ShoppingListCYYZ} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_LIST_ANIME_GANG_REDUX} component={ShoppingListAnimeGangRedux} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_LIST_ANIME_GANG} component={ShoppingListAnimegang} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_YIXUAN_WEIPIN} component={Shopping_YXWP} />
-    <RouteWithTopNav exact path={PATHS.YIXUAN_WEIPIN_SHOPPING_REDUX} component={YXWPRedux} />
-    <RouteWithTopNav exact path={PATHS.PAIR_2_SHOPPING_PAGE} component={Pair2MainPage} />
-    <RouteWithTopNav exact path={PATHS.PAIR_2_SHOPPING_PAGE_REDUX} component={Pair2MainPageRedux} />
-    <RouteWithTopNav exact path={PATHS.PAIR3_SHOPPING_PAGE} component={Pair3redux} />
-    <RouteWithTopNav exact path={PATHS.PAIR_3_SHOPPING_PAGE} component={Pair3MainPage} />
-    <RouteWithTopNav exact path={PATHS.JASON_YB_SHOPPING_LIST_PAGE} component={JasonYbShoppingListPage} />
-    <RouteWithTopNav exact path={PATHS.JASON_YB_REDUX_SHOPPING_LIST_PAGE} component={JasonYbReduxShoppingListPage} />
-    <RouteWithTopNav exact path={PATHS.SKZK_SHOPPING_PAGE} component={SkZkShoppingPage} />
-    <RouteWithTopNav exact path={PATHS.SKZK_SHOPPING_PAGE_REDUX} component={SkZkShoppingPageRedux} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR} component={ShoppingCart4} />
-    <RouteWithTopNav exact path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} component={ShoppingCart4Redux} />
-    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR} component={FrontendMentorLanding} />
-    <RouteWithTopNav exact path={PATHS.MAXIM_WEIPIN_WEBSITE} component={MaximWpWebsite} />
-    <RouteWithTopNav exact path={PATHS.KY_STATS_CARD_COMPONENT} component={KYStatsCard} />
-    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE} component={ElvaYBPractice} />
-    <RouteWithTopNav exact path={PATHS.TIME_DASHBOARD} component={TimeDashboard} />
-    <RouteWithTopNav exact path={PATHS.SK_DASHBOARD} component={SkDashboard} />
-    <Route exact path={PATHS.MARCUS_FE_MENTOR} component={MarcusFEMentor} />
-    <Route exact path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} component={CountriesSwitch} />
-    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_HOME} component={MarcusFEMentor2Home} />
-    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_ABOUT} component={MarcusFEMentor2About} />
-    <Route exact path={PATHS.MARCUS_FE_MENTOR_2_CONTACT} component={MarcusFEMentor2Contact} />
-    <RouteWithTopNav exact path={PATHS.ROCK_PAPER_SCISSORS} component={RockPaperScissors} />
-    <RouteWithTopNav exact path={PATHS.MAXIMWP_PROJ2} component={MaximWPProj2} />
+    <Route path="/" element={<RouteWithBothNav component={LandingPage} />} />
+    <Route path={PATHS.GROUP_ROUTE} element={<RouteWithBothNav component={Groups} />} />
+    <Route path={PATHS.SHOPPING_LISTS} element={<RouteWithTopNav component={ShoppingLists} />} />
+    <Route path={PATHS.EXAMPLE_SHOPPING_PAGE} element={<RouteWithTopNav component={ShoppingListExample} />} />
+    <Route path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} element={<RouteWithTopNav component={ShoppingListCYYZ} />} />
+    <Route
+      path={PATHS.SHOPPING_LIST_ANIME_GANG_REDUX}
+      element={<RouteWithTopNav component={ShoppingListAnimeGangRedux} />}
+    />
+    <Route path={PATHS.SHOPPING_LIST_ANIME_GANG} element={<RouteWithTopNav component={ShoppingListAnimegang} />} />
+    <Route path={PATHS.SHOPPING_PAGE_YIXUAN_WEIPIN} element={<RouteWithTopNav component={Shopping_YXWP} />} />
+    <Route path={PATHS.YIXUAN_WEIPIN_SHOPPING_REDUX} element={<RouteWithTopNav component={YXWPRedux} />} />
+    <Route path={PATHS.PAIR_2_SHOPPING_PAGE} element={<RouteWithTopNav component={Pair2MainPage} />} />
+    <Route path={PATHS.PAIR_2_SHOPPING_PAGE_REDUX} element={<RouteWithTopNav component={Pair2MainPageRedux} />} />
+    <Route path={PATHS.PAIR3_SHOPPING_PAGE} element={<RouteWithTopNav component={Pair3redux} />} />
+    <Route path={PATHS.PAIR_3_SHOPPING_PAGE} element={<RouteWithTopNav component={Pair3MainPage} />} />
+    <Route path={PATHS.JASON_YB_SHOPPING_LIST_PAGE} element={<RouteWithTopNav component={JasonYbShoppingListPage} />} />
+    <Route
+      path={PATHS.JASON_YB_REDUX_SHOPPING_LIST_PAGE}
+      element={<RouteWithTopNav component={JasonYbReduxShoppingListPage} />}
+    />
+    <Route path={PATHS.SKZK_SHOPPING_PAGE} element={<RouteWithTopNav component={SkZkShoppingPage} />} />
+    <Route path={PATHS.SKZK_SHOPPING_PAGE_REDUX} element={<RouteWithTopNav component={SkZkShoppingPageRedux} />} />
+    <Route path={PATHS.SHOPPING_PAGE_PAIR_FOUR} element={<RouteWithTopNav component={ShoppingCart4} />} />
+    <Route path={PATHS.SHOPPING_PAGE_PAIR_FOUR_REDUX} element={<RouteWithTopNav component={ShoppingCart4Redux} />} />
+    <Route path={PATHS.FRONTEND_MENTOR} element={<RouteWithTopNav component={FrontendMentorLanding} />} />
+    <Route path={PATHS.MAXIM_WEIPIN_WEBSITE} element={<RouteWithTopNav component={MaximWpWebsite} />} />
+    <Route path={PATHS.KY_STATS_CARD_COMPONENT} element={<RouteWithTopNav component={KYStatsCard} />} />
+    <Route
+      path={PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE}
+      element={<RouteWithTopNav component={ElvaYBPractice} />}
+    />
+    <Route path={PATHS.TIME_DASHBOARD} element={<RouteWithTopNav component={TimeDashboard} />} />
+    <Route path={PATHS.SK_DASHBOARD} element={<RouteWithTopNav component={SkDashboard} />} />
+    <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} element={<RouteWithTopNav component={GroupsSwitch} />} />
+    <Route path={PATHS.ROCK_PAPER_SCISSORS} element={<RouteWithTopNav component={RockPaperScissors} />} />
+    <Route path={PATHS.MAXIMWP_PROJ2} element={<RouteWithTopNav component={MaximWPProj2} />} />
+    <Route path={PATHS.POMODORO} element={<RouteWithTopNav component={Pomodoro} />} />
+    <Route path={PATHS.YX_ZK_COUNTDOWN} element={<RouteWithTopNav component={YxZkCountdown} />} />
+    <Route path={PATHS.SK_IPADDRESS} element={<RouteWithTopNav component={SkIPAddress} />} />
+    <Route path={PATHS.FRONTEND_MENTOR_HUBBLE} element={<RouteWithTopNav component={FrontEndMentorHubble} />} />
+    <Route path={PATHS.KY_JOB_LISTING} element={<RouteWithTopNav component={KYJobListing} />} />
+    <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} element={<GroupsSwitch />} />
+    <Route path={PATHS.MARCUS_FE_MENTOR} element={<MarcusFEMentor />} />
+    <Route path={`${PATHS.MARCUS_FE_MENTOR}/:countryName`} element={<CountriesSwitch />} />
+    <Route path={PATHS.MARCUS_FE_MENTOR_2_HOME} element={<MarcusFEMentor2Home />} />
+    <Route path={PATHS.MARCUS_FE_MENTOR_2_ABOUT} element={<MarcusFEMentor2About />} />
+    <Route path={PATHS.MARCUS_FE_MENTOR_2_CONTACT} element={<MarcusFEMentor2Contact />} />
+    <Route path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} element={<TipCalculatorApp />} />
+    <Route path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} element={<FrontendMentorPrinceEnhao />} />
+    <Route path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO_CALC} element={<CalculatorApp />} />
+    <Route path={PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON} element={<PriceToggleJason />} />
     {/* example from lesson 1 (4oct) */}
-    <RouteWithTopNav exact path={PATHS.POMODORO} component={Pomodoro} />
-    <Route exact path="/example" component={Lesson1Example} />
-    <RouteWithTopNav exact path={PATHS.YX_ZK_COUNTDOWN} component={YxZkCountdown} />
-    <Route exact path={PATHS.FRONTEND_MENTOR_TIP_CALCULATOR_APP} component={TipCalculatorApp} />
-    <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO} component={FrontendMentorPrinceEnhao} />
-    <Route exact path={PATHS.FRONTEND_MENTOR_PRINCE_ENHAO_CALC} component={CalculatorApp} />
-    <Route exact path={PATHS.FRONTEND_MENTOR_PRICE_TOGGLE_JASON} component={PriceToggleJason} />
-    <RouteWithTopNav exact path={PATHS.SK_IPADDRESS} component={SkIPAddress} />
-    <RouteWithTopNav exact path={PATHS.FRONTEND_MENTOR_HUBBLE} component={FrontEndMentorHubble} />
-    <RouteWithTopNav exact path={PATHS.KY_JOB_LISTING} component={KYJobListing} />
-    <RouteWithBothNav exact path="/" component={NotFound} /> {/* fallback */}
-    <Redirect to="/" />
+    <Route path="/example" element={<Lesson1Example />} />
+    <Route path="*" element={<RouteWithBothNav component={NotFound} />} />
+    {/* fallback */}
   </Switch>
 )

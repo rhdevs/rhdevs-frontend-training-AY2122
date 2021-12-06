@@ -17,7 +17,7 @@ export const MainContainer = styled.div`
   border-radius: 15px;
   overflow: hidden;
   @media only screen and (max-width: 600px) {
-    border-radius: 5px;\
+    border-radius: 5px;
     width: 80%;
   }
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import { PATHS } from '../../routes/PATHS'
 import { BarLink, HeaderBarLinksStyled } from './styles/GlobalComponents.styled'
@@ -13,13 +13,13 @@ const HeaderBarLinks = ({
   column?: boolean
   responsive?: boolean
 }) => {
-  const history = useHistory()
+  const navigate = useNavigate()
   return (
     <HeaderBarLinksStyled margin={margin} column={column} responsive={responsive}>
-      <BarLink responsive={responsive} onClick={() => history.push(PATHS.MARCUS_FE_MENTOR_2_HOME)}>
+      <BarLink responsive={responsive} onClick={() => navigate(PATHS.MARCUS_FE_MENTOR_2_HOME)}>
         home
       </BarLink>
-      <BarLink responsive={responsive} onClick={() => history.push(PATHS.MARCUS_FE_MENTOR_2_ABOUT)}>
+      <BarLink responsive={responsive} onClick={() => navigate(PATHS.MARCUS_FE_MENTOR_2_ABOUT)}>
         about
       </BarLink>
     </HeaderBarLinksStyled>

@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
   background-size: cover;
   background-color: hsl(257, 40%, 49%);
   justify-content: center;
-  allgin-items: center;
+  algin-items: center;
   @media (max-width: 1200px) {
     background-image: url(${bgmobile});
     background-repeat: no-repeat;
