@@ -1,80 +1,28 @@
 import styled from 'styled-components'
 import { Slider, Switch } from 'antd'
 
-import BackgroundPic from '../../../../assets/ElvaYongbin/BackgroundPic.svg'
-import PatternCirclePic from '../../../../assets/ElvaYongbin/images/pattern-circles.svg'
-import SliderIcon from '../../../../assets/ElvaYongbin/images/icon-slider.svg'
+import BackgroundPic from '../../../assets/ElvaYongbin/BackgroundPic.svg'
+import PatternCirclePic from '../../../assets/ElvaYongbin/images/pattern-circles.svg'
+import SliderIcon from '../../../assets/ElvaYongbin/images/icon-slider.svg'
 
-export const MainPage = styled.div`
-  z-index: 0;
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url(${BackgroundPic});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: 0vw -40vh;
-  color: hsl(230, 100%, 99%);
-`
-
-export const TopComponent = styled.div`
-  background-image: url(${PatternCirclePic});
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 40%;
-  height: 20vh;
-  text-align: center;
-  position: absolute;
-  top: 50px;
-  align-items: center;
-  @media only screen and (max-width: 600px) {
-    margin-top: 30px;
-    height: 22vh;
-  }
-`
-export const TopComponentTopText = styled.div`
-  font-size: 25px;
-  height: 10vh;
-  align-items: center;
-  font-weight: bold;
-  color: hsl(227, 35%, 25%);
-  padding-top: 35px;
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-    font-size: 18px;
-  }
-`
-export const TopComponentBottomText = styled.div`
-  color: grey;
-  font-size: 13px;
-  height: 10vh;
-  @media only screen and (max-width: 600px) {
-    width: 65%;
-    font-size: 12px;
-    margin-left: 40px;
-  }
-`
 export const MainComponent = styled.div`
-  z-index: 2;
-  border-radius: 15px;
-  width: 33vw;
-  height: 50vh;
-  display: flex;
-  position: relative;
-  background-color: #ffffff;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
-  top: -30px;
-  @media only screen and (max-width: 600px) {
-    margin-top: 180px;
-    height: 60vh;
-    width: 40vw;
-    
+z-index: 2;
+border-radius: 15px;
+width: 33vw;
+height: 50vh;
+display: flex;
+position: relative;
+background-color: #ffffff;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
+top: -30px;
+@media only screen and (max-width: 600px) {
+  margin-top: 180px;
+  height: 60vh;
+  width: 40vw;
+  
 `
 
 export const ToggleContainer = styled.div`
