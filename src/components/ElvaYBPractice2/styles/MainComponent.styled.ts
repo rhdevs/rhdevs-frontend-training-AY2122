@@ -8,16 +8,15 @@ import SliderIcon from '../../../assets/ElvaYongbin/images/icon-slider.svg'
 export const MainComponent = styled.div`
 z-index: 2;
 border-radius: 15px;
-width: 33vw;
+width: max-content;
 height: 50vh;
 display: flex;
-position: relative;
+padding-top: 50px;
 background-color: #ffffff;
 align-items: center;
 justify-content: center;
 flex-direction: column;
 box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
-top: -30px;
 @media only screen and (max-width: 600px) {
   margin-top: 180px;
   height: 60vh;
@@ -30,8 +29,7 @@ export const ToggleContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 120px;
-  position: relative;
-  top: 70px;
+
   width: 80%;
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -44,8 +42,7 @@ export const Slidercontainer = styled.div`
   align-items: center;
   display: block;
   flex-direction: row;
-  position: relative;
-  top: 70px;
+
   @media only screen and (max-width: 600px) {
     width: 85%;
     top: -85px;
@@ -57,8 +54,6 @@ export const MainBottomComponent = styled.div`
   display: flex;
   flex-direction: row;
   box-shadow: 0 -1px 0 #d3d3d3;
-  position: relative;
-  top: 100px;
   @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -71,8 +66,7 @@ export const PageViewPriceContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: -20vh;
-  position: relative;
-  top: 50px;
+
   @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -140,7 +134,6 @@ export const StartTrialButton = styled.button`
   border: none;
   margin-top: -20px;
   margin-left: 40px;
-  position: relative;
   @media only screen and (max-width: 600px) {
     width: 100%;
     margin-top: 25px;
@@ -189,11 +182,10 @@ export const DiscountButtonDesktop = styled.button`
   border-radius: 15px;
   font-size: 10px;
   font-weight: 700;
-  width: 65%;
+  width: max-content;
   height: 85%;
   margin-right: 30px;
   border: none;
-  position: relative;
   @media only screen and (max-width: 600px) {
     display: none;
   }
@@ -208,7 +200,6 @@ export const DiscountButtonMobile = styled.button`
   height: 85%;
   margin-right: 30px;
   border: none;
-  position: relative;
   display: none;
   @media only screen and (max-width: 600px) {
     display: flex;
