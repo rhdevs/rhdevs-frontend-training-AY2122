@@ -21,7 +21,8 @@ top: -30px;
 @media only screen and (max-width: 600px) {
   margin-top: 180px;
   height: 60vh;
-  width: 40vw;
+  width: 55vw;
+
   
 `
 
@@ -104,22 +105,28 @@ export const PriceContainer = styled.div`
   color: hsl(227, 35%, 25%);
   font-size: 30px;
   margin-top: -13px;
+  border: 2px solid green;
   @media only screen and (max-width: 600px) {
   }
 `
 export const PriceMonthContainer = styled.div`
-  width: 50%;
+  width: min-content;
   display: flex;
   flex-direction: row;
+  border: 2px solid green;
   @media only screen and (max-width: 600px) {
     margin-top: 90px;
+    border: 2px solid red;
+    margin-left: auto;
+    margin-right: auto;
   }
 `
 export const MonthContainer = styled.div`
-  width: 50%;
+  width: min-content;
   text-align: center;
   color: hsl(225, 20%, 60%);
   margin-left: 40px;
+  border: 2px solid green;
   @media only screen and (max-width: 600px) {
     margin-left: 85px;
   }
@@ -176,7 +183,7 @@ export const TrialButtonContainer = styled.div`
   display: flex;
   margin-top: 30px;
 `
-export const DiscountButton1 = styled.button`
+export const DiscountButtonDesktop = styled.button`
   background-color: hsl(14, 92%, 95%);
   color: hsl(15, 100%, 70%);
   border-radius: 15px;
@@ -191,7 +198,7 @@ export const DiscountButton1 = styled.button`
     display: none;
   }
 `
-export const DiscountButton2 = styled.button`
+export const DiscountButtonMobile = styled.button`
   background-color: hsl(14, 92%, 95%);
   color: hsl(15, 100%, 70%);
   border-radius: 15px;

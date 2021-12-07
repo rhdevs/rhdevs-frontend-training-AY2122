@@ -27,7 +27,7 @@ export const TopComponentTopText = styled.div`
   padding-top: 35px;
   @media only screen and (max-width: 600px) {
     width: 100%;
-    font-size: 18px;
+    font-size: 3vw;
   }
 `
 export const TopComponentBottomText = styled.div`
@@ -36,7 +36,7 @@ export const TopComponentBottomText = styled.div`
   height: 10vh;
   @media only screen and (max-width: 600px) {
     width: 65%;
-    font-size: 12px;
+    font-size: 2vw;
     margin-left: 40px;
   }
 `

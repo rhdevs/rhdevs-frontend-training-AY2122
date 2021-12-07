@@ -15,8 +15,8 @@ import {
   StyleSlider,
   ToggleContainer,
   ToggleContainerText,
-  DiscountButton2,
-  DiscountButton1,
+  DiscountButtonDesktop,
+  DiscountButtonMobile,
   MainBottomComponent,
   BottomLeftContainer,
   BottomLeftText1,
@@ -104,8 +104,8 @@ const MainComponentContainer = () => {
         <ToggleContainerText>Monthly Billing</ToggleContainerText>
         <Switch onChange={(checked) => setToggle(checked)} />
         <ToggleContainerText>Yearly Billing</ToggleContainerText>
-        <DiscountButton1>25% discount</DiscountButton1>
-        <DiscountButton2>25%</DiscountButton2>
+        <DiscountButtonDesktop>25% discount</DiscountButtonDesktop>
+        <DiscountButtonMobile>25%</DiscountButtonMobile>
       </ToggleContainer>
       <MainBottomComponent>
         <BottomLeftContainer>

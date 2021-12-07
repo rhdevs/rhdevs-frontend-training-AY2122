@@ -33,6 +33,8 @@ export const TopComponent = styled.div`
   @media only screen and (max-width: 600px) {
     margin-top: 30px;
     height: 22vh;
+    display: flex;
+    flex-direction: column;
   }
 `
 export const TopComponentTopText = styled.div`
@@ -228,7 +230,7 @@ export const TrialButtonContainer = styled.div`
   display: flex;
   margin-top: 30px;
 `
-export const DiscountButton1 = styled.button`
+export const DiscountButtonDesktop = styled.button`
   background-color: hsl(14, 92%, 95%);
   color: hsl(15, 100%, 70%);
   border-radius: 15px;
@@ -243,7 +245,7 @@ export const DiscountButton1 = styled.button`
     display: none;
   }
 `
-export const DiscountButton2 = styled.button`
+export const DiscountButtonMobile = styled.button`
   background-color: hsl(14, 92%, 95%);
   color: hsl(15, 100%, 70%);
   border-radius: 15px;
