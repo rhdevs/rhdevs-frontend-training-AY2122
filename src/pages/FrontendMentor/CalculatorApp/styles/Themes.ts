@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-
 type Colors = {
   MainBackground: string
   KeypadBackground: string

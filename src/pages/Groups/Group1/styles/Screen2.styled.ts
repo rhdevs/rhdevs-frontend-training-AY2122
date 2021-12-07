@@ -20,11 +20,9 @@ export const WeekContainer = styled.div`
 export const Calendar_container = styled.div<{ fontSize?: string }>`
   height: 100%;
   width: 100%;
-  //margin: 0 0 0 10%;
   color: black;
   display: flex;
   flex-direction: column;
-  //overflow: hidden;
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 

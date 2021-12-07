@@ -11,7 +11,7 @@ export const StyledCard = styled.div`
   justify-content: center;
   align-items: center;
   margin: 2.5px;
-  padding 10px 20px;
+  padding: 10px 20px;
 
   :hover,
   :focus {
@@ -20,7 +20,7 @@ export const StyledCard = styled.div`
 `
 
 export const StyledGroupNumber = styled.text`
-  font-size: calc(18px + 1.5vw);
+  font-size: clamp(18px, 10vw, 1.8rem);
   text-align: center;
 `
 

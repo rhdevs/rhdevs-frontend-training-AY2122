@@ -62,7 +62,7 @@ export const FilterBar = styled.div`
   border: 1px solid #468751;
   border-radius: 15px 15px 15px 15px;
   display: flex;
-  justify-contents: center;
+  justify-content: center;
 `
 
 export const FilterBarComponent = styled.div`

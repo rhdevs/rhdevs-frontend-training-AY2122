@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { Turn as Hamburger } from 'hamburger-react'
 import NavLinks from './NavLinks'
 import FEWebTitle from '../../components/FEWebTitle'
 import Dropdown from 'antd/lib/dropdown/dropdown'
 import Menu from 'antd/lib/menu'
-import { useHistory } from 'react-router'
 import { PATHS } from '../../routes/PATHS'
 import { HamburgerContainer, MainHeader, NavLinksContainer, StyledMenu } from './styles/MainNavigation.styled'
 
 const MainNavigation = () => {
   const [isOpen, setOpen] = useState(false)
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const menu = (
     <StyledMenu>
@@ -29,7 +29,7 @@ const MainNavigation = () => {
         key={3}
         onClick={() => {
           setOpen(false)
-          history.push(PATHS.SHOPPING_LISTS)
+          navigate(PATHS.SHOPPING_LISTS)
         }}
       >
         Shopping Lists
