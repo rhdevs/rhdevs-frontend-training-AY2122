@@ -1,5 +1,6 @@
 export enum PATHS {
   GROUP_ROUTE = '/group',
+  GROUP_ROUTE_WITH_ID = '/group/:groupNumber',
   SHOPPING_LISTS = '/shopping-lists',
   EXAMPLE_SHOPPING_PAGE = '/shopping/example',
   SHOPPING_LIST_ANIME_GANG_REDUX = '/shopping-list-anime-gang-redux',

@@ -133,6 +133,7 @@ export const Routes = () => (
     <Route path={PATHS.GROUP_ROUTE} element={<RouteWithBothNav component={Groups} />} />
     <Route path="*" element={<RouteWithBothNav component={NotFound} />} /> {/* fallback */}
     {/* pages with top nav */}
+    <Route path={PATHS.GROUP_ROUTE_WITH_ID} element={<RouteWithTopNav component={GroupsSwitch} />} />
     <Route path={PATHS.SHOPPING_LISTS} element={<RouteWithTopNav component={ShoppingLists} />} />
     <Route path={PATHS.EXAMPLE_SHOPPING_PAGE} element={<RouteWithTopNav component={ShoppingListExample} />} />
     <Route path={PATHS.SHOPPING_PAGE_CHUNYU_YONGZHANG} element={<RouteWithTopNav component={ShoppingListCYYZ} />} />
@@ -165,7 +166,6 @@ export const Routes = () => (
     />
     <Route path={PATHS.TIME_DASHBOARD} element={<RouteWithTopNav component={TimeDashboard} />} />
     <Route path={PATHS.SK_DASHBOARD} element={<RouteWithTopNav component={SkDashboard} />} />
-    <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber`} element={<RouteWithTopNav component={GroupsSwitch} />} />
     <Route path={PATHS.ROCK_PAPER_SCISSORS} element={<RouteWithTopNav component={RockPaperScissors} />} />
     <Route path={PATHS.MAXIMWP_PROJ2} element={<RouteWithTopNav component={MaximWPProj2} />} />
     <Route path={PATHS.POMODORO} element={<RouteWithTopNav component={Pomodoro} />} />
