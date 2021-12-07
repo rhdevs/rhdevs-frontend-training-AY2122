@@ -9,9 +9,9 @@ export const MainComponent = styled.div`
 z-index: 2;
 border-radius: 15px;
 width: max-content;
-height: 50vh;
+height: auto;
 display: flex;
-padding-top: 50px;
+padding-top: 30px;
 background-color: #ffffff;
 align-items: center;
 justify-content: center;
@@ -53,7 +53,12 @@ export const MainBottomComponent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  height: auto;
   box-shadow: 0 -1px 0 #d3d3d3;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -65,7 +70,6 @@ export const PageViewPriceContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: -20vh;
 
   @media only screen and (max-width: 600px) {
     display: flex;
@@ -92,9 +96,8 @@ export const PageViewContainer = styled.div`
   }
 `
 export const PriceContainer = styled.div`
-  width: 10%;
+  width: auto;
   text-align: right;
-  margin-left: 40px;
   font-weight: bold;
   color: hsl(227, 35%, 25%);
   font-size: 30px;
@@ -108,18 +111,18 @@ export const PriceMonthContainer = styled.div`
   display: flex;
   flex-direction: row;
   border: 2px solid green;
+  margin-left: auto;
+  margin-right: auto;
   @media only screen and (max-width: 600px) {
     margin-top: 90px;
     border: 2px solid red;
-    margin-left: auto;
-    margin-right: auto;
   }
 `
 export const MonthContainer = styled.div`
   width: min-content;
   text-align: center;
   color: hsl(225, 20%, 60%);
-  margin-left: 40px;
+  margin-left: 0px;
   border: 2px solid green;
   @media only screen and (max-width: 600px) {
     margin-left: 85px;
@@ -132,7 +135,6 @@ export const StartTrialButton = styled.button`
   height: 35%;
   color: hsl(226, 100%, 87%);
   border: none;
-  margin-top: -20px;
   margin-left: 40px;
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -148,7 +150,7 @@ export const BottomLeftContainer = styled.div`
   height: 100%;
   align-items: center;
   padding-right: 30px;
-  padding-top: 20px;
+
   @media only screen and (max-width: 600px) {
     width: 100%;
     height: 30%;
@@ -157,16 +159,15 @@ export const BottomLeftContainer = styled.div`
 `
 export const BottomLeftText1 = styled.div`
   color: hsl(225, 20%, 60%);
-  margin-top: 10px;
+
   margin-right: 18px;
 `
 export const BottomLeftText2 = styled.div`
   color: hsl(225, 20%, 60%);
-  margin-top: 10px;
 `
 export const BottomLeftText3 = styled.div`
   color: hsl(225, 20%, 60%);
-  margin-top: 10px;
+
   margin-right: 50px;
 `
 export const TrialButtonContainer = styled.div`
@@ -174,7 +175,7 @@ export const TrialButtonContainer = styled.div`
   height: 100%;
   align-items: center;
   display: flex;
-  margin-top: 30px;
+  padding-top: 20px;
 `
 export const DiscountButtonDesktop = styled.button`
   background-color: hsl(14, 92%, 95%);
@@ -182,7 +183,7 @@ export const DiscountButtonDesktop = styled.button`
   border-radius: 15px;
   font-size: 10px;
   font-weight: 700;
-  width: max-content;
+  width: 100%;
   height: 85%;
   margin-right: 30px;
   border: none;
