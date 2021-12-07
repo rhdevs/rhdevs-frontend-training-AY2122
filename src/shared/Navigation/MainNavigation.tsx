@@ -11,7 +11,7 @@ import { HamburgerContainer, MainHeader, NavLinksContainer, StyledMenu } from '.
 
 const MainNavigation = () => {
   const [isOpen, setOpen] = useState(false)
-  const navigation = useNavigate()
+  const navigate = useNavigate()
 
   const menu = (
     <StyledMenu>
@@ -29,7 +29,7 @@ const MainNavigation = () => {
         key={3}
         onClick={() => {
           setOpen(false)
-          navigation(PATHS.SHOPPING_LISTS)
+          navigate(PATHS.SHOPPING_LISTS)
         }}
       >
         Shopping Lists
