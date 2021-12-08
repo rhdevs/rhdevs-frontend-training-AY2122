@@ -1,0 +1,85 @@
+<body>
+  <div class="container">
+    <div class="top">
+      <div class="stick" id="a"></div>
+      <div class="stick" id="b"></div>
+      <div class="stick" id="a"></div>
+      <div class="stick" id="b"></div>
+      <div class="stick" id="a"></div>
+      <div class="stick" id="b"></div>
+      <div class="stick" id="a"></div>
+    </div>
+    <div class="background"></div>
+    <div class="middle"></div>
+    <div class="end"></div>
+  </div>
+</body>
+
+<style>
+  body {
+    background-color: #6592cf;
+  }
+
+  .container {
+    height: 250px;
+    width: 140px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+    width: 100%;
+    height: 44%;
+    display: flex;
+  }
+
+  .stick {
+    width: 14.3%;
+    height: 100%;
+  }
+
+  .middle {
+    width: 100%;
+    height: 36%;
+    background-color: #060f55;
+    border-radius: 0px 0px 100px 100px;
+  }
+
+  .end {
+    width: 5%;
+    height: 20%;
+    background-color: #060f55;
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 60px;
+  }
+
+  .background {
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    background-color: #060f55;
+    margin-top: 80px;
+    z-index: -1;
+  }
+
+  #a {
+    background-color: #060f55;
+    border-radius: 100px 100px 0px 0px;
+  }
+
+  #b {
+    background-color: #6592cf;
+    border-radius: 0px 0px 100px 100px;
+  }
+</style>
+
+<!-- OBJECTIVE -->
+<!-- Write HTML/CSS in this editor and replicate the given target image in the least code possible. What you write here, renders as it is -->
+
+<!-- SCORING -->
+<!-- The score is calculated based on the number of characters you use (this comment included :P) and how close you replicate the image. Read the FAQS (https://cssbattle.dev/faqs) for more info. -->
+
+<!-- IMPORTANT: remove the comments before submitting -->
