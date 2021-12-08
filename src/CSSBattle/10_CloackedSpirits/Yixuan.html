@@ -1,0 +1,63 @@
+<div class="rectangle left-rect"></div>
+<div class="rectangle middle-rect"></div>
+<div class="rectangle right-rect"></div>
+<div class="bigger middle-circle"></div>
+<div class="bigger left-circle"></div>
+<div class="bigger right-circle"></div>
+<div class="smaller middle-circle"></div>
+<div class="smaller left-circle"></div>
+<div class="smaller right-circle"></div>
+
+<style>
+  .rectangle {
+    background: #F7EC7D;
+    width: 100px;
+    position: absolute;
+    top: 200px;
+  }
+  .left-rect {
+    left: 50px;
+    height: 100px;
+  }
+  .middle-rect {
+    left: 150px;
+    height: 200px;
+    top: 100px;
+  }
+  .right-rect {
+    left: 250px;
+    height: 100px;
+  }
+  .bigger {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 100%;
+  }
+  .smaller {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 100%;
+  }
+  .left-circle {
+    background: #AA445F;
+    left: 50px;
+    top: 150px;
+  }
+  .middle-circle {
+    background: #E38F66;
+    top: 50px;
+  }
+  .right-circle {
+    background: #AA445F;
+    left: 250px;
+    top: 150px;
+  }
+  body {
+    background: #62306D;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+</style>
