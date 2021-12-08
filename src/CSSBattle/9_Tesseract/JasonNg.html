@@ -1,0 +1,43 @@
+<div class="rectangle"></div>
+<div class="boxes" id="bigBox"></div>
+<div class="boxes" id="middleBox"></div>
+<div class="circle"></div>
+<style>
+  body {
+    background: #222730;
+    display: flex;
+    justify-content: center;
+  }
+  .rectangle {
+    position: fixed;
+    background: #4caab3;
+    height: 150px;
+    width: 100%;
+    top: 75px;
+  }
+  .circle {
+    position: fixed;
+    background: #393e46;
+    top: 125px;
+    left: 175px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+  }
+  .boxes {
+    position: fixed;
+    rotate: 45deg;
+  }
+  #bigBox {
+    top: 25px;
+    width: 250px;
+    height: 250px;
+    background: #222730;
+  }
+  #middleBox {
+    top: 75px;
+    width: 150px;
+    height: 150px;
+    background: #4caab3;
+  }
+</style>
