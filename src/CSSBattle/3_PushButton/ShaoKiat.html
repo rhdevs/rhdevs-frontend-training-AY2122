@@ -1,0 +1,97 @@
+<body>
+  <div class="rectangle">
+    <div class="outer-circle">
+      <div class="inner-circle">
+        <div class="button"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<style>
+  body {
+    margin: 0;
+    background: #6592cf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div {
+    background: #243d83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rectangle {
+    width: 300px;
+    height: 150px;
+  }
+  .outer-circle {
+    background: #6592cf;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+  }
+  .inner-circle {
+    background: #243d83;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+  .button {
+    background: #eeb850;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+  }
+</style>
+
+<!-- Solution 2 -->
+<body>
+  <div class="rectangle"></div>
+  <div class="outer circle"></div>
+  <div class="inner circle"></div>
+  <div class="button circle"></div>
+</body>
+
+<style>
+  body {
+    margin: 75px 50px;
+    background: #6592cf;
+  }
+
+  div {
+    background: #243d83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle {
+    position: fixed;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .rectangle {
+    background: #243d83;
+    width: 100%;
+    height: 100%;
+  }
+  .outer {
+    background: #6592cf;
+    width: 250px;
+    height: 250px;
+  }
+  .inner {
+    background: #243d83;
+    width: 150px;
+    height: 150px;
+  }
+  .button {
+    background: #eeb850;
+    width: 50px;
+    height: 50px;
+  }
+</style>
