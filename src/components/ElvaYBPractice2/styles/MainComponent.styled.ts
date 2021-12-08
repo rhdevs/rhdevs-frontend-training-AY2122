@@ -18,7 +18,7 @@ box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
 @media only screen and (max-width: 600px) {
   margin-top: 180px;
   height: auto;
-  width: max-content;
+  width: 85%;
 
   
 `
@@ -26,12 +26,11 @@ box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
 export const ToggleContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: 120px;
+  margin-left: 30px;
 
   width: 80%;
   @media only screen and (max-width: 600px) {
     width: 100%;
-    margin-left: 40px;
   }
 `
 export const SlidercontainerDesktop = styled.div`
@@ -134,7 +133,6 @@ export const StartTrialButton = styled.button`
   color: hsl(226, 100%, 87%);
   border: none;
 
-  margin-left: 40px;
   @media only screen and (max-width: 600px) {
     width: auto;
     margin-left: 0px;
@@ -146,7 +144,7 @@ export const BottomLeftContainer = styled.div`
   flex-direction: column;
   width: auto;
   height: auto;
-  align-items: center;
+  align-items: start;
   padding-right: 30px;
 
   @media only screen and (max-width: 600px) {
@@ -154,33 +152,19 @@ export const BottomLeftContainer = styled.div`
     height: auto;
   }
 `
-export const BottomLeftText1 = styled.div`
+export const BottomLeftText = styled.div`
   color: hsl(225, 20%, 60%);
   padding-left: 20px;
-
+  width: max-content;
   margin-right: 18px;
+  margin-left: 0px;
   @media only screen and (max-width: 600px) {
     padding-top: 10px;
     padding-left: 35px;
+    margin: auto;
   }
 `
-export const BottomLeftText2 = styled.div`
-  color: hsl(225, 20%, 60%);
-  padding-left: 20px;
-  @media only screen and (max-width: 600px) {
-    padding-top: 10px;
-  }
-`
-export const BottomLeftText3 = styled.div`
-  color: hsl(225, 20%, 60%);
-  padding-left: 20px;
 
-  margin-right: 50px;
-  @media only screen and (max-width: 600px) {
-    padding-top: 10px;
-    padding-left: 50px;
-  }
-`
 export const TrialButtonContainer = styled.div`
   width: 50%;
   height: 100%;

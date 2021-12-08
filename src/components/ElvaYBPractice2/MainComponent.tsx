@@ -19,9 +19,7 @@ import {
   DiscountButtonMobile,
   MainBottomComponent,
   BottomLeftContainer,
-  BottomLeftText1,
-  BottomLeftText2,
-  BottomLeftText3,
+  BottomLeftText,
   TrialButtonContainer,
   CheckIcon,
   StartTrialButton,
@@ -121,15 +119,15 @@ const MainComponentContainer = () => {
       </ToggleContainer>
       <MainBottomComponent>
         <BottomLeftContainer>
-          <BottomLeftText1>
+          <BottomLeftText>
             <CheckIcon src={IconCheck} alt="Tick"></CheckIcon>Unlimited websites
-          </BottomLeftText1>
-          <BottomLeftText2>
+          </BottomLeftText>
+          <BottomLeftText>
             <CheckIcon src={IconCheck} alt="Tick"></CheckIcon>100% data ownership
-          </BottomLeftText2>
-          <BottomLeftText3>
+          </BottomLeftText>
+          <BottomLeftText>
             <CheckIcon src={IconCheck} alt="Tick"></CheckIcon>Email reports
-          </BottomLeftText3>
+          </BottomLeftText>
         </BottomLeftContainer>
         <TrialButtonContainer>
           <StartTrialButton>Start my trial</StartTrialButton>

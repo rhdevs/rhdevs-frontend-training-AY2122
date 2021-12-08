@@ -7,7 +7,7 @@ export const TopComponent = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: auto;
-  height: auto;
+  height: 20%;
   text-align: center;
   position: absolute;
   top: 50px;
