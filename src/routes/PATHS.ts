@@ -36,6 +36,7 @@ export enum PATHS {
   SK_IPADDRESS = '/frontendmentor/SkIPAddress',
   FRONTEND_MENTOR_HUBBLE = '/frontendmentor/hubble',
   FRONTEND_MENTOR_TODO = '/frontendmentor/todo',
+  FRONTEND_MENTOR_TODOREDUX = '/frontendmentor/todoredux',
   YX_ZK_COUNTDOWN = '/frontendmentor/yxzkcountdown',
   KY_JOB_LISTING = '/frontendmentor/ky-job-listing',
   FRONTEND_MENTOR_PRICE_TOGGLE_JASON = '/frontendmentor/price-toggle-jason',
