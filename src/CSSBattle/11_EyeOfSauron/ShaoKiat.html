@@ -1,0 +1,74 @@
+<body>
+  <div class="circle orange middle" id="outer-circle"></div>
+  <div class="circle black middle" id="middle-circle"></div>
+  <div class="circle red middle" id="inner-circle"></div>
+  <div class="semi-circle orange left outer">
+    <div class="semi-circle black inner"></div>
+  </div>
+  <div class="semi-circle orange right outer" id="invert">
+    <div class="semi-circle black inner" id="invert"></div>
+  </div>
+</body>
+
+<style>
+  body {
+    margin: 0;
+    background: #191210;
+    position: relative;
+  }
+  .black {
+    background: #191210;
+  }
+  .orange {
+    background: #eca03d;
+  }
+  .red {
+    background: #84271c;
+  }
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .semi-circle {
+    position: absolute;
+    border-radius: 0 0 50px 50px;
+  }
+  .left {
+    left: 50px;
+    top: 150px;
+  }
+  .right {
+    left: 250px;
+    top: 100px;
+    transform: rotate(180deg);
+  }
+  .middle {
+    left: 130px;
+    top: 80px;
+  }
+  .outer {
+    width: 100;
+    height: 50;
+  }
+  .inner {
+    width: 60px;
+    height: 30px;
+    left: 20;
+  }
+  #outer-circle {
+    width: 140px;
+    height: 140px;
+  }
+  #middle-circle {
+    width: 100px;
+    height: 100px;
+    left: 150px;
+    top: 100px;
+  }
+  #inner-circle {
+    width: 50px;
+    height: 50px;
+    left: 175px;
+    top: 125px;
+  }
+</style>
