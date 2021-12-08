@@ -11,7 +11,8 @@ import {
   PriceMonthContainer,
   PriceContainer,
   MonthContainer,
-  Slidercontainer,
+  SlidercontainerDesktop,
+  SlidercontainerMobile,
   StyleSlider,
   ToggleContainer,
   ToggleContainerText,
@@ -63,6 +64,17 @@ const MainComponentContainer = () => {
         ) : (
           <PageViewContainer>{1}M PAGEVIEWS</PageViewContainer>
         )}
+        <SlidercontainerMobile>
+          <StyleSlider
+            marks={marks}
+            onChange={(value: React.SetStateAction<number>) => setViews(value)}
+            step={null}
+            defaultValue={50}
+            handleStyle={{ backgroundColor: 'hsl(174, 86%, 45%)' }}
+            trackStyle={{ backgroundColor: 'hsl(174, 86%, 45%)' }}
+          />
+        </SlidercontainerMobile>
+
         <PriceMonthContainer>
           {toggle === false ? (
             views === 0 ? (
@@ -90,7 +102,8 @@ const MainComponentContainer = () => {
           <MonthContainer>/month</MonthContainer>
         </PriceMonthContainer>
       </PageViewPriceContainer>
-      <Slidercontainer>
+
+      <SlidercontainerDesktop>
         <StyleSlider
           marks={marks}
           onChange={(value: React.SetStateAction<number>) => setViews(value)}
@@ -99,7 +112,7 @@ const MainComponentContainer = () => {
           handleStyle={{ backgroundColor: 'hsl(174, 86%, 45%)' }}
           trackStyle={{ backgroundColor: 'hsl(174, 86%, 45%)' }}
         />
-      </Slidercontainer>
+      </SlidercontainerDesktop>
       <ToggleContainer>
         <ToggleContainerText>Monthly Billing</ToggleContainerText>
         <Switch onChange={(checked) => setToggle(checked)} />

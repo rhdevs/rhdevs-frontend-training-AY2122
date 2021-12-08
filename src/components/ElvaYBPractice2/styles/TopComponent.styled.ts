@@ -7,8 +7,8 @@ export const TopComponent = styled.div`
   background-image: url(${PatternCirclePic});
   background-repeat: no-repeat;
   background-position: center;
-  width: 40%;
-  height: 20vh;
+  width: auto;
+  height: auto;
   text-align: center;
   position: absolute;
   top: 50px;
@@ -27,7 +27,7 @@ export const TopComponentTopText = styled.div`
   padding-top: 35px;
   @media only screen and (max-width: 600px) {
     width: 100%;
-    font-size: 3vw;
+    font-size: 18px;
   }
 `
 export const TopComponentBottomText = styled.div`
@@ -36,7 +36,7 @@ export const TopComponentBottomText = styled.div`
   height: 10vh;
   @media only screen and (max-width: 600px) {
     width: 65%;
-    font-size: 2vw;
+    font-size: 12px;
     margin-left: 40px;
   }
 `

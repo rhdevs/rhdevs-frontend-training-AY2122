@@ -37,7 +37,7 @@ export const ToggleContainer = styled.div`
     top: -10px;
   }
 `
-export const Slidercontainer = styled.div`
+export const SlidercontainerDesktop = styled.div`
   width: 60%;
   align-items: center;
   display: block;
@@ -46,6 +46,20 @@ export const Slidercontainer = styled.div`
   @media only screen and (max-width: 600px) {
     width: 85%;
     top: -85px;
+    display: none;
+  }
+`
+export const SlidercontainerMobile = styled.div`
+  width: 60%;
+  align-items: center;
+  flex-direction: row;
+  display: none;
+
+  @media only screen and (max-width: 600px) {
+    width: 85%;
+    display: block;
+    margin-left: 15px;
+    padding-top: 30px;
   }
 `
 
@@ -63,7 +77,7 @@ export const MainBottomComponent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 10px;
+    padding-top: 30px;
   }
 `
 export const PageViewPriceContainer = styled.div`
@@ -75,7 +89,6 @@ export const PageViewPriceContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 0px;
-    top: 10px;
 
     height: 50%;
   }
@@ -90,7 +103,6 @@ export const PageViewContainer = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     margin-left: 0px;
-    margin-top: 20px;
 
     font-size: 14px;
   }
@@ -102,7 +114,7 @@ export const PriceContainer = styled.div`
   color: hsl(227, 35%, 25%);
   font-size: 30px;
   margin-top: -13px;
-  border: 2px solid green;
+
   @media only screen and (max-width: 600px) {
   }
 `
@@ -110,12 +122,12 @@ export const PriceMonthContainer = styled.div`
   width: min-content;
   display: flex;
   flex-direction: row;
-  border: 2px solid green;
+
   margin-left: auto;
   margin-right: auto;
   @media only screen and (max-width: 600px) {
-    margin-top: 90px;
-    border: 2px solid red;
+    padding-top: 20px;
+    height: min-content;
   }
 `
 export const MonthContainer = styled.div`
@@ -123,9 +135,8 @@ export const MonthContainer = styled.div`
   text-align: center;
   color: hsl(225, 20%, 60%);
   margin-left: 0px;
-  border: 2px solid green;
+
   @media only screen and (max-width: 600px) {
-    margin-left: 85px;
   }
 `
 export const StartTrialButton = styled.button`
@@ -137,10 +148,9 @@ export const StartTrialButton = styled.button`
   border: none;
   margin-left: 40px;
   @media only screen and (max-width: 600px) {
-    width: 100%;
-    margin-top: 25px;
+    width: auto;
     margin-left: 0px;
-    height: 25%;
+    height: auto;
   }
 `
 export const BottomLeftContainer = styled.div`
@@ -159,23 +169,38 @@ export const BottomLeftContainer = styled.div`
 `
 export const BottomLeftText1 = styled.div`
   color: hsl(225, 20%, 60%);
+  padding-left: 20px;
 
   margin-right: 18px;
+  @media only screen and (max-width: 600px) {
+    padding-top: 10px;
+  }
 `
 export const BottomLeftText2 = styled.div`
   color: hsl(225, 20%, 60%);
+  padding-left: 20px;
+  @media only screen and (max-width: 600px) {
+    padding-top: 10px;
+  }
 `
 export const BottomLeftText3 = styled.div`
   color: hsl(225, 20%, 60%);
+  padding-left: 20px;
 
   margin-right: 50px;
+  @media only screen and (max-width: 600px) {
+    padding-top: 10px;
+  }
 `
 export const TrialButtonContainer = styled.div`
   width: 50%;
   height: 100%;
   align-items: center;
   display: flex;
-  padding-top: 20px;
+  margin: auto;
+  @media only screen and (max-width: 600px) {
+    padding-top: 50px;
+  }
 `
 export const DiscountButtonDesktop = styled.button`
   background-color: hsl(14, 92%, 95%);
@@ -204,11 +229,11 @@ export const DiscountButtonMobile = styled.button`
   display: none;
   @media only screen and (max-width: 600px) {
     display: flex;
-    height: 55%;
+    height: min-content;
     text-align: center;
     padding-left: 10px;
     padding-top: 3px;
-    width: 40%;
+    width: auto;
   }
 `
 export const CheckIcon = styled.img`
