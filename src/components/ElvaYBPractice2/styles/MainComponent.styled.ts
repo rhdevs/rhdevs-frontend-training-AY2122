@@ -1,8 +1,6 @@
 import styled from 'styled-components'
-import { Slider, Switch } from 'antd'
+import { Slider } from 'antd'
 
-import BackgroundPic from '../../../assets/ElvaYongbin/BackgroundPic.svg'
-import PatternCirclePic from '../../../assets/ElvaYongbin/images/pattern-circles.svg'
 import SliderIcon from '../../../assets/ElvaYongbin/images/icon-slider.svg'
 
 export const MainComponent = styled.div`
@@ -19,8 +17,8 @@ flex-direction: column;
 box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
 @media only screen and (max-width: 600px) {
   margin-top: 180px;
-  height: 60vh;
-  width: 55vw;
+  height: auto;
+  width: 70vw;
 
   
 `

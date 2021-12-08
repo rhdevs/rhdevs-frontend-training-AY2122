@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import BackgroundPic from '../../../assets/ElvaYongbin/BackgroundPic.svg'
+
 import PatternCirclePic from '../../../assets/ElvaYongbin/images/pattern-circles.svg'
-import SliderIcon from '../../../assets/ElvaYongbin/images/icon-slider.svg'
 
 export const TopComponent = styled.div`
   background-image: url(${PatternCirclePic});

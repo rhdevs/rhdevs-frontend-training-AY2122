@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Slider, Switch } from 'antd'
+import { Slider } from 'antd'
 
 import BackgroundPic from '../../../../assets/ElvaYongbin/BackgroundPic.svg'
 import PatternCirclePic from '../../../../assets/ElvaYongbin/images/pattern-circles.svg'

@@ -1,8 +1,5 @@
-import React, { useState } from 'react'
-import { Slider, Switch } from 'antd'
+import React from 'react'
 
-import IconCheck from '../../../assets/ElvaYongbin/images/icon-check.svg'
-import SliderIcon from '../../../../assets/ElvaYongbin/images/icon-slider.svg'
 import TopComponentContainer from '../../../components/ElvaYBPractice2/TopComponent'
 import MainComponentContainer from '../../../components/ElvaYBPractice2/MainComponent'
 
