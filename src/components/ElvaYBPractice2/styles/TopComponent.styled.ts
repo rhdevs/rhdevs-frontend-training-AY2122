@@ -19,7 +19,7 @@ export const TopComponent = styled.div`
 `
 export const TopComponentTopText = styled.div`
   font-size: 25px;
-  height: 10vh;
+  height: auto;
   align-items: center;
   font-weight: bold;
   color: hsl(227, 35%, 25%);
@@ -32,7 +32,7 @@ export const TopComponentTopText = styled.div`
 export const TopComponentBottomText = styled.div`
   color: grey;
   font-size: 13px;
-  height: 10vh;
+  height: auto;
   @media only screen and (max-width: 600px) {
     width: 65%;
     font-size: 12px;

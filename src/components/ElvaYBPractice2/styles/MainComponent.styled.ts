@@ -18,7 +18,7 @@ box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
 @media only screen and (max-width: 600px) {
   margin-top: 180px;
   height: auto;
-  width: 70vw;
+  width: max-content;
 
   
 `
@@ -32,7 +32,6 @@ export const ToggleContainer = styled.div`
   @media only screen and (max-width: 600px) {
     width: 100%;
     margin-left: 40px;
-    top: -10px;
   }
 `
 export const SlidercontainerDesktop = styled.div`
@@ -42,8 +41,6 @@ export const SlidercontainerDesktop = styled.div`
   flex-direction: row;
 
   @media only screen and (max-width: 600px) {
-    width: 85%;
-    top: -85px;
     display: none;
   }
 `
@@ -82,25 +79,24 @@ export const PageViewPriceContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
 
-    height: 50%;
+    height: auto;
   }
 `
 export const PageViewContainer = styled.div`
   width: 50%;
   color: hsl(225, 20%, 60%);
   text-align: center;
-  margin-left: 20px;
+
   font-size: 15px;
   font-weight: 500;
   @media only screen and (max-width: 600px) {
     width: 100%;
-    margin-left: 0px;
 
     font-size: 14px;
   }
@@ -111,39 +107,33 @@ export const PriceContainer = styled.div`
   font-weight: bold;
   color: hsl(227, 35%, 25%);
   font-size: 30px;
-  margin-top: -13px;
-
-  @media only screen and (max-width: 600px) {
-  }
 `
 export const PriceMonthContainer = styled.div`
   width: min-content;
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   margin-left: auto;
   margin-right: auto;
   @media only screen and (max-width: 600px) {
-    padding-top: 20px;
     height: min-content;
+    padding-bottom: 30px;
   }
 `
 export const MonthContainer = styled.div`
   width: min-content;
   text-align: center;
   color: hsl(225, 20%, 60%);
-  margin-left: 0px;
-
-  @media only screen and (max-width: 600px) {
-  }
 `
 export const StartTrialButton = styled.button`
   background-color: hsl(227, 35%, 25%);
   border-radius: 20px;
-  width: 65%;
-  height: 35%;
+  width: auto;
+  height: auto;
   color: hsl(226, 100%, 87%);
   border: none;
+
   margin-left: 40px;
   @media only screen and (max-width: 600px) {
     width: auto;
@@ -154,15 +144,14 @@ export const StartTrialButton = styled.button`
 export const BottomLeftContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: 100%;
+  width: auto;
+  height: auto;
   align-items: center;
   padding-right: 30px;
 
   @media only screen and (max-width: 600px) {
-    width: 100%;
-    height: 30%;
-    margin-top: -20px;
+    width: auto;
+    height: auto;
   }
 `
 export const BottomLeftText1 = styled.div`
@@ -172,6 +161,7 @@ export const BottomLeftText1 = styled.div`
   margin-right: 18px;
   @media only screen and (max-width: 600px) {
     padding-top: 10px;
+    padding-left: 35px;
   }
 `
 export const BottomLeftText2 = styled.div`
@@ -188,6 +178,7 @@ export const BottomLeftText3 = styled.div`
   margin-right: 50px;
   @media only screen and (max-width: 600px) {
     padding-top: 10px;
+    padding-left: 50px;
   }
 `
 export const TrialButtonContainer = styled.div`
@@ -197,7 +188,8 @@ export const TrialButtonContainer = styled.div`
   display: flex;
   margin: auto;
   @media only screen and (max-width: 600px) {
-    padding-top: 50px;
+    padding-top: 30px;
+    justify-content: center;
   }
 `
 export const DiscountButtonDesktop = styled.button`
@@ -207,7 +199,7 @@ export const DiscountButtonDesktop = styled.button`
   font-size: 10px;
   font-weight: 700;
   width: 100%;
-  height: 85%;
+  height: auto;
   margin-right: 30px;
   border: none;
   @media only screen and (max-width: 600px) {
@@ -220,8 +212,8 @@ export const DiscountButtonMobile = styled.button`
   border-radius: 15px;
   font-size: 10px;
   font-weight: 700;
-  width: 65%;
-  height: 85%;
+  width: auto;
+  height: auto;
   margin-right: 30px;
   border: none;
   display: none;
@@ -246,6 +238,10 @@ export const ToggleContainerText = styled.div`
   text-align: center;
   font-size: 12px;
   margin: auto;
+  @media only screen and (max-width: 600px) {
+    width: auto;
+    height: auto;
+  }
 `
 export const StyleSlider = styled(Slider)`
   background-size: 100%;
