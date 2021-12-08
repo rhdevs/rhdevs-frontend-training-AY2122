@@ -3,7 +3,7 @@ import React from 'react'
 import TopComponentContainer from '../../../components/ElvaYBPractice2/TopComponent'
 import MainComponentContainer from '../../../components/ElvaYBPractice2/MainComponent'
 
-import { MainPage } from './styles/SliderComponent.styled'
+import { MainPage } from './styles/MainPage.styled'
 
 const ElvaYBPractice = () => {
   return (
