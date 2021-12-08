@@ -1,0 +1,29 @@
+<body>
+  <div class="semi-circle down"></div>
+  <div class="semi-circle up"></div>
+  <div class="semi-circle down"></div>
+</body>
+
+<style>
+  body {
+    margin: 50px 50px;
+    background: #62306d;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .semi-circle {
+    background: #f7ec7d;
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  .up {
+    border-radius: 50% 50% 0 0;
+    margin-bottom: 100px;
+  }
+  .down {
+    border-radius: 0 0 50% 50%;
+    margin-top: 100px;
+  }
+</style>
