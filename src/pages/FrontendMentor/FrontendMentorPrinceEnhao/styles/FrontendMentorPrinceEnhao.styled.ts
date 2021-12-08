@@ -99,8 +99,8 @@ export const ProfileCardSmallWords = styled.div<{ fontSize?: string }>`
   ${(props) => props.fontSize && `font-size: ${props.fontSize};`}
 `
 export const ProfilePicContainer = styled.div`
-  width: 100%;  
-  height 0%; 
+  width: 100%;
+  height: 0;
   position: relative;
   display: flex;
   justify-content: center;

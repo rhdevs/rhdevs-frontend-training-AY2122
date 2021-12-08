@@ -32,7 +32,7 @@ export const AddItemsContainer = styled.div`
   flex-direction: row;
   align-items: center;
   position: relative;
-  width: 20%%;
+  width: 20%;
   height: 100%;
 `
 export const TablePart = styled.div`
@@ -50,5 +50,5 @@ export const TotalPricePart = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  height: 10%%;
+  height: 10%;
 `

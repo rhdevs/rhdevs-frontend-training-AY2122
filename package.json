@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@material-ui/core": "^4.12.3",
     "@types/react": "^17.0.30",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.12",
@@ -18,18 +19,22 @@
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-sonarjs": "^0.10.0",
     "hamburger-react": "^2.4.1",
+    "leaflet": "^1.7.1",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-leaflet": "^3.2.2",
     "react-redux": "^7.2.5",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.3.1",
+    "typeface-livvic": "^1.1.13",
     "typescript": "^4.3.5",
+    "uuidv4": "^6.2.12",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -50,14 +55,11 @@
       "not dead",
       "not op_mini all"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "development": []
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.8"
+    "@types/leaflet": "^1.7.5",
+    "@types/react-router-dom": "^5.3.2"
   },
   "resolutions": {
     "styled-components": "^5"

@@ -19,7 +19,7 @@ import Group4Screen1 from './Group4/Screen1'
 import Group4Screen2 from './Group4/Screen2'
 
 const GroupsSwitch = () => {
-  const params = useParams<{ groupNumber: string; screenNumber?: string }>()
+  const params = useParams<'groupNumber' | 'screenNumber'>()
 
   const screenNumber = Number(params.screenNumber)
   switch (Number(params.groupNumber)) {
