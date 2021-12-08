@@ -1,0 +1,57 @@
+<body>
+  <div class="fork"></div>
+  <div class="space fill" id="fork1"></div>
+  <div class="space empty" id="fork1"></div>
+  <div class="space fill" id="fork2"></div>
+  <div class="space empty" id="fork2"></div>
+  <div class="space fill" id="fork3"></div>
+  <div class="space empty" id="fork3"></div>
+  <div class="space fill" id="fork4"></div>
+  <div class="space fill base"></div>
+</body>
+
+<style>
+  body {
+    margin: 50px 130px;
+    background: #6592cf;
+    position: relative;
+  }
+  .fork {
+    background: #060f55;
+    width: 140;
+    height: 145;
+    border-radius: 0 0 70px 70px;
+    position: absolute;
+    top: 55;
+  }
+  .space {
+    position: absolute;
+    width: 20px;
+    height: 110px;
+    border-radius: 10px;
+  }
+  .base {
+    position: fixed;
+    bottom: -20;
+    left: 190;
+  }
+  .fill {
+    background: #060f55;
+  }
+  .empty {
+    background: #6592cf;
+    margin-left: 20px;
+  }
+  #fork1 {
+    left: 0;
+  }
+  #fork2 {
+    left: 40;
+  }
+  #fork3 {
+    left: 80;
+  }
+  #fork4 {
+    left: 120;
+  }
+</style>
