@@ -1,0 +1,38 @@
+<div class="circle"></div>
+
+<style>
+  body {
+    background: #191210;
+    display: grid;
+    place-items: center;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    background: #84271c;
+    border-radius: 50%;
+    border: 25px solid #191210;
+    box-shadow: 0 0 0 20px #eca03d;
+    position: relative;
+  }
+
+  .circle::before,
+  .circle::after {
+    content: '';
+    width: 60px;
+    height: 30px;
+    border: 20px solid #eca03d;
+    border-bottom: 0;
+    position: absolute;
+    border-radius: 100px 100px 0 0;
+    top: -25px;
+    right: -125px;
+  }
+
+  .circle::before {
+    top: 25px;
+    left: -125px;
+    transform: rotate(180deg);
+  }
+</style>
