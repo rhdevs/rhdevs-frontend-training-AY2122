@@ -1,0 +1,106 @@
+<div class='tail'></div>
+<div class='tail' id='rtail'></div>
+
+<div class='bsemi' id='l'>
+    <div class='ssemi'></div>
+</div>
+<div class='box'></div>
+
+<div class='tbox'></div>
+<div class='tbox' id='ibox'></div>
+
+<div class='bsemi' id='r'>
+    <div class='ssemi'></div>
+</div>
+<div class='box' id='rb'></div>
+<style>
+    .tail {
+        width: 20px;
+        height: 20px;
+        background: #D86F45;
+        position: absolute;
+        border-radius: 50%;;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 240px;
+        z-index: 11;
+    }
+
+    #rtail {
+        right: 0;
+        left: 240px;
+    }
+
+    .tbox {
+        width: 100px;
+        height: 50px;
+        background: #D86F45;
+        position: absolute;
+        border-radius: 100px 100px 0 0;
+        margin: auto;
+        top: 0;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    #ibox {
+        width: 60px;
+        height: 30px;
+        bottom: 30px;
+        background: #F5D6B4
+    }
+
+    #rb {
+        right: 0px;
+        left: 160px;
+    }
+    .box {
+        width: 100px;
+        height: 50px;
+        background: #F5D6B4;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 50px;
+        left: 0;
+        right: 160px;
+    }
+    #l {
+        right: 160px;
+    }
+    #r {
+        left: 160px;
+    }
+    .ssemi{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #F5D6B4;
+    }
+    .bsemi {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #D86F45;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body {
+        background: #F5D6B4;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+</style>
