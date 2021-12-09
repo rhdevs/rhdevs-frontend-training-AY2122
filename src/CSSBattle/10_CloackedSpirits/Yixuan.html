@@ -1,12 +1,9 @@
 <div class="rectangle left-rect"></div>
 <div class="rectangle middle-rect"></div>
 <div class="rectangle right-rect"></div>
-<div class="bigger middle-circle"></div>
-<div class="bigger left-circle"></div>
-<div class="bigger right-circle"></div>
-<div class="smaller middle-circle"></div>
-<div class="smaller left-circle"></div>
-<div class="smaller right-circle"></div>
+<div class="circle left"></div>
+<div class="circle middle"></div>
+<div class="circle right"></div>
 
 <style>
   .rectangle {
@@ -28,31 +25,28 @@
     left: 250px;
     height: 100px;
   }
-  .bigger {
-    width: 100px;
-    height: 100px;
+  .circle {
+    width: 60px;
+    height: 60px;
     position: absolute;
     border-radius: 100%;
   }
-  .smaller {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    border-radius: 100%;
-  }
-  .left-circle {
-    background: #AA445F;
-    left: 50px;
-    top: 150px;
-  }
-  .middle-circle {
+  .left {
     background: #E38F66;
-    top: 50px;
+    left: 70px;
+    top: 170px;
+    box-shadow: 0 0 0 20px #AA445F;
   }
-  .right-circle {
+  .middle {
     background: #AA445F;
-    left: 250px;
-    top: 150px;
+    top: 70px;
+    box-shadow: 0 0 0 20px #E38F66;
+  }
+  .right {
+    background: #E38F66;
+    left: 270px;
+    top: 170px;
+    box-shadow: 0 0 0 20px #AA445F;
   }
   body {
     background: #62306D;
