@@ -1,0 +1,57 @@
+<div class="semi-circle top"></div>
+<div class="semi-circle bottom"></div>
+<div class="middle-bar"></div>
+<div class="middle-bar" id="red"></div>
+<div class="circle inner-red"></div>
+<div class="circle center"></div>
+<style>
+  body {
+    background: #6cb3a9;
+    position: relative;
+    margin: 0;
+  }
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .semi-circle {
+    position: absolute;
+    background: #d25b70;
+    width: 200;
+    height: 100;
+    left: 100;
+    top: 50;
+    border-radius: 100px 100px 0 0;
+  }
+  .bottom {
+    background: #ffffff;
+    top: 150;
+    transform: rotate(180deg);
+  }
+  .middle-bar {
+    position: absolute;
+    background: #6cb3a9;
+    height: 20px;
+    width: 100%;
+    top: 140px;
+  }
+  #red {
+    background: #781728;
+    width: 180;
+    left: 110;
+  }
+  .inner-red {
+    background: #781728;
+    width: 70;
+    height: 70;
+    left: 165;
+    top: 115;
+  }
+  .center {
+    background: #f6df96;
+    width: 50;
+    height: 50;
+    left: 175;
+    top: 125;
+  }
+</style>
