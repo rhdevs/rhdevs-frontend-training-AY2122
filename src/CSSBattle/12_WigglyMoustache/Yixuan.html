@@ -1,0 +1,77 @@
+<div class="semicircle left"></div>
+<div class="semicircle mid"></div>
+<div class="semicircle right"></div>
+<div class="inner-left"></div>
+<div class="inner-mid"></div>
+<div class="inner-right"></div>
+<div class="rounder one"></div>
+<div class="rounder two"></div>
+<style>
+  .semicircle {
+    height: 50px;
+    width: 100px;
+    border-radius: 0 0 50px 50px;
+    background: #D86F45;
+    position: absolute;
+  }
+  .left {
+    top: 150px;
+    left: 70px;
+  }
+    .mid {
+    top: 100px;
+    left: 150px;
+    transform: rotate(180deg);
+  }
+    .right {
+    top: 150px;
+    right: 70px;
+  }
+  .inner-left {
+    height: 30px;
+    width: 60px;
+    border-radius: 0 0 30px 30px;
+    background: #F5D6B4;
+    position: absolute;
+    top: 150px;
+    left: 90px;
+  }
+  .inner-mid {
+    height: 30px;
+    width: 60px;
+    border-radius: 30px 30px 0 0;
+    background: #F5D6B4;
+    position: absolute;
+    left: 170px;
+    top: 120px;
+  }
+  .inner-right {
+    height: 30px;
+    width: 60px;
+    border-radius: 0 0 30px 30px;
+    background: #F5D6B4;
+    position: absolute;
+    top: 150px;
+    right: 90px;
+  }
+  .rounder {
+    height: 10px;
+    width: 20px;
+    border-radius: 20px 20px 0 0;
+    background: #D86F45;
+    position: absolute;
+    top: 140px;
+  }
+  .one {
+   left: 70px;
+  }
+  .two {
+    right: 70px;
+  }
+  body {
+    background: #F5D6B4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
