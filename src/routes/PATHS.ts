@@ -30,6 +30,7 @@ export enum PATHS {
   MARCUS_FE_MENTOR_2_ABOUT = '/frontendmentor/marcus-fe-mentor-2/about',
   MARCUS_FE_MENTOR_2_CONTACT = '/frontendmentor/marcus-fe-mentor-2/contact',
   FRONTEND_MENTOR_PRINCE_ENHAO = '/frontendmentor/princeenhao',
+  FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE2 = '/frontend-mentor/elva-yb-practice2',
   ROCK_PAPER_SCISSORS = '/frontendmentor/rockpaperscissors',
   MAXIMWP_PROJ2 = '/frontendmentor/Maximwp_proj2',
   FRONTEND_MENTOR_PRINCE_ENHAO_CALC = '/FrontendMentor/CalculatorApp',
