@@ -1,64 +1,54 @@
-<body>
-  <div class="tip1"></div>
-  <div class="curve1"></div>
-  <div class="curve2"></div>
-  <div class="curve3"></div>
-  <div class="tip2"></div>
-</body>
+<div class="inner"></div>
+<div class="outer"></div>
+<div class="yellow"></div>
 
 <style>
   body {
-    background-color: #f5d6b4;
-    position: relative;
-    margin: 10px 10px;
+    background: #6cb3a9;
+    margin: 0;
   }
-  .tip1 {
-    width: 20px;
-    height: 10px;
-    border-radius: 20px 20px 0px 0px;
-    background: #d86f45;
+  .outer {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background: linear-gradient(
+      to bottom,
+      #d25b70 0%,
+      #d25b70 45%,
+      transparent 45%,
+      transparent 55%,
+      #ffffff 55%,
+      #ffffff 100%
+    );
+    margin: 50px 100px;
     position: absolute;
-    margin: 130px 60px;
+    z-index: 850px;
   }
-  .curve1 {
-    width: 60px;
-    height: 60px;
-    border: 20px solid #d86f45;
-    border-radius: 50%;
-    transform: rotate(-45deg);
+  .inner {
+    width: 180px;
+    height: 180px;
+    border-radius: 180px;
+    background: linear-gradient(
+      to bottom,
+      #d25b70 0%,
+      #d25b70 44%,
+      #781728 44%,
+      #781728 56%,
+      #ffffff 55%,
+      #ffffff 100%
+    );
+    margin: 60px 110px;
     position: absolute;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    margin: 90px 60px;
+    z-index: 880px;
   }
-  .curve2 {
-    width: 60px;
-    height: 60px;
-    border: 20px solid #d86f45;
-    border-radius: 50%;
-    transform: rotate(-45deg);
+  .yellow {
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #f6df96;
+    border: 10px solid #781728;
+    margin: 115px 165px;
     position: absolute;
-    margin: 90px 140px;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-  }
-  .curve3 {
-    width: 60px;
-    height: 60px;
-    border: 20px solid #d86f45;
-    border-radius: 50%;
-    transform: rotate(-45deg);
-    position: absolute;
-    margin: 90px 220px;
-    border-top-color: transparent;
-    border-right-color: transparent;
-  }
-  .tip2 {
-    width: 20px;
-    height: 10px;
-    border-radius: 20px 20px 0px 0px;
-    background: #d86f45;
-    position: absolute;
-    margin: 130px 300px;
+    z-index: 880px;
   }
 </style>
