@@ -1,8 +1,60 @@
 <div></div>
-<style>
-  div {
-    width: 100px;
-    height: 100px;
-    background: #dd6b4d;
-  }
-</style>
+<div class = "side one"></div>
+<div class = "side two"></div>
+
+  <style>
+    body {
+      width: 400px;
+      height: 300px;
+      background: #f5d6b4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    div {
+      width: 60px;
+      height: 30px;
+      border: solid 20px #d86f45;
+      border-radius: 110px 110px 0 0;
+      border-bottom: 0;
+      top: 100px;
+      position: absolute;
+    }
+    .side{
+      transform:rotate(180deg);
+      top: 150px;
+        
+    }
+    .side.one {
+      left:70px;  
+    }
+    .side::before{
+      content:'';
+      width: 20px;
+      height:20px;
+      border-radius: 50%;
+      background:#D86F45;
+      position: absolute;
+      top: 20px;
+      left:60px;
+    }
+     .side.two::before{
+ 
+     left: -20px;
+    }
+    .side.two {
+      left:230px;  
+    }
+
+  </style>
+
+  <!-- OBJECTIVE -->
+  <!-- Write HTML/CSS in this editor and replicate the given target image in the least code possible. What you write here, renders as it is -->
+
+  <!-- SCORING -->
+  <!-- The score is calculated based on the number of characters you use (this comment included :P) and how close you replicate the image. Read the FAQS (https://cssbattle.dev/faqs) for more info. -->
+
+  <!-- IMPORTANT: remove the comments before submitting -->
+</body>
