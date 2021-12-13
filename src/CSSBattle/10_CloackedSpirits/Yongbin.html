@@ -1,0 +1,109 @@
+<div class="col1"></div>
+<div class="col2"></div>
+<div class="col3"></div>
+<div class="outer1">
+  <div class="inner1"></div>
+</div>
+<div class="outer2">
+  <div class="inner2"></div>
+</div>
+<div class="outer3">
+  <div class="inner3"></div>
+</div>
+
+<style>
+  .col1 {
+    width: 100px;
+    height: 100px;
+    background: #f7ec7d;
+    position: absolute;
+    top: 200;
+    left: 50;
+  }
+  .col2 {
+    width: 100px;
+    height: 200px;
+    background: #f7ec7d;
+    position: absolute;
+    top: 100;
+    left: 150;
+  }
+  .col3 {
+    width: 100px;
+    height: 100px;
+    background: #f7ec7d;
+    position: absolute;
+    top: 200;
+    right: 50;
+  }
+  .outer1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #aa445f;
+    position: absolute;
+    left: 50;
+    top: 150;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .outer2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #e38f66;
+    position: absolute;
+    left: 150;
+    top: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .outer3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #aa445f;
+    position: absolute;
+    right: 50;
+    top: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .inner1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e38f66;
+    left: 50;
+    top: 150;
+    z-index: 2;
+  }
+  .inner2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #aa445f;
+    left: 150;
+    top: 50;
+    z-index: 2;
+  }
+  .inner3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e38f66;
+    left: 50;
+    top: 150;
+    z-index: 2;
+  }
+  body {
+    background: #62306d;
+    display: inline-block;
+  }
+</style>
