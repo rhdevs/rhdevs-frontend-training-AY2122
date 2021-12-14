@@ -14,8 +14,10 @@ import { marcusFEMentor } from './MarcusFEMentor/reducer'
 import { yxwp_store } from './yxwp_store/reducer'
 import { tipCalculatorApp } from './tipCalculatorApp/reducer'
 import { kyJobListing } from './KYJobListing/reducer'
+import { toDoReducer } from './toDoRedux/reducer'
 
 export const rootReducer = combineReducers({
+  toDoReducer,
   animeGangRedux,
   shoppingLists,
   shoppingCart4Redux,

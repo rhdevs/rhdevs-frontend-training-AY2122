@@ -125,6 +125,9 @@ const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '..
 const FrontEndMentorTodo = React.lazy(
   () => import(/* webpackChunckName: "FrontEndMentorTodo" */ '../pages/FrontendMentor/Todo'),
 )
+const FrontEndMentorToDoRedux = React.lazy(
+  () => import(/* webpackChunckName: "FrontEndMentortoDoRedux" */ '../pages/FrontendMentor/toDoRedux'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -174,6 +177,7 @@ export const Routes = () => (
     <Route path={PATHS.FRONTEND_MENTOR_HUBBLE} element={<RouteWithTopNav component={FrontEndMentorHubble} />} />
     <Route path={PATHS.KY_JOB_LISTING} element={<RouteWithTopNav component={KYJobListing} />} />
     <Route path={PATHS.FRONTEND_MENTOR_TODO} element={<RouteWithTopNav component={FrontEndMentorTodo} />} />
+    <Route path={PATHS.FRONTEND_MENTOR_TODOREDUX} element={<RouteWithTopNav component={FrontEndMentorToDoRedux} />} />
     {/* pages without top or bottom nav */}
     <Route path={`${PATHS.GROUP_ROUTE}/:groupNumber/screen/:screenNumber`} element={<GroupsSwitch />} />
     <Route path={PATHS.MARCUS_FE_MENTOR} element={<MarcusFEMentor />} />

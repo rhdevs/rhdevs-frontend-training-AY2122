@@ -93,6 +93,7 @@ const FrontendMentor = () => {
 
         <Card title="Hubble" description="Tai and Yong Zhong" onClick={() => navigate(PATHS.FRONTEND_MENTOR_HUBBLE)} />
         <Card title="To-do" description="Tai" onClick={() => navigate(PATHS.FRONTEND_MENTOR_TODO)} />
+        <Card title="To-do Redux" description="Tai" onClick={() => navigate(PATHS.FRONTEND_MENTOR_TODOREDUX)} />
       </InformationCardSection>
     </MembersSection>
   )
