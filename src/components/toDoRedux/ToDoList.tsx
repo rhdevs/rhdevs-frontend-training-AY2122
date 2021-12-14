@@ -3,30 +3,21 @@ import LastRow from './LastRow'
 import ToDoCard from './ToDoCard'
 import { ToDo } from '../../store/toDoRedux/types'
 import { Wrapper } from './styles/ToDoList.styled'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store/types'
 
-type Props = {
-  toDos: ToDo[]
-  setToDos: React.Dispatch<React.SetStateAction<ToDo[]>>
-  isDarkMode: boolean
-}
-
-const ToDoList = (props: Props) => {
+const ToDoList = () => {
+  const state = useSelector((state: RootState) => state.toDoReducer)
   return (
     <Wrapper>
-      {props.toDos
+      {state.toDos
         .filter((toDo: ToDo) => {
           return toDo.isVisible
         })
         .map((toDo: ToDo) => (
-          <ToDoCard
-            isDarkMode={props.isDarkMode}
-            key={toDo.key}
-            toDo={toDo}
-            setToDos={props.setToDos}
-            toDos={props.toDos}
-          />
+          <ToDoCard key={toDo.key} toDo={toDo} />
         ))}
-      <LastRow isDarkMode={props.isDarkMode} setToDos={props.setToDos} toDos={props.toDos} />
+      <LastRow />
     </Wrapper>
   )
 }

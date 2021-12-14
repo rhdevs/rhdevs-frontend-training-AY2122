@@ -1,51 +1,21 @@
 import React from 'react'
-import { ToDo } from '../../store/toDoRedux/types'
 import { ItemsLeft, MiddleTBox, Rectangle, TextBox, Clear } from './styles/LastRow.styled'
-
-type Props = {
-  toDos: ToDo[]
-  setToDos: React.Dispatch<React.SetStateAction<ToDo[]>>
-  isDarkMode: boolean
-}
-
-const LastRow = (props: Props) => {
-  const clearCompleted = () => {
-    const notCompleted = props.toDos.filter((task) => {
-      return !task.isCompleted
-    })
-    props.setToDos(notCompleted)
-  }
-
-  const showAll = () => {
-    const all = props.toDos.map((task: ToDo) => {
-      return { ...task, isVisible: true }
-    })
-    props.setToDos(all)
-  }
-
-  const showActive = () => {
-    const active = props.toDos.map((task: ToDo) => {
-      return { ...task, isVisible: task.isCompleted === false }
-    })
-    props.setToDos(active)
-  }
-
-  const showCompleted = () => {
-    const mapped = props.toDos.map((task) => {
-      return { ...task, isVisible: task.isCompleted }
-    })
-    props.setToDos(mapped)
-  }
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../../store/types'
+import { showActive, showCompleted, showAll, clearCompleted } from '../../store/toDoRedux/actions'
+const LastRow = () => {
+  const state = useSelector((state: RootState) => state.toDoReducer)
+  const dispatch = useDispatch()
 
   return (
-    <Rectangle isDarkMode={props.isDarkMode}>
-      <ItemsLeft>{props.toDos.filter((toDo) => !toDo.isCompleted).length} items left</ItemsLeft>
+    <Rectangle isDarkMode={state.isDarkMode}>
+      <ItemsLeft>{state.toDos.filter((toDo) => !toDo.isCompleted).length} items left</ItemsLeft>
       <MiddleTBox>
-        <TextBox onClick={showAll}>All</TextBox>
-        <TextBox onClick={showActive}>Active</TextBox>
-        <TextBox onClick={showCompleted}> Completed</TextBox>
+        <TextBox onClick={() => dispatch(showAll())}>All</TextBox>
+        <TextBox onClick={() => dispatch(showActive())}>Active</TextBox>
+        <TextBox onClick={() => dispatch(showCompleted())}> Completed</TextBox>
       </MiddleTBox>
-      <Clear onClick={clearCompleted}>Clear completed</Clear>
+      <Clear onClick={() => dispatch(clearCompleted())}>Clear completed</Clear>
     </Rectangle>
   )
 }
