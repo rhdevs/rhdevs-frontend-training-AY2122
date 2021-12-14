@@ -1,0 +1,80 @@
+<div class="bgcircle">
+  <div class="smallyellow"></div>
+  <div class="bar"></div>
+  <div class="bar middle"></div>
+  <div class="bar bottom"></div>
+  <div class="bar right"></div>
+  <div class="bar right rmiddle"></div>
+  <div class="bar right rbot"></div>
+  <div class="middlerect"></div>
+  <div class="middlerect" id="middle"></div>
+  <div class="middlerect" id="bot"></div>
+  </div>
+  <style>
+    body {
+      background: #4F77FF;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+      background: #dd6b4d;
+    }
+    .bgcircle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: #191919;
+      position: absolute;
+      left: 100px;
+      top: 50px;
+      overflow: hidden;
+    }
+    .smallyellow {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #F9E492;
+      position: fixed;
+      left: 140px;
+      top: 90px;
+    }
+    .bar {
+      background: #F9E492;
+      height: 16px;;
+      width: 100px;
+      top: 122px;
+      left: 0px;
+      position: relative;
+    }
+    .middle {
+      top: 132px;
+    }
+    .bottom {
+      top: 142px;
+    }
+    .right {
+    top: 61px;
+      left: 120px;
+    }
+    .rmiddle {
+      top: 71px;
+    }
+    .rbot {
+      top: 81px;
+    }
+    .middlerect {
+      height: 16px;
+      width: 20px;
+      background: #D6B73F;
+      position: fixed;
+      left: 200px;
+      top:165px;
+      transform: skewY(-33deg)
+    }
+    #middle {
+      top: 192px;
+    }
+    #bot {
+      top: 217px;
+    }
+  </style>
