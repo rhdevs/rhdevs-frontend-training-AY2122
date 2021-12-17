@@ -1,0 +1,79 @@
+<div class="black">
+  <div class="sun"></div>
+  <div class="wave-container">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <div class="wave-container-2">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
+  <div class="hi-container">
+    <div class="hi"></div>
+    <div class="hi"></div>
+    <div class="hi"></div>
+  </div>
+</div>
+<style>
+  body {
+    background: #4f77ff;
+  }
+  .black {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: #191919;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+
+  .sun {
+    background: #f9e492;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(100%, 100%);
+  }
+
+  .wave-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0%, 72px);
+  }
+
+  .wave-container-2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translate(120%, 59px);
+  }
+
+  .hi-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translate(100px, 65.5px);
+  }
+
+  .hi {
+    width: 20px;
+    height: 16px;
+    background: #d6b73f;
+    margin-top: 10px;
+    transform: skew(0deg, -33deg);
+  }
+
+  .wave {
+    width: 100px;
+    height: 16px;
+    background: #f9e492;
+    margin-top: 10px;
+  }
+</style>
