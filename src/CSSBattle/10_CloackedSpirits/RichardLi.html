@@ -1,0 +1,60 @@
+<div class="l">
+  <div class="big c1"></div>
+  <div class="small c2"></div>
+  <div class="drip"></div>
+</div>
+<div class="m">
+  <div class="big c2"></div>
+  <div class="small c1"></div>
+  <div class="drip"></div>
+</div>
+<div class="r">
+  <div class="big c1"></div>
+  <div class="small c2"></div>
+  <div class="drip"></div>
+</div>
+<style>
+  body {
+    background: #62306d;
+    display: flex;
+    flex-direction: row;
+  }
+  .big {
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+  }
+  .small {
+    border-radius: 50%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    transform: translate(20px, 20px);
+    z-index: 3;
+  }
+  .c1 {
+    background: #aa445f;
+  }
+  .c2 {
+    background: #e38f66;
+  }
+  .drip {
+    background: #f7ec7d;
+    position: absolute;
+    width: 100px;
+    height: 1000px;
+    transform: translate(0, 50px);
+    z-index: 1;
+  }
+  .l {
+    transform: translate(42px, 142px);
+  }
+  .m {
+    transform: translate(142px, 42px);
+  }
+  .r {
+    transform: translate(242px, 142px);
+  }
+</style>
