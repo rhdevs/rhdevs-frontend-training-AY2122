@@ -1,8 +1,54 @@
-<div></div>
+<div class="black-circle">
+  <div class="moon"></div>
+  <div class="bar one"></div>
+  <div class="slanted"></div>
+  <div class="bar two"></div>
+</div>
+
 <style>
+  body {
+    background: #4f77ff;
+  }
   div {
+    position: absolute;
+    background: #f9e492;
+  }
+  .black-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background: #191919;
+    top: 50px;
+    left: 100px;
+    overflow: hidden;
+  }
+  .moon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    left: 40px;
+  }
+  .bar {
     width: 100px;
-    height: 100px;
-    background: #dd6b4d;
+    height: 16px;
+    left: 0px;
+    bottom: 62px;
+    box-shadow: 0px 26px #f9e492, 0px 52px #f9e492;
+  }
+
+  .bar.two {
+    left: 120px;
+    bottom: 75px;
+  }
+  .slanted {
+    width: 20px;
+    height: 16px;
+    bottom: 69px;
+    left: 100px;
+    transform: skew(0, -33deg);
+    box-shadow: 0px 26px #d6b73f, 0px 52px #d6b73f;
+
+    background: #d6b73f;
   }
 </style>
