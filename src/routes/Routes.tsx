@@ -89,6 +89,9 @@ const ElvaYBPractice = React.lazy(
 const SkDashboard = React.lazy(
   () => import(/* webpackChunckName: "SkDashboard" */ '../pages/FrontendMentor/SkDashboard'),
 )
+const ElvaYBPractice2 = React.lazy(
+  () => import(/* webpackChunckName: "ElvaYBPractice2" */ '../pages/FrontendMentor/ElvaYBPractice2'),
+)
 const MaximWpWebsite = React.lazy(
   () => import(/* webpackChunckName: "MaximWpWebsite " */ '../pages/FrontendMentor/Maximweipin'),
 )
@@ -156,6 +159,10 @@ export const Routes = () => (
     <Route
       path={PATHS.JASON_YB_REDUX_SHOPPING_LIST_PAGE}
       element={<RouteWithTopNav component={JasonYbReduxShoppingListPage} />}
+    />
+    <Route
+      path={PATHS.FRONTEND_MENTOR_ELVA_YONGBIN_PRACTICE2}
+      element={<RouteWithTopNav component={ElvaYBPractice2} />}
     />
     <Route path={PATHS.SKZK_SHOPPING_PAGE} element={<RouteWithTopNav component={SkZkShoppingPage} />} />
     <Route path={PATHS.SKZK_SHOPPING_PAGE_REDUX} element={<RouteWithTopNav component={SkZkShoppingPageRedux} />} />
