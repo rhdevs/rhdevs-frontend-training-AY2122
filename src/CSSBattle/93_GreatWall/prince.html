@@ -1,0 +1,88 @@
+
+<div class= "circle">
+<div class = "small"></div>
+<div id = "line1" class = "yellowline"></div>
+<div id = "line2" class = "yellowline"></div>
+<div id = "line3" class = "yellowline"></div>     
+<div id = "line4" class = "yellowline"></div>
+<div id = "line5" class = "yellowline"></div>
+<div id = "line6" class = "yellowline"></div>
+<div id = "skewed1" class = "skewedline"></div>
+<div id = "skewed2" class = "skewedline"></div>
+<div id = "skewed3" class = "skewedline"></div>
+</div>
+
+<style>
+.circle{
+left: 100px;
+top: 50px;
+height: 200px;
+width: 200px;
+border-radius: 50%;
+background: #191919;
+position: relative;
+overflow: hidden;
+}
+.small{
+left: 40px;
+top: 40px;
+height: 40px;
+width: 40px;
+border-radius: 50%;
+background: #F9E492;
+position: absolute;
+}
+.yellowline{
+height: 16px;
+width: 100px;
+background: #F9E492;
+position: absolute;
+}
+#line1 {
+    top: 122px;
+}
+#line2 {
+    top: 148px;
+}
+#line3 {
+    top: 174px;
+}
+#line4 {
+top: 109px;
+right: -20px;
+}
+#line5 {
+top: 135px;
+right: -20px;
+}
+#line6 {
+top: 161px;
+right: -20px;
+}
+.skewedline {
+width: 20px;
+height: 16px;
+background: #d6b73f;
+transform: skewY(-33deg) translateY(-6.5px);
+position: absolute;
+flex-shrink: 0;
+}
+#skewed1 {
+top: 122px;
+left: 100px;
+}
+#skewed2 {
+top: 148px;
+left: 100px;
+}
+#skewed3 {
+top: 174px;
+left: 100px;
+}
+body {
+padding: 0px;
+margin: 0px;
+background: #4F77FF;
+position: absolute;
+}
+</style>
