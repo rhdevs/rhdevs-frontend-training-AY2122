@@ -1,0 +1,29 @@
+<div class="btn"></div>
+
+<style>
+  body {
+    background: #6592cf;
+    margin: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .btn {
+    background: #eeb850;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 50px solid #243d83;
+    box-shadow: 0 0 0 50px #6592cf;
+  }
+
+  .btn::after {
+    content: '';
+    width: 300px;
+    height: 150px;
+    background: #243d83;
+    position: absolute;
+    z-index: -1;
+    transform: translateX(-125px) translateY(-50px);
+  }
+</style>

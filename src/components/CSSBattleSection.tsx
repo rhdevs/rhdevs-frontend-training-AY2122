@@ -126,7 +126,11 @@ const CSSBattleSection = (props: CSSBattleProps) => {
     <MainContainer>
       <HeaderText>
         <BoldText>Default:</BoldText> Image taken from{' '}
-        <a href={`https://cssbattle.dev/play/${props.challengeName.split('_')[0]}`}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://cssbattle.dev/play/${props.challengeName.split('_')[0]}`}
+        >
           cssbattle #{props.challengeName.split('_')[0]}
         </a>
         <br />

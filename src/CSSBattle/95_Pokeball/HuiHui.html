@@ -1,0 +1,51 @@
+<div class="ball">
+  <div class="circle"></div>
+</div>
+<style>
+  body {
+    background: #6cb3a9;
+    display: grid;
+    place-items: center;
+  }
+
+  .circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 10px solid #781728;
+    background: #f6df96;
+    border-radius: 50%;
+    z-index: 10;
+    top: -10px;
+    left: -10px;
+  }
+
+  .ball {
+    width: 50px;
+    height: 50px;
+    border: 65px solid #781728;
+    background: #f6df96;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .ball::before,
+  .ball::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -75px;
+    left: -75px;
+    width: 200px;
+    height: 110px;
+    background: #d25b70;
+    border-radius: 200px 200px 0 0;
+    border-bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 82%);
+  }
+
+  .ball::after {
+    background: #ffffff;
+    transform: scaleY(-1) translateY(-90px);
+  }
+</style>
