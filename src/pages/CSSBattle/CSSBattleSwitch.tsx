@@ -31,7 +31,6 @@ const CSSBattleSwitch = () => {
       />
       <MembersSectionHeader>Attempts</MembersSectionHeader>
       {challenges?.map((challengeNumber, index) => {
-        console.log(challengeNumber)
         let challengeName = CSSBattleChallenges.SIMPLY_SQUARE_1
         switch (challengeNumber) {
           case '1':

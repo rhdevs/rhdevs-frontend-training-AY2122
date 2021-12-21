@@ -18,7 +18,9 @@ import challenge93 from '../assets/CSSBattle/93_GreatWall.png'
 import challenge95 from '../assets/CSSBattle/95_Pokeball.png'
 
 import {
+  BattleInfoContainer,
   BoldText,
+  ErrorText,
   FinalImg,
   HeaderText,
   MainContainer,
@@ -53,9 +55,22 @@ export enum CSSBattleChallenges {
 const CSSBattleSection = (props: CSSBattleProps) => {
   const [fileText, setFileText] = useState<string>('')
   const [image, setImage] = useState<string>('')
+  const [hasError, setHasError] = useState<boolean>(false)
+
   useEffect(() => {
-    const content = raw('../CSSBattle/10_CloakedSpirits/example.html')
-    setFileText(content)
+    const folderName = props.challengeName
+    const fileName = props.name
+
+    try {
+      const content = raw(`../CSSBattle/${folderName}/${fileName}.html`)
+      setFileText(content)
+      if (!content) {
+        setHasError(true)
+      }
+    } catch {
+      setHasError(true)
+    }
+
     switch (props.challengeName) {
       case CSSBattleChallenges.SIMPLY_SQUARE_1:
         setImage(challenge1)
@@ -117,15 +132,23 @@ const CSSBattleSection = (props: CSSBattleProps) => {
         <br />
         <BoldText>Hover:</BoldText> Image created by {props.name}
       </HeaderText>
-      <VisualContainer>
-        <FinalImg src={image} alt="challenge photo taken from cssbattle site" />
-        <StyledFrame
-          frameBorder="0"
-          id={`frameId_${props.challengeName.split('_')[0]}`}
-          srcDoc={`<html><head><style>body{overflow:hidden}</style></head><body>${fileText}</body></html>`}
-        />
-      </VisualContainer>
-      <StyledText>{fileText}</StyledText>
+      <BattleInfoContainer>
+        <VisualContainer>
+          <FinalImg src={image} alt="challenge photo taken from cssbattle site" />
+          {!hasError && (
+            <StyledFrame
+              frameBorder="0"
+              id={`frameId_${props.challengeName.split('_')[0]}`}
+              srcDoc={`<html><head><style>body{overflow:hidden}</style></head><body>${fileText}</body></html>`}
+            />
+          )}
+        </VisualContainer>
+        {hasError ? (
+          <ErrorText>No file found (file might be named wrongly)</ErrorText>
+        ) : (
+          <StyledText>{fileText}</StyledText>
+        )}
+      </BattleInfoContainer>
       <br />
     </MainContainer>
   )
