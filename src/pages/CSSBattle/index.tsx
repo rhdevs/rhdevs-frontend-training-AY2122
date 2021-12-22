@@ -106,7 +106,7 @@ const CSSBattle = () => {
           return (
             <Card
               key={index}
-              title={card.fileName}
+              title={card.fileName.replace(/([A-Z])/g, ' $1').trim()}
               description={`Attempted challenges: ${card.attempts}`}
               onClick={() => navigate(`${PATHS.CSS_BATTLE}/${card.fileName}/${formattedAttemptsString}`)}
             />
