@@ -41,6 +41,6 @@ export enum PATHS {
   KY_JOB_LISTING = '/frontendmentor/ky-job-listing',
   FRONTEND_MENTOR_PRICE_TOGGLE_JASON = '/frontendmentor/price-toggle-jason',
   POMODORO = '/frontendmentor/pomodoro',
-  CSS_BATTLE = 'CSS_BATTLE',
+  CSS_BATTLE = '/css-battle',
   CSS_BATTLE_WITH_ID = '/css-battle/:name/:challenges',
 }
