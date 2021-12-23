@@ -29,6 +29,11 @@ const LandingPage = () => {
             description="frontend mentor practices, challenges taken from frontendmentor.io"
             onClick={() => navigate(PATHS.FRONTEND_MENTOR)}
           />
+          <Card
+            title="CSS Battle"
+            description="css practices, challenges taken from cssbattle.dev"
+            onClick={() => navigate(PATHS.CSS_BATTLE)}
+          />
         </InformationCardSection>
       </MembersSection>
     </>
