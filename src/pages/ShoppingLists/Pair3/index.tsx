@@ -121,7 +121,7 @@ const Pair3 = () => {
             placeholder="Quantity"
             onChange={(e) => handleQuantityChange(e)}
           />
-          <Button type="primary" onClick={() => handleSubmit()} icon={<PlusOutlined />}>
+          <Button style={{ marginRight: '10px' }} type="primary" onClick={() => handleSubmit()} icon={<PlusOutlined />}>
             Add Item
           </Button>
         </form>
