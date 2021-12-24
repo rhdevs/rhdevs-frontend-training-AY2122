@@ -128,6 +128,10 @@ const Pomodoro = React.lazy(() => import(/* webpackChunckName: "Pomodoro" */ '..
 const FrontEndMentorTodo = React.lazy(
   () => import(/* webpackChunckName: "FrontEndMentorTodo" */ '../pages/FrontendMentor/Todo'),
 )
+const CSSBattle = React.lazy(() => import(/* webpackChunckName: "CSSBattle" */ '../pages/CSSBattle'))
+const CSSBattleSwitch = React.lazy(
+  () => import(/* webpackChunckName: "CSSBattleSwitch" */ '../pages/CSSBattle/CSSBattleSwitch'),
+)
 
 export const Routes = () => (
   <Switch>
@@ -136,6 +140,8 @@ export const Routes = () => (
     <Route path={PATHS.GROUP_ROUTE} element={<RouteWithBothNav component={Groups} />} />
     <Route path="*" element={<RouteWithBothNav component={NotFound} />} /> {/* fallback */}
     {/* pages with top nav */}
+    <Route path={PATHS.CSS_BATTLE} element={<RouteWithTopNav component={CSSBattle} />} />
+    <Route path={PATHS.CSS_BATTLE_WITH_ID} element={<RouteWithTopNav component={CSSBattleSwitch} />} />
     <Route path={PATHS.GROUP_ROUTE_WITH_ID} element={<RouteWithTopNav component={GroupsSwitch} />} />
     <Route path={PATHS.SHOPPING_LISTS} element={<RouteWithTopNav component={ShoppingLists} />} />
     <Route path={PATHS.EXAMPLE_SHOPPING_PAGE} element={<RouteWithTopNav component={ShoppingListExample} />} />
