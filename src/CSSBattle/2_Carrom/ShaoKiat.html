@@ -1,36 +1,30 @@
-<body>
-  <div class="top-left"></div>
-  <div class="top-right"></div>
-  <div class="bot-left"></div>
-  <div class="bot-right"></div>
-</body>
+<div class="row">
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+<div class="row">
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
 
 <style>
   body {
     margin: 0;
     background: #62374e;
+    display: flex;
+    flex-direction: column;
   }
 
-  div {
+  .box {
     width: 50px;
-    height: 50px;
+    aspect-ratio: 1;
     background: #fdc57b;
-    position: fixed;
   }
-  .top-left {
-    top: 50;
-    left: 50;
-  }
-  .top-right {
-    top: 50;
-    right: 50;
-  }
-  .bot-left {
-    bottom: 50;
-    left: 50;
-  }
-  .bot-right {
-    bottom: 50;
-    right: 50;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 50px auto;
   }
 </style>
