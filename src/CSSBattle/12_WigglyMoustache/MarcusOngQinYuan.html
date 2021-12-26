@@ -1,0 +1,84 @@
+<div id="main">
+  <div id="left-tip" class="tip"></div>
+
+  <div id="left-wedge" class="wedge">
+    <div class="wedge-void"></div>
+  </div>
+
+  <div id="middle-wedge" class="wedge">
+    <div class="wedge-void"></div>
+  </div>
+
+  <div id="right-wedge" class="wedge">
+    <div class="wedge-void"></div>
+  </div>
+
+  <div id="right-tip" class="tip"></div>
+</div>
+<style>
+  #main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f5d6b4;
+  }
+  .wedge {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: #d86f45;
+
+    display: flex;
+    justify-content: center;
+  }
+  .wedge-void {
+    width: 60px;
+    height: 30px;
+    background: #f5d6b4;
+  }
+  .tip {
+    position: absolute;
+    top: 140px;
+    width: 20px;
+    height: 10px;
+    border-radius: 10px 10px 0 0;
+    background: #d86f45;
+  }
+
+  #left-tip {
+    left: 70px;
+  }
+  #right-tip {
+    right: 70px;
+  }
+
+  #left-wedge {
+    top: 150px;
+    left: 70px;
+    border-radius: 0 0 50px 50px;
+  }
+  #left-wedge .wedge-void {
+    border-radius: 0 0 30px 30px;
+  }
+
+  #middle-wedge {
+    top: 100px;
+    left: 150px;
+    border-radius: 50px 50px 0 0;
+  }
+  #middle-wedge .wedge-void {
+    margin: auto auto 0;
+    border-radius: 30px 30px 0 0;
+  }
+
+  #right-wedge {
+    top: 150px;
+    right: 70px;
+    border-radius: 0 0 50px 50px;
+  }
+  #right-wedge .wedge-void {
+    border-radius: 0 0 30px 30px;
+  }
+</style>
