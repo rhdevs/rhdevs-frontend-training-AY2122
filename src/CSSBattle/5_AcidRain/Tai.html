@@ -1,17 +1,7 @@
 <body>
-  <div class="rotated">
-    <div class="teardrop">
-      <div class="circle yellow"></div>
-    </div>
-    <div class="teardrop">
-      <div class="circle olive"></div>
-      <div class="square olive"></div>
-    </div>
-    <div class="teardrop">
-      <div class="circle yellow"></div>
-      <div class="square yellow"></div>
-    </div>
-  </div>
+  <div class="teardrop yellow"></div>
+  <div class="teardrop olive"></div>
+  <div class="circle yellow"></div>
 </body>
 
 <style>
@@ -24,42 +14,36 @@
     align-items: center;
     margin: none;
   }
-  .teardrop {
+  div {
     width: 120px;
     height: 120px;
-    position: relative;
-  }
-
-  .circle {
-    margin: 0;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
     position: absolute;
   }
-  .square {
+
+  .teardrop {
     position: relative;
-    left: 30px;
-    bottom: 12px;
-    width: 60px;
-    height: 60px;
-    transform: rotate(45deg);
+    border-radius: 60px 0 60px 60px;
+    z-index: 3;
   }
   .yellow {
     background: #f3ac3c;
   }
+  .yellow.teardrop {
+    bottom: -52px;
+    right: 8px;
+  }
   .olive {
     background: #998235;
+    z-index: 2;
+    top: -8px;
+    right: 68px;
   }
-  .rotated {
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: rotate(45deg);
-    position: absolute;
-    bottom: 38px;
-    left: 154px;
+  .circle {
+    border-radius: 50%;
+
+    z-index: 1;
+    top: 30px;
+    right: 80px;
   }
 </style>
 
