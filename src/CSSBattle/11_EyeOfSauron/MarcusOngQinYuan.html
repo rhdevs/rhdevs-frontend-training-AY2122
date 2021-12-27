@@ -1,0 +1,84 @@
+<div id="main">
+  <div id="left-wedge" class="wedge">
+    <div class="wedge-void"></div>
+  </div>
+
+  <div id="target" class="target">
+    <div class="target">
+      <div class="target"></div>
+    </div>
+  </div>
+
+  <div id="right-wedge" class="wedge">
+    <div class="wedge-void"></div>
+  </div>
+</div>
+<style>
+  #main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #191210;
+  }
+  .wedge {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: #eca03d;
+
+    display: flex;
+    justify-content: center;
+  }
+  .wedge-void {
+    width: 60px;
+    height: 30px;
+    background: #191210;
+  }
+  .target {
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #left-wedge {
+    top: 150px;
+    left: 50px;
+    border-radius: 0 0 50px 50px;
+  }
+  #left-wedge .wedge-void {
+    border-radius: 0 0 30px 30px;
+  }
+
+  #right-wedge {
+    top: 100px;
+    right: 50px;
+    border-radius: 50px 50px 0 0;
+  }
+  #right-wedge .wedge-void {
+    margin: auto auto 0;
+    border-radius: 30px 30px 0 0;
+  }
+
+  #target {
+    position: absolute;
+    top: 80px;
+    left: 130px;
+    width: 140px;
+    height: 140px;
+    background: #eca03d;
+  }
+  #target .target {
+    width: 100px;
+    height: 100px;
+    background: #191210;
+  }
+  #target .target .target {
+    width: 50px;
+    height: 50px;
+    background: #84271c;
+  }
+</style>
