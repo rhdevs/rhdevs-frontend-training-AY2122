@@ -143,7 +143,7 @@ const CSSBattleSection = (props: CSSBattleProps) => {
             <StyledFrame
               frameBorder="0"
               id={`frameId_${props.challengeName.split('_')[0]}`}
-              srcDoc={`<html><head><style>body{overflow:hidden}</style></head><body>${fileText}</body></html>`}
+              srcDoc={`<html><head><style>html {width: 400px; height: 300px; display: flex;}body{overflow:hidden; flex: 1; display: block}}</style></head><body>${fileText}</body></html>`}
             />
           )}
         </VisualContainer>
