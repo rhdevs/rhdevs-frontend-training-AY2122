@@ -1,0 +1,54 @@
+<div id="main">
+  <div id="rect"></div>
+  <div id="diam-1" class="diamond"></div>
+  <div id="diam-2" class="diamond"></div>
+  <div id="circ"></div>
+</div>
+<style>
+  div {
+    position: absolute;
+  }
+  #main {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222730;
+  }
+  #rect {
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: #4caab3;
+    z-index: 1;
+  }
+  .diamond {
+    transform: rotate(45deg);
+  }
+  #diam-1 {
+    top: 25px;
+    left: 75px;
+    width: 250px;
+    height: 250px;
+    background: #222730;
+    z-index: 2;
+  }
+  #diam-2 {
+    top: 75px;
+    left: 125px;
+    width: 150px;
+    height: 150px;
+    background: #4caab3;
+    z-index: 3;
+  }
+  #circ {
+    top: 125px;
+    left: 175px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #393e46;
+    z-index: 4;
+  }
+</style>
