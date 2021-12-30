@@ -1,0 +1,48 @@
+<div class="div1">
+  <div class="bottom-strip bs1"></div>
+  <div class="top-strip ts1"></div>
+</div>
+<div class="div2">
+  <div class="bottom-strip bs1"></div>
+  <div class="top-strip ts1"></div>
+</div>
+<div class="bottom-strip bs2"></div>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: row;
+    background: #1a4341;
+  }
+  .div1 {
+    position: relative;
+    margin: 31px -2.9px;
+  }
+  .div2 {
+    position: relative;
+    margin: 31px 153px;
+  }
+  .bottom-strip {
+    position: absolute;
+    width: 50px;
+    height: 220px;
+    border-radius: 50px 50px 0 0;
+    background: #f3ac3c;
+  }
+  .top-strip {
+    position: absolute;
+    width: 50px;
+    height: 210px;
+    border-radius: 0 0 50px 50px;
+    background: #998235;
+  }
+  .bs1 {
+    margin: 61px 20px;
+  }
+  .bs2 {
+    margin: 92px 317px;
+  }
+  .ts1 {
+    margin: -49px 95px;
+  }
+</style>

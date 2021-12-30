@@ -1,0 +1,60 @@
+<div class="left">
+  <div class="minisemic"></div>
+  <div class="semi-c1"></div>
+  <div class="semi-c2"></div>
+</div>
+<div class="middle">
+  <div class="semi-c1"></div>
+  <div class="semi-c2"></div>
+</div>
+<div class="right">
+  <div class="semi-c1"></div>
+  <div class="semi-c2"></div>
+  <div class="minisemic"></div>
+</div>
+
+<style>
+  body {
+    background: #F5D6B4; 
+  }
+  .left {
+    position: absolute;
+    margin: 0px 20px;
+  }
+  .middle {
+    position: absolute;
+    margin: 284px 284px;
+    transform: rotate(180deg);
+  }
+  .right {
+    position: absolute;
+    margin: 0px 364px;
+    transform: scaleX(-1);
+  }
+  .minisemic {
+    position: absolute;
+    background: #D86F45;
+    margin: 132px 43px;
+    width: 19px;
+    height: 12px;
+    border-radius: 65px 65px 0 0;
+  }
+  .semi-c1 {
+    position: absolute;
+    margin: 142px 42.5px;
+    transform: scaleY(-1);
+    width: 99px;
+    height: 50px;
+    border-radius: 65px 65px 0 0;
+    background: #D86F45;
+  }
+  .semi-c2 {
+    position: absolute;
+    margin: 142px 62px;
+    transform: scaleY(-1);
+    width: 60px;
+    height: 30px;
+    border-radius: 65px 65px 0 0;
+    background: #F5D6B4;
+  }
+</style>
