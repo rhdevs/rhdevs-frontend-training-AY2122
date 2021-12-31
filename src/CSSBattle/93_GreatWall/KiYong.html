@@ -1,0 +1,103 @@
+<div class="circle">
+  <div class="moon"></div>
+  <div class="water first-bottom-water"></div>
+  <div class="wave first-wave"></div>
+  <div class="water first-top-water"></div>
+  <div class="water second-bottom-water"></div>
+  <div class="wave second-wave"></div>
+  <div class="water second-top-water"></div>
+  <div class="water third-bottom-water"></div>
+  <div class="wave third-wave"></div>
+  <div class="water third-top-water"></div>
+</div>
+<style>
+  body {
+    background: #4F77FF;
+    position: relative;
+    z-index: 100;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    overflow: hidden;
+  }
+
+  .moon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F9E492;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  .water {
+    background: #F9E492;
+    position: absolute;
+    width: 100px;
+    height: 16px;
+  }
+
+  .first-bottom-water {
+    bottom: 62px;
+  }
+
+  .first-top-water {
+    width: 80px;
+    bottom: 75px;
+    right: 0px;
+  }
+
+  .first-bottom-water {
+    bottom: 62px;
+  }
+
+  .second-top-water {
+    width: 80px;
+    bottom: 49px;
+    right: 0px;
+  }
+
+  .second-bottom-water {
+    bottom: 36px;
+  }
+
+  .third-top-water {
+    width: 80px;
+    bottom: 23px;
+    right: 0px;
+  }
+
+  .third-bottom-water {
+    bottom: 10px;
+  }
+
+  .wave {
+    background: #D6B73F;
+    position: absolute;
+    transform: skew(0deg, -33deg);
+    width: 20px;
+    height: 16px;
+    left: 100px;
+  }
+
+  .first-wave {
+    bottom: 68px;
+  }
+
+  .second-wave {
+    bottom: 42px;
+  }
+
+  .third-wave {
+    bottom: 16px;
+  }
+</style>

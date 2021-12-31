@@ -1,0 +1,69 @@
+<div>
+  <div class="semi-c1"></div>
+  <div class="semi-c2"></div>
+</div>
+<div class="container">
+  <div class="circle big-c"></div>
+  <div class="circle medium-c"></div>
+  <div class="circle small-c"></div>
+</div>
+<div class="right">
+  <div class="semi-c1"></div>
+  <div class="semi-c2"></div>
+</div>
+
+<style>
+  body {
+    background: #191210;
+    position: relative;
+  }
+  .right {
+    margin: 284px 200px;
+    transform: scaleY(-1);
+    position: relative;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .semi-c1 {
+    position: absolute;
+    margin: 142px 42.5px;
+    transform: scaleY(-1);
+    width: 98.5px;
+    height: 50px;
+    border-radius: 65px 65px 0 0;
+    background: #eca03d;
+  }
+  .semi-c2 {
+    position: absolute;
+    margin: 142px 62px;
+    transform: scaleY(-1);
+    width: 60px;
+    height: 30px;
+    border-radius: 65px 65px 0 0;
+    background: #191210;
+  }
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .big-c {
+    margin: 72px;
+    width: 140px;
+    height: 140px;
+    background: #eca03d;
+  }
+  .medium-c {
+    margin: 92px;
+    width: 100px;
+    height: 100px;
+    background: #191210;
+  }
+  .small-c {
+    margin: 117px;
+    width: 50px;
+    height: 50px;
+    background: #84271c;
+  }
+</style>

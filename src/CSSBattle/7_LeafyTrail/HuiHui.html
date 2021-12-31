@@ -1,0 +1,38 @@
+<div class="leaf"></div>
+
+<style>
+  body {
+    background: #0b2429;
+    display: grid;
+    place-items: center;
+  }
+
+  .leaf {
+    width: 150px;
+    height: 150px;
+    background: #998235;
+    border-radius: 100px 0;
+    position: relative;
+  }
+
+  .leaf::before,
+  .leaf::after {
+    content: '';
+    width: 150px;
+    aspect-ratio: 1;
+    background: #1a4341;
+    border-radius: 100px 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .leaf::after {
+    left: -50px;
+    z-index: -1;
+  }
+
+  .leaf::before {
+    left: 50px;
+    background: #f3ac3c;
+  }
+</style>

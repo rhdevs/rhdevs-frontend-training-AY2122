@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="q1"></div>
+  <div class="q2"></div>
+  <div class="q3"></div>
+</div>
+
+<style>
+  body {
+    background: #e3516e;
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .q1,
+  .q2,
+  .q3 {
+    width: 100px;
+    height: 100px;
+    background: #51b5a9;
+    border-radius: 100% 0 0 0;
+  }
+
+  .q2 {
+    transform: rotate(90deg);
+    background: #fade8b;
+  }
+
+  .q3 {
+    transform: rotate(-90deg);
+    background: #f7f3d7;
+  }
+</style>
