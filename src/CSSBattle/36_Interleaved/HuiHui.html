@@ -1,0 +1,30 @@
+<div class="stick"></div>
+<div class="stick"></div>
+<div class="stick"></div>
+<div class="stick"></div>
+<div class="stick"></div>
+
+<style>
+  body {
+    background: #1a4341;
+    display: flex;
+    gap: 25px;
+    margin: 0 25px;
+  }
+
+  .stick {
+    width: 50px;
+    height: 300px;
+    border-radius: 40px;
+  }
+
+  .stick:nth-child(2n + 1) {
+    margin-top: 100px;
+    background: #f3ac3c;
+  }
+
+  .stick:nth-child(2n) {
+    margin-top: -100px;
+    background: #998235;
+  }
+</style>

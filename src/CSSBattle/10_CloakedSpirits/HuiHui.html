@@ -1,0 +1,47 @@
+<div class="a"></div>
+<div class="b"></div>
+<div class="a"></div>
+
+<style>
+  body {
+    background: #62306d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .a {
+    margin-top: 100px;
+    width: 60px;
+    height: 60px;
+    background: #e38f66;
+    border-radius: 50%;
+    border: 20px solid #aa445f;
+    position: relative;
+  }
+
+  .b {
+    width: 60px;
+    height: 60px;
+    background: #aa445f;
+    border-radius: 50%;
+    border: 20px solid #e38f66;
+  }
+
+  .a::after,
+  .b::after {
+    height: 200px;
+    width: 100px;
+    content: '';
+    background: #f7ec7d;
+    position: absolute;
+    z-index: -1;
+    margin-left: -20px;
+    top: 30px;
+  }
+
+  .b::after {
+    top: 100px;
+  }
+</style>
