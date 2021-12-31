@@ -1,0 +1,51 @@
+<div class="item">
+  <div class="circle light"></div>
+</div>
+<div class="item middle">
+  <div class="circle dark"></div>
+</div>
+<div class="item">
+  <div class="circle light"></div>
+</div>
+
+<style>
+  body {
+    background: #62306D;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    margin: 50px 50px 0 50px;
+  }
+
+  .item {
+    background: #F7EC7D;
+    height: 150px;
+    width: 100px;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+  }
+
+  .middle {
+    height: 250px;
+  }
+
+  .circle {
+    position: absolute;
+    top: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 20px solid;
+  }
+
+  .light {
+    background: #E38F66;
+    border-color: #AA445F;
+  }
+
+  .dark {
+    background: #AA445F;
+    border-color: #E38F66;
+  }
+</style>

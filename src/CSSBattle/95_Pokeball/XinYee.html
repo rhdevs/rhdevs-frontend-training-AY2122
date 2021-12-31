@@ -1,0 +1,60 @@
+<div class="overflow-ball">
+  <div class="inner"></div>
+  <div class="outer-top"></div>
+  <div class="outer-bottom"></div>
+  <div class="outer-ball"></div>
+  <div class="middle-ball"></div>
+</div>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    background: #6cb3a9;
+  }
+  .overflow-ball {
+    margin: 42px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    background: #6cb3a9;
+    overflow: hidden;
+  }
+  .inner {
+    position: absolute;
+    margin: 70px 10px;
+    width: 180px;
+    height: 70px;
+    background: #781728;
+  }
+  .outer-top {
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    background: #d25b70;
+  }
+  .outer-bottom {
+    position: absolute;
+    margin: 110px 0;
+    width: 200px;
+    height: 90px;
+    background: #ffffff;
+  }
+  .outer-ball {
+    position: absolute;
+    margin: 65px 65px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #781728;
+  }
+  .middle-ball {
+    position: absolute;
+    margin: 75px 75px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f6df96;
+  }
+</style>

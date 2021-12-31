@@ -1,0 +1,61 @@
+<div class="semi bottom"></div>
+<div class="large circle"></div>
+<div class="medium circle"></div>
+<div class="small circle"></div>
+<div class="semi top"></div>
+
+<style>
+  body {
+    background: #191210;
+    position: relative;
+    margin: 0;
+  }
+
+  .circle {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .large {
+    background: #ECA03D;
+    height: 140px;
+    width: 140px;
+  }
+
+  .medium {
+    background: #191210;
+    height: 100px;
+    width: 100px;
+  }
+
+  .small {
+    background: #84271C;
+    height: 50px;
+    width: 50px;
+  }
+
+  .semi {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    background: #191210;
+    border: 20px solid #ECA03D;
+  }
+
+  .bottom {
+    border-top: 0;
+    border-radius: 0 0 50px 50px;
+    top: 50%;
+    left: 50px;
+  }
+
+  .top {
+    border-bottom: 0;
+    border-radius: 50px 50px 0 0;
+    bottom: 50%;
+    right: 50px;
+  }
+</style>

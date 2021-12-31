@@ -1,0 +1,86 @@
+<div class="rectangle">
+<div class="upperrec">
+  <div></div>
+  <div class="yellowrec"></div>
+  <div class="yellowcirclecontainer">
+  	<div id="bottomyellow" class="yellowcircle"></div>
+  </div>
+  </div>
+<div id="bottom" class="upperrec">
+  <div class="yellowcirclecontainer">
+  <div class="yellowcircle"></div>
+  </div>
+  <div class="yellowrec"></div>
+  </div>
+<div class="upperrec">
+  <div></div>
+  <div class="yellowrec"></div>
+  <div class="yellowcirclecontainer">
+  <div id="bottomyellow" class="yellowcircle"></div>
+  </div>
+  </div>
+</div>
+
+
+<style>
+  body {
+    margin: 0;
+    background: #62306D;
+  }
+  .rectangle {
+    width: 300px;
+    height: 200px;
+    background: #62306D;
+    position: absolute;
+    display: grid; 
+  	grid-template-columns: 1fr 1fr 1fr; 
+  	grid-template-rows: 1fr; 
+  	gap: 0px 0px; 
+  	grid-template-areas: 
+    ". . ."; 
+    top: 50px;
+    left: 50px;
+  }
+  .upperrec {
+    display: grid; 
+ 	grid-template-columns: 1fr; 
+  	grid-template-rows: 2fr 1fr 1fr; 
+  	gap: 0px 0px; 
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  	grid-template-areas: 
+    "."
+    "."
+    "."; 
+  }
+  #bottom {
+    grid-template-rows: 1fr 1fr 2fr;
+  }
+  .yellowrec {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #F7EC7D;
+  }
+  .yellowcirclecontainer {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    overflow: true;
+  }
+  .yellowcircle {
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    background: #F7EC7D;
+    border-radius: 50%;
+  }
+  #bottomyellow {
+    bottom: 50px;
+  }
+</style>

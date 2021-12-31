@@ -1,0 +1,48 @@
+<div class="stick-container">
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+</div>
+<div class="semi-circle"></div>
+<div class="stem"></div>
+
+<style>
+  body {
+    background: #6592cf;
+    margin-top: 50px;
+    margin-left: 130px;
+  }
+
+  .stick-container {
+    display: flex;
+  }
+
+  .stick,
+  .stem {
+    width: 20px;
+    height: 110px;
+    background: #060f55;
+    border-radius: 50px;
+  }
+
+  .stick:nth-child(2n) {
+    background: #6592cf;
+  }
+
+  .semi-circle {
+    width: 140px;
+    height: 100px;
+    background: #060f55;
+    z-index: -1;
+    margin-top: -10px;
+    border-radius: 0 0 120px 120px;
+  }
+
+  .stem {
+    margin: -10px 0 0 60px;
+  }
+</style>

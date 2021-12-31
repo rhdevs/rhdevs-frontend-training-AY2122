@@ -1,0 +1,87 @@
+<div class="circle" id="bigCircle">
+  <div class="circle" id="smallCircle"></div>
+  <div class="rectangle" id="rectLeftTop"></div>
+  <div class="rectangle" id="rectLeftMiddle"></div>
+  <div class="rectangle" id="rectLeftBottom"></div>
+  <div class="rectangle" id="rectRightTop"></div>
+  <div class="rectangle" id="rectRightMiddle"></div>
+  <div class="rectangle" id="rectrightBottom"></div>
+  <div class="parellelogram" id="pllogramTop"></div>
+  <div class="parellelogram" id="pllogramMiddle"></div>
+  <div class="parellelogram" id="pllogramBottom"></div>
+</div>
+
+<style>
+  body {
+    background: #4f77ff;
+    position: relative;
+  }
+  div {
+    overflow: hidden;
+  }
+  .circle {
+    position: absolute;
+    border-radius: 100%;
+  }
+  #bigCircle {
+    background: #191919;
+    top: 42px;
+    left: 92px;
+    height: 200px;
+    width: 200px;
+  }
+  #smallCircle {
+    background: #f9e492;
+    top: 40px;
+    left: 40px;
+    height: 40px;
+    width: 40px;
+  }
+  .rectangle {
+    position: absolute;
+    background: #f9e492;
+    height: 16px;
+    width: 150px;
+  }
+  #rectLeftTop {
+    top: 122px;
+    right: 100px;
+  }
+  #rectLeftMiddle {
+    top: 148px;
+    right: 100px;
+  }
+  #rectLeftBottom {
+    top: 174px;
+    right: 100px;
+  }
+  #rectRightTop {
+    top: 109px;
+    left: 120px;
+  }
+  #rectRightMiddle {
+    top: 135px;
+    left: 120px;
+  }
+  #rectrightBottom {
+    top: 161px;
+    left: 120px;
+  }
+  .parellelogram {
+    position: absolute;
+    background: #d6b73f;
+    height: 16px;
+    width: 20px;
+    transform: skewY(-33deg);
+    left: 100px;
+  }
+  #pllogramTop {
+    top: 116px;
+  }
+  #pllogramMiddle {
+    top: 142px;
+  }
+  #pllogramBottom {
+    top: 168px;
+  }
+</style>

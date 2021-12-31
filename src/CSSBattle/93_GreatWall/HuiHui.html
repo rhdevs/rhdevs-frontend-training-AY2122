@@ -1,0 +1,60 @@
+<div class="big-circle">
+  <div class="moon"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+
+<style>
+  body {
+    display: grid;
+    place-items: center;
+    background: #4f77ff;
+  }
+
+  .big-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #191919;
+    overflow: hidden;
+  }
+
+  .moon {
+    width: 40px;
+    aspect-ratio: 1;
+    background: #f9e492;
+    border-radius: 50%;
+    margin: 2.5rem 2.5rem 2.6rem;
+  }
+
+  .line {
+    width: 100px;
+    height: 16px;
+    background: #f9e492;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .line::before {
+    content: '';
+    width: 20px;
+    height: 16px;
+    transform: skewY(-33deg);
+    position: absolute;
+    background: #d6b73f;
+    right: -20px;
+    top: -7px;
+  }
+
+  .line::after {
+    content: '';
+    width: 100px;
+    height: 16px;
+    background: #f9e492;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -13px;
+    right: -120px;
+  }
+</style>
