@@ -1,0 +1,58 @@
+<div class="spikes">
+  <div class="shape dark"></div>
+  <div class="shape light"></div>
+  <div class="shape dark"></div>
+  <div class="shape light"></div>
+  <div class="shape dark"></div>
+  <div class="shape light"></div>
+  <div class="shape dark"></div>
+</div>
+<div class="neck"></div>
+<div class="handle"></div>
+
+<style>
+  body {
+    background: #6592CF;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spikes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .shape {
+    height: 110px;
+    width: 20px;
+  }
+
+  .dark {
+    background: #060F55;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .light {
+    background: #6592CF;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .neck {
+    background: #060F55;
+    margin-top: -20px;
+    width: 140px;
+    height: 110px;
+    border-radius: 0 0 70px 70px;
+    z-index: -1;
+  }
+
+  .handle {
+    width: 20px;
+    height: 60px;
+    margin-top: -5px;
+    background: #060F55;
+  }
+</style>

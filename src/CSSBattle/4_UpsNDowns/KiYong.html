@@ -1,0 +1,29 @@
+<div class="shape bottom"></div>
+<div class="shape top"></div>
+<div class="shape bottom"></div>
+
+<style>
+  body {
+    margin: 50px;
+    background: #62306D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .shape {
+    width: 100%;
+    height: 50%;
+    background: #F7EC7D;
+  }
+
+  .top {
+    transform: translateY(-50%);
+    border-radius: 50% 50% 0 0;
+  }
+
+  .bottom {
+    border-radius: 0 0 50% 50%;
+    transform: translateY(50%);
+  }
+</style>
