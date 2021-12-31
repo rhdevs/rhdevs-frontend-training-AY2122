@@ -1,0 +1,74 @@
+<body>
+  <div class="centre">
+    <div class="yellowcircle"></div>
+    <div class="combi">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="combi2">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="combi3">
+      <div class="line shaded"></div>
+      <div class="line shaded"></div>
+      <div class="line shaded"></div>
+    </div>
+  </div>
+</body>
+<style>
+  body {
+    background: #4f77ff;
+    margin: 0px 0px;
+  }
+  .centre {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background: #191919;
+    position: relative;
+    margin: 50px 100px;
+    border: transparent;
+    overflow: hidden;
+  }
+  .yellowcircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #f9e492;
+    position: absolute;
+    margin: 40px 40px;
+  }
+  .combi {
+    display: grid;
+    gap: 10px;
+    margin: 122px -10px;
+    position: absolute;
+  }
+  .combi2 {
+    display: grid;
+    gap: 10px;
+    margin: 109px 120px;
+    position: absolute;
+  }
+  .combi3 {
+    display: grid;
+    gap: 10px;
+    margin: 115px 100px;
+    position: absolute;
+  }
+  .line {
+    width: 110px;
+    height: 16px;
+    background: #f9e492;
+    z-index: 600;
+  }
+  .shaded {
+    background: #d6b73f;
+    width: 22px;
+    transform: skewY(-32deg);
+    z-index: 500;
+  }
+</style>
