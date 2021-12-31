@@ -1,0 +1,47 @@
+<div class="center"></div>
+<div class="square"></div>
+<div class="top half"></div>
+<div class="bottom half"></div>
+<style>
+  body {
+    width: 400px;
+    height: 300px;
+    background: #6cb3a9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div {
+    position: absolute;
+  }
+  .center {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #f6df96;
+    z-index: 3;
+    border: solid 10px #781728;
+  }
+  .square {
+    height: 20px;
+    width: 180px;
+    background: #781728;
+    z-index: 2;
+  }
+  .half {
+    height: 200px;
+    width: 200px;
+    background: #d25b70;
+    border-radius: 110px 110px 0% 0%;
+    z-index: 1;
+    clip-path: inset(0 0 55% 0);
+  }
+  .top.half {
+    top: 50px;
+  }
+  .bottom.half {
+    transform: rotate(180deg);
+    background: #ffffff;
+  }
+</style>

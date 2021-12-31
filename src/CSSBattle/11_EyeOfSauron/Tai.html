@@ -1,0 +1,65 @@
+<div class="inner circle"></div>
+<div class="outer circle"></div>
+<div class="left frame circle"></div>
+<div class="right frame circle"></div>
+<div class="left cut"></div>
+<div class="right cut"></div>
+<style>
+  body {
+    width: 400px;
+    height: 300px;
+    background: #191210;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div {
+    background: #eca03d;
+    position: absolute;
+  }
+  .circle {
+    border-radius: 50%;
+  }
+  .inner.circle {
+    width: 50px;
+    height: 50px;
+    background: #84271c;
+    border: 25px solid #191210;
+    z-index: 3;
+  }
+  .outer.circle {
+    width: 140px;
+    height: 140px;
+    z-index: 2;
+  }
+  .frame.circle {
+    width: 60px;
+    height: 60px;
+
+    border: 20px solid #eca03d;
+    background: #191210;
+    z-index: 1;
+  }
+  .left.frame.circle {
+    left: 50px;
+  }
+  .right.frame.circle {
+    left: 250px;
+  }
+  .cut {
+    width: 100px;
+    height: 80px;
+
+    background: #191210;
+    z-index: 1;
+  }
+  .left.cut {
+    left: 50px;
+    top: 70px;
+  }
+  .right.cut {
+    left: 250px;
+    top: 150px;
+  }
+</style>
