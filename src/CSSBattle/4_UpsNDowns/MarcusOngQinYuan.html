@@ -1,0 +1,68 @@
+<div id="main">
+  <div id="inner">
+    <div id="s1">
+      <div class="circ"></div>
+      <div id="sq-down" class="sq"></div>
+    </div>
+    <div id="s2">
+      <div class="circ"></div>
+      <div id="sq-up" class="sq"></div>
+    </div>
+    <div id="s3">
+      <div class="circ"></div>
+      <div id="sq-up" class="sq"></div>
+    </div>
+  </div>
+</div>
+<style>
+  #main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #62306d;
+  }
+  #inner {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 300px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: auto;
+  }
+  #s1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #s2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  #s3 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .circ {
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: #f7ec7d;
+  }
+  .sq {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: #f7ec7d;
+  }
+  #sq-up {
+    top: 100px;
+  }
+  #sq-down {
+    top: 50px;
+  }
+</style>
