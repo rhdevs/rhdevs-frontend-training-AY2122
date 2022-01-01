@@ -1,0 +1,70 @@
+<div id='pc'>
+    <div class='point'></div>
+    <div class='cave'></div>
+    <div class='point'></div>
+    <div class='cave'></div>
+    <div class='point'></div>
+    <div class='cave'></div>
+    <div class='point'></div>
+</div>
+<div id='hacky-sltn'></div>
+<div id='bot'></div>
+<div id='stem'></div>
+<style>
+    #hacky-sltn {
+        height: 20px;
+        width: 140px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #060F55;
+    }
+
+    .point {
+        height: 110px;
+        width: 20px;
+        border-radius: 10px 10px 0 0;
+        background: #060F55;
+    }
+
+    .cave {
+        height: 110px;
+        width: 20px;
+        border-radius: 0 0 10px 10px;
+        background: #6592CF;
+        z-index: 1;
+    }
+
+    #pc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #stem {
+        width: 20px;
+        height: 50px;
+        background: #060F55;
+    }
+
+    #bot {
+        width: 140px;
+        height: 90px;
+        border-radius: 0 0 70px 70px;
+        background: #060F55
+    }
+
+    body {
+        background: #6592CF;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+</style>

@@ -1,0 +1,73 @@
+<div class='c'>
+    <div class='sc'>
+        <div class='ssc'></div>
+    </div>
+    <div class='s'></div>
+</div>
+<div class='c'>
+    <div class='sc' id='oc'>
+        <div class='ssc' id='ooc'></div>
+    </div>
+    <div class='s' id='t'></div>
+</div>
+<div class='c'>
+    <div class='sc'>
+        <div class='ssc'></div>
+    </div>
+    <div class='s'></div>
+</div>
+<style>
+    #oc {
+        top: -100px;
+        background: #E38F66;
+    }
+    #ooc {
+        background: #AA445F;
+    }
+    .sc {
+        width: 100px;
+        height: 100px;
+        background: #AA445F;
+        position: absolute;
+        margin: auto;
+        top: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ssc {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #E38F66;
+    }
+    #t {
+        height: 200px;
+    }
+    .s {
+        background: #F7EC7D;
+        height: 100px;
+        z-index: 0;
+    }
+    .c {
+        width: 100px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+    }
+    body {
+        background: #62306D;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+</style>
