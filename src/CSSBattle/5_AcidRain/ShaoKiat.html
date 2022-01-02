@@ -1,0 +1,42 @@
+<body>
+  <div class="inner circle"></div>
+  <div class="middle tear"></div>
+  <div class="outer tear"></div>
+</body>
+
+<style>
+  body {
+    margin: 30px 80px;
+    background: #0b2429;
+    position: relative;
+  }
+  .circle {
+    background: #f7ec7d;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  .tear {
+    background: #f7ec7d;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50% 0 50% 50%;
+  }
+  .inner {
+    background: #f3ac3c;
+    top: 0;
+    right: 0;
+  }
+  .middle {
+    background: #998235;
+    top: 60px;
+    right: 60px;
+  }
+  .outer {
+    background: #f3ac3c;
+    top: 120px;
+    right: 120px;
+  }
+</style>
