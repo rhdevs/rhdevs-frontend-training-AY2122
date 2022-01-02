@@ -1,0 +1,45 @@
+<div class="curve l"></div>
+<div class="curve m"></div>
+<div class="curve r"></div>
+<div class="end left"></div>
+<div class="end right"></div>
+<style>
+  body {
+    background: #f5d6b4;
+  }
+  div {
+    position: absolute;
+  }
+  .curve {
+    width: 60px;
+    height: 30px;
+    border: 20px solid #d86f45;
+  }
+  .l {
+    border-radius: 0 0 60px 60px;
+    border-top: 0;
+    transform: translate(62px, 142px);
+  }
+  .m {
+    border-radius: 60px 60px 0 0;
+    border-bottom: 0;
+    transform: translate(142px, 92px);
+  }
+  .r {
+    border-radius: 0 0 60px 60px;
+    border-top: 0;
+    transform: translate(222px, 142px);
+  }
+  .end {
+    width: 20px;
+    height: 10px;
+    border-radius: 60px 60px 0 0;
+    background: #d86f45;
+  }
+  .left {
+    transform: translate(62px, 132px);
+  }
+  .right {
+    transform: translate(302px, 132px);
+  }
+</style>

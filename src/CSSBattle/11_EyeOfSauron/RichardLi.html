@@ -1,0 +1,58 @@
+<div class="big"></div>
+<div class="small"></div>
+<div class="semi bot"></div>
+<div class="black l"></div>
+<div class="semi top"></div>
+<div class="black r"></div>
+
+<style>
+  div {
+    position: absolute;
+  }
+  body {
+    background: #191210;
+  }
+  .big {
+    width: 100px;
+    height: 100px;
+    border: 20px solid #eca03d;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #84271c;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .semi {
+    background: #eca03d;
+    height: 50px;
+    width: 100px;
+  }
+  .top {
+    border-radius: 50px 50px 0 0;
+    transform: translate(242px, 92px);
+  }
+  .bot {
+    border-radius: 0 0 50px 50px;
+    transform: translate(42px, 142px);
+  }
+  .black {
+    width: 60px;
+    height: 60px;
+    background: #191210;
+    border-radius: 50%;
+  }
+  .l {
+    transform: translate(62px, 112px);
+  }
+  .r {
+    transform: translate(262px, 112px);
+  }
+</style>
