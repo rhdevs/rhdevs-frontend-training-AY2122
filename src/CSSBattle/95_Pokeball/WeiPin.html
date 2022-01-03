@@ -1,0 +1,59 @@
+<div class='cir'></div>
+<div class='inside'></div>
+<div class='red'></div>
+<div class='white'></div>
+<div class='button'></div>
+
+<style>
+  body {
+    background: #6CB3A9;
+    margin: 0;
+   	display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inside {
+    width: 180px;
+    height: 180px;
+    background: #781728;
+    border-radius: 100%;
+  }
+  .red {
+    background: #D25B70;
+    display: inline-block;
+    border-radius: 100px 100px 0 0;
+    transform: scaleY(0.89) scaleX(0.98);
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    margin: 0 0 109 0;
+  }
+  .white {
+    background: #FFFFFF;
+    display: inline-block;
+    border-radius: 0 0 100px 100px;
+    transform: scaleY(0.89) scaleX(0.98);
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    margin: 0 0 -107 0;
+  }
+  .cir {
+    position: absolute;
+    background: #781728;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin: 0;
+    z-index: 99;
+  }
+  .button {
+    position: absolute;
+    background: #F6DF96;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 0;
+    z-index: 100;
+  }
+</style>
