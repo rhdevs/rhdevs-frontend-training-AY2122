@@ -1,0 +1,72 @@
+<body>
+  <div class="outersemi" id="a">
+    <div class="innersemi"></div>
+  </div>
+  <div class="outersemi" id="b">
+    <div class="innersemi"></div>
+  </div>
+  <div class="outersemi" id="c">
+    <div class="innersemi"></div>
+  </div>
+  <div class="smallsemi" id="x"></div>
+  <div class="smallsemi" id="y"></div>
+</body>
+
+<style>
+  body {
+    background-color: #f5d6b4;
+  }
+
+  .outersemi {
+    width: 100px;
+    height: 50px;
+    background-color: #d86f45;
+    border-radius: 0 0 100px 100px;
+    position: absolute;
+  }
+
+  .innersemi {
+    width: 60px;
+    height: 30px;
+    background-color: #f5d6b4;
+    border-radius: 0 0 100px 100px;
+    position: absolute;
+    margin-left: 20px;
+  }
+
+  #a {
+    margin-top: 142px;
+    margin-left: 62px;
+  }
+
+  #b {
+    transform: rotate(180deg);
+    margin-top: 92px;
+    margin-left: 142px;
+  }
+
+  #c {
+    margin-top: 142px;
+    margin-left: 222px;
+  }
+
+  .smallsemi {
+    width: 20px;
+    height: 10px;
+    background-color: #d86f45;
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+  }
+
+  #x {
+    margin-top: 132px;
+    margin-left: 62px;
+  }
+
+  #y {
+    margin-top: 132px;
+    margin-left: 302px;
+  }
+</style>
+
+<!-- IMPORTANT: remove the comments before submitting -->

@@ -1,0 +1,48 @@
+<div class="up"></div>
+<div class="down"></div>
+<div class="up"></div>
+
+<style>
+  body {
+    background: #f5d6b4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .down,
+  .up {
+    margin-top: -50px;
+    width: 60px;
+    height: 30px;
+    border-radius: 100px 100px 0 0;
+    border: 20px solid #d86f45;
+    border-bottom: 0;
+    position: relative;
+  }
+
+  .up {
+    margin: 50px -20px 0;
+    border-radius: 0 0 100px 100px;
+    border: 20px solid #d86f45;
+    border-top: 0;
+    position: relative;
+  }
+
+  .up::before,
+  .up::after {
+    content: '';
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    background: #d86f45;
+    top: -10px;
+    left: -20px;
+  }
+
+  .up::after {
+    left: 100%;
+  }
+</style>

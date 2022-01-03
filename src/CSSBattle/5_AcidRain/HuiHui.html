@@ -1,0 +1,41 @@
+<div class="a"></div>
+
+<style>
+  body {
+    background: #0b2429;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .a {
+    margin-top: 65px;
+    width: 120px;
+    height: 120px;
+    background: #998235;
+    border-radius: 50% 0 50% 50%;
+    position: relative;
+  }
+
+  .a::after,
+  .a::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    background: #f3ac3c;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .a::after {
+    margin-top: 60px;
+    left: -60px;
+    border-top-right-radius: 0;
+  }
+
+  .a::before {
+    top: -60px;
+    right: -60px;
+    z-index: -1;
+  }
+</style>

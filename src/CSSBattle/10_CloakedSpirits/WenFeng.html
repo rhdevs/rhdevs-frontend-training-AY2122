@@ -1,0 +1,84 @@
+<div class="mask"></div>
+<div class="mask" id="center"></div>
+<div class="mask" id="left"></div>
+<div class="leftcircle"></div>
+<div class="leftcircleinner"></div>
+<div class="rightcircle"></div>
+<div class="rightcircleinner"></div>
+<div class="innercircle"></div>
+<div class="circle"></div>
+<style>
+  body {
+    margin: 0;
+    background: #62306d;
+  }
+  .leftcircle {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    background: #aa445f;
+    border-radius: 50%;
+  }
+  .leftcircleinner {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    left: 70px;
+    bottom: 70px;
+    background: #e38f66;
+    border-radius: 50%;
+  }
+  .rightcircle {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background: #aa445f;
+    border-radius: 50%;
+  }
+  .rightcircleinner {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 70px;
+    bottom: 70px;
+    background: #e38f66;
+    border-radius: 50%;
+  }
+  .mask {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 50px;
+    bottom: 0px;
+    background: #f7ec7d;
+  }
+  #left {
+    right: 250px;
+  }
+  #center {
+    right: 150px;
+    height: 200px;
+  }
+  .innercircle {
+    width: 100px;
+    height: 100px;
+    background: #e38f66;
+    position: fixed;
+    left: 150px;
+    top: 50px;
+    border-radius: 50%;
+  }
+  .circle {
+    width: 60px;
+    height: 60px;
+    background: #aa445f;
+    position: fixed;
+    left: 170px;
+    top: 70px;
+    border-radius: 50%;
+  }
+</style>

@@ -1,0 +1,50 @@
+<div class='c'>
+    <div class='a' id='a'></div>
+    <div class='a' id='b'></div>
+</div>
+<div class='c'>
+    <div class='a' id='c'></div>
+    <div class='a' id='d'></div>
+</div>
+
+<style>
+    .c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .a {
+        width: 100px;
+        height: 100px;
+        background: #F7F3D7;
+    }
+
+    #a {
+        border-radius: 100% 0 0 0;
+        background: #51B5A9
+    }
+
+    #b {
+        border-radius: 0 100% 0 0;
+        background: #FADE8B
+    }
+
+    #c {
+        border-radius: 0 0 0 100%;
+    }
+
+    #d {
+        background: #E3516E;
+    }
+
+    body {
+        background: #E3516E;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

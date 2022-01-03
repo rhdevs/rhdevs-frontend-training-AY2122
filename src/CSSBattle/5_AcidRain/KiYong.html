@@ -1,0 +1,38 @@
+<div class="shape bottom"></div>
+<div class="shape middle"></div>
+<div class="shape top"></div>
+
+<style>
+  body {
+    margin: 30px 80px;
+    background: #0B2429;
+    position: relative;
+  }
+
+  .shape {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    background: #F3AC3C;
+  }
+
+  .top {
+    bottom: 0;
+    border-radius: 50% 0 50% 50%;
+  }
+
+
+  .middle {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #998235;
+    border-radius: 50% 0 50% 50%;
+  }
+
+  .bottom {
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+  }
+</style>

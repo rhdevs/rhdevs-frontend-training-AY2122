@@ -1,0 +1,33 @@
+<div>
+  <div class="circle" id="topRight"></div>
+  <div class="circle" id="topLeft"></div>
+  <div class="circle" id="bottomLeft"></div>
+</div>
+<style>
+  body {
+    background: #e3516e;
+  }
+  .circle {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+  }
+  #topRight {
+    left: 100px;
+    top: 50px;
+    border-radius: 100% 0 0 0;
+    background: #51b5a9;
+  }
+  #topLeft {
+    right: 100px;
+    top: 50px;
+    border-radius: 0 100% 0 0;
+    background: #fade8b;
+  }
+  #bottomLeft {
+    left: 100px;
+    bottom: 50px;
+    border-radius: 0 0 0 100%;
+    background: #f7f3d7;
+  }
+</style>

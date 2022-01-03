@@ -1,0 +1,67 @@
+<body>
+  <div class="semi-circle-outer left">
+    <div class="semi-circle-inner"></div>
+    <div class="left-tip"></div>
+  </div>
+  <div class="semi-circle-outer middle">
+    <div class="semi-circle-inner"></div>
+  </div>
+  <div class="semi-circle-outer right">
+    <div class="right-tip"></div>
+    <div class="semi-circle-inner"></div>
+  </div>
+</body>
+
+<style>
+  body {
+    margin: 0;
+    background: #f5d6b4;
+    position: relative;
+  }
+  .semi-circle-outer {
+    position: absolute;
+    background: #d86f45;
+    width: 100px;
+    height: 50px;
+    border-radius: 0 0 60px 60px;
+  }
+  .semi-circle-inner {
+    position: absolute;
+    background: #f5d6b4;
+    width: 60;
+    height: 30px;
+    border-radius: 0 0 30px 30px;
+    left: 20px;
+  }
+  .left {
+    left: 70px;
+    top: 150px;
+  }
+  .middle {
+    left: 150px;
+    top: 100px;
+    transform: rotate(180deg);
+  }
+  .right {
+    left: 230px;
+    top: 150px;
+  }
+  .left-tip {
+    position: absolute;
+    background: #d86f45;
+    width: 20px;
+    height: 10px;
+    left: 0;
+    top: -10;
+    border-radius: 10px 10px 0 0;
+  }
+  .right-tip {
+    position: absolute;
+    background: #d86f45;
+    width: 20px;
+    height: 10px;
+    left: 80;
+    top: -10;
+    border-radius: 10px 10px 0 0;
+  }
+</style>

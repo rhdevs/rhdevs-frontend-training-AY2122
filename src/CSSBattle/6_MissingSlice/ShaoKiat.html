@@ -1,0 +1,36 @@
+<body>
+  <div class="top-left quadrant"></div>
+  <div class="top-right quadrant"></div>
+  <div class="bottom-left quadrant"></div>
+</body>
+
+<style>
+  body {
+    margin: 50px 100px;
+    background: #e3516e;
+    position: relative;
+  }
+  .quadrant {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  .top-left {
+    background: #51b5a9;
+    border-radius: 100% 0 0;
+    top: 0;
+    left: 0;
+  }
+  .top-right {
+    background: #fade8b;
+    border-radius: 0 100% 0 0;
+    top: 0;
+    right: 0;
+  }
+  .bottom-left {
+    background: #f7f3d7;
+    border-radius: 0 0 0 100%;
+    top: 100px;
+    left: 0;
+  }
+</style>

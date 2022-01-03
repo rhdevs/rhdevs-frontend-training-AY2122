@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+  <div class="stick"></div>
+</div>
+<div class="base"></div>
+<div class="stick stem"></div>
+
+<style>
+  body {
+    margin: 50px 0 0 130px;
+    background: #6592cf;
+  }
+  .container {
+    display: flex;
+  }
+  .stick {
+    background: #060f55;
+    height: 110px;
+    width: 20px;
+    border-radius: 10px;
+  }
+  .stick:nth-child(2n) {
+    background: #6592cf;
+  }
+  .base {
+    background: #060f55;
+    width: 140;
+    height: 100;
+    border-radius: 0 0 70px 70px;
+    z-index: -1;
+    margin-top: -10;
+  }
+  .stem {
+    background: #060f55;
+    margin: -10px 0 0 60px;
+  }
+</style>

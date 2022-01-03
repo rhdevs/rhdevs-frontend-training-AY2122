@@ -1,0 +1,54 @@
+<div class="inner"></div>
+<div class="outer"></div>
+<div class="yellow"></div>
+
+<style>
+  body {
+    background: #6cb3a9;
+    margin: 0;
+  }
+  .outer {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background: linear-gradient(
+      to bottom,
+      #d25b70 0%,
+      #d25b70 45%,
+      transparent 45%,
+      transparent 55%,
+      #ffffff 55%,
+      #ffffff 100%
+    );
+    margin: 50px 100px;
+    position: absolute;
+    z-index: 850px;
+  }
+  .inner {
+    width: 180px;
+    height: 180px;
+    border-radius: 180px;
+    background: linear-gradient(
+      to bottom,
+      #d25b70 0%,
+      #d25b70 44%,
+      #781728 44%,
+      #781728 56%,
+      #ffffff 55%,
+      #ffffff 100%
+    );
+    margin: 60px 110px;
+    position: absolute;
+    z-index: 880px;
+  }
+  .yellow {
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    background: #f6df96;
+    border: 10px solid #781728;
+    margin: 115px 165px;
+    position: absolute;
+    z-index: 880px;
+  }
+</style>

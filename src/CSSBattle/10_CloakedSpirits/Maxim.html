@@ -1,0 +1,70 @@
+<body>
+  <div class="box"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="circle invertbig">
+    <div class="inner1 invertsmall"></div>
+  </div>
+  <div class="circle">
+    <div class="inner1"></div>
+  </div>
+  <div class="circle invertbig">
+    <div class="inner1 invertsmall"></div>
+  </div>
+</body>
+
+<style>
+  body {
+    background: #62306d;
+    position: relative;
+    margin: 50px 50px;
+    display: flex;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #f7ec7d;
+    margin: 150px 0px;
+    z-index: 900;
+  }
+  .box2 {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    background: #f7ec7d;
+    margin: 50px 100px;
+    z-index: 900;
+  }
+  .box3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #f7ec7d;
+    margin: 150px 200px;
+    z-index: 900;
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #e38f66;
+    z-index: 950;
+    position: relative;
+  }
+  .inner1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: #aa445f;
+    position: relative;
+    margin: 20%;
+  }
+  .invertbig {
+    background: #aa445f;
+    margin: 100px 0px;
+  }
+  .invertsmall {
+    background: #e38f66;
+  }
+</style>

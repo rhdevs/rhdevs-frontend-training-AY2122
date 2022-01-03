@@ -1,0 +1,82 @@
+<div class="bgRect">
+  <div class="rectCover"></div>
+  <div class="rectCover right"></div>
+ <div class="outerCircle red first">
+	<div class="circle orange"></div>
+ </div>
+ <div class="outerCircle orange">
+	<div class="circle red"></div>
+ </div>
+ <div class="outerCircle red third">
+	<div class="circle orange"></div>
+ </div> 
+</div>
+
+<style>
+  body {
+    background: #62306D;
+  }
+  div {
+  }
+
+  .bgRect {
+    bottom: 0;
+    position: fixed;
+    left:12.5%;
+    width: 75%;
+    height: 65%;
+    background: #F7EC7D;
+  }
+  .rectCover {
+    background: #62306D;
+    width: 100px;
+    height: 150px;
+    bottom: 100px;
+    position: fixed;
+  }
+  .right {
+    left: 250px;
+  }
+  .square {
+    width: 150px;
+    height: 150px;
+    background: #4CAAB3;
+    transform: rotate(45deg);
+    left: 125;
+    top: 75;
+    position: fixed;
+  }
+  .outerCircle {
+    width: 100px;
+    height: 100px;
+    background: #222730;
+    border-radius: 50%;
+    left: 150;
+    top: 50;
+    position: fixed;
+  }
+  .circle {
+    border-radius: 50%;
+    height: 60;
+    width: 60;
+    top: 20;
+    background: #393E46;
+    position: relative;
+    left: 20;
+  }
+  .red {
+    background: #AA445F;
+  }
+  .orange {
+    background: #E38F66;
+  }
+  .first {
+    top: 150px;
+    left: 50px;
+  }
+  .third {
+    top: 150px;
+    left: 250px;
+  }
+
+</style>

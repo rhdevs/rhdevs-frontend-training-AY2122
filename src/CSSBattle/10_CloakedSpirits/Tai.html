@@ -1,0 +1,52 @@
+<div class="circle one left"></div>
+<div class="circle two"></div>
+<div class="circle one right"></div>
+<div class="base side"></div>
+<div class="base mid"></div>
+
+<style>
+  body {
+    width: 400px;
+    height: 300px;
+    background: #62306d;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+  }
+  div {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+  .circle {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    z-index: 1;
+  }
+  .circle.one {
+    border: solid 20px #aa445f;
+    background: #e38f66;
+    bottom: 50px;
+    left: 50px;
+  }
+  .circle.one.right {
+    left: 250px;
+  }
+  .circle.two {
+    border: solid 20px #e38f66;
+    background: #aa445f;
+    top: 50px;
+  }
+  .base {
+    width: 300px;
+    height: 100px;
+    background: #f7ec7d;
+    position: absolute;
+    bottom: 0;
+  }
+  .base.mid {
+    height: 200px;
+    width: 100px;
+  }
+</style>

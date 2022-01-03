@@ -1,0 +1,65 @@
+<div class="borderCircle">
+  <div class="semiCircle" id="topSemiCircle"></div>
+  <div class="semiCircle" id="bottomSemiCircle"></div>
+</div>
+<div class="maroon" id="maroonRect"></div>
+<div class="maroon" id="maroonCircle"></div>
+<div class="centreCircle"></div>
+<style>
+  body {
+    background: #6cb3a9;
+  }
+  div {
+    overflow: hidden;
+  }
+  .centreCircle {
+    position: fixed;
+    background: #f6df96;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    top: 125px;
+    left: 175px;
+  }
+  .maroon {
+    position: fixed;
+    background: #781728;
+  }
+  #maroonRect {
+    width: 180px;
+    height: 20px;
+    left: 110px;
+    top: 140px;
+  }
+  #maroonCircle {
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    top: 115px;
+    left: 165px;
+  }
+  .borderCircle {
+    position: absolute;
+    background: #6cb3a9;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    top: 50px;
+    left: 100px;
+  }
+  .semiCircle {
+    position: absolute;
+    height: 90px;
+    width: 200px;
+  }
+  #topSemiCircle {
+    background: #d25b70;
+    border-radius: 100px 100px 0 0;
+  }
+  #bottomSemiCircle {
+    background: #ffffff;
+    border-radius: 0 0 100px 100px;
+    bottom: 0px;
+  }
+</style>

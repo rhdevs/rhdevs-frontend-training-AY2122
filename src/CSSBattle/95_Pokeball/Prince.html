@@ -1,0 +1,36 @@
+<div class="box"></div>
+<div class="centercircle"></div>
+<div class="bigcircle"></div>
+<style>
+  .box {
+    width: 180px;
+    height: 150px;
+    background: #781728;
+    position: absolute;
+    border-radius: 50px;
+    left: 110px;
+    top: 75px;
+  }
+  .centercircle {
+    z-index: 2;
+    width: 75px;
+    height: 75px;
+    background: radial-gradient(25px circle at center, #f6df96 25px, #781728 0 35px, transparent);
+    border-radius: 50%;
+    position: absolute;
+    top: 112.5px;
+    left: 162.5px;
+  }
+  .bigcircle {
+    background: linear-gradient(to bottom, #d25b70 90px, transparent 0 110px, #ffffff 0);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 50px;
+    left: 100px;
+    position: absolute;
+  }
+  body {
+    background: #6cb3a9;
+  }
+</style>

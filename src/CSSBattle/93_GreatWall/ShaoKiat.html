@@ -1,0 +1,67 @@
+<div class="black-circle">
+  <div class="yellow-circle"></div>
+  <div class="line left" id="line1"></div>
+  <div class="line middle" id="line1"></div>
+  <div class="line right" id="line1"></div>
+  <div class="line left" id="line2"></div>
+  <div class="line middle" id="line2"></div>
+  <div class="line right" id="line2"></div>
+  <div class="line left" id="line3"></div>
+  <div class="line middle" id="line3"></div>
+  <div class="line right" id="line3"></div>
+</div>
+<style>
+  body {
+    background: #4f77ff;
+    position: relative;
+    margin: 50px 100px;
+  }
+  div {
+    overflow: hidden;
+  }
+  .black-circle {
+    position: absolute;
+    background: #191919;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .yellow-circle {
+    position: absolute;
+    background: #f9e492;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 40px;
+    top: 40px;
+  }
+  .line {
+    position: absolute;
+    background: #f9e492;
+    height: 16px;
+  }
+  .left {
+    width: 50%;
+  }
+  .middle {
+    background: #d6b73f;
+    transform: skewY(-33deg);
+    left: 50%;
+    width: 20px;
+    margin-bottom: 7;
+  }
+  .right {
+    width: 50%;
+    margin-bottom: 13;
+    left: 120;
+  }
+  #line1 {
+    bottom: 62;
+  }
+  #line2 {
+    bottom: 36;
+  }
+  #line3 {
+    bottom: 10;
+  }
+</style>
